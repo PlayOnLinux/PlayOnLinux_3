@@ -1,0 +1,1201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pol\n"
+"Report-Msgid-Bugs-To: Tinou\n"
+"POT-Creation-Date: 2008-01-11 18:43+0100\n"
+"PO-Revision-Date: 2008-01-11 18:59+0100\n"
+"Last-Translator: Unknown\n"
+"Language-Team: sk_SK.UTF-8 <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: LNGFILENAME
+msgid "English"
+msgstr "Slovak"
+
+#: LNG_SAFE_MODE
+msgid "PlayOnLinux is running in safe mode\nPlease check the GUI mode" 
+msgstr "PlayOnLinux beží v núdzovom režime\nProsím skontrolujte GUI mód" 
+
+#: LNG_WINE_REBOOT
+msgid "Simulating Windows reboot" 
+msgstr "Simulácia reštart Windows" 
+
+#: LNG_WINE_PREFIXCREATE
+msgid "Creating Wine prefix" 
+msgstr "Vytváranie Prefixu Wine" 
+
+#: LNG_WINE_ASKFORCDROM
+msgid "Where is your CD-ROM mounted?" 
+msgstr "Kde je pripojený váš CD-ROM ?" 
+
+#: LNG_WINE_ERRORCDROM
+msgid "Error : Unable to find the CD-ROM !" 
+msgstr "Chyba : Nemožno násť CD-ROM !" 
+
+#: LNG_MOUNT_CDROM
+msgid "Please mount the CD-ROM" 
+msgstr "Prosím pripojte CD-ROM" 
+
+#: LNG_COMMUNITY_1
+msgid "The community's repository is enabled.\nDo you want to disable it ?" 
+msgstr "Reposit Comunity je zapnutý.\nŽeláte si ho vypnúť ?" 
+
+#: LNG_COMMUNITY_2
+msgid "The community's repository is disabled.\nDo you want to enable it ?\nWARNING : PlayOnLinux isn't responsible for these scripts." 
+msgstr "Reposit Comunity je vypnutý.\nŽeláte si ho zapnúť ?\nVAROVANIE : PlayOnLinux nie je zodpovedný za tieto scripty." 
+
+#: LNG_WORK_1
+msgid "The WorkOnLinux's repository is enabled.\nDo you want to disable it ?" 
+msgstr "Reposit WorkOnLinux je zapnutý.\nŽeláte si ho vypnúť ?" 
+
+#: LNG_WORK_2
+msgid "The WorkOnLinux's repository is disabled.\nDo you want to enable it ?\nWARNING : PlayOnLinux isn't responsible for these scripts." 
+msgstr "Reposit WorkOnLinux je vypnutý.\nŽeláte si ho zapnúť ?\nVAROVANIE : PlayOnLinux nie je zodpovedný za tieto scripty." 
+
+#: LNG_CONFIGURATION_FINISHED
+msgid "Finished. Please restart PlayOnLinux" 
+msgstr "Hotovo. Prosím reštartujte PlayOnLinux" 
+
+#: LNG_MISSING
+msgid "Missing program :" 
+msgstr "Chýba program :" 
+
+#: LNG_MISSING_ERROR
+msgid "One or more program(s) are missing. Please install them and run the script again." 
+msgstr "Chýba jeden alebo viac programov. Prosím nainštalujte ich a spustite script znova." 
+
+#: LNG_3D_MISSING
+msgid "You don't seem to have 3D acceleration !\nWe advise you install and enable it." 
+msgstr "Zdá sa, že nemáte 3D akceleráciu !\nOdporúčame ju nainštalovať a zapnúť." 
+
+#: LNG_GUI_MISSING
+msgid "You have to install zenity or kdialog to run the script." 
+msgstr "Musíte si nainštalovať balík zenity alebo kdialog pre spustenie scriptu." 
+
+#: LNG_GAME_NOT_INSTALLED
+msgid "The game you want to run isn't installed." 
+msgstr "Hra, ktorú chcete spustiť, nie je nainštalovaná." 
+
+#: LNG_GAME_GAMES_MISSING
+msgid "No game.\nTry updating PlayOnLinux." 
+msgstr "Žiadna hra.\nSkúste aktualizovať PlayOnLinux." 
+
+#: LNG_GAME_PATCHS_MISSING
+msgid "No patch\nTry updating PlayOnLinux." 
+msgstr "Žiadny patch\nSkúste aktualizovať PlayOnLinux." 
+
+#: LNG_GAME_ADDON_MISSING
+msgid "No expansions.\nTry to update PlayOnLinux." 
+msgstr "Žiadne rozšírenia.\nSkúste aktualizovať PlayOnLinux." 
+
+#: LNG_GAME_TEST_GAME
+msgid "You haven't installed any games." 
+msgstr "Nemáte nainštalovanú žiadnu hru." 
+
+#: LNG_GAME_ALREADY_INSTALLED
+msgid "Installation failed\nThe game might already be installed." 
+msgstr "Inštalácia zlyhala\nHra už je možno nainštalovaná." 
+
+#: LNG_GAME_NO_SCRIPT
+msgid "Installation faild\nUnable to find the game's script.\nTry to update $TITRE" 
+msgstr "Inštalácia zlyhala\nNemôžem nájsť script hry.\nSkúste aktualizovať $TITRE" 
+
+#: LNG_GAME_DOWNLOAD_ICONE
+msgid "Please wait while the icon is downloaded." 
+msgstr "Prosím čakajte kým sa stiahne ikona." 
+
+#: LNG_GAME_DESKTOP_ICONE
+msgid "Do you want a shortcut on your desktop ?" 
+msgstr "Prajete si umiestniť zástupcu na vašu plochu ?" 
+
+#: LNG_GAME_MENU_ICONE
+msgid "Do you want a shortcut in your menu ?" 
+msgstr "Želáte si umiestniť zástupcu do vášho menu ?" 
+
+#: LNG_NET_POL_ERR
+msgid "The website of PlayOnLinux is unavailable,\nPlease assure you are connected to internet." 
+msgstr "Stránka PlayOnLinux je nedostupná,\nProsím overte, či ste pripojený k internetu." 
+
+#: LNG_NET_CHECK
+msgid "Checking network.." 
+msgstr "Overujem sieť..." 
+
+#: LNG_NET_CHECK_FAILED
+msgid "You are not connected on the internet." 
+msgstr "Nie ste pripojený k internetu." 
+
+#: LNG_NET_CHECK_SUCCESS
+msgid "Network is available." 
+msgstr "Sieť je nedostupná." 
+
+#: LNG_NET_CHECK_LOST
+msgid "Network is available, but some packets have failed" 
+msgstr "Sieť je dostupná, ale niektoré balíčky zlyhali" 
+
+#: LNG_MAIN_UPDATE
+msgid "Please wait while the updates are downloaded..." 
+msgstr "Prosím čakajte, kým sa stiahnu aktualizácie..." 
+
+#: LNG_MAIN_POL_UPDATE
+msgid "An updated version of PlayOnLinux is available. Please visit the website." 
+msgstr "Je dostupná novšia verzia PlayOnLinux. Prosím navštívte našú stánku." 
+
+#: LNG_MAIN_UPDATE_SUCCES
+msgid "The updates have been successfully installed." 
+msgstr "Aktualizácia bola úspešne nainštalovaná." 
+
+#: LNG_MAIN_MENU
+msgid "File" 
+msgstr "Súbor" 
+
+#: LNG_MAIN_MENU_ITEM_PLAY
+msgid "Run" 
+msgstr "Spustiť" 
+
+#: LNG_MAIN_MENU_ITEM_INSTALL
+msgid "Install" 
+msgstr "Pridať" 
+
+#: LNG_MAIN_MENU_ITEM_EXPERT
+msgid "Tools" 
+msgstr "Nástroje" 
+
+#: LNG_MAIN_MENU_ITEM_REMOVE
+msgid "Remove" 
+msgstr "Odobrať" 
+
+#: LNG_MAIN_MENU_ITEM_UPDATE
+msgid "Update"
+msgstr "Aktualizovať"
+
+#: LNG_CHOOSE_GAME
+msgid "You must choose a program"
+msgstr "Musíte si zvoliť program"
+
+#: LNG_MAIN_INSTALL_MENU
+msgid "What do you want to install ?" 
+msgstr "Čo si želáte nainstalovať ?" 
+
+#: LNG_MAIN_UNINSTALL_MENU
+msgid "What do you want to uninstall ?" 
+msgstr "Čo si želáte odinštalovať ?" 
+
+#: LNG_MAIN_RUN_MENU
+msgid "Which game do you want to play? ?" 
+msgstr "Ktorú hru si chcete zahrať ?" 
+
+#: LNG_MAIN_INSTALL_UNINSTALL
+msgid "Uninstall" 
+msgstr "Odinštalácia" 
+
+#: LNG_MAIN_CHECKUPGRADE
+msgid "Do you want to check for updates on the PlayOnLinux website ?" 
+msgstr "Želáte si skontrolovať aktualizáciu na stránke PlayOnLinux ?" 
+
+#: LNG_MAIN_FIRSTUSE
+msgid "Welcome to PlayOnLinux.\nYou need to set some options\nMake sure you are connected to the internet." 
+msgstr "Výtame Vás v PlayOnLinux.\nMusíte nastaviť niekoľko parametrov.\nSpresvedčte sa, či ste pripojený k internetu." 
+
+#: LNG_MAIN_INSTALLFONTS
+msgid "Microsoft fonts aren't installed; I'll install them for you." 
+msgstr "Písma od Microsoftu nie sú nainštalované; Nainštalujem ich pre Vás." 
+
+#: LNG_MAIN_DOWNLOADFONTS
+msgid "Please wait while the fonts are downloaded..." 
+msgstr "Prosím čakajte, kým sa písma stiahnu..." 
+
+#: LNG_MAIN_CREATEDIRECTORY
+msgid "Please wait: creating PlayOnLinux's directions" 
+msgstr "Prosím čakajte: vytváram priečinok PlayOnLinux" 
+
+#: LNG_MAIN_LANGUAGE_DETECTED
+msgid "The current language is : $LANG. This language exists in PlayOnLinux. Would you like to use it? ?" 
+msgstr "Momentálny systémový jazyk je : $LANG. Tento jazyk existuje v PlayOnLinux. Chcete ho použiť?" 
+
+#: LNG_MAIN_CHOOSELANGUAGE
+msgid "Choose your preferred language." 
+msgstr "Vyberte si jazyk." 
+
+#: LNG_MAIN_CHOOSEGUI
+msgid "Choose your preferred GUI." 
+msgstr "Vyberte si preferované GUI." 
+
+#: LNG_MAIN_LANGUAGE_NOT_DETECTED
+msgid "Your system's language does not exist in PlayOnLinux.\nPlease choose another one" 
+msgstr "Jazyk Vásho systému neexistuje v  PlayOnLinux.\nProsím zvoľte si iný." 
+
+#: LNG_MAIN_CHOOSELANGUAGE
+msgid "Choose the language you want" 
+msgstr "Vyberte si jazyk." 
+
+#: LNG_MAIN_CHOOSETHEME
+msgid "Choose the theme you want" 
+msgstr "Vyberte si tému" 
+
+#: LNG_THEMES
+msgid "Theme"
+msgstr "Téma"
+
+#: LNG_EXPERT_DIDNOTSELECT
+msgid "You did not select any games!" 
+msgstr "Nezvybrali ste si hru!" 
+
+#: LNG_EXPERT_REGISTRY
+msgid "Registry Editor" 
+msgstr "Editor registrov" 
+
+#: LNG_EXPERT_WINEPREFIX
+msgid "Update the wineprefix" 
+msgstr "Aktualizovať Prefix wine" 
+
+#: LNG_EXPERT_WAITUPGRADE
+msgid "Please wait while the wine prefix is updated" 
+msgstr "Prosím čakajte, kým sa aktualizuje Prefix wine" 
+
+#: LNG_EXPERT_WINECONFIG
+msgid "Configure wine" 
+msgstr "Nastaviť wine" 
+
+#: LNG_EXPERT_RUN
+msgid "Run a non-official script" 
+msgstr "Spustiť neoficiálny script" 
+
+#: LNG_EXPERT_UNFOUND
+msgid "File not found!" 
+msgstr "Súbor nenájdený!" 
+
+#: LNG_EXPERT_NOTPOL
+msgid "This file is not a valid PlayOnLinux script" 
+msgstr "Tento súbor nie je platný script pre PlayOnLinux" 
+
+#: LNG_EXPERT_DIRECTX
+msgid "Install DirectX"
+msgstr "Inštalovať DirectX"
+
+#: LNG_EXPERT_WVER
+msgid "Manage wine versions"
+msgstr "Spravovať verzie wine"
+
+#: LNG_EXPERT_WKILL
+msgid "Kill wineserver process"
+msgstr "Ukončiť proces wineserver"
+
+#: LNG_WINEVERSIONS_INTRO
+msgid "This add-on allows you to have more than one wine version simultaneously." 
+msgstr "Tento prídavok Vám dovoľuje mať viac ako jednu verziu wine súčasne." 
+
+#: LNG_WINEVERSIONS_DOWNLOADING
+msgid "Downloading wine" 
+msgstr "Sťahujem wine" 
+
+#: LNG_WINEVERSIONS_DOWNLOADFAILED
+msgid "The download seems to have failed." 
+msgstr "Zdá sa, že sťahovanie zlyhalo." 
+
+#: LNG_WINEVERSIONS_INSTALL
+msgid "The version of wine has been successfully downloaded.\nI'm' now going to install it." 
+msgstr "Verzia wine bol aúspešne stiahnutá.\nNainštalujem ju." 
+
+#: LNG_WINEVERSIONS_INSTALLATION
+msgid "Please wait : installing wine version ..." 
+msgstr "Prosím čakajte : inštaluje sa verzia wine ..." 
+
+#: LNG_WINEVERSIONS_INSTALLATION_FINISHED
+msgid "Installation succeeded." 
+msgstr "Inštalácia úspešná." 
+
+#: LNG_WINEVERSIONS_GAMETOEDIT
+msgid "To which game do you want to apply this modification?" 
+msgstr "Ktorý program chcete upraviť ?"   
+
+#: LNG_WINEVERSIONS_VERSIONTOUSE
+msgid "Which wine version do you want to use ?" 
+msgstr "Ktorú verziu wine si želáte použiť ?" 
+
+#: LNG_WINEVERSIONS_MUSTSPECIFY
+msgid "You must choose which version you want to download." 
+msgstr "Musíte si zvoliť, ktorú verziu wine chcete stiahnuť." 
+
+#: LNG_WINEVERSIONS_ALREADYINSTALLED
+msgid "This version has already been installed" 
+msgstr "Táto verzia je už nainštalovaná" 
+
+#: LNG_WINEVERSIONS_RESETSESSION
+msgid "The session has been reset." 
+msgstr "Toto sedenie bolo resetované." 
+
+#: LNG_WINEVERSIONS_GAME
+msgid "To which game do you want to apply the modification ?" 
+msgstr "Pre ktorú hru chcete aplikovať zmeny ?" 
+
+#: LNG_WINEVERSIONS_NOWINE
+msgid "No wine version installed" 
+msgstr "Žiadna verzia wine nie je nainštalovaná" 
+
+#: LNG_WINEVERSIONS_CHOOSEUNINSTALL
+msgid "Choose which version you want to uninstall." 
+msgstr "Vyberte si verziu, ktorú chcete odinštalovať." 
+
+#: LNG_WINEVERSIONS_CHOOSEDOWNLOAD
+msgid "Which wine version should I download?" 
+msgstr "Ktorú verziu wine mám stiahnuť?" 
+
+#: LNG_WINEVERSIONS_MENU_ASSIGN
+msgid "Assign a wineversion for a program" 
+msgstr "Priradiť verziu wine k programu"
+
+#: LNG_WINEVERSIONS_MENU_INSTALL
+msgid "Install a wineversion" 
+msgstr "Inštalácia verzie wine"
+
+#: LNG_WINEVERSIONS_MENU_UNASSIGN
+msgid "Unassign a wineversion" 
+msgstr "Vrátiť späť verziu wine pre program"   
+
+#: LNG_WINEVERSIONS_MENU_UNINSTALL
+msgid "Uninstall a wineversion" 
+msgstr "Odinštalovať verziu wine"   
+
+#: LNG_WINEVERSIONS_WINEVERSIONS
+msgid "WineVersions" 
+msgstr "Verzie wine" 
+
+#: LNG_OTHER
+msgid "Other" 
+msgstr "Ostatné" 
+
+#: LNG_EXEMPLE
+msgid "Exemple " 
+msgstr "Ukážky " 
+
+#: LNG_RESET
+msgid "Reset" 
+msgstr "Reset" 
+
+#: LNG_OPTIONS_MENU
+msgid "Settings" 
+msgstr "Nastavenia" 
+
+#: LNG_OPTIONS_RESULT
+msgid "Test results" 
+msgstr "Výsledky testov" 
+
+#: LNG_OPTIONS_NORESULT
+msgid "Glxgears did not produce any results." 
+msgstr "Glxkolieska nedali žiadny výsledok." 
+
+#: LNG_OPTIONS_INFOS_SYS
+msgid "System information:" 
+msgstr "Informácie o systéme:" 
+
+#: LNG_OPTIONS_INFOS_YSYS
+msgid "Your system :" 
+msgstr "Vás systém :" 
+
+#: LNG_OPTIONS_INFOS_KERNEL
+msgid "Your kernel :" 
+msgstr "Váš kernel :" 
+
+#: LNG_OPTIONS_INFOS_LANG
+msgid "System language :" 
+msgstr "Systémový jazyk :" 
+
+#: LNG_OPTIONS_INFOS_USER
+msgid "Your user login :" 
+msgstr "Vaše prihlasovacie meno :" 
+
+#: LNG_OPTIONS_INFOS_NAMEMACHINE
+msgid "Your computer's name :" 
+msgstr "Meno vášho počítača :" 
+
+#: LNG_OPTIONS_INFOS_VIDEOCARD
+msgid "Your video card :" 
+msgstr "Vaša video karta :" 
+
+#: LNG_OPTIONS_INFOS_DISTRIB_ID
+msgid "Your distribution :" 
+msgstr "Vaša distribúcia :" 
+
+#: LNG_OPTIONS_INFOS_RELEASE
+msgid "Your distribution version :" 
+msgstr "Verzia vašej distribúcie :" 
+
+#: LNG_OPTIONS_INFOS_DDINFOS
+msgid "Space remaining on your hard disks :" 
+msgstr "Voľné miesto na Vašom disku :" 
+
+#: LNG_OPTIONS_INFOS_WINEINSTALLED
+msgid "Wine version installed :" 
+msgstr "Nainštalovaná verzia wine :" 
+
+#: LNG_OPTIONS_INFOS_WINECURRENT
+msgid "Wine version used by PlayOnLinux :" 
+msgstr "Verzia wine používaná PlayOnLinux-om :" 
+
+#: LNG_OPTIONS_MENU_INFORMATIONS
+msgid "Informations" 
+msgstr "Informácie" 
+
+#: LNG_INFORMATION
+msgid "Information about a game"
+msgstr "Informácie o hre"
+
+#: LNG_OPTIONS_TESTS
+msgid "Tests" 
+msgstr "Testy" 
+
+#: LNG_OPTIONS_LANGUAGE
+msgid "Language"
+msgstr "Jazyk"
+
+#: LNG_OPTIONS_REPOSITORY
+msgid "Repository"
+msgstr "Reposity"
+
+#: LNG_OPTIONS_PANELS
+msgid "Panels"
+msgstr "Panely"
+
+#: LNG_NEXT_RUN
+msgid "You must restart PlayOnLinux for the changes to take effect" 
+msgstr "Musíte reštartovať PlayOnLinux aby sa zmeny prejavili" 
+
+#: LNG_HAVE
+msgid "You have" 
+msgstr "Máte" 
+
+#: LNG_HELP
+msgid "Help"
+msgstr "Pomoc"
+
+#: LNG_ABOUT
+msgid "About"
+msgstr "O programe"
+
+#: LNG_ERROR
+msgid "Error"
+msgstr "Chyba"
+
+#: LNG_EXIT
+msgid "Exit"
+msgstr "Koniec"
+
+#: LNG_REFRESH
+msgid "Refresh"
+msgstr "Obnoviť"
+
+#: LNG_WINEBOOSTER_WELCOME1
+msgid "Welcome on WineBooster, an optimization's script for Wine" 
+msgstr "Výtame Vás vo WineBooster, optimalizačnom scripte pre Wine" 
+
+#: LNG_WINEBOOSTER_WELCOME2
+msgid "Created by GNU_Raziel" 
+msgstr "Vytvoril GNU_Raziel" 
+
+#: LNG_WINEBOOSTER_WELCOME3
+msgid "If you does not know what to choose, LEAVE DEFAULTS !!!" 
+msgstr "Ak neviete, čo zvoliť, NECHAJTE ŠTANDARD !!!" 
+
+#: LNG_WINEBOOSTER_GAME_CHOOSE
+msgid "Choose a game" 
+msgstr "Zvoľte hru" 
+
+#: LNG_WINEBOOSTER_GAME_ERROR
+msgid "You did not select a game" 
+msgstr "Nezvolili ste hru" 
+
+#: LNG_WINEBOOSTER_WVERSION
+msgid "Which version of Windows would you like to use? (Values : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )" 
+msgstr "Ktorú verziu wine chcete použiť? (Hodnoty : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Štandard : winxp )" 
+
+#: LNG_WINEBOOSTER_DDR
+msgid "Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)" 
+msgstr "Zvoľte renderovací mód DirectDraw (Hodnoty : opengl, gdi - Štandard : gdi)" 
+
+#: LNG_WINEBOOSTER_VERTEXSHADER
+msgid "Activate VertexShader Mode? (Default : N)" 
+msgstr "Aktivovať mód VertexShader? (Štandard : N)" 
+
+#: LNG_WINEBOOSTER_PIXELSHADER
+msgid "Activate PixelShader Mode? (Default : N)" 
+msgstr "Aktivovať mód PixelShader? (Štandard : N)" 
+
+#: LNG_WINEBOOSTER_UGLSL
+msgid "Activate GLSL Support? (Default : N)" 
+msgstr "Aktivovať podporu GLSL ? (Štandard : N)" 
+
+#: LNG_WINEBOOSTER_VMS
+msgid "How much memory does your graphics board have? (Default : 64)" 
+msgstr "Koľko pamäte má vaša grafická karta? (Štandard : 64)" 
+
+#: LNG_WINEBOOSTER_ORM
+msgid "Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - Default : backbuffer)" 
+msgstr "Zvoľte renderovací mód Offscreen (Hodnoty : backbuffer, pbuffer, fbo - Štandard : backbuffer)" 
+
+#: LNG_WINEBOOSTER_RTLM
+msgid "Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, textex, disabled - Default : auto)" 
+msgstr "Zvoľte renderovací mód Render Target Lock (Hodnoty : auto, readdraw, readtex, texdraw, textex, disabled - Štandard : auto)" 
+
+#: LNG_WINEBOOSTER_WDESKTOP
+msgid "Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION !!)? (Example : 1024x768 - Default : 0 = FullScreen)" 
+msgstr "Zvoľte rozlíšenie pre wine windows (NEZMENÍ ROZLÍŠENIE IN-GAME !!)? (Príklad : 1024x768 - Štandard : 0 = Celá obrazovka)" 
+
+#: LNG_WINEBOOSTER_WMANAGED
+msgid "Authorize your WM to manage Windows? ( Default : Y )" 
+msgstr "Povoliť Vášemu WM spravovať Windows? ( Štandard : Y )" 
+
+#: LNG_WINEBOOSTER_WDXGRAB
+msgid "Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default : N )" 
+msgstr "Povoliť DirectX aby zabránil Wine myši výjsť z obrazovky? ( Štandard : N )" 
+
+#: LNG_WINEBOOSTER_WAUDIO
+msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)" 
+msgstr "Vyberte ovládač zvuku (Hodnoty : oss, alsa - Štandard : alsa)" 
+
+#: LNG_WINEBOOSTER_AEMUL
+msgid "Emulate DirectSound Driver? (Default : N)" 
+msgstr "Emulovať ovládač DirectSound ? (Štandard : N)" 
+
+#: LNG_LI_PRESENTATION
+msgid "This script will allow you to install any game on PlayOnLinux and use it with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had been installed with an official script. Warning: We are unable to guarantee that your game will work perfectly." 
+msgstr "Tento script Vám dovolí inštalovať každú hru v PlayOnLinux používať ju so všetkými nástrojmi (WineBooster, WineMaster, WineConfig, etc) ako keby bol nainštalovaný s oficiálnym scriptom. Varovanie: Nie sme schopný garantovať, že Vaša hra bude perfektne fungovať." 
+
+#: LNG_ACTION
+msgid "Action" 
+msgstr "Akcie" 
+
+#: LNG_LI_NEW
+msgid "New" 
+msgstr "Inštalácia programu v novom Prefixe"   
+
+#: LNG_LI_PATCH
+msgid "Edit" 
+msgstr "Prefix nainštalovanej aplikácie"
+
+#: LNG_CHOICE
+msgid "Please make a choice" 
+msgstr "Prosím zvoľte si" 
+
+#: LNG_LI_CODENAME
+msgid "Please type a code name for the wine prefix of your game. This name shouldn't contain spaces." 
+msgstr "Prosím napíšte pomenovanie pre úpravu wine vo vašej hre. Názov nesmie obsahovať medzery." 
+
+#: LNG_LI_EXIST
+msgid "This codename already exists in PlayOnLinux." 
+msgstr "Toto pomenovanie už exituje v PlayOnLinux." 
+
+#: LNG_LI_INSTALLFILE
+msgid "Please choose the file to execute" 
+msgstr "Prosím zvoľte súbor na spustenie" 
+
+#: LNG_LI_CHOOSEFILE
+msgid "You have to choose a file !" 
+msgstr "Musíte si zvoliť súbor !" 
+
+#: LNG_LI_SHORTCUT
+msgid "Do you want to create a shortcut to the application in PlayOnLinux ? If you patched a game, you should probably select 'no'." 
+msgstr "Želáte si vytvoriť novýho zástupcu v PlayOnLinux"   
+
+#: LNG_LI_EXEC
+msgid "Choose the file to exec the game." 
+msgstr "Zvoľte súbor pre spustenie hry." 
+
+#: LNG_LI_GIVENAME
+msgid "Please type a name for your shortcut." 
+msgstr "Prosím, napíšte meno zástupcu." 
+
+#: LNG_SCRIPT_WAIT
+msgid "Please wait while the installation of the game is prepared" 
+msgstr "Prosím čakajte kým sa pripravý inštalácia hry" 
+
+#: LNG_DOWNLOAD
+msgid "Please wait while the game is downloaded..." 
+msgstr "Stiahnuť"
+
+#: LNG_DOWNLOAD_LIB
+msgid "Please wait while the library are downloaded..." 
+msgstr "Prosím čakajte, kým sa stiahne knižnica..." 
+
+#: LNG_DOWNLOAD_FINISHED
+msgid "Download finished" 
+msgstr "Sťahovanie dokončené" 
+
+#: LNG_WAIT
+msgid "Please wait..." 
+msgstr "Prosím čakajte..." 
+
+#: LNG_POLSC
+msgid "Welcome to PolScriptCreator.\nThis tools may help you to build basic scripts. The scripts will be saved on your Desktop. Thanks to Christhaal." 
+msgstr "Výtame Vás v PolScriptCreator.\nTento nástroj Vám môže pomúcť vytvoriť základné scripty. Scripty budú uložené na Vašu plochu. Poďakovanie pre Christhaal." 
+
+#: LNG_GIT_WELCOME1
+msgid "Welcome on WineGIT, a GIT compilation and installation script for WineVersion" 
+msgstr "Výtame Vás vo WineGIT, GIT kompilácii  a inštalácii scriptu pre WineVersion" 
+
+#: LNG_GIT_KEEP
+msgid "Keep the actual git ? (Values : Y ou N - Default : N)" 
+msgstr "Zachovať aktuálny git ? (Hodnoty : Y alebo N - Štandard : N)" 
+
+#: LNG_GIT_KEEP2
+msgid "Please use ANOTHER name for the last git" 
+msgstr "Prosím zvolte INÉ meno pre posledný git" 
+
+#: LNG_GIT_RENAME
+msgid "Please give a new name for installed git (example : git-06242007)" 
+msgstr "Prosím zvoľte nové meno pre git (príklad : git-06242007)" 
+
+#: LNG_GIT_NAME_ERROR
+msgid "You did not specify a name !!" 
+msgstr "Nezadali ste meno !!" 
+
+#: LNG_GIT_NAME_DUPLICATE_ERROR
+msgid "This name already exist !!" 
+msgstr "Meno už existuje !!" 
+
+#: LNG_GIT_DOWNLOAD
+msgid "git download, please wait..." 
+msgstr "sťahovanie git, prosím čakajte..." 
+
+#: LNG_GIT_COMPILATION
+msgid "git's compilation and installation, please wait..." 
+msgstr "kompilácia a inštalácia git-u, prosím čakajte..." 
+
+#: LNG_GIT_FINISHED
+msgid "Installation successfull" 
+msgstr "Inštalácia úspešná" 
+
+#: LNG_DOWNLOADING_INSTALLER
+msgid "Please wait while the installer is downloaded..." 
+msgstr "Prosím čakajte, kým sa stiahne inštalátor..." 
+
+#: LNG_MENU_POL_1
+msgid "Do you want to add a \"PlayOnLinux\" menu item to your GNOME or KDE menu ? ?\nIt will contain all the application shorcuts you create." 
+msgstr "Želáte si pridať \"PlayOnLinux\" menu pre GNOME a KDE menu? ?\nBude obsahovať zástupcov aplikácii, ktoré nainštalujete." 
+
+#: LNG_MENU_POL_2
+msgid "Do you want to disable the \"PlayOnLinux\" menu ?"
+msgstr "Želáte si vypnúť \"PlayOnLinux\" menu ?"
+
+#: LNG_FILE_CHOOSE
+msgid "Please choose a valid PlayOnLinux file to run"
+msgstr "Prosím zvoľte platný PlayOnLinux súbor pre spustenie"
+
+#: LNG_APP_CHOOSE
+msgid "Please choose an application to install"
+msgstr "Prosím zvoľte aplikáciu pre inštaláciu"
+
+#: LNG_APP_CHOOSE2
+msgid "Please choose a type of application to install"
+msgstr "Prosím zvoľte typ aplikácia pre inštaláciu"
+
+#: LNG_APP_CHOOSE3
+msgid "Installation wizard"
+msgstr "Sprievodca inštalácie"
+
+#: LNG_LAUNCHER
+msgid "Please choose a name for the shortcut"
+msgstr "Prosím zvoľte meno zástupcu"
+
+#: LNG_UPDATING_FINISHED
+msgid "The list of programs has been successfully updated"
+msgstr "Zoznam programov bol úspešne aktualizovaný"
+
+#: LNG_UPDATEW_FINISHED
+msgid "The prefix has been successfully updated"
+msgstr "Prefix bol úspečne aktualizovaný"
+
+#: LNG_UPDATING
+msgid "Updating"
+msgstr "Aktualizovanie"
+
+#: LNG_DOWNLOADING
+msgid "Downloading"
+msgstr "Stiahnutie"
+
+#: LNG_WARNING
+msgid "Warning"
+msgstr "Varovanie"
+
+#: LNG_NEXT
+msgid "Next"
+msgstr "Ďalej"
+
+#: LNG_CANCEL
+msgid "Cancel" 
+msgstr "Prerušiť" 
+
+#: LNG_FINISHED
+msgid "Finished" 
+msgstr "Dokončené" 
+
+#: LNG_FINISHED_
+msgid "Finish"
+msgstr "Koniec"
+
+#: LNG_STEP
+msgid "Step" 
+msgstr "Krok" 
+
+#: LNG_SUR
+msgid "of" 
+msgstr "z" 
+
+#: LNG_DOWNLOAD_CLICK
+msgid "Click on download to start."
+msgstr "Zvoľte stiahnuť pre štart."
+
+#: LNG_DOWNLOAD
+msgid "Download"
+msgstr "Stiahnuť"
+
+#: LNG_DOWNLOADED
+msgid "downloaded"
+msgstr "stiahnuté"
+
+#: LNG_YES
+msgid "Yes"
+msgstr "Áno"
+
+#: LNG_NO
+msgid "No"
+msgstr "Nie"
+
+#: LNG_BROWSE
+msgid "Browse"
+msgstr "Prehliadať"
+
+#: LNG_KILL_WINSERVER
+msgid "Warning ! Before killing the wineserver, please assure that there are no wine applications running.\n\nAre you sure you want to kill the wineserver ?"
+msgstr "Varovanie ! Pred ukončením wineserver, prosím overte, že nebeží žiadna wine aplikácia.\n\nSte si istý, že chcete ukončiť  wineserver ?"
+
+#: LNG_WINELOOK1
+msgid "Please choose a theme"
+msgstr "Prosím zvoľte si tému"
+
+#: LNG_WINELOOK2
+msgid "Your theme have been successfully applied"
+msgstr "Vaša téma bola úspešne použitá"
+
+#: LNG_EXPERT_PKG
+msgid "Install a package"
+msgstr "Inštalácia balíčku"
+
+#: LNG_EXPERT_BOOSTERM
+msgid "Advanced wine configuration"
+msgstr "Rozšírená konfigurácia wine"
+
+#: LNG_WINEGIT
+msgid "Wine GIT"
+msgstr "Wine GIT"
+
+#: LNG_POLSHELL
+msgid "PlayOnLinux debugger"
+msgstr "PlayOnLinux debugger"
+
+#: LNG_WINELOOK
+msgid "Wine theme"
+msgstr "Wine téma"
+
+#: LNG_SLOGAN
+msgid "Run you Windows programs on Linux !"
+msgstr "Spušťajte Vaše Windows programy na Linuxe !"
+
+#: LNG_LOGO
+msgid "The logo are made by Crystal Project"
+msgstr "Logo bolo zhotovené od Crystal Project"
+
+#: LNG_WINDOWS_DESIGN
+msgid "Windows designed by asimov"
+msgstr "Okná navrhnuté od asimov"
+
+#: LNG_COPYRIGHT
+msgid "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
+msgstr "(C) PlayOnLinux team 2008\nPodlieha GPL licencii verzia 3"
+
+#: LNG_MAIN_INSTALL_WORKONLINUX
+msgid "Application"
+msgstr "Aplikácie"
+
+#: LNG_MAIN_INSTALL_LIVE
+msgid "Manual installation"
+msgstr "Manuálna inštalácia"
+
+#: LNG_MAIN_INSTALL_DOSBOX
+msgid "Dosbox application"
+msgstr "Dosbox aplikácie"
+
+#: LNG_MAIN_INSTALL_PKG
+msgid "Install a .pol package"
+msgstr "Inštalácia .pol balíčku"
+
+#: LNG_LI_CHOOS_ACTION
+msgid "What do you want to do ?"
+msgstr "Čo chcete robiť ?"
+
+#: LNG_LI_NEW
+msgid "Install a program in a new prefix"   
+msgstr "Inštalácia programu v novom Prefixe"   
+
+#: LNG_LI_PATCH
+msgid "Edit an application already installed"
+msgstr "Prefix nainštalovanej aplikácie"
+
+#: LNG_LI_CHOOSEPREFIX
+msgid "What is the prefix of your program ?"   
+msgstr "Aká je verzia úpravy vášho programu ?"   
+
+#: LNG_LI_SHORTCUT
+msgid "Would you like to make a new shortcut in PlayOnLinux"   
+msgstr "Želáte si vytvoriť novýho zástupcu v PlayOnLinux"   
+
+#: LNG_LI_DELETE
+msgid "Delete a prefix"
+msgstr "Zmazať úpravu"
+
+#: LNG_LI_DELETE_PREFIXE
+msgid "Are you sure you want to delete that prefixe ?"
+msgstr "Ste si istý, že chcete vymazať úpravu ?"
+
+#: LNG_LI_PREFIXE_DELETED
+msgid "The prefix has been deleted"
+msgstr "Prefix bol zmazaný"
+
+#: LNG_WINEVERSION_ACTIONS
+msgid "Choose an action to do"
+msgstr "Zvoľte akciu"
+
+#: LNG_WINEVERSIONS_MENU_INSTALL
+msgid "Install a wine version"
+msgstr "Inštalácia verzie wine"
+
+#: LNG_WINEVERSIONS_MENU_GIT
+msgid "Install Wine GIT"
+msgstr "Inštalácia Wine GIT"
+
+#: LNG_WINEVERSIONS_MENU_ASSIGN
+msgid "Assign a wine version to a programm"
+msgstr "Priradiť verziu wine k programu"
+
+#: LNG_WINEVERSIONS_MENU_UNASSIGN
+msgid "Put back the default wine version to a program"   
+msgstr "Vrátiť späť verziu wine pre program"   
+
+#: LNG_WINEVERSIONS_MENU_UNINSTALL
+msgid "Remove a wine version"   
+msgstr "Odinštalovať verziu wine"   
+
+#: LNG_WINEVERSIONS_MENU_SESSION
+msgid "Session"   
+msgstr "Sedenie"   
+
+#: LNG_WINEVERSIONS_GAMETOEDIT
+msgid "Which program do you want to edit ?"   
+msgstr "Ktorý program chcete upraviť ?"   
+
+#: LNG_TEST_3D
+msgid "I'm going to test your 3D hardware. It will take about 2 minutes"
+msgstr "Otestujem váš 3D hardware. Bude to trvať približne 2 minúty"
+
+#: LNG_OPTIONS_REPOS_STEP1
+msgid "Choose a repository to enable / disable"
+msgstr "Zvoľte si, ktorý reposiť  zapnúť / vypnúť"
+
+#: LNG_DEFAULT_QUESTION
+msgid "Question"
+msgstr "Otázka"
+
+#: LNG_DEFAULT_FIELD
+msgid "Text"
+msgstr "Text"
+
+#: LNG_PKG_NOT_VALID
+msgid "The file is not a valid PlayOnLinux package"
+msgstr "Súbor nie je platný balíček PlayOnLinux"
+
+#: LNG_PKG_NOT_FOUND
+msgid "Unable to find the file"
+msgstr "Nemožno nájsť súbor"
+
+#: LNG_PKG_CHOOSE
+msgid "Choose a package to install"
+msgstr "Zvoľte balíček na inštaláciu"
+
+#: LNG_PKG_MANAGER
+msgid "PlayOnLinux package manager"
+msgstr "PlayOnLinux manažér balíčkov"
+
+#: LNG_CANT_FIND_UNINSTALL
+msgid "Unable to find the game you are trying to uninstall"
+msgstr "Nemožno nájsť hru, ktorú chcete odinštalovať"
+
+#: LNG_AUTORUN_CANT_FIND
+msgid "No setup location found in autorun.inf"
+msgstr "Nenájdená inštalácia v autorun.inf"
+
+#: LNG_AUTORUN_CDROM_FOUND
+msgid "A CD-ROM has been found on your drive"
+msgstr "CD-ROM bol nájdený vo vašej mechanike"
+
+#: LNG_AUTORUN_CDROM_NAME
+msgid "Name "
+msgstr "Meno "
+
+#: LNG_AUTORUN_CDROM_SETUP
+msgid "Setup "
+msgstr "Inštalácia "
+
+#: LNG_AUTORUN_TITLE
+msgid "Autorun"
+msgstr "Autoštart"
+
+#: LNG_AUTORUN_NEXT
+msgid "In the following prefix"
+msgstr "V nasledujúcej úprave"
+
+#: LNG_AUTORUN_RECOM
+msgid "recomended"
+msgstr "odporúčené"
+
+#: LNG_AUTORUN_WHERE
+msgid "Where do you want to install this CD-ROM?"
+msgstr "Kam ši želáte nainštalovať tento CD-ROM?"
+
+#: LNG_AUTORUN_EXISTING
+msgid "In an existing prefix (add-on)"
+msgstr "Do existujúcej úpravy (prídavok)"
+
+#: LNG_AUTORUN_NEW
+msgid "In a new prefix"
+msgstr "Do novej úpravy"
+
+#: LNG_NOAUTORUN
+msgid "No autorun support found"
+msgstr "Nenájdená žiadna podpora autoštartu"
+
+#: LNG_AUTORUN_N
+msgid "autorun has been found"
+msgstr "autoštart bol nájdený"
+
+#: LNG_AUTORUN_PREFIX_C
+msgid "Choose the prefix"
+msgstr "Vyberte Prefix"
+
+#: LNG_SHORTCUT_CREATON
+msgid "Shortcut creation"
+msgstr "Vytvorenie zástupcu"
+
+#: LNG_NEW_INSTALL_UNSUPPORTED
+msgid "Install a .pol package or an unsupported application"
+msgstr "Inštalácia .pol balíčku alebo nepodporovanej aplikácie"
+
+#: LNG_SEARCH
+msgid "Search :"
+msgstr "Hľadať :"
+
+#: LNG_CLOSE
+msgid "Close"
+msgstr "Zavrieť"
+
+#: LNG_CAT_ACCESSORIES
+msgid "Accessories"
+msgstr "Doplny"
+
+#: LNG_CAT_DEVELOPMENT
+msgid "Development"
+msgstr "Vývoj"
+
+#: LNG_CAT_GAMES
+msgid "Games"
+msgstr "Hry"
+
+#: LNG_CAT_GRAPHICS
+msgid "Graphics"
+msgstr "Grafika"
+
+#: LNG_CAT_MULTIMEDIA
+msgid "Multimedia"
+msgstr "Multimédia"
+
+#: LNG_CAT_OFFICE
+msgid "Office"
+msgstr "Kancelária"
+
+#: LNG_GENERAL_APPS
+msgid "My Applications"
+msgstr "Moje aplikácie"
+
+#: LNG_OPTIONS_PANEL_DEFAUT
+msgid "Defaults programs"
+msgstr "Predvolené programi"
+
+#: LNG_OPTIONS_PANEL_BROWSER
+msgid "Browser"
+msgstr "Prehliadač"
+
+#: LNG_OPTIONS_PANEL_TEST
+msgid "Test"
+msgstr "Test"
+
+#: LNG_OPTIONS_PANEL_TERMINAL
+msgid "Terminal"
+msgstr "Terminál"
+
+#: LNG_OPTIONS_PANEL_TEMP
+msgid "Temp directory"
+msgstr "Priečinok temp"
+
+#: LNG_OPTIONS_PANEL_TEMP_E
+msgid "Automatically empty temp directory"
+msgstr "Automaticky vyprázdniť priečinok temp"
+
+#: LNG_OPTIONS_PANEL_OFFLINE
+msgid "Offline Mode"
+msgstr "Offline Mód"
+
+#: LNG_OPTIONS_PANEL_OFFLINE_E
+msgid "Enable Offline mode"
+msgstr "Zapnúť Offline mód"
+
+#: LNG_OPTIONS_PANEL_PROXY
+msgid "Proxy configuration"
+msgstr "Konfigurácia proxy"
+
+#: LNG_OPTIONS_PANEL_PROXY_ADRESS
+msgid "Proxy address"
+msgstr "Adresa proxy"
+
+#: LNG_OPTIONS_PANEL_PROXY_USE
+msgid "Set a proxy"
+msgstr "Nastaviť proxy"
+
+#: LNG_OPTIONS_PANEL_PROXY_PORT
+msgid "Port"
+msgstr "Port"
+
+#: LNG_OPTIONS_PANEL_PROXY_LOGIN
+msgid "Login"
+msgstr "Prihlasovacie Meno"
+
+#: LNG_OPTIONS_PANEL_PROXY_PASSWORD
+msgid "Password"
+msgstr "Heslo"
+
+#: LNG_OPTIONS_PANEL_D_WINE
+msgid "Default Wine Version to run wine programs with PlayOnLinux"
+msgstr "Predvolená verzia Wine na spúšťanie wine programov s PlayOnLinux"
+
+#: LNG_OPTIONS_PANEL_DESK
+msgid "Desktop"
+msgstr "Plocha"
+
+#: LNG_OPTIONS_PANEL_MENU
+msgid "PlayOnLinux menu"
+msgstr "PlayOnLinux menu"
+
+#: LNG_OPTIONS_PANEL_MENU_R
+msgid "Add PlayOnLinux menu in your panel"
+msgstr "Pridaj PlayOnLinux menu na Váš panel"
+
+#: LNG_OPTIONS_PANEL_DESKTOP_D
+msgid "Desktop directory"
+msgstr "Priečinok plochy"
+
+#: LNG_OPTIONS_PANEL_D_NICKNAME
+msgid "Default Nickname"
+msgstr "Predvolený nick"
+
+#: LNG_OPTIONS_PANEL_C_STARTUP
+msgid "Automatically connect to IRC at PlayOnLinux startup"
+msgstr "Automaticky pripojiť ku IRC pri štarte PlayOnLinux"
+
+#: LNG_OPTIONS_PANEL_W_USER
+msgid "Warm users when I run a game"
+msgstr "Varovať užívateľa keď spustím hru"
+
+#: LNG_OPTIONS_PANEL_SOUND
+msgid "Play a sound when I receive a private message"
+msgstr "Prehraj zvuk keď príjmem súkromnú správu"
+
+#: LNG_OPTIONS_PANEL_TITLE
+msgid "PlayOnLinux Settings"
+msgstr "Nastavenia PlayOnLinux"
+
+#: LNG_OPTIONS_PANEL_O1
+msgid "General"
+msgstr "Všeobecné"
+
+#: LNG_OPTIONS_PANEL_O2
+msgid "Messenger"
+msgstr "Messenger"
+
+#: LNG_OPTIONS_PANEL_O3
+msgid "Internet"
+msgstr "Internet"
+
+#: LNG_OPTIONS_PANEL_O4
+msgid "Environment"
+msgstr "Prostredie"
+
+#: LNG_OPTIONS_PANEL_O5
+msgid "System"
+msgstr "Systém"
+
+#: LNG_OPTIONS_PANEL_APPLY
+msgid "Apply"
+msgstr "Použiť"
+
+#: LNG_OFFLINE_MODE
+msgid "You are in offline mode"
+msgstr "Ste v móde offline"
+
+#: LNG_INSTALLED_PLUGIN
+msgid "Installed plugins"
+msgstr "Nainštalované pluginy"
+
+#: LNG_ADD_PLUGIN
+msgid "Add"
+msgstr "Pridať"
+
+#: LNG_CONFIG_PLUGIN
+msgid "Configure"
+msgstr "Nastaviť"
+
+#: LNG_ENABLE_PLUGIN
+msgid "Enable"
+msgstr "Zapnúť"
+
+#: LNG_DISABLE_PLUGIN
+msgid "Disable"
+msgstr "Vypnúť"
+
+#: LNG_CHOOSE_PLUGIN
+msgid "Choose a plugin"
+msgstr "Zvoliť plugin"
+
+#: LNG_SUR_INSTALL
+msgid "Are yo sure you want to install the plugin"
+msgstr "Ste si istý, že chce nainštalovať plugin"
+
+#: LNG_SUR_DELETE
+msgid "Are yo sure you want to delete the plugin"
+msgstr "Ste si istý, že chcete vymazať plugin"
+
+#: LNG_OPTIONS_PANEL_O6
+msgid "Plugins"
+msgstr "Pluginy"
+
+#: LNG_MANAGER
+msgid "Plugins manager"
+msgstr "Manažér pluginov"
+
+#: LNG_NO_MORE
+msgid "No more alert me"
+msgstr "No more alert me"
+

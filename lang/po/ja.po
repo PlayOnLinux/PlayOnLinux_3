@@ -1,0 +1,1201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pol\n"
+"Report-Msgid-Bugs-To: Tinou\n"
+"POT-Creation-Date: 2008-01-11 18:43+0100\n"
+"PO-Revision-Date: 2008-01-11 18:59+0100\n"
+"Last-Translator: Unknown\n"
+"Language-Team: ja_JP.UTF-8 <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: LNGFILENAME
+msgid "English"
+msgstr "日本語"
+
+#: LNG_SAFE_MODE
+msgid "PlayOnLinux is running in safe mode\nPlease check the GUI mode" 
+msgstr "PlayOnLinuxはセーフモードで起動しています。\nGUIモードを確認してください。" 
+
+#: LNG_WINE_REBOOT
+msgid "Simulating Windows reboot" 
+msgstr "再起動をエミュレーションしています。" 
+
+#: LNG_WINE_PREFIXCREATE
+msgid "Creating Wine prefix" 
+msgstr "Wine環境を設定しています。" 
+
+#: LNG_WINE_ASKFORCDROM
+msgid "Where is your CD-ROM mounted?" 
+msgstr "CD-ROMドライブを選択してください。" 
+
+#: LNG_WINE_ERRORCDROM
+msgid "Error : Unable to find the CD-ROM !" 
+msgstr "エラー : CD-ROMドライブが見つかりません。" 
+
+#: LNG_MOUNT_CDROM
+msgid "Please mount the CD-ROM" 
+msgstr "CD-ROMをセットしてください。" 
+
+#: LNG_COMMUNITY_1
+msgid "The community's repository is enabled.\nDo you want to disable it ?" 
+msgstr "コミュニティレポジトリは有効です。\n無効にしますか?" 
+
+#: LNG_COMMUNITY_2
+msgid "The community's repository is disabled.\nDo you want to enable it ?\nWARNING : PlayOnLinux isn't responsible for these scripts." 
+msgstr "コミュニティレポジトリは無効です。\n有効にしますか?\nWARNING : PlayOnLinux はこれらのスクリプトを正式サポートしていません。" 
+
+#: LNG_WORK_1
+msgid "The WorkOnLinux's repository is enabled.\nDo you want to disable it ?" 
+msgstr "WorkOnLinuxレポジトリは有効です。\n無効にしますか?" 
+
+#: LNG_WORK_2
+msgid "The WorkOnLinux's repository is disabled.\nDo you want to enable it ?\nWARNING : PlayOnLinux isn't responsible for these scripts." 
+msgstr "WorkOnLinuxレポジトリは無効です。\n有効にしますか?\nWARNING : PlayOnLinux はこれらのスクリプトを正式サポートしていません。" 
+
+#: LNG_CONFIGURATION_FINISHED
+msgid "Finished. Please restart PlayOnLinux" 
+msgstr "完了しました。 PlayOnLinuxを再起動してください。" 
+
+#: LNG_MISSING
+msgid "Missing program :" 
+msgstr "プログラムが見つかりません。 :" 
+
+#: LNG_MISSING_ERROR
+msgid "One or more program(s) are missing. Please install them and run the script again." 
+msgstr "プログラムが見つかりません。プログラムをインストールし再度スクリプトを実行してください。" 
+
+#: LNG_3D_MISSING
+msgid "You don't seem to have 3D acceleration !\nWe advise you install and enable it." 
+msgstr "3Dアクセラレーションが無効です! \nインストールを行い、有効にすることをオススメします。" 
+
+#: LNG_GUI_MISSING
+msgid "You have to install zenity or kdialog to run the script." 
+msgstr "スクリプトの実行には zenity または kdialog がインストールされている必要があります。" 
+
+#: LNG_GAME_NOT_INSTALLED
+msgid "The game you want to run isn't installed." 
+msgstr "このゲームはインストールされていないので実行できません。" 
+
+#: LNG_GAME_GAMES_MISSING
+msgid "No game.\nTry updating PlayOnLinux." 
+msgstr "ゲームが見つかりません。\n PlayOnLinuxを更新してください。" 
+
+#: LNG_GAME_PATCHS_MISSING
+msgid "No patch\nTry updating PlayOnLinux." 
+msgstr "パッチが見つかりません。\nPlayOnLinuxを更新してください。" 
+
+#: LNG_GAME_ADDON_MISSING
+msgid "No expansions.\nTry to update PlayOnLinux." 
+msgstr "エキスパンションが見つかりません。\nPlayOnLinuxを更新してください。" 
+
+#: LNG_GAME_TEST_GAME
+msgid "You haven't installed any games." 
+msgstr "どのゲームもインストールされていません。" 
+
+#: LNG_GAME_ALREADY_INSTALLED
+msgid "Installation failed\nThe game might already be installed." 
+msgstr "インストールに失敗しました。\nこのゲームはすでにインストールされていませんか？" 
+
+#: LNG_GAME_NO_SCRIPT
+msgid "Installation faild\nUnable to find the game's script.\nTry to update $TITRE" 
+msgstr "ゲームスクリプトが見つからないためインストールに失敗しました。\n $TITRE を更新してください。" 
+
+#: LNG_GAME_DOWNLOAD_ICONE
+msgid "Please wait while the icon is downloaded." 
+msgstr "アイコンファイルをダウンロードしています。" 
+
+#: LNG_GAME_DESKTOP_ICONE
+msgid "Do you want a shortcut on your desktop ?" 
+msgstr "デスクトップにショートカットを追加しますか?" 
+
+#: LNG_GAME_MENU_ICONE
+msgid "Do you want a shortcut in your menu ?" 
+msgstr "パネルにショートカットを追加しますか?" 
+
+#: LNG_NET_POL_ERR
+msgid "The website of PlayOnLinux is unavailable,\nPlease assure you are connected to internet." 
+msgstr "PlayOnLinux公式ページに接続できません。\nネットワーク環境を確認してください。" 
+
+#: LNG_NET_CHECK
+msgid "Checking network.." 
+msgstr "ネットワークの確認をしています..." 
+
+#: LNG_NET_CHECK_FAILED
+msgid "You are not connected on the internet." 
+msgstr "インターネットに接続されていません。" 
+
+#: LNG_NET_CHECK_SUCCESS
+msgid "Network is available." 
+msgstr "インターネットに接続されています。" 
+
+#: LNG_NET_CHECK_LOST
+msgid "Network is available, but some packets have failed" 
+msgstr "インターネットには接続出来ていますが、いくつかの通信が遮断されています。" 
+
+#: LNG_MAIN_UPDATE
+msgid "Please wait while the updates are downloaded..." 
+msgstr "更新ファイルをダウンロードしています..." 
+
+#: LNG_MAIN_POL_UPDATE
+msgid "An updated version of PlayOnLinux is available. Please visit the website." 
+msgstr "PlayOnLinuxが更新されています。ウェブサイトを参照してください。" 
+
+#: LNG_MAIN_UPDATE_SUCCES
+msgid "The updates have been successfully installed." 
+msgstr "更新処理は正常に終了しました。" 
+
+#: LNG_MAIN_MENU
+msgid "File" 
+msgstr "ファイル" 
+
+#: LNG_MAIN_MENU_ITEM_PLAY
+msgid "Run" 
+msgstr "実行" 
+
+#: LNG_MAIN_MENU_ITEM_INSTALL
+msgid "Install" 
+msgstr "インストール" 
+
+#: LNG_MAIN_MENU_ITEM_EXPERT
+msgid "Tools" 
+msgstr "ツール" 
+
+#: LNG_MAIN_MENU_ITEM_REMOVE
+msgid "Remove" 
+msgstr "削除" 
+
+#: LNG_MAIN_MENU_ITEM_UPDATE
+msgid "Update"
+msgstr "更新"
+
+#: LNG_CHOOSE_GAME
+msgid "You must choose a program"
+msgstr "プログラムを選択してください。"
+
+#: LNG_MAIN_INSTALL_MENU
+msgid "What do you want to install ?" 
+msgstr "どれをインストールしますか?" 
+
+#: LNG_MAIN_UNINSTALL_MENU
+msgid "What do you want to uninstall ?" 
+msgstr "どれをアンインストールしますか?" 
+
+#: LNG_MAIN_RUN_MENU
+msgid "Which game do you want to play? ?" 
+msgstr "どのアプリを実行しますか?" 
+
+#: LNG_MAIN_INSTALL_UNINSTALL
+msgid "Uninstall" 
+msgstr "アンインストール" 
+
+#: LNG_MAIN_CHECKUPGRADE
+msgid "Do you want to check for updates on the PlayOnLinux website ?" 
+msgstr "PlayOnLinuxのウェブサイトから更新を確認しますか?" 
+
+#: LNG_MAIN_FIRSTUSE
+msgid "Welcome to PlayOnLinux.\nYou need to set some options\nMake sure you are connected to the internet." 
+msgstr "PlayOnLinuxへようこそ。\n初回設定を開始します\nインターネットへ接続を行います。" 
+
+#: LNG_MAIN_INSTALLFONTS
+msgid "Microsoft fonts aren't installed; I'll install them for you." 
+msgstr "Microsoftフォントがインストールされていません。インストールを開始します。" 
+
+#: LNG_MAIN_DOWNLOADFONTS
+msgid "Please wait while the fonts are downloaded..." 
+msgstr "フォントをダウンロードしています..." 
+
+#: LNG_MAIN_CREATEDIRECTORY
+msgid "Please wait: creating PlayOnLinux's directions" 
+msgstr "PlayOnLinuxのディレクトリを作成しています。" 
+
+#: LNG_MAIN_LANGUAGE_DETECTED
+msgid "The current language is : $LANG. This language exists in PlayOnLinux. Would you like to use it? ?" 
+msgstr "現在の言語設定 : $LANG. この言語は PlayOnLinux でサポートされています。この言語を有効にしますか?" 
+
+#: LNG_MAIN_CHOOSELANGUAGE
+msgid "Choose your preferred language." 
+msgstr "言語設定を選択してください" 
+
+#: LNG_MAIN_CHOOSEGUI
+msgid "Choose your preferred GUI." 
+msgstr "GUI設定を選択してください。" 
+
+#: LNG_MAIN_LANGUAGE_NOT_DETECTED
+msgid "Your system's language does not exist in PlayOnLinux.\nPlease choose another one" 
+msgstr "残念ですが現在の言語はPlayOnLinuxでサポートされていません。\n別の言語設定を選択してください" 
+
+#: LNG_MAIN_CHOOSELANGUAGE
+msgid "Choose the language you want" 
+msgstr "言語設定を選択してください" 
+
+#: LNG_MAIN_CHOOSETHEME
+msgid "Choose the theme you want" 
+msgstr "テーマを選択してください" 
+
+#: LNG_THEMES
+msgid "Theme"
+msgstr "テーマ"
+
+#: LNG_EXPERT_DIDNOTSELECT
+msgid "You did not select any games!" 
+msgstr "ゲームが選択されていません!" 
+
+#: LNG_EXPERT_REGISTRY
+msgid "Registry Editor" 
+msgstr "レジストリエディタ" 
+
+#: LNG_EXPERT_WINEPREFIX
+msgid "Update the wineprefix" 
+msgstr "Wine環境の更新" 
+
+#: LNG_EXPERT_WAITUPGRADE
+msgid "Please wait while the wine prefix is updated" 
+msgstr "PlayonLinuxからプログラムリストを更新しています。" 
+
+#: LNG_EXPERT_WINECONFIG
+msgid "Configure wine" 
+msgstr "Wine設定" 
+
+#: LNG_EXPERT_RUN
+msgid "Run a non-official script" 
+msgstr "非公式スクリプトの実行" 
+
+#: LNG_EXPERT_UNFOUND
+msgid "File not found!" 
+msgstr "ファイルが見つかりません。" 
+
+#: LNG_EXPERT_NOTPOL
+msgid "This file is not a valid PlayOnLinux script" 
+msgstr "このファイルは正規のPlayOnLinuxスクリプトではありません。" 
+
+#: LNG_EXPERT_DIRECTX
+msgid "Install DirectX"
+msgstr "DirectXのインストール"
+
+#: LNG_EXPERT_WVER
+msgid "Manage wine versions"
+msgstr "Wineのバージョン管理"
+
+#: LNG_EXPERT_WKILL
+msgid "Kill wineserver process"
+msgstr "WineServerプロセスの停止"
+
+#: LNG_WINEVERSIONS_INTRO
+msgid "This add-on allows you to have more than one wine version simultaneously." 
+msgstr "このアドオンは複数のWineのバージョン管理が出来ます。" 
+
+#: LNG_WINEVERSIONS_DOWNLOADING
+msgid "Downloading wine" 
+msgstr "Wineのダウンロードを開始します。" 
+
+#: LNG_WINEVERSIONS_DOWNLOADFAILED
+msgid "The download seems to have failed." 
+msgstr "ダウンロードに失敗しました。" 
+
+#: LNG_WINEVERSIONS_INSTALL
+msgid "The version of wine has been successfully downloaded.\nI'm' now going to install it." 
+msgstr "Wineのダウンロードは終了しました。\nインストールを開始します。" 
+
+#: LNG_WINEVERSIONS_INSTALLATION
+msgid "Please wait : installing wine version ..." 
+msgstr "Wineをインストールしています ..." 
+
+#: LNG_WINEVERSIONS_INSTALLATION_FINISHED
+msgid "Installation succeeded." 
+msgstr "インストールは正常に終了しました。" 
+
+#: LNG_WINEVERSIONS_GAMETOEDIT
+msgid "To which game do you want to apply this modification?" 
+msgstr "どのアプリケーション設定を変更しますか?"   
+
+#: LNG_WINEVERSIONS_VERSIONTOUSE
+msgid "Which wine version do you want to use ?" 
+msgstr "どのバージョンのWineを使いますか?" 
+
+#: LNG_WINEVERSIONS_MUSTSPECIFY
+msgid "You must choose which version you want to download." 
+msgstr "どのバージョンのWineをダウンロードしますか?" 
+
+#: LNG_WINEVERSIONS_ALREADYINSTALLED
+msgid "This version has already been installed" 
+msgstr "このバージョンは既にインストールされています。" 
+
+#: LNG_WINEVERSIONS_RESETSESSION
+msgid "The session has been reset." 
+msgstr "セッションがリセットされました。" 
+
+#: LNG_WINEVERSIONS_GAME
+msgid "To which game do you want to apply the modification ?" 
+msgstr "どのゲームの変更を行いますか?" 
+
+#: LNG_WINEVERSIONS_NOWINE
+msgid "No wine version installed" 
+msgstr "別バージョンのWineはインストールされていません。" 
+
+#: LNG_WINEVERSIONS_CHOOSEUNINSTALL
+msgid "Choose which version you want to uninstall." 
+msgstr "どのバージョンをアンインストールしますか?" 
+
+#: LNG_WINEVERSIONS_CHOOSEDOWNLOAD
+msgid "Which wine version should I download?" 
+msgstr "どのバージョンのWineをダウンロードしますか?" 
+
+#: LNG_WINEVERSIONS_MENU_ASSIGN
+msgid "Assign a wineversion for a program" 
+msgstr "指定プログラムを実行するWineバージョンを指定する"
+
+#: LNG_WINEVERSIONS_MENU_INSTALL
+msgid "Install a wineversion" 
+msgstr "Wineのインストール"
+
+#: LNG_WINEVERSIONS_MENU_UNASSIGN
+msgid "Unassign a wineversion" 
+msgstr "指定プログラムのWineバージョンを標準に戻す"   
+
+#: LNG_WINEVERSIONS_MENU_UNINSTALL
+msgid "Uninstall a wineversion" 
+msgstr "Wineの指定バージョンの削除"   
+
+#: LNG_WINEVERSIONS_WINEVERSIONS
+msgid "WineVersions" 
+msgstr "Wineのバージョン" 
+
+#: LNG_OTHER
+msgid "Other" 
+msgstr "その他" 
+
+#: LNG_EXEMPLE
+msgid "Exemple " 
+msgstr "例 " 
+
+#: LNG_RESET
+msgid "Reset" 
+msgstr "リセット" 
+
+#: LNG_OPTIONS_MENU
+msgid "Settings" 
+msgstr "設定" 
+
+#: LNG_OPTIONS_RESULT
+msgid "Test results" 
+msgstr "テスト結果" 
+
+#: LNG_OPTIONS_NORESULT
+msgid "Glxgears did not produce any results." 
+msgstr "Glxgearsの結果が取得できませんでした。" 
+
+#: LNG_OPTIONS_INFOS_SYS
+msgid "System information:" 
+msgstr "システム情報:" 
+
+#: LNG_OPTIONS_INFOS_YSYS
+msgid "Your system :" 
+msgstr "システム :" 
+
+#: LNG_OPTIONS_INFOS_KERNEL
+msgid "Your kernel :" 
+msgstr "カーネル :" 
+
+#: LNG_OPTIONS_INFOS_LANG
+msgid "System language :" 
+msgstr "システム言語 :" 
+
+#: LNG_OPTIONS_INFOS_USER
+msgid "Your user login :" 
+msgstr "ユーザーID :" 
+
+#: LNG_OPTIONS_INFOS_NAMEMACHINE
+msgid "Your computer's name :" 
+msgstr "コンピュータ名 :" 
+
+#: LNG_OPTIONS_INFOS_VIDEOCARD
+msgid "Your video card :" 
+msgstr "ビデオカード :" 
+
+#: LNG_OPTIONS_INFOS_DISTRIB_ID
+msgid "Your distribution :" 
+msgstr "ディストリビューション :" 
+
+#: LNG_OPTIONS_INFOS_RELEASE
+msgid "Your distribution version :" 
+msgstr "ディストリビューションバージョン :" 
+
+#: LNG_OPTIONS_INFOS_DDINFOS
+msgid "Space remaining on your hard disks :" 
+msgstr "ハードディスク空き容量 :" 
+
+#: LNG_OPTIONS_INFOS_WINEINSTALLED
+msgid "Wine version installed :" 
+msgstr "インストールされているWineのバージョン :" 
+
+#: LNG_OPTIONS_INFOS_WINECURRENT
+msgid "Wine version used by PlayOnLinux :" 
+msgstr "PlayOnLinuxが利用しているWineのバージョン :" 
+
+#: LNG_OPTIONS_MENU_INFORMATIONS
+msgid "Informations" 
+msgstr "情報" 
+
+#: LNG_INFORMATION
+msgid "Information about a game"
+msgstr "アプリケーション情報"
+
+#: LNG_OPTIONS_TESTS
+msgid "Tests" 
+msgstr "テスト" 
+
+#: LNG_OPTIONS_LANGUAGE
+msgid "Language"
+msgstr "言語設定"
+
+#: LNG_OPTIONS_REPOSITORY
+msgid "Repository"
+msgstr "リポジトリ"
+
+#: LNG_OPTIONS_PANELS
+msgid "Panels"
+msgstr "パネル"
+
+#: LNG_NEXT_RUN
+msgid "You must restart PlayOnLinux for the changes to take effect" 
+msgstr "更新を適用するためPlayOnLinuxを再起動する必要があります。" 
+
+#: LNG_HAVE
+msgid "You have" 
+msgstr "あなたは以下を待っています:" 
+
+#: LNG_HELP
+msgid "Help"
+msgstr "ヘルプ"
+
+#: LNG_ABOUT
+msgid "About"
+msgstr "情報"
+
+#: LNG_ERROR
+msgid "Error"
+msgstr "エラー"
+
+#: LNG_EXIT
+msgid "Exit"
+msgstr "終了"
+
+#: LNG_REFRESH
+msgid "Refresh"
+msgstr "更新"
+
+#: LNG_WINEBOOSTER_WELCOME1
+msgid "Welcome on WineBooster, an optimization's script for Wine" 
+msgstr "WineBoosterへようこそ！ このスクリプトは Wine を最適化します。" 
+
+#: LNG_WINEBOOSTER_WELCOME2
+msgid "Created by GNU_Raziel" 
+msgstr "Created by GNU_Raziel" 
+
+#: LNG_WINEBOOSTER_WELCOME3
+msgid "If you does not know what to choose, LEAVE DEFAULTS !!!" 
+msgstr "もし、何のことかわからないのなら、標準を使用してください。" 
+
+#: LNG_WINEBOOSTER_GAME_CHOOSE
+msgid "Choose a game" 
+msgstr "アプリケーションを選択してください。" 
+
+#: LNG_WINEBOOSTER_GAME_ERROR
+msgid "You did not select a game" 
+msgstr "アプリケーションが選択されていません。" 
+
+#: LNG_WINEBOOSTER_WVERSION
+msgid "Which version of Windows would you like to use? (Values : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )" 
+msgstr "Windowsのバージョンを選択してください。\n (値 : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - 標準 : winxp )" 
+
+#: LNG_WINEBOOSTER_DDR
+msgid "Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)" 
+msgstr "DirectDrawレンダラモードを選択してください。\n (値 : opengl, gdi - 標準 : gdi)" 
+
+#: LNG_WINEBOOSTER_VERTEXSHADER
+msgid "Activate VertexShader Mode? (Default : N)" 
+msgstr "VertexShaderを有効にしますか? (標準 : N)" 
+
+#: LNG_WINEBOOSTER_PIXELSHADER
+msgid "Activate PixelShader Mode? (Default : N)" 
+msgstr "PixelShaderを有効にしますか? (標準 : N)" 
+
+#: LNG_WINEBOOSTER_UGLSL
+msgid "Activate GLSL Support? (Default : N)" 
+msgstr "GLSLサポートを有効にしますか? (標準 : N)" 
+
+#: LNG_WINEBOOSTER_VMS
+msgid "How much memory does your graphics board have? (Default : 64)" 
+msgstr "グラフィックメモリを指定してください。 (標準 : 64)" 
+
+#: LNG_WINEBOOSTER_ORM
+msgid "Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - Default : backbuffer)" 
+msgstr "Offscreenレンダラモードを選択してください。\n (値 : backbuffer, pbuffer, fbo - 標準 : backbuffer)" 
+
+#: LNG_WINEBOOSTER_RTLM
+msgid "Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, textex, disabled - Default : auto)" 
+msgstr "Render Target Lockモードを選択してください。\n (値 : auto, readdraw, readtex, texdraw, textex, disabled - 標準 : auto)" 
+
+#: LNG_WINEBOOSTER_WDESKTOP
+msgid "Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION !!)? (Example : 1024x768 - Default : 0 = FullScreen)" 
+msgstr "WineのWindow解像度を指定してください。\n (注意!ゲームの解像度は変更出来ません)? (例 : 1024x768 - 標準 : 0 = フルスクリーン)" 
+
+#: LNG_WINEBOOSTER_WMANAGED
+msgid "Authorize your WM to manage Windows? ( Default : Y )" 
+msgstr "ウィンドウマネージャに管理させますか? ( 標準 : Y )" 
+
+#: LNG_WINEBOOSTER_WDXGRAB
+msgid "Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default : N )" 
+msgstr "DirectXに画面外のマウス位置を検出させますか? ( 標準 : N )" 
+
+#: LNG_WINEBOOSTER_WAUDIO
+msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)" 
+msgstr "Sound Driverを選択してください? (値 : oss, alsa - 標準 : alsa)" 
+
+#: LNG_WINEBOOSTER_AEMUL
+msgid "Emulate DirectSound Driver? (Default : N)" 
+msgstr "DirectSoundをエミュレートしますか? (標準 : N)" 
+
+#: LNG_LI_PRESENTATION
+msgid "This script will allow you to install any game on PlayOnLinux and use it with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had been installed with an official script. Warning: We are unable to guarantee that your game will work perfectly." 
+msgstr "このスクリプトはPlayOnLinuxでサポートされたアプリケーションのように、\nいろいろなアプリケーションのインストールや各種ツール(WineBooster, WineMaster,WineConfig)の実行が出来ます。\n注意：完全な動作を保証するものではありません。" 
+
+#: LNG_ACTION
+msgid "Action" 
+msgstr "操作" 
+
+#: LNG_LI_NEW
+msgid "New" 
+msgstr "新しいWine環境にアプリケーションをインストールする"   
+
+#: LNG_LI_PATCH
+msgid "Edit" 
+msgstr "インストール済Wine環境にアプリケーションを追加する"
+
+#: LNG_CHOICE
+msgid "Please make a choice" 
+msgstr "選択してください。" 
+
+#: LNG_LI_CODENAME
+msgid "Please type a code name for the wine prefix of your game. This name shouldn't contain spaces." 
+msgstr "Wine環境の名前を指定してください。注意:名前にスペースは使えません。" 
+
+#: LNG_LI_EXIST
+msgid "This codename already exists in PlayOnLinux." 
+msgstr "すでにPlayOnLinuxにcodenameが存在します。" 
+
+#: LNG_LI_INSTALLFILE
+msgid "Please choose the file to execute" 
+msgstr "実行ファイルを選択してください。" 
+
+#: LNG_LI_CHOOSEFILE
+msgid "You have to choose a file !" 
+msgstr "ファイルを選択してください。" 
+
+#: LNG_LI_SHORTCUT
+msgid "Do you want to create a shortcut to the application in PlayOnLinux ? If you patched a game, you should probably select 'no'." 
+msgstr "PlayOnLinuxメニューに新しいショートカットを追加しますか?"   
+
+#: LNG_LI_EXEC
+msgid "Choose the file to exec the game." 
+msgstr "アプリケーションの実行ファイルを選択してください。" 
+
+#: LNG_LI_GIVENAME
+msgid "Please type a name for your shortcut." 
+msgstr "このアプリケーションの名前を入力してください。" 
+
+#: LNG_SCRIPT_WAIT
+msgid "Please wait while the installation of the game is prepared" 
+msgstr "ゲームインストールの準備をしています..." 
+
+#: LNG_DOWNLOAD
+msgid "Please wait while the game is downloaded..." 
+msgstr "ダウンロード"
+
+#: LNG_DOWNLOAD_LIB
+msgid "Please wait while the library are downloaded..." 
+msgstr "ライブラリファイルをダウンロード中..." 
+
+#: LNG_DOWNLOAD_FINISHED
+msgid "Download finished" 
+msgstr "ダウンロードは完了しました。" 
+
+#: LNG_WAIT
+msgid "Please wait..." 
+msgstr "もうしばらくお待ちください..." 
+
+#: LNG_POLSC
+msgid "Welcome to PolScriptCreator.\nThis tools may help you to build basic scripts. The scripts will be saved on your Desktop. Thanks to Christhaal." 
+msgstr "PolScriptCreatorへようこそ。\nこのツールは簡単なスクリプト作成をサポートします。作成したスクリプトはデスクトップに保存されます。 Thanks to Christhaal." 
+
+#: LNG_GIT_WELCOME1
+msgid "Welcome on WineGIT, a GIT compilation and installation script for WineVersion" 
+msgstr "WineGITへようこそ, このスクリプトはGITからWineをインストールし管理するものです。" 
+
+#: LNG_GIT_KEEP
+msgid "Keep the actual git ? (Values : Y ou N - Default : N)" 
+msgstr "現在のWine(git)を保持しますか? (値 : Y or N - 標準 : N)" 
+
+#: LNG_GIT_KEEP2
+msgid "Please use ANOTHER name for the last git" 
+msgstr "以前のWine(git)に別の名前を指定してください。" 
+
+#: LNG_GIT_RENAME
+msgid "Please give a new name for installed git (example : git-06242007)" 
+msgstr "インストールしたWine(git)に名前を付けてください。(例 : git-06242007)" 
+
+#: LNG_GIT_NAME_ERROR
+msgid "You did not specify a name !!" 
+msgstr "名前を入力してください!!" 
+
+#: LNG_GIT_NAME_DUPLICATE_ERROR
+msgid "This name already exist !!" 
+msgstr "この名前は既に使われています!!" 
+
+#: LNG_GIT_DOWNLOAD
+msgid "git download, please wait..." 
+msgstr "Wine(git)をダウンロードしています..." 
+
+#: LNG_GIT_COMPILATION
+msgid "git's compilation and installation, please wait..." 
+msgstr "Wine(git)をインストールしています..." 
+
+#: LNG_GIT_FINISHED
+msgid "Installation successfull" 
+msgstr "インストールは成功しました。" 
+
+#: LNG_DOWNLOADING_INSTALLER
+msgid "Please wait while the installer is downloaded..." 
+msgstr "インストーラーをダウンロードしています..." 
+
+#: LNG_MENU_POL_1
+msgid "Do you want to add a \"PlayOnLinux\" menu item to your GNOME or KDE menu ? ?\nIt will contain all the application shorcuts you create." 
+msgstr " \"PlayOnLinux\" をGNOMEまたはKDEメニューに追加しますか?\n作成したメニューからインストールアプリケーションが参照できます。" 
+
+#: LNG_MENU_POL_2
+msgid "Do you want to disable the \"PlayOnLinux\" menu ?"
+msgstr " \"PlayOnLinux\" をメニューから外しますか?"
+
+#: LNG_FILE_CHOOSE
+msgid "Please choose a valid PlayOnLinux file to run"
+msgstr "実行する非公式PlayOnLinuxファイルを選択してください。"
+
+#: LNG_APP_CHOOSE
+msgid "Please choose an application to install"
+msgstr "インストールするアプリケーションを選択してください。"
+
+#: LNG_APP_CHOOSE2
+msgid "Please choose a type of application to install"
+msgstr "インストールするアプリケーションを入力してください。"
+
+#: LNG_APP_CHOOSE3
+msgid "Installation wizard"
+msgstr "インストールウィザード"
+
+#: LNG_LAUNCHER
+msgid "Please choose a name for the shortcut"
+msgstr "ショートカット名の選択"
+
+#: LNG_UPDATING_FINISHED
+msgid "The list of programs has been successfully updated"
+msgstr "プログラムリストの更新は完了しました。"
+
+#: LNG_UPDATEW_FINISHED
+msgid "The prefix has been successfully updated"
+msgstr "Wine環境の更新は完了しました。"
+
+#: LNG_UPDATING
+msgid "Updating"
+msgstr "以下を更新中:"
+
+#: LNG_DOWNLOADING
+msgid "Downloading"
+msgstr "以下をダウンロード中:"
+
+#: LNG_WARNING
+msgid "Warning"
+msgstr "警告"
+
+#: LNG_NEXT
+msgid "Next"
+msgstr "次へ"
+
+#: LNG_CANCEL
+msgid "Cancel" 
+msgstr "キャンセル" 
+
+#: LNG_FINISHED
+msgid "Finished" 
+msgstr "完了しました" 
+
+#: LNG_FINISHED_
+msgid "Finish"
+msgstr "完了しました"
+
+#: LNG_STEP
+msgid "Step" 
+msgstr "ステップ" 
+
+#: LNG_SUR
+msgid "of" 
+msgstr "/" 
+
+#: LNG_DOWNLOAD_CLICK
+msgid "Click on download to start."
+msgstr "ダウンロードを開始します。"
+
+#: LNG_DOWNLOAD
+msgid "Download"
+msgstr "ダウンロード"
+
+#: LNG_DOWNLOADED
+msgid "downloaded"
+msgstr "ダウンロード"
+
+#: LNG_YES
+msgid "Yes"
+msgstr "はい"
+
+#: LNG_NO
+msgid "No"
+msgstr "いいえ"
+
+#: LNG_BROWSE
+msgid "Browse"
+msgstr "参照"
+
+#: LNG_KILL_WINSERVER
+msgid "Warning ! Before killing the wineserver, please assure that there are no wine applications running.\n\nAre you sure you want to kill the wineserver ?"
+msgstr "警告! Wineserverを終了する前に, Wineアプリケーションを終了しておいてください。\n\nWineserverを終了しますか?"
+
+#: LNG_WINELOOK1
+msgid "Please choose a theme"
+msgstr "テーマを選択してください。"
+
+#: LNG_WINELOOK2
+msgid "Your theme have been successfully applied"
+msgstr "テーマを適用しました。"
+
+#: LNG_EXPERT_PKG
+msgid "Install a package"
+msgstr "パッケージのインストール"
+
+#: LNG_EXPERT_BOOSTERM
+msgid "Advanced wine configuration"
+msgstr "高度なWine設定"
+
+#: LNG_WINEGIT
+msgid "Wine GIT"
+msgstr "Wine GIT"
+
+#: LNG_POLSHELL
+msgid "PlayOnLinux debugger"
+msgstr "PlayOnLinuxデバッカー"
+
+#: LNG_WINELOOK
+msgid "Wine theme"
+msgstr "Wineテーマ"
+
+#: LNG_SLOGAN
+msgid "Run you Windows programs on Linux !"
+msgstr "WindowsアプリケーションをLinux上で実行することが出来ます!"
+
+#: LNG_LOGO
+msgid "The logo are made by Crystal Project"
+msgstr "Logo製作 by Crystal Project"
+
+#: LNG_WINDOWS_DESIGN
+msgid "Windows designed by asimov"
+msgstr "Windowsデザイン by asimov"
+
+#: LNG_COPYRIGHT
+msgid "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
+msgstr "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
+
+#: LNG_MAIN_INSTALL_WORKONLINUX
+msgid "Application"
+msgstr "アプリケーション"
+
+#: LNG_MAIN_INSTALL_LIVE
+msgid "Manual installation"
+msgstr "手動インストール"
+
+#: LNG_MAIN_INSTALL_DOSBOX
+msgid "Dosbox application"
+msgstr "Dosboxアプリケーション"
+
+#: LNG_MAIN_INSTALL_PKG
+msgid "Install a .pol package"
+msgstr ".polパッケージのインストール"
+
+#: LNG_LI_CHOOS_ACTION
+msgid "What do you want to do ?"
+msgstr "どの処理を実行しますか?"
+
+#: LNG_LI_NEW
+msgid "Install a program in a new prefix"   
+msgstr "新しいWine環境にアプリケーションをインストールする"   
+
+#: LNG_LI_PATCH
+msgid "Edit an application already installed"
+msgstr "インストール済Wine環境にアプリケーションを追加する"
+
+#: LNG_LI_CHOOSEPREFIX
+msgid "What is the prefix of your program ?"   
+msgstr "変更を行うWine環境を選択してください。"   
+
+#: LNG_LI_SHORTCUT
+msgid "Would you like to make a new shortcut in PlayOnLinux"   
+msgstr "PlayOnLinuxメニューに新しいショートカットを追加しますか?"   
+
+#: LNG_LI_DELETE
+msgid "Delete a prefix"
+msgstr "Wine環境の削除"
+
+#: LNG_LI_DELETE_PREFIXE
+msgid "Are you sure you want to delete that prefixe ?"
+msgstr "指定したWine環境を削除しますか?"
+
+#: LNG_LI_PREFIXE_DELETED
+msgid "The prefix has been deleted"
+msgstr "指定したWine環境は削除されました。"
+
+#: LNG_WINEVERSION_ACTIONS
+msgid "Choose an action to do"
+msgstr "どれを実行しますか?"
+
+#: LNG_WINEVERSIONS_MENU_INSTALL
+msgid "Install a wine version"
+msgstr "Wineのインストール"
+
+#: LNG_WINEVERSIONS_MENU_GIT
+msgid "Install Wine GIT"
+msgstr "Wine GITのインストール"
+
+#: LNG_WINEVERSIONS_MENU_ASSIGN
+msgid "Assign a wine version to a programm"
+msgstr "指定プログラムを実行するWineバージョンを指定する"
+
+#: LNG_WINEVERSIONS_MENU_UNASSIGN
+msgid "Put back the default wine version to a program"   
+msgstr "指定プログラムのWineバージョンを標準に戻す"   
+
+#: LNG_WINEVERSIONS_MENU_UNINSTALL
+msgid "Remove a wine version"   
+msgstr "Wineの指定バージョンの削除"   
+
+#: LNG_WINEVERSIONS_MENU_SESSION
+msgid "Session"   
+msgstr "セッション" 
+
+#: LNG_WINEVERSIONS_GAMETOEDIT
+msgid "Which program do you want to edit ?"   
+msgstr "どのアプリケーション設定を変更しますか?"   
+
+#: LNG_TEST_3D
+msgid "I'm going to test your 3D hardware. It will take about 2 minutes"
+msgstr "3Dハードウェアのテストを行います。(所要時間:2分程度)"
+
+#: LNG_OPTIONS_REPOS_STEP1
+msgid "Choose a repository to enable / disable"
+msgstr "リポジトリを選択し 有効 / 無効 を切り替えてください。"
+
+#: LNG_DEFAULT_QUESTION
+msgid "Question"
+msgstr "質問"
+
+#: LNG_DEFAULT_FIELD
+msgid "Text"
+msgstr "テキスト"
+
+#: LNG_PKG_NOT_VALID
+msgid "The file is not a valid PlayOnLinux package"
+msgstr "このファイルは正常なPlayOnLinuxのパッケージではありません。"
+
+#: LNG_PKG_NOT_FOUND
+msgid "Unable to find the file"
+msgstr "ファイルが見つかりません。"
+
+#: LNG_PKG_CHOOSE
+msgid "Choose a package to install"
+msgstr "インストールするパッケージを選択してください"
+
+#: LNG_PKG_MANAGER
+msgid "PlayOnLinux package manager"
+msgstr "PlayOnLinuxパッケージ管理"
+
+#: LNG_CANT_FIND_UNINSTALL
+msgid "Unable to find the game you are trying to uninstall"
+msgstr "アンインストール対象のアプリケーションが見つかりません。"
+
+#: LNG_AUTORUN_CANT_FIND
+msgid "No setup location found in autorun.inf"
+msgstr "autorun.infの中にセットアップ場所の記載が見当たりません。"
+
+#: LNG_AUTORUN_CDROM_FOUND
+msgid "A CD-ROM has been found on your drive"
+msgstr "CD-ROMが見つかりました。"
+
+#: LNG_AUTORUN_CDROM_NAME
+msgid "Name "
+msgstr "アプリケーション名 "
+
+#: LNG_AUTORUN_CDROM_SETUP
+msgid "Setup "
+msgstr "セットアップファイル "
+
+#: LNG_AUTORUN_TITLE
+msgid "Autorun"
+msgstr "自動起動"
+
+#: LNG_AUTORUN_NEXT
+msgid "In the following prefix"
+msgstr "Wine環境設定"
+
+#: LNG_AUTORUN_RECOM
+msgid "recomended"
+msgstr "推奨"
+
+#: LNG_AUTORUN_WHERE
+msgid "Where do you want to install this CD-ROM?"
+msgstr "CD-ROMからインストールを実行しますか?"
+
+#: LNG_AUTORUN_EXISTING
+msgid "In an existing prefix (add-on)"
+msgstr "既存のWine環境に追加する。"
+
+#: LNG_AUTORUN_NEW
+msgid "In a new prefix"
+msgstr "Wine環境を新たに作成する。"
+
+#: LNG_NOAUTORUN
+msgid "No autorun support found"
+msgstr "自動実行をサポートしているものは見つかりません。"
+
+#: LNG_AUTORUN_N
+msgid "autorun has been found"
+msgstr "autorunが見つかりました。"
+
+#: LNG_AUTORUN_PREFIX_C
+msgid "Choose the prefix"
+msgstr "Wine環境の選択"
+
+#: LNG_SHORTCUT_CREATON
+msgid "Shortcut creation"
+msgstr "ショートカットの作成"
+
+#: LNG_NEW_INSTALL_UNSUPPORTED
+msgid "Install a .pol package or an unsupported application"
+msgstr ".polパッケージや非公式アプリのインストール"
+
+#: LNG_SEARCH
+msgid "Search :"
+msgstr "検索 :"
+
+#: LNG_CLOSE
+msgid "Close"
+msgstr "閉じる"
+
+#: LNG_CAT_ACCESSORIES
+msgid "Accessories"
+msgstr "アクセサリ"
+
+#: LNG_CAT_DEVELOPMENT
+msgid "Development"
+msgstr "開発"
+
+#: LNG_CAT_GAMES
+msgid "Games"
+msgstr "ゲーム"
+
+#: LNG_CAT_GRAPHICS
+msgid "Graphics"
+msgstr "グラフィック"
+
+#: LNG_CAT_MULTIMEDIA
+msgid "Multimedia"
+msgstr "マルチメディア"
+
+#: LNG_CAT_OFFICE
+msgid "Office"
+msgstr "オフィス"
+
+#: LNG_GENERAL_APPS
+msgid "My Applications"
+msgstr "アプリケーション"
+
+#: LNG_OPTIONS_PANEL_DEFAUT
+msgid "Defaults programs"
+msgstr "標準プログラム"
+
+#: LNG_OPTIONS_PANEL_BROWSER
+msgid "Browser"
+msgstr "ブラウザ"
+
+#: LNG_OPTIONS_PANEL_TEST
+msgid "Test"
+msgstr "テスト"
+
+#: LNG_OPTIONS_PANEL_TERMINAL
+msgid "Terminal"
+msgstr "端末"
+
+#: LNG_OPTIONS_PANEL_TEMP
+msgid "Temp directory"
+msgstr "一時ファイル"
+
+#: LNG_OPTIONS_PANEL_TEMP_E
+msgid "Automatically empty temp directory"
+msgstr "自動的に一時ファイルを空にする"
+
+#: LNG_OPTIONS_PANEL_OFFLINE
+msgid "Offline Mode"
+msgstr "オフラインモード"
+
+#: LNG_OPTIONS_PANEL_OFFLINE_E
+msgid "Enable Offline mode"
+msgstr "オフラインモードを有効にする。"
+
+#: LNG_OPTIONS_PANEL_PROXY
+msgid "Proxy configuration"
+msgstr "プロキシ設定"
+
+#: LNG_OPTIONS_PANEL_PROXY_ADRESS
+msgid "Proxy address"
+msgstr "プロキシサーバーアドレス"
+
+#: LNG_OPTIONS_PANEL_PROXY_USE
+msgid "Set a proxy"
+msgstr "プロキシサーバーを使用する。"
+
+#: LNG_OPTIONS_PANEL_PROXY_PORT
+msgid "Port"
+msgstr "ポート"
+
+#: LNG_OPTIONS_PANEL_PROXY_LOGIN
+msgid "Login"
+msgstr "ログインユーザ"
+
+#: LNG_OPTIONS_PANEL_PROXY_PASSWORD
+msgid "Password"
+msgstr "パスワード"
+
+#: LNG_OPTIONS_PANEL_D_WINE
+msgid "Default Wine Version to run wine programs with PlayOnLinux"
+msgstr "PlayOnLinuxが標準で利用するWineバージョンの指定"
+
+#: LNG_OPTIONS_PANEL_DESK
+msgid "Desktop"
+msgstr "デスクトップ"
+
+#: LNG_OPTIONS_PANEL_MENU
+msgid "PlayOnLinux menu"
+msgstr "PlayOnLinuxメニュー"
+
+#: LNG_OPTIONS_PANEL_MENU_R
+msgid "Add PlayOnLinux menu in your panel"
+msgstr "PlayOnLinuxメニューをパネルに追加する。"
+
+#: LNG_OPTIONS_PANEL_DESKTOP_D
+msgid "Desktop directory"
+msgstr "デスクトップディレクトリ"
+
+#: LNG_OPTIONS_PANEL_D_NICKNAME
+msgid "Default Nickname"
+msgstr "ニックネーム"
+
+#: LNG_OPTIONS_PANEL_C_STARTUP
+msgid "Automatically connect to IRC at PlayOnLinux startup"
+msgstr "起動時にIRC(PlayOnLinux)に自動的に接続する。"
+
+#: LNG_OPTIONS_PANEL_W_USER
+msgid "Warm users when I run a game"
+msgstr "ゲーム起動中は警告する"
+
+#: LNG_OPTIONS_PANEL_SOUND
+msgid "Play a sound when I receive a private message"
+msgstr "プライベートメッセージ受信時にサウンドを鳴らす。"
+
+#: LNG_OPTIONS_PANEL_TITLE
+msgid "PlayOnLinux Settings"
+msgstr "PlayOnLinux設定"
+
+#: LNG_OPTIONS_PANEL_O1
+msgid "General"
+msgstr "標準"
+
+#: LNG_OPTIONS_PANEL_O2
+msgid "Messenger"
+msgstr "メッセンジャー"
+
+#: LNG_OPTIONS_PANEL_O3
+msgid "Internet"
+msgstr "インターネット"
+
+#: LNG_OPTIONS_PANEL_O4
+msgid "Environment"
+msgstr "環境設定"
+
+#: LNG_OPTIONS_PANEL_O5
+msgid "System"
+msgstr "システム"
+
+#: LNG_OPTIONS_PANEL_APPLY
+msgid "Apply"
+msgstr "適用"
+
+#: LNG_OFFLINE_MODE
+msgid "You are in offline mode"
+msgstr "オフライン中"
+
+#: LNG_INSTALLED_PLUGIN
+msgid "Installed plugins"
+msgstr "インストール済 プラグイン"
+
+#: LNG_ADD_PLUGIN
+msgid "Add"
+msgstr "追加"
+
+#: LNG_CONFIG_PLUGIN
+msgid "Configure"
+msgstr "設定"
+
+#: LNG_ENABLE_PLUGIN
+msgid "Enable"
+msgstr "有効"
+
+#: LNG_DISABLE_PLUGIN
+msgid "Disable"
+msgstr "無効"
+
+#: LNG_CHOOSE_PLUGIN
+msgid "Choose a plugin"
+msgstr "プラグインを選択してください。"
+
+#: LNG_SUR_INSTALL
+msgid "Are yo sure you want to install the plugin"
+msgstr "このプラグインをインストールしても良いですか? : "
+
+#: LNG_SUR_DELETE
+msgid "Are yo sure you want to delete the plugin"
+msgstr "このプラグインを削除しても良いですか? :"
+
+#: LNG_OPTIONS_PANEL_O6
+msgid "Plugins"
+msgstr "プラグイン"
+
+#: LNG_MANAGER
+msgid "Plugins manager"
+msgstr "プラグイン マネージャ"
+
+#: LNG_NO_MORE
+msgid "No more alert me"
+msgstr "次からこの警告メッセージを表示しない"
+

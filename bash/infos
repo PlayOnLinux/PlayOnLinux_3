@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Copyright (C) 2007 Pâris Quentin
+#  		     Cassarin-Grand Arthur
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+if [ "$PLAYONLINUX" = "" ]
+then
+exit 0
+fi
+source "$PLAYONLINUX/lib/sources"
+cfg_check
+
+prefixe=$(detect_wineprefix "$1")
+prefixe_path="$REPERTOIRE/wineprefix/"
+prefixe=${prefixe//"$prefixe_path"/""}
+echo "$1"
+echo "Préfixe : $prefixe"
+
+version_wine=$(cat "$REPERTOIRE/configurations/installed/$1" | grep "PATH")
+WINEVER_PATH="PATH=\"/home/tinou/.PlayOnLinux/WineVersions/"
+WINEVER_2PATH="/usr/bin/:\$PATH\""
+version_wine=${version_wine//"$WINEVER_PATH"/""}
+version_wine=${version_wine//"$WINEVER_2PATH"/""}
+if [ "$version_wine" = "" ]
+then
+	version_wine=" default" 
+fi
+echo "Version de wine : $version_wine"
+
+exit 

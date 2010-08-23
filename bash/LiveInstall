@@ -1,0 +1,218 @@
+#!/bin/bash
+
+# Copyright (C) 2010 Pâris Quentin
+# Copyright (C) 2009 Łukasz Wojniłowicz
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+if [ "$PLAYONLINUX" = "" ]
+then
+exit 0
+fi
+source "$PLAYONLINUX/lib/sources"
+cfg_check
+
+
+create_shortcut()
+{
+	POL_SetupWindow_question "$LNG_LI_SHORTCUT" "$LNG_MAIN_INSTALL_LIVE"
+	reponse="$APP_ANSWER"
+	if [ "$reponse" = "TRUE" ]
+	then
+		cd $REPERTOIRE/wineprefix/$GAMENAME/drive_c/
+
+		POL_SetupWindow_browse "$LNG_LI_EXEC" "$LNG_MAIN_INSTALL_LIVE" ""
+
+		EXEC="$APP_ANSWER"
+		EXECDIR=$(dirname "$EXEC")
+		EXECDIR=${EXECDIR//"$REPERTOIRE"/""}
+		DRIVE="/wineprefix/$GAMENAME/drive_c/"
+		EXECDIR=${EXECDIR//"$DRIVE"/""}
+	
+		POL_SetupWindow_textbox "$LNG_LAUNCHER" "$LNG_MAIN_INSTALL_LIVE" ""
+		LAUNCHER=$APP_ANSWER
+		if [ ! "$EXECDIR" = "" ]
+			then
+			if [ ! "$LAUNCHER" = "" ]
+			then
+				POL_SetupWindow_make_shortcut "$GAMENAME" "$EXECDIR" "$EXEC" "playonlinux.png" "$LAUNCHER"
+				Set_WineVersion_Assign "$WINEVERSIONLIVE" "$LAUNCHER"
+				#echo "$EXECDIR"
+			fi
+		fi
+		create_shortcut
+	fi
+}
+delete_prefixe()
+{
+	cd $REPERTOIRE/wineprefix/
+
+	LIST_FILE=""
+	for file in *
+	do	
+		if [ "$LIST_FILE" = "" ]
+		then
+			LIST_FILE="$file" 
+		else
+			LIST_FILE+="~$file"
+		fi
+	done
+	
+	POL_SetupWindow_menu "$LNG_LI_CHOOSEPREFIX" "$LNG_MAIN_INSTALL_LIVE" "$LIST_FILE" "~"
+	GAMENAME="$APP_ANSWER"
+	POL_SetupWindow_question "$LNG_LI_DELETE_PREFIXE ($GAMENAME)" "$LNG_MAIN_INSTALL_LIVE"
+	if [ "$APP_ANSWER" = "TRUE" ]
+	then
+		rm "$REPERTOIRE/wineprefix/$GAMENAME" -r
+		POL_SetupWindow_message "$LNG_LI_PREFIXE_DELETED" "$LNG_MAIN_INSTALL_LIVE"
+	fi
+	POL_SetupWindow_Close
+	exit 0
+}
+
+
+LNG_LAUNCHER=$(eval_gettext "Please choose a name for the shortcut")
+LNG_LI_CHOOS_ACTION=$(eval_gettext "What do you want to do ?")
+LNG_LI_NEW=$(eval_gettext "Install a program in a new prefix")
+LNG_LI_PATCH=$(eval_gettext "Edit an application already installed")
+LNG_LI_CHOOSEPREFIX=$(eval_gettext "What is the prefix of your program ?")
+LNG_LI_SHORTCUT="$(eval_gettext 'Do you want to create a shortcut to the application in PlayOnLinux ?')\n$(eval_gettext 'If you patched a game, you should probably select no.')" 
+LNG_LI_DELETE=$(eval_gettext "Delete a prefix")
+LNG_LI_DELETE_PREFIXE=$(eval_gettext "Are you sure you want to delete that prefixe ?")
+LNG_LI_PREFIXE_DELETED=$(eval_gettext "The prefix has been deleted")
+LNG_LI_PRE=$(eval_gettext "Welcome in PlayOnLinux manual Installation")
+LNG_LI_PRESENTATION=$(eval_gettext "This script will allow you to install any game on PlayOnLinux and use it with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had been installed with an official script. Warning: We are unable to guarantee that your game will work perfectly.")
+LNG_CHOICE=$(eval_gettext "Please make a choice")
+LNG_SHOULDNT=$(eval_gettext "This name shouldn't contain spaces.")
+LNG_LI_CODENAME="$(eval_gettext 'Please type a name for the wine prefix of your application.')\n$LNG_SHOULDNT"
+LNG_LI_EXIST=$(eval_gettext "This codename already exists in PlayOnLinux.")
+LNG_LI_INSTALLFILE=$(eval_gettext "Please choose the file to execute")
+LNG_LI_CHOOSEFILE=$(eval_gettext "You have to choose a file !")
+LNG_LI_EXEC=$(eval_gettext "Choose the file to exec the game.")
+LNG_WC_EXEC=$(eval_gettext "Do you want to configure your prefix before installing your application ?")
+LNG_LI_GIVENAME=$(eval_gettext "Please type a name for your shortcut.")
+LNG_MAIN_INSTALL_LIVE=$(eval_gettext "Manual installation")
+
+LNG_WC_WINEVERSION=$(eval_gettext "Which wine version do you want to use ?")
+LNG_WC_CONFWINE=$(eval_gettext "Configure wine")
+LNG_WC_USEWT=$(eval_gettext "Use WineTricks")
+LNG_WC_ASSWV=$(eval_gettext "Assign a wine version to a programm")
+LNG_WC_BEFORE=$(eval_gettext "What do you want to do before installation ?")
+
+POL_SetupWindow_Init
+POL_SetupWindow_free_presentation "$LNG_MAIN_INSTALL_LIVE" "$LNG_LI_PRE\n\n$LNG_LI_PRESENTATION" 
+#message "$LNG_LI_PRESENTATION" "$LNG_MAIN_INSTALL_LIVE" 0 0 1
+
+POL_SetupWindow_menu "$LNG_LI_CHOOS_ACTION" "$LNG_MAIN_INSTALL_LIVE" "$LNG_LI_NEW~$LNG_LI_PATCH~$LNG_LI_DELETE" "~"
+menu="$APP_ANSWER"
+if [ "$menu" = "" ]
+then
+	POL_SetupWindow_Close
+	exit 0
+fi
+if [ "$menu" = "$LNG_LI_NEW" ]
+then
+	POL_SetupWindow_textbox "$LNG_LI_CODENAME" "$LNG_MAIN_INSTALL_LIVE" ""
+	GAMENAME="$APP_ANSWER"
+fi
+if [ "$menu" = "$LNG_LI_PATCH" ]
+then
+	cd $REPERTOIRE/wineprefix/
+	LIST_FILE=$(read_prefixes)
+	
+	POL_SetupWindow_menu "$LNG_LI_CHOOSEPREFIX" "$LNG_MAIN_INSTALL_LIVE" "$LIST_FILE" "~"
+	GAMENAME="$APP_ANSWER"
+fi
+if [ "$menu" = "$LNG_LI_DELETE" ]
+then
+	delete_prefixe
+fi
+
+if [ "$GAMENAME" = "" ]
+then
+	POL_SetupWindow_Close
+	exit 1
+fi
+
+select_prefixe "$REPERTOIRE/wineprefix/$GAMENAME"
+
+ITEMS="$LNG_WC_ASSWV~$LNG_WC_CONFWINE"
+if [ "-e" "$REPERTOIRE/plugins/WineTricks/scripts/menu" ]
+	then
+		ITEMS+="~$LNG_WC_USEWT"
+	fi
+
+POL_SetupWindow_checkbox_list "$LNG_WC_BEFORE" "$LNG_MAIN_INSTALL_LIVE" "$ITEMS" "~"
+WHATTORUNBEFORE="$APP_ANSWER"
+
+#Running AssignWine
+if [ "$(echo $WHATTORUNBEFORE | grep -o "$LNG_WC_ASSWV")" == "$LNG_WC_ASSWV" ]
+then
+	WINEVERSIONLIST="System"
+	WINEVERSIONDIRLIST=$(find $REPERTOIRE/WineVersions/* -maxdepth 0 -type d)
+	for single in $WINEVERSIONDIRLIST ; do
+	  singleparsed=${single##*/}
+	  WINEVERSIONLIST=`echo $WINEVERSIONLIST~$singleparsed`
+	done
+
+	POL_SetupWindow_menu_list "$LNG_WC_WINEVERSION" "$LNG_MAIN_INSTALL_LIVE" "$WINEVERSIONLIST" "~"
+	WINEVERSIONLIVE="$APP_ANSWER"
+	if [ "$WINEVERSIONLIVE" = "System" ]
+	then
+		WINEVERSIONLIVE="--reset"
+	fi
+	Use_WineVersion "$WINEVERSIONLIVE"
+fi
+
+POL_SetupWindow_prefixcreate
+
+#Running WineConfiguration
+if [ "$(echo $WHATTORUNBEFORE | grep -o "$LNG_WC_CONFWINE")" == "$LNG_WC_CONFWINE" ]
+then
+	LNG_CONFIGURE=$(eval_gettext "Configure wine")
+	POL_SetupWindow_wait_next_signal "$LNG_CONFIGURE" "$LNG_MAIN_INSTALL_LIVE"
+	winecfg
+	POL_SetupWindow_detect_exit
+fi
+
+#Running WineTricks
+if [ "$(echo $WHATTORUNBEFORE | grep -o "$LNG_WC_USEWT")" == "$LNG_WC_USEWT" ]
+then
+	bash "$REPERTOIRE/plugins/WineTricks/scripts/menu" "LiveInstall"
+fi
+
+cd $HOME
+POL_SetupWindow_browse "$LNG_LI_INSTALLFILE" "$LNG_MAIN_INSTALL_LIVE" 
+INSTALLDIR="$APP_ANSWER"
+if [ "$INSTALLDIR" = "" ]
+then
+	POL_SetupWindow_message "$LNG_LI_CHOOSEFILE" "$LNG_MAIN_INSTALL_LIVE"
+	exit 1
+fi
+WORKINGINSTALLDIR=$(dirname "$INSTALLDIR")
+cd $WORKINGINSTALLDIR
+POL_SetupWindow_wait_next_signal "$(eval_gettext 'PlayOnLinux is installing your application ...')" "$LNG_MAIN_INSTALL_LIVE"
+extension=$(echo "$INSTALLDIR" | sed 's/.*\.//g')
+if [ "$extension" = "msi" ]
+then
+wine msiexec /i "$INSTALLDIR"
+else
+wine "$INSTALLDIR"
+fi
+POL_SetupWindow_detect_exit 
+
+POL_SetupWindow_message "$(eval_gettext 'Please press Next only when installation is fully complete.')" "$LNG_MAIN_INSTALL_LIVE"
+create_shortcut
+POL_SetupWindow_Close

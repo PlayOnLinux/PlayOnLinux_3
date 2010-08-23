@@ -1,0 +1,141 @@
+#!/bin/bash
+# Copyright (C) 2007 Pâris Quentin
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+export TITRE="PlayOnLinux"
+export URL="http://www.playonlinux.com"
+export SITE="http://repository.playonlinux.com/"
+export SITE2="http://files.playonlinux.com/"
+export REPERTOIRE="$HOME/.PlayOnLinux"
+export VERSION="3.7.7"
+export LAST_VERSION=$(cat "$REPERTOIRE/configurations/last_version" 2> /dev/null)
+export PYTHON="python"
+if [ "$VRAIPATH" = "" ]
+then
+	export VRAIPATH="$PATH"
+fi
+if [ "$VRAILDPATH" = "" ]
+then
+	export VRAILDPATH="$LD_LIBRARY_PATH"
+fi
+export POL_THEME="tango"
+### POL Wine version
+if [ -e "$REPERTOIRE/configurations/options/env" ]
+then
+	source "$REPERTOIRE/configurations/options/env"
+	if [ ! "$WINEVERSION" = "" ]
+	then
+		if [ ! "$WINEVERSION" = "System" ]
+		then
+			export PATH="$REPERTOIRE/WineVersions/$WINEVERSION/usr/bin:$VRAIPATH"
+			export LD_LIBRARY_PATH="$REPERTOIRE/WineVersions/$WINEVERSION/usr/lib:$VRAILDPATH"
+		fi
+	fi
+fi	
+
+### Terminal
+export POL_TERM="xterm"
+if [ -e "$REPERTOIRE/configurations/options/terminal" ]
+then
+	export POL_TERM=$(cat $REPERTOIRE/configurations/options/terminal)
+fi
+if [ $POL_TERM = "" ]
+then
+	export POL_TERM="xterm"
+fi
+
+### Desktop
+if [ ! "$DESKTOP" ]
+then
+	export DESKTOP="$HOME/Desktop"
+fi
+### Browser
+export POL_NAVIGATOR="Default"
+if [ -e "$REPERTOIRE/configurations/options/navigator" ]
+then
+	export POL_NAVIGATOR=$(cat $REPERTOIRE/configurations/options/navigator)
+fi
+if [ "$POL_NAVIGATOR" == "Default" ]
+then
+	export POL_NAVIGATOR="$PYTHON $PLAYONLINUX/python/browser.py" 
+fi
+if [ $POL_TERM = "" ]
+then
+	export POL_TERM="xterm"
+fi
+
+### Language
+export TEXTDOMAINDIR="$PLAYONLINUX/lang/locale/"
+export TEXTDOMAIN="pol"
+. gettext.sh
+
+### RM TEMP
+if [ -e "$REPERTOIRE/configurations/options/rmtemp" ]
+then
+	TEMP_CONTENT=`cat "$REPERTOIRE/configurations/options/rmtemp"`
+	if [ "$TEMP_CONTENT" = "1" ]
+	then
+		export RMTEMP="1"
+	else
+		export RMTEMP="0"
+	fi
+else
+	export RMTEMP="1"
+fi
+
+### POL Proxy Settings
+if [ -e "$REPERTOIRE/configurations/options/proxy" ]
+then
+	source "$REPERTOIRE/configurations/options/proxy"
+	if [ "$PROXY_ENABLED" = "1" ]
+	then
+		if [ ! "$PROXY_ADRESS" = "" ]
+		then
+			if [ ! "$PROXY_LOGIN" = "" ]
+			then
+				export http_proxy="http://$PROXY_LOGIN:$PROXY_PASS@$PROXY_ADRESS:$PROXY_PORT"
+			else
+				export http_proxy="http://$PROXY_ADRESS:$PROXY_PORT"
+			fi
+		fi
+	fi
+fi
+
+### Offline mode
+if [ -e "$REPERTOIRE/configurations/options/offline" ]
+then
+	TEMP_CONTENT=`cat "$REPERTOIRE/configurations/options/offline"`
+	if [ "$TEMP_CONTENT" = "1" ]
+	then
+		export OFFLINE="1"
+	else
+		export OFFLINE="0"
+	fi
+else
+	export OFFLINE="0"
+fi
+
+if [ $POL_TERM = "" ]
+then
+	export POL_TERM="xterm"
+fi
+
+export POL_LANG=$(echo "$LANG" | cut -d\_ -f 1)
+#Codes de sorties 
+EXIT_MISSING=2
+EXIT_ERROR=255
+EXIT_SUCCES=0
+
+export IGNORE_ICON_DIR="false"	

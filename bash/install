@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# Copyright (C) 2007 Pâris Quentin
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+if [ "$PLAYONLINUX" = "" ]
+then
+	exit 0
+fi
+
+source "$PLAYONLINUX/lib/sources" 
+
+if [ ! "$OFFLINE" == "1" ]
+then
+	menu=$($PYTHON "$PLAYONLINUX/python/install.py" | tail -n 1);
+fi
+if [ "$menu" = "ExecLiveInstall" -o "$OFFLINE" == "1" ]
+then
+	LNG_MAIN_INSTALL_LIVE=$(eval_gettext "Manual installation")
+        LNG_MAIN_INSTALL_PKG=$(eval_gettext "Install a .pol package")
+        LNG_APP_CHOOSE3=$(eval_gettext "Installation wizard")
+        LNG_APP_CHOOSE=$(eval_gettext "Please choose a type of application to install")
+
+	LISTE="$LNG_MAIN_INSTALL_LIVE~$LNG_MAIN_INSTALL_PKG"	
+	installbis=$(menu "$LNG_APP_CHOOSE" "$LISTE" "$LNG_APP_CHOOSE3" 1 2 1 "wizard.png" "~");
+	if [ "$installbis" = "$LNG_MAIN_INSTALL_PKG" ]
+	then
+		bash "$PLAYONLINUX/playonlinux-pkg" -b
+	fi
+	if [ "$installbis" = "$LNG_MAIN_INSTALL_LIVE" ]
+	then
+		bash $PLAYONLINUX/bash/LiveInstall
+	fi
+	exit
+fi
+if [ "$?" != 0 ]
+then
+	exit	
+fi
+#check_network "playonlinux.com" --quiet
+if [ $? == 0 ]
+then
+	if [ "$menu" = "about:conceptor" ]
+	then
+		python "$PLAYONLINUX/python/sp.py"
+		exit
+	fi
+	if [ ! "$menu" = "" ]
+	then
+		type="$(echo $menu | cut -d ':' -f1)"
+
+		if [ "$type" = "get" ]
+		then
+			id=$(echo "$menu" | cut -d ":" -f2)
+		
+			POL_SetupWindow_Init ""
+			POL_SetupWindow_free_presentation "Install a non-validated script" "PlayOnLinux is going to execute a non-validated script.\n\nThese scripts have not been checked by PlayOnLinux validators. Please ensure you know what you are doing !"
+			rm $REPERTOIRE/install
+			wget $SITE/V3_data/repository/get_file_n.php?id=$id -O $REPERTOIRE/install -q
+			POL_SetupWindow_licence "Here the source code of the script. Check it carrefully" "Non validated script" "$REPERTOIRE/install"
+			POL_SetupWindow_Close
+
+			
+
+			if [ -e "$REPERTOIRE/install" ]
+			then
+				bash $REPERTOIRE/install
+			fi
+			exit
+		fi
+		menu=${menu//" "/"%20"}
+		rm $REPERTOIRE/install
+		wget $SITE/V3_data/repository/get_file.php?id=$menu -O $REPERTOIRE/install -q
+		if [ -e "$REPERTOIRE/install" ]
+		then
+			bash $REPERTOIRE/install
+		fi
+	fi
+fi
+

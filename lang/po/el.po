@@ -1,0 +1,948 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Copyright (C) 2010 Emmanouel Kapernaros
+msgid ""
+msgstr ""
+"Project-Id-Version: pol\n"
+"Report-Msgid-Bugs-To: Tinou\n"
+"POT-Creation-Date: 2008-01-11 18:43+0100\n"
+"PO-Revision-Date: 2008-01-11 18:59+0100\n"
+"Last-Translator: Unknown\n"
+"Language-Team: el_EL.UTF-8 <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: LNG_WINE_REBOOT
+msgid "Simulating Windows reboot"
+msgstr "Εξομοιώνεται επανεκκίνηση των Windows" 
+
+#: LNG_WINE_PREFIXCREATE
+msgid "Creating Wine prefix"
+msgstr "Δημιουργείται πρόθεμα Wine" 
+
+#: LNG_WINE_ASKFORCDROM
+msgid "Where is your CD-ROM mounted?"
+msgstr "Πού είναι προσαρτημένο το CD-ROM σας?" 
+
+#: LNG_WINE_ERRORCDROM
+msgid "Error : Unable to find the CD-ROM !"
+msgstr "Σφάλμα : Αδυναμία εύρεσης του CD-ROM !" 
+
+#: LNG_MOUNT_CDROM
+msgid "Please mount the CD-ROM"
+msgstr "Παρακαλώ προσαρτήστε το CD-Rom" 
+
+#: LNG_MISSING_ERROR
+msgid "One or more program(s) are missing. Please install them and run the script again."
+msgstr "Ένα ή περισσότερα προγράμματα λείπουν. Παρακαλώ εγκαταστήστε τα και εκτελέστε το αρχείο εντολών (script) ξανά." 
+
+#: LNG_3D_MISSING
+msgid "You don't seem to have 3D acceleration !\nWe advise you install and enable it."
+msgstr "Δεν φαίνεται να έχετε επιτάχυνση 3D !\nΣας συμβουλεύουμε να την εγκαταστήσετε και να την ενεργοποιήσετε."
+
+#: LNG_GAME_NOT_INSTALLED
+msgid "The game you want to run isn't installed."
+msgstr "Το παιχνίδι που θέλετε να εκτελέστε δεν είναι εγκατεστημένο." 
+
+#: LNG_GAME_DESKTOP_ICONE
+msgid "Do you want a shortcut on your desktop ?"
+msgstr "Θέλε μία συντόμευση στην επιφάνεια εργασίας σας ?" 
+
+#: LNG_GAME_MENU_ICONE
+msgid "Do you want a shortcut in your menu ?"
+msgstr "Θέλετε μία συντόμευση στο μενού σας ?" 
+
+#: LNG_NET_POL_ERR
+msgid "The website of PlayOnLinux is unavailable."
+msgstr "Η ιστοσελίδα του PlayOnLinux δεν είναι διαθέσιμη."
+
+#: LNG_NET_CHECK
+msgid "Please assure you are connected to internet."
+msgstr "Παρακαλώ βεβαιωθείτε ότι είστε συνδεδεμένοι στο Internet."
+
+#: LNG_NET_CHECK_SUCCESS
+msgid "You are not connected on the internet."
+msgstr "Δεν είστε συνδεδεμένοι στο Internet." 
+
+#: LNG_NET_CHECK_LOST
+msgid "Network is available."
+msgstr "Το δίκτυο δεν είναι διαθέσιμο." 
+
+#: LNG_MAIN_UPDATE
+msgid "Network is available, but some packets have failed"
+msgstr "Το δίκτυο είναι διαθέσιμο, αλλά κάποια πακέτα απέτυχαν" 
+
+#: LNG_MAIN_UPDATE_SUCCES
+msgid "An updated version of PlayOnLinux is available."
+msgstr "Μια ανανεωμένη έκδοση του PlayOnLinux είναι διαθέσιμη."
+
+#: LNG_MAIN_MENU_ITEM_PLAY
+msgid "File"
+msgstr "Αρχείο" 
+
+#: LNG_MAIN_MENU_ITEM_INSTALL
+msgid "Run"
+msgstr "Εκτέλεση" 
+
+#: LNG_MAIN_MENU_ITEM_EXPERT
+msgid "Install"
+msgstr "Εγκατάσταση" 
+
+#: LNG_MAIN_MENU_ITEM_REMOVE
+msgid "Tools"
+msgstr "Εργαλεία" 
+
+#: LNG_MAIN_MENU_ITEM_UPDATE
+msgid "Remove"
+msgstr "Αφαίρεση" 
+
+#: LNG_CHOOSE_GAME
+msgid "Update"
+msgstr "Ανανέωση"
+
+#: LNG_MAIN_CHECKUPGRADE
+msgid "Uninstall"
+msgstr "Απεγκατάσταση" 
+
+#: LNG_MAIN_DOWNLOADFONTS
+msgid "Microsoft fonts aren't installed; I'll install them for you. Please assure you are connected to the internet."
+msgstr "Τα Microsoft fonts δεν είναι εγκατεστημένα, πρόκειται να εγκατασταθούν. Παρακαλώ βεβαιωθείτε ότι είστε συνδεδεμένοι στο Internet."
+
+#: LNG_EXPERT_DIDNOTSELECT
+msgid "Theme"
+msgstr "Θέματα"
+
+#: LNG_EXPERT_WINEPREFIX
+msgid "Registry Editor"
+msgstr "Επεξεργαστής Μητρώου" 
+
+#: LNG_EXPERT_WAITUPGRADE
+msgid "Update the wineprefix"
+msgstr "Ανανέωση του wineprefix" 
+
+#: LNG_EXPERT_RUN
+msgid "Configure wine"
+msgstr "Προσαρμογή του Wine" 
+
+#: LNG_EXPERT_UNFOUND
+msgid "Run a non-official script"
+msgstr "Εκτελέστε ένα μή επίσημο αρχείο εντολών (script)" 
+
+#: LNG_EXPERT_NOTPOL
+msgid "File not found!"
+msgstr "Το αρχείο δεν βρέθηκε!" 
+
+#: LNG_EXPERT_WKILL
+msgid "Manage wine versions"
+msgstr "Διαχείριση εκδόσεων wine"
+
+#: LNG_WINEVERSIONS_INTRO
+msgid "Kill wineserver process"
+msgstr "Βίαιος τερματισμός διεργασίας wineserver"
+
+#: LNG_WINEVERSIONS_DOWNLOADFAILED
+msgid "Downloading wine"
+msgstr "Κατέβασμα wine" 
+
+#: LNG_WINEVERSIONS_INSTALL
+msgid "The download seems to have failed."
+msgstr "Το κατέβασμα φαίνεται πως απέτυχε." 
+
+#: LNG_WINEVERSIONS_MUSTSPECIFY
+msgid "Which wine version do you want to use ?"
+msgstr "Ποιά έκδοση του winde θέλετε να χρησιμοποιήσετε ?" 
+
+#: LNG_WINEVERSIONS_NOWINE
+msgid "To which game do you want to apply the modification ?"
+msgstr "Σε ποιό παιχνίδι θέλετε να εφαρμοστεί η τροποιποίηση ?" 
+
+#: LNG_EXEMPLE
+msgid "Other"
+msgstr "Άλλο" 
+
+#: LNG_OPTIONS_MENU
+msgid "Reset"
+msgstr "Επανεκκίνηση" 
+
+#: LNG_OPTIONS_RESULT
+msgid "Settings"
+msgstr "Ρυθμίσεις" 
+
+#: LNG_OPTIONS_INFOS_YSYS
+msgid "System information:"
+msgstr "Πληροφορίες συστήματος:" 
+
+#: LNG_OPTIONS_INFOS_KERNEL
+msgid "Your system :"
+msgstr "Το σύστημά σας :" 
+
+#: LNG_OPTIONS_INFOS_LANG
+msgid "Your kernel :"
+msgstr "Ο πυρήνας σας :" 
+
+#: LNG_OPTIONS_INFOS_USER
+msgid "System language :"
+msgstr "Γλώσσα συστήματος :" 
+
+#: LNG_OPTIONS_INFOS_NAMEMACHINE
+msgid "Your user login :"
+msgstr "Το Όνομα χρήστη σας :" 
+
+#: LNG_OPTIONS_INFOS_VIDEOCARD
+msgid "Your computer's name :"
+msgstr "Το του όνομα υπολογιστή σας :" 
+
+#: LNG_OPTIONS_INFOS_DISTRIB_ID
+msgid "Your video card :"
+msgstr "Η κάρτα γραφικών σας :" 
+
+#: LNG_OPTIONS_INFOS_RELEASE
+msgid "Your distribution :"
+msgstr "Η διανομή σας :" 
+
+#: LNG_OPTIONS_INFOS_DDINFOS
+msgid "Your distribution version :"
+msgstr "Η έκδοση της διανομής σας :" 
+
+#: LNG_OPTIONS_INFOS_WINEINSTALLED
+msgid "Space remaining on your hard disks :"
+msgstr "Χώρος που απομένει στο σκληρό σας δίσκο :" 
+
+#: LNG_OPTIONS_INFOS_WINECURRENT
+msgid "Wine version installed :"
+msgstr "Εγκατεστημένη έκδοση του wine :" 
+
+#: LNG_OPTIONS_MENU_INFORMATIONS
+msgid "Wine version used by PlayOnLinux :"
+msgstr "Έκδοση του wine που χρησιμοποιείται από το PlayOnLinux :" 
+
+#: LNG_INFORMATION
+msgid "Informations"
+msgstr "Πληροφορίες" 
+
+#: LNG_OPTIONS_REPOSITORY
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: LNG_HAVE
+msgid "You must restart PlayOnLinux for the changes to take effect"
+msgstr "Πρέπει να επανεκκινήσετε το PlayOnLinux για να εφαρμοστούν οι αλλαγές" 
+
+#: LNG_HELP
+msgid "You have"
+msgstr "Έχετε" 
+
+#: LNG_ABOUT
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: LNG_ERROR
+msgid "About"
+msgstr "Σχετικά..."
+
+#: LNG_EXIT
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: LNG_REFRESH
+msgid "Exit"
+msgstr "Έξοδος"
+
+#: LNG_WINEBOOSTER_WELCOME1
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+#: LNG_ACTION
+msgid "This script will allow you to install any game on PlayOnLinux and use it with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had been installed with an official script. Warning: We are unable to guarantee that your game will work perfectly."
+msgstr "Αυτό το αρχείο εντολών (script) θα σας επιτρέψει να εγκαταστήσετε οποιοδήποτε παιχνίδι στο PlayOnLinux και να το χρησιμοποιήσετε με όλα τα εργαλεία (WineBooster, WineMaster, WineConfig, κτλ) σαν να είχε εγκατασταθεί με ένα επίσημο αρχείο εντολών (script). Προειδοποίηση: Είναι αδύνατο να εγγυηθούμε ότι το παιχνίδι θα λειτουργήσει τέλεια." 
+
+#: LNG_LI_NEW
+msgid "Action"
+msgstr "Ενέργεια" 
+
+#: LNG_LI_PATCH
+msgid "New"
+msgstr "Νέο"   
+
+#: LNG_CHOICE
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: LNG_LI_CODENAME
+msgid "Please make a choice"
+msgstr "Παρακαλώ επιλέξτε" 
+
+#: LNG_LI_INSTALLFILE
+msgid "This codename already exists in PlayOnLinux."
+msgstr "Αυτό το κωδικό όνομα υπάρχει ήδη στο PlayOnLinux." 
+
+#: LNG_LI_CHOOSEFILE
+msgid "Please choose the file to execute"
+msgstr "Παρακαλώ επιλέξτε το αρχείο για εκτέλεση." 
+
+#: LNG_LI_SHORTCUT
+msgid "You have to choose a file !"
+msgstr "Πρέπει να επιλέξτε ένα αρχείο !" 
+
+#: LNG_LI_EXEC
+msgid "Do you want to create a shortcut to the application in PlayOnLinux ?"
+msgstr "Θέλετε να δημιουργηθεί μία συντόμευση για την εφαρμογή στο PlayOnLinux ?"
+
+#: LNG_LI_GIVENAME
+msgid "If you patched a game, you should probably select no."
+msgstr "Αν έχετε εφαρμόσει patch σε παιχνίδι, θα πρέπει να επιλέξτε όχι."
+
+#: LNG_SCRIPT_WAIT
+msgid "Choose the file to exec the game."
+msgstr "Επιλέξτε το αρχείο για να εκτελεστεί το παιχνίδι." 
+
+#: LNG_DOWNLOAD
+msgid "Please type a name for your shortcut."
+msgstr "Παρακαλώ πληκτρολογείστε ένα όνομα για την συντόμευσή σας." 
+
+#: LNG_DOWNLOAD_FINISHED
+msgid "Please wait while the game is downloaded..."
+msgstr "Παρακαλώ περιμένετε όσο το παιχνίδι κατεβαίνει..."
+
+#: LNG_POLSC
+msgid "Download finished"
+msgstr "Το κατέβασμα ολοκληρώθηκε" 
+
+#: LNG_GIT_WELCOME1
+msgid "Please wait..."
+msgstr "Bitte warten..." 
+
+#: LNG_LAUNCHER
+msgid "Please choose a type of application to install"
+msgstr "Παρακαλώ επιλέξτε έναν τύπο εφαρμογής για εγκατάσταση"
+
+#: LNG_UPDATING_FINISHED
+msgid "Installation wizard"
+msgstr "Οδηγός εγκατάστασης"
+
+#: LNG_UPDATEW_FINISHED
+msgid "Please choose a name for the shortcut"
+msgstr "Παρακαλώ επιλέξτε ένα όνομα για τη συντόμευση"
+
+#: LNG_UPDATING
+msgid "The list of programs has been successfully updated"
+msgstr "Η λίστα των προγραμμάτων ανανεώθηκε με επιτυχία"
+
+#: LNG_WARNING
+msgid "Updating"
+msgstr "Ανανέωση..."
+
+#: LNG_NEXT
+msgid "Downloading"
+msgstr "Κατέβασμα..."
+
+#: LNG_CANCEL
+msgid "Warning"
+msgstr "Προειδοποίηση"
+
+#: LNG_FINISHED
+msgid "Next"
+msgstr "Επόμενο"
+
+#: LNG_FINISHED_
+msgid "Cancel"
+msgstr "Άκυρο" 
+
+#: LNG_STEP
+msgid "Finished"
+msgstr "Ολοκληρώθηκε" 
+
+#: LNG_SUR
+msgid "Finish"
+msgstr "Ολοκλήρωση"
+
+#: LNG_DOWNLOAD_CLICK
+msgid "Step"
+msgstr "Βήμα" 
+
+#: LNG_DOWNLOAD
+msgid "of"
+msgstr "απο" 
+
+#: LNG_DOWNLOADED
+msgid "Click on download to start."
+msgstr "Πατήστε κατέβασμα για να ξεκινήστε."
+
+#: LNG_YES
+msgid "Download"
+msgstr "Κατέβασμα"
+
+#: LNG_NO
+msgid "downloaded"
+msgstr "κατεβασμένο"
+
+#: LNG_BROWSE
+msgid "Yes"
+msgstr "Ναι"
+
+#: LNG_KILL_WINSERVER
+msgid "No"
+msgstr "Όχι"
+
+#: LNG_WINELOOK1
+msgid "Browse"
+msgstr "Περιήγηση"
+
+#: LNG_WINELOOK2
+msgid "Warning ! Before killing the wineserver, please assure that there are no wine applications running.\n\nAre you sure you want to kill the wineserver ?"
+msgstr "Προειδοποίηση ! πριν τερματίσετε το wineserver, παρακαλώ βεβαιωθείτε ότι δεν εκτελούντε εφαρμογές wine.\n\n Σίγουρα θέλετε να τερματίσετε το wineserver ?"
+
+#: LNG_SLOGAN
+msgid "PlayOnLinux debugger"
+msgstr "PlayOnLinux αποσφαλματωτής"
+
+#: LNG_WINDOWS_DESIGN
+msgid "Run your Windows programs on Linux !"
+msgstr "Τρέξτε τα προγράμματά σας για Windows στο Linux !"
+
+#: LNG_MAIN_INSTALL_LIVE
+msgid "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
+msgstr "(C) PlayOnLinux ομάδα 2008\nπό την άδεια GPL έκδοση 3"
+
+#: LNG_MAIN_INSTALL_DOSBOX
+msgid "Application"
+msgstr "Εφαρμογή"
+
+#: LNG_MAIN_INSTALL_PKG
+msgid "Manual installation"
+msgstr "Μη αυτόματη εγκατάσταση"
+
+#: LNG_LI_NEW
+msgid "Install a .pol package"
+msgstr "Εγκατάσταση ενός .pol πακέτου"
+
+#: LNG_LI_PATCH
+msgid "What do you want to do ?"
+msgstr "Τι θέλετε να κάνετε ?"
+
+#: LNG_LI_CHOOSEPREFIX
+msgid "Install a program in a new prefix"
+msgstr "Εγκατάσταση ενός προγράμματος σε ένα νέο πρόθεμα"   
+
+#: LNG_LI_SHORTCUT
+msgid "Edit an application already installed"
+msgstr "Επεξεργασία μίας ήδη εγκατεστημένης εφαρμογής"
+
+#: LNG_LI_DELETE
+msgid "What is the prefix of your program ?"
+msgstr "Ποιό είναι το πρόθεμα ενός προγράμματός σας ?"   
+
+#: LNG_LI_PREFIXE_DELETED
+msgid "Delete a prefix"
+msgstr "Διαγραφή ενός προθέματος"
+
+#: LNG_WINEVERSION_ACTIONS
+msgid "Are you sure you want to delete that prefixe ?"
+msgstr "Σίγουρα θέλετε να διαγράψετε αυτό το πρόθεμα ?"
+
+#: LNG_WINEVERSIONS_MENU_INSTALL
+msgid "The prefix has been deleted"
+msgstr "Το πρόθεμα διαγράφτηκε"
+
+#: LNG_WINEVERSIONS_MENU_UNINSTALL
+msgid "Assign a wine version to a programm"
+msgstr "Αντιστοίχηση μίας έκδοση του wine σε ένα πρόγραμμα"
+
+#: LNG_TEST_3D
+msgid "Session"
+msgstr "Συνεδρία"   
+
+#: LNG_PKG_NOT_VALID
+msgid "Question"
+msgstr "Ερώτηση"
+
+#: LNG_PKG_NOT_FOUND
+msgid "Text"
+msgstr "Κείμενο"
+
+#: LNG_PKG_CHOOSE
+msgid "The file is not a valid PlayOnLinux package"
+msgstr "Το αρχείο δεν είναι έγκυρο πακέτο του PlayOnLinux"
+
+#: LNG_PKG_MANAGER
+msgid "Unable to find the file"
+msgstr "Αδύνατη η εύρεση του αρχείου"
+
+#: LNG_CANT_FIND_UNINSTALL
+msgid "Choose a package to install"
+msgstr "Επιλέξτε ένα πακέτο για εγκατάσταση"
+
+#: LNG_AUTORUN_CANT_FIND
+msgid "PlayOnLinux package manager"
+msgstr "Διαχειριστής PlayOnLinux πακέτων"
+
+#: LNG_AUTORUN_CDROM_NAME
+msgid "No setup location found in autorun.inf"
+msgstr "Δεν βρέθηκε τοποθεσία εγκατάστασης στο autorun.inf"
+
+#: LNG_AUTORUN_CDROM_SETUP
+msgid "A CD-ROM has been found on your drive"
+msgstr "Βρέθηκε ένα CD-ROM στον οδηγό σας"
+
+#: LNG_AUTORUN_TITLE
+msgid "Name"
+msgstr "Όνομα"
+
+#: LNG_AUTORUN_NEXT
+msgid "Setup"
+msgstr "Εγκατάσταση"
+
+#: LNG_AUTORUN_RECOM
+msgid "Autorun"
+msgstr "Αυτόματη εκτέλεση"
+
+#: LNG_AUTORUN_WHERE
+msgid "In the following prefix"
+msgstr "Στο ακόλουθο πρόθεμα"
+
+#: LNG_AUTORUN_EXISTING
+msgid "recomended"
+msgstr "προτείνεται"
+
+#: LNG_AUTORUN_NEW
+msgid "Where do you want to install this CD-ROM?"
+msgstr "Πού θέλετε να εγκαταστήσετε αυτό το CD-ROM?"
+
+#: LNG_NOAUTORUN
+msgid "In an existing prefix (add-on)"
+msgstr "Σε ένα ήδη υπάρχον πρόθεμα (add-on)"
+
+#: LNG_AUTORUN_N
+msgid "In a new prefix"
+msgstr "Σε ένα νέο πρόθεμα"
+
+#: LNG_AUTORUN_PREFIX_C
+msgid "No autorun support found"
+msgstr "Δεν βρέθηκε υποστήριξη αυτόματης εκτέλεσης"
+
+#: LNG_SHORTCUT_CREATON
+msgid "autorun has been found"
+msgstr "βρέθηκε αυτόματη εκτέλεση"
+
+#: LNG_NEW_INSTALL_UNSUPPORTED
+msgid "Choose the prefix"
+msgstr "Επιλέξτε το πρόθεμα"
+
+#: LNG_SEARCH
+msgid "Shortcut creation"
+msgstr "Δημιουργία συντόμευσης"
+
+#: LNG_CLOSE
+msgid "Install a .pol package or an unsupported application"
+msgstr "Εγκατάσταση ενός πακέτου .pol ή μίας μη υποστηριζόμενης εφαρμογής"
+
+#: LNG_CAT_ACCESSORIES
+msgid "Search :"
+msgstr "Αναζήτηση :"
+
+#: LNG_CAT_DEVELOPMENT
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: LNG_CAT_GAMES
+msgid "Accessories"
+msgstr "Βοηθήματα"
+
+#: LNG_CAT_GRAPHICS
+msgid "Development"
+msgstr "Ανάπτυξη"
+
+#: LNG_CAT_MULTIMEDIA
+msgid "Games"
+msgstr "Παιχνίδια"
+
+#: LNG_CAT_OFFICE
+msgid "Graphics"
+msgstr "Γραφικά"
+
+#: LNG_GENERAL_APPS
+msgid "Multimedia"
+msgstr "Πολυμέσα"
+
+#: LNG_OPTIONS_PANEL_DEFAUT
+msgid "Office"
+msgstr "Γραφείο"
+
+#: LNG_OPTIONS_PANEL_BROWSER
+msgid "My Applications"
+msgstr "Οι εφαρμογές μου"
+
+#: LNG_OPTIONS_PANEL_TERMINAL
+msgid "Browser"
+msgstr "Περιηγητής"
+
+#: LNG_OPTIONS_PANEL_TEMP
+msgid "Test"
+msgstr "Δοκιμή"
+
+#: LNG_OPTIONS_PANEL_TEMP_E
+msgid "Terminal"
+msgstr "Τερματικό"
+
+#: LNG_OPTIONS_PANEL_OFFLINE
+msgid "Temp directory"
+msgstr "Προσωρινός κατάλογος"
+
+#: LNG_OPTIONS_PANEL_OFFLINE_E
+msgid "Automatically empty temp directory"
+msgstr "Αυτόματο άδειασμα του προσωρινού καταλόγου"
+
+#: LNG_OPTIONS_PANEL_PROXY_USE
+msgid "Proxy configuration"
+msgstr "Προσαρμογή διαμεσολαβητή"
+
+#: LNG_OPTIONS_PANEL_PROXY_PORT
+msgid "Proxy address"
+msgstr "Διεύθυνση διαμεσολαβητή"
+
+#: LNG_OPTIONS_PANEL_PROXY_LOGIN
+msgid "Set a proxy"
+msgstr "Ορισμός ενός διαμεσολαβητή"
+
+#: LNG_OPTIONS_PANEL_PROXY_PASSWORD
+msgid "Port"
+msgstr "Θύρα"
+
+#: LNG_OPTIONS_PANEL_D_WINE
+msgid "Login"
+msgstr "Ψευδώνυμο"
+
+#: LNG_OPTIONS_PANEL_DESK
+msgid "Password"
+msgstr "Κωδικός"
+
+#: LNG_OPTIONS_PANEL_MENU
+msgid "Default Wine Version to run wine programs with PlayOnLinux"
+msgstr "Προεπιλεγμένη Έκδοση Wine για να την εκτέλεση των προγραμμάτων με το PlayOnLinux"
+
+#: LNG_OPTIONS_PANEL_MENU_R
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: LNG_OPTIONS_PANEL_DESKTOP_D
+msgid "PlayOnLinux menu"
+msgstr "PlayOnLinux μενού"
+
+#: LNG_OPTIONS_PANEL_D_NICKNAME
+msgid "Add PlayOnLinux menu in your panel"
+msgstr "Προσθήκη του PlayOnLinux μενού στον πίνακα εφαρμογών"
+
+#: LNG_OPTIONS_PANEL_C_STARTUP
+msgid "Desktop directory"
+msgstr "Κατάλογος επιφάνειας εργασίας"
+
+#: LNG_OPTIONS_PANEL_O2
+msgid "PlayOnLinux Settings"
+msgstr "Ρυθμίσεις PlayOnLinux"
+
+#: LNG_OPTIONS_PANEL_O3
+msgid "General"
+msgstr "Γενικά"
+
+#: LNG_OPTIONS_PANEL_O4
+msgid "Messenger"
+msgstr "Messenger"
+
+#: LNG_OPTIONS_PANEL_O5
+msgid "Internet"
+msgstr "Ιντερνετ"
+
+#: LNG_OPTIONS_PANEL_APPLY
+msgid "Environment"
+msgstr "Περιβάλλον"
+
+#: LNG_OFFLINE_MODE
+msgid "System"
+msgstr "Σύστημα"
+
+#: LNG_INSTALLED_PLUGIN
+msgid "Apply"
+msgstr "Εφαρμογή"
+
+#: LNG_CONFIG_PLUGIN
+msgid "Installed plugins"
+msgstr "Εγκατεστημένα plugins"
+
+#: LNG_ENABLE_PLUGIN
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: LNG_DISABLE_PLUGIN
+msgid "Configure"
+msgstr "Προσαρμογή"
+
+#: LNG_CHOOSE_PLUGIN
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#: LNG_SUR_INSTALL
+msgid "Disable"
+msgstr "Απενεργοποίηση"
+
+#: LNG_SUR_DELETE
+msgid "Choose a plugin"
+msgstr "Επιλέξτε ένα plugin"
+
+#: LNG_NO_MORE
+msgid "Plugins"
+msgstr "Plugins"
+
+#: LNG_GAME_UNINSTALL
+msgid "Plugins manager"
+msgstr "Διαχειριστής plugins"
+
+msgid "No more alert me"
+msgstr "Μη με ξαναειδοποιήσεις"
+
+msgid "Welcome in PlayOnLinux Installation Wizard"
+msgstr "Καλωσορίσατε στον Οδηγό Εγκατάστασης του PlayOnLinux"
+
+msgid "PlayOnLinux Wizard"
+msgstr "Οδηγός PlayOnLinux"
+
+msgid "This assistant will help you to install"
+msgstr "Αυτός ο βοηθός θα σας καθοδηγλησει να εγκαταστήσετε το"
+
+msgid "on your computer."
+msgstr "στον υπολογιστή σας."
+
+msgid "This program is made by"
+msgstr "Αυτό το πρόγραμμα δημιουργήθηκε από"
+
+msgid "This installation program is provided by"
+msgstr "Αυτό το πρόγραμμα εγκατάστασης παρέχεται από"
+
+msgid "will be installed in"
+msgstr "θα εγκατασταθεί στο"
+
+msgid "PlayOnLinux is not responsible of your way to use these scripts"
+msgstr "Το PlayOnLinux δεν είναι υπεύθυνο για τον τρόπο που χρησιμοποιείτε τα αρχεία εντολών (scripts)"
+
+msgid "Click on next to start"
+msgstr "Πατήστε επόμενο για να ξεκινήστε"
+
+msgid "I Agree"
+msgstr "Συμφωνώ"
+
+msgid "Create a shortcut :"
+msgstr "Δημιουργία μιας συντόμευσης :"
+
+msgid "Do you want a shortcut for"
+msgstr "Θέλε μία συντόμευση για"
+
+msgid "On your desktop"
+msgstr "Στην επιφάνεια εργασίας σας"
+
+msgid "In your menu"
+msgstr "Στο μενού σας"
+
+msgid "has been installed successfully"
+msgstr "εγκαταστάθηκε με επιτυχία"
+
+msgid "Click on next to continue"
+msgstr "Πατήστε επόμενο για συνέχεια"
+
+msgid "PlayOnLinux Uninstaller"
+msgstr "Απεγκατάσταση PlayOnLinux"
+
+msgid "Uninstalling..."
+msgstr "Απεγκατάσταση..."
+
+msgid "Cannot find the shortcut"
+msgstr "Δεν μπορεί να βρεθεί η συντόμευση"
+
+msgid "has been uninstalled successfully"
+msgstr "απεγκαταστάθηκε με επιτυχία"
+
+msgid "Please wait while the wine prefix is created..."
+msgstr "Παρακαλώ περιμένετε όσο το πρόθεμα wine δημιουργείται..."
+
+msgid "Wine prefix configuration"
+msgstr "Προσαρμογή προθέματος wine "
+
+msgid "Downloading updates..."
+msgstr "Κατέβασμα ανανεώσεων..."
+
+msgid "Connect"
+msgstr "Σύνδεση"
+
+msgid "Disconnect"
+msgstr "Αποσύνδεση"
+
+msgid "Send"
+msgstr "Αποστολή"
+
+msgid "Welcome in PlayOnLinux autorun assistant."
+msgstr "Καλωσορίσατε στον οδηγό αυτόματης εκτέλεσης του PlayOnLinux."
+
+msgid "It will help you to help an application from a CD-ROM."
+msgstr "Θα σας βοηθήσει να εκτελέσετε μία εφαρμογή από ένα CD-ROM."
+
+msgid "Looking for runnable CD-ROM"
+msgstr "Αναζήτηση για εκτελέσιμο CD-ROM"
+
+msgid "PlayOnLinux is installing your application"
+msgstr "Το PlayOnLinux εγκαθιστά την εφαρμογή σας"
+
+msgid "PlayOnLinux is installing your application ..."
+msgstr "Το PlayOnLinux εγκαθιστά την εφαρμογή σας ..."
+
+msgid "Please press Next only when installation is fully complete."
+msgstr "Παρακαλώ πατήστε Επόμενο μόνο όταν η εγκατάσταση ολοκληρωθεί."
+
+msgid "Please type a name for the wine prefix of your application."
+msgstr "Παρακαλώ πληκτρολογείστε ένα όνομα για το πρόθεμα wine της εφαρμογής σας."
+
+msgid "This name shouldn't contain spaces."
+msgstr "Αυτό το όνομα δεν πρέπει να περιέχει κενά."
+
+msgid "Welcome in PlayOnLinux manual Installation"
+msgstr "Καλωσορίσατε στην μη αυτόματη εγκατάσταση του PlayOnLinux"
+
+msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
+msgstr "Παρακαλώ περιμένε όσο το PlayOnLinux εξομοιώνει μία επανεκκίνηση των Windows"
+
+msgid "This wizard will help you to execute a non-official PlayOnLinux Script"
+msgstr "Αυτός ο οδηγός θα σς βοηθήσει να εκτελέσετε ένα μή-επίσημο αρχείο εντολών (script) του PlayOnLinux"
+
+msgid "Choose a valid PlayOnLinux script to run"
+msgstr "Επιλέξτε ένα έγκυρο αρχείο εντολών (script) του PlayOnLinux για να εκτελέσετε"
+
+msgid "Wineserver killed"
+msgstr "Το wineserver τερματίστηκε"
+
+msgid "Installed Wine Versions :"
+msgstr "Εγκατεστημένες Εκδόσεις Wine :"
+
+msgid "Available Wine Versions :"
+msgstr "Διαθέσιμες Εκδόσεις Wine :"
+
+msgid "Wine Versions"
+msgstr "Εκδόσεις Wine"
+
+msgid "Extracting wine ..."
+msgstr "Εξαγωγή wine ..."
+
+msgid "Wine has been installed successfully"
+msgstr "Το wine εγκαταστάθηκε επιτυχώς"
+
+msgid "First use of PlayOnLinux"
+msgstr "Πρώτη χρήση του PlayOnLinux"
+
+msgid "Education"
+msgstr "Εκπαίδευση"
+
+msgid "Welcome in PlayOnLinux first use assistant. Please ensure you are connected to the Internet."
+msgstr "Καλωσορίσατε στο βοηθό πρώτης χρήσης του PlayOnLinux. Παρακαλώ βεβαιωθείτε ότι είστε συνδεδεμένοι στο Ίντερνετ."
+
+msgid "PlayOnLinux application list update"
+msgstr "Ανανέωση λίστας εφαρμογών PlayOnLinux"
+
+msgid "Please read and accept this"
+msgstr "Παρακαλώ διαβάστε και αποδειχθείτε αυτό"
+
+msgid "Microsoft fonts"
+msgstr "Γραμματοσειρές Microsoft"
+
+msgid "Microsoft Fonts has been installed successfully"
+msgstr "Οι γραμματοσειρές Microsoft εγκαταστάθηκαν με επιτυχία"
+
+msgid "No description."
+msgstr "Καμία περιγραφή."
+
+msgid "Default terminal"
+msgstr "Προεπιλεγμένο τερματικό"
+
+msgid "Default browser"
+msgstr "Προεπιλεγμένος περιηγητής"
+
+msgid "Default programs"
+msgstr "Voreingestellte Programme"
+
+msgid "Installing fonts"
+msgstr "Εγκατάσταση γραμματοσειρών"
+
+msgid "Downloading fonts"
+msgstr "Κατέβασμα γραμματοσειρών"
+
+msgid "Installing"
+msgstr "Γίνεται εγκατάσταση"
+
+msgid "Refresh the repository"
+msgstr "Ανανέωση του αποθετηρίου"
+
+msgid "Configure this application"
+msgstr "Προσαρμογή αυτής της εφαρμογής"
+
+msgid "PlayOnLinux applications configurator"
+msgstr "Προσαρμογέας εφαρμογών PlayOnLinux"
+
+msgid "Welcome into PlayOnLinux applications configurator."
+msgstr "Καλωσορίσατε στον προσαρμογέα εφαρμογών PlayOnLinux."
+
+msgid "This wizard will help you to configure :"
+msgstr "Αυτός ο οδηγός θα σας βοηθήσει να προσαρμόσετε :"
+
+msgid "The following wine prefix will be updated :"
+msgstr "Το ακόλουθο πρόθεμα wine θα ανανεωθεί :"
+
+msgid "Be carreful ! PlayOnLinux will need to kill all the programs running in this prefix !"
+msgstr "Προσέξτε ! Το PlayOnLinux θα χρειαστεί να τερματίσει όλες τις εφαρμογές που εκτελούνται σε αυτό το πρόθεμα !"
+
+msgid "Please choose an action"
+msgstr "Παρακαλώ επιλέξτε μία ενέργεια"
+
+msgid "Kill all the prefix process"
+msgstr "Τερματισμός όλων των διεργασιών προθέματος"
+
+msgid "Use advanced wine configuration plugin"
+msgstr "Χρήση plugin προχωρημένης προσαρμογής wine"
+
+msgid "Use PlayOnLinux's configurator for"
+msgstr "Χρήση προσαρμογέα PlayOnLinux για"
+
+msgid "Simulate Windows reboot"
+msgstr "Εξομοίωση επανεκκίνησης Windows"
+
+msgid "Running regedit"
+msgstr "Εκτελείται το regedit"
+
+msgid "Running wine configurator"
+msgstr "Εκτελείται προσαρμογέας wine"
+
+msgid "Running advanced wine configurator"
+msgstr "Εκτελείται προχωρημένος προσαρμογέας wine"
+
+msgid "Running specific wine configurator"
+msgstr "Εκτελείται ειδικός προσαρμογέας wine"
+
+msgid "Killing process in the prefix .."
+msgstr "Τερματίζεται διεργασία στο πρόθεμα .."
+
+msgid "Do you want to configure your prefix before installing your application ?"
+msgstr "Θέλετε να προσαρμόστε το πρόθεμά σας πριν εγκαταστήσετε την εφαρμογή σας ?"
+
+msgid "Are you sure you want to close all the PlayOnLinux applications opened ?"
+msgstr "Σίγουρα θέλετε να κλείσετε όλες τις εφαρμογές του PlayOnLinux που είναι ανοιχτές ?"
+
+msgid "Go to the application directory"
+msgstr "Μετάβαση στον κατάλογο εφαρμογών"
+
+msgid "Set the icon"
+msgstr "Ορίστε το εικονίδιο"
+
+msgid "What do you want to do before installation ?"
+msgstr "Τί θέλετε να κάνετε πριν την εγκατάσταση ?"
+
+msgid "Use WineTricks"
+msgstr "Χρησιμοποιήστε τα WineTricks"
+

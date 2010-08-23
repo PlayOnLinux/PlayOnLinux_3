@@ -1,0 +1,799 @@
+#!/bin/bash
+# Copyright (C) 2007 Pâris Quentin
+# Copyright (C) 2009 Łukasz Wojniłowicz
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+GenId() # On génère un ID unique pour notre fenêtre
+{
+	N_LETTRES=50
+
+	if [ "$1" != "" ]
+	then
+	N_LETTRES=$1
+	fi
+	ALPHA='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+
+	MOT=""
+	i=0
+	while ((i < $N_LETTRES));
+	do
+	CHIFFRE=$(( $RANDOM % ${#ALPHA}));
+	printf ${ALPHA:$CHIFFRE:1};
+	(( i=i+1 ))
+	done
+	exit 0
+}
+export POL_SetupWindow_ID=$(GenId)
+
+POL_SetupWindow_presentation ()
+{
+	TEXTE="$(eval_gettext 'This assistant will help you to install ')$1$(eval_gettext ' on your computer.')\n\n$(eval_gettext 'This program is made by ')$2\n($3)\n\n$(eval_gettext 'This installation program is provided by ')$4\n\n$1$(eval_gettext ' will be installed in ')$REPERTOIRE/wineprefix/$5\n\n$(eval_gettext 'PlayOnLinux is not responsible of your way to use these scripts')\n\n$(eval_gettext 'Click on next to start')"
+	POL_SetupWindow_free_presentation "$(eval_gettext 'Welcome in PlayOnLinux Installation Wizard')" "$TEXTE"
+
+}
+POL_SetupWindow_free_presentation ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "free_presentation" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	fi
+}
+POL_SetupWindow_message ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "message" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	fi
+}
+POL_SetupWindow_missing ()
+{
+	if [ "$MANQUE" = "true" ]
+	then
+		LNG_MISSING_ERROR=$(eval_gettext "One or more program(s) are missing. Please install them and run the script again.")
+
+		POL_SetupWindow_message "$LNG_MISSING_ERROR\n\n$MISSING" "$(eval_gettext Error)"
+		POL_SetupWindow_Close
+		exit $EXIT_MISSING
+	fi
+}
+POL_SetupWindow_licence ()
+{
+	if [ -f "$3" ]
+	then
+		echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		echo "licence" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		while [ ! "$MESSAGE" = "MsgOut" ]
+		do
+			MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+			sleep 0.1
+		done
+		MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+		if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+		then
+			rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+			exit 
+		fi
+	fi
+}
+POL_SetupWindow_message_image ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "message_image" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	fi
+}
+POL_SetupWindow_wait_next_signal ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "attendre_signal" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		exit 
+	fi
+}
+POL_SetupWindow_pulsebar ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "pulsebar" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		exit 
+	fi
+}
+POL_SetupWindow_pulse ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "pulse" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+}
+POL_SetupWindow_set_text ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "set_text" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+}
+POL_SetupWindow_wait ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "attendre" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	fi
+}
+POL_SetupWindow_download ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "download" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$(pwd)/" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	DOWNLOADEDFILE=`cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | head -n5 | tail -n1`
+	DOWNLOADSERVER=`echo $DOWNLOADEDFILE | cut -d/ -f3`
+	DOWNLOADEDFILE=$(basename "$DOWNLOADEDFILE")
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		exit 
+	fi
+
+	MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+	MESSAGE_TER=${MESSAGE_TER:10}
+	if [ ! "$MESSAGE_TER" = 0 ]
+	then
+		if [ $(echo "$DOWNLOADEDFILE" | grep -o 'PlayOnLinux-wine') = "PlayOnLinux-wine" ]
+		then
+			ERROR_MESSAGE="WineVersion server temporary unavailable.\nPlease try again later."
+		elif [ "$MESSAGE_TER" = 1 ]
+		then
+			ERROR_MESSAGE="Following server is no longer available:\n\n- $DOWNLOADSERVER"
+		elif [ "$MESSAGE_TER" = 2 ]
+		then
+			ERROR_MESSAGE="Following file is no longer available on server:\n\n- $DOWNLOADEDFILE"
+		fi
+
+		POL_SetupWindow_message_image "$ERROR_MESSAGE" "Download failure" "$PLAYONLINUX/themes/tango/warning.png"
+		POL_SetupWindow_Close
+		exit $EXIT_DOWNLOADERROR
+	fi
+}
+POL_SetupWindow_detect_exit ()
+{
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	fi
+}
+POL_SetupWindow_textbox ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "champ" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+		MESSAGE_TER=${MESSAGE_TER:10}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_browse ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "browse" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$PWD" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+		MESSAGE_TER=${MESSAGE_TER:10}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_question ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "question" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_QUESTION=')
+		MESSAGE_TER=${MESSAGE_TER:13}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_menu ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "menu" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+		MESSAGE_TER=${MESSAGE_TER:10}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_checkbox_list ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "checkbox_list" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+		MESSAGE_TER=${MESSAGE_TER:10}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_menu_num ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "menu_num" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+		MESSAGE_TER=${MESSAGE_TER:10}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_menu_list ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "menu_list" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$5" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+		MESSAGE_TER=${MESSAGE_TER:10}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_games ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "get_games" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		MESSAGE_TER=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_VALUE=')
+		MESSAGE_TER=${MESSAGE_TER:10}
+		export APP_ANSWER="$MESSAGE_TER"
+	fi
+}
+POL_SetupWindow_specialprefixcreate ()
+{
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	wine wineprefixcreate
+	sleep 2
+	set_user_dir
+	set_programfile_dir
+	POL_SetupWindow_detect_exit
+}
+POL_SetupWindow_oldprefixcreate ()
+{
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	wine wineprefixcreate
+	POL_SetupWindow_detect_exit
+}
+POL_SetupWindow_prefixcreate ()
+{
+	POL_SetupWindow_normalprefixcreate
+	POL_LoadVar_PROGRAMFILES
+}
+POL_SetupWindow_normalprefixcreate()
+{
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	wine wineboot
+	POL_SetupWindow_detect_exit
+}
+POL_SetupWindow_make_shortcut()
+{
+	# 1 = Wineprefix
+	# 2 = Repertoire
+	# 3 = Binaire
+	# 4 = Icone (png ou xpm)
+	# 5 = Nom de l'icône
+	# 6 = Ignoré (question de compatibilité avec les versions < 2.0)
+	# 7 = Eventuel argument
+
+	creer_lanceur_base "$@"
+
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "make_shortcut" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$NOMICONE_" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else
+		if [ -f "$REPERTOIRE/icones/full_size/$NOMICONE_" ]; then # L'icone existe...
+			iconPath="$REPERTOIRE/icones/full_size/$NOMICONE_"
+		else
+			iconPath="$REPERTOIRE/icones/full_size/playonlinux.png"
+		fi
+	
+		MESSAGE_MENU=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_MENU=')
+		MESSAGE_DESKTOP=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_DESKTOP=')		
+		if [ "$MESSAGE_MENU" == "MSG_MENU=True" ]
+		then
+			generer_icone "$iconPath" "$NOMICONE_" "$HOME/.local/share/applications/" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+		fi
+		if [ "$MESSAGE_DESKTOP" == "MSG_DESKTOP=True" ]
+		then
+			generer_icone "$iconPath" "$NOMICONE_" "$DESKTOP" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+		fi
+	fi
+}
+POL_SetupError()
+{
+	POL_SetupWindow_message "$1\n\nAborting." "Error"
+	POL_SetupWindow_Close
+	exit
+}
+POL_SetupWindow_auto_shortcut()
+{
+	# 1 = Wineprefix
+	# 2 = Binaire
+	# 3 = Nom du raccourics
+	# 4 = Icone
+	# 5 = Eventuel argument
+
+	Binaire="$2"
+	SpecialArg="$5"
+	
+	if [ "$4" = "" ]
+	then
+		NOMICONE_="$1"
+	else
+		NOMICONE_="$4"
+	fi
+	
+	mkdir -p "$REPERTOIRE/icones/32"
+	mkdir -p "$REPERTOIRE/icones/full_size"
+	
+	ICON_WEB_NAME="$4"
+	ICON_OK=0
+
+	## On chope le dossier du binaire
+	cd "$REPERTOIRE/wineprefix/$1" || POL_SetupError "Prefixe $1 does not exists"
+	cd drive_c || POL_SetupError "drive_c folder does not exists"
+	binary_path=$(find ./ -iname "$Binaire" | tail -n 1)
+	binary_dir=$(dirname "$binary_path")
+	Binaire=$(basename "$binary_path")
+	[ "$binary_dir" = "" ] && POL_SetupError "Can't find $Binaire"
+
+	
+	# Création de l'icone.
+	
+	# Cas 1 : le nom de l'icone est donné.
+	if [ -n "$ICON_WEB_NAME" ]; then
+		if [ ! "$OFFLINE" = "1" ]; then # On peut le télécharger...
+			wget -q "$SITE/icones/$ICON_WEB_NAME" -O "$REPERTOIRE/icones/full_size/$NOMICONE_" # On prend l'icone full size
+		fi
+		
+		if [ -f "$REPERTOIRE/icones/full_size/$NOMICONE_" ]; then
+			convert -resize 32 "$REPERTOIRE/icones/full_size/$NOMICONE_" "$REPERTOIRE/icones/32/$NOMICONE_" # On fabrique l'icone 32*32
+			ICON_OK=1
+		fi
+	elif [ "$ICON_OK" -ne 1 ]; then # Pas d'incone sur le web => Création à partir de l'exe...
+		echo "No internet icon..."
+		
+		mkdir -p "$REPERTOIRE/tmp/win32Icon"
+		wrestool -x "$REPERTOIRE/wineprefix/$1/drive_c/$binary_dir/$Binaire" -o "$REPERTOIRE/tmp/win32Icon" -t14
+		
+		cd "$REPERTOIRE/tmp/win32Icon"
+		win32IconName=$(ls -S *.ico | head -n 1)
+		if [ -f "$win32IconName" ]; then # L'ico est créé
+			convert ICO:"$win32IconName" -resize 32 PNG:"$REPERTOIRE/icones/32/$NOMICONE_" # On fabrique l'icone 32*32
+		fi # Si non : icone play on linux.
+
+		rm -r "$REPERTOIRE/tmp/win32Icon"
+		
+		# On ne crée pas d'icone "full_size", parce que les résolutions des icones windows ne sont pas suffisantes tout le temps.
+		# Pour verifier la taille des icones, il faudrait utiliser "identify", mais ce programme n'est pas toujours fournis.
+	fi
+
+
+	## On génère le binaire 
+	echo "#!/bin/bash" > "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "export WINEPREFIX=\"$REPERTOIRE/wineprefix/$1\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "export WINEDEBUG=\"-all\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "cd \"$REPERTOIRE/wineprefix/$1/drive_c/$binary_dir\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "wine \"$Binaire\" $SpecialArg \$@" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	chmod +x "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	
+	
+	## On prévient l'utilisateur que l'icône est prête, on lui propose de creer divers raccorucis
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "make_shortcut" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "$NOMICONE_" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		
+
+	## Attente de la réponse 
+	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+	while [ ! "$MESSAGE" = "MsgOut" ]
+	do
+		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
+		sleep 0.1
+	done
+	
+	## Lecture de la réponse
+	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+
+	
+	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ] ## Si il annule, on quitte 
+	then
+		rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		exit 
+	else ## Sinon
+		if [ -f "$REPERTOIRE/icones/full_size/$NOMICONE_" ]; then # L'icone existe...
+			iconPath="$REPERTOIRE/icones/full_size/$NOMICONE_"
+		else
+			iconPath="$REPERTOIRE/icones/full_size/playonlinux.png"
+		fi
+	
+		MESSAGE_MENU=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_MENU=')
+		MESSAGE_DESKTOP=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_DESKTOP=')		
+		if [ "$MESSAGE_MENU" == "MSG_MENU=True" ]
+		then
+			generer_icone "$iconPath" "$NOMICONE_" "$HOME/.local/share/applications/" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+		fi
+		if [ "$MESSAGE_DESKTOP" == "MSG_DESKTOP=True" ]
+		then
+			generer_icone "$iconPath" "$NOMICONE_" "$DESKTOP" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+		fi
+	fi
+}
+POL_SetupWindow_Close ()
+{
+	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	echo "exit" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+}
+POL_SetupWindow_Quit ()
+{
+	POL_SetupWindow_Close "$@"
+}
+POL_SetupWindow_Init ()
+{
+	if [ "$1" = "" ] || [ "$1" = "--force" ]
+	then
+		arg1="None"
+	else 
+		arg1="$1"
+	fi
+	if [ "$2" = "" ]
+	then
+		arg2="None"
+	else
+		arg2="$2"
+	fi
+
+	mkdir -p "$REPERTOIRE/configurations/guis/"
+	if [ ! -e "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" ] || [ "$1" = "--force" ]
+	then
+		echo "Wait" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		if [ "$POL_DEBUG" == "TRUE" ]
+		then
+			$PYTHON "$PLAYONLINUX/python/guiv3.py" "$arg1" "$arg2" &
+		else
+			$PYTHON "$PLAYONLINUX/python/guiv3.py" "$arg1" "$arg2" > /dev/null 2> /dev/null &
+		fi
+	elif [ ! "$1" = "--force" ]
+	then
+		echo "E. Window $POL_SetupWindow_ID already opened !"
+	fi
+}
+POL_SetupWindow_Open ()
+{
+	POL_SetupWindow_Init "$@"
+}
+POL_SetupWindow_reboot ()
+{
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while PlayOnLinux is simulating a Windows reboot')" "Wine"
+	wineboot
+	POL_SetupWindow_detect_exit
+}
+POL_SetupWindow_cdrom () 
+{
+	# 1 = Numéro du CD
+	LIST_DEVICES_=""
+	cd /media
+	for device in *
+	do
+		if [ ! "$device" = "$LNG_OTHER" ]
+		then
+			fstab1=`cat '/etc/fstab' | grep "$device"`
+			fstab2=`cat '/etc/fstab' | grep "$device" | grep iso9660`
+			if [ "$fstab1" = "" -o "$fstab2" != "" ]
+			then
+				LIST_DEVICES_+="$device~"
+			fi
+		fi
+	done
+		
+	LNG_WINE_ASKFORCDROM=$(eval_gettext "Where is your CD-ROM mounted?")
+	LNG_OTHER=$(eval_gettext "Other")
+	POL_SetupWindow_menu "$LNG_WINE_ASKFORCDROM" "CD-ROM" "$LIST_DEVICES_$LNG_OTHER" "~"		
+	CDROM="$APP_ANSWER"
+	if [ "$CDROM" = "$LNG_OTHER" ]
+	then
+		POL_SetupWindow_textbox "$LNG_WINE_ASKFORCDROM" "CD-ROM" "/media/cdrom"
+		CDROM="$APP_ANSWER"
+	else
+		CDROM="/media/$CDROM"
+	fi
+
+
+	if [ "$CDROM" = "" ]
+	then
+		CDROM="/media/cdrom"
+	fi
+}
+POL_SetupWindow_check_cdrom ()
+{
+	#message "$LNG_MOUNT_CDROM"
+	LNG_WINE_ERRORCDROM=$(eval_gettext "Error : Unable to find the CD-ROM !")
+	if [ ! "$CDROM" = "" ]
+	then
+		while [ ! -e "$CDROM/$1" ]
+		do
+			POL_SetupWindow_message "$LNG_WINE_ERRORCDROM" "CD-ROM"
+			POL_SetupWindow_cdrom
+		done
+	fi
+}
+POL_SetupWindow_install_wine ()
+{
+	rm "$REPERTOIRE/WineVersions/installed" 2> /dev/null
+	ARCHITECTURE="i386"
+	VERSIONENTRER="$1"
+
+	if [ "$VERSIONENTRER" = "" ]
+	then
+		exit
+	fi
+	if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONENTRER" ]
+	then
+		VERSION="$VERSIONENTRER"
+		ADRESSEDUDEB=$(wget "http://mulx.playonlinux.com/wine/linux-i386/LIST" -O- | grep ";$VERSION;" | tail -n 1 | cut -d ";" -f1)
+		if [ "$ADRESSEDUDEB" = "" ]
+		then
+		 LNG_ERROR_WINE="$(eval_gettext 'Unable to find the version :')"
+		 POL_SetupWindow_message "$LNG_ERROR_WINE $VERSIONENTRER" "Wine $1"
+		 POL_SetupWindow_Close
+		 exit
+		fi
+
+		#ADRESSE_HTTP=$(expr index "$ADRESSEDUDEB" '.http://')
+		#ADRESSEDUDEB=${ADRESSEDUDEB:$ADRESSE_HTTP}
+
+		LNG_WINEVERSIONS_DOWNLOADING="$(eval_gettext 'Downloading wine')"
+		cd "$REPERTOIRE/tmp"
+		POL_SetupWindow_download "$LNG_WINEVERSIONS_DOWNLOADING $VERSIONENTRER" "Wine" "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB"
+		POL_SetupWindow_wait_next_signal "$LNG_WINEVERSIONS_DOWNLOADING $VERSIONENTRER" "Wine"
+		sleep 1
+		sha1=$(wget "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB.sha1" -O-)
+		sha1_file=$(sha1sum "./$ADRESSEDUDEB")
+		echo "Server sha1 : $sha1"
+		echo "Client sha1 : $sha1_file"
+
+		POL_SetupWindow_detect_exit
+		LNG_WINEVERSIONS_DOWNLOADFAILED="$(eval_gettext 'The download seems to have failed')"
+		if [ ! "$sha1" = "$sha1_file" ]
+		then
+			POL_SetupWindow_message "$LNG_WINEVERSIONS_DOWNLOADFAILED" "Wine $1"
+		else
+			#message "$LNG_WINEVERSIONS_INSTALL"
+			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Extracting wine ...')" "Wine $1"
+			"$PLAYONLINUX/playonlinux-pkg" -i "$ADRESSEDUDEB"
+			POL_SetupWindow_detect_exit
+		fi
+		rm "$ADRESSEDUDEB"
+	fi
+	touch "$REPERTOIRE/WineVersions/installed"
+}

@@ -1,0 +1,493 @@
+#!/bin/bash   
+# Pack de langue : français #    
+
+# Copyright (C) 2007 Pâris Quentin
+#  		     Cassarin-Grand Arthur
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+export LNGFILENAME="Français"
+
+#LNG_SAFE_MODE #   
+export LNG_SAFE_MODE="PlayOnLinux tourne en mode graphique minimal\nEssayer de corriger le probleme"   
+# LNG WINE #   
+export LNG_WINE_REBOOT="Simulation du redémarrage de windows"   
+export LNG_WINE_PREFIXCREATE="Création du préfixe de wine"   
+export LNG_WINE_ASKFORCDROM="Quel est le point de montage de votre lecteur CDROM ?"   
+export LNG_WINE_ERRORCDROM="Erreur : le CDROM n'a pas été detecté !"   
+export LNG_MOUNT_CDROM="Veuillez monter le CDROM."   
+export LNG_COMMUNITY_1="Le dépot Community est actuellement activé.\nVoulez-vous le désactiver ?"   
+export LNG_COMMUNITY_2="Le dépot Community est actuellement desactivé.\nVoulez-vous l'activer ?\nIMPORTANT : PlayOnLinux n'est pas responsable des scripts de ce dépots.\nNous les controlons malgré tout."   
+export LNG_WORK_1="Le dépot WorkOnLinux est actuellement activé.\nVoulez-vous le désactiver ?"   
+export LNG_WORK_2="Le dépot WorkOnLinux est actuellement desactivé.\nVoulez-vous l'activer ?\nIMPORTANT : PlayOnLinux n'est pas responsable des scripts de ce dépots.\nNous les controlons malgré tout."   
+export LNG_CONFIGURATION_FINISHED="La configuration est terminée. Veuillez relancer PlayOnLinux"   
+
+# LNG_CHECK_DEPEND #   
+export LNG_MISSING="Le programme est manquant :"   
+export LNG_MISSING_ERROR="Il manque un ou plusieurs programmes. Veuillez les installer et relancez le script."   
+export LNG_3D_MISSING="Il semblerait que l'accélération 3D ne soit pas activée !\nNous vous conseillons fortement de régler ce problème"   
+export LNG_GUI_MISSING="Vous devez installer zenity ou kdialog pour utiliser ce programme"   
+
+# LNG_GAMES #   
+export LNG_GAME_NOT_INSTALLED="Le programme que vous voulez lancer n'est pas installé"   
+export LNG_GAME_GAMES_MISSING="Aucun programme existant. \nEssayez de faire les mises à jour."   
+export LNG_GAME_PATCHS_MISSING="Aucun patch existant \nEssayez de faire les mises à jour."   
+export LNG_GAME_ADDON_MISSING="Aucunes expansions existant \nEssayez de faire les mises à jour."   
+export LNG_GAME_TEST_GAME="Aucun programme n'est installé"   
+export LNG_GAME_ALREADY_INSTALLED="L'installation a echouée \nLe programme semble déja être installé"   
+export LNG_GAME_NO_SCRIPT="L'installation a echouée \nLe script d'installation du programme est introuvable \nEssayez de mettre à jour $TITRE"   
+LNG_GAME_REQUIRED ()    
+{    
+	echo "Impossible de continuer ;\n$1 semble ne pas être installé"    
+}   
+LNG_GAME_UNINSTALL ()    
+{    
+	echo "Voulez-vous désinstaller $1 ?"    
+}   
+LNG_GAME_UNINSTALL_SUCCES ()   
+{   
+	echo "$1 a été desinstallé avec succès"   
+}   
+export LNG_GAME_DOWNLOAD_ICONE="Patientez pendant le téléchargement de l'icone"   
+export LNG_GAME_DESKTOP_ICONE="Voulez-vous une icone sur votre bureau ?"   
+export LNG_GAME_MENU_ICONE="Voulez-vous une icone dans vos menus ?"   
+
+#LNG NETWORK   
+export LNG_NET_POL_ERR="Le site web de PlayOnLinux n'est pas disponible\nVérifiez votre connexion Internet.\nImpossible de vérifier les mises à jour."   
+export LNG_NET_CHECK="Vérification du réseau..."   
+export LNG_NET_CHECK_FAILED="Vous n'êtes pas connecté à Internet."   
+export LNG_NET_CHECK_SUCCESS="La connexion est operationnelle."   
+export LNG_NET_CHECK_LOST="Vous êtes connecté, mais des paquets ping ont été perdus."   
+
+# LNG_MAIN #   
+export LNG_MAIN_UPDATE="Patientez pendant le téléchargement des mises à jour..."   
+export LNG_MAIN_POL_UPDATE="Une mise à jour de PlayOnLinux est disponible.\nRendez-vous sur le site pour la télécharger."   
+export LNG_MAIN_UPDATE_SUCCES="Les mises à jour ont été installées avec succès"   
+export LNG_MAIN_MENU="Fichier"   
+export LNG_MAIN_MENU_ITEM_PLAY="Lancer"   
+export LNG_MAIN_MENU_ITEM_INSTALL="Installer"   
+export LNG_MAIN_MENU_ITEM_EXPERT="Outils"   
+export LNG_MAIN_MENU_ITEM_REMOVE="Supprimer"   
+export LNG_MAIN_MENU_ITEM_UPDATE="Mettre à jour"  
+export LNG_CHOOSE_GAME="Vous devez choisir une application"
+export LNG_MAIN_INSTALL_MENU="Que voulez vous installer ?"   
+export LNG_MAIN_UNINSTALL_MENU="Que voulez vous désinstaller ?"   
+export LNG_MAIN_RUN_MENU="Quel programme voulez-vous ?"   
+export LNG_MAIN_INSTALL_GAME="Jeu"   
+export LNG_MAIN_INSTALL_EXPANSION="Expansions"   
+export LNG_MAIN_INSTALL_PATCH="Patchs"   
+export LNG_MAIN_INSTALL_UNINSTALL="Désinstaller"   
+export LNG_MAIN_CHECKUPGRADE="Voulez vous verifier sur le site de PlayOnLinux si de nouveaux scripts sont disponibles ?"   
+export LNG_MAIN_FIRSTUSE="Bienvenue dans votre première utilisation de PlayOnLinux\nMerci de prendre le temps de régler quelques paramètres\nAssurez-vous d'être connecté à Internet."   
+export LNG_MAIN_INSTALLFONTS="Les polices Microsoft ne sont pas installées. Je vais les installer pour vous."   
+export LNG_MAIN_DOWNLOADFONTS="Patientez pendant le téléchargement des polices"   
+export LNG_MAIN_CREATEDIRECTORY="Patientez pendant la création des répértoires de PlayOnLinux"   
+export LNG_MAIN_LANGUAGE_DETECTED="La langue de votre système est : $LANG. Celle-ci est présente dans PlayOnLinux. Voulez-vous l'utiliser ?"   
+export LNG_MAIN_LANGUAGE_NOT_DETECTED="La langue de votre système n'éxiste pas dans PlayOnLinux.\nMerci d'en choisir une autre"   
+export LNG_MAIN_CHOOSELANGUAGE="Choisissez la langue que vous voulez"   
+export LNG_MAIN_CHOOSETHEME="Choisissez le thème que vous voulez"   
+export LNG_THEMES="Thème"
+
+# LNG_EXPERT   
+export LNG_EXPERT_DIDNOTSELECT="Vous n'avez pas selectionné de programme"   
+export LNG_EXPERT_REGISTRY="Base de registre"   
+export LNG_EXPERT_WINEPREFIX="Mettre à jour le préfixe de wine"   
+export LNG_EXPERT_WAITUPGRADE="Patientez pendant la mise à jour..."   
+export LNG_EXPERT_WINECONFIG="Configurations de wine"   
+export LNG_EXPERT_RUN="Executer un script local"   
+export LNG_EXPERT_UNFOUND="Fichier introuvable !"   
+export LNG_EXPERT_NOTPOL="Ce script n'est pas un script PlayOnLinux valide"   
+export LNG_EXPERT_DIRECTX="Installer DirectX"
+export LNG_EXPERT_WVER="Gérer les versions de wine"
+export LNG_EXPERT_WKILL="Tuer le processus wineserver"
+
+# LNG_WINEVERSIONS #   
+export LNG_WINEVERSIONS_INTRO="Ce plugin vous permettra de faire cohabiter plusieurs versions de wine dans PlayOnLinux"   
+LNG_WINEVERSIONS_CANTFIND ()   
+{   
+	echo "Je ne trouve pas la version $1 de wine dans les dépots officiels."   
+}   
+LNG_WINEVERSIONS_NOTINSTALLED ()   
+{   
+  	echo "La version $1 n'est pas installée dans PlayOnLinux.\nJe vais l'installer pour vous."   
+}   
+LNG_WINEVERSIONS_ASSIGN ()   
+{   
+	echo "$1 a été assigné à la version $2 de wine"   
+}   
+LNG_WINEVERSIONS_INTERPET()   
+{   
+	echo "PlayOnLinux interpretera la commande \"wine\" par la version $1 dans tous les prochains scripts éxécutés."   
+}   
+LNG_WINEVERSIONS_WANTUNINSTALL ()   
+{   
+	echo "Voulez-vous désinstaller la version $1 de wine dans PlayOnLinux ?"   
+}   
+LNG_WINEVERSIONS_UNINSTALLSUCCES ()   
+{   
+	echo "La version $1 de wine a été desinstallée avec succès"   
+}   
+export LNG_WINEVERSIONS_DOWNLOADING="Téléchargement de wine"   
+export LNG_WINEVERSIONS_DOWNLOADFAILED="Le téléchargement semble avoir echoué."   
+export LNG_WINEVERSIONS_INSTALL="Téléchargement terminé.\nJe vais maintenant installer pour vous cette version de wine."   
+export LNG_WINEVERSIONS_INSTALLATION="Installation de votre version de wine ..."   
+export LNG_WINEVERSIONS_INSTALLATION_FINISHED="Installation terminée"   
+export LNG_WINEVERSIONS_VERSIONTOUSE="Quelle version de wine voulez-vous utiliser ?"   
+export LNG_WINEVERSIONS_MUSTSPECIFY="Vous devez spécifier quelle version télécharger"   
+export LNG_WINEVERSIONS_ALREADYINSTALLED="La version a déjà été installée"   
+export LNG_WINEVERSIONS_RESETSESSION="La session a été réinitialisée"   
+export LNG_WINEVERSIONS_GAME="Sur quel jeu appliquer la modification ?"   
+export LNG_WINEVERSIONS_NOWINE="Aucune version de wine installée"   
+export LNG_WINEVERSIONS_CHOOSEUNINSTALL="Choisissez quelle version désinstaller"   
+export LNG_WINEVERSIONS_CHOOSEDOWNLOAD="Quelle est la version de wine à télécharger ?"   
+
+
+LNG_WINEVERSIONS_DEFAULT ()   
+{   
+	echo "$1 a été assigné à la version de wine par défaut"   
+}  
+
+# LNG_DIVERS #   
+export LNG_OTHER="Autre"   
+export LNG_EXEMPLE="Exemple "   
+export LNG_RESET="Réinitialiser"   
+
+# LNG_OPTIONS #   
+export LNG_OPTIONS_MENU="Options"   
+export LNG_OPTIONS_MENU_TESTS="Tests"   
+export LNG_OPTIONS_RESULT="Résultats du test"   
+export LNG_OPTIONS_NORESULT="Glxgears n'a renvoyé aucun résultat."   
+export LNG_OPTIONS_INFOS_SYS="Informations systèmes"   
+export LNG_OPTIONS_INFOS_YSYS="Votre système :"   
+export LNG_OPTIONS_INFOS_KERNEL="Votre noyau :"   
+export LNG_OPTIONS_INFOS_LANG="Langue de votre système :"   
+export LNG_OPTIONS_INFOS_USER="Votre nom d'utilisateur :"   
+export LNG_OPTIONS_INFOS_NAMEMACHINE="Nom de votre ordinateur :"   
+export LNG_OPTIONS_INFOS_VIDEOCARD="Votre carte vidéo :"   
+export LNG_OPTIONS_INFOS_DISTRIB_ID="Votre distribution :"   
+export LNG_OPTIONS_INFOS_RELEASE="Version de votre distribution :"   
+export LNG_OPTIONS_INFOS_DDINFOS="Place restante sur vos disques :"   
+export LNG_OPTIONS_INFOS_WINEINSTALLED="Version de wine installée :"   
+export LNG_OPTIONS_INFOS_WINECURRENT="Version de wine utilisée par PlayOnLinux :"   
+export LNG_OPTIONS_MENU_INFORMATIONS="Informations"   
+export LNG_OPTIONS_MENU_INFORMATIONS_SYSTEME="Système"   
+export LNG_INFORMATION="Information sur un script"
+
+# LNG_OPTIONS v2
+export LNG_OPTIONS_TESTS="Tests" 
+export LNG_OPTIONS_LANGUAGE="Langue"
+export LNG_OPTIONS_REPOSITORY="Dépots"
+export LNG_OPTIONS_PANELS="Tableaux de bord"
+export LNG_NEXT_RUN="Les changements seront appliqués au prochain redémarrage de PlayOnLinux"   
+export LNG_HAVE="Vous avez"   
+
+# LNG_HELP
+export LNG_HELP="Aide"
+export LNG_ABOUT="A propos"
+
+export LNG_ERROR="Erreur"
+export LNG_EXIT="Quitter"
+export LNG_REFRESH="Actualiser"
+
+# LNG_INTERFACE #   
+presentation ()   
+{   
+	N1=0
+	N2=0
+	if [ ! "$6" = "" ]
+	then
+		N1="$6"
+	fi
+	if [ ! "$7" = "" ]
+	then	
+		N2="$7"
+	fi
+	message "Programme: $1 \nAuteur: $2 \nAdresse: $3 \nAuteur du script: $4\n\nLe préfixe wine sera installé dans $HOME/.PlayOnLinux/wineprefix/$5/\n\nAttention : Nous ne sommes pas responsable de l'utilisation que vous faites de ce script !" "Assistant d'installation" $N1 $N2 1 "" "Installer"
+	
+}   
+
+# Ajout par GNU_Raziel #   
+# LNG_WINEBOOSTER #   
+export LNG_WINEBOOSTER_WELCOME1="Bienvenue dans WineBooster, un script d'optimisation de wine"   
+export LNG_WINEBOOSTER_WELCOME2="Cet utilitaire a été créé par GNU_Raziel"   
+export LNG_WINEBOOSTER_WELCOME3="Si vous ne SAVEZ PAS quoi mettre en valeur, laissez la valeur par DÉFAUT !!!"   
+export LNG_WINEBOOSTER_GAME_CHOOSE="Choisissez un jeu"   
+export LNG_WINEBOOSTER_GAME_ERROR="Vous n'avez pas choisi de jeu"   
+export LNG_WINEBOOSTER_WVERSION="Quelle version de Windows utiliser? (Valeurs : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Défault : winxp )"   
+export LNG_WINEBOOSTER_DDR="Quel mode de rendu utiliser ? (Valeurs : opengl, gdi - Défaut : gdi)"   
+export LNG_WINEBOOSTER_VERTEXSHADER="Activer le mode VertexShader ? (Défaut : N)"   
+export LNG_WINEBOOSTER_PIXELSHADER="Activer le mode PixelShader ? (Défaut : N)"   
+export LNG_WINEBOOSTER_UGLSL="Activer le support GLSL ? (Défaut : N)"   
+export LNG_WINEBOOSTER_VMS="Quel est la quantité de mémoire (Mo) de votre carte graphique ? (Défaut : 64)"   
+export LNG_WINEBOOSTER_ORM="Quel mode utiliser pour afficher les \"OffScreen textures/Images\"? (Valeurs : backbuffer, pbuffer, fbo - Défaut : backbuffer)"   
+export LNG_WINEBOOSTER_RTLM="Quel mode utiliser pour gerer le Rendu de Cible vérouillée? (Valeurs : auto, readdraw, readtex, texdraw, textex, disabled - Défaut : auto)"   
+export LNG_WINEBOOSTER_WDESKTOP="Quelle résolution du mode WINE fenêtré choisir (NE CHANGE PAS LA RESOLUTION DU JEU) ? (Exemple : 1024x768 - Défaut : 0 = mode plein écran)"   
+export LNG_WINEBOOSTER_WMANAGED="Autoriser le contrôle des fenêtres par votre gestionnaire ? (Défaut : Y)"   
+export LNG_WINEBOOSTER_WDXGRAB="Autoriser DirectX à empêcher le pointeur de souris de sortir des fenêtres ? (Défaut : N)"   
+export LNG_WINEBOOSTER_WAUDIO="Quel pilote audio choisir ? (Valeurs : oss, alsa - Défaut : alsa)"   
+export LNG_WINEBOOSTER_AEMUL="Émuler le pilote DirectSound ? (Défaut : N)"   
+
+
+# LNG_LIVEINSTALL #   
+export LNG_LI_PRESENTATION="Ce script vous permettra d'installer un programme quelconque dans PlayOnLinux, et de l'utiliser avec tous les outils.\n\nCependant, nous ne pouvons pas vous garantir que votre programme fonctionnera correctement."   
+export LNG_ACTION="Action"   
+export LNG_CHOICE="Veuillez faire un choix"   
+export LNG_LI_CODENAME="Donnez un nom pour le prefixe de votre programme. Ce nom devra comporter que des caractères alpha-numeriques"   
+export LNG_LI_EXIST="Un programme portant ce nom existe déja dans PlayOnLinux."   
+export LNG_LI_INSTALLFILE="Choisissez maintenant le fichier d'installation à éxécuter"   
+export LNG_LI_CHOOSEFILE="Vous devez selectionner un fichier"   
+export LNG_LI_EXEC="Choisissez maintenant l'exécutable du programme"   
+LNG_LI_CREER_ADDITIONAL ()   
+{   
+	echo "Voulez-vous créer un lanceur additionnel pour $1 (pour une expansion par exemple) ? Cette question vous sera reposée tant que vous aurez répondu 'non' de manière à ce que vous puissiez en créer autant que vous voulez."   
+}   
+export LNG_LI_GIVENAME="Donnez un nom à votre lanceur"   
+
+# LNG_SCRIPTS #   
+protection_warning ()   
+{   
+	attention "Veuillez bien lire ceci :\nLa protection CD/DVD de ce jeu ne fonctionne pas correctement avec wine.\nVous ne pourrez donc pas jouer à ce jeu sans circonvenir cette protection, ce qui est illégal !\nPlayOnLinux ne pourra pas être tenu responsable de votre décision.\nEn aucun cas vous ne devrez demander ni parler de pratiques illégales sur le site de PlayOnLinux sous peine d'être immédiatement et définitivement banni !"   
+}   
+end_install ()   
+{   
+	message "Installation terminée"   
+}   
+
+sur_installed ()   
+{   
+	message "Appuyez sur OK UNIQUEMENT quand l'installation du jeu sera terminée sous peine de devoir recommencer l'installation."    
+}   
+
+export LNG_SCRIPT_WAIT="Patientez pendant la préparation de l'installation ..."   
+
+ask_mount_num ()   
+{   
+	message "Veuillez monter le CDROM $1, puis cliquez sur valider."   
+}   
+export LNG_DOWNLOAD="Patientez pendant le téléchargement du jeu..."   
+export LNG_DOWNLOAD_LIB="Patientez pendant le téléchargement des librairies..."   
+export LNG_DOWNLOAD_FINISHED="Téléchargement terminé"   
+export LNG_WAIT="Patientez..."   
+
+# LNG_POLSC #   
+export LNG_POLSC="Bienvenue dans PolScriptCreator.\nIl vous permettra de créer des scripts basiques\nIls seront placés sur le bureau\nMerci à Christhaal pour ce programme"   
+
+# LNG_GIT #   
+export LNG_GIT_WELCOME1="Bienvenue dans WineGIT, un script d'installation Wine en version GIT pour WineVersion"   
+export LNG_GIT_WELCOME2="Cet utilitaire a été créé par GNU_Raziel"   
+export LNG_GIT_KEEP="Voulez-vous conserver le git actuel ? (Valeurs : Y ou N - Défaut : N)"   
+export LNG_GIT_KEEP2="Veuillez utiliser un AUTRE nom pour le git"   
+export LNG_GIT_RENAME="Veuillez donner un nom au git actuellement installé (exemple : git-24062007)"   
+export LNG_GIT_NAME_ERROR="Vous n'avez pas spécifié de nom !"   
+export LNG_GIT_NAME_DUPLICATE_ERROR="Ce nom existe déjà !"   
+export LNG_GIT_DOWNLOAD="Téléchargement du git, veuillez patienter..."   
+export LNG_GIT_COMPILATION="Compilation et installation du git, veuillez patienter..."   
+export LNG_GIT_FINISHED="Installation terminée"   
+
+#LNG_DOWNLOADING_INSTALLER   
+export LNG_DOWNLOADING_INSTALLER="Patientez pendant le téléchargement de l'installateur..."   
+
+#LNG_MENU_POL   
+export LNG_MENU_POL_1="Voulez-vous creer un menu \"PlayOnLinux\" dans votre menu GNOME ou KDE ?\nCe menu contiendra tout les lanceurs crées dans PlayOnLinux."   
+export LNG_MENU_POL_2="Voulez-vous désactiver le menu \"PlayOnLinux\" ?"
+
+export LNG_FILE_CHOOSE="Veuillez sélectionner un script PlayOnLinux valide à exécuter"
+export LNG_APP_CHOOSE="Choisissez une application à installer"
+export LNG_APP_CHOOSE2="Choisissez un type d'application à installer"
+export LNG_APP_CHOOSE3="Assistant d'installation"
+
+export LNG_LAUNCHER="Choisissez un nom pour votre lanceur"
+
+export LNG_UPDATING_FINISHED="La liste des applications a été mise à jour avec succès"
+export LNG_UPDATEW_FINISHED="Le préfixe a été mis à jour avec succès"
+export LNG_UPDATING="Mise à jour"
+export LNG_DOWNLOADING="Téléchargement"
+export LNG_WARNING="Attention"
+export LNG_NEXT="Suivant"
+export LNG_CANCEL="Annuler" 
+export LNG_FINISHED="Terminé"
+export LNG_FINISHED_="Terminer"
+export LNG_STEP="Étape" 
+export LNG_SUR="sur" 
+export LNG_DOWNLOAD_CLICK="Cliquez sur télécharger pour commencer le téléchargement"
+export LNG_DOWNLOAD="Télécharger"
+export LNG_DOWNLOADED="chargés"
+export LNG_YES="Oui"
+export LNG_NO="Non"
+export LNG_BROWSE="Parcourir"
+export LNG_KILL_WINSERVER="Attention ! Cette opération risque de rendre instable les éventuelles applications wine lancées avec PlayOnLinux ou non.\nAssurez-vous qu'elles sont fermées avant de faire ceci.\n\nÊtes-vous certain de vouloir tuer wineserver ?"
+
+export LNG_WINELOOK1="Veuillez choisir un thème"
+export LNG_WINELOOK2="Votre thème à bien été appliqué"
+
+##########################################################
+######### 2.1.0 Merci de retraduire cette partie #########
+##########################################################
+export LNG_EXPERT_PKG="Installer un paquet"
+export LNG_EXPERT_BOOSTERM="Configuration avancée de wine"
+export LNG_WINEGIT="Wine GIT"
+export LNG_POLSHELL="Console de déboggage PlayOnlinux"
+export LNG_WINELOOK="Thême de Wine"
+
+# About #
+export LNG_SLOGAN="Utilisez vos applications Windows sous Linux !"
+export LNG_LOGO="Les logos sont issus du projet Crystal Project"
+export LNG_WINDOWS_DESIGN="Fenêtres designés par Asimov"
+export LNG_COPYRIGHT="(C) L'équipe PlayOnLinux 2008\nSous licence GPL version 3"
+
+export LNG_MAIN_INSTALL_WORKONLINUX="Application"
+export LNG_MAIN_INSTALL_LIVE="Installation manuelle"
+export LNG_MAIN_INSTALL_DOSBOX="Application dosbox"
+export LNG_MAIN_INSTALL_PKG="Installer un paquet .pol"
+
+export LNG_LI_CHOOS_ACTION="Que voulez-vous faire ?"
+export LNG_LI_NEW="Installer une application sur un nouveau préfixe"   
+export LNG_LI_PATCH="Modifier une application déjà installé"
+export LNG_LI_CHOOSEPREFIX="Quel est le préfixe de votre application ?"   
+export LNG_LI_SHORTCUT="Voulez-vous créer un nouveau lanceur dans PlayOnLinux ?"   
+export LNG_LI_DELETE="Supprimer un préfixe"
+export LNG_LI_DELETE_PREFIXE="Êtes vous sur de vouloir supprimer ce préfixe ?"
+export LNG_LI_PREFIXE_DELETED="Le préfixe a été supprimé"
+
+export LNG_WINEVERSION_ACTIONS="Choisissez une action à effectuer"
+
+export LNG_WINEVERSIONS_MENU_INSTALL="Installer une version de wine"
+export LNG_WINEVERSIONS_MENU_GIT="Installer la version sur le GIT de wine"
+export LNG_WINEVERSIONS_MENU_ASSIGN="Assigner une version de wine a une application"
+export LNG_WINEVERSIONS_MENU_UNASSIGN="Remettre une application a la version par défault"   
+export LNG_WINEVERSIONS_MENU_UNINSTALL="Désinstaller une version de wine"   
+export LNG_WINEVERSIONS_MENU_SESSION="Session"   
+
+export LNG_WINEVERSIONS_GAMETOEDIT="Sur quel application appliquer la modification ?"   
+
+export LNG_TEST_3D="Je vais effectuer un test sur votre accélération 3D. Il prendra environ 2 minutes."
+
+export LNG_OPTIONS_REPOS_STEP1="Choisissez un dépot à activer / désactiver"
+
+export LNG_DEFAULT_MESSAGE="Message"
+export LNG_DEFAULT_QUESTION="Question"
+export LNG_DEFAULT_FIELD="Texte"
+export LNG_DEFAULT_BROWSE="Parcourir"
+
+export LNG_PKG_NOT_VALID="Le fichier n'est pas un paquet PlayOnLinux valide"
+export LNG_PKG_NOT_FOUND="Le fichier est introuvable"
+export LNG_PKG_CHOOSE="Choisissez un paquet a installer"
+export LNG_PKG_MANAGER="Gestionnaire de paquet PlayOnLinux"
+
+LNG_DELETE_PREFIXE ()
+{
+	echo "Voulez-vous supprimer le préfixe $1 qui n'est pas utile ?"
+}
+
+export LNG_CANT_FIND_UNINSTALL="Le jeu que vous tentez de désinstaller est introuvable"
+
+##########################################
+#   2.2   - Please translate this part   #
+##########################################
+export LNG_AUTORUN_CANT_FIND="Aucune inscription setup dans autorun.inf"
+export LNG_AUTORUN_CDROM_FOUND="Un CD-ROM a été detecté dans votre lecteur"
+export LNG_AUTORUN_CDROM_NAME="Nom "
+export LNG_AUTORUN_CDROM_SETUP="Installateur "
+export LNG_AUTORUN_TITLE="Exécution automatique"
+export LNG_AUTORUN_NEXT="Dans le préfixe suivant "
+export LNG_AUTORUN_RECOM="recommendé"
+export LNG_AUTORUN_WHERE="Où voulez vous installer ce CD-ROM ?"
+export LNG_AUTORUN_EXISTING="Dans un préfixe existant (expansion)"
+export LNG_AUTORUN_NEW="Dans un nouveau prefixe"
+export LNG_NOAUTORUN="Pas de supports avec éxécution automatique trouvé"
+export LNG_AUTORUN_N="exécutions automatiques ont été trouvés" # We are expecting a number. For example, 5 autorun has been found
+export LNG_AUTORUN_PREFIX_C="Chosisssez le préfixe"
+
+#########################################
+# 2.2.1 - Please translate this part ####
+#########################################
+export LNG_SHORTCUT_CREATON="Création des raccourcis"
+
+#########################################
+# 2.3 - Please translate this part      #
+#########################################
+export LNG_NEW_INSTALL_UNSUPPORTED="Installer un paquet .pol ou une application non supportée"
+export LNG_SEARCH="Recherche :"
+export LNG_CLOSE="Fermer"
+export LNG_CAT_ACCESSORIES="Accessoires"
+export LNG_CAT_DEVELOPMENT="Developpement"
+export LNG_CAT_GAMES="Jeux"
+export LNG_CAT_GRAPHICS="Graphisme"
+export LNG_CAT_INTERNET="Internet"
+export LNG_CAT_MULTIMEDIA="Multimedia"
+export LNG_CAT_OFFICE="Bureautique"
+export LNG_CAT_OTHER="Autre"
+
+#########################################
+# 2.6 Please translate this part        #
+#########################################
+export LNG_GENERAL_APPS="Mes applications"
+export LNG_GENERAL_IRC="Tchat"
+
+export LNG_OPTIONS_PANEL_DEFAUT="Programme par défaut"
+export LNG_OPTIONS_PANEL_BROWSER="Navigateur"
+export LNG_OPTIONS_PANEL_TEST="Test"
+export LNG_OPTIONS_PANEL_TERMINAL="Terminal"
+export LNG_OPTIONS_PANEL_LANGUAGE="Langage"
+export LNG_OPTIONS_PANEL_TEMP="Répertoire temporaire"
+export LNG_OPTIONS_PANEL_TEMP_E="Vider le répertoire temporaire automatiquement"
+export LNG_OPTIONS_PANEL_OFFLINE="Mode Hors-ligne"
+export LNG_OPTIONS_PANEL_OFFLINE_E="Activer mode hors-ligne"
+export LNG_OPTIONS_PANEL_PROXY="Configuration du proxy"
+export LNG_OPTIONS_PANEL_PROXY_ADRESS="Adresse du proxy"
+export LNG_OPTIONS_PANEL_PROXY_USE="Utiliser un proxy"
+export LNG_OPTIONS_PANEL_PROXY_PORT="Port"
+export LNG_OPTIONS_PANEL_PROXY_LOGIN="Login"
+export LNG_OPTIONS_PANEL_PROXY_PASSWORD="Mot de passe"
+export LNG_OPTIONS_PANEL_D_WINE="Version de wine utilisée par défaut avec PlayOnLinux (experimental)"
+export LNG_OPTIONS_PANEL_DESK="Bureau"
+export LNG_OPTIONS_PANEL_MENU="Menu de PlayOnLinux"
+export LNG_OPTIONS_PANEL_MENU_R="Ajouter le tableau de bord PlayOnLinux à votre menu"
+export LNG_OPTIONS_PANEL_DESKTOP_D="Répertoire du bureau"
+export LNG_OPTIONS_PANEL_D_NICKNAME="Pseudo par défaut"
+export LNG_OPTIONS_PANEL_SETTINGS="Options"
+export LNG_OPTIONS_PANEL_C_STARTUP="Se connecter automatiquement au tchat au démarage de PlayOnLinux"
+export LNG_OPTIONS_PANEL_W_USER="Avertir sur le tchat lorsque je lance un jeu"
+export LNG_OPTIONS_PANEL_SOUND="Jouer un son lorsque je reçois un message privé"
+export LNG_OPTIONS_PANEL_TITLE="Préférences de PlayOnLinux"
+export LNG_OPTIONS_PANEL_O1="General"
+export LNG_OPTIONS_PANEL_O2="Tchat"
+export LNG_OPTIONS_PANEL_O3="Internet"
+export LNG_OPTIONS_PANEL_O4="Environnement"
+export LNG_OPTIONS_PANEL_O5="Systeme"
+export LNG_OPTIONS_PANEL_APPLY="Appliquer"
+export LNG_OPTIONS_PANEL_CLOSE="Fermer"
+
+export LNG_OFFLINE_MODE="Vous êtes en mode hors ligne"
+
+######################################
+# 2.7 Please translate this part     #
+######################################
+export LNG_INSTALLED_PLUGIN="Plugins installé"
+export LNG_ADD_PLUGIN="Ajouter"
+export LNG_REMOVE_PLUGIN="Supprimer"
+export LNG_CONFIG_PLUGIN="Configurer"
+export LNG_ENABLE_PLUGIN="Activer"
+export LNG_DISABLE_PLUGIN="Désactiver"
+export LNG_CHOOSE_PLUGIN="Chosissez un plugin"
+export LNG_SUR_INSTALL="Êtes-vous sûr de vouloir installer le plugin"
+export LNG_SUR_DELETE="Êtes-vous sûr de vouloir supprimer le plugin"
+export LNG_OPTIONS_PANEL_O6="Plugins"
+export LNG_MANAGER="Gestionnaire de plugins"
+
+#######################################
+# 2.7.2                               #
+#######################################
+export LNG_NO_MORE="Ne plus me prévenir"

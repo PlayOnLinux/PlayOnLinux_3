@@ -1,0 +1,272 @@
+#!/bin/bash
+# Copyright (C) 2007 Pâris Quentin
+# Copyright (C) 2009 Łukasz Wojniłowicz
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+lancer ()
+{
+	PROG="$1"
+	GAME="$REPERTOIRE/configurations/installed/$PROG"
+	if [ -e "$GAME" ]
+	then
+		# $1 changed by $@ to run script with some arguments
+		# need game install by POL >= 1.8.0
+		cd $REPERTOIRE/configurations/installed
+		echo $@ | grep -o "\-\-debug"
+		if [ "`echo $@ | grep -o "\-\-debug"`" = "--debug" ]
+		then
+			echo "costam"
+			eval "`cat "$GAME" | sed -e "s%"\-all"%""%"`"
+		else
+			bash "$@"
+		fi
+	else
+		LNG_GAME_NOT_INSTALLED=$(eval_gettext "The game you want to run isn't installed.")
+		erreur "$LNG_GAME_NOT_INSTALLED : $PROG"
+	fi
+	#wait_wine_exit
+}
+
+verifier_installation ()
+{
+	if [ -e "$REPERTOIRE/wineprefix/$1" ]
+	then
+	    erreur "$LNG_GAME_ALREADY_INSTALLED"
+	    exit
+	fi
+}
+verifier_installation_e ()
+{
+	cd $REPERTOIRE/wineprefix/
+	if [ ! -e "./$1" ]
+	then
+	   erreur "$(LNG_GAME_REQUIRED $1)"
+	   exit
+	fi
+}
+generer_icone ()
+{
+	ICONE=$1
+	NOMICONE=$2
+	NOMCOURT=$5
+	PLACE=$3
+	EXECUTER=$4
+	
+	mkdir -p $PLACE
+	cd $PLACE
+	echo "[Desktop Entry]" > "$NOMCOURT.desktop"
+	echo "Encoding=UTF-8" >> "$NOMCOURT.desktop"
+	echo "Name=$NOMICONE" >> "$NOMCOURT.desktop"
+	echo "GenericName=Game" >> "$NOMCOURT.desktop"
+	echo "Comment=PlayOnLinux" >> "$NOMCOURT.desktop"
+	echo "Type=Application" >> "$NOMCOURT.desktop"
+	echo "Exec=$EXECUTER" >> "$NOMCOURT.desktop"
+	echo "Icon=$ICONE" >> "$NOMCOURT.desktop"
+	echo "Categories=PlayOnLinux;" >> "$NOMCOURT.desktop"
+	echo "Name[fr_FR]=$NOMICONE" >> "$NOMCOURT.desktop"
+}
+creer_lanceur () 
+{
+	creer_lanceur_base "$@"
+	creer_lanceur_v2 "$@"
+	
+}
+creer_lanceur_base ()
+{
+	# 1 = Wineprefix
+	# 2 = Repertoire
+	# 3 = Binaire
+	# 4 = Icone (png ou xpm)
+	# 5 = Nom de l'icône
+	# 6 = Ignoré (question de compatibilité avec les versions < 2.0)
+	# 7 = Eventuel argument
+
+	Binaire="$3"
+	SpecialArg="$7"
+
+	if [ "$5" = "" ]
+	then
+		NOMICONE_="$1"
+	else
+		NOMICONE_="$5"
+	fi
+	
+	mkdir -p "$REPERTOIRE/icones/32"
+	mkdir -p "$REPERTOIRE/icones/full_size"
+	
+	ICON_WEB_NAME="$4"
+	ICON_OK=0
+
+	
+	# Création de l'icone.
+	
+	# Cas 1 : le nom de l'icone est donné.
+	if [ -n "$ICON_WEB_NAME" ]; then
+		if [ ! "$OFFLINE" = "1" ]; then # On peut le télécharger...
+			wget -q "$SITE/icones/$ICON_WEB_NAME" -O "$REPERTOIRE/icones/full_size/$NOMICONE_" # On prend l'icone full size
+		fi
+		
+		if [ -f "$REPERTOIRE/icones/full_size/$NOMICONE_" ]; then
+			convert -resize 32 "$REPERTOIRE/icones/full_size/$NOMICONE_" "$REPERTOIRE/icones/32/$NOMICONE_" # On fabrique l'icone 32*32
+			ICON_OK=1
+		fi
+	elif [ "$ICON_OK" -ne 1 ]; then # Pas d'incone sur le web => Création à partir de l'exe...
+		echo "No iternet icon..."
+		
+		mkdir -p "$REPERTOIRE/tmp/win32Icon"
+		wrestool -x "$REPERTOIRE/wineprefix/$1/drive_c/$2/$Binaire" -o "$REPERTOIRE/tmp/win32Icon" -t14
+		
+		cd "$REPERTOIRE/tmp/win32Icon"
+		win32IconName=$(ls -S *.ico | head -n 1)
+		if [ -f "$win32IconName" ]; then # L'ico est créé
+			convert ICO:"$win32IconName" -resize 32 PNG:"$REPERTOIRE/icones/32/$NOMICONE_" # On fabrique l'icone 32*32
+		fi # Si non : icone play on linux.
+
+		rm -r "$REPERTOIRE/tmp/win32Icon"
+		
+		# On ne crée pas d'icone "full_size", parce que les résolutions des icones windows ne sont pas suffisantes tout le temps.
+		# Pour verifier la taille des icones, il faudrait utiliser "identify", mais ce programme n'est pas toujours fournis.
+	fi
+	
+	echo "#!/bin/bash" > "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "export WINEPREFIX=\"$REPERTOIRE/wineprefix/$1\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "export WINEDEBUG=\"-all\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "cd \"$REPERTOIRE/wineprefix/$1/drive_c/$2\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "wine \"$Binaire\" $SpecialArg \$@" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	chmod +x "$REPERTOIRE/configurations/installed/$NOMICONE_"
+}
+creer_lanceur_v2 ()
+{
+	if [ -f "$REPERTOIRE/icones/full_size/$NOMICONE_" ]; then # L'icone existe...
+		iconPath="$REPERTOIRE/icones/full_size/$NOMICONE_"
+	else
+		iconPath="$REPERTOIRE/icones/full_size/playonlinux.png"
+	fi
+
+	LNG_SHORTCUT_CREATON=$(eval_gettext "Shortcut creation")
+	reponse=$(question "$NOMICONE_ : $(eval_gettext 'Do you want a shortcut on your desktop ?')" "$LNG_SHORTCUT_CREATON" 0 0 0 "desktop.png")
+	if [ "$reponse" = "0" ]
+	then
+		generer_icone "$iconPath" "$NOMICONE_" "$DESKTOP" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+	fi
+
+	reponse=$(question "$NOMICONE_ : $(eval_gettext 'Do you want a shortcut in your menu ?')" "$LNG_SHORTCUT_CREATON" 0 0 0 "desktop.png")
+	if [ "$reponse" = "0" ]
+	then
+		generer_icone "$iconPath" "$NOMICONE_" "$HOME/.local/share/applications/" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+	fi
+}
+creer_lanceur_expansion ()
+{
+	creer_lanceur $@
+}
+detect_wineprefix()
+{
+	file="$REPERTOIRE/configurations/installed/$1"
+	if [ -e "$file" ]
+	then	
+		fichier=$(cat "$file" | grep WINEPREFIX)
+		fichier=${fichier:18}
+		fichier=${fichier//"\""/""}
+	fi
+	echo $fichier
+}
+detect_wineversion()
+{
+	file="$REPERTOIRE/configurations/installed/$1"
+	if [ -e "$file" ]
+	then	
+		fichier=$(cat "$file" | grep PATH | cut -d'/' -f6)
+	fi
+	echo $fichier
+}
+detect_appdir()
+{
+	file="$REPERTOIRE/configurations/installed/$1"
+	if [ -e "$file" ]
+	then	
+	fichier=`cat "$file" | grep "cd \""`
+	fichier=${fichier:4:${#fichier}-5}
+	fi
+	echo $fichier
+}
+detect_appexec()
+{
+	file="$REPERTOIRE/configurations/installed/$1"
+	if [ -e "$file" ]
+	then	
+	fichier=`cat "$file" | grep "wine " | cut -d'"' -f2`
+	fi
+	echo $fichier
+}
+clean_wineprefix()
+{ 
+   echo $1
+   if [ "$1" = "$REPERTOIRE/.PlayOnLinux/wineprefix/" ]
+   then
+	exit
+   fi
+   # Préfixe (chemin complet)
+   cd $REPERTOIRE/configurations/installed/
+   TEST=${1//".PlayOnLinux/wineprefix/"/""}
+   if [ "$TEST" = "$1" ]
+   then
+	erreur "Le répértoire n'est pas dans PlayOnLinux"
+   else
+	used=0
+	   for file in *
+	   do
+		fichier="${file}"
+		prefix=$(detect_wineprefix "$fichier")
+		if [ "$prefix" = "$1" ]
+		then
+			used=1
+		fi
+	   done
+	   if [ "$used" = 1 ] 
+	   then
+		echo "$1 est encore utilisé."
+	   else
+		prefix=$1
+		LNG_PREFIX=$(eval_gettext "Do you want to delete the prefix : \$prefix")
+		POL_SetupWindow_question "$LNG_PREFIX" "Wine"
+		reponse=$APP_ANSWER
+		POL_SetupWindow_wait_next_signal "$(eval_gettext 'Uninstalling...')" "$(eval_gettext 'PlayOnLinux Uninstaller')" 
+		if [ "$reponse" = "TRUE" ]
+		then
+			rm $1 -r
+		fi
+		POL_SetupWindow_detect_exit
+	   fi
+   fi
+}
+cdrom_md5 ()
+{
+	if [ "$CDROM"  = "" ]
+	then
+		echo "NoCDROM"
+	else
+		contents=`ls "$CDROM" -R | grep -v $CDROM`
+		if [  "$contents" = "" ]
+		then
+			echo "CDROMEmpty"
+		else		
+			sum=$(ls "$CDROM" -R | grep -v "$CDROM" | md5sum)
+			sum=${sum:0:33}
+			echo $sum	
+		fi
+	fi
+
+}

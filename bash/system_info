@@ -1,0 +1,122 @@
+#!/bin/bash
+# Copyright (C) 2007 Pâris Quentin
+# Copyright (C) 2009 Łukasz Wojniłowicz
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+if [ "$PLAYONLINUX" = "" ]
+then
+	exit 0
+fi
+
+source "$PLAYONLINUX/lib/sources" 
+FIRSTARGUMENT="$1"
+APP="$2"
+
+LNG_OPTIONS_INFOS_SYS=$(eval_gettext "System information:")
+LNG_OPTIONS_INFOS_YSYS=$(eval_gettext "Your system :" )
+LNG_OPTIONS_INFOS_KERNEL=$(eval_gettext "Your kernel :") 
+LNG_OPTIONS_INFOS_LANG=$(eval_gettext "System language :") 
+LNG_OPTIONS_INFOS_USER=$(eval_gettext "Your user login :" )
+LNG_OPTIONS_INFOS_NAMEMACHINE=$(eval_gettext "Your computer's name :" )
+LNG_OPTIONS_INFOS_VIDEOCARD=$(eval_gettext "Your video card :" )
+LNG_OPTIONS_INFOS_DISTRIB_ID=$(eval_gettext "Your distribution :" )
+LNG_OPTIONS_INFOS_RELEASE=$(eval_gettext "Your distribution version :" )
+LNG_OPTIONS_INFOS_DDINFOS=$(eval_gettext "Space remaining on your hard disks :" )
+LNG_OPTIONS_INFOS_WINEINSTALLED=$(eval_gettext "Wine version installed :" )
+LNG_OPTIONS_INFOS_WINECURRENT=$(eval_gettext "Wine version used by PlayOnLinux :" )
+
+LNG_OPTIONS_INFOS_ARCHITECTURE=$(eval_gettext "System architecture :" )
+LNG_OPTIONS_INFOS_GFXDRV=$(eval_gettext "Graphic card driver :" )
+LNG_OPTIONS_INFOS_COMPIZ=$(eval_gettext "Compiz in background :" )
+LNG_OPTIONS_INFOS_EXEC=$(eval_gettext "Executable file :" )
+LNG_OPTIONS_INFOS_LAUNCHERCONTENT=$(eval_gettext "Content of app launcher :" )
+LNG_OPTIONS_INFOS_TERMINALOUTPUT=$(eval_gettext "Content of terminal output :" )
+
+export WINEDEBUG="-all"
+SYSTEME=$(uname -o)
+NOYAU=$(uname -sr)
+
+NOYAUALINUX=$(uname -r)
+ARCHITECTURE=$(uname -m)
+DIRECTRENDERING=$(glxinfo | grep direct)
+OPENGL=$(glxinfo | grep "OpenGL version string")
+GRAPHICDRIVERVERSION=`echo $OPENGL | cut -d":" -f2 | cut -d" " -f4`
+OPENGL=`echo $OPENGL | cut -d":" -f2 | cut -d" " -f2`
+if [ "`ps -e | grep -o compiz`" != "" ]
+then
+	RUNSCOMPIZ="Yes"
+else
+	RUNSCOMPIZ="No"
+fi
+
+UTILISATEUR=$USER
+LANGUAGE=$LANG
+NOM_MACHINE=$HOSTNAME
+CARTE_VIDEO="$(glxinfo | grep renderer)"
+CARTE_VIDEO=${CARTE_VIDEO:24}
+PLACE_RESTANTE=$(df -h)
+cat /etc/*{version,release}* 2>/dev/null | sort | uniq | tail -n 4 | grep "DISTRIB" > $REPERTOIRE/tmp/infos
+source "$REPERTOIRE/tmp/infos"
+rm $REPERTOIRE/tmp/infos -f
+TEMP_INFOS=$REPERTOIRE/tmp/config_info
+CURRENTWINEVERSION="$(wine --version 2> /dev/null)"
+INSTALLEDWINEVERSION="$(/usr/bin/wine --version 2> /dev/null)"
+touch $TEMP_INFOS
+if [ "$FIRSTARGUMENT" == "--run2" ]
+then
+    echo "$LNG_OPTIONS_INFOS_YSYS $DISTRIB_ID $DISTRIB_RELEASE (`uname -r`)" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_ARCHITECTURE $ARCHITECTURE" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_VIDEOCARD $CARTE_VIDEO" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_GFXDRV $GRAPHICDRIVERVERSION" >> $TEMP_INFOS
+    echo "$DIRECTRENDERING" >> $TEMP_INFOS
+    echo "OpenGL : $OPENGL" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_COMPIZ $RUNSCOMPIZ" >> $TEMP_INFOS
+    APPEXEC=`detect_appexec "$APP"`
+    APPDIR=`detect_appdir "$APP"`
+    APPPATH=`find "$APPDIR" -iname "$APPEXEC"`
+
+    APPEXECSIZE=`stat -c%s "$APPPATH"`
+    let AAPPEXECSIZE="$APPEXECSIZE / 1024 / 1024"
+    let BAPPEXECSIZE="($APPEXECSIZE - ($AAPPEXECSIZE * 1024 * 1024)) * 1000 / 1024 / 1024"
+    echo "$LNG_OPTIONS_INFOS_EXEC $APPEXEC ("$AAPPEXECSIZE.$BAPPEXECSIZE" MB)" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_LAUNCHERCONTENT
+" >> $TEMP_INFOS
+    echo "[code language=console]
+`cat "$REPERTOIRE/configurations/installed/$APP"`
+[/code]
+" >> $TEMP_INFOS
+
+    echo "$LNG_OPTIONS_INFOS_TERMINALOUTPUT
+" >> $TEMP_INFOS
+
+else
+    echo "$LNG_OPTIONS_INFOS_SYS" > $TEMP_INFOS
+    echo "" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_YSYS $SYSTEME" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_KERNEL $NOYAU" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_LANG $LANGUAGE" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_USER $UTILISATEUR" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_NAMEMACHINE $NOM_MACHINE" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_VIDEOCARD $CARTE_VIDEO" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_DISTRIB_ID $DISTRIB_ID" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_RELEASE $DISTRIB_RELEASE" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_WINEINSTALLED $INSTALLEDWINEVERSION" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_WINECURRENT $CURRENTWINEVERSION" >> $TEMP_INFOS
+    echo "$LNG_OPTIONS_INFOS_DDINFOS" >> $TEMP_INFOS
+    echo "$PLACE_RESTANTE" >> $TEMP_INFOS
+fi
+cat $TEMP_INFOS
+rm $TEMP_INFOS -f

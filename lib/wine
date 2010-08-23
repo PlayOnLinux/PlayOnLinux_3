@@ -1,0 +1,606 @@
+#!/bin/bash
+# Copyright (C) 2007 Pâris Quentin
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+simuler_reboot ()
+{
+	N1="0"
+	N2="0"
+	if [ ! "$1" = "" ]
+	then
+		N1="$1"
+	fi
+	if [ ! "$2" = "" ]
+	then	
+		N2="$2"
+	fi
+	LNG_WINE_REBOOT=$(eval_gettext "Simulating Windows reboot")
+	attendre "$LNG_WINE_REBOOT" "wine wineboot" "" "$N1" "$N2" "1" "" 1
+}
+simulate_reboot ()
+{
+	simuler_reboot "$@"
+}
+select_prefixe ()
+{
+	export WINEPREFIX="$1"
+	export DOSPREFIX="$1" # For dosbox support
+}
+select_prefix ()
+{
+	select_prefixe "$@"
+}
+creer_prefixe ()
+{
+	N1="0"
+	N2="0"
+	if [ ! "$1" = "" ]
+	then
+		N1="$1"
+	fi
+	if [ ! "$2" = "" ]
+	then	
+		N2="$2"
+	fi
+	LNG_WINE_PREFIXCREATE="$(eval_gettext 'Creating Wine prefix')"
+	attendre "$LNG_WINE_PREFIXCREATE" "wine wineprefixcreate" "" "$N1" "$N2" "1" "" 0 "$LNG_FINISHED"
+	set_user_dir
+	set_programfile_dir
+	fonts_to_prefixe
+}
+read_prefixes()
+{
+	cd "$REPERTOIRE/wineprefix"
+	LIST_FILE=""
+	for file in *
+	do	
+		if [ "$LIST_FILE" = "" ]
+		then
+			LIST_FILE="$file" 
+		else
+			LIST_FILE+="~$file"
+		fi
+	done
+	echo $LIST_FILE
+}
+polprefixcreate()
+{
+	creer_prefixe "$@"
+}
+set_user_dir()
+{
+cat << EOF > /tmp/pol_user.reg
+REGEDIT4
+
+[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer]
+
+[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]
+
+[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders]
+"AppData"="C:\\\\windows\\\\profiles\\\\$USER\\\\Application Data"
+"Cache"="C:\\\\windows\\\\profiles\\\\$USER\\\\Local Settings\\\\Temporary Internet Files"
+"Cookies"="C:\\\\windows\\\\profiles\\\\$USER\\\\Cookies"
+"Desktop"="C:\\\\windows\\\\profiles\\\\$USER\\\\Desktop"
+"Favorites"="C:\\\\windows\\\\profiles\\\\$USER\\\\Favorites"
+"Fonts"="C:\\\\windows\\\\Fonts"
+"History"="C:\\\\windows\\\\profiles\\\\$USER\\\\Local Settings\\\\History"
+"Local AppData"="C:\\\\windows\\\\profiles\\\\$USER\\\\Local Settings\\\\Application Data"
+"My Music"="C:\\\\windows\\\\profiles\\\\$USER\\\\My Music"
+"My Pictures"="C:\\\\windows\\\\profiles\\\\$USER\\\\My Pictures"
+"My Videos"="C:\\\\windows\\\\profiles\\\\$USER\\\\My Videos"
+"NetHood"="C:\\\\windows\\\\profiles\\\\$USER\\\\Network Hood"
+"Personal"="C:\\\\windows\\\\profiles\\\\$USER\\\\My documents"
+"PrintHood"="C:\\\\windows\\\\profiles\\\\$USER\\\\Printing Hood"
+"Programs"="C:\\\\windows\\\\profiles\\\\$USER\\\\Start Menu\\\\Programs"
+"Recent"="C:\\\\windows\\\\profiles\\\\$USER\\\\Recent"
+"SendTo"="C:\\\\windows\\\\profiles\\\\$USER\\\\SendTo"
+"Start Menu"="C:\\\\windows\\\\profiles\\\\$USER\\\\Start Menu"
+"StartUp"="C:\\\\windows\\\\profiles\\\\$USER\\\\Start Menu\\\\Programs\\\\StartUp"
+"Templates"="C:\\\\windows\\\\profiles\\\\$USER\\\\Templates"
+
+[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders]
+"AppData"="%USERPROFILE%\\\\Application Data"
+"Cache"="%USERPROFILE%\\\\Local Settings\\\\Temporary Internet Files"
+"Cookies"="%USERPROFILE%\\\\Cookies"
+"Desktop"="%USERPROFILE%\\\\Desktop"
+"Favorites"="%USERPROFILE%\\\\Favorites"
+"Fonts"="C:\\\\windows\\\\Fonts"
+"History"="%USERPROFILE%\\\\Local Settings\\\\Historique"
+"Local AppData"="%USERPROFILE%\\\\Local Settings\\\\Application Data"
+"My Music"="%USERPROFILE%\\\\My Music"
+"My Pictures"="%USERPROFILE%\\\\My Pictures"
+"My Videos"="%USERPROFILE%\\\\My Videos"
+"NetHood"="%USERPROFILE%\\\\Network Hood"
+"Personal"="%USERPROFILE%\\\\My Documents"
+"PrintHood"="%USERPROFILE%\\\\Printing hood"
+"Programs"="%USERPROFILE%\\\\Start Menu\\\\Programs"
+"Recent"="%USERPROFILE%\\\\Recent"
+"SendTo"="%USERPROFILE%\\\\SendTo"
+"Start Menu"="%USERPROFILE%\\\\Start Menu"
+"StartUp"="%USERPROFILE%\\\\Start Menu\\\\Programs\\\\StartUp"
+"Templates"="%USERPROFILE%\\\\Templates"
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer]
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop]
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\Namespace]
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\Namespace\\{450D8FBA-AD25-11D0-98A8-0800361B1103}]
+@="My Documents"
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\Namespace\\{645FF040-5081-101B-9F08-00AA002F954E}]
+@="Trash"
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\Namespace\\{9D20AAE8-0625-44B0-9CA7-71889C2254D9}]
+@="/"
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MyComputer]
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MyComputer\\Namespace]
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MyComputer\\Namespace\\{21EC2020-3AEA-1069-A2DD-08002B30309D}]
+@="Control Panel"
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders]
+"Common AppData"="C:\\\\windows\\\\profiles\\\\All Users\\\\Application Data"
+"Common Desktop"="C:\\\\windows\\\\profiles\\\\All Users\\\\Desktop"
+"Common Documents"="C:\\\\windows\\\\profiles\\\\All Users\\\\Documents"
+"Common Programs"="C:\\\\windows\\\\profiles\\\\All Users\\\\Start Menu\\\\Programs"
+"Common Start Menu"="C:\\\\windows\\\\profiles\\\\All Users\\\\Start Menu"
+"Common StartUp"="C:\\\\windows\\\\profiles\\\\All Users\\\\Start Menu\\\\Programs\\\\StartUp"
+"Common Templates"="C:\\\\windows\\\\profiles\\\\All Users\\\\Templates"
+"Favorites"="C:\\\\windows\\\\profiles\\\\All Users\\\\Favorites"
+
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders]
+"Common AppData"="%ALLUSERSPROFILE%\\\\Application Data"
+"Common Desktop"="%ALLUSERSPROFILE%\\\\Desktop"
+"Common Documents"="%ALLUSERSPROFILE%\\\\Documents"
+"Common Programs"="%ALLUSERSPROFILE%\\\\Start Menu\\\\Programs"
+"Common Start Menu"="%ALLUSERSPROFILE%\\\\Start Menu"
+"Common StartUp"="%ALLUSERSPROFILE%\\\\Start Menu\\\\Programs\\\\StartUp"
+"Common Templates"="%ALLUSERSPROFILE%\\\\Templates"
+"Favorites"="%ALLUSERSPROFILE%\\\\Favorites"
+EOF
+wine regedit /tmp/pol_user.reg
+}
+
+set_programfile_dir()
+{
+	#made by cendre, edited by tinou
+	#email:cendrev3v3@gmail.com
+	if [ ! "$WINEPREFIX" ]
+	then
+		export WINEPREFIX="$HOME/.wine"
+	fi
+	#REGDIR="$WINEPREFIX/system.reg"
+	#if [ ! -e "$REGDIR" ]
+	#then
+	#wineprefixcreate
+	#fi
+	#VAR=$(cat "$REGDIR" | grep ProgramFilesDir | cut -d "=" -f2 | cut -d "\"" -f2 | sed 's/.\{4\}//')
+	#echo "Program Files' name : $VAR"
+	#sleep 2
+	#REG="$REPERTOIRE/tmp/tmpPrefix.reg"
+	#touch "$REG"
+
+	#if [ ! "$VAR" = "Program Files" ]
+	#then
+	REG="$REPERTOIRE/tmp/reg.reg"
+	echo "Setting Program Files' var"
+	rm -f "$REG"
+	cat <<EOF > "$REG"
+[HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion]
+"ProgramFilesDir"="C:\\\\Program Files"
+EOF
+	wine regedit "$REG"
+	rm -f "$REG"
+	wine wineprefixcreate
+	#fi
+	
+	#rm -rf $REG
+}
+
+# Disponible à partir de la 1.6.4
+Ask_For_cdrom ()
+{
+	# 1 = Numéro étape
+	# 2 = Nombre d'étape 
+	# 3 = Numéro du CD 
+	# The mount point is in $CDROM
+	N1="0"
+	N2="0"
+	if [ ! "$1" = "" ]
+	then
+		N1="$1"
+	fi
+	if [ ! "$2" = "" ]
+	then	
+		N2="$2"
+	fi
+	LIST_DEVICES=$(ls "/media")
+	LIST_DEVICES_=""
+	cd /media
+	for device in *
+	do
+		if [ ! "$device" = "$LNG_OTHER" ]
+		then
+			fstab1=`cat '/etc/fstab' | grep "$device"`
+			fstab2=`cat '/etc/fstab' | grep "$device" | grep iso9660`
+			if [ "$fstab1" = "" -o "$fstab2" != "" ]
+			then
+				LIST_DEVICES_+="$device~"
+			fi
+		fi
+	done
+	CDROM=$(menu "$LNG_WINE_ASKFORCDROM" "$LIST_DEVICES_$LNG_OTHER" "CD-ROM" "$N1" "$N2" 1 "" "~")
+	if [ "$?" = "1" -o "$CDROM" = "" ]
+	then
+		exit
+	fi
+
+	if [ "$CDROM" = "$LNG_OTHER" ]
+	then
+		CDROM=$(champ "$LNG_WINE_ASKFORCDROM" "/media/cdrom" "$N1" "$N2" 1 "CD-ROM $3")
+	else
+		CDROM="/media/$CDROM"
+	fi
+
+	if [ "$?" = 1 ]
+	then
+	 exit
+	fi
+
+	if [ "$CDROM" = "" ]
+	then
+		CDROM="/media/cdrom"
+	fi
+	echo "CDROM mount point : $CDROM"
+}
+Select_MountPoint()
+{
+	Ask_For_cdrom
+}
+Lire_autorun()
+{
+	#Depuis la 1.8.0, par MulX, modifié par tinou pour la 2.1.1
+	if [ ! $CDROM = "" ]
+	then
+		#AutorunInf=$(find $CDROM -iname autorun.inf)
+		AutorunInf=$(ls $CDROM | grep -i "autorun.inf")
+		AutorunInf="$CDROM/$AutorunInf"
+		if [ -n "$AutorunInf" ]
+		then
+			SetupIs=$(grep "open" $AutorunInf | cut -d\= -f 2)
+			SetupIsNum=${#SetupIs}
+			SetupIs=${SetupIs:0:$(( SetupIsNum -1 ))}
+		else
+			SetupIs=-1
+			return -1
+		fi
+	fi
+	echo "$CDROM/$SetupIs"
+}
+Read_autorun()
+{
+	Lire_autorun
+}
+Check_cdrom ()
+{
+	#message "$LNG_MOUNT_CDROM"
+	LNG_WINE_ERRORCDROM=$(eval_gettext "Error : Unable to find the CD-ROM !")
+	if [ ! "$CDROM" = "" ]
+	then
+		while [ ! -e "$CDROM/$1" ]
+		do
+			erreur "$LNG_WINE_ERRORCDROM" 
+			Ask_For_cdrom
+		done
+	fi
+}
+Set_OS ()
+{
+	# Valeurs possibles : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31
+	if [ ! "$1" = "" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine]" > $REPERTOIRE/tmp/makeos.reg
+		echo "\"Version\"=\"$1\"" >> $REPERTOIRE/tmp/makeos.reg
+		wine regedit $REPERTOIRE/tmp/makeos.reg
+		rm $REPERTOIRE/tmp/makeos.reg -f
+	fi		
+}
+
+Set_Managed ()
+{
+	# On ou Off
+	if [ "$1" = "On" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\X11 Driver]" > $REPERTOIRE/tmp/managed.reg
+		echo "\"Managed\"=\"Y\"" >> $REPERTOIRE/tmp/managed.reg
+		wine regedit $REPERTOIRE/tmp/managed.reg
+		rm $REPERTOIRE/tmp/managed.reg -f
+	fi
+	if [ "$1" = "Off" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\X11 Driver]" > $REPERTOIRE/tmp/managed.reg
+		echo "\"Managed\"=\"N\"" >> $REPERTOIRE/tmp/managed.reg
+		wine regedit $REPERTOIRE/tmp/managed.reg
+		rm $REPERTOIRE/tmp/managed.reg -f
+	fi
+}
+
+Set_SoundDriver () 
+{
+	if [ ! "$1" = "" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\Drivers]" > $REPERTOIRE/tmp/alsa.reg
+		echo "\"Audio\"=\"$1\"" >> $REPERTOIRE/tmp/alsa.reg
+		wine regedit $REPERTOIRE/tmp/alsa.reg
+		rm $REPERTOIRE/tmp/alsa.reg -f
+	fi
+}
+Set_GLSL ()
+{
+	# On ou Off
+	if [ "$1" = "On" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\Direct3D]" > $REPERTOIRE/tmp/glsl.reg
+		echo "\"UseGLSL\"=\"enabled\"" >> $REPERTOIRE/tmp/glsl.reg
+		wine regedit $REPERTOIRE/tmp/glsl.reg
+		rm $REPERTOIRE/tmp/glsl.reg	 -f
+	fi
+	if [ "$1" = "Off" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\Direct3D]" > $REPERTOIRE/tmp/glsl.reg
+		echo "\"UseGLSL\"=\"disabled\"" >> $REPERTOIRE/tmp/glsl.reg
+		wine regedit $REPERTOIRE/tmp/glsl.reg
+		rm $REPERTOIRE/tmp/glsl.reg	 -f
+	fi
+}
+Set_DXGrab ()
+{
+	# On ou Off
+	if [ "$1" = "On" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\X11 Driver]" > $REPERTOIRE/tmp/managed.reg
+		echo "\"DXGrab\"=\"Y\"" >> $REPERTOIRE/tmp/managed.reg
+		wine regedit $REPERTOIRE/tmp/managed.reg
+		rm $REPERTOIRE/tmp/managed.reg -f
+	fi
+	if [ "$1" = "Off" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\X11 Driver]" > $REPERTOIRE/tmp/managed.reg
+		echo "\"DXGrab\"=\"N\"" >> $REPERTOIRE/tmp/managed.reg
+		wine regedit $REPERTOIRE/tmp/managed.reg
+		rm $REPERTOIRE/tmp/managed.reg -f
+	fi
+}
+Set_Iexplore ()
+{
+	# Simule la présence d'ie6
+	echo "[HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer]" > $REPERTOIRE/tmp/ie.reg
+	echo "\"Version\"=\"6.0.2900.2180\"" >> $REPERTOIRE/tmp/ie.reg
+	wine regedit $REPERTOIRE/tmp/ie.reg
+	rm $REPERTOIRE/tmp/ie.reg
+}
+Set_Desktop ()
+{
+	echo "[HKEY_CURRENT_USER\Software\Wine\X11 Driver]" > $REPERTOIRE/tmp/DesktopRoot.reg
+	if [ "$1" = "On" ]
+	then
+		echo "\"Desktop\"=\"$2x$3\"" >> $REPERTOIRE/tmp/DesktopRoot.reg
+	fi
+	if [ "$1" = "Off" ]
+	then
+		echo "\"Desktop\"=\"-1\"" >> $REPERTOIRE/tmp/DesktopRoot.reg
+	fi
+		wine regedit $REPERTOIRE/tmp/DesktopRoot.reg
+		rm -f $REPERTOIRE/tmp/DesktopRoot.reg 
+}
+fonts_to_prefixe ()
+{
+	OLDDIR="$PWD"
+	cd $WINEPREFIX/drive_c/windows/
+	rm ./Fonts -r -f
+	ln -s $REPERTOIRE/fonts ./Fonts
+	cd $OLDDIR
+}
+fonts_to_prefix ()
+{
+	fonts_to_prefixe "$@"
+}
+installer_wine_version ()
+{
+	rm "$REPERTOIRE/WineVersions/installed" 2> /dev/null
+	ARCHITECTURE="i386"
+	VERSIONENTRER="$1"
+
+	if [ "$VERSIONENTRER" = "" ]
+	then
+		exit
+	fi
+	if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONENTRER" ]
+	then
+		VERSION="$VERSIONENTRER~"
+		ADRESSEDUDEB=$($PYTHON "$PLAYONLINUX/python/tools/get_wineversions.py" | grep "$VERSION" | grep wine_ | grep i386 | tac | tail -n 1)
+		if [ "$ADRESSEDUDEB" = "" ]
+		then
+		 LNG_ERROR_WINE="$(eval_gettext 'Unable to find the version :')"
+		 erreur "$LNG_ERROR_WINE $VERSIONENTRER"
+		 exit
+		fi
+
+		#ADRESSE_HTTP=$(expr index "$ADRESSEDUDEB" '.http://')
+		#ADRESSEDUDEB=${ADRESSEDUDEB:$ADRESSE_HTTP}
+
+		mkdir "$REPERTOIRE/WineVersions/$VERSIONENTRER" -p
+		cd "$REPERTOIRE/WineVersions/$VERSIONENTRER"
+		LNG_WINEVERSIONS_DOWNLOADING="$(eval_gettext 'Downloading wine')"
+		telecharger "$LNG_WINEVERSIONS_DOWNLOADING $VERSIONENTRER" $ADRESSEDUDEB
+		NOMDUDEB="$(ls *.deb)"
+		LNG_WINEVERSIONS_DOWNLOADFAILED="$(eval_gettext 'The download seems to have failed')"
+		if [ "$NOMDUDEB" = "" ]
+		then
+			erreur "$LNG_WINEVERSIONS_DOWNLOADFAILED"
+		else
+			#message "$LNG_WINEVERSIONS_INSTALL"
+	
+			ar x "$NOMDUDEB"
+			lzma -d data.tar.* 2> /dev/null
+			tar -xvf data.tar*
+
+			#message "$LNG_WINEVERSIONS_INSTALLATION_FINISHED"
+			rm debian-binary
+			rm control.*
+			rm data.*
+			rm $NOMDUDEB -f
+		fi
+		
+	fi
+	touch "$REPERTOIRE/WineVersions/installed"
+}
+Set_WineVersion_Assign()
+{
+	cd $REPERTOIRE/WineVersions
+	VERSIONTAPER="$1"
+	JEU="$2"	
+	if [ "$VERSIONTAPER" = "--reset" ]
+	then
+		export PATH=$VRAIPATH
+		#message "$LNG_WINEVERSIONS_RESETSESSION"
+	else
+		if [ "$VERSIONTAPER" = "" ]
+		then
+			erreur "$LNG_WINEVERSIONS_MUSTSPECIFY"
+		fi
+		
+		if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONTAPER" ]
+		then
+			#message "$(LNG_WINEVERSIONS_NOTINSTALLED $VERSIONTAPER)"
+			installer_wine_version "$VERSIONTAPER"
+		fi
+		if [ -e "$REPERTOIRE/configurations/installed/$JEUX" ]
+		then
+			FICHIER="$REPERTOIRE/tmp/nouveaulanceur"
+			echo "#!/bin/bash" > $FICHIER
+			echo "PATH=\"$REPERTOIRE/WineVersions/$VERSIONTAPER/usr/bin/:\$PATH\"" >> $FICHIER
+			cat "$REPERTOIRE/configurations/installed/$JEU" | tail -n 4 >> $FICHIER
+			mv $REPERTOIRE/tmp/nouveaulanceur "$REPERTOIRE/configurations/installed/$JEU"
+			chmod +x "$REPERTOIRE/configurations/installed/$JEU"
+		fi
+	fi
+}
+Set_WineVersion_Session()
+{
+	cd $REPERTOIRE/WineVersions
+	VERSIONTAPER="$1"	
+	if [ "$VERSIONTAPER" = "--reset" ]
+	then
+		export PATH=$VRAIPATH
+		#message "$LNG_WINEVERSIONS_RESETSESSION"
+	else
+		if [ "$VERSIONTAPER" = "" ]
+		then
+			erreur "$LNG_WINEVERSIONS_MUSTSPECIFY"
+		fi
+		
+		if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONTAPER" ]
+		then
+			#message "$(LNG_WINEVERSIONS_NOTINSTALLED $VERSIONTAPER)"
+			installer_wine_version "$VERSIONTAPER"
+		fi
+		export PATH=$VRAIPATH
+		export PATH="$REPERTOIRE/WineVersions/$VERSIONTAPER/usr/bin/:$PATH"
+	fi
+}
+Set_SoundSampleRate ()
+{
+	# 48000 , 44100 , 22050 , 16000 , 11025 , 8000
+	if [ ! "$1" = "" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\DirectSound]" > $REPERTOIRE/tmp/sndSampleRate.reg
+		echo "\"DefaultSampleRate\"=\"$1\"" >> $REPERTOIRE/tmp/sndSampleRate.reg
+		wine regedit $REPERTOIRE/tmp/sndSampleRate.reg
+		rm $REPERTOIRE/tmp/sndSampleRate.reg -f
+	fi
+}
+
+Set_SoundBitsPerSample ()
+{
+	# 8 , 16
+	if [ "$1" != "" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\DirectSound]" > $REPERTOIRE/tmp/sndBitsPerSample.reg
+		echo "\"DefaultBitsPerSample\"=\"$1\"" >> $REPERTOIRE/tmp/sndBitsPerSample.reg
+		wine regedit $REPERTOIRE/tmp/sndBitsPerSample.reg
+		rm $REPERTOIRE/tmp/sndBitsPerSample.reg -f
+	fi
+}
+
+
+
+
+Set_SoundHardwareAcceleration ()
+{
+	# Full , Standard , Basic , Emulation
+	if [ ! "$1" = "" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\DirectSound]" > $REPERTOIRE/tmp/sndSoundHardwareAcceleration.reg
+		echo "\"HardwareAcceleration\"=\"$1\"" >> $REPERTOIRE/tmp/sndSoundHardwareAcceleration.reg
+		wine regedit $REPERTOIRE/tmp/sndSoundHardwareAcceleration.reg
+		rm $REPERTOIRE/tmp/SoundHardwareAcceleration.reg -f
+	fi
+} 
+
+Set_SoundEmulDriver ()
+{
+	# Y , N
+	if [ ! "$1" = "" ]
+	then
+		echo "[HKEY_CURRENT_USER\Software\Wine\DirectSound]" > $REPERTOIRE/tmp/sndSoundEmulDriver.reg
+		echo "\"EmulDriver\"=\"$1\"" >> $REPERTOIRE/tmp/sndSoundEmulDriver.reg
+		wine regedit $REPERTOIRE/tmp/sndSoundEmulDriver.reg
+		rm $REPERTOIRE/tmp/sndSoundEmulDriver.reg -f
+	fi
+}
+Use_WineVersion()
+{
+	cd $REPERTOIRE/WineVersions
+	VERSIONTAPER="$1"
+	if [ "$VERSIONTAPER" = "--reset" ]
+	then
+		export PATH=$VRAIPATH
+		export LD_LIBRARY_PATH=$VRAILDPATH
+	else
+		if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONTAPER" ]
+		then
+			installer_wine_version "$VERSIONTAPER"
+		fi
+		#export PATH=$VRAIPATH
+		export PATH="$REPERTOIRE/WineVersions/$VERSIONTAPER/usr/bin/:$PATH"
+		export LD_LIBRARY_PATH="$REPERTOIRE/WineVersions/$VERSIONTAPER/usr/lib/wine/:$LD_LIBRARY_PATH"
+	fi
+}
+
+POL_LoadVar_PROGRAMFILES()
+{
+	PROGRAMFILES=`wine cmd /c echo "%ProgramFiles%" |tr -d '\015' | tr -d '\010'`
+	if [ "${PROGRAMFILES}" = "%ProgramFiles%" ] 
+	then # Var is not defined by wine
+		export PROGRAMFILES="Program Files"
+	else
+		export PROGRAMFILES=${PROGRAMFILES:3}
+	fi
+}

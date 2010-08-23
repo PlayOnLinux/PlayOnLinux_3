@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Copyright (C) 2007 Pâris Quentin
+#  		     Cassarin-Grand Arthur
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+if [ "$PLAYONLINUX" = "" ]
+then
+	exit 0
+fi
+
+source "$PLAYONLINUX/lib/sources" 
+
+if [ "$1" = "" ]
+then
+	exit
+fi
+NOM_JEU="$REPERTOIRE/configurations/installed/$1"
+POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/delete/top.png" "$PLAYONLINUX/etc/setups/delete/left.jpg"
+if [ -e "$NOM_JEU" ]
+then
+	application_prefixe=$(detect_wineprefix "$1")
+	delete_var=$1
+	UNINSTALL_ONE=$(eval_gettext "This assistant will help you to uninstall \$delete_var.")
+	UNINSTALL_QUESTION=$(eval_gettext "Click on next to continue")
+	POL_SetupWindow_free_presentation "$(eval_gettext 'PlayOnLinux Uninstaller')" "$UNINSTALL_ONE\n$UNINSTALL_QUESTION"
+	#reponse=$(question "$UNINSTALL_QUESTION")
+	#if [ "$reponse" = "0" ]
+	#then
+	
+	# Icones
+	rm -f "$REPERTOIRE/icones/32/$1"
+	rm -f "$REPERTOIRE/icones/full_size/$1"
+	
+	# Shortcut
+	rm -f "$REPERTOIRE/configurations/installed/$1"
+	rm -f "$HOME/.local/share/applications/$1.desktop"
+	rm -f "$DESKTOP/$1.desktop"
+	
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Uninstalling...')" "$(eval_gettext 'PlayOnLinux Uninstaller')" 
+	sleep 1
+	POL_SetupWindow_detect_exit
+	clean_wineprefix $application_prefixe
+	POL_SetupWindow_message "$delete_var $(eval_gettext 'has been uninstalled successfully')" "$(eval_gettext 'PlayOnLinux Uninstaller')"
+else
+	CANT_FIND=$(eval_gettext "Cannot find the shortcut")
+	POL_SetupWindow_message "$CANT_FIND" "$(eval_gettext 'Error')"
+fi
+POL_SetupWindow_Close

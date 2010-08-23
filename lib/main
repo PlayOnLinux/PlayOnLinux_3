@@ -1,0 +1,386 @@
+#!/bin/bash
+# Copyright (C) 2008 Pâris Quentin
+# Copyright (C) 2009 Łukasz Wojniłowicz
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 551 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+config_maj()
+{
+	read line
+	if [ ! "$line" = "" ]
+	then
+		file=$(echo "$line" | cut -d "/" -f 1)
+		content=$(echo "$line" | cut -d "/" -f 2)
+		download_icon=$(echo "$line" | cut -d "/" -f 3)
+		download_min=$(echo "$line" | cut -d "/" -f 4)
+		#download_des=$(echo "$line" | cut -d "/" -f 5)
+
+		echo "$content" >> "$file"
+		if [ ! "$file" = "10" ] # If not in beta file
+		then
+			echo "$content" >> "search"
+		fi
+
+		if [ "$download_icon" = 1 ]
+		then
+			if [ ! -e "../icones/$content" ]
+			then
+				wget "$SITE/V2_data/icones/$content" -q -O "../icones/$content"
+			fi
+			taille=$(du "../icones/$content")
+			taille=${taille:0:1}
+			if [ "$taille" = "0" ]
+			then
+				rm "../icones/$content"
+			fi
+		fi
+
+		config_maj
+	fi
+}
+maj_check ()
+{
+		POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/update/top.png"
+		if [ "$1" == "--first" ]
+		then
+			POL_SetupWindow_free_presentation "$(eval_gettext 'First use of PlayOnLinux')" "$(eval_gettext 'Welcome in PlayOnLinux first use assistant. Please ensure you are connected to the Internet.')"
+		fi
+
+		if [ "$RMTEMP" == "1" ]
+		then
+			clean_tmp
+		fi
+
+		WebVersion=$(wget -q $SITE/check.txt -O-)
+		if [ "$WebVersion" = "" ]
+		then
+			POL_SetupWindow_message "$(eval_gettext 'The website of PlayOnLinux is unavailable.')\n$(eval_gettext 'Please assure you are connected to internet.')" "$(eval_gettext 'PlayOnLinux application list update')"
+			POL_SetupWindow_Close
+		else
+			mkdir $HOME/.PlayOnLinux/configurations/listes/ -p
+			cd "$REPERTOIRE/configurations/listes"
+			rm * -f 2> /dev/null
+			touch 0
+			touch 1
+			touch 2
+			touch 3
+			touch 4
+			touch 5
+			touch 6
+			touch 7
+			touch 8
+			touch 9
+			touch 10
+			touch "rate"
+			touch "download"
+			touch "search"
+			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Downloading updates...')" "$(eval_gettext 'PlayOnLinux application list update')"
+			wget "$SITE/V3_data/repository/get_list.php" -O- -q | config_maj
+			if [ "$DOSBOX_SUPPORT" = "1" ]
+			then
+				wget "$SITE/V3_data/repository/get_list.php?dosbox=1" -O- -q | config_maj
+			fi
+			wget "$SITE/V3_data/repository/get_top?by=download" -O- -q > download
+			wget "$SITE/V3_data/repository/get_top" -O- -q > rate
+			POL_SetupWindow_detect_exit
+			POL_SetupWindow_Close
+		fi
+}
+
+menu_principal()
+{
+	if [ ! -e "$REPERTOIRE/icones/32/" ]
+	then
+		mkdir -p $REPERTOIRE/icones/32/
+		convert -resize 32 "$PLAYONLINUX/etc/playonlinux.png" "$REPERTOIRE/icones/32/playonlinux.png"
+	fi
+	if [ "$1" = "" ]
+	then
+		$PYTHON "$PLAYONLINUX/python/mainwindow.py"
+	else
+		$PYTHON "$PLAYONLINUX/python/mainwindow.py" "$1"
+	fi
+}
+fonts_install()
+{
+	if [ ! "$DEJADIS" == "True" ]
+	then
+		export DEJADIS="True"
+		(sleep 1 && install_fonts)&
+	fi
+}
+install_fonts ()
+{
+	if [ ! -e "$HOME/.PlayOnLinux/configurations/msfonts_installed" ]
+	then
+		
+		POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/fonts/top.png" "$PLAYONLINUX/etc/setups/fonts/left.jpg"
+		FONT_TEXT=$(eval_gettext "Microsoft fonts aren't installed; I'll install them for you. Please assure you are connected to the internet.")
+		LNG_FONTS_TITLE=$(eval_gettext 'Microsoft fonts')
+		POL_SetupWindow_free_presentation "$LNG_FONTS_TITLE" "$FONT_TEXT" 
+		echo "These fonts were provided by Microsoft \"in the interest of cross-
+platform compatibility\".  This is no longer the case, but they are
+still available from third parties.
+
+You are free to download these fonts and use them for your own use,
+but you may not redistribute them in modified form, including changes
+to the file name or packaging format." > $REPERTOIRE/tmp/licence
+		cat $REPERTOIRE/tmp/licence
+
+		POL_SetupWindow_licence "$(eval_gettext 'Please read and accept this')" "$LNG_FONTS_TITLE" "$REPERTOIRE/tmp/licence"
+		WebVersion=$(wget -q $SITE/version2.php -O-)
+		if [ "$WebVersion" = "" ]
+		then
+			POL_SetupWindow_message "$(eval_gettext 'The website of PlayOnLinux is unavailable.')\n$(eval_gettext 'Please assure you are connected to internet.')" "$LNG_FONTS_TITLE"
+			POL_SetupWindow_Close
+		else
+			rm $HOME/.PlayOnLinux/fonts/ -r 2> /dev/null
+			rm $HOME/.PlayOnLinux/fonts 2> /dev/null
+			rm $HOME/.PlayOnLinux/configurations/fonts_installed 2> /dev/null
+			FONTDIR=$HOME/.PlayOnLinux/fonts/
+			mkdir -p $FONTDIR
+			FONTS_INSTALLER="andale32.exe arialb32.exe arial32.exe comic32.exe courie32.exe georgi32.exe impact32.exe times32.exe trebuc32.exe verdan32.exe webdin32.exe"
+			cd $FONTDIR
+			PULSE=1
+			POL_SetupWindow_pulsebar "$(eval_gettext 'Downloading fonts')" "$LNG_FONTS_TITLE"
+
+			for font in $FONTS_INSTALLER
+			do
+			 sleep 0.1
+			 POL_SetupWindow_set_text "$(eval_gettext 'Downloading') : $font..."
+			 echo "$(eval_gettext 'Downloading') : $font..."
+			 wget "http://heanet.dl.sourceforge.net/sourceforge/corefonts/$font" -q
+			 PULSE=$(( PULSE + 8 ))
+			 POL_SetupWindow_pulse $PULSE
+			done
+
+			echo "$(eval_gettext 'Downloading') : tahoma32.exe"
+			POL_SetupWindow_set_text "$(eval_gettext 'Downloading') : tahoma32.exe"
+			wget http://download.microsoft.com/download/office97pro/fonts/1/w95/en-us/tahoma32.exe -q
+			POL_SetupWindow_pulse 100
+			sleep 1
+			PULSE=1
+			POL_SetupWindow_detect_exit
+			POL_SetupWindow_pulsebar "$(eval_gettext 'Installing fonts')" "$LNG_FONTS_TITLE"
+
+			for font in $FONTS_INSTALLER
+			do
+			 sleep 0.1
+			 POL_SetupWindow_set_text "$(eval_gettext 'Installing') : $font..."
+			 echo "$(eval_gettext 'Installing') : $font..."
+			 cabextract "$font" > /dev/null
+			 PULSE=$(( PULSE + 8 ))
+			 POL_SetupWindow_pulse $PULSE
+			 sleep 0.1
+			done
+
+			POL_SetupWindow_set_text "$(eval_gettext 'Installing') : tahoma32.exe"
+			echo "$(eval_gettext 'Installing') : tahoma32.exe"
+			cabextract tahoma32.exe > /dev/null
+			POL_SetupWindow_pulse 100
+			sleep 1
+			rm *.exe
+			rm *.done
+			rm *.dll
+			rm *.inf
+			rm *.txt
+			touch "$HOME/.PlayOnLinux/configurations/msfonts_installed"
+			POL_SetupWindow_message "$(eval_gettext 'Microsoft Fonts has been installed successfully')" "$LNG_FONTS_TITLE"
+			POL_SetupWindow_Close
+
+		fi
+	fi
+}
+construire_repertoire_personnel ()
+{
+	mkdir "$HOME/.PlayOnLinux/wineprefix/" -p
+	mkdir "$HOME/.PlayOnLinux/configurations/installed/" -p
+	mkdir "$HOME/.PlayOnLinux/configurations/options/" -p
+	mkdir "$HOME/.PlayOnLinux/configurations/icones/" -p
+	mkdir "$HOME/.PlayOnLinux/configurations/messages_shown/" -p
+	mkdir "$HOME/.PlayOnLinux/tmp" -p
+	mkdir "$HOME/.PlayOnLinux/ressources" -p
+	mkdir "$HOME/.PlayOnLinux/icones/full_size" -p
+	mkdir "$HOME/.PlayOnLinux/WineVersions" -p
+	mkdir "$HOME/.PlayOnLinux/plugins" -p
+	mkdir "$REPERTOIRE/configurations/guis" -p
+	mkdir "$REPERTOIRE/configurations/configurators" -p
+	touch "$REPERTOIRE/configurations/last_version"
+}
+start_pol ()
+{
+	if [ `id -u` = 0 ]
+	then
+		if [ `question "You are running PlayOnLinux as root.\n\nPlease note that it is very dangerous to run wine programs as root : You are vulnerable to viruses and other bad stuff.\n\nPlayOnLinux is not reponsible of any damage in your system.\n\nAre you sure you want to start PlayOnLinux ?" "Warning"` = 1 ]
+		then
+			exit
+		fi
+	fi
+	if [ "$1" = "--run" ]
+	then
+		#Arg contient tout apres l'option --run
+		#Supporte le lancement de jeu avec option POL >> 1.7.5
+		Arg=$(echo $@ | cut -b7-)
+		Arg=${Arg//"$2"/""}
+		Arg=${Arg:1}
+		lancer "$2" "$Arg"
+		exit 0
+	elif [ "$1" = "--debug" ]
+	then
+		bash "$PLAYONLINUX/bash/system_info" "$1" "$2"
+		#Arg contient tout apres l'option --run
+		#Supporte le lancement de jeu avec option POL >> 1.7.5
+		Arg=$(echo $@ | cut -b7-)
+		Arg=${Arg//"$2"/""}
+		Arg=${Arg:1}
+		lancer "$2" "$Arg --debug"
+		exit 0
+	fi
+	bash "$PLAYONLINUX/bash/check_maj_" &
+	check_new_pol
+	if [ ! "$NEW_VERSION" = "" ]
+	then
+		menu_principal "$NEW_VERSION"
+	else
+		menu_principal
+	fi
+}
+clean_tmp ()
+{
+	rm $REPERTOIRE/tmp/ -rf
+	mkdir $REPERTOIRE/tmp -p
+}
+check_network ()
+{
+	#Ecrit par MulX
+	#Le 23/sep/2007 
+	TMPFILE=$(mktemp)
+	COUNT=1
+	QUIET="--quiet"
+	NetStat="yes"
+	if [ -n "$1" ]
+	then 
+		PING="$1"
+	else
+		PING="google.com"
+	fi
+	#( 
+	#	echo 0
+		ping $PING -c $COUNT &> $TMPFILE 
+	#	echo 100
+	#) | attendre_multiple "$LNG_NET_CHECK"
+	if [ -n "$(grep "unknown host" "$TMPFILE" )" ]
+	then 
+		if [ "$2" != "$QUIET" ]
+		then
+			erreur $(eval_gettext "You are not connected on the internet.")
+		fi
+		NetStat="no"
+		return 255
+	fi
+	Received=$(grep "received" $TMPFILE | awk '{printf("%s",$4)}' )
+	rm -f $TMPFILE
+	if [ $Received == 0 ]
+	then 
+		if [ "$2" != "$QUIET" ]
+		then
+			erreur $(eval_gettext "You are not connected on the internet.")
+		fi
+		NetStat="no"
+		return 255
+	elif [ $Received != $COUNT ]
+	then
+		if [ "$2" != "$QUIET" ]
+		then
+			erreur $(eval_gettext "Network is available, but some packets have failed.")
+		fi
+		NetStat="yes"
+	fi
+	if [ "$NetStat" == "yes" ]
+	then	
+		if [ "$2" != "$QUIET" ]
+		then
+			erreur $(eval_gettext "Network is available.")
+		fi
+		return 0
+	fi
+	return 255
+}
+fixme () 
+{
+	#generic function for all FIXME
+	#PLEASE DO NOT TRANSLATE ANY OF THIS PART !
+	#call this function by 'fixme "path to file" "function_to_fix" "comment of fix to do"'
+	local IFS='::'
+	echo "FIXME::POL::$*"
+}
+check_new_pol () 
+{
+	if [ ! "$ALREADY_CHECK_ONLINE" ]
+	then
+		if [ ! "$OFFLINE" = "1" ]
+		then
+			WebVersion=$(wget -q "$SITE/version2.php?v=$VERSION" -T 1 -O-)
+			if [ "$WebVersion" = "" ]
+			then
+				export NEW_VERSION=""
+				return 2
+			fi
+			if [ "$WebVersion" != "$VERSION" ]
+			then
+				#VERSION=$(eval_gettext "An updated version of PlayOnLinux is available. Please visit the website.")
+				#message "$VERSION ($WebVersion)" "" 0 0 0 "update.png"
+				export NEW_VERSION="$WebVersion"
+				return 1
+			fi
+			export ALREADY_CHECK_ONLINE=true
+		fi
+	fi
+}
+sudo ()
+{
+	echo "This function is disabled in PlayOnlinux environnement"
+}
+gksudo ()
+{
+	echo "This function is disabled in PlayOnlinux environnement"
+}
+gksu ()
+{
+	echo "This function is disabled in PlayOnlinux environnement"
+}
+su ()
+{
+	echo "This function is disabled in PlayOnlinux environnement"
+}
+kdesu ()
+{
+	echo "This function is disabled in PlayOnlinux environnement"
+}
+RefreshLibs()
+{
+	source $PLAYONLINUX/lib/sources
+}
+POL_Call() 
+{
+	if [ ! "$1" = "" ]
+	then	
+		OLD_PC_DIR="$PWD"
+		cd "$REPERTOIRE/tmp/"
+		wget -q "$SITE/V3_data/repository/get_file.php?id=$1" -O- > "$1"
+		source $@
+		cd "$OLD_PC_DIR"
+	fi
+}

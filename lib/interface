@@ -1,0 +1,761 @@
+#!/bin/bash
+# Copyright (C) 2007 Pâris Quentin
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+message () 
+{
+	# 1 = Message
+	# 2 = Titre
+	# 3 = NumeroEtape
+	# 4 = NombreEtape
+	# 5 = Bouton annulé [ 1 = Oui ; 0 = Non ]
+	# 6 = Image
+	# 7 = Bouton Suivant
+	
+	if [ ! "$2" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Message")
+	else
+		TITRE_FENETRE="$2"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1=0
+	else
+		N1=$3
+	fi
+
+	if [ ! "$4" ]
+	then
+		N2=0
+	else
+		N2=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		CANCEL=0
+	else
+		CANCEL=$5
+	fi
+	message=${1//"\n"/
+}
+
+	if [ ! "$6" ]
+	then
+		IMAGE="info.png"
+	else
+		IMAGE="$6"
+	fi
+
+	if [ ! "$7" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT="$7"
+	fi
+
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/message.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL "$IMAGE" "$NEXT")
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	fi
+}
+message_one () 
+{
+	# 1 = Message
+	# 2 = Titre
+	# 3 = Message ID
+	# 4 = Bouton annulé [ 1 = Oui ; 0 = Non ]
+	# 5 = Image
+	# 6 = Bouton Suivant
+	
+	if [ ! "$2" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Message")
+	else
+		TITRE_FENETRE="$2"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1="Defaut"
+	else
+		N1=$3
+	fi
+
+
+	if [ ! "$4" ]
+	then
+		CANCEL=0
+	else
+		CANCEL=$4
+	fi
+	message=${1//"\n"/
+}
+
+	if [ ! "$5" ]
+	then
+		IMAGE="info.png"
+	else
+		IMAGE="$5"
+	fi
+
+	if [ ! "$6" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT="$6"
+	fi
+	
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/message_one.py" "$TITRE_FENETRE" "$message" $N1 $CANCEL "$IMAGE" "$NEXT")
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	fi
+}
+erreur () 
+{
+	if [ ! "$2" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Error")
+	else
+		TITRE_FENETRE="$2"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1=0
+	else
+		N1=$3
+	fi
+
+	if [ ! "$4" ]
+	then
+		N2=0
+	else
+		N2=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		CANCEL=0
+	else
+		CANCEL=$5
+	fi
+	message=${1//"\n"/
+}
+	if [ ! "$6" ]
+	then
+		IMAGE="error.png"
+	else
+		IMAGE=$6
+	fi
+
+	if [ ! "$7" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT="$7"
+	fi
+
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/message.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE $NEXT)
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	fi
+}
+attention () 
+{
+	if [ ! "$2" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Warning")
+	else
+		TITRE_FENETRE="$2"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1=0
+	else
+		N1=$3
+	fi
+
+	if [ ! "$4" ]
+	then
+		N2=0
+	else
+		N2=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		CANCEL=0
+	else
+		CANCEL=$5
+	fi
+	message=${1//"\n"/
+}
+	if [ ! "$6" ]
+	then
+		IMAGE="warning.png"
+	else
+		IMAGE=$6
+	fi
+	if [ ! "$7" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT="$7"
+	fi
+
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/message.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE $NEXT)
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	fi
+}
+
+
+question () 
+{
+	if [ ! "$2" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Question")
+	else
+		TITRE_FENETRE="$2"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1=0
+	else
+		N1=$3
+	fi
+
+	if [ ! "$4" ]
+	then
+		N2=0
+	else
+		N2=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		CANCEL=0
+	else
+		CANCEL=$5
+	fi
+	message=${1//"\n"/
+}
+	if [ ! "$6" ]
+	then
+		IMAGE="question.png"
+	else
+		IMAGE=$6
+	fi
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/question.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE)
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	else 
+		echo "$WINDOW"
+	fi
+}
+
+champ () 
+{
+	if [ ! "$6" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Field")
+	else
+		TITRE_FENETRE="$6"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1=0
+	else
+		N1=$3
+	fi
+
+	if [ ! "$4" ]
+	then
+		N2=0
+	else
+		N2=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		CANCEL=1
+	else
+		CANCEL=$5
+	fi
+	message=${1//"\n"/
+}
+	if [ ! "$7" ]
+	then
+		IMAGE="divers.png"
+	else
+		IMAGE=$7
+	fi
+	$PYTHON "$PLAYONLINUX/python/champ.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE "$2"
+	
+}
+
+menu () 
+{
+	# 1 = Message
+	# 2 = Items
+	# 3 = Titre
+	# 4 = Numéro de l'étape
+	# 5 = Nombre d'étapes
+	# 6 = Bouton annuler [ 1 = Oui, 0 = Non ]
+	# 7 = Image
+	# 8 = Where To Cut
+	# 9 = Suivant 
+	# 10 = Type de renvoit [ 1 = Par ID, 0 = Par Nom ] Default = 0
+
+	if [ ! "$3" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Please make a choice")
+	else
+		TITRE_FENETRE="$3"
+	fi
+	
+	if [ ! "$4" ]
+	then
+		N1=0
+	else
+		N1=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		N2=0
+	else
+		N2=$5
+	fi
+
+	if [ ! "$6" ]
+	then
+		CANCEL=1
+	else
+		CANCEL=$6
+	fi
+	message=${1//"\n"/
+}
+	if [ ! "$7" ]
+	then
+		IMAGE="divers.png"
+	else
+		IMAGE=$7
+	fi
+
+	if [ ! "$8" ]
+	then
+		WHERE_TO_CUT=" "
+	else
+		WHERE_TO_CUT="$8"
+	fi
+
+	if [ ! "$9" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT="$9"
+	fi
+
+	if [ ! "${10}" ]
+	then
+		IDSEND=0;
+	else
+		IDSEND=${10}
+	fi
+
+	$PYTHON "$PLAYONLINUX/python/menu.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE "$2" "$WHERE_TO_CUT" "$NEXT" "$IDSEND"
+}
+
+
+
+menu_list () 
+{
+	# 1 = Message
+	# 2 = Items
+	# 3 = Titre
+	# 4 = Numéro de l'étape
+	# 5 = Nombre d'étapes
+	# 6 = Bouton annuler [ 1 = Oui, 0 = Non ]
+	# 7 = Image
+	# 8 = Where To Cut
+	# 9 = Suivant 
+
+	if [ ! "$3" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Please make a choice")
+	else
+		TITRE_FENETRE="$3"
+	fi
+	
+	if [ ! "$4" ]
+	then
+		N1=0
+	else
+		N1=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		N2=0
+	else
+		N2=$5
+	fi
+
+	if [ ! "$6" ]
+	then
+		CANCEL=1
+	else
+		CANCEL=$6
+	fi
+	message=${1//"\n"/
+}
+	if [ ! "$7" ]
+	then
+		IMAGE="divers.png"
+	else
+		IMAGE=$7
+	fi
+
+	if [ ! "$8" ]
+	then
+		WHERE_TO_CUT=" "
+	else
+		WHERE_TO_CUT="$8"
+	fi
+
+	if [ ! "$9" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT="$9"
+	fi
+
+	$PYTHON "$PLAYONLINUX/python/menu_list.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE "$2" "$WHERE_TO_CUT" "$NEXT"
+}
+
+
+attendre ()
+{
+	# 1 = Message
+	# 2 = Commande
+	# 3 = Titre
+	# 4 = Numéro de l'étape
+	# 5 = Nombre d'étapes
+	# 6 = Bouton annulé [1 = Oui, 0 = Non]
+	# 7 = Image 
+	# 8 = Quitter automatiquement lorsque la commande est achevé [1 = Oui, 0 = Non]
+	# 9 = Message lorsque la commande est terminée
+	# 10 = Texte du bouton suivant
+
+	if [ ! "$3" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Please wait...")
+	else
+		TITRE_FENETRE="$3"
+	fi
+	
+	if [ ! "$4" ]
+	then
+		N1=0
+	else
+		N1=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		N2=0
+	else
+		N2=$5
+	fi
+
+	if [ ! "$6" ]
+	then
+		CANCEL=1
+	else
+		CANCEL=$6
+	fi
+
+	if [ ! "$7" ]
+	then
+		IMAGE="wait.png"
+	else
+		IMAGE=$7
+	fi
+	
+	if [ ! "${10}" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT=${10}
+	fi
+
+	if [ ! "${11}" ]
+	then
+		GAUGE=0
+	else
+		GAUGE=${11}
+	fi
+
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/attendre.py" "$TITRE_FENETRE" "$1" "$N1" "$N2" "$CANCEL" "$IMAGE" "$2" "$8" "$9" "$NEXT" "$GAUGE")
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	fi
+}
+
+telecharger ()
+{
+	# 1 = Message
+	# 2 = Fichier
+	# 3 = Titre
+	# 4 = Numéro de l'étape
+	# 5 = Nombre d'étapes
+	# 6 = Bouton annulé [1 = Oui, 0 = Non]
+	# 7 = Image 
+	# 8 = Autoexit ?
+	# 9 = Autodl ?
+	if [ ! "$3" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Please wait...")
+	else
+		TITRE_FENETRE="$3"
+	fi
+	
+	if [ ! "$4" ]
+	then
+		N1=0
+	else
+		N1="$4"
+	fi
+
+	if [ ! "$5" ]
+	then
+		N2=0
+	else
+		N2="$5"
+	fi
+
+	if [ ! "$6" ]
+	then
+		CANCEL=1
+	else
+		CANCEL="$6"
+	fi
+
+	if [ ! "$7" ]
+	then
+		IMAGE="download.png"
+	else
+		IMAGE="$7"
+	fi
+
+	if [ ! "$8" ]
+	then
+		AUTOEXIT="0"
+	else
+		AUTOEXIT="$8"
+	fi
+	
+	if [ ! "$9" ]
+	then
+		AUTODL="0"
+	else
+		AUTODL="$9"
+	fi
+
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/telecharger.py" "$TITRE_FENETRE" "$2" "$(pwd)/" "$1" $N1 $N2 $CANCEL $IMAGE $AUTOEXIT $AUTODL)
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	fi
+}
+selectionner_fichier ()
+{
+	if [ ! "$6" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Browse")
+	else
+		TITRE_FENETRE="$6"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1=0
+	else
+		N1=$3
+	fi
+
+	if [ ! "$4" ]
+	then
+		N2=0
+	else
+		N2=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		CANCEL=0
+	else
+		CANCEL=$5
+	fi
+	message=${1//"\n"/
+}
+	if [ ! "$7" ]
+	then
+		IMAGE="divers.png"
+	else
+		IMAGE=$7
+	fi
+	$PYTHON  "$PLAYONLINUX/python/file.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE "$2"
+}
+
+afficher_fichier ()
+{
+	# 1 = Fichier
+	# 2 = Titre
+	# 3 = NumeroEtape
+	# 4 = NombreEtape
+	# 5 = Bouton annulé [ 1 = Oui ; 0 = Non ]
+	# 6 = Image
+	# 7 = Bouton Suivant
+	
+	if [ ! "$2" ]
+	then
+		TITRE_FENETRE=$(eval_gettext "Message")
+	else
+		TITRE_FENETRE="$2"
+	fi
+	
+	if [ ! "$3" ]
+	then
+		N1=0
+	else
+		N1=$3
+	fi
+
+	if [ ! "$4" ]
+	then
+		N2=0
+	else
+		N2=$4
+	fi
+
+	if [ ! "$5" ]
+	then
+		CANCEL=0
+	else
+		CANCEL=$5
+	fi
+	message=$(cat "$1")
+
+	if [ ! "$6" ]
+	then
+		IMAGE="info.png"
+	else
+		IMAGE=$6
+	fi
+
+	if [ ! "$7" ]
+	then
+		NEXT=$(eval_gettext "Next")
+	else
+		NEXT="$7"
+	fi
+
+	WINDOW=$($PYTHON "$PLAYONLINUX/python/readfile.py" "$TITRE_FENETRE" "$message" $N1 $N2 $CANCEL $IMAGE $NEXT)
+	if [ "$WINDOW" = "Canceled" ]
+	then
+		exit
+	fi
+}
+protection_warning () 
+{ 
+	attention "Please read that :\nThe CD or DVD protection of this game doesn't work correctly with wine.\nYou will not be able to play this game without deactivating this protection !\nPlayOnLinux can't be responsible of your utilization of these patch.\nThank you." 
+}
+presentation () 
+{ 
+	N1=0
+	N2=0
+	if [ ! "$6" = "" ]
+	then
+		N1="$6"
+	fi
+	if [ ! "$7" = "" ]
+	then	
+		N2="$7"
+	fi
+	message "Program: $1 \nGame developer: $2 \nDirection: $3 \nScript writter: $4\n\nWineprefix will be created in $HOME/.PlayOnLinux/wineprefix/$5/ \n \nWarning : We aren't responsible for how you use this script!" "Installation wizard" $N1 $N2 1 "" "Install"
+}
+ask_mount_num () 
+{ 
+	message "Please mount the CD-ROM $1, and press \"ok\" when you are ready" 
+}
+end_install () 
+{ 
+	message "Installation finished" 
+}
+sur_installed () 
+{ 
+	message "Please press \"ok\" only when installation is fully complete."  
+}
+navigateur ()
+{
+	$POL_NAVIGATOR "$1"
+}
+browser ()
+{
+	navigateur "$@"
+}
+warning ()
+{
+	attention "$@"
+}
+error ()
+{
+	erreur "$@"
+}
+select_file ()
+{
+	selectionner_fichier "$@"
+}
+show_file ()
+{
+	afficher_fichier "$@"
+}
+download ()
+{
+	telecharger "$@"	
+}
+run_and_wait ()
+{
+	attendre "$@"
+}
+text_field ()
+{
+	champ "$@"
+}

@@ -1,0 +1,1368 @@
+# translation of hu1.po to hungarian
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Lisovszki Sándor <lisovszki@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: hu1\n"
+"Report-Msgid-Bugs-To: Tinou\n"
+"POT-Creation-Date: 2008-01-11 18:43+0100\n"
+"PO-Revision-Date: 2008-06-11 21:54+0200\n"
+"Last-Translator: Lisovszki Sándor <lisovszki@gmail.com>\n"
+"Language-Team: hungarian <mypclinuxos.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: LNG_WINE_REBOOT
+msgid "Simulating Windows reboot"
+msgstr "Windows újraindítás szimulálása"
+
+#: LNG_WINE_PREFIXCREATE
+msgid "Creating Wine prefix"
+msgstr "Wine prefix létrehozása"
+
+#: LNG_WINE_ASKFORCDROM
+msgid "Where is your CD-ROM mounted?"
+msgstr "Hova lett felcsatolva a CD-ROM? (Alapértelmezett : /media/cdrom/)"
+
+#: LNG_WINE_ERRORCDROM
+msgid "Error : Unable to find the CD-ROM !"
+msgstr "Hiba : Nem találom a CD-ROM-ot !"
+
+#: LNG_MOUNT_CDROM
+msgid "Please mount the CD-ROM"
+msgstr "Kérlek csatold fel a CD-ROM-ot"
+
+#: LNG_MISSING
+msgid "Missing program :"
+msgstr "Hiányzó program :"
+
+#: LNG_MISSING_ERROR
+msgid "One or more program(s) are missing. Please install them and run the script again."
+msgstr "Egy vagy több program hiányzik. Kérlek telepítsd fel őket, majd futtasd újra a parancsot."
+
+#: LNG_3D_MISSING
+msgid "You don't seem to have 3D acceleration !\nWe advise you install and enable it."
+msgstr "Valószínűleg nincs 3D-s gyorsításod !\nJavasoljuk telepítsd és engedélyezd."
+
+#: LNG_GAME_NOT_INSTALLED
+msgid "The game you want to run isn't installed."
+msgstr "A játék, amelyet futtatni szeretnél, még nincs feltelepítve."
+
+#: LNG_GAME_GAMES_MISSING
+msgid "No game.\nTry updating PlayOnLinux."
+msgstr "Nincs játék.\nPróbáld meg frissíteni a PlayOnLinux-ot."
+
+#: LNG_GAME_PATCHS_MISSING
+msgid "No patch\nTry updating PlayOnLinux."
+msgstr "Nincs javítás.\nPróbáld meg frissíteni a PlayOnLinux-ot."
+
+#: LNG_GAME_ADDON_MISSING
+msgid "No expansions.\nTry to update PlayOnLinux."
+msgstr "Nincsenek bővítmények.\nPróbáld meg frissíteni a PlayOnLinux-ot."
+
+#: LNG_GAME_TEST_GAME
+msgid "You haven't installed any games."
+msgstr "Még nem telepítettél egy játékot sem."
+
+#: LNG_GAME_ALREADY_INSTALLED
+msgid "Installation failed\nThe game might already be installed."
+msgstr "Telepítés nem sikerült.\nA játék talán már fel van telepítve."
+
+#: LNG_GAME_NO_SCRIPT
+msgid "Installation faild\nUnable to find the game's script.\nTry to update $TITRE"
+msgstr "Telepítés nem sikerült.\nNem találom a játék szkripteket.\nPróbáld meg frissíteni a $TITRE t"
+
+#: LNG_GAME_DOWNLOAD_ICONE
+msgid "Please wait while the icon is downloaded."
+msgstr "Kérlek légy türelemmel míg az ikon letöltődik."
+
+#: LNG_GAME_DESKTOP_ICONE
+msgid "Do you want a shortcut on your desktop ?"
+msgstr "Szeretnél indítóikont a munkaasztalodra?"
+
+#: LNG_GAME_MENU_ICONE
+msgid "Do you want a shortcut in your menu ?"
+msgstr "Szeretnél egy indítóikont a menübe?"
+
+#: LNG_NET_POL_ERR
+msgid "The website of PlayOnLinux is unavailable."
+msgstr "A PlayOnLinux weboldala nem elérhető."
+
+msgid "Please assure you are connected to internet."
+msgstr "Kérlek ellenőrizd az internetkapcsolatod."
+
+#: LNG_NET_CHECK
+msgid "Checking network.."
+msgstr "Hálózat ellenőrzés.."
+
+#: LNG_NET_CHECK_FAILED
+msgid "You are not connected on the internet."
+msgstr "Nincs internetkapcsolatod."
+
+#: LNG_NET_CHECK_SUCCESS
+msgid "Network is available."
+msgstr "A hálózat elérhető."
+
+#: LNG_NET_CHECK_LOST
+msgid "Network is available, but some packets have failed"
+msgstr "A hálózat elérhető, viszont néhány csomag hibás."
+
+#: LNG_MAIN_UPDATE
+msgid "Please wait while the updates are downloaded..."
+msgstr "Kérlek légy türelemmel a frissítések letöltése alatt..."
+
+#: LNG_MAIN_POL_UPDATE
+msgid "An updated version of PlayOnLinux is available. Please visit the website."
+msgstr "A PlayOnLinux újabb verziója elérhető. Kérlek látogasd meg a weboldalt."
+
+#: LNG_MAIN_UPDATE_SUCCES
+msgid "The updates have been successfully installed."
+msgstr "A frissítések sikeresen telepítve lettek."
+
+#: LNG_MAIN_MENU
+msgid "File"
+msgstr "Fájl"
+
+#: LNG_MAIN_MENU_ITEM_PLAY
+msgid "Run"
+msgstr "Futtatás"
+
+#: LNG_MAIN_MENU_ITEM_INSTALL
+msgid "Install"
+msgstr "Telepítés"
+
+#: LNG_MAIN_MENU_ITEM_EXPERT
+msgid "Tools"
+msgstr "Eszközök"
+
+#: LNG_MAIN_MENU_ITEM_REMOVE
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: LNG_MAIN_MENU_ITEM_UPDATE
+msgid "Update"
+msgstr "Frissítés"
+
+#: LNG_CHOOSE_GAME
+msgid "You must choose a program"
+msgstr "Választanod kell egy programot"
+
+#: LNG_MAIN_INSTALL_MENU
+msgid "What do you want to install ?"
+msgstr "Mit szeretnél telepíteni?"
+
+#: LNG_MAIN_UNINSTALL_MENU
+msgid "What do you want to uninstall ?"
+msgstr "Mit szeretnél eltávolítani?"
+
+#: LNG_MAIN_RUN_MENU
+msgid "Which game do you want to play? ?"
+msgstr "Melyik játékkal szeretnél játszani?"
+
+#: LNG_MAIN_INSTALL_UNINSTALL
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+#: LNG_MAIN_CHECKUPGRADE
+msgid "Do you want to check for updates on the PlayOnLinux website ?"
+msgstr "Szeretéd meglátogatni a PlayOnLinux weboldalát, hogy vannak-e új frissítések?"
+
+#: LNG_MAIN_FIRSTUSE
+msgid "Welcome to PlayOnLinux.\nYou need to set some options\nMake sure you are connected to the internet."
+msgstr "Üdvözöl a PlayOnLinux.\nNéhány beállítást el kell végezned.\nGyőződj meg arról, hogy az internetkapcsolatod működik-e."
+
+#: LNG_MAIN_INSTALLFONTS
+msgid "Microsoft fonts aren't installed; I'll install them for you. Please assure you are connected to the internet."
+msgstr "A Microsoft betűtípusok még nincsenek feltelepítve. Fel fogom telepíteni neked. Kérlek ellenőrizd, hogy csatlakozva vagy-e az internethez."
+
+#: LNG_MAIN_DOWNLOADFONTS
+msgid "Please wait while the fonts are downloaded..."
+msgstr "Kérlek légy türelemmel a betűtípusok letöltése alatt..."
+
+#: LNG_MAIN_CREATEDIRECTORY
+msgid "Please wait: creating PlayOnLinux's directions"
+msgstr "Kérlek várj: elkészítem a PlayOnLinux könyvtárait"
+
+#: LNG_MAIN_LANGUAGE_DETECTED
+msgid "The current language is : $LANG. This language exists in PlayOnLinux. Would you like to use it? ?"
+msgstr "A jelenlegi nyelv: $LANG. Ez a nyelv elérhető a PlayOnLinux-ban. Szeretnéd használni?"
+
+#: LNG_MAIN_CHOOSELANGUAGE
+msgid "Choose your preferred language."
+msgstr "Válaszd ki a használni kívánt nyelvet."
+
+#: LNG_MAIN_LANGUAGE_NOT_DETECTED
+msgid "Your system's language does not exist in PlayOnLinux.\nPlease choose another one"
+msgstr "A rendszer által használt nyelv nem elérhető a PlayOnLinux-ban.\nKérlek válassz másikat."
+
+#: LNG_MAIN_CHOOSELANGUAGE
+msgid "Choose the language you want"
+msgstr "Válaszd ki a használni kívánt nyelvet."
+
+#: LNG_MAIN_CHOOSETHEME
+msgid "Choose the theme you want"
+msgstr "Válaszd ki a használni kívánt témát."
+
+#: LNG_THEMES
+msgid "Theme"
+msgstr "Téma"
+
+#: LNG_EXPERT_DIDNOTSELECT
+msgid "You did not select any games!"
+msgstr "Nem választottál egy játékot sem!"
+
+#: LNG_EXPERT_REGISTRY
+msgid "Registry Editor"
+msgstr "Registry Szerkesztő"
+
+#: LNG_EXPERT_WINEPREFIX
+msgid "Update the wineprefix"
+msgstr "Wineprefix frissítése"
+
+#: LNG_EXPERT_WAITUPGRADE
+msgid "Please wait while the wine prefix is updated"
+msgstr "Kérlek várj, amíg a Wineprefix frissítése folyik."
+
+#: LNG_EXPERT_WINECONFIG
+msgid "Configure wine"
+msgstr "Wine beállítása"
+
+#: LNG_EXPERT_RUN
+msgid "Run a non-official script"
+msgstr "Egy non-official(nem-gyári) szkript futtatása"
+
+#: LNG_EXPERT_UNFOUND
+msgid "File not found!"
+msgstr "Fájl nem található!"
+
+#: LNG_EXPERT_NOTPOL
+msgid "This file is not a valid PlayOnLinux script"
+msgstr "Ez nem egy érvényes PlayOnLinux szkript"
+
+#: LNG_EXPERT_DIRECTX
+msgid "Install DirectX"
+msgstr "DirectX telepítése"
+
+#: LNG_EXPERT_WVER
+msgid "Manage wine versions"
+msgstr "Wine verzió kezelése"
+
+#: LNG_EXPERT_WKILL
+msgid "Kill wineserver process"
+msgstr "Wineserver folyamat megölése"
+
+#: LNG_WINEVERSIONS_INTRO
+msgid "This add-on allows you to have more than one wine version simultaneously."
+msgstr "Ez a bővítmény lehetővé teszi, hogy több Wine verziót használhass szimultán."
+
+#: LNG_WINEVERSIONS_DOWNLOADING
+msgid "Downloading wine"
+msgstr "Wine letöltése"
+
+#: LNG_WINEVERSIONS_DOWNLOADFAILED
+msgid "The download seems to have failed."
+msgstr "A letöltés hibásnak tűnik."
+
+#: LNG_WINEVERSIONS_INSTALL
+msgid "The version of wine has been successfully downloaded.\nI'm' now going to install it."
+msgstr "A wine verzió sikeresen le lett töltve.\nMost fel fogom telepíteni.."
+
+#: LNG_WINEVERSIONS_INSTALLATION
+msgid "Please wait : installing wine version ..."
+msgstr "Kérlek várj: Wine verzió telepítése ..."
+
+#: LNG_WINEVERSIONS_INSTALLATION_FINISHED
+msgid "Installation succeeded."
+msgstr "Telepítés sikerült."
+
+#: LNG_WINEVERSIONS_GAMETOEDIT
+msgid "To which game do you want to apply this modification?"
+msgstr "Melyik programot szeretnéd szerkeszteni?"
+
+#: LNG_WINEVERSIONS_VERSIONTOUSE
+msgid "Which wine version do you want to use ?"
+msgstr "Melyik Wine verziót szeretnéd használni?"
+
+#: LNG_WINEVERSIONS_MUSTSPECIFY
+msgid "You must choose which version you want to download."
+msgstr "Ki kell választanod, hogy melyik verziót szeretnéd letölteni."
+
+#: LNG_WINEVERSIONS_ALREADYINSTALLED
+msgid "This version has already been installed"
+msgstr "Ez a verzió már fel van telepítve."
+
+#: LNG_WINEVERSIONS_RESETSESSION
+msgid "The session has been reset."
+msgstr "A folyamat megszakítva."
+
+#: LNG_WINEVERSIONS_GAME
+msgid "To which game do you want to apply the modification ?"
+msgstr "Melyik játékra szeretnéd alkalmazni a változtatásokat?"
+
+#: LNG_WINEVERSIONS_NOWINE
+msgid "No wine version installed"
+msgstr "Nincs feltelepítve Wine verzió."
+
+#: LNG_WINEVERSIONS_CHOOSEUNINSTALL
+msgid "Choose which version you want to uninstall."
+msgstr "Válaszd ki melyik verziót szeretnéd eltávolítani."
+
+#: LNG_WINEVERSIONS_CHOOSEDOWNLOAD
+msgid "Which wine version should I download?"
+msgstr "Melyik Wine verziót tölthetem le?"
+
+#: LNG_WINEVERSIONS_MENU_ASSIGN
+msgid "Assign a wineversion for a program"
+msgstr "Wine verzió hozzárendelése egy programhoz"
+
+#: LNG_WINEVERSIONS_MENU_INSTALL
+msgid "Install a wineversion"
+msgstr "Wine verzió telepítése"
+
+#: LNG_WINEVERSIONS_MENU_UNASSIGN
+msgid "Unassign a wineversion"
+msgstr "Alapértelmezett Wine verzió használata"
+
+#: LNG_WINEVERSIONS_MENU_UNINSTALL
+msgid "Uninstall a wineversion"
+msgstr "Wine verzió eltávolítása"
+
+#: LNG_OTHER
+msgid "Other"
+msgstr "Egyéb"
+
+#: LNG_EXEMPLE
+msgid "Exemple "
+msgstr "Példa "
+
+#: LNG_RESET
+msgid "Reset"
+msgstr "Visszaállítás"
+
+#: LNG_OPTIONS_MENU
+msgid "Settings"
+msgstr "Beállítások"
+
+#: LNG_OPTIONS_RESULT
+msgid "Test results"
+msgstr "Teszt eredmények"
+
+#: LNG_OPTIONS_NORESULT
+msgid "Glxgears did not produce any results."
+msgstr "A Glxgears nem produkált eredményt."
+
+#: LNG_OPTIONS_INFOS_SYS
+msgid "System information:"
+msgstr "Rendszer információ:"
+
+#: LNG_OPTIONS_INFOS_YSYS
+msgid "Your system :"
+msgstr "A rendszered:"
+
+#: LNG_OPTIONS_INFOS_KERNEL
+msgid "Your kernel :"
+msgstr "Kerneled:"
+
+#: LNG_OPTIONS_INFOS_LANG
+msgid "System language :"
+msgstr "Rendszer nyelve:"
+
+#: LNG_OPTIONS_INFOS_USER
+msgid "Your user login :"
+msgstr "Felhasználói neved:"
+
+#: LNG_OPTIONS_INFOS_NAMEMACHINE
+msgid "Your computer's name :"
+msgstr "Számítógépnév:"
+
+#: LNG_OPTIONS_INFOS_VIDEOCARD
+msgid "Your video card :"
+msgstr "Videókártya:"
+
+#: LNG_OPTIONS_INFOS_DISTRIB_ID
+msgid "Your distribution :"
+msgstr "Operációs rendszer:"
+
+#: LNG_OPTIONS_INFOS_RELEASE
+msgid "Your distribution version :"
+msgstr "Rendszer verziója:"
+
+#: LNG_OPTIONS_INFOS_DDINFOS
+msgid "Space remaining on your hard disks :"
+msgstr "Fennmaradó hely a merevlemezeden:"
+
+#: LNG_OPTIONS_INFOS_WINEINSTALLED
+msgid "Wine version installed :"
+msgstr "Telepített Wine verzió:"
+
+#: LNG_OPTIONS_INFOS_WINECURRENT
+msgid "Wine version used by PlayOnLinux :"
+msgstr "A PlayOnLinux által használt Wine verzió:"
+
+#: LNG_OPTIONS_MENU_INFORMATIONS
+msgid "Informations"
+msgstr "Információk"
+
+#: LNG_INFORMATION
+msgid "Information about a game"
+msgstr "Információk a játékról"
+
+#: LNG_OPTIONS_TESTS
+msgid "Tests"
+msgstr "Tesztek"
+
+#: LNG_OPTIONS_LANGUAGE
+msgid "Language"
+msgstr "Nyelv"
+
+#: LNG_OPTIONS_REPOSITORY
+msgid "Repository"
+msgstr "Tároló"
+
+#: LNG_OPTIONS_PANELS
+msgid "Panels"
+msgstr "Panelek"
+
+#: LNG_NEXT_RUN
+msgid "You must restart PlayOnLinux for the changes to take effect"
+msgstr "A módosítások életbelépéséhez újra kell indítanod a PlaOnLinux-ot."
+
+#: LNG_HAVE
+msgid "You have"
+msgstr "A sebesség:"
+
+#: LNG_HELP
+msgid "Help"
+msgstr "Súgó"
+
+#: LNG_ABOUT
+msgid "About"
+msgstr "Névjegy"
+
+#: LNG_ERROR
+msgid "Error"
+msgstr "Hiba"
+
+#: LNG_EXIT
+msgid "Exit"
+msgstr "Kilépés"
+
+#: LNG_REFRESH
+msgid "Refresh"
+msgstr "Frissítés"
+
+#: LNG_WINEBOOSTER_WELCOME1
+msgid "Welcome on WineBooster, an optimization's script for Wine"
+msgstr "Üdvözlünk a WineBooster-ben, amely egy Wine szkript optimalizáló."
+
+#: LNG_WINEBOOSTER_WELCOME2
+msgid "Created by GNU_Raziel"
+msgstr "Készítette GNU_Raziel"
+
+#: LNG_WINEBOOSTER_WELCOME3
+msgid "If you does not know what to choose, LEAVE DEFAULTS !!!"
+msgstr "Ha nem tudod mit kell kiválasztani, HAGYD ALAPÉRTELMEZETTEN !!!"
+
+#: LNG_WINEBOOSTER_GAME_CHOOSE
+msgid "Choose a game"
+msgstr "Válassz egy játékot"
+
+#: LNG_WINEBOOSTER_GAME_ERROR
+msgid "You did not select a game"
+msgstr "Nem választottál játékot"
+
+#: LNG_WINEBOOSTER_WVERSION
+msgid "Which version of Windows would you like to use? (Values : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )"
+msgstr "Melyik Windows verziót szeretnéd használni? (Lehetőségek: vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Alapértelmezett: winxp )"
+
+#: LNG_WINEBOOSTER_DDR
+msgid "Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)"
+msgstr "DirectDraw megjelenítő mód választás? (Lehetőségek: opengl, gdi - Alapértelmezett: gdi)"
+
+#: LNG_WINEBOOSTER_VERTEXSHADER
+msgid "Activate VertexShader Mode? (Default : N)"
+msgstr "VertexShader mód aktiválása? (Alapértelmezett: N = nem)"
+
+#: LNG_WINEBOOSTER_PIXELSHADER
+msgid "Activate PixelShader Mode? (Default : N)"
+msgstr "PixelShader mód aktiválása? (Alapértelmezett: N = nem)"
+
+#: LNG_WINEBOOSTER_UGLSL
+msgid "Activate GLSL Support? (Default : N)"
+msgstr "GLSL támogatás aktiválása? (Alapértelmezett: N = nem)"
+
+#: LNG_WINEBOOSTER_VMS
+msgid "How much memory does your graphics board have? (Default : 64)"
+msgstr "Mekkora memóriával rendelkezik a videókártyád? (Alapértelmezett: 64)"
+
+#: LNG_WINEBOOSTER_ORM
+msgid "Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - Default : backbuffer)"
+msgstr "Képernyőn kívűli megjelenítés mód választás? (Lehetőségek: backbuffer, pbuffer, fbo - Alapértelmezet: backbuffer)"
+
+#: LNG_WINEBOOSTER_RTLM
+msgid "Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, textex, disabled - Default : auto)"
+msgstr "Target Lock mód választás? (Értékek: auto, readdraw, readtex, texdraw, textex, disabled-tiltva - Alapértelmezett: auto)"
+
+#: LNG_WINEBOOSTER_WDESKTOP
+msgid "Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION !!)? (Example : 1024x768 - Default : 0 = FullScreen)"
+msgstr "Wine ablakok felbontásának kiválasztása (EZ NEM VÁLTOZTATJA MEG A JÁTÉK FELBONTÁSÁT !!)? (Például: 1024x768 - Alapértelmezet: 0 = Teljes képernyő)"
+
+#: LNG_WINEBOOSTER_WMANAGED
+msgid "Authorize your WM to manage Windows? ( Default : Y )"
+msgstr "Engedélyezed az ablakkezelődnek, hogy kezelje a Windowst? ( Alapértelmezett: Y = igen)"
+
+#: LNG_WINEBOOSTER_WDXGRAB
+msgid "Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default : N )"
+msgstr "Engedélyezed a DirectX-nek, hogy megelőzze a wine egeret a képernyőn kívűl? (Alapértelmezett: N = nem)"
+
+#: LNG_WINEBOOSTER_WAUDIO
+msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)"
+msgstr "Hang meghajtó választása? (Lehetőségek: oss, alsa - Alapértelmezett: alsa)"
+
+#: LNG_WINEBOOSTER_AEMUL
+msgid "Emulate DirectSound Driver? (Default : N)"
+msgstr "DirectSound meghajtó emulálása? (Alapértelmezett: N = nem)"
+
+#: LNG_LI_PRESENTATION
+msgid "This script will allow you to install any game on PlayOnLinux and use it with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had been installed with an official script. Warning: We are unable to guarantee that your game will work perfectly."
+msgstr "Ez a szkript lehetővé teszi, hogy bármilyen játékot feltelepíthess a PayOnLinux-ra az összes eszköz használatával (WineBooster, WineMaster, WineConfig, stb) ha egy gyári telepítő szkript segítségével lett feltelepítve. Figyelmeztetés: Nem tudjuk garantálni, hogy a játék megfelelően fog működni."
+
+#: LNG_ACTION
+msgid "Action"
+msgstr "Művelet"
+
+#: LNG_LI_NEW
+msgid "New"
+msgstr "Új"
+
+#: LNG_LI_PATCH
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: LNG_CHOICE
+msgid "Please make a choice"
+msgstr "Kérlek válassz"
+
+#: LNG_LI_CODENAME
+msgid "Please type a code name for the wine prefix of your game. This name shouldn't contain spaces."
+msgstr "Kérlek add meg a játékod wine prefix kódját. A név nem tartalmazhat szóközöket."
+
+#: LNG_LI_EXIST
+msgid "This codename already exists in PlayOnLinux."
+msgstr "Ez a kódnév már létezik PlayOnLinux-ban."
+
+#: LNG_LI_INSTALLFILE
+msgid "Please choose the file to execute"
+msgstr "Válaszd ki a futtatandó fájlt."
+
+#: LNG_LI_CHOOSEFILE
+msgid "You have to choose a file !"
+msgstr "Választanod kell egy fájlt!"
+
+#: LNG_LI_SHORTCUT
+msgid "Do you want to create a shortcut to the application in PlayOnLinux ?"
+msgstr "Szeretnél készíteni parancsikont a játékhoz a PlayOnLinux menüjében?"
+
+msgid "If you patched a game, you should probably select no."
+msgstr "Ha patchelted a játékot, akkor a nemet kell választanod."
+
+#: LNG_LI_EXEC
+msgid "Choose the file to exec the game."
+msgstr "Válassz egy fájlt a játék futtatásához."
+
+#: LNG_LI_GIVENAME
+msgid "Please type a name for your shortcut."
+msgstr "Add meg a nevét a parancsikonnak."
+
+#: LNG_SCRIPT_WAIT
+msgid "Please wait while the installation of the game is prepared"
+msgstr "Kérlek várj a játék telepítésének a felkészülésére."
+
+#: LNG_DOWNLOAD
+msgid "Please wait while the game is downloaded..."
+msgstr "Kérlek várj, amíg a játék letöltődik..."
+
+#: LNG_DOWNLOAD_LIB
+msgid "Please wait while the library are downloaded..."
+msgstr "Kérlek várj, amíg a könyvtárak letöltésre kerülnek..."
+
+#: LNG_DOWNLOAD_FINISHED
+msgid "Download finished"
+msgstr "A letöltés befejeződött"
+
+#: LNG_WAIT
+msgid "Please wait..."
+msgstr "Kis türelmet..."
+
+#: LNG_POLSC
+msgid "Welcome to PolScriptCreator.\nThis tools may help you to build basic scripts. The scripts will be saved on your Desktop. Thanks to Christhaal."
+msgstr "Üdvözlünk a PolScriptCreator-ban.\nEz az eszköz segít elkészíteni egy alap telepítő szriptet. A szkriptek a munkaasztalodon lesznek elmentve. Köszönjük Christhaal."
+
+#: LNG_GIT_WELCOME1
+msgid "Welcome on WineGIT, a GIT compilation and installation script for WineVersion"
+msgstr "Üdvözlünk a WineGIT-ben, egy GIT szerkesztő és telepítő szkript a WineVersion-hoz."
+
+#: LNG_GIT_KEEP
+msgid "Keep the actual git ? (Values : Y ou N - Default : N)"
+msgstr "Megtartod az aktuális git-et? (Lehetőségek: Y = igen vagy N = nem - Alapértelmezett: N = nem)"
+
+#: LNG_GIT_KEEP2
+msgid "Please use ANOTHER name for the last git"
+msgstr "Kérlek használj EGY MÁSIK nevet az előző git-hez"
+
+#: LNG_GIT_RENAME
+msgid "Please give a new name for installed git (example : git-06242007)"
+msgstr "Kérlek adj meg egy új nevet a telepített git-nek (Például: git-06242007)"
+
+#: LNG_GIT_NAME_ERROR
+msgid "You did not specify a name !!"
+msgstr "Nem adtál meg nevet!!"
+
+#: LNG_GIT_NAME_DUPLICATE_ERROR
+msgid "This name already exist !!"
+msgstr "A név már létezik!!"
+
+#: LNG_GIT_DOWNLOAD
+msgid "git download, please wait..."
+msgstr "git letöltése, kérlek várj..."
+
+#: LNG_GIT_COMPILATION
+msgid "git's compilation and installation, please wait..."
+msgstr "git-ek szerkesztése és telepítése, kérlek várj..."
+
+#: LNG_GIT_FINISHED
+msgid "Installation successfull"
+msgstr "Telepítés sikerült"
+
+#: LNG_DOWNLOADING_INSTALLER
+msgid "Please wait while the installer is downloaded..."
+msgstr "Kélek várj, amíg a telepítő letöltődik..."
+
+#: LNG_MENU_POL_1
+msgid "Do you want to add a \"PlayOnLinux\" menu item to your GNOME or KDE menu ? ?\nIt will contain all the application shorcuts you create."
+msgstr "Szeretnél hozzáadni egy \"PlayOnLinux\" menü elemet a GNOME vagy KDE menühöz? ?\nEz tartalmazni fogja az összes alkalmazás parancsikonját."
+
+#: LNG_MENU_POL_2
+msgid "Do you want to disable the \"PlayOnLinux\" menu ?"
+msgstr "Szeretnéd letiltani a \"PlayOnLinux\" menüt?"
+
+#: LNG_FILE_CHOOSE
+msgid "Please choose a valid PlayOnLinux file to run"
+msgstr "Kérlek válassz egy érvényes, futtaható PlayOnLinux fájlt"
+
+#: LNG_APP_CHOOSE
+msgid "Please choose an application to install"
+msgstr "Kérlek válaszd ki milyen programot szeretnél telepíteni"
+
+#: LNG_APP_CHOOSE2
+msgid "Please choose a type of application to install"
+msgstr "Kérlek válaszd ki az alkalmazás típusát"
+
+#: LNG_APP_CHOOSE3
+msgid "Installation wizard"
+msgstr "Telepítő varázsló"
+
+#: LNG_LAUNCHER
+msgid "Please choose a name for the shortcut"
+msgstr "Kérlek válassz nevet a parancsikonnak"
+
+#: LNG_UPDATING_FINISHED
+msgid "The list of programs has been successfully updated"
+msgstr "A programok listája sikeresen frissítésre került"
+
+#: LNG_UPDATEW_FINISHED
+msgid "The prefix has been successfully updated"
+msgstr "Az előtag sikeresen frissítve lett"
+
+#: LNG_UPDATING
+msgid "Updating"
+msgstr "Frissítés"
+
+#: LNG_DOWNLOADING
+msgid "Downloading"
+msgstr "Letöltés"
+
+#: LNG_WARNING
+msgid "Warning"
+msgstr "Figyelmeztetés"
+
+#: LNG_NEXT
+msgid "Next"
+msgstr "Következő"
+
+#: LNG_CANCEL
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: LNG_FINISHED
+msgid "Finished"
+msgstr "Kész"
+
+#: LNG_FINISHED_
+msgid "Finish"
+msgstr "Befejezés"
+
+#: LNG_STEP
+msgid "Step"
+msgstr "Lépés"
+
+#: LNG_SUR
+msgid "of"
+msgstr "/"
+
+#: LNG_DOWNLOAD_CLICK
+msgid "Click on download to start."
+msgstr "Kattints a letöltésre az indításhoz."
+
+#: LNG_DOWNLOAD
+msgid "Download"
+msgstr "Letöltés"
+
+#: LNG_DOWNLOADED
+msgid "downloaded"
+msgstr "letöltve"
+
+#: LNG_YES
+msgid "Yes"
+msgstr "Igen"
+
+#: LNG_NO
+msgid "No"
+msgstr "Nem"
+
+#: LNG_BROWSE
+msgid "Browse"
+msgstr "Tallózás"
+
+#: LNG_KILL_WINSERVER
+msgid "Warning ! Before killing the wineserver, please assure that there are no wine applications running.\n\nAre you sure you want to kill the wineserver ?"
+msgstr "Figyelmeztetés! Mielőtt lelőnéd a wineservert, kérlek ellenőrizd, hogy nem fut egy Wine alkalmazás sem.\n\nBiztosan le akarod lőni a wineservert?"
+
+#: LNG_WINELOOK1
+msgid "Please choose a theme"
+msgstr "Kérlek válassz egy témát"
+
+#: LNG_WINELOOK2
+msgid "Your theme have been successfully applied"
+msgstr "A témád sikeresen alkalmazva lett"
+
+#: LNG_EXPERT_PKG
+msgid "Install a package"
+msgstr "Csomag telepítése"
+
+#: LNG_EXPERT_BOOSTERM
+msgid "Advanced wine configuration"
+msgstr "Szakértői Wine beállítás"
+
+#: LNG_WINEGIT
+msgid "Wine GIT"
+msgstr "Wine GIT"
+
+#: LNG_POLSHELL
+msgid "PlayOnLinux debugger"
+msgstr "PlayOnLinux konzol"
+
+#: LNG_WINELOOK
+msgid "Wine theme"
+msgstr "Wine téma"
+
+#: LNG_SLOGAN
+msgid "Run your Windows programs on Linux !"
+msgstr "Futtasd a Windowsos programjaidat Linuxon!"
+
+#: LNG_LOGO
+msgid "The logo are made by Crystal Project"
+msgstr "A logót a Crystal Project készítette"
+
+#: LNG_WINDOWS_DESIGN
+msgid "Windows designed by asimov"
+msgstr "Ablak dekoráció: asimov"
+
+#: LNG_COPYRIGHT
+msgid "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
+msgstr "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
+
+#: LNG_MAIN_INSTALL_WORKONLINUX
+msgid "Application"
+msgstr "Alkalmazás"
+
+#: LNG_MAIN_INSTALL_LIVE
+msgid "Manual installation"
+msgstr "Kézi telepítés"
+
+#: LNG_MAIN_INSTALL_DOSBOX
+msgid "Dosbox application"
+msgstr "Dosboxos alkalmazás"
+
+#: LNG_MAIN_INSTALL_PKG
+msgid "Install a .pol package"
+msgstr ".pol csomag telepítése"
+
+#: LNG_LI_CHOOS_ACTION
+msgid "What do you want to do ?"
+msgstr "Mit szeretnél tenni?"
+
+#: LNG_LI_NEW
+msgid "Install a program in a new prefix"
+msgstr "Program telepítése új előtagba (prefix)"
+
+#: LNG_LI_PATCH
+msgid "Edit an application already installed"
+msgstr "Egy feltelepített alkalmazás szerkesztése"
+
+#: LNG_LI_CHOOSEPREFIX
+msgid "What is the prefix of your program ?"
+msgstr "Mi a programod előtagja (prefix)?"
+
+#: LNG_LI_SHORTCUT
+msgid "Would you like to make a new shortcut in PlayOnLinux"
+msgstr "Szeretnél létrehozni új parancsikont a PlayOnLinuxban?"
+
+#: LNG_LI_DELETE
+msgid "Delete a prefix"
+msgstr "Előtag (prefix) törlése"
+
+#: LNG_LI_DELETE_PREFIXE
+msgid "Are you sure you want to delete that prefixe ?"
+msgstr "Biztosan törölni szeretnéd?"
+
+#: LNG_LI_PREFIXE_DELETED
+msgid "The prefix has been deleted"
+msgstr "Törölve"
+
+#: LNG_WINEVERSION_ACTIONS
+msgid "Choose an action to do"
+msgstr "Művelet (folyamat) kiválasztása"
+
+#: LNG_WINEVERSIONS_MENU_INSTALL
+msgid "Install a wine version"
+msgstr "Wine verzió telepítése"
+
+#: LNG_WINEVERSIONS_MENU_GIT
+msgid "Install Wine GIT"
+msgstr "Wine GIT telepítése"
+
+#: LNG_WINEVERSIONS_MENU_ASSIGN
+msgid "Assign a wine version to a programm"
+msgstr "Wine verzió hozzárendelése egy programhoz"
+
+#: LNG_WINEVERSIONS_MENU_UNASSIGN
+msgid "Put back the default wine version to a program"
+msgstr "Alapértelmezett Wine verzió használata"
+
+#: LNG_WINEVERSIONS_MENU_UNINSTALL
+msgid "Remove a wine version"
+msgstr "Wine verzió eltávolítása"
+
+#: LNG_WINEVERSIONS_MENU_SESSION
+msgid "Session"
+msgstr "Munkafolyamat"
+
+#: LNG_WINEVERSIONS_GAMETOEDIT
+msgid "Which program do you want to edit ?"
+msgstr "Melyik programot szeretnéd szerkeszteni?"
+
+#: LNG_TEST_3D
+msgid "I'm going to test your 3D hardware. It will take about 2 minutes"
+msgstr "Most tesztelni fogom a 3D eszközödet. Ez két percig is eltarthat"
+
+#: LNG_OPTIONS_REPOS_STEP1
+msgid "Choose a repository to enable / disable"
+msgstr "Válassz egy engedélyezni / tiltani kívánt tárolót"
+
+#: LNG_DEFAULT_QUESTION
+msgid "Question"
+msgstr "Kérdés"
+
+#: LNG_DEFAULT_FIELD
+msgid "Text"
+msgstr "Szöveg"
+
+#: LNG_PKG_NOT_VALID
+msgid "The file is not a valid PlayOnLinux package"
+msgstr "Ez nem egy érvényes PlayOnLinux csomag"
+
+#: LNG_PKG_NOT_FOUND
+msgid "Unable to find the file"
+msgstr "Nem találom a fájlt"
+
+#: LNG_PKG_CHOOSE
+msgid "Choose a package to install"
+msgstr "Telepítendő csomag kiválasztása"
+
+#: LNG_PKG_MANAGER
+msgid "PlayOnLinux package manager"
+msgstr "PlayOnLinux csomagkezelő"
+
+#: LNG_CANT_FIND_UNINSTALL
+msgid "Unable to find the game you are trying to uninstall"
+msgstr "Nem találom az eltávolítani kívánt játékot"
+
+#: LNG_AUTORUN_CANT_FIND
+msgid "No setup location found in autorun.inf"
+msgstr "Nem találtam telepítő útvonalat az autorun.inf-ben"
+
+#: LNG_AUTORUN_CDROM_FOUND
+msgid "A CD-ROM has been found on your drive"
+msgstr "Egy CD-ROM-ot találtam a meghajtódban"
+
+#: LNG_AUTORUN_CDROM_NAME
+msgid "Name "
+msgstr "Név"
+
+#: LNG_AUTORUN_CDROM_SETUP
+msgid "Setup "
+msgstr "Telepítés"
+
+#: LNG_AUTORUN_TITLE
+msgid "Autorun"
+msgstr "Automatikus futtatás"
+
+#: LNG_AUTORUN_NEXT
+msgid "In the following prefix"
+msgstr "A következő prefix-be"
+
+#: LNG_AUTORUN_RECOM
+msgid "recomended"
+msgstr "ajánlott"
+
+#: LNG_AUTORUN_WHERE
+msgid "Where do you want to install this CD-ROM?"
+msgstr "Hova szeretnéd telepíteni ezt a CD-ROM-ot?"
+
+#: LNG_AUTORUN_EXISTING
+msgid "In an existing prefix (add-on)"
+msgstr "Egy már létező prefix-be(bővítmény)"
+
+#: LNG_AUTORUN_NEW
+msgid "In a new prefix"
+msgstr "Új prefix-be"
+
+#: LNG_NOAUTORUN
+msgid "No autorun support found"
+msgstr "Nem találtam automatikus futtatási támogatást"
+
+#: LNG_AUTORUN_N
+msgid "autorun has been found"
+msgstr "automatikus futtatás megtalálva"
+
+#: LNG_AUTORUN_PREFIX_C
+msgid "Choose the prefix"
+msgstr "Válaszd ki a prefix-et"
+
+#: LNG_SHORTCUT_CREATON
+msgid "Shortcut creation"
+msgstr "Parancsikon készítés"
+
+#: LNG_NEW_INSTALL_UNSUPPORTED
+msgid "Install a .pol package or an unsupported application"
+msgstr ".pol csomag, vagy egy nem támogatott alkalmazás telepítése"
+
+#: LNG_SEARCH
+msgid "Search :"
+msgstr "Keresendő elem:"
+
+#: LNG_CLOSE
+msgid "Close"
+msgstr "Bezárás"
+
+#: LNG_CAT_ACCESSORIES
+msgid "Accessories"
+msgstr "Kellékek"
+
+#: LNG_CAT_DEVELOPMENT
+msgid "Development"
+msgstr "Fejlesztés"
+
+#: LNG_CAT_GAMES
+msgid "Games"
+msgstr "Játékok"
+
+#: LNG_CAT_GRAPHICS
+msgid "Graphics"
+msgstr "Grafika"
+
+#: LNG_CAT_MULTIMEDIA
+msgid "Multimedia"
+msgstr "Multimédia"
+
+#: LNG_CAT_OFFICE
+msgid "Office"
+msgstr "Iroda"
+
+#: LNG_GENERAL_APPS
+msgid "My Applications"
+msgstr "Alkalmazásaim"
+
+#: LNG_OPTIONS_PANEL_DEFAUT
+msgid "Defaults programs"
+msgstr "Alapértelmezett programok"
+
+#: LNG_OPTIONS_PANEL_BROWSER
+msgid "Browser"
+msgstr "Böngésző"
+
+#: LNG_OPTIONS_PANEL_TEST
+msgid "Test"
+msgstr "Teszt"
+
+#: LNG_OPTIONS_PANEL_TERMINAL
+msgid "Terminal"
+msgstr "Terminál"
+
+#: LNG_OPTIONS_PANEL_TEMP
+msgid "Temp directory"
+msgstr "Átmeneti fájlok könyvtára"
+
+#: LNG_OPTIONS_PANEL_TEMP_E
+msgid "Automatically empty temp directory"
+msgstr "Automatikusan űrítsd az átmeneti könyvtárat"
+
+#: LNG_OPTIONS_PANEL_OFFLINE
+msgid "Offline Mode"
+msgstr "Kapcsolat nélküli mód"
+
+#: LNG_OPTIONS_PANEL_OFFLINE_E
+msgid "Enable Offline mode"
+msgstr "Kapcsolat nélküli mód engedélyezése"
+
+#: LNG_OPTIONS_PANEL_PROXY
+msgid "Proxy configuration"
+msgstr "Proxy beállítás"
+
+#: LNG_OPTIONS_PANEL_PROXY_ADRESS
+msgid "Proxy address"
+msgstr "Proxy címzések"
+
+#: LNG_OPTIONS_PANEL_PROXY_USE
+msgid "Set a proxy"
+msgstr "Proxy beállítása"
+
+#: LNG_OPTIONS_PANEL_PROXY_PORT
+msgid "Port"
+msgstr "Port"
+
+#: LNG_OPTIONS_PANEL_PROXY_LOGIN
+msgid "Login"
+msgstr "Bejelentkezés"
+
+#: LNG_OPTIONS_PANEL_PROXY_PASSWORD
+msgid "Password"
+msgstr "Jelszó"
+
+#: LNG_OPTIONS_PANEL_D_WINE
+msgid "Default Wine Version to run wine programs with PlayOnLinux"
+msgstr "Alapértelmezett Wine verzió, amellyel a PlayOnLinux futtani fogja a programokat"
+
+#: LNG_OPTIONS_PANEL_DESK
+msgid "Desktop"
+msgstr "Munkaasztal"
+
+#: LNG_OPTIONS_PANEL_MENU
+msgid "PlayOnLinux menu"
+msgstr "PlayOnLinux menü"
+
+#: LNG_OPTIONS_PANEL_MENU_R
+msgid "Add PlayOnLinux menu in your panel"
+msgstr "PlayOnLinux menü hozzáadása a panelhez"
+
+#: LNG_OPTIONS_PANEL_DESKTOP_D
+msgid "Desktop directory"
+msgstr "Munkaasztal könyvtár"
+
+#: LNG_OPTIONS_PANEL_D_NICKNAME
+msgid "Default Nickname"
+msgstr "Becenév"
+
+#: LNG_OPTIONS_PANEL_C_STARTUP
+msgid "Automatically connect to IRC at PlayOnLinux startup"
+msgstr "Automatikusan csatlakozz az IRC-hez a PlayOnLinux indításakor"
+
+#: LNG_OPTIONS_PANEL_W_USER
+msgid "Warm users when I run a game"
+msgstr "Láthassák a felhasználók, milyen játékkal játszom"
+
+#: LNG_OPTIONS_PANEL_SOUND
+msgid "Play a sound when I receive a private message"
+msgstr "Hangjelzés privát üzenet érkezésekor"
+
+#: LNG_OPTIONS_PANEL_TITLE
+msgid "PlayOnLinux Settings"
+msgstr "PlayOnLinux beállítások"
+
+#: LNG_OPTIONS_PANEL_O1
+msgid "General"
+msgstr "Általános"
+
+#: LNG_OPTIONS_PANEL_O2
+msgid "Messenger"
+msgstr "Üzenetküldő rendszer"
+
+#: LNG_OPTIONS_PANEL_O3
+msgid "Internet"
+msgstr "Internet"
+
+#: LNG_OPTIONS_PANEL_O4
+msgid "Environment"
+msgstr "Környezet"
+
+#: LNG_OPTIONS_PANEL_O5
+msgid "System"
+msgstr "Rendszer"
+
+#: LNG_OPTIONS_PANEL_APPLY
+msgid "Apply"
+msgstr "Alkalmaz"
+
+#: LNG_OFFLINE_MODE
+msgid "You are in offline mode"
+msgstr "Most kapcsolat nélküli módban vagy"
+
+#: LNG_INSTALLED_PLUGIN
+msgid "Installed plugins"
+msgstr "Telepített bővítmények"
+
+#: LNG_ADD_PLUGIN
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: LNG_CONFIG_PLUGIN
+msgid "Configure"
+msgstr "Beállítás"
+
+#: LNG_ENABLE_PLUGIN
+msgid "Enable"
+msgstr "Engedélyezés"
+
+#: LNG_DISABLE_PLUGIN
+msgid "Disable"
+msgstr "Tiltás"
+
+#: LNG_CHOOSE_PLUGIN
+msgid "Choose a plugin"
+msgstr "Válassz egy bővítményt"
+
+#: LNG_SUR_INSTALL
+msgid "Are yo sure you want to install the plugin"
+msgstr "Biztosan fel szeretnéd telepíteni a bővítményt?"
+
+#: LNG_SUR_DELETE
+msgid "Are yo sure you want to delete the plugin"
+msgstr "Biztosan törölni szeretnéd ezt a bővítményt?"
+
+#: LNG_OPTIONS_PANEL_O6
+msgid "Plugins"
+msgstr "Bővítőmodulok"
+
+#: LNG_MANAGER
+msgid "Plugins manager"
+msgstr "Bővítmény kezelő"
+
+#: LNG_NO_MORE
+msgid "No more alert me"
+msgstr "Ne emlékeztess többé"
+
+#: LNG_GAME_UNINSTALL
+msgid "Do you really want to uninstall $delete_var ?"
+msgstr "Biztosan el szeretnéd távolítani? $delete_var ?"
+
+msgid "Welcome in PlayOnLinux Installation Wizard"
+msgstr "Üdvözöllek a PlayOnLinux telepítő varázslójában"
+
+msgid "PlayOnLinux Wizard"
+msgstr "PlayOnLinux varázsló"
+
+msgid "This assistant will help you to install "
+msgstr "A segédlet által lehetőséged lesz telepíteni  "
+
+msgid " on your computer."
+msgstr " a számítógépedre."
+
+msgid "This program is made by "
+msgstr "A programot készítette:"
+
+msgid "This installation program is provided by "
+msgstr "Ezt a telepítő programot számunkra biztosította:"
+
+msgid " will be installed in "
+msgstr " fel lesz telepítve ide: "
+
+msgid "PlayOnLinux is not responsible of your way to use these scripts"
+msgstr "PlayOnLinux nem vállal felelősséget azért, ahogyan használod ezeket a szkripteket"
+
+msgid "Click on next to start"
+msgstr "Az indításhoz nyomj következőt"
+
+msgid "I Agree"
+msgstr "Elfogadom"
+
+msgid "Create a shortcut :"
+msgstr "Parancsikon készítése:"
+
+msgid "Do you want a shortcut for "
+msgstr "Szeretnél parancsikont készíteni "
+
+msgid "On your desktop"
+msgstr "A munkaasztalodon"
+
+msgid "In your menu"
+msgstr "A menüdben"
+
+msgid "has been installed successfully"
+msgstr "sikerese fel lett telepítve"
+
+msgid "Click on next to continue"
+msgstr "Továbblépéshez nyomj következőt"
+
+msgid "This assistant will help you to uninstall $delete_var."
+msgstr "Segítség a $delete_var eltávolításához."
+
+msgid "PlayOnLinux Uninstaller"
+msgstr "Program eltávolító"
+
+msgid "Uninstalling..."
+msgstr "Eltávolítás..."
+
+msgid "Cannot find the shortcut"
+msgstr "Nem találom a parancsikont"
+
+msgid "has been uninstalled successfully"
+msgstr "sikeresen el lett távolítva"
+
+msgid "Do you want to delete the prefix : $prefix"
+msgstr "Szeretnéd ezt törölni ? : $prefix"
+
+msgid "Please wait while the wine prefix is created..."
+msgstr "Kérlek várj, amíg a wine prefix elkészül..."
+
+msgid "Wine prefix configuration"
+msgstr "Wine prefix beállítás"
+
+msgid "Downloading updates..."
+msgstr "Frissítések letöltése..."
+
+msgid "PlayOnLinux update"
+msgstr "PlayOnLinux frissítés"
+
+msgid "Connect"
+msgstr "Kapcsolódás"
+
+msgid "Disconnect"
+msgstr "A kapcsolat bontása"
+
+msgid "Send"
+msgstr "Küldés"
+
+msgid "Welcome in PlayOnLinux autorun assistant."
+msgstr "Üdvözöllek a PlayOnLinux automatikus futtatási segédletében."
+
+msgid "It will help you to help an application from a CD-ROM."
+msgstr "Ez segít neked, hogy CD-ROM-ról feltelepíts egy alkalmazást."
+
+msgid "Looking for runnable CD-ROM"
+msgstr "Futtatható CD-ROM keresése"
+
+msgid "PlayOnLinux is installing your application"
+msgstr "A PlayOnLinux feltelepíti az alkalmazásod"
+
+msgid "PlayOnLinux is installing your application ..."
+msgstr "A PlayOnLinux feltelepíti az alkalmazásaidat..."
+
+msgid "Please press Next only when installation is fully complete."
+msgstr "Csak akkor nyomd meg a következő gombot, ha atelepítés már befejeződött."
+
+msgid "Please type a name for the wine prefix of your application."
+msgstr "Kérlek add meg az alkalmazásod wine prefixének a nevét."
+
+msgid "This name shouldn't contain spaces."
+msgstr "Ez a név nem tartalmazhat szóközöket."
+
+msgid "Welcome in PlayOnLinux manual Installation"
+msgstr "Üdvözöllek a PlayOnLinux kézi telepítőjében"
+
+msgid "This wizard will help you to install a directx patch in playonlinux"
+msgstr "Ez a varázsló végigvezet a directx javítás telepítési folyamatán"
+
+msgid "The patch will be applied in :"
+msgstr "A javítás alkalmazva lett itt:"
+
+msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
+msgstr "Kérlek várj, amíg a program a Windows újraindítását szimulálja"
+
+msgid "This wizard will help you to execute a non-official PlayOnLinux Script"
+msgstr "Ez a varázsló segítséget nyújt a nem hivatalos PlayOnLinux szkriptek futtatásához"
+
+msgid "Choose a valid PlayOnLinux script to run"
+msgstr "Válaszd ki a futtatni kívánt PlayOnLinux szkriptet"
+
+msgid "Wineserver killed"
+msgstr "Wineszerver kilőve"
+
+msgid "Installed Wine Versions :"
+msgstr "Telepített Wine verziók:"
+
+msgid "Available Wine Versions :"
+msgstr "Elérhető Wine verziók:"
+
+msgid "Wine Versions"
+msgstr "Wine verziók"
+
+msgid "Extracting wine ..."
+msgstr "Wine kibontása ..."
+
+msgid "Wine has been installed successfully"
+msgstr "A Wine sikeresen fel lett telepítve"
+
+msgid "This wizard will help you to install wine $version in PlayOnLinux environment"
+msgstr "Ez a varázsló végigvezet a Wine $version telepítési folyamatán"
+
+msgid "First use of PlayOnLinux"
+msgstr "Most használod először a PlayOnLinuxot"
+
+msgid "Education"
+msgstr "Oktatás"
+
+msgid "Welcome in PlayOnLinux first use assistant. Please ensure you are connected to the Internet."
+msgstr "Üdvözöllek a PlayOnLinux első indítás varázslóban. Kérlek ellenőrizd, hogy rendelkezel-e aktív internethozzáféréssel."
+
+msgid "PlayOnLinux application list update"
+msgstr "PlayOnLinux alkalmazás lista frissítése"
+
+msgid "Please read and accept this"
+msgstr "Kérlek olvasd el, és hagyd jóvá a következőket"
+
+msgid "Microsoft fonts"
+msgstr "Microsoft betűtípusok"
+
+msgid "Installing Microsoft Fonts. Please wait..."
+msgstr "Microsoft betűtípusok telepítése. Kérlek várj..."
+
+msgid "Microsoft Fonts has been installed successfully"
+msgstr "A Microsoft betűtípusok sikresen fel lettek telepítve"
+
+msgid "No description."
+msgstr "Nincs leírás."
+
+msgid "Default terminal"
+msgstr "Alapértelmezett terminál"
+
+msgid "Default browser"
+msgstr "Alapértelmezett böngésző"
+
+msgid "Default programs"
+msgstr "Alapértelmezett programok"
+
+msgid "Installing fonts"
+msgstr "Betűkészletek telepítése"
+
+msgid "Downloading fonts"
+msgstr "Betűkészletek letöltése"
+
+msgid "Installing"
+msgstr "Telepítés"
+

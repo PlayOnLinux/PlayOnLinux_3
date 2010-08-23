@@ -1,0 +1,80 @@
+#!/bin/bash
+# Copyright (C) 2007 Pâris Quentin
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+MISSING=""
+
+missing ()
+{
+	printf "\t\t\t[ Erreur ]\n"
+	echo
+	echo "$1 is missing. Please install it before running playonlinux"
+	echo
+	exit 1
+}
+no_missing ()
+{
+	printf "\t\t\t[ Ok ]\n"
+}
+
+check_one ()
+{
+	if [ ! "$(which $1)" ]
+	then
+		MISSING+="Program : $1, Package : $2\n"
+		MANQUE=true
+	fi
+}
+manque ()
+{
+	if [ "$MANQUE" = "true" ]
+	then
+		LNG_MISSING_ERROR=$(eval_gettext "One or more program(s) are missing. Please install them and run the script again.")
+
+		erreur "$LNG_MISSING_ERROR\n\n$MISSING" "" 0 0 0 "" "Ok"
+		exit $EXIT_MISSING
+	fi
+}
+programmes_check () 
+{
+	check_one wget "wget"
+	check_one wine "wine"
+	check_one unzip "unzip"
+	check_one ar "binutils" 
+	check_one xterm "xterm"
+	check_one convert "imagemagick"
+	check_one cabextract "cabextract" 
+	#check_one lzma "lzma"
+	manque
+}
+acceleration_check () 
+{
+	if [ ! "$(glxinfo | grep rendering | tail -n 1)" = "direct rendering: Yes" ]
+	then
+	  sleep 2
+	  LNG_ACCEL=$(eval_gettext "You don't seem to have 3D acceleration !
+We advise you install and enable it.")
+	  message_one "$LNG_ACCEL" "" "3d_accel" 0 "warning.png" "Ok"
+	fi 
+}
+cfg_check ()
+{
+	programmes_check
+	if [ ! "$TMP_ACC_CHECK" ]
+	then 
+		acceleration_check&
+		export TMP_ACC_CHECK="1"
+	fi 
+}
