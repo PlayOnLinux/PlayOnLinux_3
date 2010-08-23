@@ -16,34 +16,30 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
 
-#Variables
-
-#Dans quel répértoire se trouve le script ?
-PLAYONLINUX=`dirname "$0"`
-cd "$PLAYONLINUX"
-export PLAYONLINUX=`pwd`
-source "$PLAYONLINUX/lib/sources"
-if [ "$1" = "--version" ]
+if [ "$PLAYONLINUX" = "" ]
 then
-	echo "PlayOnLinux $VERSION"
 	exit 0
 fi
-if [ "$1" == "--kill" ]
-then
-	echo "PlayOnLinux daemon has been killed" 
-	rm "$REPERTOIRE/configurations/daemon" 2> /dev/null
-fi
 
+source "$PLAYONLINUX/lib/sources" 
+
+## PlayOnLinux Daemon main script
+while :
+do
+
+## Applications
+bash "$PLAYONLINUX/daemon/autorun" ## Autorun
+
+
+## Timer
+sleep 5
+
+## Exit
 if [ ! -e "$REPERTOIRE/configurations/daemon" ]
 then
-	
-	if [ ! "$1" == "--kill" ]
-	then
-	echo "PlayOnLinux daemon v$VERSION is running ..."
-	touch "$REPERTOIRE/configurations/daemon"
-	bash "$PLAYONLINUX/bash/daemon/playonlinux-daemon" & 2> /dev/null > /dev/null
-	fi
-else
-	echo "PlayOnLinux daemon is already running"
-fi
 exit 0
+fi
+
+
+## End
+done
