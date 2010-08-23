@@ -1,4 +1,5 @@
 -> 3.7.8
+- Bug #22 POL_SetupWindow_Init checks if a windows is already opened. --force option can be used to force windows opening in that case
 
 -> 3.7.7
 - Bug #4 corrected (wine version manager does not start)
