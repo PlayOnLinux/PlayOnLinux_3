@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Copyright (C) 2007 Pâris Quentin
 
 # This program is free software; you can redistribute it and/or modify
@@ -15,19 +16,15 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
 
-mkdir -p "$REPERTOIRE/plugins"
-cd "$REPERTOIRE/plugins"
-for file in *
-do
-	MY_FILE="$REPERTOIRE/plugins/$file"
-	if [ -e "$MY_FILE/enabled" ]
-	then
-		#echo "Loading $file"
-		if [ -e "$MY_FILE/scripts/lib" ]
-		then
-			source "$MY_FILE/scripts/lib"
-		fi
-	fi
-done
+#Variables
 
-cd "$REPERTOIRE"
+[ "$PLAYONLINUX" = "" ] || die "You are already in a PlayOnLinux environement" 
+#Dans quel répértoire se trouve le script ?
+PLAYONLINUX=`dirname "$0"`
+cd "$PLAYONLINUX"
+export PLAYONLINUX=`pwd`
+source "$PLAYONLINUX/lib/sources"
+
+bash --rcfile $PLAYONLINUX/etc/pol_bash
+
+exit 0

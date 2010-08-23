@@ -18,17 +18,9 @@ MISSING=""
 
 missing ()
 {
-	printf "\t\t\t[ Erreur ]\n"
-	echo
 	echo "$1 is missing. Please install it before running playonlinux"
-	echo
 	exit 1
 }
-no_missing ()
-{
-	printf "\t\t\t[ Ok ]\n"
-}
-
 check_one ()
 {
 	if [ ! "$(which $1)" ]
@@ -61,13 +53,17 @@ programmes_check ()
 }
 acceleration_check () 
 {
-	if [ ! "$(glxinfo | grep rendering | tail -n 1)" = "direct rendering: Yes" ]
+	if [ ! "$(glxinfo | grep rendering | tail -n 1)" = "direct rendering: Yes" ] && [ "$(which glxinfo)" ]
 	then
 	  sleep 2
 	  LNG_ACCEL=$(eval_gettext "You don't seem to have 3D acceleration !
 We advise you install and enable it.")
 	  message_one "$LNG_ACCEL" "" "3d_accel" 0 "warning.png" "Ok"
 	fi 
+	if [ ! "$(which glxinfo)" ]
+	then
+		echo "Warning : glxinfo is missing ! Can't detect if 3D acceleration is supported"
+	fi
 }
 cfg_check ()
 {

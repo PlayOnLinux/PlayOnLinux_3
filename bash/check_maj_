@@ -30,7 +30,6 @@ then
 	local_string=$(cat "$REPERTOIRE/configurations/last_string")
 	if ( ! wget "$SITE/update_mark.txt" -O- -q 2> /dev/null > /dev/null)
 	then
-		echo "No internet access"
 		exit
 	fi
 	remote_string=$(wget "$SITE/update_mark.txt" -O- -q 2> /dev/null)

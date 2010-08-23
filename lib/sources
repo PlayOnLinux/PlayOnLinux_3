@@ -25,12 +25,4 @@ then
 	source "$PLAYONLINUX/lib/interface_v3"
 	source "$PLAYONLINUX/lib/wine"
 	source "$PLAYONLINUX/lib/plugins"
-
-	cfg_check 
-	construire_repertoire_personnel
-	if [ ! -d "$HOME/.PlayOnLinux/configurations/listes" ]
-	then
-		maj_check --first
-	fi
-	fonts_install
 fi

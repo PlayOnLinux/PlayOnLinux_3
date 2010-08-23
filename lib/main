@@ -69,7 +69,7 @@ maj_check ()
 			POL_SetupWindow_message "$(eval_gettext 'The website of PlayOnLinux is unavailable.')\n$(eval_gettext 'Please assure you are connected to internet.')" "$(eval_gettext 'PlayOnLinux application list update')"
 			POL_SetupWindow_Close
 		else
-			mkdir $HOME/.PlayOnLinux/configurations/listes/ -p
+			mkdir $REPERTOIRE/configurations/listes/ -p
 			cd "$REPERTOIRE/configurations/listes"
 			rm * -f 2> /dev/null
 			touch 0
@@ -123,7 +123,7 @@ fonts_install()
 }
 install_fonts ()
 {
-	if [ ! -e "$HOME/.PlayOnLinux/configurations/msfonts_installed" ]
+	if [ ! -e "$REPERTOIRE/configurations/msfonts_installed" ]
 	then
 		
 		POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/fonts/top.png" "$PLAYONLINUX/etc/setups/fonts/left.jpg"
@@ -146,10 +146,10 @@ to the file name or packaging format." > $REPERTOIRE/tmp/licence
 			POL_SetupWindow_message "$(eval_gettext 'The website of PlayOnLinux is unavailable.')\n$(eval_gettext 'Please assure you are connected to internet.')" "$LNG_FONTS_TITLE"
 			POL_SetupWindow_Close
 		else
-			rm $HOME/.PlayOnLinux/fonts/ -r 2> /dev/null
-			rm $HOME/.PlayOnLinux/fonts 2> /dev/null
-			rm $HOME/.PlayOnLinux/configurations/fonts_installed 2> /dev/null
-			FONTDIR=$HOME/.PlayOnLinux/fonts/
+			rm $REPERTOIRE/fonts/ -r 2> /dev/null
+			rm $REPERTOIRE/fonts 2> /dev/null
+			rm $REPERTOIRE/configurations/fonts_installed 2> /dev/null
+			FONTDIR=$REPERTOIRE/fonts/
 			mkdir -p $FONTDIR
 			FONTS_INSTALLER="andale32.exe arialb32.exe arial32.exe comic32.exe courie32.exe georgi32.exe impact32.exe times32.exe trebuc32.exe verdan32.exe webdin32.exe"
 			cd $FONTDIR
@@ -196,27 +196,75 @@ to the file name or packaging format." > $REPERTOIRE/tmp/licence
 			rm *.dll
 			rm *.inf
 			rm *.txt
-			touch "$HOME/.PlayOnLinux/configurations/msfonts_installed"
+			touch "$REPERTOIRE/configurations/msfonts_installed"
 			POL_SetupWindow_message "$(eval_gettext 'Microsoft Fonts has been installed successfully')" "$LNG_FONTS_TITLE"
 			POL_SetupWindow_Close
 
 		fi
 	fi
 }
+install_plugins () # Install defaults plugin into home directory
+{
+	cd "$PLAYONLINUX/plugins"
+	touch "$POL_USER_ROOT/configurations/plugins"
+	for plugin in *
+	do
+		file="$plugin"
+		state=$(echo "$file" | cut -d "." -f1)
+		name=$(echo "$file" | cut -d "." -f2)
+		generic_name=$(echo "$name" | cut -d "_" -f1)
+
+		if [ "$(cat $POL_USER_ROOT/configurations/plugins | grep $generic_name)" = "" ]
+		then
+			## La on va bien se marrer !
+			cd "/tmp"
+			tar --extract --get playonlinux/main -f "$PLAYONLINUX/plugins/$file" 
+			stream=$(cat playonlinux/main | grep "rm ")
+			rm playonlinux/main
+			cd "$PLAYONLINUX/plugins"		
+
+			if [[ $stream =~ ".PlayOnLinux" ]]
+			then 
+				cutn=4
+			else
+				cutn=3
+			fi
+
+			stream="$(echo $stream | cut -d "\"" -f2)"
+			stream="$(echo $stream | cut -d "/" -f$cutn)"
+
+			# And I HAVE IT !
+			plugin_real_name="$stream" 
+
+			if [ ! -e "$POL_USER_ROOT/plugins/$plugin_real_name" ]
+			then
+				echo "Loading plugin : $plugin_real_name"
+				playonlinux-pkg -i "$file" > /dev/null
+				if [ "$state" = "enabled" ]
+				then
+					touch "$POL_USER_ROOT/plugins/$plugin_real_name/enabled"
+				fi
+			fi
+			echo $generic_name >> "$POL_USER_ROOT/configurations/plugins"
+			#
+		fi
+	done
+}
 construire_repertoire_personnel ()
 {
-	mkdir "$HOME/.PlayOnLinux/wineprefix/" -p
-	mkdir "$HOME/.PlayOnLinux/configurations/installed/" -p
-	mkdir "$HOME/.PlayOnLinux/configurations/options/" -p
-	mkdir "$HOME/.PlayOnLinux/configurations/icones/" -p
-	mkdir "$HOME/.PlayOnLinux/configurations/messages_shown/" -p
-	mkdir "$HOME/.PlayOnLinux/tmp" -p
-	mkdir "$HOME/.PlayOnLinux/ressources" -p
-	mkdir "$HOME/.PlayOnLinux/icones/full_size" -p
-	mkdir "$HOME/.PlayOnLinux/WineVersions" -p
-	mkdir "$HOME/.PlayOnLinux/plugins" -p
+	mkdir "$REPERTOIRE/wineprefix/" -p
+	mkdir "$REPERTOIRE/configurations/installed/" -p
+	mkdir "$REPERTOIRE/configurations/options/" -p
+	mkdir "$REPERTOIRE/configurations/icones/" -p
+	mkdir "$REPERTOIRE/configurations/messages_shown/" -p
+	mkdir "$REPERTOIRE/tmp" -p
+	mkdir "$REPERTOIRE/ressources" -p
+	mkdir "$REPERTOIRE/icones/full_size" -p
+	mkdir "$REPERTOIRE/WineVersions" -p
+	mkdir "$REPERTOIRE/plugins" -p
 	mkdir "$REPERTOIRE/configurations/guis" -p
 	mkdir "$REPERTOIRE/configurations/configurators" -p
+	mkdir "$REPERTOIRE/configurations/setups" -p
 	touch "$REPERTOIRE/configurations/last_version"
 }
 start_pol ()
@@ -248,7 +296,19 @@ start_pol ()
 		lancer "$2" "$Arg --debug"
 		exit 0
 	fi
-	bash "$PLAYONLINUX/bash/check_maj_" &
+
+	cfg_check 
+	construire_repertoire_personnel
+	if [ ! -d "$HOME/.PlayOnLinux/configurations/listes" ]
+	then
+		maj_check --first
+	else
+		bash "$PLAYONLINUX/bash/check_maj_" &
+	fi
+	fonts_install
+	install_plugins
+
+
 	check_new_pol
 	if [ ! "$NEW_VERSION" = "" ]
 	then
@@ -259,65 +319,10 @@ start_pol ()
 }
 clean_tmp ()
 {
-	rm $REPERTOIRE/tmp/ -rf
-	mkdir $REPERTOIRE/tmp -p
+	rm "$REPERTOIRE/tmp/" -rf
+	mkdir "$REPERTOIRE/tmp" -p
 }
-check_network ()
-{
-	#Ecrit par MulX
-	#Le 23/sep/2007 
-	TMPFILE=$(mktemp)
-	COUNT=1
-	QUIET="--quiet"
-	NetStat="yes"
-	if [ -n "$1" ]
-	then 
-		PING="$1"
-	else
-		PING="google.com"
-	fi
-	#( 
-	#	echo 0
-		ping $PING -c $COUNT &> $TMPFILE 
-	#	echo 100
-	#) | attendre_multiple "$LNG_NET_CHECK"
-	if [ -n "$(grep "unknown host" "$TMPFILE" )" ]
-	then 
-		if [ "$2" != "$QUIET" ]
-		then
-			erreur $(eval_gettext "You are not connected on the internet.")
-		fi
-		NetStat="no"
-		return 255
-	fi
-	Received=$(grep "received" $TMPFILE | awk '{printf("%s",$4)}' )
-	rm -f $TMPFILE
-	if [ $Received == 0 ]
-	then 
-		if [ "$2" != "$QUIET" ]
-		then
-			erreur $(eval_gettext "You are not connected on the internet.")
-		fi
-		NetStat="no"
-		return 255
-	elif [ $Received != $COUNT ]
-	then
-		if [ "$2" != "$QUIET" ]
-		then
-			erreur $(eval_gettext "Network is available, but some packets have failed.")
-		fi
-		NetStat="yes"
-	fi
-	if [ "$NetStat" == "yes" ]
-	then	
-		if [ "$2" != "$QUIET" ]
-		then
-			erreur $(eval_gettext "Network is available.")
-		fi
-		return 0
-	fi
-	return 255
-}
+
 fixme () 
 {
 	#generic function for all FIXME
@@ -335,7 +340,6 @@ check_new_pol ()
 			WebVersion=$(wget -q "$SITE/version2.php?v=$VERSION" -T 1 -O-)
 			if [ "$WebVersion" = "" ]
 			then
-				export NEW_VERSION=""
 				return 2
 			fi
 			if [ "$WebVersion" != "$VERSION" ]
@@ -371,7 +375,7 @@ kdesu ()
 }
 RefreshLibs()
 {
-	source $PLAYONLINUX/lib/sources
+	source "$PLAYONLINUX/lib/sources"
 }
 POL_Call() 
 {

@@ -17,7 +17,12 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
 
 #Variables
-
+die() ## PHP function copy
+{
+	echo "$@"
+	exit
+}
+[ "$PLAYONLINUX" = "" ] || die "You are already in a PlayOnLinux environement" 
 #Dans quel répértoire se trouve le script ?
 PLAYONLINUX=`dirname "$0"`
 cd "$PLAYONLINUX"
@@ -30,14 +35,10 @@ then
 fi
 
 echo "PlayOnLinux v$VERSION"
-#echo "--------------------"
-#echo ""
-#printf "Checking $PYTHON : \t"
+echo ""
 if [ ! "$(which $PYTHON)" ]
 then
 	missing "$PYTHON"
-else
-	no_missing
 fi
 
 start_pol "$@" 
