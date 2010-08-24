@@ -803,20 +803,20 @@ POL_GetSetupImages () # ( optional : --erase )
 	# This function helps you to manage your setup images
 	# It will download images only once, except if you use --erase
 	#
-	# 1 - Left image url
-	# 2 - Top image url
+	# 1 - Top image url
+	# 2 - Left image url
 	# 3 - Name (only alpha-numerical please)
 	# 
 	# Path of images are returned in $POL_SetupWindow_LeftImage and $POL_SetupWindow_TopImage
 
 	if [ "$1" == "--erase" ]
 	then
-		left="$2"
-		top="$3"
+		left="$3"
+		top="$2"
 		name="$4"
 	else
-		left="$1"
-		top="$2"
+		left="$2"
+		top="$1"
 		name="$3"
 	fi	
 	mkdir -p "$POL_USER_ROOT/configurations/setups/$name"
@@ -845,4 +845,9 @@ POL_GetSetupImages () # ( optional : --erase )
 	fi
 	cd "$OLDPWD"
 
+}
+
+POL_SetupWindow_InitWithImages ()
+{
+	POL_SetupWindow_Init "$POL_SetupWindow_TopImage" "$POL_SetupWindow_LeftImage"
 }

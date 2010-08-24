@@ -3,7 +3,7 @@
 - Ukranian name is .uk, not .ua
 - New variable : $POL_USER_ROOT ( = $REPERTOIRE )
 - Defaults plugins : Offline PlayOnLinux, Advanced wine configuration, Transgaming Cedega, Wine Import, Wine Look
-- New function : POL_GetImages
+- New functions : POL_GetImages, POL_SetupWindow_InitWithImages
 - PlayOnLinux detects if you are alreay on a PlayOnLinux terminal, and if yes, it refuses to run
 - A bug corrected in sources loading
 - Wine Import and Offline PlayOnLinux plugin corrected
