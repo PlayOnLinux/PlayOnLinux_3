@@ -239,7 +239,7 @@ install_plugins () # Install defaults plugin into home directory
 			if [ ! -e "$POL_USER_ROOT/plugins/$plugin_real_name" ]
 			then
 				echo "Loading plugin : $plugin_real_name"
-				playonlinux-pkg -i "$file" > /dev/null
+				"$PLAYONLINUX/playonlinux-pkg" -i "$file" > /dev/null
 				if [ "$state" = "enabled" ]
 				then
 					touch "$POL_USER_ROOT/plugins/$plugin_real_name/enabled"
