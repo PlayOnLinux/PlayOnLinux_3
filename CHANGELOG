@@ -2,12 +2,13 @@
 - Bug #22 POL_SetupWindow_Init checks if a windows is already opened. --force option can be used to force windows opening in that case
 - Ukranian name is .uk, not .ua
 - New variable : $POL_USER_ROOT ( = $REPERTOIRE )
-- Defaults plugins : Offline PlayOnLinux, Advanced wine configuration, Transgaming Cedega, Wine Import, Wine Look
+- Defaults plugins : Offline PlayOnLinux, Advanced wine configuration, Transgaming Cedega, Wine Import, Wine Look, Capture
 - New functions : POL_GetImages, POL_SetupWindow_InitWithImages
 - PlayOnLinux detects if you are alreay on a PlayOnLinux terminal, and if yes, it refuses to run
 - A bug corrected in sources loading
 - Wine Import and Offline PlayOnLinux plugin corrected
 - playonlinux-shell command added to run PlayOnLinux shell in your terminal !
+- PlayOnLinux uses a git repository for the developement
 
 -> 3.7.7
 - Bug #4 corrected (wine version manager does not start)
