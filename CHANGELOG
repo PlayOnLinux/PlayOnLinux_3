@@ -9,6 +9,7 @@
 - Wine Import and Offline PlayOnLinux plugin corrected
 - playonlinux-shell command added to run PlayOnLinux shell in your terminal !
 - PlayOnLinux uses a git repository for the developement
+- Some cleaning
 
 -> 3.7.7
 - Bug #4 corrected (wine version manager does not start)
