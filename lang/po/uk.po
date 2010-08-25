@@ -981,7 +981,7 @@ msgstr "No autorun support found"
 
 #: LNG_AUTORUN_N
 msgid "autorun has been found"
-msgstr "autorun has been found" # We are expecting a number. For example, 5 autorun has been found
+msgstr "autorun has been found" 
 
 #: LNG_AUTORUN_PREFIX_C
 msgid "Choose the prefix"
