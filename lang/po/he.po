@@ -8,168 +8,169 @@ msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: Tinou\n"
 "POT-Creation-Date: 2008-01-11 18:43+0100\n"
-"PO-Revision-Date: 2008-01-11 18:59+0100\n"
-"Last-Translator: Unknown\n"
+"PO-Revision-Date: 2010-08-25 09:56+0000\n"
+"Last-Translator: PlayOnLinux <launchpad@playonlinux.com>\n"
 "Language-Team: he_HE.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: LNGFILENAME
-msgid "English"
-msgstr "Hebrew"
-
-#: LNG_SAFE_MODE
-msgid "PlayOnLinux is running in safe mode\nPlease check the GUI mode" 
-msgstr "PlayOnLinux is running in safe mode\nPlease check the GUI mode" 
+"X-Launchpad-Export-Date: 2010-08-25 23:32+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
 #: LNG_WINE_REBOOT
-msgid "Simulating Windows reboot" 
-msgstr "מדמה הפעלה מחדש" 
+msgid "Simulating Windows reboot"
+msgstr "מדמה הפעלה מחדש"
 
 #: LNG_WINE_PREFIXCREATE
-msgid "Creating Wine prefix" 
-msgstr "תחילית Wine יוצר" 
+msgid "Creating Wine prefix"
+msgstr "תחילית Wine יוצר"
 
 #: LNG_WINE_ASKFORCDROM
-msgid "Where is your CD-ROM mounted?" 
-msgstr "(/media/cdrom/) :איפה כונן הדיסקים מועלה? (ברירת מחדל" 
+msgid "Where is your CD-ROM mounted?"
+msgstr "(/media/cdrom/) :איפה כונן הדיסקים מועלה? (ברירת מחדל"
 
 #: LNG_WINE_ERRORCDROM
-msgid "Error : Unable to find the CD-ROM !" 
-msgstr "שגיאה!: לא יכול למצוא את כונן הדיסקים" 
+msgid "Error : Unable to find the CD-ROM !"
+msgstr "שגיאה!: לא יכול למצוא את כונן הדיסקים"
 
 #: LNG_MOUNT_CDROM
-msgid "Please mount the CD-ROM" 
-msgstr "בבקשה תטען את הדיסק" 
-
-#: LNG_COMMUNITY_1
-msgid "The community's repository is enabled.\nDo you want to disable it ?" 
-msgstr ".מאגר הקהילה פעיל\n? האם ברצונך להעביר למצב לא פעיל" 
-
-#: LNG_COMMUNITY_2
-msgid "The community's repository is disabled.\nDo you want to enable it ?\nWARNING : PlayOnLinux isn't responsible for these scripts." 
-msgstr "מאגר הקהילה לא פעיל\n ?האם ברצונך להפעיל את מאגר הקהילה\n הזהרה :  פלייאונלינוקס אינה אחראית על סקריפטים אלו" 
-
-#: LNG_WORK_1
-msgid "The WorkOnLinux's repository is enabled.\nDo you want to disable it ?" 
-msgstr "מופעלים WorkOnLinux's מאגרי.\n ?האם ברצונך להפוך אותם ללא פעילים" 
-
-#: LNG_WORK_2
-msgid "The WorkOnLinux's repository is disabled.\nDo you want to enable it ?\nWARNING : PlayOnLinux isn't responsible for these scripts." 
-msgstr "לא פעילים WorkOnLinux's מאגרי.\n ?האם ברצונך להפוך אותם לפעילים \nהזהרה! :פלייאונלינוקס לא אחראית על סקריפטים אלו!!ו" 
-
-#: LNG_CONFIGURATION_FINISHED
-msgid "Finished. Please restart PlayOnLinux" 
-msgstr "סיום!:נא להפעיל את פלייאונלינוקס מחדש" 
+msgid "Please mount the CD-ROM"
+msgstr "בבקשה תטען את הדיסק"
 
 #: LNG_MISSING
-msgid "Missing program :" 
-msgstr ":תוכנה חסרה" 
+msgid "Missing program :"
+msgstr ":תוכנה חסרה"
 
 #: LNG_MISSING_ERROR
-msgid "One or more program(s) are missing. Please install them and run the script again." 
-msgstr "תוכנה אחת או יותר חסרים.נא התקן אותן ותריץ את הסקריפט שוב" 
+msgid ""
+"One or more program(s) are missing. Please install them and run the script "
+"again."
+msgstr "תוכנה אחת או יותר חסרים.נא התקן אותן ותריץ את הסקריפט שוב"
 
 #: LNG_3D_MISSING
-msgid "You don't seem to have 3D acceleration !\nWe advise you install and enable it." 
-msgstr "(3D acceleration) אין לך האצה תלת מימדית  !\n  הצעתנו אנא התקן  והפעל אותה  " 
-
-#: LNG_GUI_MISSING
-msgid "You have to install zenity or kdialog to run the script." 
-msgstr " כדי להשתמש בסקריפט זה Kdialog  או  Zenity  אתה צריך להתקין " 
+msgid ""
+"You don't seem to have 3D acceleration !\n"
+"We advise you install and enable it."
+msgstr ""
+"(3D acceleration) אין לך האצה תלת מימדית  !\n"
+"  הצעתנו אנא התקן  והפעל אותה"
 
 #: LNG_GAME_NOT_INSTALLED
-msgid "The game you want to run isn't installed." 
-msgstr "המשחק שאתה רוצה להריץ אינו מותקן" 
+msgid "The game you want to run isn't installed."
+msgstr "המשחק שאתה רוצה להריץ אינו מותקן"
 
 #: LNG_GAME_GAMES_MISSING
-msgid "No game.\nTry updating PlayOnLinux." 
-msgstr "אין משחק.\n  PlayOnLinux נסה לעדכן את" 
+msgid ""
+"No game.\n"
+"Try updating PlayOnLinux."
+msgstr ""
+"אין משחק.\n"
+"  PlayOnLinux נסה לעדכן את"
 
 #: LNG_GAME_PATCHS_MISSING
-msgid "No patch\nTry updating PlayOnLinux." 
-msgstr "אין טלאי או תיקון\n PlayOnLinux נסה לעדכן את" 
+msgid ""
+"No patch\n"
+"Try updating PlayOnLinux."
+msgstr ""
+"אין טלאי או תיקון\n"
+" PlayOnLinux נסה לעדכן את"
 
 #: LNG_GAME_ADDON_MISSING
-msgid "No expansions.\nTry to update PlayOnLinux." 
-msgstr "אין הרחבות.\n PlayOnLinux נסה לעדכן את" 
+msgid ""
+"No expansions.\n"
+"Try to update PlayOnLinux."
+msgstr ""
+"אין הרחבות.\n"
+" PlayOnLinux נסה לעדכן את"
 
 #: LNG_GAME_TEST_GAME
-msgid "You haven't installed any games." 
-msgstr "לא התקנת שום משחק " 
+msgid "You haven't installed any games."
+msgstr "לא התקנת שום משחק"
 
 #: LNG_GAME_ALREADY_INSTALLED
-msgid "Installation failed\nThe game might already be installed." 
-msgstr "ההתקנה נכשלה \n יכול להיות שהמשחק כבר מותקן" 
+msgid ""
+"Installation failed\n"
+"The game might already be installed."
+msgstr ""
+"ההתקנה נכשלה \n"
+" יכול להיות שהמשחק כבר מותקן"
 
 #: LNG_GAME_NO_SCRIPT
-msgid "Installation faild\nUnable to find the game's script.\nTry to update $TITRE" 
-msgstr "ההתקנה נכשלה \n .לא יכול למצוא סקרפטי משחק \n $TITRE נסה לעדכן את " 
+msgid ""
+"Installation faild\n"
+"Unable to find the game's script.\n"
+"Try to update $TITRE"
+msgstr ""
+"ההתקנה נכשלה \n"
+" .לא יכול למצוא סקרפטי משחק \n"
+" $TITRE נסה לעדכן את"
 
 #: LNG_GAME_DOWNLOAD_ICONE
-msgid "Please wait while the icon is downloaded." 
-msgstr "נא המתן בזמן שהאייקון מורד" 
+msgid "Please wait while the icon is downloaded."
+msgstr "נא המתן בזמן שהאייקון מורד"
 
 #: LNG_GAME_DESKTOP_ICONE
-msgid "Do you want a shortcut on your desktop ?" 
-msgstr "?האם אתה רוצה קיצור דרך אל שולחן העבודה" 
+msgid "Do you want a shortcut on your desktop ?"
+msgstr "?האם אתה רוצה קיצור דרך אל שולחן העבודה"
 
 #: LNG_GAME_MENU_ICONE
-msgid "Do you want a shortcut in your menu ?" 
-msgstr "? האם אתה רוצה קיצור דרך בתפריט" 
+msgid "Do you want a shortcut in your menu ?"
+msgstr "? האם אתה רוצה קיצור דרך בתפריט"
 
 #: LNG_NET_POL_ERR
-msgid "The website of PlayOnLinux is unavailable,\nPlease assure you are connected to internet." 
-msgstr " לא נמצא PlayOnLinux האתר של,\n בדוק חיבור אל האינטרנט" 
+msgid "The website of PlayOnLinux is unavailable."
+msgstr ""
+
+msgid "Please assure you are connected to internet."
+msgstr ""
 
 #: LNG_NET_CHECK
-msgid "Checking network.." 
-msgstr "בודק רשת..." 
+msgid "Checking network.."
+msgstr "בודק רשת..."
 
 #: LNG_NET_CHECK_FAILED
-msgid "You are not connected on the internet." 
-msgstr "אין חיבור אל האינטרנט" 
+msgid "You are not connected on the internet."
+msgstr "אין חיבור אל האינטרנט"
 
 #: LNG_NET_CHECK_SUCCESS
-msgid "Network is available." 
-msgstr "הרשת זמינה " 
+msgid "Network is available."
+msgstr "הרשת זמינה"
 
 #: LNG_NET_CHECK_LOST
-msgid "Network is available, but some packets have failed" 
-msgstr "הרשת זמינה  אבל כמה חבילות מידע נכשלו" 
+msgid "Network is available, but some packets have failed"
+msgstr "הרשת זמינה  אבל כמה חבילות מידע נכשלו"
 
 #: LNG_MAIN_UPDATE
-msgid "Please wait while the updates are downloaded..." 
-msgstr "אנא המתן בזמן שהעידכונים מורדים" 
+msgid "Please wait while the updates are downloaded..."
+msgstr "אנא המתן בזמן שהעידכונים מורדים"
 
 #: LNG_MAIN_POL_UPDATE
-msgid "An updated version of PlayOnLinux is available. Please visit the website." 
-msgstr " זמינה,נא בדוק באתר PlayOnLinux גירסה חדשה של" 
+msgid "An updated version of PlayOnLinux is available."
+msgstr ""
 
 #: LNG_MAIN_UPDATE_SUCCES
-msgid "The updates have been successfully installed." 
-msgstr ".העידכונים הותקנו בהצלחה" 
+msgid "The updates have been successfully installed."
+msgstr ".העידכונים הותקנו בהצלחה"
 
 #: LNG_MAIN_MENU
-msgid "File" 
-msgstr "קובץ" 
+msgid "File"
+msgstr "קובץ"
 
 #: LNG_MAIN_MENU_ITEM_PLAY
-msgid "Run" 
-msgstr "הרץ" 
+msgid "Run"
+msgstr "הרץ"
 
 #: LNG_MAIN_MENU_ITEM_INSTALL
-msgid "Install" 
-msgstr "התקן" 
+msgid "Install"
+msgstr "התקן"
 
 #: LNG_MAIN_MENU_ITEM_EXPERT
-msgid "Tools" 
-msgstr "כלים" 
+msgid "Tools"
+msgstr "כלים"
 
 #: LNG_MAIN_MENU_ITEM_REMOVE
-msgid "Remove" 
-msgstr "הסר" 
+msgid "Remove"
+msgstr "הסר"
 
 #: LNG_MAIN_MENU_ITEM_UPDATE
 msgid "Update"
@@ -180,276 +181,285 @@ msgid "You must choose a program"
 msgstr "אתה חייב לבחור תוכנית"
 
 #: LNG_MAIN_INSTALL_MENU
-msgid "What do you want to install ?" 
-msgstr "? מה ברצונך להתקין" 
+msgid "What do you want to install ?"
+msgstr "? מה ברצונך להתקין"
 
 #: LNG_MAIN_UNINSTALL_MENU
-msgid "What do you want to uninstall ?" 
-msgstr " ? מה ברצונך להסיר" 
+msgid "What do you want to uninstall ?"
+msgstr "? מה ברצונך להסיר"
 
 #: LNG_MAIN_RUN_MENU
-msgid "Which game do you want to play? ?" 
-msgstr "? איזה משחק ברצונך לשחק" 
+msgid "Which game do you want to play? ?"
+msgstr "? איזה משחק ברצונך לשחק"
 
 #: LNG_MAIN_INSTALL_UNINSTALL
-msgid "Uninstall" 
-msgstr "הסרה" 
+msgid "Uninstall"
+msgstr "הסרה"
 
 #: LNG_MAIN_CHECKUPGRADE
-msgid "Do you want to check for updates on the PlayOnLinux website ?" 
-msgstr "? PlayOnLinux האם ברצונך לבדוק עדכונים באתר  " 
+msgid "Do you want to check for updates on the PlayOnLinux website ?"
+msgstr "? PlayOnLinux האם ברצונך לבדוק עדכונים באתר"
 
 #: LNG_MAIN_FIRSTUSE
-msgid "Welcome to PlayOnLinux.\nYou need to set some options\nMake sure you are connected to the internet." 
-msgstr "PlayOnlinux ברוך הבא ל .\n אתה צריך להגדיר כמה אופציות\n  ודא שאתה מחובר לאינטרנט" 
+msgid ""
+"Welcome to PlayOnLinux.\n"
+"You need to set some options\n"
+"Make sure you are connected to the internet."
+msgstr ""
+"PlayOnlinux ברוך הבא ל .\n"
+" אתה צריך להגדיר כמה אופציות\n"
+"  ודא שאתה מחובר לאינטרנט"
 
 #: LNG_MAIN_INSTALLFONTS
-msgid "Microsoft fonts aren't installed; I'll install them for you." 
-msgstr "הפונטים של מיקרוסופט לא מותקנים,אני יתקין את זה בשבילך" 
+msgid ""
+"Microsoft fonts aren't installed; I'll install them for you. Please assure "
+"you are connected to the internet."
+msgstr ""
 
 #: LNG_MAIN_DOWNLOADFONTS
-msgid "Please wait while the fonts are downloaded..." 
-msgstr "...אנא המתן בזמן שהפונטים מורדים " 
+msgid "Please wait while the fonts are downloaded..."
+msgstr "...אנא המתן בזמן שהפונטים מורדים"
 
 #: LNG_MAIN_CREATEDIRECTORY
-msgid "Please wait: creating PlayOnLinux's directions" 
-msgstr "PlayOnLinux אנא המתן : יוצר הוראות ל" 
+msgid "Please wait: creating PlayOnLinux's directions"
+msgstr "PlayOnLinux אנא המתן : יוצר הוראות ל"
 
 #: LNG_MAIN_LANGUAGE_DETECTED
-msgid "The current language is : $LANG. This language exists in PlayOnLinux. Would you like to use it? ?" 
-msgstr "השפה העדכנית היא : $LANG.  ?האם ברצונך להשתמש בה PLayOnLinux השפה הזאת קיימת ב   " 
+msgid ""
+"The current language is : $LANG. This language exists in PlayOnLinux. Would "
+"you like to use it? ?"
+msgstr ""
+"השפה העדכנית היא : $LANG.  ?האם ברצונך להשתמש בה PLayOnLinux השפה הזאת קיימת "
+"ב"
 
 #: LNG_MAIN_CHOOSELANGUAGE
-msgid "Choose your preferred language." 
-msgstr "בחר את השפה שברצונך להשתמש" 
-
-#: LNG_MAIN_CHOOSEGUI
-msgid "Choose your preferred GUI." 
-msgstr "בחר את תצורת המסך המועדפת עליך" 
+msgid "Choose your preferred language."
+msgstr "בחר את השפה שברצונך להשתמש"
 
 #: LNG_MAIN_LANGUAGE_NOT_DETECTED
-msgid "Your system's language does not exist in PlayOnLinux.\nPlease choose another one" 
-msgstr " PlayOnLinux שפת המערכת שלך לא קיימת ב .\nנא בחר שפה אחרת" 
+msgid ""
+"Your system's language does not exist in PlayOnLinux.\n"
+"Please choose another one"
+msgstr ""
+"PlayOnLinux שפת המערכת שלך לא קיימת ב .\n"
+"נא בחר שפה אחרת"
 
 #: LNG_MAIN_CHOOSELANGUAGE
-msgid "Choose the language you want" 
-msgstr "בחר את השפה שברצונך להשתמש" 
+msgid "Choose the language you want"
+msgstr "בחר את השפה שברצונך להשתמש"
 
 #: LNG_MAIN_CHOOSETHEME
-msgid "Choose the theme you want" 
-msgstr "בחר אתה ערכת נושא שברצונך להשתמש" 
+msgid "Choose the theme you want"
+msgstr "בחר אתה ערכת נושא שברצונך להשתמש"
 
 #: LNG_THEMES
 msgid "Theme"
 msgstr "ערכת נושא"
 
 #: LNG_EXPERT_DIDNOTSELECT
-msgid "You did not select any games!" 
-msgstr " ! לא בחרת שום משחק" 
+msgid "You did not select any games!"
+msgstr "! לא בחרת שום משחק"
 
 #: LNG_EXPERT_REGISTRY
-msgid "Registry Editor" 
-msgstr "עידכון מסד נתונים (Registry)" 
+msgid "Registry Editor"
+msgstr "עידכון מסד נתונים (Registry)"
 
 #: LNG_EXPERT_WINEPREFIX
-msgid "Update the wineprefix" 
-msgstr " (wineprefix) wine עדכן תחילית " 
+msgid "Update the wineprefix"
+msgstr "(wineprefix) wine עדכן תחילית"
 
 #: LNG_EXPERT_WAITUPGRADE
-msgid "Please wait while the wine prefix is updated" 
-msgstr "מעודכנת  wine אנא המתן..בזמן שתחילית  " 
+msgid "Please wait while the wine prefix is updated"
+msgstr "מעודכנת  wine אנא המתן..בזמן שתחילית"
 
 #: LNG_EXPERT_WINECONFIG
-msgid "Configure wine" 
-msgstr " wine מקנפג את" 
+msgid "Configure wine"
+msgstr "wine מקנפג את"
 
 #: LNG_EXPERT_RUN
-msgid "Run a non-official script" 
-msgstr "הרת סקריפט לא רשמי" 
+msgid "Run a non-official script"
+msgstr "הרת סקריפט לא רשמי"
 
 #: LNG_EXPERT_UNFOUND
-msgid "File not found!" 
-msgstr " ! קובץ לא נמצא " 
+msgid "File not found!"
+msgstr "! קובץ לא נמצא"
 
 #: LNG_EXPERT_NOTPOL
-msgid "This file is not a valid PlayOnLinux script" 
-msgstr " PlayOnLinux קובץ זה אינו סקריפט ולידי של" 
+msgid "This file is not a valid PlayOnLinux script"
+msgstr "PlayOnLinux קובץ זה אינו סקריפט ולידי של"
 
 #: LNG_EXPERT_DIRECTX
 msgid "Install DirectX"
-msgstr " DirectX התקן "
+msgstr "DirectX התקן"
 
 #: LNG_EXPERT_WVER
 msgid "Manage wine versions"
-msgstr " wine ניהול גרסאות "
+msgstr "wine ניהול גרסאות"
 
 #: LNG_EXPERT_WKILL
 msgid "Kill wineserver process"
-msgstr " Wine סגור הליכי "
+msgstr "Wine סגור הליכי"
 
 #: LNG_WINEVERSIONS_INTRO
-msgid "This add-on allows you to have more than one wine version simultaneously." 
-msgstr ",אחת Wine תוסף זה מאפשר שיהיה לך יותר מגירסת" 
+msgid ""
+"This add-on allows you to have more than one wine version simultaneously."
+msgstr ",אחת Wine תוסף זה מאפשר שיהיה לך יותר מגירסת"
 
 #: LNG_WINEVERSIONS_DOWNLOADING
-msgid "Downloading wine" 
-msgstr " wine מוריד" 
+msgid "Downloading wine"
+msgstr "wine מוריד"
 
 #: LNG_WINEVERSIONS_DOWNLOADFAILED
-msgid "The download seems to have failed." 
-msgstr ".ההורדה נכשלה" 
+msgid "The download seems to have failed."
+msgstr ".ההורדה נכשלה"
 
 #: LNG_WINEVERSIONS_INSTALL
-msgid "The version of wine has been successfully downloaded.\nI'm' now going to install it." 
-msgstr "  הורדה בהצלחה Wine גירסת .\n Wine מתקין את גירסת   " 
+msgid ""
+"The version of wine has been successfully downloaded.\n"
+"I'm' now going to install it."
+msgstr ""
+"הורדה בהצלחה Wine גירסת .\n"
+" Wine מתקין את גירסת"
 
 #: LNG_WINEVERSIONS_INSTALLATION
-msgid "Please wait : installing wine version ..." 
-msgstr "Wine אנא המתן...:מתקין גירסת   " 
+msgid "Please wait : installing wine version ..."
+msgstr "Wine אנא המתן...:מתקין גירסת"
 
 #: LNG_WINEVERSIONS_INSTALLATION_FINISHED
-msgid "Installation succeeded." 
-msgstr "ההתקנה עברה בהצלחה" 
+msgid "Installation succeeded."
+msgstr "ההתקנה עברה בהצלחה"
 
 #: LNG_WINEVERSIONS_GAMETOEDIT
-msgid "To which game do you want to apply this modification?" 
-msgstr "? איזה תוכנה ברצונך לערוך"   
+msgid "To which game do you want to apply this modification?"
+msgstr "? איזה תוכנה ברצונך לערוך"
 
 #: LNG_WINEVERSIONS_VERSIONTOUSE
-msgid "Which wine version do you want to use ?" 
-msgstr "? ברצונך  להשתמש wine איזה גירסת " 
+msgid "Which wine version do you want to use ?"
+msgstr "? ברצונך  להשתמש wine איזה גירסת"
 
 #: LNG_WINEVERSIONS_MUSTSPECIFY
-msgid "You must choose which version you want to download." 
-msgstr "אתה חייב לבחור באיזה גירסה ברצונך להוריד" 
+msgid "You must choose which version you want to download."
+msgstr "אתה חייב לבחור באיזה גירסה ברצונך להוריד"
 
 #: LNG_WINEVERSIONS_ALREADYINSTALLED
-msgid "This version has already been installed" 
-msgstr "גירסה זו הותקנה כבר" 
+msgid "This version has already been installed"
+msgstr "גירסה זו הותקנה כבר"
 
 #: LNG_WINEVERSIONS_RESETSESSION
-msgid "The session has been reset." 
-msgstr "סשן זה אופס" 
+msgid "The session has been reset."
+msgstr "סשן זה אופס"
 
 #: LNG_WINEVERSIONS_GAME
-msgid "To which game do you want to apply the modification ?" 
-msgstr "לאיזה משחק ברצונך  ליישם את שינוי זה" 
+msgid "To which game do you want to apply the modification ?"
+msgstr "לאיזה משחק ברצונך  ליישם את שינוי זה"
 
 #: LNG_WINEVERSIONS_NOWINE
-msgid "No wine version installed" 
-msgstr "  לא נמצאה Wine שום גירסת  " 
+msgid "No wine version installed"
+msgstr "לא נמצאה Wine שום גירסת"
 
 #: LNG_WINEVERSIONS_CHOOSEUNINSTALL
-msgid "Choose which version you want to uninstall." 
-msgstr "בחר איזה גירסה ברצונך להתקין" 
+msgid "Choose which version you want to uninstall."
+msgstr "בחר איזה גירסה ברצונך להתקין"
 
 #: LNG_WINEVERSIONS_CHOOSEDOWNLOAD
-msgid "Which wine version should I download?" 
-msgstr " ? ברצוני להוריד Wine  איזה גירסת " 
+msgid "Which wine version should I download?"
+msgstr "? ברצוני להוריד Wine  איזה גירסת"
 
 #: LNG_WINEVERSIONS_MENU_ASSIGN
-msgid "Assign a wineversion for a program" 
+msgid "Assign a wineversion for a program"
 msgstr "לתוכנה Wine הצב גירסת"
 
 #: LNG_WINEVERSIONS_MENU_INSTALL
-msgid "Install a wineversion" 
-msgstr "Wine התקן גירסת "
+msgid "Install a wineversion"
+msgstr "Wine התקן גירסת"
 
 #: LNG_WINEVERSIONS_MENU_UNASSIGN
-msgid "Unassign a wineversion" 
-msgstr "לתוכנה Wine החזר את גירסת ברירת המחדל של "   
+msgid "Unassign a wineversion"
+msgstr "לתוכנה Wine החזר את גירסת ברירת המחדל של"
 
 #: LNG_WINEVERSIONS_MENU_UNINSTALL
-msgid "Uninstall a wineversion" 
-msgstr "Wine הסר גירסת "   
-
-#: LNG_WINEVERSIONS_WINEVERSIONS
-msgid "WineVersions" 
-msgstr "WineVersions" 
+msgid "Uninstall a wineversion"
+msgstr "Wine הסר גירסת"
 
 #: LNG_OTHER
-msgid "Other" 
-msgstr "אחר" 
+msgid "Other"
+msgstr "אחר"
 
 #: LNG_EXEMPLE
-msgid "Exemple " 
-msgstr "דוגמה " 
+msgid "Exemple "
+msgstr "דוגמה "
 
 #: LNG_RESET
-msgid "Reset" 
-msgstr "אפס" 
+msgid "Reset"
+msgstr "אפס"
 
 #: LNG_OPTIONS_MENU
-msgid "Settings" 
-msgstr "הגדרות" 
+msgid "Settings"
+msgstr "הגדרות"
 
 #: LNG_OPTIONS_RESULT
-msgid "Test results" 
-msgstr "תוצאות בדיקות" 
+msgid "Test results"
+msgstr "תוצאות בדיקות"
 
 #: LNG_OPTIONS_NORESULT
-msgid "Glxgears did not produce any results." 
-msgstr " לא הניב שום תוצאות Glxgears " 
+msgid "Glxgears did not produce any results."
+msgstr "לא הניב שום תוצאות Glxgears"
 
 #: LNG_OPTIONS_INFOS_SYS
-msgid "System information:" 
-msgstr "מידע מערכת:" 
+msgid "System information:"
+msgstr "מידע מערכת:"
 
 #: LNG_OPTIONS_INFOS_YSYS
-msgid "Your system :" 
-msgstr "מערכת שלך:" 
+msgid "Your system :"
+msgstr "מערכת שלך:"
 
 #: LNG_OPTIONS_INFOS_KERNEL
-msgid "Your kernel :" 
-msgstr "הליבה שלך (kernel) :" 
+msgid "Your kernel :"
+msgstr "הליבה שלך (kernel) :"
 
 #: LNG_OPTIONS_INFOS_LANG
-msgid "System language :" 
-msgstr "שפת מערכת:" 
+msgid "System language :"
+msgstr "שפת מערכת:"
 
 #: LNG_OPTIONS_INFOS_USER
-msgid "Your user login :" 
-msgstr "שם המשתמש שלך :" 
+msgid "Your user login :"
+msgstr "שם המשתמש שלך :"
 
 #: LNG_OPTIONS_INFOS_NAMEMACHINE
-msgid "Your computer's name :" 
-msgstr "שם המחשב שלך:" 
+msgid "Your computer's name :"
+msgstr "שם המחשב שלך:"
 
 #: LNG_OPTIONS_INFOS_VIDEOCARD
-msgid "Your video card :" 
-msgstr "כרטיס הגרפי שלך :" 
+msgid "Your video card :"
+msgstr "כרטיס הגרפי שלך :"
 
 #: LNG_OPTIONS_INFOS_DISTRIB_ID
-msgid "Your distribution :" 
-msgstr "גירסת הפצה :" 
+msgid "Your distribution :"
+msgstr "גירסת הפצה :"
 
 #: LNG_OPTIONS_INFOS_RELEASE
-msgid "Your distribution version :" 
-msgstr "גירסת ההפצה שלך :" 
+msgid "Your distribution version :"
+msgstr "גירסת ההפצה שלך :"
 
 #: LNG_OPTIONS_INFOS_DDINFOS
-msgid "Space remaining on your hard disks :" 
-msgstr "מקום נותר שנשאר בדיסק הקשיח שלך :" 
+msgid "Space remaining on your hard disks :"
+msgstr "מקום נותר שנשאר בדיסק הקשיח שלך :"
 
 #: LNG_OPTIONS_INFOS_WINEINSTALLED
-msgid "Wine version installed :" 
-msgstr "מותקנת Wine גירסת :" 
+msgid "Wine version installed :"
+msgstr "מותקנת Wine גירסת :"
 
 #: LNG_OPTIONS_INFOS_WINECURRENT
-msgid "Wine version used by PlayOnLinux :" 
-msgstr " PlayOnLinux  במשומשת על ידי Wine גירסת :" 
+msgid "Wine version used by PlayOnLinux :"
+msgstr "PlayOnLinux  במשומשת על ידי Wine גירסת :"
 
 #: LNG_OPTIONS_MENU_INFORMATIONS
-msgid "Informations" 
-msgstr "מידע" 
+msgid "Informations"
+msgstr "מידע"
 
 #: LNG_INFORMATION
 msgid "Information about a game"
 msgstr "מידע על משחק"
-
-#: LNG_OPTIONS_TESTS
-msgid "Tests" 
-msgstr "בדיקות" 
 
 #: LNG_OPTIONS_LANGUAGE
 msgid "Language"
@@ -464,12 +474,12 @@ msgid "Panels"
 msgstr "פנלים"
 
 #: LNG_NEXT_RUN
-msgid "You must restart PlayOnLinux for the changes to take effect" 
-msgstr "כדי שהשינויים יפעלו PlayOnLinux אתה חייב להפעיל את" 
+msgid "You must restart PlayOnLinux for the changes to take effect"
+msgstr "כדי שהשינויים יפעלו PlayOnLinux אתה חייב להפעיל את"
 
 #: LNG_HAVE
-msgid "You have" 
-msgstr "יש לך" 
+msgid "You have"
+msgstr "יש לך"
 
 #: LNG_HELP
 msgid "Help"
@@ -492,200 +502,243 @@ msgid "Refresh"
 msgstr "רענון"
 
 #: LNG_WINEBOOSTER_WELCOME1
-msgid "Welcome on WineBooster, an optimization's script for Wine" 
-msgstr " Wine סקריפט אופטימיזציה ל ,Winebooster ברוך הבא ל " 
+msgid "Welcome on WineBooster, an optimization's script for Wine"
+msgstr "Wine סקריפט אופטימיזציה ל ,Winebooster ברוך הבא ל"
 
 #: LNG_WINEBOOSTER_WELCOME2
-msgid "Created by GNU_Raziel" 
-msgstr " GNU_Raziel נוצר על ידי" 
+msgid "Created by GNU_Raziel"
+msgstr "GNU_Raziel נוצר על ידי"
 
 #: LNG_WINEBOOSTER_WELCOME3
-msgid "If you does not know what to choose, LEAVE DEFAULTS !!!" 
-msgstr "!!!אם אתה לא יודע מה לבחור השאר ברירות מחדל " 
+msgid "If you does not know what to choose, LEAVE DEFAULTS !!!"
+msgstr "!!!אם אתה לא יודע מה לבחור השאר ברירות מחדל"
 
 #: LNG_WINEBOOSTER_GAME_CHOOSE
-msgid "Choose a game" 
-msgstr "בחר משחק" 
+msgid "Choose a game"
+msgstr "בחר משחק"
 
 #: LNG_WINEBOOSTER_GAME_ERROR
-msgid "You did not select a game" 
-msgstr "לא בחרת שום משחק" 
+msgid "You did not select a game"
+msgstr "לא בחרת שום משחק"
 
 #: LNG_WINEBOOSTER_WVERSION
-msgid "Which version of Windows would you like to use? (Values : vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )" 
-msgstr "? איזה גירסה של וינדוס תרצה להשתמש ( values: vista, win2003, winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )" 
+msgid ""
+"Which version of Windows would you like to use? (Values : vista, win2003, "
+"winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )"
+msgstr ""
+"? איזה גירסה של וינדוס תרצה להשתמש ( values: vista, win2003, winxp, win2k, "
+"winnt, winme, win98, win95, win31 - Default : winxp )"
 
 #: LNG_WINEBOOSTER_DDR
-msgid "Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)" 
-msgstr " DirectDraw Renderer בחר אופן  (Values : opengl, gdi - Default : gdi)" 
+msgid ""
+"Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)"
+msgstr "DirectDraw Renderer בחר אופן  (Values : opengl, gdi - Default : gdi)"
 
 #: LNG_WINEBOOSTER_VERTEXSHADER
-msgid "Activate VertexShader Mode? (Default : N)" 
-msgstr " ?VertexShader הפעל  (Default : N)" 
+msgid "Activate VertexShader Mode? (Default : N)"
+msgstr "?VertexShader הפעל  (Default : N)"
 
 #: LNG_WINEBOOSTER_PIXELSHADER
-msgid "Activate PixelShader Mode? (Default : N)" 
-msgstr " ? PixelShader הפעל (Default : N)" 
+msgid "Activate PixelShader Mode? (Default : N)"
+msgstr "? PixelShader הפעל (Default : N)"
 
 #: LNG_WINEBOOSTER_UGLSL
-msgid "Activate GLSL Support? (Default : N)" 
-msgstr " ?GLSL הפעל תמיכת(Default : N)" 
+msgid "Activate GLSL Support? (Default : N)"
+msgstr "?GLSL הפעל תמיכת(Default : N)"
 
 #: LNG_WINEBOOSTER_VMS
-msgid "How much memory does your graphics board have? (Default : 64)" 
-msgstr "?(ברירת מחדל 64 ) כמה זיכרון יש לכרטיס הגרפי שלך)" 
+msgid "How much memory does your graphics board have? (Default : 64)"
+msgstr "?(ברירת מחדל 64 ) כמה זיכרון יש לכרטיס הגרפי שלך)"
 
 #: LNG_WINEBOOSTER_ORM
-msgid "Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - Default : backbuffer)" 
-msgstr "? Offscreen Rendering ערכים) בחר) : backbuffer, pbuffer, fbo - Default : backbuffer)" 
+msgid ""
+"Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - "
+"Default : backbuffer)"
+msgstr ""
+"? Offscreen Rendering ערכים) בחר) : backbuffer, pbuffer, fbo - Default : "
+"backbuffer)"
 
 #: LNG_WINEBOOSTER_RTLM
-msgid "Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, textex, disabled - Default : auto)" 
-msgstr "Render Target Lock  ערכים) בחר): auto, readdraw, readtex, texdraw, textex, disabled - Default : auto)" 
+msgid ""
+"Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, "
+"textex, disabled - Default : auto)"
+msgstr ""
+"Render Target Lock  ערכים) בחר): auto, readdraw, readtex, texdraw, textex, "
+"disabled - Default : auto)"
 
 #: LNG_WINEBOOSTER_WDESKTOP
-msgid "Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION !!)? (Example : 1024x768 - Default : 0 = FullScreen)" 
-msgstr " (לא משתנה במשחק) ?Wine בחר תצורת חלונות ל  (דוגמה : 1024x768 - Default : 0 = FullScreen)" 
+msgid ""
+"Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION "
+"!!)? (Example : 1024x768 - Default : 0 = FullScreen)"
+msgstr ""
+"(לא משתנה במשחק) ?Wine בחר תצורת חלונות ל  (דוגמה : 1024x768 - Default : 0 = "
+"FullScreen)"
 
 #: LNG_WINEBOOSTER_WMANAGED
-msgid "Authorize your WM to manage Windows? ( Default : Y )" 
-msgstr "לנהל את חלונות Wm אשר ל ( Default : Y )" 
+msgid "Authorize your WM to manage Windows? ( Default : Y )"
+msgstr "לנהל את חלונות Wm אשר ל ( Default : Y )"
 
 #: LNG_WINEBOOSTER_WDXGRAB
-msgid "Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default : N )" 
-msgstr "? Wine למנוע גלישה מחלון  DirectXאפשר ל- ( Default : N )" 
+msgid ""
+"Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default "
+": N )"
+msgstr "? Wine למנוע גלישה מחלון  DirectXאפשר ל- ( Default : N )"
 
 #: LNG_WINEBOOSTER_WAUDIO
-msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)" 
-msgstr "? בחר מנהל התקן לכרטיס הקול(Values : oss, alsa - Default : alsa)" 
+msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)"
+msgstr "? בחר מנהל התקן לכרטיס הקול(Values : oss, alsa - Default : alsa)"
 
 #: LNG_WINEBOOSTER_AEMUL
-msgid "Emulate DirectSound Driver? (Default : N)" 
-msgstr "  ?DirectSound דמה התקן (Default : N)" 
+msgid "Emulate DirectSound Driver? (Default : N)"
+msgstr "?DirectSound דמה התקן (Default : N)"
 
 #: LNG_LI_PRESENTATION
-msgid "This script will allow you to install any game on PlayOnLinux and use it with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had been installed with an official script. Warning: We are unable to guarantee that your game will work perfectly." 
-msgstr "ולהשתמש בכל הכלים PlayOnLinux סקריפט זה יאפשר לך להתקין כל משחק ב (WineBooster, WineMaster, WineConfig, etc) כאילו כמו שהותקן עם סקריפט רשמי הזהרה: איננו יכולים להבטיח שמשחק יעבוד בצורה מושלמת." 
+msgid ""
+"This script will allow you to install any game on PlayOnLinux and use it "
+"with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had "
+"been installed with an official script. Warning: We are unable to guarantee "
+"that your game will work perfectly."
+msgstr ""
+"ולהשתמש בכל הכלים PlayOnLinux סקריפט זה יאפשר לך להתקין כל משחק ב "
+"(WineBooster, WineMaster, WineConfig, etc) כאילו כמו שהותקן עם סקריפט רשמי "
+"הזהרה: איננו יכולים להבטיח שמשחק יעבוד בצורה מושלמת."
 
 #: LNG_ACTION
-msgid "Action" 
-msgstr "פעולה" 
+msgid "Action"
+msgstr "פעולה"
 
 #: LNG_LI_NEW
-msgid "New" 
-msgstr " חדשה (Prefix)התקן תוכנה בתחילית "   
+msgid "New"
+msgstr "חדשה (Prefix)התקן תוכנה בתחילית"
 
 #: LNG_LI_PATCH
-msgid "Edit" 
+msgid "Edit"
 msgstr "ערוך אפליקציה שכבר מותקנת"
 
 #: LNG_CHOICE
-msgid "Please make a choice" 
-msgstr "בבקשה בצע בחירה" 
+msgid "Please make a choice"
+msgstr "בבקשה בצע בחירה"
 
 #: LNG_LI_CODENAME
-msgid "Please type a code name for the wine prefix of your game. This name shouldn't contain spaces." 
-msgstr "של המשחק.לשם אסור להכיל רווחים Wine בבקשה הקלד שם קוד בשביל תחילית  " 
+msgid ""
+"Please type a code name for the wine prefix of your game. This name "
+"shouldn't contain spaces."
+msgstr "של המשחק.לשם אסור להכיל רווחים Wine בבקשה הקלד שם קוד בשביל תחילית"
 
 #: LNG_LI_EXIST
-msgid "This codename already exists in PlayOnLinux." 
-msgstr "PlayOnLinux  שם קוד זה כבר קיים ב " 
+msgid "This codename already exists in PlayOnLinux."
+msgstr "PlayOnLinux  שם קוד זה כבר קיים ב"
 
 #: LNG_LI_INSTALLFILE
-msgid "Please choose the file to execute" 
-msgstr "בבקשה תבחר שם קובץ לבצע" 
+msgid "Please choose the file to execute"
+msgstr "בבקשה תבחר שם קובץ לבצע"
 
 #: LNG_LI_CHOOSEFILE
-msgid "You have to choose a file !" 
-msgstr "! אתה חייב לבחור שם קובץ" 
+msgid "You have to choose a file !"
+msgstr "! אתה חייב לבחור שם קובץ"
 
 #: LNG_LI_SHORTCUT
-msgid "Do you want to create a shortcut to the application in PlayOnLinux ? If you patched a game, you should probably select 'no'." 
-msgstr "?PlayOnLinux האם ברצונך ליצור קיצור דרך חדש ב"   
+msgid "Do you want to create a shortcut to the application in PlayOnLinux ?"
+msgstr ""
+
+msgid "If you patched a game, you should probably select no."
+msgstr ""
 
 #: LNG_LI_EXEC
-msgid "Choose the file to exec the game." 
-msgstr "תבחר את הקובץ שמפעיל את המשחק" 
+msgid "Choose the file to exec the game."
+msgstr "תבחר את הקובץ שמפעיל את המשחק"
 
 #: LNG_LI_GIVENAME
-msgid "Please type a name for your shortcut." 
-msgstr "אנא הקלד שם בשביל קיצור הדרך" 
+msgid "Please type a name for your shortcut."
+msgstr "אנא הקלד שם בשביל קיצור הדרך"
 
 #: LNG_SCRIPT_WAIT
-msgid "Please wait while the installation of the game is prepared" 
-msgstr "בבקשה המתן בזמן ההכנה בשביל  התקנת המשחק" 
+msgid "Please wait while the installation of the game is prepared"
+msgstr "בבקשה המתן בזמן ההכנה בשביל  התקנת המשחק"
 
 #: LNG_DOWNLOAD
-msgid "Please wait while the game is downloaded..." 
+msgid "Please wait while the game is downloaded..."
 msgstr "Download"
 
 #: LNG_DOWNLOAD_LIB
-msgid "Please wait while the library are downloaded..." 
-msgstr "בבקשה המתן בזמן שהספריות מורדות" 
+msgid "Please wait while the library are downloaded..."
+msgstr "בבקשה המתן בזמן שהספריות מורדות"
 
 #: LNG_DOWNLOAD_FINISHED
-msgid "Download finished" 
-msgstr "ההורדה הושלמה" 
+msgid "Download finished"
+msgstr "ההורדה הושלמה"
 
 #: LNG_WAIT
-msgid "Please wait..." 
-msgstr "....אנא המתן" 
+msgid "Please wait..."
+msgstr "....אנא המתן"
 
 #: LNG_POLSC
-msgid "Welcome to PolScriptCreator.\nThis tools may help you to build basic scripts. The scripts will be saved on your Desktop. Thanks to Christhaal." 
-msgstr " PolScriptCreator ברוך הבא ל.\n                                          סקריפטים  אלו ישמרו בשולחן העבודה וכלי זה יעזור לך לבנות סקריפט בסיסי תודה לכריסט'אל  " 
+msgid ""
+"Welcome to PolScriptCreator.\n"
+"This tools may help you to build basic scripts. The scripts will be saved on "
+"your Desktop. Thanks to Christhaal."
+msgstr ""
+"PolScriptCreator ברוך הבא ל.\n"
+"                                          סקריפטים  אלו ישמרו בשולחן העבודה "
+"וכלי זה יעזור לך לבנות סקריפט בסיסי תודה לכריסט'אל"
 
 #: LNG_GIT_WELCOME1
-msgid "Welcome on WineGIT, a GIT compilation and installation script for WineVersion" 
-msgstr "Wine והתקנות סקריפטים לגירסאות GIT אוספי  WineGIT ברוך הבא ל " 
+msgid ""
+"Welcome on WineGIT, a GIT compilation and installation script for WineVersion"
+msgstr "Wine והתקנות סקריפטים לגירסאות GIT אוספי  WineGIT ברוך הבא ל"
 
 #: LNG_GIT_KEEP
-msgid "Keep the actual git ? (Values : Y ou N - Default : N)" 
-msgstr "Keep the actual git ? (Values : Y ou N - Default : N)" 
+msgid "Keep the actual git ? (Values : Y ou N - Default : N)"
+msgstr "Keep the actual git ? (Values : Y ou N - Default : N)"
 
 #: LNG_GIT_KEEP2
-msgid "Please use ANOTHER name for the last git" 
-msgstr "Please use ANOTHER name for the last git" 
+msgid "Please use ANOTHER name for the last git"
+msgstr "Please use ANOTHER name for the last git"
 
 #: LNG_GIT_RENAME
-msgid "Please give a new name for installed git (example : git-06242007)" 
-msgstr " שהותקן git בבקשה תן שם ל (example : git-06242007)" 
+msgid "Please give a new name for installed git (example : git-06242007)"
+msgstr "שהותקן git בבקשה תן שם ל (example : git-06242007)"
 
 #: LNG_GIT_NAME_ERROR
-msgid "You did not specify a name !!" 
-msgstr "!!!לא ציינת שום שם" 
+msgid "You did not specify a name !!"
+msgstr "!!!לא ציינת שום שם"
 
 #: LNG_GIT_NAME_DUPLICATE_ERROR
-msgid "This name already exist !!" 
-msgstr " !!!שם זה כבר קיים" 
+msgid "This name already exist !!"
+msgstr "!!!שם זה כבר קיים"
 
 #: LNG_GIT_DOWNLOAD
-msgid "git download, please wait..." 
-msgstr "....נא המתן git מוריד " 
+msgid "git download, please wait..."
+msgstr "....נא המתן git מוריד"
 
 #: LNG_GIT_COMPILATION
-msgid "git's compilation and installation, please wait..." 
-msgstr ".....קומפילציה והתקנה נא המתן git " 
+msgid "git's compilation and installation, please wait..."
+msgstr ".....קומפילציה והתקנה נא המתן git"
 
 #: LNG_GIT_FINISHED
-msgid "Installation successfull" 
-msgstr "ההתקנה הושלמה בהצלחה" 
+msgid "Installation successfull"
+msgstr "ההתקנה הושלמה בהצלחה"
 
 #: LNG_DOWNLOADING_INSTALLER
-msgid "Please wait while the installer is downloaded..." 
-msgstr "......נא המתן בזמן שקובץ ההתקנה מורד" 
+msgid "Please wait while the installer is downloaded..."
+msgstr "......נא המתן בזמן שקובץ ההתקנה מורד"
 
 #: LNG_MENU_POL_1
-msgid "Do you want to add a \"PlayOnLinux\" menu item to your GNOME or KDE menu ? ?\nIt will contain all the application shorcuts you create." 
-msgstr "  ?Gnome או  Kde לתפריט  \"PlayOnLinux\"  האם ברצונך להוסיף את\n יכיל את כל קיצורי הדרך של התוכנות שתעשה" 
+msgid ""
+"Do you want to add a \"PlayOnLinux\" menu item to your GNOME or KDE menu ? "
+"?\n"
+"It will contain all the application shorcuts you create."
+msgstr ""
+"?Gnome או  Kde לתפריט  \"PlayOnLinux\"  האם ברצונך להוסיף את\n"
+" יכיל את כל קיצורי הדרך של התוכנות שתעשה"
 
 #: LNG_MENU_POL_2
 msgid "Do you want to disable the \"PlayOnLinux\" menu ?"
-msgstr " ? \"PlayOnLinux\" האם ברצונך לבטל את תפריט "
+msgstr "? \"PlayOnLinux\" האם ברצונך לבטל את תפריט"
 
 #: LNG_FILE_CHOOSE
 msgid "Please choose a valid PlayOnLinux file to run"
-msgstr "להריץ PlayOnLinux בבקשה תבחר קובץ ולידי של "
+msgstr "להריץ PlayOnLinux בבקשה תבחר קובץ ולידי של"
 
 #: LNG_APP_CHOOSE
 msgid "Please choose an application to install"
@@ -709,7 +762,7 @@ msgstr "רשימת התוכנות עודכנה בהצלחה"
 
 #: LNG_UPDATEW_FINISHED
 msgid "The prefix has been successfully updated"
-msgstr "עודכנה בהצלחה(Prefix)תחילית "
+msgstr "עודכנה בהצלחה(Prefix)תחילית"
 
 #: LNG_UPDATING
 msgid "Updating"
@@ -728,24 +781,24 @@ msgid "Next"
 msgstr "הבא"
 
 #: LNG_CANCEL
-msgid "Cancel" 
-msgstr "ביטול" 
+msgid "Cancel"
+msgstr "ביטול"
 
 #: LNG_FINISHED
-msgid "Finished" 
-msgstr "הסתיים" 
+msgid "Finished"
+msgstr "הסתיים"
 
 #: LNG_FINISHED_
 msgid "Finish"
 msgstr "סיום"
 
 #: LNG_STEP
-msgid "Step" 
-msgstr "Step" 
+msgid "Step"
+msgstr "Step"
 
 #: LNG_SUR
-msgid "of" 
-msgstr "of" 
+msgid "of"
+msgstr "of"
 
 #: LNG_DOWNLOAD_CLICK
 msgid "Click on download to start."
@@ -772,8 +825,16 @@ msgid "Browse"
 msgstr "Browse"
 
 #: LNG_KILL_WINSERVER
-msgid "Warning ! Before killing the wineserver, please assure that there are no wine applications running.\n\nAre you sure you want to kill the wineserver ?"
-msgstr "שפועלים Wine בדוק אם אין הליכים של  wineserverהזהרה!!!!!לפני שאתה הורג את אפלקציה של\n\n ?Wineserver האם אתה בטוח שברצונך להרוג את הליך ?"
+msgid ""
+"Warning ! Before killing the wineserver, please assure that there are no "
+"wine applications running.\n"
+"\n"
+"Are you sure you want to kill the wineserver ?"
+msgstr ""
+"שפועלים Wine בדוק אם אין הליכים של  wineserverהזהרה!!!!!לפני שאתה הורג את "
+"אפלקציה של\n"
+"\n"
+" ?Wineserver האם אתה בטוח שברצונך להרוג את הליך ?"
 
 #: LNG_WINELOOK1
 msgid "Please choose a theme"
@@ -789,7 +850,7 @@ msgstr "התקן חבילה"
 
 #: LNG_EXPERT_BOOSTERM
 msgid "Advanced wine configuration"
-msgstr "מתקדמת Wine הגדרת "
+msgstr "מתקדמת Wine הגדרת"
 
 #: LNG_WINEGIT
 msgid "Wine GIT"
@@ -804,8 +865,8 @@ msgid "Wine theme"
 msgstr "Wine מוטיב מרכזי"
 
 #: LNG_SLOGAN
-msgid "Run you Windows programs on Linux !"
-msgstr "!!!Linux על  Windows הרץ תוכניות של"
+msgid "Run your Windows programs on Linux !"
+msgstr ""
 
 #: LNG_LOGO
 msgid "The logo are made by Crystal Project"
@@ -816,8 +877,12 @@ msgid "Windows designed by asimov"
 msgstr "Windows designed by asimov"
 
 #: LNG_COPYRIGHT
-msgid "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
-msgstr "(C) PlayOnLinux team 2008\nUnder GPL licence version 3"
+msgid ""
+"(C) PlayOnLinux team 2008\n"
+"Under GPL licence version 3"
+msgstr ""
+"(C) PlayOnLinux team 2008\n"
+"Under GPL licence version 3"
 
 #: LNG_MAIN_INSTALL_WORKONLINUX
 msgid "Application"
@@ -833,31 +898,31 @@ msgstr "Dosbox אפליקציית"
 
 #: LNG_MAIN_INSTALL_PKG
 msgid "Install a .pol package"
-msgstr ".pol התקן חבילת "
+msgstr ".pol התקן חבילת"
 
 #: LNG_LI_CHOOS_ACTION
 msgid "What do you want to do ?"
-msgstr " ?מה ברצונך לעשות"
+msgstr "?מה ברצונך לעשות"
 
 #: LNG_LI_NEW
-msgid "Install a program in a new prefix"   
-msgstr " חדשה (Prefix)התקן תוכנה בתחילית "   
+msgid "Install a program in a new prefix"
+msgstr "חדשה (Prefix)התקן תוכנה בתחילית"
 
 #: LNG_LI_PATCH
 msgid "Edit an application already installed"
 msgstr "ערוך אפליקציה שכבר מותקנת"
 
 #: LNG_LI_CHOOSEPREFIX
-msgid "What is the prefix of your program ?"   
-msgstr " ?של התוכנה שלך(Prefix)מהי התחילית"   
+msgid "What is the prefix of your program ?"
+msgstr "?של התוכנה שלך(Prefix)מהי התחילית"
 
 #: LNG_LI_SHORTCUT
-msgid "Would you like to make a new shortcut in PlayOnLinux"   
-msgstr "?PlayOnLinux האם ברצונך ליצור קיצור דרך חדש ב"   
+msgid "Would you like to make a new shortcut in PlayOnLinux"
+msgstr "?PlayOnLinux האם ברצונך ליצור קיצור דרך חדש ב"
 
 #: LNG_LI_DELETE
 msgid "Delete a prefix"
-msgstr " (Prefix)מחיקת תחילית"
+msgstr "(Prefix)מחיקת תחילית"
 
 #: LNG_LI_DELETE_PREFIXE
 msgid "Are you sure you want to delete that prefixe ?"
@@ -865,7 +930,7 @@ msgstr "?זאתי(Prefix) האם אתה בטוח רוצה למחוק את תחי
 
 #: LNG_LI_PREFIXE_DELETED
 msgid "The prefix has been deleted"
-msgstr " נמחקה(Prefix)התחילית"
+msgstr "נמחקה(Prefix)התחילית"
 
 #: LNG_WINEVERSION_ACTIONS
 msgid "Choose an action to do"
@@ -873,31 +938,31 @@ msgstr "תבחר פעולה שברצונך לעשות"
 
 #: LNG_WINEVERSIONS_MENU_INSTALL
 msgid "Install a wine version"
-msgstr "Wine התקן גירסת "
+msgstr "Wine התקן גירסת"
 
 #: LNG_WINEVERSIONS_MENU_GIT
 msgid "Install Wine GIT"
-msgstr " Wine GIT התקן"
+msgstr "Wine GIT התקן"
 
 #: LNG_WINEVERSIONS_MENU_ASSIGN
 msgid "Assign a wine version to a programm"
 msgstr "לתוכנה Wine הצב גירסת"
 
 #: LNG_WINEVERSIONS_MENU_UNASSIGN
-msgid "Put back the default wine version to a program"   
-msgstr "לתוכנה Wine החזר את גירסת ברירת המחדל של "   
+msgid "Put back the default wine version to a program"
+msgstr "לתוכנה Wine החזר את גירסת ברירת המחדל של"
 
 #: LNG_WINEVERSIONS_MENU_UNINSTALL
-msgid "Remove a wine version"   
-msgstr "Wine הסר גירסת "   
+msgid "Remove a wine version"
+msgstr "Wine הסר גירסת"
 
 #: LNG_WINEVERSIONS_MENU_SESSION
-msgid "Session"   
-msgstr "סשן"   
+msgid "Session"
+msgstr "סשן"
 
 #: LNG_WINEVERSIONS_GAMETOEDIT
-msgid "Which program do you want to edit ?"   
-msgstr "? איזה תוכנה ברצונך לערוך"   
+msgid "Which program do you want to edit ?"
+msgstr "? איזה תוכנה ברצונך לערוך"
 
 #: LNG_TEST_3D
 msgid "I'm going to test your 3D hardware. It will take about 2 minutes"
@@ -1199,3 +1264,384 @@ msgstr "Plugins manager"
 msgid "No more alert me"
 msgstr "No more alert me"
 
+#: LNG_GAME_UNINSTALL
+msgid "Do you really want to uninstall $delete_var ?"
+msgstr ""
+
+msgid "Welcome in PlayOnLinux Installation Wizard"
+msgstr ""
+
+msgid "PlayOnLinux Wizard"
+msgstr ""
+
+msgid "This assistant will help you to install "
+msgstr ""
+
+msgid " on your computer."
+msgstr ""
+
+msgid "This program is made by "
+msgstr ""
+
+msgid "This installation program is provided by "
+msgstr ""
+
+msgid " will be installed in "
+msgstr ""
+
+msgid "PlayOnLinux is not responsible of your way to use these scripts"
+msgstr ""
+
+msgid "Click on next to start"
+msgstr ""
+
+msgid "I Agree"
+msgstr ""
+
+msgid "Create a shortcut :"
+msgstr ""
+
+msgid "Do you want a shortcut for "
+msgstr ""
+
+msgid "On your desktop"
+msgstr ""
+
+msgid "In your menu"
+msgstr ""
+
+msgid "has been installed successfully"
+msgstr ""
+
+msgid "Click on next to continue"
+msgstr ""
+
+msgid "This assistant will help you to uninstall $delete_var."
+msgstr ""
+
+msgid "PlayOnLinux Uninstaller"
+msgstr ""
+
+msgid "Uninstalling..."
+msgstr ""
+
+msgid "Cannot find the shortcut"
+msgstr ""
+
+msgid "has been uninstalled successfully"
+msgstr ""
+
+msgid "Do you want to delete the prefix : $prefix"
+msgstr ""
+
+msgid "Please wait while the wine prefix is created..."
+msgstr ""
+
+msgid "Wine prefix configuration"
+msgstr ""
+
+msgid "Downloading updates..."
+msgstr ""
+
+msgid "PlayOnLinux update"
+msgstr ""
+
+msgid "Connect"
+msgstr ""
+
+msgid "Disconnect"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Welcome in PlayOnLinux autorun assistant."
+msgstr ""
+
+msgid "It will help you to help an application from a CD-ROM."
+msgstr ""
+
+msgid "Looking for runnable CD-ROM"
+msgstr ""
+
+msgid "PlayOnLinux is installing your application"
+msgstr ""
+
+msgid "PlayOnLinux is installing your application ..."
+msgstr ""
+
+msgid "Please press Next only when installation is fully complete."
+msgstr ""
+
+msgid "Please type a name for the wine prefix of your application."
+msgstr ""
+
+msgid "This name shouldn't contain spaces."
+msgstr ""
+
+msgid "Welcome in PlayOnLinux manual Installation"
+msgstr ""
+
+msgid "This wizard will help you to install a directx patch in playonlinux"
+msgstr ""
+
+msgid "The patch will be applied in :"
+msgstr ""
+
+msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
+msgstr ""
+
+msgid ""
+"This wizard will help you to execute a non-official PlayOnLinux Script"
+msgstr ""
+
+msgid "Choose a valid PlayOnLinux script to run"
+msgstr ""
+
+msgid "Wineserver killed"
+msgstr ""
+
+msgid "Installed Wine Versions :"
+msgstr ""
+
+msgid "Available Wine Versions :"
+msgstr ""
+
+msgid "Wine Versions"
+msgstr ""
+
+msgid "Extracting wine ..."
+msgstr ""
+
+msgid "Wine has been installed successfully"
+msgstr ""
+
+msgid ""
+"This wizard will help you to install wine $version in PlayOnLinux environment"
+msgstr ""
+
+msgid "First use of PlayOnLinux"
+msgstr ""
+
+msgid "Education"
+msgstr ""
+
+msgid ""
+"Welcome in PlayOnLinux first use assistant. Please ensure you are connected "
+"to the Internet."
+msgstr ""
+
+msgid "PlayOnLinux application list update"
+msgstr ""
+
+msgid "Please read and accept this"
+msgstr ""
+
+msgid "Microsoft fonts"
+msgstr ""
+
+msgid "Installing Microsoft Fonts. Please wait..."
+msgstr ""
+
+msgid "Microsoft Fonts has been installed successfully"
+msgstr ""
+
+msgid "No description."
+msgstr ""
+
+msgid "Default terminal"
+msgstr ""
+
+msgid "Default browser"
+msgstr ""
+
+msgid "Default programs"
+msgstr ""
+
+msgid "Installing fonts"
+msgstr ""
+
+msgid "Downloading fonts"
+msgstr ""
+
+msgid "Installing"
+msgstr ""
+
+msgid "Refresh the repository"
+msgstr ""
+
+msgid "Join a channel"
+msgstr ""
+
+msgid "Enable PlayOnLinux Messenger"
+msgstr ""
+
+msgid "Configure this application"
+msgstr ""
+
+msgid "PlayOnLinux applications configurator"
+msgstr ""
+
+msgid "Welcome into PlayOnLinux applications configurator."
+msgstr ""
+
+msgid "This wizard will help you to configure :"
+msgstr ""
+
+msgid "The following wine prefix will be updated :"
+msgstr ""
+
+msgid ""
+"Be carreful ! PlayOnLinux will need to kill all the programs running in this "
+"prefix !"
+msgstr ""
+
+msgid "Please choose an action"
+msgstr ""
+
+msgid "Kill all the prefix process"
+msgstr ""
+
+msgid "Use advanced wine configuration plugin"
+msgstr ""
+
+msgid "Use PlayOnLinux's configurator for"
+msgstr ""
+
+msgid "Simulate Windows reboot"
+msgstr ""
+
+msgid "Running regedit"
+msgstr ""
+
+msgid "Running wine configurator"
+msgstr ""
+
+msgid "Running advanced wine configurator"
+msgstr ""
+
+msgid "Running specific wine configurator"
+msgstr ""
+
+msgid "Killing process in the prefix .."
+msgstr ""
+
+msgid ""
+"Do you want to configure your prefix before installing your application ?"
+msgstr ""
+
+msgid ""
+"Are you sure you want to close all the PlayOnLinux applications opened ?"
+msgstr ""
+
+msgid "Go to the application directory"
+msgstr ""
+
+msgid "Set the icon"
+msgstr ""
+
+msgid "What do you want to do before installation ?"
+msgstr ""
+
+msgid "Use WineTricks"
+msgstr ""
+
+msgid "Close all"
+msgstr ""
+
+msgid "Close this application"
+msgstr ""
+
+msgid "Donate"
+msgstr ""
+
+msgid "Highest rated"
+msgstr ""
+
+msgid "Most downloaded"
+msgstr ""
+
+msgid "Patches"
+msgstr ""
+
+msgid "Testing"
+msgstr ""
+
+#~ msgid "English"
+#~ msgstr "Hebrew"
+
+#~ msgid ""
+#~ "PlayOnLinux is running in safe mode\n"
+#~ "Please check the GUI mode"
+#~ msgstr ""
+#~ "PlayOnLinux is running in safe mode\n"
+#~ "Please check the GUI mode"
+
+#~ msgid ""
+#~ "The community's repository is enabled.\n"
+#~ "Do you want to disable it ?"
+#~ msgstr ""
+#~ ".מאגר הקהילה פעיל\n"
+#~ "? האם ברצונך להעביר למצב לא פעיל"
+
+#~ msgid ""
+#~ "The community's repository is disabled.\n"
+#~ "Do you want to enable it ?\n"
+#~ "WARNING : PlayOnLinux isn't responsible for these scripts."
+#~ msgstr ""
+#~ "מאגר הקהילה לא פעיל\n"
+#~ " ?האם ברצונך להפעיל את מאגר הקהילה\n"
+#~ " הזהרה :  פלייאונלינוקס אינה אחראית על סקריפטים אלו"
+
+#~ msgid ""
+#~ "The WorkOnLinux's repository is enabled.\n"
+#~ "Do you want to disable it ?"
+#~ msgstr ""
+#~ "מופעלים WorkOnLinux's מאגרי.\n"
+#~ " ?האם ברצונך להפוך אותם ללא פעילים"
+
+#~ msgid ""
+#~ "The WorkOnLinux's repository is disabled.\n"
+#~ "Do you want to enable it ?\n"
+#~ "WARNING : PlayOnLinux isn't responsible for these scripts."
+#~ msgstr ""
+#~ "לא פעילים WorkOnLinux's מאגרי.\n"
+#~ " ?האם ברצונך להפוך אותם לפעילים \n"
+#~ "הזהרה! :פלייאונלינוקס לא אחראית על סקריפטים אלו!!ו"
+
+#~ msgid "Finished. Please restart PlayOnLinux"
+#~ msgstr "סיום!:נא להפעיל את פלייאונלינוקס מחדש"
+
+#~ msgid "You have to install zenity or kdialog to run the script."
+#~ msgstr "כדי להשתמש בסקריפט זה Kdialog  או  Zenity  אתה צריך להתקין"
+
+#~ msgid ""
+#~ "The website of PlayOnLinux is unavailable,\n"
+#~ "Please assure you are connected to internet."
+#~ msgstr ""
+#~ "לא נמצא PlayOnLinux האתר של,\n"
+#~ " בדוק חיבור אל האינטרנט"
+
+#~ msgid ""
+#~ "An updated version of PlayOnLinux is available. Please visit the website."
+#~ msgstr "זמינה,נא בדוק באתר PlayOnLinux גירסה חדשה של"
+
+#~ msgid "Microsoft fonts aren't installed; I'll install them for you."
+#~ msgstr "הפונטים של מיקרוסופט לא מותקנים,אני יתקין את זה בשבילך"
+
+#~ msgid "Choose your preferred GUI."
+#~ msgstr "בחר את תצורת המסך המועדפת עליך"
+
+#~ msgid "WineVersions"
+#~ msgstr "WineVersions"
+
+#~ msgid "Tests"
+#~ msgstr "בדיקות"
+
+#~ msgid ""
+#~ "Do you want to create a shortcut to the application in PlayOnLinux ? If you "
+#~ "patched a game, you should probably select 'no'."
+#~ msgstr "?PlayOnLinux האם ברצונך ליצור קיצור דרך חדש ב"
+
+#~ msgid "Run you Windows programs on Linux !"
+#~ msgstr "!!!Linux על  Windows הרץ תוכניות של"

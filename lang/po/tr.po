@@ -1,16 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Turkish translation for playonlinux
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the playonlinux package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pol\n"
-"Report-Msgid-Bugs-To: Tinou\n"
+"Project-Id-Version: playonlinux\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-01-11 18:43+0100\n"
-"PO-Revision-Date: 2010-08-25 09:43+0000\n"
-"Last-Translator: PlayOnLinux <launchpad@playonlinux.com>\n"
-"Language-Team: ua_UA.UTF-8 <LL@li.org>\n"
+"PO-Revision-Date: 2010-08-25 15:26+0000\n"
+"Last-Translator: Ali Isingor <isingor@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,83 +19,79 @@ msgstr ""
 
 #: LNG_WINE_REBOOT
 msgid "Simulating Windows reboot"
-msgstr "Імітується перезавантаження Windows"
+msgstr ""
 
 #: LNG_WINE_PREFIXCREATE
 msgid "Creating Wine prefix"
-msgstr "Створення префіксу Wine"
+msgstr ""
 
 #: LNG_WINE_ASKFORCDROM
 msgid "Where is your CD-ROM mounted?"
-msgstr "Вкажіть точку монтування CD-ROM (За замовчуванням : /media/cdrom/)"
+msgstr ""
 
 #: LNG_WINE_ERRORCDROM
 msgid "Error : Unable to find the CD-ROM !"
-msgstr "Помилка : Неможливо знайти CD-ROM !"
+msgstr "Hata : CD- ROM Bulunamadı !"
 
 #: LNG_MOUNT_CDROM
 msgid "Please mount the CD-ROM"
-msgstr "Будь ласка, змонтуйте CD-ROM"
+msgstr ""
 
 #: LNG_MISSING
 msgid "Missing program :"
-msgstr "Не встановлена(ні) програма(и) :"
+msgstr "Kayıp program :"
 
 #: LNG_MISSING_ERROR
 msgid ""
 "One or more program(s) are missing. Please install them and run the script "
 "again."
 msgstr ""
-"Одна або декілька програм не встановлені. Будь ласка, встановіть їх і "
-"запустіть скрипт повторно."
+"Bir ya da daha fazla sayıda program bulunamadı. Lütfen bunları kurun ve "
+"betiği tekrar çalıştırın."
 
 #: LNG_3D_MISSING
 msgid ""
 "You don't seem to have 3D acceleration !\n"
 "We advise you install and enable it."
 msgstr ""
-"Можливо Ваш відеодрайвер не підтримує 3D прискорення !\n"
-" Ми рекомендуємо встановити драйвер з його підтримкою."
+"3B hızlandırma özelliğiniz yok.\n"
+"Bu özelliği kurmanızı ve etkinleştirmenizi öneririz."
 
 #: LNG_GAME_NOT_INSTALLED
 msgid "The game you want to run isn't installed."
-msgstr "Гра, яку Ви намагаєтесь запустити не встановлена."
+msgstr "Çalıştırmak istediğiniz oyun kurulu değil."
 
 #: LNG_GAME_GAMES_MISSING
 msgid ""
 "No game.\n"
 "Try updating PlayOnLinux."
 msgstr ""
-"Немає гри.\n"
-" Спробуйте оновити PlayOnLinux."
+"Oyun yık.\n"
+"PlayOnLinux'u güncellemeyi deneyin."
 
 #: LNG_GAME_PATCHS_MISSING
 msgid ""
 "No patch\n"
 "Try updating PlayOnLinux."
 msgstr ""
-"Немає патчу.\n"
-" Спробуйте оновити PlayOnLinux."
 
 #: LNG_GAME_ADDON_MISSING
 msgid ""
 "No expansions.\n"
 "Try to update PlayOnLinux."
 msgstr ""
-"Немає доповнення.\n"
-" Спробуйте оновити PlayOnLinux."
 
 #: LNG_GAME_TEST_GAME
 msgid "You haven't installed any games."
-msgstr "Ви не встановили жодної игры."
+msgstr "Herhangi bir oyun kurmadınız."
 
 #: LNG_GAME_ALREADY_INSTALLED
 msgid ""
 "Installation failed\n"
 "The game might already be installed."
 msgstr ""
-"Встановлення завершилось помилкою.\n"
-" Можливо гра вже встановлена."
+"Kurulum başarısız oldu.\n"
+"Oyun zaten kurulu olabilir."
 
 #: LNG_GAME_NO_SCRIPT
 msgid ""
@@ -103,104 +99,101 @@ msgid ""
 "Unable to find the game's script.\n"
 "Try to update $TITRE"
 msgstr ""
-"Встановлення завершилось помилкою.\n"
-" Неможливо знайти скрипт гры.\n"
-" Спробуйте оновити $TITRE"
 
 #: LNG_GAME_DOWNLOAD_ICONE
 msgid "Please wait while the icon is downloaded."
-msgstr "Будь ласка, дочекайтесь завантаження іконки."
+msgstr "Simge indirilirken lütfen bekleyin."
 
 #: LNG_GAME_DESKTOP_ICONE
 msgid "Do you want a shortcut on your desktop ?"
-msgstr "Створити посилання на Робочому столі ?"
+msgstr "Masaüstünüzde bir kısayol istiyor musunuz?"
 
 #: LNG_GAME_MENU_ICONE
 msgid "Do you want a shortcut in your menu ?"
-msgstr "Створити посилання у Вашому меню ?"
+msgstr "Uygulamalar Menüsünde kısayol istiyor musunuz?"
 
 #: LNG_NET_POL_ERR
 msgid "The website of PlayOnLinux is unavailable."
-msgstr ""
+msgstr "PlayOnLinux web sitesine erişilemiyor."
 
 msgid "Please assure you are connected to internet."
-msgstr ""
+msgstr "Lütfen İnternet bağlantınızı kontrol edin."
 
 #: LNG_NET_CHECK
 msgid "Checking network.."
-msgstr "Перевірка мережі.."
+msgstr "Ağı denetliyor.."
 
 #: LNG_NET_CHECK_FAILED
 msgid "You are not connected on the internet."
-msgstr "Ви не підключені до інтернету."
+msgstr "İnternet'e bağlı değilsiniz."
 
 #: LNG_NET_CHECK_SUCCESS
 msgid "Network is available."
-msgstr "Мережа недосяжна."
+msgstr "Ağ erişilebilir."
 
 #: LNG_NET_CHECK_LOST
 msgid "Network is available, but some packets have failed"
-msgstr "Мережа приєднана, але деякі пакети не завантажені"
+msgstr "Ağ erişilebilir ama bazı veri paketleri kaybediliyor."
 
 #: LNG_MAIN_UPDATE
 msgid "Please wait while the updates are downloaded..."
-msgstr "Будь ласка, дочекайтесь завантаження оновлень..."
+msgstr ""
 
 #: LNG_MAIN_POL_UPDATE
 msgid "An updated version of PlayOnLinux is available."
-msgstr ""
+msgstr "PlayOnLinux'un daha güncel bir sürümü mevcut."
 
 #: LNG_MAIN_UPDATE_SUCCES
 msgid "The updates have been successfully installed."
-msgstr "Оновлення були успішно встановлено."
+msgstr "Güncellemeler başarıyla kuruldu."
 
 #: LNG_MAIN_MENU
 msgid "File"
-msgstr "Файл"
+msgstr "Dosya"
 
 #: LNG_MAIN_MENU_ITEM_PLAY
 msgid "Run"
-msgstr "Запуск"
+msgstr "Çalıştır"
 
 #: LNG_MAIN_MENU_ITEM_INSTALL
 msgid "Install"
-msgstr "Встановлення"
+msgstr "Kur"
 
 #: LNG_MAIN_MENU_ITEM_EXPERT
 msgid "Tools"
-msgstr "Утиліти"
+msgstr "Araçlar"
 
 #: LNG_MAIN_MENU_ITEM_REMOVE
 msgid "Remove"
-msgstr "Видалення"
+msgstr "Kaldır"
 
 #: LNG_MAIN_MENU_ITEM_UPDATE
 msgid "Update"
-msgstr "Оновлення"
+msgstr "Güncelle"
 
 #: LNG_CHOOSE_GAME
 msgid "You must choose a program"
-msgstr "Ви повинні вибрати програму"
+msgstr "Bir program seçmek zorundasınız."
 
 #: LNG_MAIN_INSTALL_MENU
 msgid "What do you want to install ?"
-msgstr "Що Ви бажаєте встановити ?"
+msgstr ""
 
 #: LNG_MAIN_UNINSTALL_MENU
 msgid "What do you want to uninstall ?"
-msgstr "Що Ви бажаєте видалити ?"
+msgstr ""
 
 #: LNG_MAIN_RUN_MENU
 msgid "Which game do you want to play? ?"
-msgstr "В яку гру Ви бажаєте грати ?"
+msgstr ""
 
 #: LNG_MAIN_INSTALL_UNINSTALL
 msgid "Uninstall"
-msgstr "Видалене"
+msgstr ""
 
 #: LNG_MAIN_CHECKUPGRADE
 msgid "Do you want to check for updates on the PlayOnLinux website ?"
-msgstr "Бажаєте перевірити оновлення на веб-сайті PlayOnLinux?"
+msgstr ""
 
 #: LNG_MAIN_FIRSTUSE
 msgid ""
@@ -208,9 +201,6 @@ msgid ""
 "You need to set some options\n"
 "Make sure you are connected to the internet."
 msgstr ""
-"Ласкаво просимо в PlayOnLinux.\n"
-" Необхідно зробити деякі налаштування \n"
-" Переконайтесь, що Ви приєднані до інтернету."
 
 #: LNG_MAIN_INSTALLFONTS
 msgid ""
@@ -220,389 +210,365 @@ msgstr ""
 
 #: LNG_MAIN_DOWNLOADFONTS
 msgid "Please wait while the fonts are downloaded..."
-msgstr "Будь ласка, дочекайтесь завантаження шрифтів..."
+msgstr ""
 
 #: LNG_MAIN_CREATEDIRECTORY
 msgid "Please wait: creating PlayOnLinux's directions"
-msgstr "Будь ласка, зачекайте: PlayOnLinux налаштовується."
+msgstr ""
 
 #: LNG_MAIN_LANGUAGE_DETECTED
 msgid ""
 "The current language is : $LANG. This language exists in PlayOnLinux. Would "
 "you like to use it? ?"
 msgstr ""
-"Поточна мова : $LANG. Ця мова присутня в PlayOnLinux. Ви бажаєте її "
-"використовувати?"
 
 #: LNG_MAIN_CHOOSELANGUAGE
 msgid "Choose your preferred language."
-msgstr "Виберіть бажану мову"
+msgstr ""
 
 #: LNG_MAIN_LANGUAGE_NOT_DETECTED
 msgid ""
 "Your system's language does not exist in PlayOnLinux.\n"
 "Please choose another one"
 msgstr ""
-"Поточна мова вашої системи відсутня в PlayOnLinux.\n"
-" Будь ласка, виберіть іншу"
 
 #: LNG_MAIN_CHOOSELANGUAGE
 msgid "Choose the language you want"
-msgstr "Виберіть бажану мову"
+msgstr ""
 
 #: LNG_MAIN_CHOOSETHEME
 msgid "Choose the theme you want"
-msgstr "Виберіть бажану тему"
+msgstr ""
 
 #: LNG_THEMES
 msgid "Theme"
-msgstr "Тема"
+msgstr ""
 
 #: LNG_EXPERT_DIDNOTSELECT
 msgid "You did not select any games!"
-msgstr "Ви не обрали гру!"
+msgstr ""
 
 #: LNG_EXPERT_REGISTRY
 msgid "Registry Editor"
-msgstr "Редактор реєстру"
+msgstr ""
 
 #: LNG_EXPERT_WINEPREFIX
 msgid "Update the wineprefix"
-msgstr "Оновлення префіксу wine"
+msgstr ""
 
 #: LNG_EXPERT_WAITUPGRADE
 msgid "Please wait while the wine prefix is updated"
-msgstr "Будь ласка, дочекайтесь оновлення префікса wine"
+msgstr ""
 
 #: LNG_EXPERT_WINECONFIG
 msgid "Configure wine"
-msgstr "Конфіґурація wine"
+msgstr ""
 
 #: LNG_EXPERT_RUN
 msgid "Run a non-official script"
-msgstr "Запустити неофіційний скрипт"
+msgstr ""
 
 #: LNG_EXPERT_UNFOUND
 msgid "File not found!"
-msgstr "Файл не знайдено!"
+msgstr ""
 
 #: LNG_EXPERT_NOTPOL
 msgid "This file is not a valid PlayOnLinux script"
-msgstr "Даний файл не є скриптом PlayOnLinux"
+msgstr ""
 
 #: LNG_EXPERT_DIRECTX
 msgid "Install DirectX"
-msgstr "Встановити DirectX"
+msgstr ""
 
 #: LNG_EXPERT_WVER
 msgid "Manage wine versions"
-msgstr "Управління версіями wine"
+msgstr ""
 
 #: LNG_EXPERT_WKILL
 msgid "Kill wineserver process"
-msgstr "Завершити процес wineserver"
+msgstr ""
 
 #: LNG_WINEVERSIONS_INTRO
 msgid ""
 "This add-on allows you to have more than one wine version simultaneously."
 msgstr ""
-"Це доповнення дозволить Вам мати більше однієї версії wine одночасно."
 
 #: LNG_WINEVERSIONS_DOWNLOADING
 msgid "Downloading wine"
-msgstr "Завантажується wine"
+msgstr ""
 
 #: LNG_WINEVERSIONS_DOWNLOADFAILED
 msgid "The download seems to have failed."
-msgstr "Завантаження завершилось невдало."
+msgstr ""
 
 #: LNG_WINEVERSIONS_INSTALL
 msgid ""
 "The version of wine has been successfully downloaded.\n"
 "I'm' now going to install it."
 msgstr ""
-"Версія wine була успішно завантажена.\n"
-" Тепер вона буде установлена."
 
 #: LNG_WINEVERSIONS_INSTALLATION
 msgid "Please wait : installing wine version ..."
-msgstr "Будь ласка, зачекайте : встановлюється версія wine ..."
+msgstr ""
 
 #: LNG_WINEVERSIONS_INSTALLATION_FINISHED
 msgid "Installation succeeded."
-msgstr "Встановлення пройшло успішно."
+msgstr ""
 
 #: LNG_WINEVERSIONS_GAMETOEDIT
 msgid "To which game do you want to apply this modification?"
-msgstr "Which program do you want to edit ?"
+msgstr ""
 
 #: LNG_WINEVERSIONS_VERSIONTOUSE
 msgid "Which wine version do you want to use ?"
-msgstr "Яку версію wine Ви бажаєте використовувати?"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MUSTSPECIFY
 msgid "You must choose which version you want to download."
-msgstr "Вам необхідно вибрати версію для завантаження."
+msgstr ""
 
 #: LNG_WINEVERSIONS_ALREADYINSTALLED
 msgid "This version has already been installed"
-msgstr "Ця версія вже встановлена"
+msgstr ""
 
 #: LNG_WINEVERSIONS_RESETSESSION
 msgid "The session has been reset."
-msgstr "Сесія була скинута."
+msgstr ""
 
 #: LNG_WINEVERSIONS_GAME
 msgid "To which game do you want to apply the modification ?"
-msgstr "К якій грі Ви бажаєте використовувати модифікацію ?"
+msgstr ""
 
 #: LNG_WINEVERSIONS_NOWINE
 msgid "No wine version installed"
-msgstr "Жодної версії wine не встановлено"
+msgstr ""
 
 #: LNG_WINEVERSIONS_CHOOSEUNINSTALL
 msgid "Choose which version you want to uninstall."
-msgstr "Виберіть, яку версію Ви бажаєте видалити."
+msgstr ""
 
 #: LNG_WINEVERSIONS_CHOOSEDOWNLOAD
 msgid "Which wine version should I download?"
-msgstr "Яку версію wine PlayOnLinux повинен завантажити?"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_ASSIGN
 msgid "Assign a wineversion for a program"
-msgstr "Assign a wine version to a programm"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_INSTALL
 msgid "Install a wineversion"
-msgstr "Install a wine version"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_UNASSIGN
 msgid "Unassign a wineversion"
-msgstr "Put back the default wine version to a program"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_UNINSTALL
 msgid "Uninstall a wineversion"
-msgstr "Remove a wine version"
+msgstr ""
 
 #: LNG_OTHER
 msgid "Other"
-msgstr "Інші"
+msgstr ""
 
 #: LNG_EXEMPLE
 msgid "Exemple "
-msgstr "Приклад "
+msgstr ""
 
 #: LNG_RESET
 msgid "Reset"
-msgstr "Скидання"
+msgstr ""
 
 #: LNG_OPTIONS_MENU
 msgid "Settings"
-msgstr "Налаштування"
+msgstr ""
 
 #: LNG_OPTIONS_RESULT
 msgid "Test results"
-msgstr "Результати тестів"
+msgstr ""
 
 #: LNG_OPTIONS_NORESULT
 msgid "Glxgears did not produce any results."
-msgstr "Glxgears завершились без результату."
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_SYS
 msgid "System information:"
-msgstr "Системна інформація:"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_YSYS
 msgid "Your system :"
-msgstr "Ваша система :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_KERNEL
 msgid "Your kernel :"
-msgstr "Ваше ядро:"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_LANG
 msgid "System language :"
-msgstr "Мова системи :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_USER
 msgid "Your user login :"
-msgstr "Ваш логін :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_NAMEMACHINE
 msgid "Your computer's name :"
-msgstr "Ім'я Вашого комп'ютера :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_VIDEOCARD
 msgid "Your video card :"
-msgstr "Ваша відеокарта :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_DISTRIB_ID
 msgid "Your distribution :"
-msgstr "Ваш дистрибутив :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_RELEASE
 msgid "Your distribution version :"
-msgstr "Версія Вашого дистрибутива :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_DDINFOS
 msgid "Space remaining on your hard disks :"
-msgstr "Вільне місце на Ваших жорстких дисках :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_WINEINSTALLED
 msgid "Wine version installed :"
-msgstr "Встановлена версія wine :"
+msgstr ""
 
 #: LNG_OPTIONS_INFOS_WINECURRENT
 msgid "Wine version used by PlayOnLinux :"
-msgstr "Версія wine, що використовується PlayOnLinux :"
+msgstr ""
 
 #: LNG_OPTIONS_MENU_INFORMATIONS
 msgid "Informations"
-msgstr "Інформація"
+msgstr ""
 
 #: LNG_INFORMATION
 msgid "Information about a game"
-msgstr "Інформація про гру"
+msgstr ""
 
 #: LNG_OPTIONS_LANGUAGE
 msgid "Language"
-msgstr "Мова"
+msgstr ""
 
 #: LNG_OPTIONS_REPOSITORY
 msgid "Repository"
-msgstr "Репозиторій"
+msgstr ""
 
 #: LNG_OPTIONS_PANELS
 msgid "Panels"
-msgstr "Панелі"
+msgstr ""
 
 #: LNG_NEXT_RUN
 msgid "You must restart PlayOnLinux for the changes to take effect"
 msgstr ""
-"Ви повинні перезавантажити PlayOnLinux для того, щоб зміни вступили в силу"
 
 #: LNG_HAVE
 msgid "You have"
-msgstr "Ви маєте"
+msgstr ""
 
 #: LNG_HELP
 msgid "Help"
-msgstr "Допомога"
+msgstr ""
 
 #: LNG_ABOUT
 msgid "About"
-msgstr "Про програму"
+msgstr ""
 
 #: LNG_ERROR
 msgid "Error"
-msgstr "Помилка"
+msgstr ""
 
 #: LNG_EXIT
 msgid "Exit"
-msgstr "Вихід"
+msgstr ""
 
 #: LNG_REFRESH
 msgid "Refresh"
-msgstr "Оновити"
+msgstr ""
 
 #: LNG_WINEBOOSTER_WELCOME1
 msgid "Welcome on WineBooster, an optimization's script for Wine"
-msgstr "Ласкаво просимо в WineBooster, скрипт оптимізації Wine"
+msgstr ""
 
 #: LNG_WINEBOOSTER_WELCOME2
 msgid "Created by GNU_Raziel"
-msgstr "Створено GNU_Raziel"
+msgstr ""
 
 #: LNG_WINEBOOSTER_WELCOME3
 msgid "If you does not know what to choose, LEAVE DEFAULTS !!!"
-msgstr "Якщо Ви не впевнені у виборі, ЗАЛИШТЕ ЗАМОВЧУВАННЯ !!!"
+msgstr ""
 
 #: LNG_WINEBOOSTER_GAME_CHOOSE
 msgid "Choose a game"
-msgstr "Виберіть гру"
+msgstr ""
 
 #: LNG_WINEBOOSTER_GAME_ERROR
 msgid "You did not select a game"
-msgstr "Ви не обрали гру"
+msgstr ""
 
 #: LNG_WINEBOOSTER_WVERSION
 msgid ""
 "Which version of Windows would you like to use? (Values : vista, win2003, "
 "winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )"
 msgstr ""
-"Яку версію Windows Ви бажаєте використовувати? (Значения : vista, win2003, "
-"winxp, win2k, winnt, winme, win98, win95, win31 - За замовчуванням : winxp )"
 
 #: LNG_WINEBOOSTER_DDR
 msgid ""
 "Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)"
 msgstr ""
-"Виберіть режим DirectDraw Renderer? (Значення : opengl, gdi — За "
-"замовчуванням : gdi)"
 
 #: LNG_WINEBOOSTER_VERTEXSHADER
 msgid "Activate VertexShader Mode? (Default : N)"
-msgstr "Активувати режим VertexShader? (За замовчуванням : N)"
+msgstr ""
 
 #: LNG_WINEBOOSTER_PIXELSHADER
 msgid "Activate PixelShader Mode? (Default : N)"
-msgstr "Активувати режим PixelShader? (За замовчуванням : N)"
+msgstr ""
 
 #: LNG_WINEBOOSTER_UGLSL
 msgid "Activate GLSL Support? (Default : N)"
-msgstr "Активувати підтримку GLSL? (за замовчуванням : N)"
+msgstr ""
 
 #: LNG_WINEBOOSTER_VMS
 msgid "How much memory does your graphics board have? (Default : 64)"
-msgstr "Який об'єм пам'яті у Вашої відеокарти? (За замовчуванням : 64)"
+msgstr ""
 
 #: LNG_WINEBOOSTER_ORM
 msgid ""
 "Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - "
 "Default : backbuffer)"
 msgstr ""
-"Выберіть режим Offscreen Rendering (Значення : backbuffer, pbuffer, fbo - За "
-"замовчуванням : backbuffer)"
 
 #: LNG_WINEBOOSTER_RTLM
 msgid ""
 "Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, "
 "textex, disabled - Default : auto)"
 msgstr ""
-"Виберіть режим Render Target Lock? (Значення : auto, readdraw, readtex, "
-"texdraw, textex, disabled - За замовчуванням : auto)"
 
 #: LNG_WINEBOOSTER_WDESKTOP
 msgid ""
 "Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION "
 "!!)? (Example : 1024x768 - Default : 0 = FullScreen)"
 msgstr ""
-"Виберіть розділяючу здатність для вікна Wine (НЕ МЕНЯЕТ РАЗРЕШЕНИЯ В ИГРЕ "
-"!!)? (Приклад : 1024x768 - За замовчуванням : 0 = FullScreen)"
 
 #: LNG_WINEBOOSTER_WMANAGED
 msgid "Authorize your WM to manage Windows? ( Default : Y )"
 msgstr ""
-"Дозволити Вашому віконному менеджеру керувати вікнами Windows? ( За "
-"замовчуванням : Y )"
 
 #: LNG_WINEBOOSTER_WDXGRAB
 msgid ""
 "Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default "
 ": N )"
 msgstr ""
-"Дозволити програмі DirectX утримувати мишку в своєму вікні? ( За "
-"замовчуванням : N )"
 
 #: LNG_WINEBOOSTER_WAUDIO
 msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)"
 msgstr ""
-"Виберіть драйвер звукової карти? (Значення : oss, alsa — За замовчуванням : "
-"alsa)"
 
 #: LNG_WINEBOOSTER_AEMUL
 msgid "Emulate DirectSound Driver? (Default : N)"
-msgstr "Емулювати драйвер DirectSound? (За замовчуванням : N)"
+msgstr ""
 
 #: LNG_LI_PRESENTATION
 msgid ""
@@ -611,46 +577,40 @@ msgid ""
 "been installed with an official script. Warning: We are unable to guarantee "
 "that your game will work perfectly."
 msgstr ""
-"Даний скрипт дозволить Вам установить будь-яку програму в PlayOnLinux і "
-"використовувати її зі всіма утилітами (WineBooster, WineMaster, WineConfig "
-"тощо), ніби вона встановлена з допомогою офіційного скрипту. Увага: Ми не "
-"можемо гарантувати, що Ваша програма буде працювати ідеально."
 
 #: LNG_ACTION
 msgid "Action"
-msgstr "Дія"
+msgstr ""
 
 #: LNG_LI_NEW
 msgid "New"
-msgstr "Install a program in a new prefix"
+msgstr ""
 
 #: LNG_LI_PATCH
 msgid "Edit"
-msgstr "Edit an application already installed"
+msgstr ""
 
 #: LNG_CHOICE
 msgid "Please make a choice"
-msgstr "Будь ласка, зробіть свій вибір"
+msgstr ""
 
 #: LNG_LI_CODENAME
 msgid ""
 "Please type a code name for the wine prefix of your game. This name "
 "shouldn't contain spaces."
 msgstr ""
-"Будь ласка, виберіть ім'я для префіксу wine Вашої програми. Це ім'я не "
-"повинно містити відступи."
 
 #: LNG_LI_EXIST
 msgid "This codename already exists in PlayOnLinux."
-msgstr "Це ім'я вже Використовується в PlayOnLinux."
+msgstr ""
 
 #: LNG_LI_INSTALLFILE
 msgid "Please choose the file to execute"
-msgstr "Будь ласка, виберіть файл для запуску"
+msgstr ""
 
 #: LNG_LI_CHOOSEFILE
 msgid "You have to choose a file !"
-msgstr "Ви повинні вибрати файл !"
+msgstr ""
 
 #: LNG_LI_SHORTCUT
 msgid "Do you want to create a shortcut to the application in PlayOnLinux ?"
@@ -661,31 +621,31 @@ msgstr ""
 
 #: LNG_LI_EXEC
 msgid "Choose the file to exec the game."
-msgstr "Виберіть файл для запуску програми."
+msgstr ""
 
 #: LNG_LI_GIVENAME
 msgid "Please type a name for your shortcut."
-msgstr "Будь ласка, виберіть ім'я для ярлика."
+msgstr ""
 
 #: LNG_SCRIPT_WAIT
 msgid "Please wait while the installation of the game is prepared"
-msgstr "Будь ласка, дочекайтесь закінчення підготовки до встановлення"
+msgstr ""
 
 #: LNG_DOWNLOAD
 msgid "Please wait while the game is downloaded..."
-msgstr "Завантажити"
+msgstr ""
 
 #: LNG_DOWNLOAD_LIB
 msgid "Please wait while the library are downloaded..."
-msgstr "Будь ласка, дочекайтесь закінчення завантаження бібліотеки..."
+msgstr ""
 
 #: LNG_DOWNLOAD_FINISHED
 msgid "Download finished"
-msgstr "Завантаження завершено"
+msgstr ""
 
 #: LNG_WAIT
 msgid "Please wait..."
-msgstr "Будь ласка, зачекайте..."
+msgstr ""
 
 #: LNG_POLSC
 msgid ""
@@ -693,53 +653,47 @@ msgid ""
 "This tools may help you to build basic scripts. The scripts will be saved on "
 "your Desktop. Thanks to Christhaal."
 msgstr ""
-"Ласкаво просимо в PolScriptCreator.\n"
-" Ця утиліта допоможе Вам створити базові скрипти. Скрипти будуть збережені "
-"на вашому Робочому столі. Дякую, Christhaal."
 
 #: LNG_GIT_WELCOME1
 msgid ""
 "Welcome on WineGIT, a GIT compilation and installation script for WineVersion"
 msgstr ""
-"Ласкаво просимо в WineGIT, скрипт для компіляції і встановлення GIT "
-"WineVersion"
 
 #: LNG_GIT_KEEP
 msgid "Keep the actual git ? (Values : Y ou N - Default : N)"
-msgstr "Зберегти поточний git ? (Значення : Y або N - За замовчуванням : N)"
+msgstr ""
 
 #: LNG_GIT_KEEP2
 msgid "Please use ANOTHER name for the last git"
-msgstr "Будь ласка, виберіть інше ім'я для останнього git"
+msgstr ""
 
 #: LNG_GIT_RENAME
 msgid "Please give a new name for installed git (example : git-06242007)"
 msgstr ""
-"Будь ласка, дайте нове ім'я встановленому git (приклад : git-06242007)"
 
 #: LNG_GIT_NAME_ERROR
 msgid "You did not specify a name !!"
-msgstr "Ви не обрали ім'я !!"
+msgstr ""
 
 #: LNG_GIT_NAME_DUPLICATE_ERROR
 msgid "This name already exist !!"
-msgstr "Це ім'я вже використовується !!"
+msgstr ""
 
 #: LNG_GIT_DOWNLOAD
 msgid "git download, please wait..."
-msgstr "git завантажується, будь ласка, зачекайте..."
+msgstr ""
 
 #: LNG_GIT_COMPILATION
 msgid "git's compilation and installation, please wait..."
-msgstr "git компілюється і встановлюється, будь ласка зачекайте..."
+msgstr ""
 
 #: LNG_GIT_FINISHED
 msgid "Installation successfull"
-msgstr "Встановлення успішно завершено"
+msgstr ""
 
 #: LNG_DOWNLOADING_INSTALLER
 msgid "Please wait while the installer is downloaded..."
-msgstr "Будь ласка, дочекайтесь завантаження встановлювача..."
+msgstr ""
 
 #: LNG_MENU_POL_1
 msgid ""
@@ -747,101 +701,98 @@ msgid ""
 "?\n"
 "It will contain all the application shorcuts you create."
 msgstr ""
-"Ви бажаєте добавити розділ \"PlayOnLinux\" у Ваше меню GNOME або KDE ? ?\n"
-" Він буде містити всі ярлики програм, які Ви створите."
 
 #: LNG_MENU_POL_2
 msgid "Do you want to disable the \"PlayOnLinux\" menu ?"
-msgstr "Ви бажаєте відключити меню \"PlayOnLinux\" ?"
+msgstr ""
 
 #: LNG_FILE_CHOOSE
 msgid "Please choose a valid PlayOnLinux file to run"
 msgstr ""
-"Будь ласка, виберіть правильний файл PlayOnLinux и натисніть \"Далі\""
 
 #: LNG_APP_CHOOSE
 msgid "Please choose an application to install"
-msgstr "Будь ласка, виберіть програму для встановлення"
+msgstr ""
 
 #: LNG_APP_CHOOSE2
 msgid "Please choose a type of application to install"
-msgstr "Будь ласка, виберіть тип програми для встановлення"
+msgstr ""
 
 #: LNG_APP_CHOOSE3
 msgid "Installation wizard"
-msgstr "Майстер встановлення"
+msgstr ""
 
 #: LNG_LAUNCHER
 msgid "Please choose a name for the shortcut"
-msgstr "Будь ласка, виберіть ім'я для ярлика"
+msgstr ""
 
 #: LNG_UPDATING_FINISHED
 msgid "The list of programs has been successfully updated"
-msgstr "Список програм успішно оновлено"
+msgstr ""
 
 #: LNG_UPDATEW_FINISHED
 msgid "The prefix has been successfully updated"
-msgstr "Префікс успішно оновлено"
+msgstr ""
 
 #: LNG_UPDATING
 msgid "Updating"
-msgstr "Оновлення"
+msgstr ""
 
 #: LNG_DOWNLOADING
 msgid "Downloading"
-msgstr "Завантаження"
+msgstr ""
 
 #: LNG_WARNING
 msgid "Warning"
-msgstr "Увага"
+msgstr ""
 
 #: LNG_NEXT
 msgid "Next"
-msgstr "Далі"
+msgstr ""
 
 #: LNG_CANCEL
 msgid "Cancel"
-msgstr "Відміна"
+msgstr ""
 
 #: LNG_FINISHED
 msgid "Finished"
-msgstr "Завершено"
+msgstr ""
 
 #: LNG_FINISHED_
 msgid "Finish"
-msgstr "Завершено"
+msgstr ""
 
 #: LNG_STEP
 msgid "Step"
-msgstr "Крок"
+msgstr ""
 
 #: LNG_SUR
 msgid "of"
-msgstr "з"
+msgstr ""
 
 #: LNG_DOWNLOAD_CLICK
 msgid "Click on download to start."
-msgstr "Натисніть на \" Завантажити \" для старту."
+msgstr ""
 
 #: LNG_DOWNLOAD
 msgid "Download"
-msgstr "Завантажити"
+msgstr ""
 
 #: LNG_DOWNLOADED
 msgid "downloaded"
-msgstr "Завантажено"
+msgstr ""
 
 #: LNG_YES
 msgid "Yes"
-msgstr "Так"
+msgstr ""
 
 #: LNG_NO
 msgid "No"
-msgstr "Ні"
+msgstr ""
 
 #: LNG_BROWSE
 msgid "Browse"
-msgstr "Перегляд"
+msgstr ""
 
 #: LNG_KILL_WINSERVER
 msgid ""
@@ -850,38 +801,34 @@ msgid ""
 "\n"
 "Are you sure you want to kill the wineserver ?"
 msgstr ""
-"Увага ! Перед завершенням процесу wineserver, будь ласка, переконайтесь, що "
-"немає запущених програм wine. \n"
-"\n"
-" Ви впевнені, що бажаєте завершить процес wineserver ?"
 
 #: LNG_WINELOOK1
 msgid "Please choose a theme"
-msgstr "Будь ласка, виберіть тему"
+msgstr ""
 
 #: LNG_WINELOOK2
 msgid "Your theme have been successfully applied"
-msgstr "Вашу тему успішно застосовано"
+msgstr ""
 
 #: LNG_EXPERT_PKG
 msgid "Install a package"
-msgstr "Install a package"
+msgstr ""
 
 #: LNG_EXPERT_BOOSTERM
 msgid "Advanced wine configuration"
-msgstr "Advanced wine configuration"
+msgstr ""
 
 #: LNG_WINEGIT
 msgid "Wine GIT"
-msgstr "Wine GIT"
+msgstr ""
 
 #: LNG_POLSHELL
 msgid "PlayOnLinux debugger"
-msgstr "PlayOnLinux debugger"
+msgstr ""
 
 #: LNG_WINELOOK
 msgid "Wine theme"
-msgstr "Wine theme"
+msgstr ""
 
 #: LNG_SLOGAN
 msgid "Run your Windows programs on Linux !"
@@ -889,399 +836,397 @@ msgstr ""
 
 #: LNG_LOGO
 msgid "The logo are made by Crystal Project"
-msgstr "The logo are made by Crystal Project"
+msgstr ""
 
 #: LNG_WINDOWS_DESIGN
 msgid "Windows designed by asimov"
-msgstr "Windows designed by asimov"
+msgstr ""
 
 #: LNG_COPYRIGHT
 msgid ""
 "(C) PlayOnLinux team 2008\n"
 "Under GPL licence version 3"
 msgstr ""
-"(C) PlayOnLinux team 2008\n"
-"Under GPL licence version 3"
 
 #: LNG_MAIN_INSTALL_WORKONLINUX
 msgid "Application"
-msgstr "Application"
+msgstr ""
 
 #: LNG_MAIN_INSTALL_LIVE
 msgid "Manual installation"
-msgstr "Manual installation"
+msgstr ""
 
 #: LNG_MAIN_INSTALL_DOSBOX
 msgid "Dosbox application"
-msgstr "Dosbox application"
+msgstr ""
 
 #: LNG_MAIN_INSTALL_PKG
 msgid "Install a .pol package"
-msgstr "Install a .pol package"
+msgstr ""
 
 #: LNG_LI_CHOOS_ACTION
 msgid "What do you want to do ?"
-msgstr "What do you want to do ?"
+msgstr ""
 
 #: LNG_LI_NEW
 msgid "Install a program in a new prefix"
-msgstr "Install a program in a new prefix"
+msgstr ""
 
 #: LNG_LI_PATCH
 msgid "Edit an application already installed"
-msgstr "Edit an application already installed"
+msgstr ""
 
 #: LNG_LI_CHOOSEPREFIX
 msgid "What is the prefix of your program ?"
-msgstr "What is the prefix of your program ?"
+msgstr ""
 
 #: LNG_LI_SHORTCUT
 msgid "Would you like to make a new shortcut in PlayOnLinux"
-msgstr "Would you like to make a new shortcut in PlayOnLinux"
+msgstr ""
 
 #: LNG_LI_DELETE
 msgid "Delete a prefix"
-msgstr "Delete a prefix"
+msgstr ""
 
 #: LNG_LI_DELETE_PREFIXE
 msgid "Are you sure you want to delete that prefixe ?"
-msgstr "Are you sure you want to delete that prefixe ?"
+msgstr ""
 
 #: LNG_LI_PREFIXE_DELETED
 msgid "The prefix has been deleted"
-msgstr "The prefix has been deleted"
+msgstr ""
 
 #: LNG_WINEVERSION_ACTIONS
 msgid "Choose an action to do"
-msgstr "Choose an action to do"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_INSTALL
 msgid "Install a wine version"
-msgstr "Install a wine version"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_GIT
 msgid "Install Wine GIT"
-msgstr "Install Wine GIT"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_ASSIGN
 msgid "Assign a wine version to a programm"
-msgstr "Assign a wine version to a programm"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_UNASSIGN
 msgid "Put back the default wine version to a program"
-msgstr "Put back the default wine version to a program"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_UNINSTALL
 msgid "Remove a wine version"
-msgstr "Remove a wine version"
+msgstr ""
 
 #: LNG_WINEVERSIONS_MENU_SESSION
 msgid "Session"
-msgstr "Session"
+msgstr ""
 
 #: LNG_WINEVERSIONS_GAMETOEDIT
 msgid "Which program do you want to edit ?"
-msgstr "Which program do you want to edit ?"
+msgstr ""
 
 #: LNG_TEST_3D
 msgid "I'm going to test your 3D hardware. It will take about 2 minutes"
-msgstr "I'm going to test your 3D hardware. It will take about 2 minutes"
+msgstr ""
 
 #: LNG_OPTIONS_REPOS_STEP1
 msgid "Choose a repository to enable / disable"
-msgstr "Choose a repository to enable / disable"
+msgstr ""
 
 #: LNG_DEFAULT_QUESTION
 msgid "Question"
-msgstr "Question"
+msgstr ""
 
 #: LNG_DEFAULT_FIELD
 msgid "Text"
-msgstr "Text"
+msgstr ""
 
 #: LNG_PKG_NOT_VALID
 msgid "The file is not a valid PlayOnLinux package"
-msgstr "The file is not a valid PlayOnLinux package"
+msgstr ""
 
 #: LNG_PKG_NOT_FOUND
 msgid "Unable to find the file"
-msgstr "Unable to find the file"
+msgstr ""
 
 #: LNG_PKG_CHOOSE
 msgid "Choose a package to install"
-msgstr "Choose a package to install"
+msgstr ""
 
 #: LNG_PKG_MANAGER
 msgid "PlayOnLinux package manager"
-msgstr "PlayOnLinux package manager"
+msgstr ""
 
 #: LNG_CANT_FIND_UNINSTALL
 msgid "Unable to find the game you are trying to uninstall"
-msgstr "Unable to find the game you are trying to uninstall"
+msgstr ""
 
 #: LNG_AUTORUN_CANT_FIND
 msgid "No setup location found in autorun.inf"
-msgstr "No setup location found in autorun.inf"
+msgstr ""
 
 #: LNG_AUTORUN_CDROM_FOUND
 msgid "A CD-ROM has been found on your drive"
-msgstr "A CD-ROM has been found on your drive"
+msgstr ""
 
 #: LNG_AUTORUN_CDROM_NAME
 msgid "Name "
-msgstr "Name "
+msgstr ""
 
 #: LNG_AUTORUN_CDROM_SETUP
 msgid "Setup "
-msgstr "Setup "
+msgstr ""
 
 #: LNG_AUTORUN_TITLE
 msgid "Autorun"
-msgstr "Autorun"
+msgstr ""
 
 #: LNG_AUTORUN_NEXT
 msgid "In the following prefix"
-msgstr "In the following prefix"
+msgstr ""
 
 #: LNG_AUTORUN_RECOM
 msgid "recomended"
-msgstr "recomended"
+msgstr ""
 
 #: LNG_AUTORUN_WHERE
 msgid "Where do you want to install this CD-ROM?"
-msgstr "Where do you want to install this CD-ROM?"
+msgstr ""
 
 #: LNG_AUTORUN_EXISTING
 msgid "In an existing prefix (add-on)"
-msgstr "In an existing prefix (add-on)"
+msgstr ""
 
 #: LNG_AUTORUN_NEW
 msgid "In a new prefix"
-msgstr "In a new prefix"
+msgstr ""
 
 #: LNG_NOAUTORUN
 msgid "No autorun support found"
-msgstr "No autorun support found"
+msgstr ""
 
 #: LNG_AUTORUN_N
 msgid "autorun has been found"
-msgstr "autorun has been found"
+msgstr ""
 
 #: LNG_AUTORUN_PREFIX_C
 msgid "Choose the prefix"
-msgstr "Choose the prefix"
+msgstr ""
 
 #: LNG_SHORTCUT_CREATON
 msgid "Shortcut creation"
-msgstr "Shortcut creation"
+msgstr ""
 
 #: LNG_NEW_INSTALL_UNSUPPORTED
 msgid "Install a .pol package or an unsupported application"
-msgstr "Install a .pol package or an unsupported application"
+msgstr ""
 
 #: LNG_SEARCH
 msgid "Search :"
-msgstr "Search :"
+msgstr ""
 
 #: LNG_CLOSE
 msgid "Close"
-msgstr "Close"
+msgstr ""
 
 #: LNG_CAT_ACCESSORIES
 msgid "Accessories"
-msgstr "Accessories"
+msgstr ""
 
 #: LNG_CAT_DEVELOPMENT
 msgid "Development"
-msgstr "Development"
+msgstr ""
 
 #: LNG_CAT_GAMES
 msgid "Games"
-msgstr "Games"
+msgstr ""
 
 #: LNG_CAT_GRAPHICS
 msgid "Graphics"
-msgstr "Graphics"
+msgstr ""
 
 #: LNG_CAT_MULTIMEDIA
 msgid "Multimedia"
-msgstr "Multimedia"
+msgstr ""
 
 #: LNG_CAT_OFFICE
 msgid "Office"
-msgstr "Office"
+msgstr ""
 
 #: LNG_GENERAL_APPS
 msgid "My Applications"
-msgstr "My Applications"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_DEFAUT
 msgid "Defaults programs"
-msgstr "Defaults programs"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_BROWSER
 msgid "Browser"
-msgstr "Browser"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_TEST
 msgid "Test"
-msgstr "Test"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_TERMINAL
 msgid "Terminal"
-msgstr "Terminal"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_TEMP
 msgid "Temp directory"
-msgstr "Temp directory"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_TEMP_E
 msgid "Automatically empty temp directory"
-msgstr "Automatically empty temp directory"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_OFFLINE
 msgid "Offline Mode"
-msgstr "Offline Mode"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_OFFLINE_E
 msgid "Enable Offline mode"
-msgstr "Enable Offline mode"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_PROXY
 msgid "Proxy configuration"
-msgstr "Proxy configuration"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_PROXY_ADRESS
 msgid "Proxy address"
-msgstr "Proxy address"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_PROXY_USE
 msgid "Set a proxy"
-msgstr "Set a proxy"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_PROXY_PORT
 msgid "Port"
-msgstr "Port"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_PROXY_LOGIN
 msgid "Login"
-msgstr "Login"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_PROXY_PASSWORD
 msgid "Password"
-msgstr "Password"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_D_WINE
 msgid "Default Wine Version to run wine programs with PlayOnLinux"
-msgstr "Default Wine Version to run wine programs with PlayOnLinux"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_DESK
 msgid "Desktop"
-msgstr "Desktop"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_MENU
 msgid "PlayOnLinux menu"
-msgstr "PlayOnLinux menu"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_MENU_R
 msgid "Add PlayOnLinux menu in your panel"
-msgstr "Add PlayOnLinux menu in your panel"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_DESKTOP_D
 msgid "Desktop directory"
-msgstr "Desktop directory"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_D_NICKNAME
 msgid "Default Nickname"
-msgstr "Default Nickname"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_C_STARTUP
 msgid "Automatically connect to IRC at PlayOnLinux startup"
-msgstr "Automatically connect to IRC at PlayOnLinux startup"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_W_USER
 msgid "Warm users when I run a game"
-msgstr "Warm users when I run a game"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_SOUND
 msgid "Play a sound when I receive a private message"
-msgstr "Play a sound when I receive a private message"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_TITLE
 msgid "PlayOnLinux Settings"
-msgstr "PlayOnLinux Settings"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_O1
 msgid "General"
-msgstr "General"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_O2
 msgid "Messenger"
-msgstr "Messenger"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_O3
 msgid "Internet"
-msgstr "Internet"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_O4
 msgid "Environment"
-msgstr "Environment"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_O5
 msgid "System"
-msgstr "System"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_APPLY
 msgid "Apply"
-msgstr "Apply"
+msgstr ""
 
 #: LNG_OFFLINE_MODE
 msgid "You are in offline mode"
-msgstr "You are in offline mode"
+msgstr ""
 
 #: LNG_INSTALLED_PLUGIN
 msgid "Installed plugins"
-msgstr "Installed plugins"
+msgstr ""
 
 #: LNG_ADD_PLUGIN
 msgid "Add"
-msgstr "Add"
+msgstr ""
 
 #: LNG_CONFIG_PLUGIN
 msgid "Configure"
-msgstr "Configure"
+msgstr ""
 
 #: LNG_ENABLE_PLUGIN
 msgid "Enable"
-msgstr "Enable"
+msgstr ""
 
 #: LNG_DISABLE_PLUGIN
 msgid "Disable"
-msgstr "Disable"
+msgstr ""
 
 #: LNG_CHOOSE_PLUGIN
 msgid "Choose a plugin"
-msgstr "Choose a plugin"
+msgstr ""
 
 #: LNG_SUR_INSTALL
 msgid "Are yo sure you want to install the plugin"
-msgstr "Are yo sure you want to install the plugin"
+msgstr ""
 
 #: LNG_SUR_DELETE
 msgid "Are yo sure you want to delete the plugin"
-msgstr "Are yo sure you want to delete the plugin"
+msgstr ""
 
 #: LNG_OPTIONS_PANEL_O6
 msgid "Plugins"
-msgstr "Plugins"
+msgstr ""
 
 #: LNG_MANAGER
 msgid "Plugins manager"
-msgstr "Plugins manager"
+msgstr ""
 
 #: LNG_NO_MORE
 msgid "No more alert me"
-msgstr "No more alert me"
+msgstr ""
 
 #: LNG_GAME_UNINSTALL
 msgid "Do you really want to uninstall $delete_var ?"
@@ -1585,83 +1530,3 @@ msgstr ""
 
 msgid "Testing"
 msgstr ""
-
-#~ msgid "English"
-#~ msgstr "Українська"
-
-#~ msgid ""
-#~ "PlayOnLinux is running in safe mode\n"
-#~ "Please check the GUI mode"
-#~ msgstr ""
-#~ "PlayOnLinux завантажено в безпечному режимі\n"
-#~ " Будь ласка, перевірте графічний режим (GUI)"
-
-#~ msgid ""
-#~ "The community's repository is enabled.\n"
-#~ "Do you want to disable it ?"
-#~ msgstr ""
-#~ "Репозиторіий Community підключено.\n"
-#~ " Бажаєте відключити його?"
-
-#~ msgid ""
-#~ "The community's repository is disabled.\n"
-#~ "Do you want to enable it ?\n"
-#~ "WARNING : PlayOnLinux isn't responsible for these scripts."
-#~ msgstr ""
-#~ "Репозиторій Community відключено.\n"
-#~ " Бажаєте підключити його?\n"
-#~ " УВАГА: Автори PlayOnLinux не несуть відповідальності за ці скрипти."
-
-#~ msgid ""
-#~ "The WorkOnLinux's repository is enabled.\n"
-#~ "Do you want to disable it ?"
-#~ msgstr ""
-#~ "Репозиторій WorkOnLinux підключено.\n"
-#~ " Бажаєте відключити його?"
-
-#~ msgid ""
-#~ "The WorkOnLinux's repository is disabled.\n"
-#~ "Do you want to enable it ?\n"
-#~ "WARNING : PlayOnLinux isn't responsible for these scripts."
-#~ msgstr ""
-#~ "Репозиторіий WorkOnLinux відключено.\n"
-#~ " Бажаєте підключить його?\n"
-#~ " УВАГА: Автори PlayOnLinux не несут відповідальності за ці скрипти."
-
-#~ msgid "Finished. Please restart PlayOnLinux"
-#~ msgstr "Завершено. Будь ласка, перезавантажте PlayOnLinux"
-
-#~ msgid "You have to install zenity or kdialog to run the script."
-#~ msgstr ""
-#~ "Вам необхідно встановити zenity або kdialog для запуску цього скрипту."
-
-#~ msgid ""
-#~ "The website of PlayOnLinux is unavailable,\n"
-#~ "Please assure you are connected to internet."
-#~ msgstr ""
-#~ "Веб-сайт PlayOnLinux недосяжний,\n"
-#~ " Будь ласка, перевірте підключення до інтернету."
-
-#~ msgid ""
-#~ "An updated version of PlayOnLinux is available. Please visit the website."
-#~ msgstr "Доступна нова версія PlayOnLinux. Будь ласка, відвідайте веб-сайт."
-
-#~ msgid "Microsoft fonts aren't installed; I'll install them for you."
-#~ msgstr "Шрифти Microsoft не встановлено; PlayOnLinux встановить їх."
-
-#~ msgid "Choose your preferred GUI."
-#~ msgstr "Виберіть бажаний GUI(графічний інтерфейс)."
-
-#~ msgid "WineVersions"
-#~ msgstr "Версії Wine"
-
-#~ msgid "Tests"
-#~ msgstr "Тести"
-
-#~ msgid ""
-#~ "Do you want to create a shortcut to the application in PlayOnLinux ? If you "
-#~ "patched a game, you should probably select 'no'."
-#~ msgstr "Would you like to make a new shortcut in PlayOnLinux"
-
-#~ msgid "Run you Windows programs on Linux !"
-#~ msgstr "Run you Windows programs on Linux !"
