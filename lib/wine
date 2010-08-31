@@ -423,53 +423,7 @@ fonts_to_prefix ()
 }
 installer_wine_version ()
 {
-	rm "$REPERTOIRE/WineVersions/installed" 2> /dev/null
-	ARCHITECTURE="i386"
-	VERSIONENTRER="$1"
-
-	if [ "$VERSIONENTRER" = "" ]
-	then
-		exit
-	fi
-	if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONENTRER" ]
-	then
-		VERSION="$VERSIONENTRER~"
-		ADRESSEDUDEB=$($PYTHON "$PLAYONLINUX/python/tools/get_wineversions.py" | grep "$VERSION" | grep wine_ | grep i386 | tac | tail -n 1)
-		if [ "$ADRESSEDUDEB" = "" ]
-		then
-		 LNG_ERROR_WINE="$(eval_gettext 'Unable to find the version :')"
-		 erreur "$LNG_ERROR_WINE $VERSIONENTRER"
-		 exit
-		fi
-
-		#ADRESSE_HTTP=$(expr index "$ADRESSEDUDEB" '.http://')
-		#ADRESSEDUDEB=${ADRESSEDUDEB:$ADRESSE_HTTP}
-
-		mkdir "$REPERTOIRE/WineVersions/$VERSIONENTRER" -p
-		cd "$REPERTOIRE/WineVersions/$VERSIONENTRER"
-		LNG_WINEVERSIONS_DOWNLOADING="$(eval_gettext 'Downloading wine')"
-		telecharger "$LNG_WINEVERSIONS_DOWNLOADING $VERSIONENTRER" $ADRESSEDUDEB
-		NOMDUDEB="$(ls *.deb)"
-		LNG_WINEVERSIONS_DOWNLOADFAILED="$(eval_gettext 'The download seems to have failed')"
-		if [ "$NOMDUDEB" = "" ]
-		then
-			erreur "$LNG_WINEVERSIONS_DOWNLOADFAILED"
-		else
-			#message "$LNG_WINEVERSIONS_INSTALL"
-	
-			ar x "$NOMDUDEB"
-			lzma -d data.tar.* 2> /dev/null
-			tar -xvf data.tar*
-
-			#message "$LNG_WINEVERSIONS_INSTALLATION_FINISHED"
-			rm debian-binary
-			rm control.*
-			rm data.*
-			rm $NOMDUDEB -f
-		fi
-		
-	fi
-	touch "$REPERTOIRE/WineVersions/installed"
+	POL_SetupWindow_install_wine "$@"
 }
 Set_WineVersion_Assign()
 {
