@@ -539,24 +539,26 @@ POL_SetupWindow_auto_shortcut()
 {
 	# 1 = Wineprefix
 	# 2 = Binaire
-	# 3 = Nom du raccourics
-	# 4 = Icone
+	# 3 = Icone
+	# 4 = Nom du raccourics
 	# 5 = Eventuel argument
 
 	Binaire="$2"
+	ShortName="$4"
 	SpecialArg="$5"
+
 	
-	if [ "$4" = "" ]
+	if [ "$3" = "" ]
 	then
 		NOMICONE_="$1"
 	else
-		NOMICONE_="$4"
+		NOMICONE_="$3"
 	fi
 	
 	mkdir -p "$REPERTOIRE/icones/32"
 	mkdir -p "$REPERTOIRE/icones/full_size"
 	
-	ICON_WEB_NAME="$4"
+	ICON_WEB_NAME="$3"
 	ICON_OK=0
 
 	## On chope le dossier du binaire
@@ -598,14 +600,21 @@ POL_SetupWindow_auto_shortcut()
 		# Pour verifier la taille des icones, il faudrait utiliser "identify", mais ce programme n'est pas toujours fournis.
 	fi
 
+	#Le nom de l'icone doit avoir le même nom que le lanceur
+	#test icones full_size
+	[ -f "$REPERTOIRE/icones/full_size/$ShortName" ] || [ -f "$REPERTOIRE/icones/full_size/$NOMICONE_" ] &&  mv "$REPERTOIRE/icones/full_size/$NOMICONE_" "$REPERTOIRE/icones/full_size/$ShortName"
+	#idem test icones en 32x32
+	[ -f "$REPERTOIRE/icones/32/$ShortName" ] || [ -f "$REPERTOIRE/icones/32/$NOMICONE_" ] && mv "$REPERTOIRE/icones/32/$NOMICONE_" "$REPERTOIRE/icones/32/$ShortName"
+	NOMICONE_="$ShortName"
+
 
 	## On génère le binaire 
-	echo "#!/bin/bash" > "$REPERTOIRE/configurations/installed/$NOMICONE_"
-	echo "export WINEPREFIX=\"$REPERTOIRE/wineprefix/$1\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
-	echo "export WINEDEBUG=\"-all\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
-	echo "cd \"$REPERTOIRE/wineprefix/$1/drive_c/$binary_dir\"" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
-	echo "wine \"$Binaire\" $SpecialArg \$@" >> "$REPERTOIRE/configurations/installed/$NOMICONE_"
-	chmod +x "$REPERTOIRE/configurations/installed/$NOMICONE_"
+	echo "#!/bin/bash" > "$REPERTOIRE/configurations/installed/$ShortName"
+	echo "export WINEPREFIX=\"$REPERTOIRE/wineprefix/$1\"" >> "$REPERTOIRE/configurations/installed/$ShortName"
+	echo "export WINEDEBUG=\"-all\"" >> "$REPERTOIRE/configurations/installed/$ShortName"
+	echo "cd \"$REPERTOIRE/wineprefix/$1/drive_c/$binary_dir\"" >> "$REPERTOIRE/configurations/installed/$ShortName"
+	echo "wine \"$Binaire\" $SpecialArg \$@" >> "$REPERTOIRE/configurations/installed/$ShortName"
+	chmod +x "$REPERTOIRE/configurations/installed/$ShortName"
 	
 	
 	## On prévient l'utilisateur que l'icône est prête, on lui propose de creer divers raccorucis
@@ -641,11 +650,11 @@ POL_SetupWindow_auto_shortcut()
 		MESSAGE_DESKTOP=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_DESKTOP=')		
 		if [ "$MESSAGE_MENU" == "MSG_MENU=True" ]
 		then
-			generer_icone "$iconPath" "$NOMICONE_" "$HOME/.local/share/applications/" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+			generer_icone "$iconPath" "$NOMICONE_" "$HOME/.local/share/applications/" "$PLAYONLINUX/playonlinux --run \"$ShortName\"" "$ShortName"
 		fi
 		if [ "$MESSAGE_DESKTOP" == "MSG_DESKTOP=True" ]
 		then
-			generer_icone "$iconPath" "$NOMICONE_" "$DESKTOP" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
+			generer_icone "$iconPath" "$NOMICONE_" "$DESKTOP" "$PLAYONLINUX/playonlinux --run \"$ShortName\"" "$ShortName"
 		fi
 	fi
 }
