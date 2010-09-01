@@ -205,50 +205,91 @@ to the file name or packaging format." > $REPERTOIRE/tmp/licence
 }
 install_plugins () # Install defaults plugin into home directory
 {
-	cd "$PLAYONLINUX/plugins"
-	touch "$POL_USER_ROOT/configurations/plugins"
-	for plugin in *
+	
+	#declaration de variables locale
+	#le P c'est pour euh POL/Package/?
+	local Puid Pfichier PinstDir PplugStatus PverStr Pversion plugStatus
+	#la le U par contre c'est pour user
+	local Uuid Ufichier UinstDir UplugStatus UverStr Uversion Uligne
+	# _2 parce que avant c'était pas pareil 
+	readonly ULST=$POL_USER_ROOT/configurations/plugins_2
+	touch $ULST
+
+	#lecture du fichier ligne/ligne
+	while read ligne
 	do
-		file="$plugin"
-		state=$(echo "$file" | cut -d "." -f1)
-		name=$(echo "$file" | cut -d "." -f2)
-		generic_name=$(echo "$name" | cut -d "_" -f1)
+		#sauter les lignes qui commence par #
+		grep -q '^#' <<< $ligne && continue
+		#et les lignes vides ... parce que ça fait plus propre
+		grep -q '^$' <<< $ligne && continue
 
-		if [ "$(cat $POL_USER_ROOT/configurations/plugins | grep $generic_name)" = "" ]
-		then
-			## La on va bien se marrer !
-			cd "/tmp"
-			tar --extract --get playonlinux/main -f "$PLAYONLINUX/plugins/$file" 
-			stream=$(cat playonlinux/main | grep "rm ")
-			rm playonlinux/main
-			cd "$PLAYONLINUX/plugins"		
+		#paf pif split!
+		Puid=$(cut -d';' -f1 <<< $ligne)
+		Pfichier=$(cut -d';' -f2 <<< $ligne)
+		PinstDir=$(cut -d';' -f3 <<< $ligne)
+		PplugStatus=$(cut -d';' -f4 <<< $ligne)
+		PverStr=$(cut -d';' -f5 <<< $ligne)
+		Pversion=$(cut -d';' -f6 <<<$ligne)
+		
+		echo "Checking plugin: $PinstDir ..."
+		
+		Uligne=$(grep "^$Puid;" $ULST)
+		#tres important le ; !
+		
+		plugStatus="$PplugStatus" #ouai ouai c'est débile d'utiliser 2 variables pour la même chose :D
 
-			if [[ $stream =~ ".PlayOnLinux" ]]
-			then 
-				cutn=4
-			else
-				cutn=3
-			fi
+		#chk si la ligne existe déjà
+		if [ -n "$Uligne" ] ; then
+			#oui
 
-			stream="$(echo $stream | cut -d "\"" -f2)"
-			stream="$(echo $stream | cut -d "/" -f$cutn)"
+			#la même mais avec un U =) 
+			#y a des trucs dont on se fiche mais bon c/c is great
+			Uuid=$(cut -d';' -f1 <<< $Uligne)
+			Ufichier=$(cut -d';' -f2 <<< $Uligne)
+			UinstDir=$(cut -d';' -f3 <<< $Uligne)
+			UplugStatus=$(cut -d';' -f4 <<< $Uligne)
+			UverStr=$(cut -d';' -f5 <<< $Uligne)
+			Uversion=$(cut -d';' -f6 <<<$Uligne)
 
-			# And I HAVE IT !
-			plugin_real_name="$stream" 
+			#chk version
+			#si la version du P est la même ou plus old que l'U on passe au plugin suivant
+			[ $Pversion -gt $Uversion ] || continue
 
-			if [ ! -e "$POL_USER_ROOT/plugins/$plugin_real_name" ]
-			then
-				echo "Loading plugin : $plugin_real_name"
-				"$PLAYONLINUX/playonlinux-pkg" -i "$file" > /dev/null
-				if [ "$state" = "enabled" ]
-				then
-					touch "$POL_USER_ROOT/plugins/$plugin_real_name/enabled"
-				fi
-			fi
-			echo $generic_name >> "$POL_USER_ROOT/configurations/plugins"
-			#
+			#bon ben la c'est sur le gus a vieux truc
+			echo "  -->updating plugin old:'$UverStr'/$Uversion new:'$PverStr'/$Pversion"
+			
+			#est ce que le plugin était déjà actif?
+			#UplugStatus="disable"
+			[ -f "$POL_USER_ROOT/plugins/$UinstDir/enabled" ] && plugStatus="enable"
+			#la c'est barbare ... si déjà actif on force l'update actif ...
+			#sinon dépend du plugins.lst
+
+
+			#on vire l'ancienne installation (utile si le plugin change de place)
+			#les perdants sont les plugins qui gardent des fichiers de config dans leur dossier ... tant pis pour eux
+			rm -rf "$POL_USER_ROOT/plugins/$UinstDir/"
+
+			#on vire la ligne dans le fichier utilisateur 
+			grep -v "^$Puid;" "$ULST" > "$POL_USER_ROOT/tmp/ulst.tmp"
+			mv -f "$POL_USER_ROOT/tmp/ulst.tmp" "$ULST"
+			#voilà ménage fait plus qu'à installer
 		fi
-	done
+
+		echo "  -->installing plugin '$PinstDir'"
+		#là on installe
+		"$PLAYONLINUX/playonlinux-pkg" -i "$PLAYONLINUX/plugins/$Pfichier" > /dev/null
+
+		#active or nto
+		if [ "$plugStatus" = "enabled" ] 
+		then
+			touch "$POL_USER_ROOT/plugins/$PinstDir/enabled"
+		fi
+
+		#et on enregistre qu'on vient de faire
+		echo "$Puid;$Pfichier;$PinstDir;$plugStatus;$PverStr;$Pversion" >> $ULST
+
+	#est voilà on continue .... et moi j'ai fait cramer mes patates
+	done < $PLAYONLINUX/plugins/plugins.lst
 }
 construire_repertoire_personnel ()
 {
