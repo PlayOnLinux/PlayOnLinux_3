@@ -158,7 +158,7 @@ POL_SetupWindow_pulsebar ()
 	echo "pulsebar" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
+	sleep 0.2 #sleeping 0.2 GUI have to read dialog file. see bug #30
 	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
 	then
 		exit 
@@ -169,12 +169,14 @@ POL_SetupWindow_pulse ()
 	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	echo "pulse" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	sleep 0.2 #sleeping 0.2 GUI have to read dialog file. see bug #30
 }
 POL_SetupWindow_set_text ()
 {
 	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	echo "set_text" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	sleep 0.2 #sleeping 0.2 GUI have to read dialog file. see bug #30
 }
 POL_SetupWindow_wait ()
 {

@@ -4,6 +4,7 @@
 - translation update on 2010-08-31.
 - corrected POL_SW_auto_shortcut that doesn't work properly with icons.
 - fix bug #31.
+- fix bug #30. Adding a sleep 0.2 for some function
 - function install_plugin rewrited
 
 -> 3.8
