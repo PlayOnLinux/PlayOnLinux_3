@@ -1,5 +1,8 @@
 #ignore python compiled files
 *.pyc
 
-#ignore backup file (*~)
+#ignore backup files (*~)
 *~
+
+#ignore vi tmp files (.*.swp)
+.*.swp
