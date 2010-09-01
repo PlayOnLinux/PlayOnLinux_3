@@ -1519,3 +1519,13 @@ msgstr ""
 
 msgid "Testing"
 msgstr ""
+
+#: playonlinux-cmd.sh:53
+msgid ""
+"This program is intended to be used by automatic scripts for manage "
+"PlayOnLinux."
+msgstr ""
+
+#: playonlinux-cmd.sh:55
+msgid "use this switch to update PlayOnLinux script repository"
+msgstr ""
