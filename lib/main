@@ -279,8 +279,9 @@ install_plugins () # Install defaults plugin into home directory
 		#là on installe
 		"$PLAYONLINUX/playonlinux-pkg" -i "$PLAYONLINUX/plugins/$Pfichier" > /dev/null
 
+		## =~ ok pour enable et enabled
 		#active or nto
-		if [ "$plugStatus" = "enabled" ] 
+		if [[ "$plugStatus" =~ "enable" ]]
 		then
 			touch "$POL_USER_ROOT/plugins/$PinstDir/enabled"
 		fi
