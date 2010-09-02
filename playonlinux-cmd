@@ -24,6 +24,8 @@ die() ## PHP function copy
 	exit
 }
 [ "$PLAYONLINUX" = "" ] || die "You are already in a PlayOnLinux environement" 
+#si root -> exit
+[ `id -u` -eq 0 ] && die "This software can't be used as root"
 #Dans quel répértoire se trouve le script ?
 PLAYONLINUX=`dirname "$0"`
 cd "$PLAYONLINUX"
@@ -41,7 +43,16 @@ if [ ! "$(which $PYTHON)" ]
 then
 	missing "$PYTHON"
 fi
-
+function usage
+{
+	echo "$(eval_gettext 'This program is intended to be used by automatic scripts for manage PlayOnLinux.')"
+	echo "Usage: $0 [--update] [--version] [--run] [--start-install]"
+	echo -e "\t[--version] $(eval_gettext 'print current version and exit')"
+	echo -e "\t[--update] $(eval_gettext 'use this switch to update PlayOnLinux script repository')"
+	echo -e "\t[--run 'Software name'] $(eval_gettext 'use this switch to run an already installed software')"
+	echo -e "\t[--start-install 'Script Name'] $(eval_gettext 'start installation a specified script')"
+	exit 1
+}
 #parsing switch
 case $1 in
 -u|--update)
@@ -51,16 +62,47 @@ case $1 in
 
 --run)
 	#pour ne pas reinventer la roue ... 
+	if [ -z "$2" ] ; then usage ; fi
 	#already done in start_pol
 	start_pol "@"
 	;;
+-si|--start-install)
+	#deja
+	if [ -z "$2" ] ; then usage ; fi
+	#fun function!
+	if [ "${2:0:1}" == "/" ]
+	then
+		#local script
+		if [ -e "$2" ] 
+		then
+			#il existe donc on lance
+			bash "$2"
+			exit
+		fi
+		#si on est ici c'est que c'était pas bon donc on teste une nouvelle methode
+	fi
+	#script install
+	if [ "$2" == "install" ]
+	then
+		
+		if [ -e "$REPERTOIRE/install" ]
+		then
+			bash $REPERTOIRE/install
+		fi
+		exit
+	fi
+
+	#voila voila ...
+	name=${2//" "/"%20"}
+	rm -f $REPERTOIRE/install 2>/dev/null
+	wget -q $SITE/V3_data/repository/get_file.php?id=$name -O $REPERTOIRE/install || die "$(eval_gettext 'Please assure you are connected to internet.')"
+	if [ -e "$REPERTOIRE/install" ]
+	then
+		bash $REPERTOIRE/install
+	fi
+	;;
 *)
-	echo "$(eval_gettext 'This program is intended to be used by automatic scripts for manage PlayOnLinux.')"
-	echo "Usage: $0 [--update] [--version] [--run]"
-	echo -e "\t[--update] $(eval_gettext 'use this switch to update PlayOnLinux script repository')"
-	echo -e "\t[--run] $(eval_gettext 'use this switch to run an already installed software')"
-	echo -e "\t[--version] $(eval_gettext 'print current version and exit')"
-	exit 1
+	usage
 	;;
 esac
 echo ""
