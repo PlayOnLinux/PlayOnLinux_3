@@ -24,7 +24,7 @@ awc;AdvancedWineConfiguration_3.5.1.pol;Advanced Wine Configuration;enable;3.5.1
 offlineplayonlinux;OfflinePlayOnLinux_0.3.pol;Offline PlayOnLinux;disable;0.3;1
 
 #Capture
-capture;Capture_2.1.pol;Capture;enable;2.1;2
+capture;Capture.pol;Capture;enable;2.1.1;3
 
 #Transgaming Cedega
 cedega;TransgamingCedega_0.3.pol;Transgaming Cedega;disable;0.3;1
