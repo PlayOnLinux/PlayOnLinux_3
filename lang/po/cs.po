@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-01-11 18:43+0100\n"
-"PO-Revision-Date: 2010-08-30 11:26+0000\n"
+"POT-Creation-Date: 2010-09-02 09:08+0200\n"
+"PO-Revision-Date: 2010-08-31 15:19+0000\n"
 "Last-Translator: Petr R. <ateps.r@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-31 11:44+0000\n"
+"X-Launchpad-Export-Date: 2010-09-02 18:52+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: LNG_WINE_REBOOT
@@ -887,11 +887,9 @@ msgstr "Asimovem navržená okna"
 
 #: LNG_COPYRIGHT
 msgid ""
-"(C) PlayOnLinux team 2008\n"
+"(C) PlayOnLinux team 2007-2010\n"
 "Under GPL licence version 3"
 msgstr ""
-"(C) PlayOnLinux tým 2008\n"
-"Podléhá licenci GPL v.3"
 
 #: LNG_MAIN_INSTALL_WORKONLINUX
 msgid "Application"
@@ -1581,3 +1579,32 @@ msgstr "Záplaty"
 
 msgid "Testing"
 msgstr "Testování"
+
+#: playonlinux-cmd.sh
+msgid ""
+"This program is intended to be used by automatic scripts for manage "
+"PlayOnLinux."
+msgstr ""
+
+#: playonlinux-cmd.sh
+msgid "use this switch to update PlayOnLinux script repository"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "use this switch to run an already installed software"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "print current version and exit"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "start installation a specified script"
+msgstr ""
+
+#~ msgid ""
+#~ "(C) PlayOnLinux team 2008\n"
+#~ "Under GPL licence version 3"
+#~ msgstr ""
+#~ "(C) PlayOnLinux tým 2008\n"
+#~ "Podléhá licenci GPL v.3"

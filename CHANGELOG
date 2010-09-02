@@ -1,6 +1,6 @@
 -> 3.8.1
-- UPDATE: Capture to 2.1.
-- UPDATE: Translation update with launchpad on 2010-08-31.
+- UPDATE: Capture to 2.1.1.
+- UPDATE: Translation update with launchpad on 2010-08-31 and 2010-09-02.
 - UPDATE/FIX: function install_plugin rewrited to a more sure system.
 - FIX: function POL_SW_auto_shortcut doesn't work properly with icons.
 - FIX: bug #31.

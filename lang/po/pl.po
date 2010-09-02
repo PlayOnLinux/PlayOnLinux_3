@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: Tinou\n"
-"POT-Creation-Date: 2008-01-11 18:43+0100\n"
-"PO-Revision-Date: 2010-08-26 04:13+0000\n"
-"Last-Translator: Jerszy <rayman-1996@tlen.pl>\n"
+"POT-Creation-Date: 2010-09-02 09:08+0200\n"
+"PO-Revision-Date: 2010-09-02 13:47+0000\n"
+"Last-Translator: Patryk Rajba <Unknown>\n"
 "Language-Team: pl_PL.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-31 11:44+0000\n"
+"X-Launchpad-Export-Date: 2010-09-02 18:52+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: LNG_WINE_REBOOT
@@ -125,7 +125,7 @@ msgstr "Czy chcesz utworzyć skrót w menu?"
 
 #: LNG_NET_POL_ERR
 msgid "The website of PlayOnLinux is unavailable."
-msgstr ""
+msgstr "Witryna PlayOnLinux nie jest dostępna."
 
 msgid "Please assure you are connected to internet."
 msgstr "Upewnij się czy posiadasz aktywne połączenie z internetem."
@@ -152,7 +152,7 @@ msgstr "Proszę czekać, trwa pobieranie aktualizacji ..."
 
 #: LNG_MAIN_POL_UPDATE
 msgid "An updated version of PlayOnLinux is available."
-msgstr ""
+msgstr "Jest dostępna nowa wersja PlayOnLinux."
 
 #: LNG_MAIN_UPDATE_SUCCES
 msgid "The updates have been successfully installed."
@@ -221,6 +221,8 @@ msgid ""
 "Microsoft fonts aren't installed; I'll install them for you. Please assure "
 "you are connected to the internet."
 msgstr ""
+"Czcionki Microsoft nie są zainstalowane. Kreator zajmie się tym. Proszę "
+"upewnić się czy połączenie z internetem jest aktywne."
 
 #: LNG_MAIN_DOWNLOADFONTS
 msgid "Please wait while the fonts are downloaded..."
@@ -240,7 +242,7 @@ msgstr ""
 
 #: LNG_MAIN_CHOOSELANGUAGE
 msgid "Choose your preferred language."
-msgstr ""
+msgstr "Wybierz preferowany język."
 
 #: LNG_MAIN_LANGUAGE_NOT_DETECTED
 msgid ""
@@ -901,11 +903,9 @@ msgstr "Okna zaprojektowane przez asimov"
 
 #: LNG_COPYRIGHT
 msgid ""
-"(C) PlayOnLinux team 2008\n"
+"(C) PlayOnLinux team 2007-2010\n"
 "Under GPL licence version 3"
 msgstr ""
-"(C) PlayOnLinux team 2008\n"
-"Na licencji GPL wersja 3"
 
 #: LNG_MAIN_INSTALL_WORKONLINUX
 msgid "Application"
@@ -1270,11 +1270,11 @@ msgstr "Wybierz dodatek"
 
 #: LNG_SUR_INSTALL
 msgid "Are yo sure you want to install the plugin"
-msgstr ""
+msgstr "Czy chcesz zainstalować wtyczkę"
 
 #: LNG_SUR_DELETE
 msgid "Are yo sure you want to delete the plugin"
-msgstr ""
+msgstr "Jesteś pewien usunięcia wtyczki"
 
 #: LNG_OPTIONS_PANEL_O6
 msgid "Plugins"
@@ -1436,7 +1436,7 @@ msgid "Available Wine Versions :"
 msgstr "Dostępne wersje Wine:"
 
 msgid "Wine Versions"
-msgstr ""
+msgstr "Wersje Wine"
 
 msgid "Extracting wine ..."
 msgstr "Wypakowywanie Wine..."
@@ -1562,6 +1562,7 @@ msgstr "Zabijanie procesów w środowiskach ..."
 msgid ""
 "Do you want to configure your prefix before installing your application ?"
 msgstr ""
+"Czy chcesz skonfigurować środowisko przed rozpoczęciem instalacji aplikacji ?"
 
 msgid ""
 "Are you sure you want to close all the PlayOnLinux applications opened ?"
@@ -1588,18 +1589,42 @@ msgid "Close this application"
 msgstr "Zamknij tę aplikację"
 
 msgid "Donate"
-msgstr ""
+msgstr "Wesprzyj nas"
 
 msgid "Highest rated"
-msgstr ""
+msgstr "Najwyżej oceniane"
 
 msgid "Most downloaded"
-msgstr ""
+msgstr "Najczęściej pobierane"
 
 msgid "Patches"
-msgstr ""
+msgstr "Aktualizacje"
 
 msgid "Testing"
+msgstr "Testowe"
+
+#: playonlinux-cmd.sh
+msgid ""
+"This program is intended to be used by automatic scripts for manage "
+"PlayOnLinux."
+msgstr ""
+"Program ten jest przeznaczony do automatycznego zarządzania skryptami "
+"PlayOnLinux."
+
+#: playonlinux-cmd.sh
+msgid "use this switch to update PlayOnLinux script repository"
+msgstr "użyj tego aby zaktualizować repozytoria PlayOnLinux"
+
+#: playonlinux-cmd
+msgid "use this switch to run an already installed software"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "print current version and exit"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "start installation a specified script"
 msgstr ""
 
 #~ msgid "English"
@@ -1631,6 +1656,13 @@ msgstr ""
 
 #~ msgid "Run you Windows programs on Linux !"
 #~ msgstr "Uruchamiaj programy Windowsowe na Linuksie!"
+
+#~ msgid ""
+#~ "(C) PlayOnLinux team 2008\n"
+#~ "Under GPL licence version 3"
+#~ msgstr ""
+#~ "(C) PlayOnLinux team 2008\n"
+#~ "Na licencji GPL wersja 3"
 
 #~ msgid "Proxy login"
 #~ msgstr "Login Proxy"

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-01-11 18:43+0100\n"
-"PO-Revision-Date: 2010-08-29 03:24+0000\n"
+"POT-Creation-Date: 2010-09-02 09:08+0200\n"
+"PO-Revision-Date: 2010-09-01 02:35+0000\n"
 "Last-Translator: Christiansen <Unknown>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-31 11:44+0000\n"
+"X-Launchpad-Export-Date: 2010-09-02 18:52+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: LNG_WINE_REBOOT
@@ -286,7 +286,7 @@ msgstr "Kør et ikke-officielt script"
 
 #: LNG_EXPERT_UNFOUND
 msgid "File not found!"
-msgstr ""
+msgstr "Fil ikke fundet"
 
 #: LNG_EXPERT_NOTPOL
 msgid "This file is not a valid PlayOnLinux script"
@@ -425,7 +425,7 @@ msgstr "Din kerne :"
 
 #: LNG_OPTIONS_INFOS_LANG
 msgid "System language :"
-msgstr ""
+msgstr "Systemsprog :"
 
 #: LNG_OPTIONS_INFOS_USER
 msgid "Your user login :"
@@ -513,25 +513,27 @@ msgstr "Velkommen til WineBooster, et optimerings-script til Wine"
 
 #: LNG_WINEBOOSTER_WELCOME2
 msgid "Created by GNU_Raziel"
-msgstr ""
+msgstr "Skabt af GNU_Raziel"
 
 #: LNG_WINEBOOSTER_WELCOME3
 msgid "If you does not know what to choose, LEAVE DEFAULTS !!!"
-msgstr ""
+msgstr "BENYT STANDARDINDSTILLINGER, hvis du ikke ved hvad du skal vælge !!"
 
 #: LNG_WINEBOOSTER_GAME_CHOOSE
 msgid "Choose a game"
-msgstr ""
+msgstr "Vælg et spil"
 
 #: LNG_WINEBOOSTER_GAME_ERROR
 msgid "You did not select a game"
-msgstr ""
+msgstr "Du valgte ikke et spil"
 
 #: LNG_WINEBOOSTER_WVERSION
 msgid ""
 "Which version of Windows would you like to use? (Values : vista, win2003, "
 "winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )"
 msgstr ""
+"Hvilken version af Windows ønsker du at anvende? (Værdier : vista, win2003, "
+"winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )"
 
 #: LNG_WINEBOOSTER_DDR
 msgid ""
@@ -552,7 +554,7 @@ msgstr ""
 
 #: LNG_WINEBOOSTER_VMS
 msgid "How much memory does your graphics board have? (Default : 64)"
-msgstr ""
+msgstr "Hvor meget hukommelse har dit grafikkort? (Standard : 64)"
 
 #: LNG_WINEBOOSTER_ORM
 msgid ""
@@ -571,6 +573,8 @@ msgid ""
 "Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION "
 "!!)? (Example : 1024x768 - Default : 0 = FullScreen)"
 msgstr ""
+"Vælg opløsning for Wine's Windows (ÆNDRE IKKE OPLØSNING I SPIL !!)? "
+"(Eksempel : 1024x768 - Standard : 0 = Fuldskærm)"
 
 #: LNG_WINEBOOSTER_WMANAGED
 msgid "Authorize your WM to manage Windows? ( Default : Y )"
@@ -584,11 +588,11 @@ msgstr ""
 
 #: LNG_WINEBOOSTER_WAUDIO
 msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)"
-msgstr ""
+msgstr "Vælg en lyd-driver? (Værdier : OSS, ALSA - Standard : ALSA)"
 
 #: LNG_WINEBOOSTER_AEMUL
 msgid "Emulate DirectSound Driver? (Default : N)"
-msgstr ""
+msgstr "Emuler DirectSound driver? (Standard : N)"
 
 #: LNG_LI_PRESENTATION
 msgid ""
@@ -597,44 +601,50 @@ msgid ""
 "been installed with an official script. Warning: We are unable to guarantee "
 "that your game will work perfectly."
 msgstr ""
+"Dette script giver dig mulighed for at installere spil på PlayOnLinux og "
+"bruge det sammen med alle de værktøjer (WineBooster, WineMaster, WineConfig "
+"osv.) som om det var blevet installeret med et officiel script. Advarsel: Vi "
+"kan ikke garantere, at dit spil vil fungere perfekt."
 
 #: LNG_ACTION
 msgid "Action"
-msgstr ""
+msgstr "Handling"
 
 #: LNG_LI_NEW
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #: LNG_LI_PATCH
 msgid "Edit"
-msgstr ""
+msgstr "Rediger"
 
 #: LNG_CHOICE
 msgid "Please make a choice"
-msgstr ""
+msgstr "Foretag venligst et valg"
 
 #: LNG_LI_CODENAME
 msgid ""
 "Please type a code name for the wine prefix of your game. This name "
 "shouldn't contain spaces."
 msgstr ""
+"Indtast venligst et kodenavn for wine præfikset til dit spil. Navnet bør "
+"ikke indeholde mellemrum."
 
 #: LNG_LI_EXIST
 msgid "This codename already exists in PlayOnLinux."
-msgstr ""
+msgstr "Dette kodenavn eksistere allerede i PlayOnLinux."
 
 #: LNG_LI_INSTALLFILE
 msgid "Please choose the file to execute"
-msgstr ""
+msgstr "Vælg venlist den fil der skal køres"
 
 #: LNG_LI_CHOOSEFILE
 msgid "You have to choose a file !"
-msgstr ""
+msgstr "Du skal vælge en fil !"
 
 #: LNG_LI_SHORTCUT
 msgid "Do you want to create a shortcut to the application in PlayOnLinux ?"
-msgstr ""
+msgstr "Ønsker du at oprette en genvej til programmet i PlayOnLinux"
 
 msgid "If you patched a game, you should probably select no."
 msgstr ""
@@ -645,27 +655,27 @@ msgstr ""
 
 #: LNG_LI_GIVENAME
 msgid "Please type a name for your shortcut."
-msgstr ""
+msgstr "Indtast venligst et navn til din genvej."
 
 #: LNG_SCRIPT_WAIT
 msgid "Please wait while the installation of the game is prepared"
-msgstr ""
+msgstr "Vent venligst mens installationen af spillet forberedes"
 
 #: LNG_DOWNLOAD
 msgid "Please wait while the game is downloaded..."
-msgstr ""
+msgstr "Vent venligst mens spillet hentes..."
 
 #: LNG_DOWNLOAD_LIB
 msgid "Please wait while the library are downloaded..."
-msgstr ""
+msgstr "Vent venligst mens biblioteket hentes..."
 
 #: LNG_DOWNLOAD_FINISHED
 msgid "Download finished"
-msgstr ""
+msgstr "Nedtagning afsluttet"
 
 #: LNG_WAIT
 msgid "Please wait..."
-msgstr ""
+msgstr "Vent venligst..."
 
 #: LNG_POLSC
 msgid ""
@@ -673,6 +683,9 @@ msgid ""
 "This tools may help you to build basic scripts. The scripts will be saved on "
 "your Desktop. Thanks to Christhaal."
 msgstr ""
+"Velkommen til PolScriptCreator.\n"
+"Dette værktøj kan hjælpe dig med at opbygge grundlæggende scripts. Disse "
+"scripts vil blive gemt på skrivebordet. Takket være Christhaal."
 
 #: LNG_GIT_WELCOME1
 msgid ""
@@ -685,23 +698,24 @@ msgstr ""
 
 #: LNG_GIT_KEEP2
 msgid "Please use ANOTHER name for the last git"
-msgstr ""
+msgstr "Benyt venligst et ANDET navn for det sidste GIT"
 
 #: LNG_GIT_RENAME
 msgid "Please give a new name for installed git (example : git-06242007)"
 msgstr ""
+"Angiv venligst et nyt navn for det installeret GIT (Eksempel : git-06242007)"
 
 #: LNG_GIT_NAME_ERROR
 msgid "You did not specify a name !!"
-msgstr ""
+msgstr "Du angav ikke et navn !!"
 
 #: LNG_GIT_NAME_DUPLICATE_ERROR
 msgid "This name already exist !!"
-msgstr ""
+msgstr "Navnet eksistere allerede !!"
 
 #: LNG_GIT_DOWNLOAD
 msgid "git download, please wait..."
-msgstr ""
+msgstr "GIT download, vent venligst..."
 
 #: LNG_GIT_COMPILATION
 msgid "git's compilation and installation, please wait..."
@@ -709,11 +723,11 @@ msgstr ""
 
 #: LNG_GIT_FINISHED
 msgid "Installation successfull"
-msgstr ""
+msgstr "Installation lykkedes"
 
 #: LNG_DOWNLOADING_INSTALLER
 msgid "Please wait while the installer is downloaded..."
-msgstr ""
+msgstr "Vent venligst mens installationsprogram hentes..."
 
 #: LNG_MENU_POL_1
 msgid ""
@@ -721,10 +735,13 @@ msgid ""
 "?\n"
 "It will contain all the application shorcuts you create."
 msgstr ""
+"Ønsker du at tilføje et \"PlayOnLinux\" menupunkt på din GNOME eller KDE "
+"menu? ?\n"
+"Det vil indeholde alle de program-genveje du opretter."
 
 #: LNG_MENU_POL_2
 msgid "Do you want to disable the \"PlayOnLinux\" menu ?"
-msgstr ""
+msgstr "Ønsker du ar deaktivere \"PlayOnLinux\" menuen ?"
 
 #: LNG_FILE_CHOOSE
 msgid "Please choose a valid PlayOnLinux file to run"
@@ -740,11 +757,11 @@ msgstr ""
 
 #: LNG_APP_CHOOSE3
 msgid "Installation wizard"
-msgstr ""
+msgstr "Installationsguide"
 
 #: LNG_LAUNCHER
 msgid "Please choose a name for the shortcut"
-msgstr ""
+msgstr "Vælg venligst et navn til genvejen"
 
 #: LNG_UPDATING_FINISHED
 msgid "The list of programs has been successfully updated"
@@ -752,67 +769,67 @@ msgstr ""
 
 #: LNG_UPDATEW_FINISHED
 msgid "The prefix has been successfully updated"
-msgstr ""
+msgstr "Opdatering af præfiket lykkedes"
 
 #: LNG_UPDATING
 msgid "Updating"
-msgstr ""
+msgstr "Opdaterer"
 
 #: LNG_DOWNLOADING
 msgid "Downloading"
-msgstr ""
+msgstr "Henter"
 
 #: LNG_WARNING
 msgid "Warning"
-msgstr ""
+msgstr "Advarsel"
 
 #: LNG_NEXT
 msgid "Next"
-msgstr ""
+msgstr "Næste"
 
 #: LNG_CANCEL
 msgid "Cancel"
-msgstr ""
+msgstr "Annuller"
 
 #: LNG_FINISHED
 msgid "Finished"
-msgstr ""
+msgstr "Afslut"
 
 #: LNG_FINISHED_
 msgid "Finish"
-msgstr ""
+msgstr "Færdig"
 
 #: LNG_STEP
 msgid "Step"
-msgstr ""
+msgstr "Trin"
 
 #: LNG_SUR
 msgid "of"
-msgstr ""
+msgstr "af"
 
 #: LNG_DOWNLOAD_CLICK
 msgid "Click on download to start."
-msgstr ""
+msgstr "Klik på hent for at starte."
 
 #: LNG_DOWNLOAD
 msgid "Download"
-msgstr ""
+msgstr "Hent"
 
 #: LNG_DOWNLOADED
 msgid "downloaded"
-msgstr ""
+msgstr "Hentet"
 
 #: LNG_YES
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: LNG_NO
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 #: LNG_BROWSE
 msgid "Browse"
-msgstr ""
+msgstr "Gennemse"
 
 #: LNG_KILL_WINSERVER
 msgid ""
@@ -821,26 +838,30 @@ msgid ""
 "\n"
 "Are you sure you want to kill the wineserver ?"
 msgstr ""
+"Advarsel! Vær venligst sikker på, at ingen wine programmer kører inden wine-"
+"serveren slås ihjel.\n"
+"\n"
+"Er du sikker på du vil dræbe wine-server?"
 
 #: LNG_WINELOOK1
 msgid "Please choose a theme"
-msgstr ""
+msgstr "Vælg venligst et tema"
 
 #: LNG_WINELOOK2
 msgid "Your theme have been successfully applied"
-msgstr ""
+msgstr "Det lykkedes at tilføje dit tema"
 
 #: LNG_EXPERT_PKG
 msgid "Install a package"
-msgstr ""
+msgstr "Installer en pakke"
 
 #: LNG_EXPERT_BOOSTERM
 msgid "Advanced wine configuration"
-msgstr ""
+msgstr "Avanceret wine konfiguration"
 
 #: LNG_WINEGIT
 msgid "Wine GIT"
-msgstr ""
+msgstr "Wine GIT"
 
 #: LNG_POLSHELL
 msgid "PlayOnLinux debugger"
@@ -848,11 +869,11 @@ msgstr ""
 
 #: LNG_WINELOOK
 msgid "Wine theme"
-msgstr ""
+msgstr "Wine tema"
 
 #: LNG_SLOGAN
 msgid "Run your Windows programs on Linux !"
-msgstr ""
+msgstr "Kør dine Windows programmer på Linux !"
 
 #: LNG_LOGO
 msgid "The logo are made by Crystal Project"
@@ -860,109 +881,110 @@ msgstr ""
 
 #: LNG_WINDOWS_DESIGN
 msgid "Windows designed by asimov"
-msgstr ""
+msgstr "Windows designed af asimov"
 
 #: LNG_COPYRIGHT
 msgid ""
-"(C) PlayOnLinux team 2008\n"
+"(C) PlayOnLinux team 2007-2010\n"
 "Under GPL licence version 3"
 msgstr ""
 
 #: LNG_MAIN_INSTALL_WORKONLINUX
 msgid "Application"
-msgstr ""
+msgstr "Program"
 
 #: LNG_MAIN_INSTALL_LIVE
 msgid "Manual installation"
-msgstr ""
+msgstr "Manuel installation"
 
 #: LNG_MAIN_INSTALL_DOSBOX
 msgid "Dosbox application"
-msgstr ""
+msgstr "Dosbox program"
 
 #: LNG_MAIN_INSTALL_PKG
 msgid "Install a .pol package"
-msgstr ""
+msgstr "Installer en .pol pakke"
 
 #: LNG_LI_CHOOS_ACTION
 msgid "What do you want to do ?"
-msgstr ""
+msgstr "Hvad vil du ?"
 
 #: LNG_LI_NEW
 msgid "Install a program in a new prefix"
-msgstr ""
+msgstr "Installerer et program i et nyt præfiks"
 
 #: LNG_LI_PATCH
 msgid "Edit an application already installed"
-msgstr ""
+msgstr "Redigerer et allerede installeret program"
 
 #: LNG_LI_CHOOSEPREFIX
 msgid "What is the prefix of your program ?"
-msgstr ""
+msgstr "Hvad er præfikset for dit program ?"
 
 #: LNG_LI_SHORTCUT
 msgid "Would you like to make a new shortcut in PlayOnLinux"
-msgstr ""
+msgstr "Ønsker du oprette en ny genvej i PlayOnLinux"
 
 #: LNG_LI_DELETE
 msgid "Delete a prefix"
-msgstr ""
+msgstr "Slet et præfiks"
 
 #: LNG_LI_DELETE_PREFIXE
 msgid "Are you sure you want to delete that prefixe ?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette dette præfiks ?"
 
 #: LNG_LI_PREFIXE_DELETED
 msgid "The prefix has been deleted"
-msgstr ""
+msgstr "Præfikset er blevet slettet"
 
 #: LNG_WINEVERSION_ACTIONS
 msgid "Choose an action to do"
-msgstr ""
+msgstr "Vælg den handling der skal udføres"
 
 #: LNG_WINEVERSIONS_MENU_INSTALL
 msgid "Install a wine version"
-msgstr ""
+msgstr "Installerer en wine version"
 
 #: LNG_WINEVERSIONS_MENU_GIT
 msgid "Install Wine GIT"
-msgstr ""
+msgstr "Installer Wine GIT"
 
 #: LNG_WINEVERSIONS_MENU_ASSIGN
 msgid "Assign a wine version to a programm"
-msgstr ""
+msgstr "Tildel en wine version til et program"
 
 #: LNG_WINEVERSIONS_MENU_UNASSIGN
 msgid "Put back the default wine version to a program"
-msgstr ""
+msgstr "Gendan standard wine versionen for et program"
 
 #: LNG_WINEVERSIONS_MENU_UNINSTALL
 msgid "Remove a wine version"
-msgstr ""
+msgstr "Fjern en wine version"
 
 #: LNG_WINEVERSIONS_MENU_SESSION
 msgid "Session"
-msgstr ""
+msgstr "Session"
 
 #: LNG_WINEVERSIONS_GAMETOEDIT
 msgid "Which program do you want to edit ?"
-msgstr ""
+msgstr "Hvilket program vil du redigere ?"
 
 #: LNG_TEST_3D
 msgid "I'm going to test your 3D hardware. It will take about 2 minutes"
 msgstr ""
+"Jeg vil udføre en testpå dit 3D maskinel. Det vil tage omkring 2 minutter."
 
 #: LNG_OPTIONS_REPOS_STEP1
 msgid "Choose a repository to enable / disable"
-msgstr ""
+msgstr "Vælg et arkiv der skal akriveres / deaktiveres"
 
 #: LNG_DEFAULT_QUESTION
 msgid "Question"
-msgstr ""
+msgstr "Spørgmål"
 
 #: LNG_DEFAULT_FIELD
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: LNG_PKG_NOT_VALID
 msgid "The file is not a valid PlayOnLinux package"
@@ -1549,4 +1571,26 @@ msgid "Patches"
 msgstr ""
 
 msgid "Testing"
+msgstr ""
+
+#: playonlinux-cmd.sh
+msgid ""
+"This program is intended to be used by automatic scripts for manage "
+"PlayOnLinux."
+msgstr ""
+
+#: playonlinux-cmd.sh
+msgid "use this switch to update PlayOnLinux script repository"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "use this switch to run an already installed software"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "print current version and exit"
+msgstr ""
+
+#: playonlinux-cmd
+msgid "start installation a specified script"
 msgstr ""
