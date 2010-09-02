@@ -1,13 +1,14 @@
--> devel (3.8.1?)
+-> 3.8.1
 - UPDATE: Capture to 2.1.
 - UPDATE: Translation update with launchpad on 2010-08-31.
 - UPDATE/FIX: function install_plugin rewrited to a more sure system.
 - FIX: function POL_SW_auto_shortcut doesn't work properly with icons.
 - FIX: bug #31.
-- FIX: bug #30. Adding a sleep 0.2 for some function.
+- FIX: bug #30. Adding a sleep 0.2 for some functions.
 - NEW: include template for translation.
 - NEW: add playonlinux-cmd for manage POL by command line.
 - NEW: playonlinux-cmd now support --update
+- NEW: playonlinux-cmd now support --start-install
 
 -> 3.8
 - Bug #22 POL_SetupWindow_Init checks if a windows is already opened. --force option can be used to force windows opening in that case
