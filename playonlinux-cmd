@@ -31,7 +31,7 @@ export PLAYONLINUX=`pwd`
 source "$PLAYONLINUX/lib/sources"
 if [ "$1" = "--version" ]
 then
-	echo "PlayOnLinux $VERSION"
+	echo "PlayOnLinux Command Line $VERSION"
 	exit 0
 fi
 
@@ -49,10 +49,17 @@ case $1 in
 	maj_check
 	;;
 
+--run)
+	#pour ne pas reinventer la roue ... 
+	#already done in start_pol
+	start_pol "@"
+	;;
 *)
 	echo "$(eval_gettext 'This program is intended to be used by automatic scripts for manage PlayOnLinux.')"
-	echo "Usage: $0 [-u|--update] [--version]"
+	echo "Usage: $0 [--update] [--version] [--run]"
 	echo -e "\t[--update] $(eval_gettext 'use this switch to update PlayOnLinux script repository')"
+	echo -e "\t[--run] $(eval_gettext 'use this switch to run an already installed software')"
+	echo -e "\t[--version] $(eval_gettext 'print current version and exit')"
 	exit 1
 	;;
 esac

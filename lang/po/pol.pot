@@ -1529,3 +1529,11 @@ msgstr ""
 #: playonlinux-cmd.sh:55
 msgid "use this switch to update PlayOnLinux script repository"
 msgstr ""
+
+#: playonlinux-cmd:61
+msgid "use this switch to run an already installed software"
+msgstr ""
+
+#: playonlinux-cmd:62
+msgid "print current version and exit"
+msgstr ""
