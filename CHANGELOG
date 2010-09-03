@@ -1,3 +1,8 @@
+TODO: Cleanup translation files
+
+-> 3.8.2
+- FIX: Translation problems. Launchpad bug #629421, #629422, #629423, #629425. 
+
 -> 3.8.1
 - UPDATE: Capture to 2.1.1.
 - UPDATE: Translation update with launchpad on 2010-08-31 and 2010-09-02.

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-02 09:08+0200\n"
-"PO-Revision-Date: 2010-09-02 09:08+0200\n"
+"POT-Creation-Date: 2010-09-03 09:08+0200\n"
+"PO-Revision-Date: 2010-09-03 09:08+0200\n"
 "Last-Translator: Unknown\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -201,7 +201,7 @@ msgid "Please wait while the fonts are downloaded..."
 msgstr ""
 
 #: LNG_MAIN_CREATEDIRECTORY
-msgid "Please wait: creating PlayOnLinux's directions"
+msgid "Please wait: creating PlayOnLinux's directories"
 msgstr ""
 
 #: LNG_MAIN_LANGUAGE_DETECTED
@@ -292,7 +292,7 @@ msgstr ""
 #: LNG_WINEVERSIONS_INSTALL
 msgid ""
 "The version of wine has been successfully downloaded.\n"
-"I'm' now going to install it."
+"I'm now going to install it."
 msgstr ""
 
 #: LNG_WINEVERSIONS_INSTALLATION
@@ -359,8 +359,8 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: LNG_EXEMPLE
-msgid "Exemple "
+#: LNG_EXAMPLE
+msgid "Example "
 msgstr ""
 
 #: LNG_RESET
@@ -473,89 +473,6 @@ msgstr ""
 
 #: LNG_REFRESH
 msgid "Refresh"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WELCOME1
-msgid "Welcome on WineBooster, an optimization's script for Wine"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WELCOME2
-msgid "Created by GNU_Raziel"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WELCOME3
-msgid "If you does not know what to choose, LEAVE DEFAULTS !!!"
-msgstr ""
-
-#: LNG_WINEBOOSTER_GAME_CHOOSE
-msgid "Choose a game"
-msgstr ""
-
-#: LNG_WINEBOOSTER_GAME_ERROR
-msgid "You did not select a game"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WVERSION
-msgid ""
-"Which version of Windows would you like to use? (Values : vista, win2003, "
-"winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )"
-msgstr ""
-
-#: LNG_WINEBOOSTER_DDR
-msgid ""
-"Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_VERTEXSHADER
-msgid "Activate VertexShader Mode? (Default : N)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_PIXELSHADER
-msgid "Activate PixelShader Mode? (Default : N)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_UGLSL
-msgid "Activate GLSL Support? (Default : N)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_VMS
-msgid "How much memory does your graphics board have? (Default : 64)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_ORM
-msgid ""
-"Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - "
-"Default : backbuffer)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_RTLM
-msgid ""
-"Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, "
-"textex, disabled - Default : auto)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WDESKTOP
-msgid ""
-"Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION "
-"!!)? (Example : 1024x768 - Default : 0 = FullScreen)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WMANAGED
-msgid "Authorize your WM to manage Windows? ( Default : Y )"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WDXGRAB
-msgid ""
-"Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default "
-": N )"
-msgstr ""
-
-#: LNG_WINEBOOSTER_WAUDIO
-msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)"
-msgstr ""
-
-#: LNG_WINEBOOSTER_AEMUL
-msgid "Emulate DirectSound Driver? (Default : N)"
 msgstr ""
 
 #: LNG_LI_PRESENTATION
