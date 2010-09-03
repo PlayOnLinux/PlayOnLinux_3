@@ -1046,3 +1046,7 @@ msgstr ""
 #: python/wine_versions.py:166
 msgid "Version :"
 msgstr ""
+
+#: Capture plugin
+msgid "To which game do you want to apply the modification ?"
+msgstr ""
