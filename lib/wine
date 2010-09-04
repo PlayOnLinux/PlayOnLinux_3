@@ -558,3 +558,15 @@ POL_LoadVar_PROGRAMFILES()
 		export PROGRAMFILES=${PROGRAMFILES:3}
 	fi
 }
+Set_WineWindowTitle ()
+{
+	#name of windowed title:$1
+	REG="$REPERTOIRE/tmp/reg.reg"
+	rm -f "$REG"
+	cat <<EOF > "$REG"
+[HKEY_CURRENT_USER\\Software\\Wine\\Explorer]
+"Desktop"="$1"
+EOF
+	wine regedit "$REG"
+	rm -f "$REG"
+}
