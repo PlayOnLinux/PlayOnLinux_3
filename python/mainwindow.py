@@ -422,7 +422,7 @@ class MainWindow(wx.Frame):
     self.aboutBox.SetName("PlayOnLinux")
     self.aboutBox.SetVersion(Variables.version)
     self.aboutBox.SetDescription(_("Run your Windows programs on Linux !"))
-    self.aboutBox.SetCopyright(_("(C) PlayOnLinux team 2008-2010\nUnder GPL licence version 3"))
+    self.aboutBox.SetCopyright("(C) PlayOnLinux team 2008-2010\nUnder GPL licence version 3")
     self.aboutBox.AddDeveloper("Developer and Website : Tinou (Pâris Quentin)")	 
     self.aboutBox.AddDeveloper("Scriptors : MulX (Petit Aymeric), GNU_Raziel, NSLW")
     self.aboutBox.AddDeveloper("Packager : MulX (Petit Aymeric)")
