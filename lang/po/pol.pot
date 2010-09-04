@@ -1023,10 +1023,6 @@ msgstr ""
 msgid "Download finished"
 msgstr ""
 
-#: python/telecharger.py:122
-msgid "sur"
-msgstr ""
-
 #: python/wine_versions.py:129
 msgid "Installed Wine Versions :"
 msgstr ""

@@ -119,7 +119,7 @@ class FenpTelechargerUrl(wx.Frame): #fenêtre principale
         octetsLoadedN = round(octetsLoadedB, 1)
         tailleFichierN = round(tailleFichierB, 1)
         
-        Variables.estimation_txt = "Quota : " + str(octetsLoadedN) + " "+_("sur")+" " + str(tailleFichierN) + " mo "+("downloaded")
+        Variables.estimation_txt = "Quota: " + str(octetsLoadedN) + " "+_("of")+" " + str(tailleFichierN) + " mo "+("downloaded")
         
         self.txtEstimation.SetLabel(Variables.estimation_txt)
         wx.Yield()
