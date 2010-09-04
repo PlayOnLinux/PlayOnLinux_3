@@ -2,6 +2,7 @@
 - FIX: Translation problems. Launchpad bugs: #629421, #629422, #629423, #629425. PlayOnLinux bugs: #36
 - Full rebuild of translation template using xgettext. Python and Shell.
 - Add missing string in tranlation. String used by plugins.
+- ADD: Set_WineWindowTitle. See POL bug: #23.
 
 -> 3.8.1
 - UPDATE: Capture to 2.1.1.
