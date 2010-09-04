@@ -56,8 +56,22 @@ function usage
 #parsing switch
 case $1 in
 -u|--update)
-	#update list of script
-	maj_check
+	#build personnal repository 
+	construire_repertoire_personnel
+	if [ -z "$2" ] 
+	then	
+		#update list of script
+		if [ -d "$HOME/.PlayOnLinux/configurations/listes" ]
+		then
+			bash "$PLAYONLINUX/bash/check_maj_"
+			echo $?
+			exit
+		fi
+		maj_check
+	elif [ "$2" == "--force" ]
+	then
+		maj_check
+	fi
 	;;
 
 --run)
@@ -69,6 +83,7 @@ case $1 in
 -si|--start-install)
 	#deja
 	if [ -z "$2" ] ; then usage ; fi
+	construire_repertoire_personnel
 	#fun function!
 	if [ "${2:0:1}" == "/" ]
 	then
