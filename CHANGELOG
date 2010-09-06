@@ -10,6 +10,7 @@
 	-> bash/expert/kill_wineserver
 	-> bash/install_wver
 	-> bash/killall
+	-> bash/polconfigurator (always used?)
 - Removing some unused files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
