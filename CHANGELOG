@@ -4,6 +4,7 @@
 - Better use of the gettext function and string corrections for:
 	-> bash/LiveInstall
 	-> bash/autorun
+	-> bash/daemon/autorun
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
 
