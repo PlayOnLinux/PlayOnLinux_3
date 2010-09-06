@@ -27,7 +27,7 @@ cfg_check
 
 create_shortcut()
 {
-	POL_SetupWindow_question "$(eval_gettext "Do you want to create a shortcut to the application in PlayOnLinux ?\nIf you patched a game, you should probably select no.")" "$(eval_gettext 'Manual installation')"
+	POL_SetupWindow_question "$(eval_gettext "Would you like to create a shortcut to the application in PlayOnLinux?\nIf you patched a game, you should probably select no.")" "$(eval_gettext 'Manual installation')"
 	reponse="$APP_ANSWER"
 	if [ "$reponse" = "TRUE" ]
 	then
@@ -41,7 +41,7 @@ create_shortcut()
 		DRIVE="/wineprefix/$GAMENAME/drive_c/"
 		EXECDIR=${EXECDIR//"$DRIVE"/""}
 	
-		POL_SetupWindow_textbox "$(eval_gettext "Please choose a name for the shortcut")" "$(eval_gettext 'Manual installation')" ""
+		POL_SetupWindow_textbox "$(eval_gettext "Please choose a name for the shortcut.")" "$(eval_gettext 'Manual installation')" ""
 		LAUNCHER=$APP_ANSWER
 		if [ ! "$EXECDIR" = "" ]
 			then
@@ -76,7 +76,7 @@ delete_prefixe()
 	if [ "$APP_ANSWER" = "TRUE" ]
 	then
 		rm "$REPERTOIRE/wineprefix/$GAMENAME" -r
-		POL_SetupWindow_message "$(eval_gettext "The prefix has been deleted")" "$(eval_gettext 'Manual installation')"
+		POL_SetupWindow_message "$(eval_gettext "The prefix has been deleted.")" "$(eval_gettext 'Manual installation')"
 	fi
 	POL_SetupWindow_Close
 	exit 0
@@ -130,7 +130,7 @@ if [ "-e" "$REPERTOIRE/plugins/WineTricks/scripts/menu" ]
 		ITEMS+="~$LNG_WC_USEWT"
 	fi
 
-POL_SetupWindow_checkbox_list "$(eval_gettext "What do you want to do before installation?")" "$(eval_gettext 'Manual installation')" "$ITEMS" "~"
+POL_SetupWindow_checkbox_list "$(eval_gettext "What would you like to do before installation?")" "$(eval_gettext 'Manual installation')" "$ITEMS" "~"
 WHATTORUNBEFORE="$APP_ANSWER"
 
 #Running AssignWine
@@ -178,7 +178,7 @@ then
 fi
 WORKINGINSTALLDIR=$(dirname "$INSTALLDIR")
 cd $WORKINGINSTALLDIR
-POL_SetupWindow_wait_next_signal "$(eval_gettext 'PlayOnLinux is installing your application ...')" "$(eval_gettext 'Manual installation')"
+POL_SetupWindow_wait_next_signal "$(eval_gettext 'PlayOnLinux is installing your application...')" "$(eval_gettext 'Manual installation')"
 extension=$(echo "$INSTALLDIR" | sed 's/.*\.//g')
 if [ "$extension" = "msi" ]
 then

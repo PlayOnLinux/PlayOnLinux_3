@@ -28,7 +28,7 @@ POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/exec/top.png" "$PLAYONLINUX/etc/se
 
 POL_SetupWindow_free_presentation "$(eval_gettext "Run a local script")" "$(eval_gettext "This wizard will help you to run an unofficial PlayOnLinux Script")"
 
-POL_SetupWindow_browse "$(eval_gettext 'Choose a valid PlayOnLinux script to run')" "$(eval_gettext "Run a local script")" ""
+POL_SetupWindow_browse "$(eval_gettext 'Choose a valid PlayOnLinux script to run.')" "$(eval_gettext "Run a local script")" ""
 SCRIPT="$APP_ANSWER"
 if [ "$?" = "1" ]
 then

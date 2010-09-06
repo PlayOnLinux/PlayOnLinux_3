@@ -32,7 +32,7 @@ then
 	LNG_MAIN_INSTALL_LIVE=$(eval_gettext "Manual installation")
         LNG_MAIN_INSTALL_PKG=$(eval_gettext "Install a .pol package")
         LNG_APP_CHOOSE3=$(eval_gettext "Installation wizard")
-        LNG_APP_CHOOSE=$(eval_gettext "Please choose a type of application to install")
+        LNG_APP_CHOOSE=$(eval_gettext "Please choose a type of application to install.")
 
 	LISTE="$LNG_MAIN_INSTALL_LIVE~$LNG_MAIN_INSTALL_PKG"	
 	installbis=$(menu "$LNG_APP_CHOOSE" "$LISTE" "$LNG_APP_CHOOSE3" 1 2 1 "wizard.png" "~");

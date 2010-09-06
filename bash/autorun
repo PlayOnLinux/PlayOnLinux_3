@@ -39,7 +39,7 @@ create_shortcut()
 		DRIVE="/wineprefix/$Prefix/drive_c/"
 		EXECDIR=${EXECDIR//"$DRIVE"/""}
 
-		POL_SetupWindow_textbox "$(eval_gettext 'Please choose a name for the shortcut')" "$(eval_gettext 'Autorun')" ""
+		POL_SetupWindow_textbox "$(eval_gettext 'Please choose a name for the shortcut.')" "$(eval_gettext 'Autorun')" ""
 		LAUNCHER=$APP_ANSWER
 		if [ ! "$EXECDIR" = "" ]
 			then
@@ -173,7 +173,7 @@ cd /media
 A_LIST=""
 i=0
 POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/autorun/top.png" "$PLAYONLINUX/etc/setups/autorun/left.jpg"
-POL_SetupWindow_free_presentation "$(eval_gettext 'Autorun')" "$(eval_gettext "Welcome to PlayOnLinux's autorun wizard.\nIt will help you to install an application from a CD-ROM.\n\nClick Next to continue")"
+POL_SetupWindow_free_presentation "$(eval_gettext 'Autorun')" "$(eval_gettext "Welcome to PlayOnLinux's autorun wizard.\nIt will help you install an application from a CD-ROM.\n\n")$(eval_gettext "Click Next to continue")"
 
 POL_SetupWindow_wait_next_signal "$(eval_gettext 'Looking for runnable CD-ROMs')" "$(eval_gettext 'Autorun')"
 for device in *

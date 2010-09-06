@@ -93,7 +93,7 @@ else
     echo "$(eval_gettext "Your distribution version: ")$DISTRIB_RELEASE" >> $TEMP_INFOS
     echo "$(eval_gettext "Current Wine version: ")$INSTALLEDWINEVERSION" >> $TEMP_INFOS
     echo "$(eval_gettext "Wine version used by PlayOnLinux: ")$CURRENTWINEVERSION" >> $TEMP_INFOS
-    echo "$(eval_gettext "Free space on your hard drivres:")" >> $TEMP_INFOS
+    echo "$(eval_gettext "Free space on your hard drives:")" >> $TEMP_INFOS
     echo "$PLACE_RESTANTE" >> $TEMP_INFOS
 fi
 cat $TEMP_INFOS

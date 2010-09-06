@@ -38,7 +38,7 @@ create_shortcut()
 		DRIVE="/wineprefix/$Prefix/drive_c/"
 		EXECDIR=${EXECDIR//"$DRIVE"/""}
 
-		POL_SetupWindow_textbox "$(eval_gettext 'Please choose a name for the shortcut')" "$(eval_gettext 'Autorun')" ""
+		POL_SetupWindow_textbox "$(eval_gettext 'Please choose a name for the shortcut.')" "$(eval_gettext 'Autorun')" ""
 		LAUNCHER=$APP_ANSWER
 		if [ ! "$EXECDIR" = "" ]
 			then
