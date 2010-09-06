@@ -13,6 +13,7 @@
 	-> bash/polconfigurator (always used?)
 	-> bash/system_info
 	-> bash/check_maj
+	-> bash/check_maj_
 - Removing some unused files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.

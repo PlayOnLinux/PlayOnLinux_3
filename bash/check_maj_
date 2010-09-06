@@ -36,7 +36,7 @@ then
 	if [ ! "$local_string" = "$remote_string" ]
 	then
 		echo "$remote_string" > "$REPERTOIRE/configurations/last_string"
-		echo "PlayOnLinux repository need to be updated"
+		echo "$(eval_gettext "PlayOnLinux repository need to be updated")"
 		maj_check
 	fi
 fi
