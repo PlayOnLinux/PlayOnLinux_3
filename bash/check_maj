@@ -25,7 +25,7 @@ source "$PLAYONLINUX/lib/sources"
 
 if [ "$OFFLINE" == "1" ]
 then
-	message "$LNG_OFFLINE_MODE"
+	message "$(eval_gettext "You are in offline mode")"
 else
 	maj_check
 #	attendre "$(eval_gettext 'Updating')" "bash $PLAYONLINUX/bash/check_maj_" "$(eval_gettext 'Updating')" 0 0 0 "" 0 "$(eval_gettext 'The list of programs has been successfully updated')" "$(eval_gettext 'Finished')"
