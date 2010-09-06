@@ -83,7 +83,7 @@ delete_prefixe()
 }
 
 POL_SetupWindow_Init
-POL_SetupWindow_free_presentation "$(eval_gettext 'Manual installation')" "$(eval_gettext "Welcome to PlayOnLinux's manual installation wizard.\n\nThis script will allow you to install any program on PlayOnLinux and use it with all the tools (WineConfig, AdvancedWineConfiguration, Capture, etc.) as if it had been installed with an official script.\nWarning: We are unable to guarantee that your application will work perfectly.")"
+POL_SetupWindow_free_presentation "$(eval_gettext 'Manual installation')" "$(eval_gettext "Welcome to PlayOnLinux's manual installation wizard.\n\nThis script will allow you to install any program on PlayOnLinux and use it with all the tools (WineConfig, AdvancedWineConfiguration, Capture, etc.) as if it had been installed with an official script.\n\nWarning: We are unable to guarantee that your application will work perfectly.")"
 
 LNG_LI_NEW=$(eval_gettext "Install a program in a new prefix")
 LNG_LI_PATCH=$(eval_gettext "Edit an existing application")
