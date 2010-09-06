@@ -25,13 +25,13 @@ fi
 source "$PLAYONLINUX/lib/sources" 
 create_shortcut()
 {
-	POL_SetupWindow_question "$LNG_LI_SHORTCUT" "$LNG_AUTORUN_TITLE"
+	POL_SetupWindow_question "$(eval_gettext "Do you want to create a shortcut to the application in PlayOnLinux?\nIf you patched a game, you should probably select no.")" "$(eval_gettext 'Autorun')"
 	reponse="$APP_ANSWER"
 	if [ "$reponse" = "TRUE" ]
 	then
 		cd "$REPERTOIRE/wineprefix/$Prefix/drive_c/"
 
-		POL_SetupWindow_browse "$LNG_LI_EXEC" "$LNG_AUTORUN_TITLE" ""
+		POL_SetupWindow_browse "$(eval_prefix "Select the program's executable file.")" "$(eval_gettext 'Autorun')" ""
 
 		EXEC="$APP_ANSWER"
 		EXECDIR=$(dirname "$EXEC")
@@ -39,14 +39,13 @@ create_shortcut()
 		DRIVE="/wineprefix/$Prefix/drive_c/"
 		EXECDIR=${EXECDIR//"$DRIVE"/""}
 
-		POL_SetupWindow_textbox "$LNG_LAUNCHER" "$LNG_AUTORUN_TITLE" ""
+		POL_SetupWindow_textbox "$(eval_gettext 'Please choose a name for the shortcut')" "$(eval_gettext 'Autorun')" ""
 		LAUNCHER=$APP_ANSWER
 		if [ ! "$EXECDIR" = "" ]
 			then
 			if [ ! "$LAUNCHER" = "" ]
 			then
 				POL_SetupWindow_make_shortcut "$Prefix" "$EXECDIR" "$EXEC" "playonlinux.png" "$LAUNCHER"
-				#echo "$EXECDIR"
 			fi
 		fi
 		create_shortcut
@@ -74,7 +73,7 @@ run_autorun()
 		SetupIsNum=${#SetupIs}
 		SetupIs=${SetupIs:0:$(( SetupIsNum -1 ))}
 	else
-		POL_SetupWindow_message "$LNG_AUTORUN_CANT_FIND" "$LNG_AUTORUN_TITLE"
+		POL_SetupWindow_message "$(eval_gettext 'No setup location found in autorun.inf')" "$(eval_gettext 'Autorun')"
 		exit 0
 	fi
 	
@@ -122,31 +121,33 @@ run_autorun()
 	export IGNORE_ICON_DIR="true"	
 	if [ -e "$IconIs" ]
 	then
-		POL_SetupWindow_message_image "$LNG_AUTORUN_CDROM_FOUND\n\n$LNG_AUTORUN_CDROM_NAME: $NameIs\n$LNG_AUTORUN_CDROM_SETUP: $cdromDirIs/$SetupIs" "$LNG_AUTORUN_TITLE" "$IconIs" 
+		POL_SetupWindow_message_image "$(eval_gettext "A CD-ROM has been found in your drive.\n\nName: ")$NameIs\n$(eval_gettext "Installer: ")$cdromDirIs/$SetupIs" "$(eval_gettext 'Autorun')" "$IconIs" 
 	else
-		POL_SetupWindow_message "$LNG_AUTORUN_CDROM_FOUND\n\n$LNG_AUTORUN_CDROM_NAME: $NameIs\n$LNG_AUTORUN_CDROM_SETUP: $cdromDirIs/$SetupIs" "$LNG_AUTORUN_TITLE" "$IconIs" 
+		POL_SetupWindow_message "$(eval_gettext "A CD-ROM has been found in your drive.\n\nName: ")$NameIs\n$(eval_gettext "Installer: ")$cdromDirIs/$SetupIs" "$(eval_gettext 'Autorun')" "$IconIs" 
 	fi
 
 	export IGNORE_ICON_DIR="false"	
 	if [ ! "$NameIs" = "Unknown" ]
 	then
-		PreFm="~$LNG_AUTORUN_NEXT: $Prefix ($LNG_AUTORUN_RECOM)"
+		LNG_AUTORUN_NEXT="$(eval_gettext 'In the following prefix')"
+		PreFm="~$LNG_AUTORUN_NEXT: $Prefix ($(eval_gettext 'recommended'))"
 	fi
-	POL_SetupWindow_menu_num "$LNG_AUTORUN_CANT_FIND" "$LNG_AUTORUN_TITLE" "$LNG_AUTORUN_EXISTING~$LNG_AUTORUN_NEW${PreFm}" "~"
+	LNG_AUTORUN_EXISTING="$(eval_gettext 'In an existing prefix (add-on)')"
+	LNG_AUTORUN_NEW="$(eval_gettext 'In a new prefix')"
+	POL_SetupWindow_menu_num "$(eval_gettext 'No setup location found in autorun.inf')" "$(eval_gettext 'Autorun')" "$LNG_AUTORUN_EXISTING~$LNG_AUTORUN_NEW${PreFm}" "~"
 	action="$APP_ANSWER"
-#	action=$(menu "$LNG_AUTORUN_WHERE" "$LNG_AUTORUN_EXISTING~$LNG_AUTORUN_NEW${PreFm}" "$LNG_AUTORUN_TITLE" 2 $NUMSTEP 1 "" "~" "" 1)
 	
 	if [ "$action" = "0" ]
 	then
 		cd $REPERTOIRE/wineprefix
-		POL_SetupWindow_menu "$LNG_AUTORUN_PREFIX_C" "$LNG_AUTORUN_TITLE" "$(read_prefixes)" "~"
+		POL_SetupWindow_menu "$(eval_gettext 'Choose the prefix')" "$(eval_gettext 'Autorun')" "$(read_prefixes)" "~"
 		Prefix="$APP_ANSWER"
 
 	fi
 	
 	if [ "$action" = "1" ]
 	then
-		POL_SetupWindow_textbox "$LNG_AUTORUN_PREFIX_C" "$LNG_AUTORUN_TITLE" ""
+		POL_SetupWindow_textbox "$(eval_gettext 'Choose the prefix')" "$(eval_gettext 'Autorun')" ""
 		Prefix="$APP_ANSWER"
 	fi
 
@@ -158,41 +159,23 @@ run_autorun()
 	echo $Prefix
 	select_prefix "$REPERTOIRE/wineprefix/$Prefix"
 	POL_SetupWindow_prefixcreate
-	POL_SetupWindow_wait_next_signal "$(eval_gettext 'PlayOnLinux is installing your application')" "$LNG_AUTORUN_TITLE"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'PlayOnLinux is installing your application')" "$(eval_gettext 'Autorun')"
 	wine "$cdromDirIs"/$SetupIs
 	POL_SetupWindow_detect_exit
-	POL_SetupWindow_message "$(eval_gettext 'Please press Next only when installation is fully complete.')" "$LNG_AUTORUN_TITLE"
+	POL_SetupWindow_message "$(eval_gettext 'Please do not press Next until the installation has been completed.')" "$(eval_gettext 'Autorun')"
 	cd "$REPERTOIRE/wineprefix/$Prefix/drive_c/"
 	create_shortcut
 	
 
 }
 
-LNG_AUTORUN_CANT_FIND="$(eval_gettext 'No setup location found in autorun.inf')"
-LNG_AUTORUN_CDROM_FOUND="$(eval_gettext 'A CD-ROM has been found on your drive')"
-LNG_AUTORUN_CDROM_NAME="$(eval_gettext 'Name ')"
-LNG_AUTORUN_CDROM_SETUP="$(eval_gettext 'Setup ')"
-LNG_AUTORUN_TITLE="$(eval_gettext 'Autorun')"
-LNG_AUTORUN_NEXT="$(eval_gettext 'In the following prefix')"
-LNG_AUTORUN_RECOM="$(eval_gettext 'recomended')"
-LNG_AUTORUN_WHERE="$(eval_gettext 'Where do you want to install this CD-ROM?')"
-LNG_AUTORUN_EXISTING="$(eval_gettext 'In an existing prefix (add-on)')"
-LNG_AUTORUN_NEW="$(eval_gettext 'In a new prefix')"
-LNG_NOAUTORUN="$(eval_gettext 'No autorun support found')"
-LNG_AUTORUN_N="$(eval_gettext 'autorun has been found')"
-LNG_AUTORUN_PREFIX_C="$(eval_gettext 'Choose the prefix')"
-LNG_LI_CHOOSEFILE="$(eval_gettext 'You have to choose a file !')" 
-LNG_LI_SHORTCUT="$(eval_gettext 'Do you want to create a shortcut to the application in PlayOnLinux ?')\n$(eval_gettext 'If you patched a game, you should probably select no.')" 
-LNG_LI_EXEC="$(eval_gettext 'Choose the file to exec the game.')" 
-LNG_LAUNCHER="$(eval_gettext 'Please choose a name for the shortcut')"
-
 cd /media
 A_LIST=""
 i=0
 POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/autorun/top.png" "$PLAYONLINUX/etc/setups/autorun/left.jpg"
-POL_SetupWindow_free_presentation "$LNG_AUTORUN_TITLE" "$(eval_gettext 'Welcome in PlayOnLinux autorun assistant.')\n$(eval_gettext 'It will help you to help an application from a CD-ROM.')\n\n$(eval_gettext 'Click on next to continue')"
+POL_SetupWindow_free_presentation "$(eval_gettext 'Autorun')" "$(eval_gettext "Welcome to PlayOnLinux's autorun wizard.\nIt will help you to install an application from a CD-ROM.\n\nClick Next to continue")"
 
-POL_SetupWindow_wait_next_signal "$(eval_gettext 'Looking for runnable CD-ROM')" "$LNG_AUTORUN_TITLE"
+POL_SetupWindow_wait_next_signal "$(eval_gettext 'Looking for runnable CD-ROMs')" "$(eval_gettext 'Autorun')"
 for device in *
 do
 	fstab=`cat '/etc/fstab' | grep "$device"`
@@ -222,7 +205,7 @@ echo "Found $i autorun"
 
 if [ "$i" = 0 ]
 then
-	POL_SetupWindow_message "$LNG_NOAUTORUN" "$LNG_AUTORUN_TITLE"
+	POL_SetupWindow_message "$(eval_gettext "No autorun support found!")" "$(eval_gettext 'Autorun')"
 	POL_SetupWindow_Close
 	exit
 fi
@@ -230,7 +213,7 @@ if [ "$i" = 1 ]
 then
 	run_autorun "$A_LIST"
 else
-	POL_SetupWindow_menu "$i $LNG_AUTORUN_N" "$LNG_AUTORUN_TITLE" "$A_LIST" "#"
+	POL_SetupWindow_menu "$i $(eval_gettext 'autoruns have been found')" "$(eval_gettext 'Autorun')" "$A_LIST" "#"
 	autorun=$APP_ANSWER
 	if [ ! "$autorun" = "" ]
 	then	
