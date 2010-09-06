@@ -33,8 +33,7 @@ lancer ()
 			bash "$@"
 		fi
 	else
-		LNG_GAME_NOT_INSTALLED=$(eval_gettext "The game you want to run isn't installed.")
-		erreur "$LNG_GAME_NOT_INSTALLED : $PROG"
+		erreur "$(eval_gettext "The program you want to run isn't installed: ")$PROG"
 	fi
 	#wait_wine_exit
 }
@@ -81,7 +80,6 @@ creer_lanceur ()
 {
 	creer_lanceur_base "$@"
 	creer_lanceur_v2 "$@"
-	
 }
 creer_lanceur_base ()
 {
@@ -156,13 +154,13 @@ creer_lanceur_v2 ()
 	fi
 
 	LNG_SHORTCUT_CREATON=$(eval_gettext "Shortcut creation")
-	reponse=$(question "$NOMICONE_ : $(eval_gettext 'Do you want a shortcut on your desktop ?')" "$LNG_SHORTCUT_CREATON" 0 0 0 "desktop.png")
+	reponse=$(question "$NOMICONE_ : $(eval_gettext 'Would you like a shortcut on your desktop?')" "$LNG_SHORTCUT_CREATON" 0 0 0 "desktop.png")
 	if [ "$reponse" = "0" ]
 	then
 		generer_icone "$iconPath" "$NOMICONE_" "$DESKTOP" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
 	fi
 
-	reponse=$(question "$NOMICONE_ : $(eval_gettext 'Do you want a shortcut in your menu ?')" "$LNG_SHORTCUT_CREATON" 0 0 0 "desktop.png")
+	reponse=$(question "$NOMICONE_ : $(eval_gettext 'Would you like a shortcut in your menu?')" "$LNG_SHORTCUT_CREATON" 0 0 0 "desktop.png")
 	if [ "$reponse" = "0" ]
 	then
 		generer_icone "$iconPath" "$NOMICONE_" "$HOME/.local/share/applications/" "$PLAYONLINUX/playonlinux --run \"$NOMICONE_\"" "$NOMICONE_"
@@ -240,8 +238,7 @@ clean_wineprefix()
 		echo "$1 est encore utilisé."
 	   else
 		prefix=$1
-		LNG_PREFIX=$(eval_gettext "Do you want to delete the prefix : \$prefix")
-		POL_SetupWindow_question "$LNG_PREFIX" "Wine"
+		POL_SetupWindow_question "$(eval_gettext "Do you want to delete the prefix: ")$prefix?" "Wine"
 		reponse=$APP_ANSWER
 		POL_SetupWindow_wait_next_signal "$(eval_gettext 'Uninstalling...')" "$(eval_gettext 'PlayOnLinux Uninstaller')" 
 		if [ "$reponse" = "TRUE" ]
