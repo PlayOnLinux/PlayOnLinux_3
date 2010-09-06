@@ -5,6 +5,7 @@
 	-> bash/LiveInstall
 	-> bash/autorun
 	-> bash/daemon/autorun
+	-> bash/uninstall
 - Removing some unused files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.

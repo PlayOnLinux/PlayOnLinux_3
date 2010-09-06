@@ -34,12 +34,7 @@ if [ -e "$NOM_JEU" ]
 then
 	application_prefixe=$(detect_wineprefix "$1")
 	delete_var=$1
-	UNINSTALL_ONE=$(eval_gettext "This assistant will help you to uninstall \$delete_var.")
-	UNINSTALL_QUESTION=$(eval_gettext "Click on next to continue")
-	POL_SetupWindow_free_presentation "$(eval_gettext 'PlayOnLinux Uninstaller')" "$UNINSTALL_ONE\n$UNINSTALL_QUESTION"
-	#reponse=$(question "$UNINSTALL_QUESTION")
-	#if [ "$reponse" = "0" ]
-	#then
+	POL_SetupWindow_free_presentation "$(eval_gettext 'PlayOnLinux Uninstaller')" "$(eval_gettext "This assistant will help you to uninstall: ")$delete_var\n$(eval_gettext "Click Next to continue")"
 	
 	# Icones
 	rm -f "$REPERTOIRE/icones/32/$1"
@@ -56,7 +51,6 @@ then
 	clean_wineprefix $application_prefixe
 	POL_SetupWindow_message "$delete_var $(eval_gettext 'has been uninstalled successfully')" "$(eval_gettext 'PlayOnLinux Uninstaller')"
 else
-	CANT_FIND=$(eval_gettext "Cannot find the shortcut")
-	POL_SetupWindow_message "$CANT_FIND" "$(eval_gettext 'Error')"
+	POL_SetupWindow_message "$(eval_gettext "Cannot find the shortcut")" "$(eval_gettext 'Error')"
 fi
 POL_SetupWindow_Close
