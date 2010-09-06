@@ -23,16 +23,10 @@ fi
 source "$PLAYONLINUX/lib/sources"
 cfg_check
 
-LNG_KILL_WINSERVER=$(eval_gettext "Warning ! Before killing the wineserver, please assure that there are no wine applications running.
-
-Are you sure you want to kill the wineserver ?")
-
-LNG_KILLED_WINSERVER=$(eval_gettext "Wineserver killed")
-
 POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/wineserver/top.png" "$PLAYONLINUX/etc/setups/wineserver/left.jpg"
-POL_SetupWindow_free_presentation "$(eval_gettext 'Kill wineserver process')" "$LNG_KILL_WINSERVER" 
+POL_SetupWindow_free_presentation "$(eval_gettext 'Kill wineserver process')" "$(eval_gettext "Warning! This operation could make Wine applications unstable, whether they were launched by PlayOnLinux or not. Please make sure there are no Wine applications running before you continue.\n\nAre you sure you want to kill the wineserver?")" 
 killall wineserver
-POL_SetupWindow_message "$LNG_KILLED_WINSERVER" "$(eval_gettext 'Kill wineserver process')"
+POL_SetupWindow_message "$(eval_gettext "Wineserver killed")" "$(eval_gettext 'Kill wineserver process')"
 POL_SetupWindow_Close
 
 exit 
