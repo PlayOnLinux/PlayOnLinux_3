@@ -11,6 +11,7 @@
 	-> bash/install_wver
 	-> bash/killall
 	-> bash/polconfigurator (always used?)
+	-> bash/system_info
 - Removing some unused files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
