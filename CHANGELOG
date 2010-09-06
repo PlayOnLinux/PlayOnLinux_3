@@ -15,6 +15,7 @@
 	-> bash/check_maj
 	-> bash/check_maj_
 	-> lib/applications
+	-> lib/check_depend
 - Removing some unused files plus cleaning some files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.

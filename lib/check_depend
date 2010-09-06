@@ -18,14 +18,14 @@ MISSING=""
 
 missing ()
 {
-	echo "$1 is missing. Please install it before running playonlinux"
+	echo "$1$(eval_gettext " is missing. Please install it before running PlayOnLinux")"
 	exit 1
 }
 check_one ()
 {
 	if [ ! "$(which $1)" ]
 	then
-		MISSING+="Program : $1, Package : $2\n"
+		MISSING+="$(eval_gettext "Program: ")$1$(eval_gettext ", Package: ")$2\n"
 		MANQUE=true
 	fi
 }
@@ -33,9 +33,7 @@ manque ()
 {
 	if [ "$MANQUE" = "true" ]
 	then
-		LNG_MISSING_ERROR=$(eval_gettext "One or more program(s) are missing. Please install them and run the script again.")
-
-		erreur "$LNG_MISSING_ERROR\n\n$MISSING" "" 0 0 0 "" "Ok"
+		erreur "$(eval_gettext "One or more program(s) are missing. Please install them and run the script again.")\n\n$MISSING" "" 0 0 0 "" "Ok"
 		exit $EXIT_MISSING
 	fi
 }
@@ -56,13 +54,11 @@ acceleration_check ()
 	if [ ! "$(glxinfo | grep rendering | tail -n 1)" = "direct rendering: Yes" ] && [ "$(which glxinfo)" ]
 	then
 	  sleep 2
-	  LNG_ACCEL=$(eval_gettext "You don't seem to have 3D acceleration !
-We advise you install and enable it.")
-	  message_one "$LNG_ACCEL" "" "3d_accel" 0 "warning.png" "Ok"
+	  message_one "$(eval_gettext "You don't seem to have 3D acceleration!\nWe advise you install and enable it.\n\nPlease also check that program 'glxinfo' is installed")" "" "3d_accel" 0 "warning.png" "Ok"
 	fi 
 	if [ ! "$(which glxinfo)" ]
 	then
-		echo "Warning : glxinfo is missing ! Can't detect if 3D acceleration is supported"
+		echo "$(eval_gettext "Warning: glxinfo is missing! PlayOnLinux can't detect if 3D acceleration is supported.")"
 	fi
 }
 cfg_check ()
