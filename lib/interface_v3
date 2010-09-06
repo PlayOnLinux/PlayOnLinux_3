@@ -40,8 +40,7 @@ export POL_SetupWindow_ID=$(GenId)
 
 POL_SetupWindow_presentation ()
 {
-	TEXTE="$(eval_gettext 'This assistant will help you to install ')$1$(eval_gettext ' on your computer.')\n\n$(eval_gettext 'This program is made by ')$2\n($3)\n\n$(eval_gettext 'This installation program is provided by ')$4\n\n$1$(eval_gettext ' will be installed in ')$REPERTOIRE/wineprefix/$5\n\n$(eval_gettext 'PlayOnLinux is not responsible of your way to use these scripts')\n\n$(eval_gettext 'Click on next to start')"
-	POL_SetupWindow_free_presentation "$(eval_gettext 'Welcome in PlayOnLinux Installation Wizard')" "$TEXTE"
+	POL_SetupWindow_free_presentation "$(eval_gettext "Welcome to PlayOnLinux's Installation Wizard")" "$(eval_gettext 'This wizard will help you to install ')$1$(eval_gettext ' on your computer.')\n\n$(eval_gettext 'This program was created by: ')$2\n($3)\n\n$(eval_gettext 'This installation program is provided by: ')$4\n\n$1$(eval_gettext ' will be installed in: ')$REPERTOIRE/wineprefix/$5$(eval_gettext "\n\nPlayOnLinux is not responsible for the way you use these scripts\n\n")$(eval_gettext 'Click Next to start')"
 
 }
 POL_SetupWindow_free_presentation ()
@@ -462,7 +461,7 @@ POL_SetupWindow_games ()
 }
 POL_SetupWindow_specialprefixcreate ()
 {
-	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
 	wine wineprefixcreate
 	sleep 2
 	set_user_dir
@@ -471,7 +470,7 @@ POL_SetupWindow_specialprefixcreate ()
 }
 POL_SetupWindow_oldprefixcreate ()
 {
-	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
 	wine wineprefixcreate
 	POL_SetupWindow_detect_exit
 }
@@ -482,7 +481,7 @@ POL_SetupWindow_prefixcreate ()
 }
 POL_SetupWindow_normalprefixcreate()
 {
-	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
 	wine wineboot
 	POL_SetupWindow_detect_exit
 }
@@ -748,13 +747,11 @@ POL_SetupWindow_cdrom ()
 }
 POL_SetupWindow_check_cdrom ()
 {
-	#message "$LNG_MOUNT_CDROM"
-	LNG_WINE_ERRORCDROM=$(eval_gettext "Error : Unable to find the CD-ROM !")
 	if [ ! "$CDROM" = "" ]
 	then
 		while [ ! -e "$CDROM/$1" ]
 		do
-			POL_SetupWindow_message "$LNG_WINE_ERRORCDROM" "CD-ROM"
+			POL_SetupWindow_message "$(eval_gettext "Error: Unable to find the CD-ROM!")" "CD-ROM"
 			POL_SetupWindow_cdrom
 		done
 	fi
@@ -775,19 +772,14 @@ POL_SetupWindow_install_wine ()
 		ADRESSEDUDEB=$(wget "http://mulx.playonlinux.com/wine/linux-i386/LIST" -O- | grep ";$VERSION;" | tail -n 1 | cut -d ";" -f1)
 		if [ "$ADRESSEDUDEB" = "" ]
 		then
-		 LNG_ERROR_WINE="$(eval_gettext 'Unable to find the version :')"
-		 POL_SetupWindow_message "$LNG_ERROR_WINE $VERSIONENTRER" "Wine $1"
+		 POL_SetupWindow_message "$(eval_gettext "Unable to find version: ")$VERSIONENTRER" "Wine $1"
 		 POL_SetupWindow_Close
 		 exit
 		fi
 
-		#ADRESSE_HTTP=$(expr index "$ADRESSEDUDEB" '.http://')
-		#ADRESSEDUDEB=${ADRESSEDUDEB:$ADRESSE_HTTP}
-
-		LNG_WINEVERSIONS_DOWNLOADING="$(eval_gettext 'Downloading wine')"
 		cd "$REPERTOIRE/tmp"
-		POL_SetupWindow_download "$LNG_WINEVERSIONS_DOWNLOADING $VERSIONENTRER" "Wine" "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB"
-		POL_SetupWindow_wait_next_signal "$LNG_WINEVERSIONS_DOWNLOADING $VERSIONENTRER" "Wine"
+		POL_SetupWindow_download "$(eval_gettext "Downloading Wine: ")$VERSIONENTRER" "Wine" "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB"
+		POL_SetupWindow_wait_next_signal "$(eval_gettext "Downloading Wine: ")$VERSIONENTRER" "Wine"
 		sleep 1
 		sha1=$(wget "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB.sha1" -O-)
 		sha1_file=$(sha1sum "./$ADRESSEDUDEB")
@@ -795,13 +787,11 @@ POL_SetupWindow_install_wine ()
 		echo "Client sha1 : $sha1_file"
 
 		POL_SetupWindow_detect_exit
-		LNG_WINEVERSIONS_DOWNLOADFAILED="$(eval_gettext 'The download seems to have failed')"
 		if [ ! "$sha1" = "$sha1_file" ]
 		then
-			POL_SetupWindow_message "$LNG_WINEVERSIONS_DOWNLOADFAILED" "Wine $1"
+			POL_SetupWindow_message "$(eval_gettext 'The download seems to have failed')" "Wine $1"
 		else
-			#message "$LNG_WINEVERSIONS_INSTALL"
-			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Extracting wine ...')" "Wine $1"
+			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Extracting Wine...')" "Wine $1"
 			"$PLAYONLINUX/playonlinux-pkg" -i "$ADRESSEDUDEB"
 			POL_SetupWindow_detect_exit
 		fi
