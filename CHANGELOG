@@ -9,6 +9,7 @@
 	-> bash/expert/Executer
 	-> bash/expert/kill_wineserver
 	-> bash/install_wver
+	-> bash/killall
 - Removing some unused files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.

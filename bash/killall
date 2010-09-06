@@ -26,8 +26,7 @@ source "$PLAYONLINUX/lib/sources"
 
 cd "$REPERTOIRE/wineprefix"
 POL_SetupWindow_Init
-SUR_CLOSE=$(eval_gettext "Are you sure you want to close all the PlayOnLinux applications opened ?")
-POL_SetupWindow_question "$SUR_CLOSE" "PlayOnLinux"
+POL_SetupWindow_question "$(eval_gettext "Are you sure you want to shut down all active PlayOnLinux applications?")" "PlayOnLinux"
 if [ "$APP_ANSWER" = "TRUE" ]
 then
 	POL_SetupWindow_wait_next_signal  "$(eval_gettext 'Please wait...')" "PlayOnLinux"
