@@ -25,14 +25,10 @@ cfg_check
 
 cd $HOME
 POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/exec/top.png" "$PLAYONLINUX/etc/setups/exec/left.jpg"
-ERROR=$(eval_gettext "Error")
 
-LNG_EXPERT_UNFOUND=$(eval_gettext "File not found!")
-LNG_DESCRIPT=$(eval_gettext "Run a non-official script")
-LNG_EXEC=$(eval_gettext "This wizard will help you to execute a non-official PlayOnLinux Script")
-POL_SetupWindow_free_presentation "$LNG_DESCRIPT" "$LNG_EXEC"
+POL_SetupWindow_free_presentation "$(eval_gettext "Run a local script")" "$(eval_gettext "This wizard will help you to run an unofficial PlayOnLinux Script")"
 
-POL_SetupWindow_browse "$(eval_gettext 'Choose a valid PlayOnLinux script to run')" "$LNG_DESCRIPT" ""
+POL_SetupWindow_browse "$(eval_gettext 'Choose a valid PlayOnLinux script to run')" "$(eval_gettext "Run a local script")" ""
 SCRIPT="$APP_ANSWER"
 if [ "$?" = "1" ]
 then
@@ -41,7 +37,7 @@ then
 fi
 if [ ! -e "$SCRIPT" ]
 then
-	POL_SetupWindow_message "$LNG_EXPERT_UNFOUND" "$LNG_EXPERT_ERROR"
+	POL_SetupWindow_message "$(eval_gettext "File not found!")" "$(eval_gettext "Error!")"
 	POL_SetupWindow_Close
 	exit
 fi

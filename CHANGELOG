@@ -6,6 +6,7 @@
 	-> bash/autorun
 	-> bash/daemon/autorun
 	-> bash/uninstall
+	-> bash/expert/Executer
 - Removing some unused files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
