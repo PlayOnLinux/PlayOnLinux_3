@@ -26,8 +26,7 @@ simuler_reboot ()
 	then	
 		N2="$2"
 	fi
-	LNG_WINE_REBOOT=$(eval_gettext "Simulating Windows reboot")
-	attendre "$LNG_WINE_REBOOT" "wine wineboot" "" "$N1" "$N2" "1" "" 1
+	attendre "$(eval_gettext "Simulating Windows reboot")" "wine wineboot" "" "$N1" "$N2" "1" "" 1
 }
 simulate_reboot ()
 {
@@ -54,8 +53,7 @@ creer_prefixe ()
 	then	
 		N2="$2"
 	fi
-	LNG_WINE_PREFIXCREATE="$(eval_gettext 'Creating Wine prefix')"
-	attendre "$LNG_WINE_PREFIXCREATE" "wine wineprefixcreate" "" "$N1" "$N2" "1" "" 0 "$LNG_FINISHED"
+	attendre "$(eval_gettext 'Creating Wine prefix')" "wine wineprefixcreate" "" "$N1" "$N2" "1" "" 0 "$(eval_gettext "Finished")"
 	set_user_dir
 	set_programfile_dir
 	fonts_to_prefixe
@@ -185,21 +183,8 @@ set_programfile_dir()
 	then
 		export WINEPREFIX="$HOME/.wine"
 	fi
-	#REGDIR="$WINEPREFIX/system.reg"
-	#if [ ! -e "$REGDIR" ]
-	#then
-	#wineprefixcreate
-	#fi
-	#VAR=$(cat "$REGDIR" | grep ProgramFilesDir | cut -d "=" -f2 | cut -d "\"" -f2 | sed 's/.\{4\}//')
-	#echo "Program Files' name : $VAR"
-	#sleep 2
-	#REG="$REPERTOIRE/tmp/tmpPrefix.reg"
-	#touch "$REG"
-
-	#if [ ! "$VAR" = "Program Files" ]
-	#then
 	REG="$REPERTOIRE/tmp/reg.reg"
-	echo "Setting Program Files' var"
+	echo "$(eval_gettext "Setting Program Files var")"
 	rm -f "$REG"
 	cat <<EOF > "$REG"
 [HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion]
@@ -235,7 +220,7 @@ Ask_For_cdrom ()
 	cd /media
 	for device in *
 	do
-		if [ ! "$device" = "$LNG_OTHER" ]
+		if [ ! "$device" = $(eval_gettext "Other") ]
 		then
 			fstab1=`cat '/etc/fstab' | grep "$device"`
 			fstab2=`cat '/etc/fstab' | grep "$device" | grep iso9660`
@@ -245,15 +230,15 @@ Ask_For_cdrom ()
 			fi
 		fi
 	done
-	CDROM=$(menu "$LNG_WINE_ASKFORCDROM" "$LIST_DEVICES_$LNG_OTHER" "CD-ROM" "$N1" "$N2" 1 "" "~")
+	CDROM=$(menu "$(eval_gettext "Where is your CD-ROM mounted?")" "$LIST_DEVICES_$(eval_gettext "Other")" "CD-ROM" "$N1" "$N2" 1 "" "~")
 	if [ "$?" = "1" -o "$CDROM" = "" ]
 	then
 		exit
 	fi
 
-	if [ "$CDROM" = "$LNG_OTHER" ]
+	if [ "$CDROM" = $(eval_gettext "Other") ]
 	then
-		CDROM=$(champ "$LNG_WINE_ASKFORCDROM" "/media/cdrom" "$N1" "$N2" 1 "CD-ROM $3")
+		CDROM=$(champ "$(eval_gettext "Where is your CD-ROM mounted?")" "/media/cdrom" "$N1" "$N2" 1 "CD-ROM $3")
 	else
 		CDROM="/media/$CDROM"
 	fi
@@ -267,7 +252,7 @@ Ask_For_cdrom ()
 	then
 		CDROM="/media/cdrom"
 	fi
-	echo "CDROM mount point : $CDROM"
+	echo "CDROM mount point: $CDROM"
 }
 Select_MountPoint()
 {
@@ -299,13 +284,11 @@ Read_autorun()
 }
 Check_cdrom ()
 {
-	#message "$LNG_MOUNT_CDROM"
-	LNG_WINE_ERRORCDROM=$(eval_gettext "Error : Unable to find the CD-ROM !")
 	if [ ! "$CDROM" = "" ]
 	then
 		while [ ! -e "$CDROM/$1" ]
 		do
-			erreur "$LNG_WINE_ERRORCDROM" 
+			erreur "$(eval_gettext "Error: Unable to find the CD-ROM!")" 
 			Ask_For_cdrom
 		done
 	fi
@@ -433,16 +416,14 @@ Set_WineVersion_Assign()
 	if [ "$VERSIONTAPER" = "--reset" ]
 	then
 		export PATH=$VRAIPATH
-		#message "$LNG_WINEVERSIONS_RESETSESSION"
 	else
 		if [ "$VERSIONTAPER" = "" ]
 		then
-			erreur "$LNG_WINEVERSIONS_MUSTSPECIFY"
+			erreur "$(eval_gettext "You must choose which Wine version you want to download.")"
 		fi
 		
 		if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONTAPER" ]
 		then
-			#message "$(LNG_WINEVERSIONS_NOTINSTALLED $VERSIONTAPER)"
 			installer_wine_version "$VERSIONTAPER"
 		fi
 		if [ -e "$REPERTOIRE/configurations/installed/$JEUX" ]
@@ -463,16 +444,14 @@ Set_WineVersion_Session()
 	if [ "$VERSIONTAPER" = "--reset" ]
 	then
 		export PATH=$VRAIPATH
-		#message "$LNG_WINEVERSIONS_RESETSESSION"
 	else
 		if [ "$VERSIONTAPER" = "" ]
 		then
-			erreur "$LNG_WINEVERSIONS_MUSTSPECIFY"
+			erreur "$(eval_gettext "You must choose which Wine version you want download.")"
 		fi
 		
 		if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONTAPER" ]
 		then
-			#message "$(LNG_WINEVERSIONS_NOTINSTALLED $VERSIONTAPER)"
 			installer_wine_version "$VERSIONTAPER"
 		fi
 		export PATH=$VRAIPATH
@@ -481,7 +460,7 @@ Set_WineVersion_Session()
 }
 Set_SoundSampleRate ()
 {
-	# 48000 , 44100 , 22050 , 16000 , 11025 , 8000
+	# values can be: 48000, 44100, 22050, 16000, 11025, 8000
 	if [ ! "$1" = "" ]
 	then
 		echo "[HKEY_CURRENT_USER\Software\Wine\DirectSound]" > $REPERTOIRE/tmp/sndSampleRate.reg
@@ -493,7 +472,7 @@ Set_SoundSampleRate ()
 
 Set_SoundBitsPerSample ()
 {
-	# 8 , 16
+	# values: 8, 16
 	if [ "$1" != "" ]
 	then
 		echo "[HKEY_CURRENT_USER\Software\Wine\DirectSound]" > $REPERTOIRE/tmp/sndBitsPerSample.reg
@@ -562,7 +541,6 @@ Set_WineWindowTitle ()
 {
 	#name of windowed title:$1
 	REG="$REPERTOIRE/tmp/reg.reg"
-	rm -f "$REG"
 	cat <<EOF > "$REG"
 [HKEY_CURRENT_USER\\Software\\Wine\\Explorer]
 "Desktop"="$1"
