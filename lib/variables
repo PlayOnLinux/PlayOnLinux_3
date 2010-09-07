@@ -20,7 +20,7 @@ export SITE="http://repository.playonlinux.com/"
 export SITE2="http://files.playonlinux.com/"
 export REPERTOIRE="$HOME/.PlayOnLinux"
 export POL_USER_ROOT="$REPERTOIRE"
-export VERSION="3.8.1"
+export VERSION="3.8.2-dev"
 export LAST_VERSION=$(cat "$REPERTOIRE/configurations/last_version" 2> /dev/null)
 export PYTHON="python"
 
@@ -141,3 +141,4 @@ EXIT_ERROR=255
 EXIT_SUCCES=0
 
 export IGNORE_ICON_DIR="false"	
+
