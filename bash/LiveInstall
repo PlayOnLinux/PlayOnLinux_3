@@ -48,7 +48,10 @@ create_shortcut()
 			if [ ! "$LAUNCHER" = "" ]
 			then
 				POL_SetupWindow_make_shortcut "$GAMENAME" "$EXECDIR" "$EXEC" "playonlinux.png" "$LAUNCHER"
-				Set_WineVersion_Assign "$WINEVERSIONLIVE" "$LAUNCHER"
+				if [ -n "$WINEVERSIONLIVE" ] 
+				then
+					Set_WineVersion_Assign "$WINEVERSIONLIVE" "$LAUNCHER"
+				fi
 				#echo "$EXECDIR"
 			fi
 		fi

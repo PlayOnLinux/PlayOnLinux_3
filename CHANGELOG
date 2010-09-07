@@ -1,4 +1,5 @@
 -> 3.8.2
+- FIX: PlayOnLinux bug: #17. An error message was displayed during manual installation
 - FIX: know bug in pol-cmd, pol-cmd was unable to create .PlayOnLinux repository
 - FIX: Translation problems. Launchpad bugs: #629421, #629422, #629423, #629425. PlayOnLinux bugs: #36
 - Full rebuild of translation template using xgettext. Python and Shell.
