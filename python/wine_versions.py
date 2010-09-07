@@ -317,7 +317,7 @@ class MainWindow(wx.Frame):
 		
   def delete(self, event):
 	version = self.onglets.list_ver_installed.GetItemText(self.onglets.list_ver_installed.GetSelection()).encode('utf-8')
-	if(wx.YES == wx.MessageBox(_("Are you sure you want to delete wine: ")+version+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
+	if(wx.YES == wx.MessageBox(_("Are you sure you want to delete Wine: ")+version+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
 			shutil.rmtree(Variables.playonlinux_rep+"/WineVersions/"+version)
 
 	self.onglets.VersionsLoad()

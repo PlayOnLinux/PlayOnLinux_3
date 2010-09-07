@@ -214,7 +214,7 @@ class Onglets(wx.Notebook):
 		self.panelWine = wx.Panel(self, -1)
 		self.txtWine = wx.StaticText(self.panelWine, -1, _("Wine"), (0,0), wx.DefaultSize)
 		self.txtWine.SetFont(self.fontTitle)
-		self.txtWVer = wx.StaticText(self.panelWine, -1, _("Default Wine version with which to run Wine programs through PlayOnLinux"), (10,30), wx.DefaultSize)
+		self.txtWVer = wx.StaticText(self.panelWine, -1, _("Default Wine version for PlayOnLinux programs: "), (10,30), wx.DefaultSize)
 		wine_ver = os.listdir(Variables.playonlinux_rep+"/WineVersions/")
 		self.i = 0
 		wine_ver_bis = []

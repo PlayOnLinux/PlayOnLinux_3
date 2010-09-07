@@ -47,10 +47,10 @@ function usage
 {
 	echo "$(eval_gettext 'This program is intended to be used by automatic scripts to manage PlayOnLinux.')"
 	echo "Usage: $0 [--update] [--version] [--run] [--start-install]"
-	echo -e "\t[--version] $(eval_gettext 'print current version and exit.')"
-	echo -e "\t[--update] $(eval_gettext 'update PlayOnLinux script repository.')"
-	echo -e "\t[--run 'Software name'] $(eval_gettext 'run an already installed software.')"
-	echo -e "\t[--start-install 'Script Name'] $(eval_gettext 'start installation a specified script.')"
+	echo -e "\t[--version]			$(eval_gettext '	print current version and exit.')"
+	echo -e "\t[--update]			$(eval_gettext '	update the PlayOnLinux script repository.')"
+	echo -e "\t[--run 'Software name']	$(eval_gettext '	run an existing applicaiton.')"
+	echo -e "\t[--start-install 'Script Name']$(eval_gettext '	start installing a specified script.')"
 	exit 1
 }
 #parsing switch

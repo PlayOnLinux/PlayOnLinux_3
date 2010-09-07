@@ -692,7 +692,7 @@ afficher_fichier ()
 }
 protection_warning () 
 { 
-	attention "$(eval_gettext "Please read that:\nThe CD or DVD protection of this game doesn't work correctly with wine.\nYou will not be able to play this game without deactivating this protection!\nPlayOnLinux can't be responsible of your utilisation of these patch.\n\nThank you.")" 
+	attention "$(eval_gettext "Please note:\nThe CD or DVD protection of this game doesn't work correctly with Wine.\nYou will not be able to play this game without deactivating this protection!\nPlayOnLinux cannot be held responsible for your use of these patches.\n\nThank you.")" 
 }
 presentation () 
 { 
@@ -711,7 +711,7 @@ presentation ()
 }
 ask_mount_num () 
 { 
-	message "$(eval_gettext "Please mount the CD-ROM: ")$1$(eval_gettext ", and press \"ok\" when you are ready")" 
+	message "$(eval_gettext "Please mount the CD-ROM: ")$1$(eval_gettext ", and press \"OK\" when you are ready")" 
 }
 end_install () 
 { 

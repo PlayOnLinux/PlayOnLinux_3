@@ -86,7 +86,7 @@ maj_check ()
 			touch "rate"
 			touch "download"
 			touch "search"
-			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Downloading updates...')" "$(eval_gettext 'PlayOnLinux application list update.')"
+			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Downloading updates...')" "$(eval_gettext 'PlayOnLinux application list update')"
 			wget "$SITE/V3_data/repository/get_list.php" -O- -q | config_maj
 			if [ "$DOSBOX_SUPPORT" = "1" ]
 			then
@@ -144,7 +144,7 @@ but you may not redistribute them in modified form, including changes
 to the file name or packaging format." >> $REPERTOIRE/tmp/licence
 		cat $REPERTOIRE/tmp/licence
 
-		POL_SetupWindow_licence "$(eval_gettext 'Please read and accept this')" "$(eval_gettext 'Microsoft fonts')" "$REPERTOIRE/tmp/licence"
+		POL_SetupWindow_licence "$(eval_gettext 'Please read and accept the following:')" "$(eval_gettext 'Microsoft fonts')" "$REPERTOIRE/tmp/licence"
 		WebVersion=$(wget -q $SITE/version2.php -O-)
 		if [ "$WebVersion" = "" ]
 		then
@@ -202,7 +202,7 @@ to the file name or packaging format." >> $REPERTOIRE/tmp/licence
 			rm *.inf
 			rm *.txt
 			touch "$REPERTOIRE/configurations/msfonts_installed"
-			POL_SetupWindow_message "$(eval_gettext 'Microsoft Fonts have been installed successfully.')" "$(eval_gettext 'Microsoft fonts')"
+			POL_SetupWindow_message "$(eval_gettext 'Microsoft fonts have been installed successfully.')" "$(eval_gettext 'Microsoft fonts')"
 			POL_SetupWindow_Close
 
 		fi
@@ -261,7 +261,7 @@ install_plugins () # Install defaults plugin into home directory
 			[ $Pversion -gt $Uversion ] || continue
 
 			#bon ben la c'est sur le gus a vieux truc
-			echo "   -->$(eval_gettext 'Updating plugin old: ')'$UverStr'/$Uversion$(eval_gettext ', new: ')'$PverStr'/$Pversion."
+			echo "   -->$(eval_gettext 'Updating plugin. Previous: ')'$UverStr'/$Uversion. $(eval_gettext 'New: ')'$PverStr'/$Pversion."
 			
 			#est ce que le plugin était déjà actif?
 			#UplugStatus="disable"
@@ -318,7 +318,7 @@ start_pol ()
 {
 	if [ `id -u` = 0 ]
 	then
-		if [ `question "$(eval_gettext "You are running PlayOnLinux as root.\n\n")$(eval_gettext "Please note that it is very dangerous to run Wine programs as root: you are vulnerable to viruses and other bad stuff.\n\n")$(eval_gettext "PlayOnLinux is not reponsible of any damage in your system.\n\n")$(eval_gettext "Are you sure you want to start PlayOnLinux?")" "$(eval_gettext "Warning!")"` = 1 ]
+		if [ `question "$(eval_gettext "You are running PlayOnLinux as root.\n\n")$(eval_gettext "Please note that it is very dangerous to run Wine programs as root: you are vulnerable to viruses and other bad stuff.\n\n")$(eval_gettext "PlayOnLinux is not reponsible for any damage to your system.\n\n")$(eval_gettext "Are you sure you want to start PlayOnLinux?")" "$(eval_gettext "Warning!")"` = 1 ]
 		then
 			exit
 		fi
@@ -402,23 +402,23 @@ check_new_pol ()
 }
 sudo ()
 {
-	echo "$(eval_gettext "This function is disabled in PlayOnlinux environnement")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
 }
 gksudo ()
 {
-	echo "$(eval_gettext "This function is disabled in PlayOnlinux environnement")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
 }
 gksu ()
 {
-	echo "$(eval_gettext "This function is disabled in PlayOnlinux environnement")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
 }
 su ()
 {
-	echo "$(eval_gettext "This function is disabled in PlayOnlinux environnement")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
 }
 kdesu ()
 {
-	echo "$(eval_gettext "This function is disabled in PlayOnlinux environnement")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
 }
 RefreshLibs()
 {

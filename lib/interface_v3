@@ -40,7 +40,7 @@ export POL_SetupWindow_ID=$(GenId)
 
 POL_SetupWindow_presentation ()
 {
-	POL_SetupWindow_free_presentation "$(eval_gettext "Welcome to PlayOnLinux's Installation Wizard.")" "$(eval_gettext 'This wizard will help you to install ')$1$(eval_gettext ' on your computer.')\n\n$(eval_gettext 'This program was created by: ')$2\n($3)\n\n$(eval_gettext 'This installation program is provided by: ')$4\n\n$1$(eval_gettext ' will be installed in: ')$REPERTOIRE/wineprefix/$5$(eval_gettext "\n\nPlayOnLinux is not responsible for the way you use these scripts.\n\n")$(eval_gettext 'Click Next to start')"
+	POL_SetupWindow_free_presentation "$(eval_gettext "Welcome to PlayOnLinux's Installation Wizard.")" "$(eval_gettext 'This wizard will help you install ')$1$(eval_gettext ' on your computer.')\n\n$(eval_gettext 'This program was created by: ')$2\n($3)\n\n$(eval_gettext 'This installation program is provided by: ')$4\n\n$1$(eval_gettext ' will be installed in: ')$REPERTOIRE/wineprefix/$5$(eval_gettext "\n\nPlayOnLinux is not responsible for the way you use these scripts.\n\n")$(eval_gettext 'Click Next to start')"
 
 }
 POL_SetupWindow_free_presentation ()
@@ -461,7 +461,7 @@ POL_SetupWindow_games ()
 }
 POL_SetupWindow_specialprefixcreate ()
 {
-	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is being created...')" "$(eval_gettext 'Wine prefix configuration')"
 	wine wineprefixcreate
 	sleep 2
 	set_user_dir
@@ -470,7 +470,7 @@ POL_SetupWindow_specialprefixcreate ()
 }
 POL_SetupWindow_oldprefixcreate ()
 {
-	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is being created...')" "$(eval_gettext 'Wine prefix configuration')"
 	wine wineprefixcreate
 	POL_SetupWindow_detect_exit
 }
@@ -481,7 +481,7 @@ POL_SetupWindow_prefixcreate ()
 }
 POL_SetupWindow_normalprefixcreate()
 {
-	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is created...')" "$(eval_gettext 'Wine prefix configuration')"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Please wait while the Wine prefix is being created...')" "$(eval_gettext 'Wine prefix configuration')"
 	wine wineboot
 	POL_SetupWindow_detect_exit
 }
@@ -789,7 +789,7 @@ POL_SetupWindow_install_wine ()
 		POL_SetupWindow_detect_exit
 		if [ ! "$sha1" = "$sha1_file" ]
 		then
-			POL_SetupWindow_message "$(eval_gettext 'The download seems to have failed')" "Wine $1"
+			POL_SetupWindow_message "$(eval_gettext 'The download seems to have failed.')" "Wine $1"
 		else
 			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Extracting Wine...')" "Wine $1"
 			"$PLAYONLINUX/playonlinux-pkg" -i "$ADRESSEDUDEB"

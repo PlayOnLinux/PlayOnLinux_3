@@ -49,7 +49,7 @@ then
 	sleep 1
 	POL_SetupWindow_detect_exit
 	clean_wineprefix $application_prefixe
-	POL_SetupWindow_message "$delete_var $(eval_gettext 'has been uninstalled successfully')" "$(eval_gettext 'PlayOnLinux Uninstaller')"
+	POL_SetupWindow_message "$delete_var$(eval_gettext ' has been uninstalled successfully.')" "$(eval_gettext 'PlayOnLinux Uninstaller')"
 else
 	POL_SetupWindow_message "$(eval_gettext "Cannot find the shortcut")" "$(eval_gettext 'Error')"
 fi

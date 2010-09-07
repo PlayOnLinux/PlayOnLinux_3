@@ -447,7 +447,7 @@ Set_WineVersion_Session()
 	else
 		if [ "$VERSIONTAPER" = "" ]
 		then
-			erreur "$(eval_gettext "You must choose which Wine version you want download.")"
+			erreur "$(eval_gettext "You must choose which Wine version you want to download.")"
 		fi
 		
 		if [ ! -e "$REPERTOIRE/WineVersions/$VERSIONTAPER" ]
