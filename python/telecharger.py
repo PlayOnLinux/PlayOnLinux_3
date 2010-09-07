@@ -67,12 +67,12 @@ class FenpTelechargerUrl(wx.Frame): #fenêtre principale
         self.fontTexte = wx.Font(12, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_BOLD, False, "", wx.FONTENCODING_DEFAULT)
         self.txtTitre = wx.StaticText(self.panelFenp, -1, Variables.titre, (20,25), wx.DefaultSize, wx.ALIGN_CENTER)
         self.txtTitre.SetFont(self.fontTexte)
-        self.txtTexte = wx.StaticText(self.panelFenp, -1, _("Click on download to start."), (155,120), wx.DefaultSize)
+        self.txtTexte = wx.StaticText(self.panelFenp, -1, _("Click Download to start."), (155,120), wx.DefaultSize)
         self.txtTexte.Wrap(330)
         
         if Variables.nombreEtape != "0":	
             self.txtEtape = wx.StaticText(self.panelFenp, -1, Variables.etape_txt, (20, 265), wx.DefaultSize)
-        self.buttonSuivant = wx.Button(self.panelFenp, ID_NEXT, _("Please wait while the game is downloaded..."), (425, 250), wx.DefaultSize)
+        self.buttonSuivant = wx.Button(self.panelFenp, ID_NEXT, _("Please wait while the software is being downloaded..."), (425, 250), wx.DefaultSize)
         
         if Variables.cancel_present == "1":	
             self.buttonAnnuler = wx.Button(self.panelFenp, ID_CANCEL, _("Cancel"), (330, 250), wx.DefaultSize)
@@ -103,7 +103,7 @@ class FenpTelechargerUrl(wx.Frame): #fenêtre principale
 		self.buttonSuivant = wx.Button(self.panelFenp, ID_NEXT, _("Next"), (425, 250), wx.DefaultSize)
 		self.DownloadFile(Variables.url, Variables.localB)
 		self.txtTexte.Destroy()
-		self.txtTexte = wx.StaticText(self.panelFenp, -1, _("Download finished"), (155,120), wx.DefaultSize)
+		self.txtTexte = wx.StaticText(self.panelFenp, -1, _("Download complete"), (155,120), wx.DefaultSize)
 		
 	if(self.i == 1 or Variables.autoexit == "1"):
         	self.Close()  
