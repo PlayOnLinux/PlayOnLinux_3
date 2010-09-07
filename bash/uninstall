@@ -34,7 +34,7 @@ if [ -e "$NOM_JEU" ]
 then
 	application_prefixe=$(detect_wineprefix "$1")
 	delete_var=$1
-	POL_SetupWindow_free_presentation "$(eval_gettext 'PlayOnLinux Uninstaller')" "$(eval_gettext "This assistant will help you uninstall: ")$delete_var\n$(eval_gettext "Click Next to continue.")"
+	POL_SetupWindow_free_presentation "$(eval_gettext 'PlayOnLinux Uninstaller')" "$(eval_gettext "This wizard will help you uninstall: ")$delete_var\n$(eval_gettext "Click Next to continue.")"
 	
 	# Icones
 	rm -f "$REPERTOIRE/icones/32/$1"
