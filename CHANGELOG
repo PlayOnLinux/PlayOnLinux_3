@@ -34,6 +34,7 @@
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
 - ADD: New function for convert the string version to integer.
+- UPDATE: Using convertVersionToInt to see if new version of POL is available, so the developement version does not say that a newer is available.
 
 -> 3.8.1
 - UPDATE: Capture to 2.1.1.

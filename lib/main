@@ -389,7 +389,7 @@ check_new_pol ()
 			then
 				return 2
 			fi
-			if [ "$WebVersion" != "$VERSION" ]
+			if [ $(convertVersionToInt $WebVersion) -gt $(convertVersionToInt $VERSION) ]
 			then
 				#VERSION=$(eval_gettext "An updated version of PlayOnLinux is available. Please visit the website.")
 				#message "$VERSION ($WebVersion)" "" 0 0 0 "update.png"
