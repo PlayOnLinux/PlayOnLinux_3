@@ -45,12 +45,12 @@ then
 fi
 function usage
 {
-	echo "$(eval_gettext 'This program is intended to be used by automatic scripts for manage PlayOnLinux.')"
+	echo "$(eval_gettext 'This program is intended to be used by automatic scripts to manage PlayOnLinux.')"
 	echo "Usage: $0 [--update] [--version] [--run] [--start-install]"
-	echo -e "\t[--version] $(eval_gettext 'print current version and exit')"
-	echo -e "\t[--update] $(eval_gettext 'use this switch to update PlayOnLinux script repository')"
-	echo -e "\t[--run 'Software name'] $(eval_gettext 'use this switch to run an already installed software')"
-	echo -e "\t[--start-install 'Script Name'] $(eval_gettext 'start installation a specified script')"
+	echo -e "\t[--version] $(eval_gettext 'print current version and exit.')"
+	echo -e "\t[--update] $(eval_gettext 'update PlayOnLinux script repository.')"
+	echo -e "\t[--run 'Software name'] $(eval_gettext 'run an already installed software.')"
+	echo -e "\t[--start-install 'Script Name'] $(eval_gettext 'start installation a specified script.')"
 	exit 1
 }
 #parsing switch
@@ -110,7 +110,7 @@ case $1 in
 	#voila voila ...
 	name=${2//" "/"%20"}
 	rm -f $REPERTOIRE/install 2>/dev/null
-	wget -q $SITE/V3_data/repository/get_file.php?id=$name -O $REPERTOIRE/install || die "$(eval_gettext 'Please assure you are connected to internet.')"
+	wget -q $SITE/V3_data/repository/get_file.php?id=$name -O $REPERTOIRE/install || die "$(eval_gettext 'Please make sure you are connected to the Internet.')"
 	if [ -e "$REPERTOIRE/install" ]
 	then
 		bash $REPERTOIRE/install

@@ -21,6 +21,7 @@
 	-> lib/main
 	-> lib/wine
 	-> lib/interface (+ cleaning)
+	-> playonlinux-cmd
 - Removing some unused files plus cleaning some files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
