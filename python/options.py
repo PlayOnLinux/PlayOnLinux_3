@@ -214,7 +214,7 @@ class Onglets(wx.Notebook):
 		self.panelWine = wx.Panel(self, -1)
 		self.txtWine = wx.StaticText(self.panelWine, -1, _("Wine"), (0,0), wx.DefaultSize)
 		self.txtWine.SetFont(self.fontTitle)
-		self.txtWVer = wx.StaticText(self.panelWine, -1, _("Default Wine Version to run wine programs with PlayOnLinux"), (10,30), wx.DefaultSize)
+		self.txtWVer = wx.StaticText(self.panelWine, -1, _("Default Wine version with which to run Wine programs through PlayOnLinux"), (10,30), wx.DefaultSize)
 		wine_ver = os.listdir(Variables.playonlinux_rep+"/WineVersions/")
 		self.i = 0
 		wine_ver_bis = []
@@ -229,7 +229,7 @@ class Onglets(wx.Notebook):
 
 		self.txtDesktop = wx.StaticText(self.panelWine, -1, _("Desktop"), (0,100), wx.DefaultSize)
 		self.txtPanel = wx.StaticText(self.panelWine, -1, _("PlayOnLinux menu"), (10,130), wx.DefaultSize)
-		self.Panel = wx.CheckBox(self.panelWine, -1, _("Add PlayOnLinux menu in your panel"),pos=(20,150))
+		self.Panel = wx.CheckBox(self.panelWine, -1, _("Add the PlayOnLinux menu to your panel"),pos=(20,150))
 		if(os.path.exists(os.popen("printf $HOME").read()+"/.config/menus/applications-merged/playonlinux-Programmes.menu")):
 			self.Panel.SetValue(1)
 		self.txtPanel = wx.StaticText(self.panelWine, -1, _("Desktop directory"), (10,190), wx.DefaultSize)
@@ -341,7 +341,7 @@ class Onglets(wx.Notebook):
 		self.FileDialog.SetWildcard("POL Packages (*.pol)|*.pol")
         	self.FileDialog.ShowModal()
         	if(self.FileDialog.GetPath() != ""):
-			if(wx.YES == wx.MessageBox("Are you sure you want to install "+self.FileDialog.GetPath()+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
+			if(wx.YES == wx.MessageBox(_("Are you sure you want to install: ")+self.FileDialog.GetPath()+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
 	      			os.system("bash \""+Variables.playonlinux_env+"/playonlinux-pkg\" -i \""+self.FileDialog.GetPath().encode('utf-8')+"\"")
 				self.LoadPlugins()
         	self.FileDialog.Destroy()
@@ -349,7 +349,7 @@ class Onglets(wx.Notebook):
 	def delete_plug(self, event):
 		self.current_plugin = self.pluginlist.GetItemText(self.pluginlist.GetSelection())
 		self.plugin_path = Variables.playonlinux_rep+"/plugins/"+self.current_plugin
-   	        if(wx.YES == wx.MessageBox("Are you sure you want to delete "+self.current_plugin+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
+   	        if(wx.YES == wx.MessageBox(_("Are you sure you want to delete: ")+self.current_plugin+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
 			shutil.rmtree(self.plugin_path)
 			self.LoadPlugins()
 	def disable(self, event):

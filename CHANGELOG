@@ -3,6 +3,9 @@
 - FIX: Translation problems. Launchpad bugs: #629421, #629422, #629423, #629425. PlayOnLinux bugs: #36
 - Full rebuild of translation template using xgettext. Python and Shell.
 - Better use of the gettext function and string corrections for:
+	-> python/options.py
+	-> python/mainwindow.py
+	-> python/message_one.py
 	-> bash/LiveInstall
 	-> bash/autorun
 	-> bash/daemon/autorun
@@ -22,8 +25,6 @@
 	-> lib/wine
 	-> lib/interface (+ cleaning)
 	-> playonlinux-cmd
-	-> python/mainwindow.py
-	-> python/message_one.py
 - Removing some unused files plus cleaning some files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
