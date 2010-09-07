@@ -3,6 +3,7 @@
 - FIX: Translation problems. Launchpad bugs: #629421, #629422, #629423, #629425. PlayOnLinux bugs: #36
 - Full rebuild of translation template using xgettext. Python and Shell.
 - Better use of the gettext function and string corrections for:
+	-> python/wine_versions.py
 	-> python/guiv3.py
 	-> python/telecharger.py
 	-> python/options.py

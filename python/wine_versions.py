@@ -126,8 +126,8 @@ class Onglets(wx.Notebook):
 	    self.list_ver_installed = wx.TreeCtrl(self.panelFenp, 107, style=wx.TR_HIDE_ROOT|wx.TR_FULL_ROW_HIGHLIGHT|wx.RAISED_BORDER, size=(562, 212), pos=(10,281))
 	    self.list_ver_installed.SetImageList(self.imagesapps_i)
 	    self.list_ver_installed.SetSpacing(0);
-	    wx.StaticText(self.panelFenp, -1, _("Installed Wine Versions :"),(10,261))
-	    wx.StaticText(self.panelFenp, -1, _("Available Wine Versions :"),(10,10))
+	    wx.StaticText(self.panelFenp, -1, _("Installed Wine versions: "),(10,261))
+	    wx.StaticText(self.panelFenp, -1, _("Available Wine versions: "),(10,10))
 	    # self.content =  wx.TextCtrl(self.panelFenp, 107, pos=(10,301), size=(562,212), style = wx.TE_MULTILINE | wx.TE_RICH2 | wx.CB_READONLY | wx.RAISED_BORDER)
 
 	    self.button_rm = wx.Button(self.panelFenp, wx.ID_REMOVE, pos=(388, 500), size=wx.DefaultSize)
@@ -163,7 +163,7 @@ class Onglets(wx.Notebook):
 	    self.list_game = wx.TreeCtrl(self.panelApps, 111, style=wx.TR_HIDE_ROOT|wx.TR_FULL_ROW_HIGHLIGHT|wx.RAISED_BORDER, size=(562, 400), pos=(10,30))
 	    self.list_game.SetImageList(self.images)
 	    self.list_game.SetSpacing(0);
-	    self.version = wx.StaticText(self.panelApps, -1, _("Version :"),(10,440))
+	    self.version = wx.StaticText(self.panelApps, -1, _("Version: "),(10,440))
 	   
 	    self.MenuVer = wx.ComboBox(self.panelApps, 112)
 	    self.VersionsLoad()
@@ -317,7 +317,7 @@ class MainWindow(wx.Frame):
 		
   def delete(self, event):
 	version = self.onglets.list_ver_installed.GetItemText(self.onglets.list_ver_installed.GetSelection()).encode('utf-8')
-	if(wx.YES == wx.MessageBox("Are you sure you want to delete wine "+version+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
+	if(wx.YES == wx.MessageBox(_("Are you sure you want to delete wine: ")+version+"?", style=wx.YES_NO | wx.ICON_QUESTION)):
 			shutil.rmtree(Variables.playonlinux_rep+"/WineVersions/"+version)
 
 	self.onglets.VersionsLoad()
