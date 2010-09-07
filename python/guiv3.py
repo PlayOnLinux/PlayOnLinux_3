@@ -265,7 +265,7 @@ class Ok_frame(wx.Frame): #fenêtre principale
 		octetsLoadedN = round(octetsLoadedB, 1)
 		tailleFichierN = round(tailleFichierB, 1)
 		
-		Variables.estimation_txt = str(octetsLoadedN) + " "+_("of")+" " + str(tailleFichierN) + " mo "+_("downloaded")
+		Variables.estimation_txt = str(octetsLoadedN) + " "+_("of")+" " + str(tailleFichierN) + _("MiB downloaded")
 		
 		self.txtEstimation.SetLabel(Variables.estimation_txt)
 		self.txtEstimation.SetFont(self.fontText)
