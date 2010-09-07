@@ -40,7 +40,7 @@ export POL_SetupWindow_ID=$(GenId)
 
 POL_SetupWindow_presentation ()
 {
-	POL_SetupWindow_free_presentation "$(eval_gettext "Welcome to PlayOnLinux's Installation Wizard")" "$(eval_gettext 'This wizard will help you to install ')$1$(eval_gettext ' on your computer.')\n\n$(eval_gettext 'This program was created by: ')$2\n($3)\n\n$(eval_gettext 'This installation program is provided by: ')$4\n\n$1$(eval_gettext ' will be installed in: ')$REPERTOIRE/wineprefix/$5$(eval_gettext "\n\nPlayOnLinux is not responsible for the way you use these scripts\n\n")$(eval_gettext 'Click Next to start')"
+	POL_SetupWindow_free_presentation "$(eval_gettext "Welcome to PlayOnLinux's Installation Wizard.")" "$(eval_gettext 'This wizard will help you to install ')$1$(eval_gettext ' on your computer.')\n\n$(eval_gettext 'This program was created by: ')$2\n($3)\n\n$(eval_gettext 'This installation program is provided by: ')$4\n\n$1$(eval_gettext ' will be installed in: ')$REPERTOIRE/wineprefix/$5$(eval_gettext "\n\nPlayOnLinux is not responsible for the way you use these scripts.\n\n")$(eval_gettext 'Click Next to start')"
 
 }
 POL_SetupWindow_free_presentation ()
