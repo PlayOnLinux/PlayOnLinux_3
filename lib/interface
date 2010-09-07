@@ -306,8 +306,7 @@ champ ()
 	else
 		CANCEL=$5
 	fi
-	message=${1//"\n"/
-}
+	message=${1//"\n"/}
 	if [ ! "$7" ]
 	then
 		IMAGE="divers.png"
@@ -358,8 +357,7 @@ menu ()
 	else
 		CANCEL=$6
 	fi
-	message=${1//"\n"/
-}
+	message=${1//"\n"/}
 	if [ ! "$7" ]
 	then
 		IMAGE="divers.png"
@@ -432,8 +430,7 @@ menu_list ()
 	else
 		CANCEL=$6
 	fi
-	message=${1//"\n"/
-}
+	message=${1//"\n"/}
 	if [ ! "$7" ]
 	then
 		IMAGE="divers.png"
@@ -695,7 +692,7 @@ afficher_fichier ()
 }
 protection_warning () 
 { 
-	attention "Please read that :\nThe CD or DVD protection of this game doesn't work correctly with wine.\nYou will not be able to play this game without deactivating this protection !\nPlayOnLinux can't be responsible of your utilization of these patch.\nThank you." 
+	attention "$(eval_gettext "Please read that:\nThe CD or DVD protection of this game doesn't work correctly with wine.\nYou will not be able to play this game without deactivating this protection!\nPlayOnLinux can't be responsible of your utilisation of these patch.\n\nThank you.")" 
 }
 presentation () 
 { 
@@ -709,11 +706,12 @@ presentation ()
 	then	
 		N2="$7"
 	fi
-	message "Program: $1 \nGame developer: $2 \nDirection: $3 \nScript writter: $4\n\nWineprefix will be created in $HOME/.PlayOnLinux/wineprefix/$5/ \n \nWarning : We aren't responsible for how you use this script!" "Installation wizard" $N1 $N2 1 "" "Install"
+	#message "$(eval_gettext "Program: ")$1\n$(eval_gettext "Game developer: ")$2\n$(eval_gettext "Direction: ")$3\n$(eval_gettext "Script writter: ")$4\n\n$(eval_gettext "Wineprefix will be created in: ")$HOME/.PlayOnLinux/wineprefix/$5/\n\nWarning : We aren't responsible for how you use this script!" "Installation wizard" $N1 $N2 1 "" "Install"
+	POL_SetupWindow_presentation "$1" "$2" "$3" "$4" "$5"
 }
 ask_mount_num () 
 { 
-	message "Please mount the CD-ROM $1, and press \"ok\" when you are ready" 
+	message "$(eval_gettext "Please mount the CD-ROM: ")$1$(eval_gettext ", and press \"ok\" when you are ready")" 
 }
 end_install () 
 { 
