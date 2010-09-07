@@ -23,6 +23,7 @@
 	-> lib/interface (+ cleaning)
 	-> playonlinux-cmd
 	-> python/mainwindow.py
+	-> python/message_one.py
 - Removing some unused files plus cleaning some files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.

@@ -71,7 +71,7 @@ class Ok_frame(wx.Frame): #fenêtre principale
 		self.txtTexte.Wrap(330)
 		#if Variables.nombreEtape != "0":		
 		#	self.txtEtape = wx.StaticText(self.panelFenp, -1, Variables.etape_txt, (20, 265), wx.DefaultSize)
-		self.check_nomore = wx.CheckBox(self.panelFenp, -1, _("No more alert me"), (5,265))	
+		self.check_nomore = wx.CheckBox(self.panelFenp, -1, _("Do not alert me anymore"), (5,265))	
 		self.buttonSuivant = wx.Button(self.panelFenp, ID_NEXT, _("Next"), (425, 250), wx.DefaultSize)
 		
 		if Variables.cancel_present == "1":		
