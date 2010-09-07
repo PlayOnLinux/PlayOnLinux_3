@@ -32,12 +32,7 @@ fi
 source "$PLAYONLINUX/lib/sources"
 
 
-LNG_PKG_NOT_VALID="$(eval_gettext 'The file is not a valid PlayOnLinux package')"
-LNG_PKG_NOT_FOUND="$(eval_gettext 'Unable to find the file')"
-LNG_PKG_CHOOSE="$(eval_gettext 'Choose a package to install')"
-LNG_PKG_MANAGER="$(eval_gettext 'PlayOnLinux package manager')"
-
-echo "$LNG_PKG_MANAGER $VERSION"
+echo "$(eval_gettext 'PlayOnLinux package manager: ')$VERSION"
 if [ "$1" = "--version" ]
 then
 	echo "PlayOnLinux $VERSION"
@@ -51,15 +46,15 @@ else
 fi
 if [ "$1" = "-h" -o "$1" = "--help" -o "$1" = "" ]
 then
-	echo "Usage :"
-	echo "-b or --browse		Choose a file"
-	echo "-e or --extract 	Extract the package"
-	echo "-i or --install		Install the package"
-	echo "-h or --help		Show this message"
+	echo "$(eval_gettext "Usage: ")"
+	echo "-b$(eval_gettext " or ")--browse	$(eval_gettext "	Choose a file")"
+	echo "-e$(eval_gettext " or ")--extract 	$(eval_gettext "	Extract the package")"
+	echo "-i$(eval_gettext " or ")--install	$(eval_gettext "	Install the package")"
+	echo "-h$(eval_gettext " or ")--help	$(eval_gettext "	Show this message")"
 fi
 if [ "$1" = "-b" -o "$1" = "--browse" ]
 then
-	FILE=`select_file "$LNG_PKG_CHOOSE" '' 0 0 1 "$LNG_PKG_MANAGER"`
+	FILE=`select_file "$(eval_gettext 'Choose a package to install')" '' 0 0 1 "$(eval_gettext 'PlayOnLinux package manager')"`
 	if [ ! $FILE = "" ]
 	then
 		bash "$PLAYONLINUX/playonlinux-pkg" -i "$FILE" -g
@@ -75,13 +70,13 @@ then
 	echo "Opening $2"
 	if [ ! -e "$PACKAGE" ]
 	then 
-		$error_c "$LNG_PKG_NOT_FOUND : $2"
+		$error_c "$(eval_gettext 'Unable to find the file: ')$2"
 		exit
 	fi
 	ext=`echo $PACKAGE | awk -F "." '{print $NF}'`
 	if [ ! "$ext" = "pol" ]
 	then
-		$error_c "$LNG_PKG_NOT_VALID : $2"
+		$error_c "$(eval_gettext "This file: ")$2$(eval_gettext " isn't a valid PlayOnLinux package!")"
 		exit
 	fi
 	echo "Extracting..."
@@ -98,35 +93,35 @@ then
 	echo "Opening $2"
 	if [ ! -e "$PACKAGE" ]
 	then 
-		$error_c "$LNG_PKG_NOT_VALID : $2"
+		$error_c "$(eval_gettext "This file: ")$2$(eval_gettext " isn't a valid PlayOnLinux package!")"
 		exit
 	fi
 	ext=`echo $PACKAGE | awk -F "." '{print $NF}'`
 	if [ ! "$ext" = "pol" ]
 	then
-		$error_c "$LNG_PKG_NOT_VALID : $2"
+		$error_c "$(eval_gettext "This file: ")$2$(eval_gettext " isn't a valid PlayOnLinux package!")"
 		exit
 	fi
 	rm "$TMP/pkg/" -r 2> /dev/null
 	mkdir "$TMP/pkg/" -p
 	cp "$2" "$TMP/pkg"
 	cd "$TMP/pkg"
-	echo "Extracting $2..."
+	echo "$(eval_gettext "Extracting: ")$2..."
 	tar -xvf *.pol > /dev/null 2> /dev/null	
 	if [ "$?" = "2" ]
 	then
-		$error_c "$LNG_PKG_NOT_VALID : $2"
+		$error_c "$(eval_gettext "This file: ")$2$(eval_gettext " isn't a valid PlayOnLinux package!")"
 		exit
 	fi
 	if [ ! -e "$TMP/pkg/playonlinux/main" ]
 	then
-		$error_c "$LNG_PKG_NOT_VALID : $2"
+		$error_c "$(eval_gettext "This file: ")$2$(eval_gettext " isn't a valid PlayOnLinux package!")"
 		exit
 	fi
-	echo "Running ..."
+	echo "$(eval_gettext "Running...")"
 	export SCRIPT_DIRECTORY="$TMP/pkg/files/"
 	bash "$TMP/pkg/playonlinux/main"
 	rm "$TMP/pkg/" -r 2> /dev/null
-	echo "Cleaning ..."
+	echo "$(eval_gettext "Cleaning...")"
 fi
 exit 0
