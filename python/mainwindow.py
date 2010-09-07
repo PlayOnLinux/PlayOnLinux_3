@@ -74,7 +74,7 @@ class MainWindow(wx.Frame):
     self.expertmenu = wx.Menu()
 
 
-    self.winever_item = wx.MenuItem(self.expertmenu, 107, _("Manage wine versions"))
+    self.winever_item = wx.MenuItem(self.expertmenu, 107, _("Manage Wine versions"))
     self.winever_item.SetBitmap(wx.Bitmap(Variables.playonlinux_env+"/etc/menu/wine.png"))
     self.expertmenu.AppendItem(self.winever_item)
 
@@ -82,7 +82,7 @@ class MainWindow(wx.Frame):
     #self.wineserv_item.SetBitmap(wx.Bitmap(Variables.playonlinux_env+"/etc/menu/wineserver.png"))
     #self.expertmenu.AppendItem(self.wineserv_item)
 
-    self.run_item = wx.MenuItem(self.expertmenu, 108, _("Run a non-official script"))
+    self.run_item = wx.MenuItem(self.expertmenu, 108, _("Run a local script"))
     self.run_item.SetBitmap(wx.Bitmap(Variables.playonlinux_env+"/etc/menu/run.png"))
     self.expertmenu.AppendItem(self.run_item)
 
@@ -144,7 +144,7 @@ class MainWindow(wx.Frame):
     if(self.j > 0):
 	self.pluginsmenu.AppendSeparator()
 
-    self.option_item_p = wx.MenuItem(self.expertmenu, 214, _("Plugins manager"))
+    self.option_item_p = wx.MenuItem(self.expertmenu, 214, _("Plugin manager"))
     self.option_item_p.SetBitmap(wx.Bitmap(Variables.playonlinux_env+"/etc/onglet/package-x-generic.png"))
     self.pluginsmenu.AppendItem(self.option_item_p)
  
@@ -220,7 +220,7 @@ class MainWindow(wx.Frame):
   def RMBInGameList(self, event):
 	self.GameListPopUpMenu = wx.Menu()
 
-	self.ConfigureWine = wx.MenuItem(self.GameListPopUpMenu, 230, _("Configure wine"))
+	self.ConfigureWine = wx.MenuItem(self.GameListPopUpMenu, 230, _("Configure Wine"))
 	self.ConfigureWine.SetBitmap(wx.Bitmap(Variables.playonlinux_env+"/etc/menu/run.png"))
 	self.GameListPopUpMenu.AppendItem(self.ConfigureWine)
 
@@ -228,7 +228,7 @@ class MainWindow(wx.Frame):
 	self.RegistryEditor.SetBitmap(wx.Bitmap(Variables.playonlinux_env+"/etc/menu/regedit.png"))
 	self.GameListPopUpMenu.AppendItem(self.RegistryEditor)
 
-	self.GotoAppDir = wx.MenuItem(self.GameListPopUpMenu, 232, _("Go to the application directory"))
+	self.GotoAppDir = wx.MenuItem(self.GameListPopUpMenu, 232, _("Open the application's directory"))
 	self.GotoAppDir.SetBitmap(wx.Bitmap(Variables.playonlinux_env+"/etc/onglet/user-desktop.png"))
 	self.GameListPopUpMenu.AppendItem(self.GotoAppDir)
 
@@ -250,7 +250,7 @@ class MainWindow(wx.Frame):
 	webbrowser.open("http://www.playonlinux.com/donate.html");
 
   def RWineConfigurator(self, event):
-        self.RConfigure(_("Configure wine"), "nothing")
+        self.RConfigure(_("Configure Wine"), "nothing")
 
   def RKill(self, event):
         self.RConfigure(_("KillApp"), "nothing")
@@ -422,13 +422,13 @@ class MainWindow(wx.Frame):
     self.aboutBox.SetName("PlayOnLinux")
     self.aboutBox.SetVersion(Variables.version)
     self.aboutBox.SetDescription(_("Run your Windows programs on Linux !"))
-    self.aboutBox.SetCopyright("(C) PlayOnLinux team 2008-2010\nUnder GPL licence version 3")
-    self.aboutBox.AddDeveloper("Developer and Website : Tinou (Pâris Quentin)")	 
-    self.aboutBox.AddDeveloper("Scriptors : MulX (Petit Aymeric), GNU_Raziel, NSLW")
-    self.aboutBox.AddDeveloper("Packager : MulX (Petit Aymeric)")
-    self.aboutBox.AddDeveloper("Script Creator : Zoloom (Cassarin-Grand Arthur)")
-    self.aboutBox.AddDeveloper("Helped for the program : kiplantt, NSLW")
-    self.aboutBox.AddTranslator(_("Translation was made on launchpad:"))
+    self.aboutBox.SetCopyright("(C) PlayOnLinux team 2007-2010\n"+_("Under GPL licence version 3")
+    self.aboutBox.AddDeveloper(_("Developer and Website: ")+"Tinou (Pâris Quentin)")	 
+    self.aboutBox.AddDeveloper(_("Scriptors: ")+"MulX (Petit Aymeric), GNU_Raziel, NSLW")
+    self.aboutBox.AddDeveloper(_("Packager: ")+"MulX (Petit Aymeric)")
+    self.aboutBox.AddDeveloper(_("Script Creator: ")+"Zoloom (Cassarin-Grand Arthur)")
+    self.aboutBox.AddDeveloper(_("Helped for the program: ")+"kiplantt, NSLW")
+    self.aboutBox.AddTranslator(_("Translation made on launchpad:"))
     self.aboutBox.AddTranslator("https://translations.launchpad.net/playonlinux/")
     self.aboutBox.AddArtist("Icons are provided by Tango Desktop Project")
     self.aboutBox.SetWebSite("http://www.playonlinux.com")
