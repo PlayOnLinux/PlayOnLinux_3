@@ -435,3 +435,24 @@ POL_Call()
 		cd "$OLD_PC_DIR"
 	fi
 }
+
+function convertVersionToInt ()
+{
+## convert version string to an (increasing) integer by an mathematic formul
+# on explose le string en 3 parties
+	local versionP1 versionP2 versionP3 versionInt
+	versionP1=$(cut -d'.' -f1 <<< $1)
+	versionP2=$(cut -d'.' -f2 <<< $1)
+	versionP3=$(cut -d'.' -f3 <<< $1)
+	#on fait des maths partie1 elever au cube et multiplier par 1000
+	let "versionP1 = versionP1 * versionP1 * versionP1 * 1000"
+	#partie 2 au carré multiplier par 100
+	let "versionP2 = versionP2 * versionP2 * 100"
+	#utile dans le cas ou la 3ième partie est vide pour retourner 0 dans la variable
+	#arrive avec la 3.8, 3.9, ....
+	let "versionP3 = versionP3"
+	#on additionne le tout
+	let "versionInt = versionP1 + versionP2 + versionP3"
+	echo $versionInt
+}
+

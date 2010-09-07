@@ -33,6 +33,7 @@
 - Removing some unused files plus cleaning some files. 
 - Add missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
+- ADD: New function for convert the string version to integer.
 
 -> 3.8.1
 - UPDATE: Capture to 2.1.1.
