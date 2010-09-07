@@ -465,7 +465,7 @@ class MainWindow(wx.Frame):
 	
     self.env_chaine = "DESKTOP="+self.desk+"\nWINEVERSION="+self.onglets.WineVersion.GetValue()
     open(Variables.playonlinux_rep+"/configurations/options/env",'w').write(self.env_chaine)
-    wx.MessageBox(_("You must restart PlayOnLinux for the changes to take effect"), "PlayOnLinux", wx.OK)
+    wx.MessageBox(_("You must restart PlayOnLinux for the changes to take effect."), "PlayOnLinux", wx.OK)
     sys.exit(0)
 class PlayOnLinuxApp(wx.App):
    def OnInit(self):

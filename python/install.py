@@ -111,7 +111,7 @@ class MainWindow(wx.Frame):
     self.list_cat.SetImageList(self.images_cat)
     self.AddCats()
     self.searchbox = wx.TextCtrl(self.panelFenp, 110, size=(364,25), pos=(319,9))
-    self.searchcaption = wx.StaticText(self.panelFenp, -1, _("Search :"), (220,15), wx.DefaultSize)
+    self.searchcaption = wx.StaticText(self.panelFenp, -1, _("Search: "), (220,15), wx.DefaultSize)
     self.lasthtml_content = ""
     self.list_apps = wx.TreeCtrl(self.panelFenp, 106, style=wx.TR_HIDE_ROOT|wx.TR_FULL_ROW_HIGHLIGHT|wx.RAISED_BORDER, size=(562, 261), pos=(220,40))
     self.list_apps.SetImageList(self.imagesapps)
