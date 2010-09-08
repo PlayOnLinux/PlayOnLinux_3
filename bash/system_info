@@ -71,14 +71,14 @@ then
     APPEXECSIZE=`stat -c%s "$APPPATH"`
     let AAPPEXECSIZE="$APPEXECSIZE / 1024 / 1024"
     let BAPPEXECSIZE="($APPEXECSIZE - ($AAPPEXECSIZE * 1024 * 1024)) * 1000 / 1024 / 1024"
-    echo "$(eval_gettext 'Executable file: ')$APPEXEC ("$AAPPEXECSIZE.$BAPPEXECSIZE" MB)" >> $TEMP_INFOS
-    echo "$(eval_gettext "Content of app launcher: \n")" >> $TEMP_INFOS
+    echo "$(eval_gettext 'Executable file: ')$APPEXEC ("$AAPPEXECSIZE.$BAPPEXECSIZE" $(eval_gettext "MiB"))" >> $TEMP_INFOS
+    echo -e "$(eval_gettext "Content of app launcher: \n")" >> $TEMP_INFOS
     echo "[code language=console]
 `cat "$REPERTOIRE/configurations/installed/$APP"`
 [/code]
 " >> $TEMP_INFOS
 
-    echo "$(eval_gettext "Content of terminal output: \n")" >> $TEMP_INFOS
+    echo -e "$(eval_gettext "Content of terminal output: \n")" >> $TEMP_INFOS
 
 else
     echo "$(eval_gettext "System information:")" > $TEMP_INFOS

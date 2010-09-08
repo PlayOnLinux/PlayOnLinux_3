@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-08 09:40:19+02:00\n"
+"POT-Creation-Date: 2010-09-08 11:32:15+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -480,6 +480,11 @@ msgstr ""
 #: bash/system_info:74
 #, sh-format
 msgid "Executable file: "
+msgstr ""
+
+#: bash/system_info:74
+#, sh-format
+msgid "MiB"
 msgstr ""
 
 #: bash/system_info:75
@@ -988,9 +993,26 @@ msgstr ""
 msgid "\tstart installing a specified script."
 msgstr ""
 
-#: playonlinux-cmd:113
+#: playonlinux-cmd:54
+#, sh-format
+msgid "\tperform a search into script repository."
+msgstr ""
+
+#: playonlinux-cmd:114
 #, sh-format
 msgid "Please make sure you are connected to the Internet."
+msgstr ""
+
+#: playonlinux-cmd:122
+#, sh-format
+msgid ""
+"The search need an updated repository.\\nIf the results seem outdated, "
+"please run an update: "
+msgstr ""
+
+#: playonlinux-cmd:123
+#, sh-format
+msgid "Search result: "
 msgstr ""
 
 #: playonlinux-pkg:35
