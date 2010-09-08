@@ -116,6 +116,11 @@ case $1 in
 		bash $REPERTOIRE/install
 	fi
 	;;
+--search)
+	if [ -z "$2" ] ; then usage ; fi
+	echo "$(eval_gettext "Search result: ")"
+	grep -i -- "$2" $REPERTOIRE/configurations/listes/search
+	;;
 *)
 	usage
 	;;
