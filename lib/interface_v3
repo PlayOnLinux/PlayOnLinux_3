@@ -208,6 +208,8 @@ POL_SetupWindow_download ()
 	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	echo "$(pwd)/" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
+	sleep 0.2 #may be fix launchpad bug #392513.
+
 	DOWNLOADEDFILE=`cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | head -n5 | tail -n1`
 	DOWNLOADSERVER=`echo $DOWNLOADEDFILE | cut -d/ -f3`
 	DOWNLOADEDFILE=$(basename "$DOWNLOADEDFILE")
@@ -230,16 +232,16 @@ POL_SetupWindow_download ()
 	then
 		if [ $(echo "$DOWNLOADEDFILE" | grep -o 'PlayOnLinux-wine') = "PlayOnLinux-wine" ]
 		then
-			ERROR_MESSAGE="WineVersion server temporary unavailable.\nPlease try again later."
+			ERROR_MESSAGE="$(eval_gettext "Wine version server temporary unavailable.\nPlease try again later.")"
 		elif [ "$MESSAGE_TER" = 1 ]
 		then
-			ERROR_MESSAGE="Following server is no longer available:\n\n- $DOWNLOADSERVER"
+			ERROR_MESSAGE="$(eval_gettext "Following server is no longer available:\n\n")$DOWNLOADSERVER"
 		elif [ "$MESSAGE_TER" = 2 ]
 		then
-			ERROR_MESSAGE="Following file is no longer available on server:\n\n- $DOWNLOADEDFILE"
+			ERROR_MESSAGE="$(eval_gettext "Following file is no longer available on server:\n\n")$DOWNLOADEDFILE"
 		fi
 
-		POL_SetupWindow_message_image "$ERROR_MESSAGE" "Download failure" "$PLAYONLINUX/themes/tango/warning.png"
+		POL_SetupWindow_message_image "$ERROR_MESSAGE" "$(eval_gettext "Download failure")" "$PLAYONLINUX/themes/tango/warning.png"
 		POL_SetupWindow_Close
 		exit $EXIT_DOWNLOADERROR
 	fi
