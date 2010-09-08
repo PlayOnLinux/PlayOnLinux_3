@@ -529,7 +529,7 @@ Use_WineVersion()
 
 POL_LoadVar_PROGRAMFILES()
 {
-	PROGRAMFILES=`wine cmd /c echo "%ProgramFiles%" |tr -d '\015' | tr -d '\010'`
+	PROGRAMFILES=`wine cmd /c echo "%ProgramFiles%" |tr -d '\015' | tr -d '\012'`
 	if [ "${PROGRAMFILES}" = "%ProgramFiles%" ] 
 	then # Var is not defined by wine
 		export PROGRAMFILES="Program Files"
