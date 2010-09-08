@@ -1,7 +1,13 @@
--> 3.8.2
+-> 3.8.2-dev
 - FIX: PlayOnLinux bug: #17. An error message was displayed during manual installation
 - FIX: know bug in pol-cmd, pol-cmd was unable to create .PlayOnLinux repository
 - FIX: Translation problems. Launchpad bugs: #629421, #629422, #629423, #629425. PlayOnLinux bugs: #36
+- FIX: PlayOnLinux bug: #26, function POL_LoadVar_ProgramFiles didn't remove line char.
+- UPDATE: Using convertVersionToInt to see if new version of POL is available, so the developement version does not say that a newer is available.
+- ADD: Missing string in tranlation. String used by plugins.
+- ADD: Set_WineWindowTitle. See POL bug: #23.
+- ADD: New function for convert the string version to integer.
+- ADD: playonlinux-cmd support search
 - Full rebuild of translation template using xgettext. Python and Shell.
 - Better use of the gettext function and string corrections for:
 	-> python/wine_versions.py
@@ -31,11 +37,6 @@
 	-> playonlinux-cmd
 	-> playonlinux-pkg
 - Removing some unused files plus cleaning some files. 
-- Add missing string in tranlation. String used by plugins.
-- ADD: Set_WineWindowTitle. See POL bug: #23.
-- ADD: New function for convert the string version to integer.
-- UPDATE: Using convertVersionToInt to see if new version of POL is available, so the developement version does not say that a newer is available.
-- ADD: playonlinux-cmd support search
 
 -> 3.8.1
 - UPDATE: Capture to 2.1.1.
