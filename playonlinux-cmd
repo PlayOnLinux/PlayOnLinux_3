@@ -51,6 +51,7 @@ function usage
 	echo -e "\t[--update]			$(eval_gettext '	update the PlayOnLinux script repository.')"
 	echo -e "\t[--run 'Software name']	$(eval_gettext '	run an existing applicaiton.')"
 	echo -e "\t[--start-install 'Script Name']$(eval_gettext '	start installing a specified script.')"
+	echo -e "\t[--search 'Script Name']	$(eval_gettext '	perform a search into script repository.')"
 	exit 1
 }
 #parsing switch
@@ -118,6 +119,7 @@ case $1 in
 	;;
 --search)
 	if [ -z "$2" ] ; then usage ; fi
+	echo -e "$(eval_gettext "The search need an updated repository.\nIf the results seem outdated, please run an update: ")$0 --update"
 	echo "$(eval_gettext "Search result: ")"
 	grep -i -- "$2" $REPERTOIRE/configurations/listes/search
 	;;
