@@ -1,32 +1,31 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR PlayOnLinux Team
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# PlayOnLinux translation template
+# Copyright (C) 2007-2010 PlayOnLinux Team
+# This file is distributed under the same license as the PlayOnLiux package.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-06 22:01+0200\n"
+"POT-Creation-Date: 2010-09-08 09:40:19+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: bash/LiveInstall:30 bash/LiveInstall:36 bash/LiveInstall:44
-#: bash/LiveInstall:73 bash/LiveInstall:75 bash/LiveInstall:79
-#: bash/LiveInstall:86 bash/LiveInstall:91 bash/LiveInstall:100
-#: bash/LiveInstall:108 bash/LiveInstall:133 bash/LiveInstall:146
-#: bash/LiveInstall:160 bash/LiveInstall:172 bash/LiveInstall:176
-#: bash/LiveInstall:181 bash/LiveInstall:191 bash/install:32
+#: bash/LiveInstall:76 bash/LiveInstall:78 bash/LiveInstall:82
+#: bash/LiveInstall:89 bash/LiveInstall:94 bash/LiveInstall:103
+#: bash/LiveInstall:111 bash/LiveInstall:136 bash/LiveInstall:149
+#: bash/LiveInstall:163 bash/LiveInstall:175 bash/LiveInstall:179
+#: bash/LiveInstall:184 bash/LiveInstall:194 bash/install:32
 #, sh-format
 msgid "Manual installation"
 msgstr ""
 
-#: bash/LiveInstall:30
+#: bash/LiveInstall:30 bash/autorun:28 bash/daemon/autorun:27
 #, sh-format
 msgid ""
 "Would you like to create a shortcut to the application in PlayOnLinux?\\nIf "
@@ -43,22 +42,22 @@ msgstr ""
 msgid "Please choose a name for the shortcut."
 msgstr ""
 
-#: bash/LiveInstall:73 bash/LiveInstall:108
+#: bash/LiveInstall:76 bash/LiveInstall:111
 #, sh-format
 msgid "What is your program's prefix?"
 msgstr ""
 
-#: bash/LiveInstall:75
+#: bash/LiveInstall:78
 #, sh-format
 msgid "Are you sure you want to delete this prefix?"
 msgstr ""
 
-#: bash/LiveInstall:79
+#: bash/LiveInstall:82
 #, sh-format
 msgid "The prefix has been deleted."
 msgstr ""
 
-#: bash/LiveInstall:86
+#: bash/LiveInstall:89
 #, sh-format
 msgid ""
 "Welcome to PlayOnLinux's manual installation wizard.\\n\\nThis script will "
@@ -68,74 +67,75 @@ msgid ""
 "guarantee that your application will work perfectly."
 msgstr ""
 
-#: bash/LiveInstall:88
+#: bash/LiveInstall:91
 #, sh-format
 msgid "Install a program in a new prefix"
 msgstr ""
 
-#: bash/LiveInstall:89
+#: bash/LiveInstall:92
 #, sh-format
 msgid "Edit an existing application"
 msgstr ""
 
-#: bash/LiveInstall:90
+#: bash/LiveInstall:93
 #, sh-format
 msgid "Delete a prefix"
 msgstr ""
 
-#: bash/LiveInstall:91
+#: bash/LiveInstall:94
 #, sh-format
 msgid "What would you like to do?"
 msgstr ""
 
-#: bash/LiveInstall:100
+#: bash/LiveInstall:103
 #, sh-format
 msgid ""
 "Please type a name for your application's Wine prefix.\\nThis name shouldn't "
 "contain spaces."
 msgstr ""
 
-#: bash/LiveInstall:124
+#: bash/LiveInstall:127
 #, sh-format
 msgid "Assign a Wine version to a program"
 msgstr ""
 
-#: bash/LiveInstall:125 bash/polconfigurator:117
+#: bash/LiveInstall:128 bash/polconfigurator:117
 #, sh-format
 msgid "Use WineTricks"
 msgstr ""
 
-#: bash/LiveInstall:126 bash/LiveInstall:160 bash/polconfigurator:108
+#: bash/LiveInstall:129 bash/LiveInstall:163 bash/polconfigurator:108
+#: python/mainwindow.py:223 python/mainwindow.py:253
 #, sh-format
 msgid "Configure Wine"
 msgstr ""
 
-#: bash/LiveInstall:133
+#: bash/LiveInstall:136
 #, sh-format
 msgid "What would you like to do before installation?"
 msgstr ""
 
-#: bash/LiveInstall:146
+#: bash/LiveInstall:149
 #, sh-format
 msgid "Which version of Wine would you like to use?"
 msgstr ""
 
-#: bash/LiveInstall:172
+#: bash/LiveInstall:175
 #, sh-format
 msgid "Please select the install file to run."
 msgstr ""
 
-#: bash/LiveInstall:176
+#: bash/LiveInstall:179
 #, sh-format
 msgid "You must choose a file!"
 msgstr ""
 
-#: bash/LiveInstall:181
+#: bash/LiveInstall:184
 #, sh-format
 msgid "PlayOnLinux is installing your application..."
 msgstr ""
 
-#: bash/LiveInstall:191 bash/autorun:165 bash/daemon/autorun:165
+#: bash/LiveInstall:194 bash/autorun:165 bash/daemon/autorun:165
 #, sh-format
 msgid "Please do not press Next until the installation has been completed."
 msgstr ""
@@ -150,13 +150,6 @@ msgstr ""
 #: bash/daemon/autorun:165 bash/daemon/autorun:211 python/mainwindow.py:93
 #, sh-format
 msgid "Autorun"
-msgstr ""
-
-#: bash/autorun:28 bash/daemon/autorun:27
-#, sh-format
-msgid ""
-"Do you want to create a shortcut to the application in PlayOnLinux?\\nIf you "
-"patched a game, you should probably select no."
 msgstr ""
 
 #: bash/autorun:76 bash/autorun:137 bash/daemon/autorun:76
@@ -208,9 +201,9 @@ msgstr ""
 msgid "PlayOnLinux is installing your application"
 msgstr ""
 
-#: bash/autorun:176
+#: bash/autorun:176 bash/uninstall:37
 #, sh-format
-msgid "Click Next to continue"
+msgid "Click Next to continue."
 msgstr ""
 
 #: bash/autorun:176
@@ -237,22 +230,22 @@ msgstr ""
 
 #: bash/check_maj:28
 #, sh-format
-msgid "You are in offline mode"
+msgid "You are in offline mode."
 msgstr ""
 
 #: bash/check_maj_:39
 #, sh-format
-msgid "The PlayOnLinux repository needs to be updated"
+msgid "The PlayOnLinux repository needs to be updated."
 msgstr ""
 
-#: bash/expert/Executer:29 bash/expert/Executer:31
+#: bash/expert/Executer:29 bash/expert/Executer:31 python/mainwindow.py:85
 #, sh-format
 msgid "Run a local script"
 msgstr ""
 
 #: bash/expert/Executer:29
 #, sh-format
-msgid "This wizard will help you to run an unofficial PlayOnLinux Script"
+msgid "This wizard will help you run an unofficial PlayOnLinux Script."
 msgstr ""
 
 #: bash/expert/Executer:31
@@ -324,7 +317,7 @@ msgstr ""
 msgid "Are you sure you want to shut down all active PlayOnLinux applications?"
 msgstr ""
 
-#: bash/killall:32 lib/interface:477 lib/interface:544
+#: bash/killall:32 lib/interface:474 lib/interface:541
 #, sh-format
 msgid "Please wait..."
 msgstr ""
@@ -342,7 +335,7 @@ msgstr ""
 #: bash/polconfigurator:72 bash/polconfigurator:74 bash/polconfigurator:79
 #: bash/polconfigurator:81 bash/polconfigurator:136 bash/polconfigurator:191
 #, sh-format
-msgid "PlayOnLinux Applications Configurator"
+msgid "PlayOnLinux Application Configurator"
 msgstr ""
 
 #: bash/polconfigurator:30
@@ -549,11 +542,6 @@ msgstr ""
 msgid "Free space on your hard drives:"
 msgstr ""
 
-#: bash/uninstall:37
-#, sh-format
-msgid "Click Next to continue."
-msgstr ""
-
 #: bash/uninstall:37 bash/uninstall:48 bash/uninstall:52 lib/applications:243
 #, sh-format
 msgid "PlayOnLinux Uninstaller"
@@ -561,7 +549,7 @@ msgstr ""
 
 #: bash/uninstall:37
 #, sh-format
-msgid "This assistant will help you uninstall: "
+msgid "This wizard will help you uninstall: "
 msgstr ""
 
 #: bash/uninstall:48 lib/applications:243
@@ -571,7 +559,7 @@ msgstr ""
 
 #: bash/uninstall:52
 #, sh-format
-msgid "has been uninstalled successfully"
+msgid " has been uninstalled successfully."
 msgstr ""
 
 #: bash/uninstall:54
@@ -611,12 +599,12 @@ msgstr ""
 
 #: lib/check_depend:21
 #, sh-format
-msgid " is missing. Please install it before running PlayOnLinux"
+msgid " is missing. Please install it before running PlayOnLinux."
 msgstr ""
 
 #: lib/check_depend:28
 #, sh-format
-msgid ", Package: "
+msgid ", package: "
 msgstr ""
 
 #: lib/check_depend:28
@@ -631,27 +619,27 @@ msgid ""
 "again."
 msgstr ""
 
-#: lib/check_depend:57
+#: lib/check_depend:59
 #, sh-format
 msgid ""
 "You don't seem to have 3D acceleration!\\nWe advise you install and enable "
-"it.\\n\\nPlease also check that program 'glxinfo' is installed"
+"it."
 msgstr ""
 
-#: lib/check_depend:61
+#: lib/check_depend:63
 #, sh-format
 msgid ""
 "Warning: glxinfo is missing! PlayOnLinux can't detect if 3D acceleration is "
 "supported."
 msgstr ""
 
-#: lib/interface:30 lib/interface:89 lib/interface:649
+#: lib/interface:30 lib/interface:89 lib/interface:646
 #, sh-format
 msgid "Message"
 msgstr ""
 
 #: lib/interface:67 lib/interface:120 lib/interface:171 lib/interface:221
-#: lib/interface:379 lib/interface:453 lib/interface:512 lib/interface:685
+#: lib/interface:377 lib/interface:450 lib/interface:509 lib/interface:682
 #: python/champ.py:48 python/file.py:66 python/message_one.py:75
 #: python/telecharger.py:103
 #, sh-format
@@ -673,14 +661,33 @@ msgstr ""
 msgid "Field"
 msgstr ""
 
-#: lib/interface:336 lib/interface:410
+#: lib/interface:335 lib/interface:408
 #, sh-format
 msgid "Please make a choice"
 msgstr ""
 
-#: lib/interface:601 python/file.py:68 python/guiv3.py:370
+#: lib/interface:598 python/file.py:68 python/guiv3.py:370
 #, sh-format
 msgid "Browse"
+msgstr ""
+
+#: lib/interface:695
+#, sh-format
+msgid ""
+"Please note:\\nThe CD or DVD protection of this game doesn't work correctly "
+"with Wine.\\nYou will not be able to play this game without deactivating "
+"this protection!\\nPlayOnLinux cannot be held responsible for your use of "
+"these patches.\\n\\nThank you."
+msgstr ""
+
+#: lib/interface:714
+#, sh-format
+msgid ", and press \"OK\" when you are ready"
+msgstr ""
+
+#: lib/interface:714
+#, sh-format
+msgid "Please mount the CD-ROM: "
 msgstr ""
 
 #: lib/interface_v3:43
@@ -710,23 +717,23 @@ msgstr ""
 
 #: lib/interface_v3:43
 #, sh-format
-msgid "This wizard will help you to install "
+msgid "This wizard will help you install "
 msgstr ""
 
 #: lib/interface_v3:43
 #, sh-format
-msgid "Welcome to PlayOnLinux's Installation Wizard"
+msgid "Welcome to PlayOnLinux's Installation Wizard."
 msgstr ""
 
 #: lib/interface_v3:43
 #, sh-format
 msgid ""
-"\\n\\nPlayOnLinux is not responsible for the way you use these scripts\\n\\n"
+"\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
 msgstr ""
 
 #: lib/interface_v3:464 lib/interface_v3:473 lib/interface_v3:484
 #, sh-format
-msgid "Please wait while the Wine prefix is created..."
+msgid "Please wait while the Wine prefix is being created..."
 msgstr ""
 
 #: lib/interface_v3:464 lib/interface_v3:473 lib/interface_v3:484
@@ -739,17 +746,18 @@ msgstr ""
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr ""
 
-#: lib/interface_v3:730
+#: lib/interface_v3:730 lib/wine:233 lib/wine:241
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr ""
 
-#: lib/interface_v3:731 python/install.py:275 python/options.py:113
+#: lib/interface_v3:731 lib/wine:223 lib/wine:233 lib/wine:239
+#: python/install.py:275 python/options.py:113
 #, sh-format
 msgid "Other"
 msgstr ""
 
-#: lib/interface_v3:754
+#: lib/interface_v3:754 lib/wine:291
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr ""
@@ -766,7 +774,7 @@ msgstr ""
 
 #: lib/interface_v3:792
 #, sh-format
-msgid "The download seems to have failed"
+msgid "The download seems to have failed."
 msgstr ""
 
 #: lib/interface_v3:794
@@ -781,9 +789,12 @@ msgstr ""
 
 #: lib/main:58
 #, sh-format
-msgid ""
-"Welcome in PlayOnLinux first use assistant. Please ensure you are connected "
-"to the Internet."
+msgid "Welcome to PlayOnLinux's First Use Wizard."
+msgstr ""
+
+#: lib/main:58 lib/main:69 lib/main:130
+#, sh-format
+msgid "\\nPlease make sure you are connected to the Internet."
 msgstr ""
 
 #: lib/main:69 lib/main:89
@@ -791,14 +802,9 @@ msgstr ""
 msgid "PlayOnLinux application list update"
 msgstr ""
 
-#: lib/main:69 lib/main:146 playonlinux-cmd:113
+#: lib/main:69 lib/main:151
 #, sh-format
-msgid "Please assure you are connected to internet."
-msgstr ""
-
-#: lib/main:69 lib/main:146
-#, sh-format
-msgid "The website of PlayOnLinux is unavailable."
+msgid "The PlayOnLinux website is unavailable."
 msgstr ""
 
 #: lib/main:89
@@ -806,103 +812,262 @@ msgstr ""
 msgid "Downloading updates..."
 msgstr ""
 
-#: lib/main:130
-#, sh-format
-msgid ""
-"Microsoft fonts aren't installed; I'll install them for you. Please assure "
-"you are connected to the internet."
-msgstr ""
-
-#: lib/main:131
+#: lib/main:130 lib/main:147 lib/main:151 lib/main:162 lib/main:181
+#: lib/main:205
 #, sh-format
 msgid "Microsoft fonts"
 msgstr ""
 
-#: lib/main:142
+#: lib/main:130
 #, sh-format
-msgid "Please read and accept this"
+msgid "Microsoft fonts aren't installed; I'll install them for you."
 msgstr ""
 
-#: lib/main:157
+#: lib/main:131
+#, sh-format
+msgid " Licence translated in your language "
+msgstr ""
+
+#: lib/main:132
+#, sh-format
+msgid ""
+"These fonts were provided by Microsoft\\n\"in the interest of cross-platform "
+"compatibility\"."
+msgstr ""
+
+#: lib/main:133
+#, sh-format
+msgid ""
+"This is no longer the case, but they are still available from third parties."
+msgstr ""
+
+#: lib/main:135
+#, sh-format
+msgid ""
+"You are free to download these fonts and use them for your own use,\\nbut "
+"you may not redistribute them in modified form,\\nincluding changes to the "
+"file name or packaging format."
+msgstr ""
+
+#: lib/main:136
+#, sh-format
+msgid " Original licence "
+msgstr ""
+
+#: lib/main:147
+#, sh-format
+msgid "Please read and accept the following:"
+msgstr ""
+
+#: lib/main:151
+#, sh-format
+msgid "\\nPlease make sure you are connected to Internet."
+msgstr ""
+
+#: lib/main:162
 #, sh-format
 msgid "Downloading fonts"
 msgstr ""
 
-#: lib/main:162 lib/main:163 lib/main:169 lib/main:170
+#: lib/main:167 lib/main:168 lib/main:174 lib/main:175
 #, sh-format
-msgid "Downloading"
+msgid "Downloading: "
 msgstr ""
 
-#: lib/main:176
+#: lib/main:181
 #, sh-format
 msgid "Installing fonts"
 msgstr ""
 
-#: lib/main:181 lib/main:182 lib/main:189 lib/main:190
+#: lib/main:186 lib/main:187 lib/main:194 lib/main:195
 #, sh-format
-msgid "Installing"
+msgid "Installing: "
 msgstr ""
 
-#: lib/main:200
+#: lib/main:205
 #, sh-format
-msgid "Microsoft Fonts has been installed successfully"
+msgid "Microsoft fonts have been installed successfully."
 msgstr ""
 
-#: lib/wine:57
+#: lib/main:239
+#, sh-format
+msgid "Checking plugin: "
+msgstr ""
+
+#: lib/main:264
+#, sh-format
+msgid "New: "
+msgstr ""
+
+#: lib/main:264
+#, sh-format
+msgid "Updating plugin. Previous: "
+msgstr ""
+
+#: lib/main:283
+#, sh-format
+msgid "Installing plugin: "
+msgstr ""
+
+#: lib/main:321
+#, sh-format
+msgid "Are you sure you want to start PlayOnLinux?"
+msgstr ""
+
+#: lib/main:321
+#, sh-format
+msgid "PlayOnLinux is not reponsible for any damage to your system.\\n\\n"
+msgstr ""
+
+#: lib/main:321
+#, sh-format
+msgid ""
+"Please note that it is very dangerous to run Wine programs as root: you are "
+"vulnerable to viruses and other bad stuff.\\n\\n"
+msgstr ""
+
+#: lib/main:321
+#, sh-format
+msgid "Warning!"
+msgstr ""
+
+#: lib/main:321
+#, sh-format
+msgid "You are running PlayOnLinux as root.\\n\\n"
+msgstr ""
+
+#: lib/main:405 lib/main:409 lib/main:413 lib/main:417 lib/main:421
+#, sh-format
+msgid "This function is disabled in the PlayOnlinux environnement."
+msgstr ""
+
+#: lib/wine:56
 #, sh-format
 msgid "Creating Wine prefix"
 msgstr ""
 
-#: lib/wine:303
+#: lib/wine:56
 #, sh-format
-msgid "Error : Unable to find the CD-ROM !"
+msgid "Finished"
+msgstr ""
+
+#: lib/wine:187
+#, sh-format
+msgid "Setting Program Files var"
+msgstr ""
+
+#: lib/wine:422 lib/wine:450
+#, sh-format
+msgid "You must choose which Wine version you want to download."
 msgstr ""
 
 #: playonlinux-cmd:48
 #, sh-format
 msgid ""
-"This program is intended to be used by automatic scripts for manage "
+"This program is intended to be used by automatic scripts to manage "
 "PlayOnLinux."
 msgstr ""
 
 #: playonlinux-cmd:50
 #, sh-format
-msgid "print current version and exit"
+msgid "\tprint current version and exit."
 msgstr ""
 
 #: playonlinux-cmd:51
 #, sh-format
-msgid "use this switch to update PlayOnLinux script repository"
+msgid "\tupdate the PlayOnLinux script repository."
 msgstr ""
 
 #: playonlinux-cmd:52
 #, sh-format
-msgid "use this switch to run an already installed software"
+msgid "\trun an existing applicaiton."
 msgstr ""
 
 #: playonlinux-cmd:53
 #, sh-format
-msgid "start installation a specified script"
+msgid "\tstart installing a specified script."
+msgstr ""
+
+#: playonlinux-cmd:113
+#, sh-format
+msgid "Please make sure you are connected to the Internet."
 msgstr ""
 
 #: playonlinux-pkg:35
 #, sh-format
-msgid "The file is not a valid PlayOnLinux package"
+msgid "PlayOnLinux package manager: "
 msgstr ""
 
-#: playonlinux-pkg:36
+#: playonlinux-pkg:49
 #, sh-format
-msgid "Unable to find the file"
+msgid "Usage: "
 msgstr ""
 
-#: playonlinux-pkg:37
+#: playonlinux-pkg:50
+#, sh-format
+msgid "\tChoose a file"
+msgstr ""
+
+#: playonlinux-pkg:50 playonlinux-pkg:51 playonlinux-pkg:52 playonlinux-pkg:53
+#, sh-format
+msgid " or "
+msgstr ""
+
+#: playonlinux-pkg:51
+#, sh-format
+msgid "\tExtract the package"
+msgstr ""
+
+#: playonlinux-pkg:52
+#, sh-format
+msgid "\tInstall the package"
+msgstr ""
+
+#: playonlinux-pkg:53
+#, sh-format
+msgid "\tShow this message"
+msgstr ""
+
+#: playonlinux-pkg:57
 #, sh-format
 msgid "Choose a package to install"
 msgstr ""
 
-#: playonlinux-pkg:38
+#: playonlinux-pkg:57
 #, sh-format
 msgid "PlayOnLinux package manager"
+msgstr ""
+
+#: playonlinux-pkg:73
+#, sh-format
+msgid "Unable to find the file: "
+msgstr ""
+
+#: playonlinux-pkg:79 playonlinux-pkg:96 playonlinux-pkg:102
+#: playonlinux-pkg:113 playonlinux-pkg:118
+#, sh-format
+msgid " isn't a valid PlayOnLinux package!"
+msgstr ""
+
+#: playonlinux-pkg:79 playonlinux-pkg:96 playonlinux-pkg:102
+#: playonlinux-pkg:113 playonlinux-pkg:118
+#, sh-format
+msgid "This file: "
+msgstr ""
+
+#: playonlinux-pkg:109
+#, sh-format
+msgid "Extracting: "
+msgstr ""
+
+#: playonlinux-pkg:121
+#, sh-format
+msgid "Running..."
+msgstr ""
+
+#: playonlinux-pkg:125
+#, sh-format
+msgid "Cleaning..."
 msgstr ""
 
 #: python/attendre.py:46 python/champ.py:27 python/file.py:45
@@ -924,7 +1089,7 @@ msgid "Cancel"
 msgstr ""
 
 #: python/guiv3.py:268
-msgid "downloaded"
+msgid "MiB downloaded"
 msgstr ""
 
 #: python/guiv3.py:352 python/guiv3.py:366 python/guiv3.py:382
@@ -939,11 +1104,11 @@ msgid "I Agree"
 msgstr ""
 
 #: python/guiv3.py:558
-msgid "Create a shortcut :"
+msgid "Create a shortcut: "
 msgstr ""
 
 #: python/guiv3.py:562
-msgid "Do you want a shortcut for "
+msgid "Do you want a shortcut for: "
 msgstr ""
 
 #: python/guiv3.py:563
@@ -959,7 +1124,7 @@ msgid "No description"
 msgstr ""
 
 #: python/install.py:114
-msgid "Search :"
+msgid "Search: "
 msgstr ""
 
 #: python/install.py:136
@@ -1039,11 +1204,7 @@ msgid "Exit"
 msgstr ""
 
 #: python/mainwindow.py:77
-msgid "Manage wine versions"
-msgstr ""
-
-#: python/mainwindow.py:85
-msgid "Run a non-official script"
+msgid "Manage Wine versions"
 msgstr ""
 
 #: python/mainwindow.py:89
@@ -1067,7 +1228,7 @@ msgid "Plugins"
 msgstr ""
 
 #: python/mainwindow.py:147
-msgid "Plugins manager"
+msgid "Plugin manager"
 msgstr ""
 
 #: python/mainwindow.py:157
@@ -1102,12 +1263,8 @@ msgstr ""
 msgid "Close all"
 msgstr ""
 
-#: python/mainwindow.py:223 python/mainwindow.py:253
-msgid "Configure wine"
-msgstr ""
-
 #: python/mainwindow.py:231
-msgid "Go to the application directory"
+msgid "Open the application's directory"
 msgstr ""
 
 #: python/mainwindow.py:235
@@ -1123,15 +1280,39 @@ msgid "KillApp"
 msgstr ""
 
 #: python/mainwindow.py:424
-msgid "Run your Windows programs on Linux !"
+msgid "Run your Windows programs on Linux!"
+msgstr ""
+
+#: python/mainwindow.py:425
+msgid "Under GPL licence version 3."
+msgstr ""
+
+#: python/mainwindow.py:426
+msgid "Developer and Website: "
+msgstr ""
+
+#: python/mainwindow.py:427
+msgid "Scriptors: "
+msgstr ""
+
+#: python/mainwindow.py:428
+msgid "Packager: "
+msgstr ""
+
+#: python/mainwindow.py:429
+msgid "Script Creator: "
+msgstr ""
+
+#: python/mainwindow.py:430
+msgid "The following people contributed to this program: "
 msgstr ""
 
 #: python/mainwindow.py:431
-msgid "Translation was made on launchpad:"
+msgid "Translation made on launchpad:"
 msgstr ""
 
 #: python/message_one.py:74
-msgid "No more alert me"
+msgid "Do not alert me anymore"
 msgstr ""
 
 #: python/options.py:91
@@ -1187,7 +1368,7 @@ msgid "Wine"
 msgstr ""
 
 #: python/options.py:217
-msgid "Default Wine Version to run wine programs with PlayOnLinux"
+msgid "Default Wine version for PlayOnLinux programs: "
 msgstr ""
 
 #: python/options.py:230
@@ -1199,7 +1380,7 @@ msgid "PlayOnLinux menu"
 msgstr ""
 
 #: python/options.py:232
-msgid "Add PlayOnLinux menu in your panel"
+msgid "Add the PlayOnLinux menu to your panel"
 msgstr ""
 
 #: python/options.py:235
@@ -1222,12 +1403,20 @@ msgstr ""
 msgid "Choose a plugin"
 msgstr ""
 
+#: python/options.py:344
+msgid "Are you sure you want to install: "
+msgstr ""
+
+#: python/options.py:352
+msgid "Are you sure you want to delete: "
+msgstr ""
+
 #: python/options.py:373
 msgid "Disable"
 msgstr ""
 
 #: python/options.py:468
-msgid "You must restart PlayOnLinux for the changes to take effect"
+msgid "You must restart PlayOnLinux for the changes to take effect."
 msgstr ""
 
 #: python/options.py:472
@@ -1243,23 +1432,23 @@ msgid "No"
 msgstr ""
 
 #: python/telecharger.py:70
-msgid "Click on download to start."
+msgid "Click Download to start."
 msgstr ""
 
 #: python/telecharger.py:75
-msgid "Please wait while the game is downloaded..."
+msgid "Please wait while the software is being downloaded..."
 msgstr ""
 
 #: python/telecharger.py:106
-msgid "Download finished"
+msgid "Download complete"
 msgstr ""
 
 #: python/wine_versions.py:129
-msgid "Installed Wine Versions :"
+msgid "Installed Wine versions: "
 msgstr ""
 
 #: python/wine_versions.py:130
-msgid "Available Wine Versions :"
+msgid "Available Wine versions: "
 msgstr ""
 
 #: python/wine_versions.py:138
@@ -1271,5 +1460,14 @@ msgid "My Applications"
 msgstr ""
 
 #: python/wine_versions.py:166
-msgid "Version :"
+msgid "Version: "
+msgstr ""
+
+#: python/wine_versions.py:320
+msgid "Are you sure you want to delete Wine: "
+msgstr ""
+
+#: Capture plugin
+msgid ""
+"To which game do you want to apply the modification ?"
 msgstr ""
