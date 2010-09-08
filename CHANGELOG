@@ -7,7 +7,8 @@
 - ADD: Missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
 - ADD: New function for convert the string version to integer.
-- ADD: playonlinux-cmd support search
+- ADD: playonlinux-cmd support search.
+- ADD: playonlinux-cmd can list installed software.
 - Full rebuild of translation template using xgettext. Python and Shell.
 - Better use of the gettext function and string corrections for:
 	-> python/wine_versions.py
