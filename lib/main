@@ -402,23 +402,23 @@ check_new_pol ()
 }
 sudo ()
 {
-	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
 }
 gksudo ()
 {
-	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
 }
 gksu ()
 {
-	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
 }
 su ()
 {
-	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
 }
 kdesu ()
 {
-	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environnement.")"
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
 }
 RefreshLibs()
 {

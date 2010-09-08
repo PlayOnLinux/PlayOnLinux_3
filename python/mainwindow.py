@@ -428,7 +428,7 @@ class MainWindow(wx.Frame):
     self.aboutBox.AddDeveloper(_("Packager: ")+"MulX (Petit Aymeric)")
     self.aboutBox.AddDeveloper(_("Script Creator: ")+"Zoloom (Cassarin-Grand Arthur)")
     self.aboutBox.AddDeveloper(_("The following people contributed to this program: ")+"kiplantt, NSLW, Salvatos")
-    self.aboutBox.AddTranslator(_("Translation made on launchpad:"))
+    self.aboutBox.AddTranslator(_("Translation made on Launchpad:"))
     self.aboutBox.AddTranslator("https://translations.launchpad.net/playonlinux/")
     self.aboutBox.AddArtist("Icons are provided by Tango Desktop Project")
     self.aboutBox.SetWebSite("http://www.playonlinux.com")

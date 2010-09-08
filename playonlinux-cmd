@@ -49,8 +49,8 @@ function usage
 	echo "Usage: $0 [--update] [--version] [--run] [--start-install]"
 	echo -e "\t[--version]			$(eval_gettext '	print current version and exit.')"
 	echo -e "\t[--update]			$(eval_gettext '	update the PlayOnLinux script repository.')"
-	echo -e "\t[--run 'Software name']	$(eval_gettext '	run an existing applicaiton.')"
-	echo -e "\t[--start-install 'Script Name']$(eval_gettext '	start installing a specified script.')"
+	echo -e "\t[--run 'Software name']	$(eval_gettext '	run an existing application.')"
+	echo -e "\t[--start-install 'Script Name']$(eval_gettext '	start installing the specified script.')"
 	echo -e "\t[--search 'Script Name']	$(eval_gettext '	perform a search into script repository.')"
 	echo -e "\t[--list]			$(eval_gettext '	list software installed with PlayOnLinux.')"
 	exit 1
