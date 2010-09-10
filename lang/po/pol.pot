@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-08 19:15:29+02:00\n"
+"POT-Creation-Date: 2010-09-10 20:21:15+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -572,7 +572,7 @@ msgstr ""
 msgid "Cannot find the shortcut"
 msgstr ""
 
-#: bash/uninstall:54 lib/interface:135 lib/interface_v3:92
+#: bash/uninstall:54 lib/interface:135 lib/interface_v3:104
 #, sh-format
 msgid "Error"
 msgstr ""
@@ -617,7 +617,7 @@ msgstr ""
 msgid "Program: "
 msgstr ""
 
-#: lib/check_depend:36 lib/interface_v3:90
+#: lib/check_depend:36 lib/interface_v3:102
 #, sh-format
 msgid ""
 "One or more program(s) are missing. Please install them and run the script "
@@ -736,73 +736,73 @@ msgid ""
 "\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:235
+#: lib/interface_v3:298
 #, sh-format
 msgid "Wine version server temporary unavailable.\\nPlease try again later."
 msgstr ""
 
-#: lib/interface_v3:238
+#: lib/interface_v3:301
 #, sh-format
 msgid "Following server is no longer available:\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:241
+#: lib/interface_v3:304
 #, sh-format
 msgid "Following file is no longer available on server:\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:244
+#: lib/interface_v3:307
 #, sh-format
 msgid "Download failure"
 msgstr ""
 
-#: lib/interface_v3:466 lib/interface_v3:475 lib/interface_v3:486
+#: lib/interface_v3:591 lib/interface_v3:600 lib/interface_v3:611
 #, sh-format
 msgid "Please wait while the Wine prefix is being created..."
 msgstr ""
 
-#: lib/interface_v3:466 lib/interface_v3:475 lib/interface_v3:486
+#: lib/interface_v3:591 lib/interface_v3:600 lib/interface_v3:611
 #, sh-format
 msgid "Wine prefix configuration"
 msgstr ""
 
-#: lib/interface_v3:710
+#: lib/interface_v3:849
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr ""
 
-#: lib/interface_v3:732 lib/wine:233 lib/wine:241
+#: lib/interface_v3:871 lib/wine:233 lib/wine:241
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr ""
 
-#: lib/interface_v3:733 lib/wine:223 lib/wine:233 lib/wine:239
+#: lib/interface_v3:872 lib/wine:223 lib/wine:233 lib/wine:239
 #: python/install.py:275 python/options.py:113
 #, sh-format
 msgid "Other"
 msgstr ""
 
-#: lib/interface_v3:756 lib/wine:291
+#: lib/interface_v3:895 lib/wine:291
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr ""
 
-#: lib/interface_v3:777
+#: lib/interface_v3:916
 #, sh-format
 msgid "Unable to find version: "
 msgstr ""
 
-#: lib/interface_v3:783 lib/interface_v3:784
+#: lib/interface_v3:922 lib/interface_v3:923
 #, sh-format
 msgid "Downloading Wine: "
 msgstr ""
 
-#: lib/interface_v3:794
+#: lib/interface_v3:933
 #, sh-format
 msgid "The download seems to have failed."
 msgstr ""
 
-#: lib/interface_v3:796
+#: lib/interface_v3:935
 #, sh-format
 msgid "Extracting Wine..."
 msgstr ""
@@ -1521,5 +1521,5 @@ msgstr ""
 
 #: Capture plugin
 msgid ""
-"To which game do you want to apply the modification ?"
+"Which game do you want to apply the modification to?"
 msgstr ""

@@ -5,6 +5,7 @@
 - FIX: PlayOnLinux bug: #26, function POL_LoadVar_ProgramFiles didn't remove line char.
 - UPDATE: Using convertVersionToInt to see if new version of POL is available, so the developement version does not say that a newer is available.
 - UPDATE: Change all echo to $POL_SW_id by a cat / EOF. In other word write write all text message in one pass instead of line by line.
+- UPDATE: Capture to 2.1.3.
 - ADD: Missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
 - ADD: New function for convert the string version to integer.
@@ -38,6 +39,7 @@
 	-> lib/interface (+ cleaning)
 	-> playonlinux-cmd
 	-> playonlinux-pkg
+	-> Plugins: Capture
 - Removing some unused files plus cleaning some files. 
 
 -> 3.8.1
