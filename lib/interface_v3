@@ -45,10 +45,16 @@ POL_SetupWindow_presentation ()
 }
 POL_SetupWindow_free_presentation ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "free_presentation" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+free_presentation
+$1
+$2
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "free_presentation" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -65,10 +71,16 @@ POL_SetupWindow_free_presentation ()
 }
 POL_SetupWindow_message ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "message" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+message
+$1
+$2
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "message" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -98,11 +110,18 @@ POL_SetupWindow_licence ()
 {
 	if [ -f "$3" ]
 	then
-		echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-		echo "licence" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-		echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-		echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-		echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+		cat << EOF > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+licence
+$1
+$2
+$3
+EOF
+#		echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#		echo "licence" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#		echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#		echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#		echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -120,11 +139,18 @@ POL_SetupWindow_licence ()
 }
 POL_SetupWindow_message_image ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "message_image" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+message_image
+$1
+$2
+$3
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "message_image" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -141,10 +167,16 @@ POL_SetupWindow_message_image ()
 }
 POL_SetupWindow_wait_next_signal ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "attendre_signal" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+attendre_signal
+$1
+$2
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "attendre_signal" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
 	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
 	then
@@ -153,10 +185,16 @@ POL_SetupWindow_wait_next_signal ()
 }
 POL_SetupWindow_pulsebar ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "pulsebar" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+pulsebar
+$1
+$2
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "pulsebar" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	sleep 0.2 #sleeping 0.2 GUI have to read dialog file. see bug #30
 	MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
 	if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
@@ -166,25 +204,42 @@ POL_SetupWindow_pulsebar ()
 }
 POL_SetupWindow_pulse ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "pulse" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+pulse
+$1
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "pulse" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	sleep 0.2 #sleeping 0.2 GUI have to read dialog file. see bug #30
 }
 POL_SetupWindow_set_text ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "set_text" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+set_text
+$1
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "set_text" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 	sleep 0.2 #sleeping 0.2 GUI have to read dialog file. see bug #30
 }
 POL_SetupWindow_wait ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "attendre" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+attendre
+$1
+$2
+$3
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "attendre" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -201,12 +256,20 @@ POL_SetupWindow_wait ()
 }
 POL_SetupWindow_download ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "download" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$(pwd)/" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+download
+$1
+$2
+$3
+$(pwd)/
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "download" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$(pwd)/" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	sleep 0.2 #may be fix launchpad bug #392513.
 
@@ -257,11 +320,18 @@ POL_SetupWindow_detect_exit ()
 }
 POL_SetupWindow_textbox ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "champ" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+champ
+$1
+$2
+$3
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "champ" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 		
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -282,12 +352,20 @@ POL_SetupWindow_textbox ()
 }
 POL_SetupWindow_browse ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "browse" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$PWD" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+browse
+$1
+$2
+$3
+$PWD
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "browse" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$PWD" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -308,10 +386,16 @@ POL_SetupWindow_browse ()
 }
 POL_SetupWindow_question ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "question" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+question
+$1
+$2
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "question" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -332,12 +416,20 @@ POL_SetupWindow_question ()
 }
 POL_SetupWindow_menu ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "menu" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+menu
+$1
+$2
+$3
+$4
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "menu" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 		
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -358,12 +450,20 @@ POL_SetupWindow_menu ()
 }
 POL_SetupWindow_checkbox_list ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "checkbox_list" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+checkbox_list
+$1
+$2
+$3
+$4
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "checkbox_list" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 		
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -384,12 +484,20 @@ POL_SetupWindow_checkbox_list ()
 }
 POL_SetupWindow_menu_num ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "menu_num" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+menu_num
+$1
+$2
+$3
+$4
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "menu_num" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 		
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -410,13 +518,22 @@ POL_SetupWindow_menu_num ()
 }
 POL_SetupWindow_menu_list ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "menu_list" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$5" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+menu_list
+$1
+$2
+$3
+$4
+$5
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "menu_list" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$5" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -437,12 +554,20 @@ POL_SetupWindow_menu_list ()
 }
 POL_SetupWindow_games ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "get_games" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+get_games
+$1
+$2
+$3
+$4
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "get_games" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$1" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$2" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$3" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$4" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 		
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -499,9 +624,14 @@ POL_SetupWindow_make_shortcut()
 
 	creer_lanceur_base "$@"
 
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "make_shortcut" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$NOMICONE_" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+make_shortcut
+$NOMICONE_
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "make_shortcut" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$NOMICONE_" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 		
 	MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 	while [ ! "$MESSAGE" = "MsgOut" ]
@@ -622,9 +752,14 @@ POL_SetupWindow_auto_shortcut()
 	
 	
 	## On prévient l'utilisateur que l'icône est prête, on lui propose de creer divers raccorucis
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "make_shortcut" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "$NOMICONE_" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+make_shortcut
+$NOMICONE_
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "make_shortcut" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "$NOMICONE_" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 		
 
 	## Attente de la réponse 
@@ -664,8 +799,12 @@ POL_SetupWindow_auto_shortcut()
 }
 POL_SetupWindow_Close ()
 {
-	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
-	echo "exit" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+MsgIn
+exit
+EOF
+#	echo "MsgIn" > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+#	echo "exit" >> "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 }
 POL_SetupWindow_Quit ()
 {
