@@ -46,13 +46,14 @@ fi
 function usage
 {
 	echo "$(eval_gettext 'This program is intended to be used by automatic scripts to manage PlayOnLinux.')"
-	echo "Usage: $0 [--update] [--version] [--run] [--start-install]"
+	echo "Usage: $0"
 	echo -e "\t[--version]			$(eval_gettext '	print current version and exit.')"
 	echo -e "\t[--update]			$(eval_gettext '	update the PlayOnLinux script repository.')"
 	echo -e "\t[--run 'Software name']	$(eval_gettext '	run an existing application.')"
 	echo -e "\t[--start-install 'Script Name']$(eval_gettext '	start installing the specified script.')"
 	echo -e "\t[--search 'Script Name']	$(eval_gettext '	perform a search into script repository.')"
 	echo -e "\t[--list]			$(eval_gettext '	list software installed with PlayOnLinux.')"
+	echo -e "\t[--remove 'Script Name']	$(eval_gettext '	remove an existing application.')"
 	exit 1
 }
 #parsing switch
@@ -131,6 +132,12 @@ case $1 in
 	construire_repertoire_personnel
 	echo "$(eval_gettext "List of software currently installed:")"
 	ls -1 $REPERTOIRE/configurations/installed/
+	;;
+-rm|--remove)
+	if [ -z "$2" ] ; then usage ; fi
+	#build personnal repository 
+	construire_repertoire_personnel
+	$PLAYONLINUX/bash/uninstall "$2"
 	;;
 *)
 	usage

@@ -11,6 +11,7 @@
 - ADD: New function for convert the string version to integer.
 - ADD: playonlinux-cmd support search.
 - ADD: playonlinux-cmd can list installed software.
+- ADD: playonlinux-cmd can remove an already installed application.
 - Full rebuild of translation template using xgettext. Python and Shell.
 - Better use of the gettext function and string corrections for:
 	-> python/wine_versions.py
