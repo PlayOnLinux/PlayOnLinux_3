@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# Copyright (C) 2007-2010 PlayOnLinux Team
 import wxversion
 wxversion.select("2.8")
 import gettext, Variables as Variables, os

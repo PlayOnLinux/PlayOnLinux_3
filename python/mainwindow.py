@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Copyright (C) 2007-2010 PlayOnLinux Team
 # Copyright (C) 2008 Pâris Quentin
 # Copyright (C) 2009 Łukasz Wojniłowicz
 
@@ -423,11 +424,11 @@ class MainWindow(wx.Frame):
     self.aboutBox.SetVersion(Variables.version)
     self.aboutBox.SetDescription(_("Run your Windows programs on Linux!"))
     self.aboutBox.SetCopyright("(C) PlayOnLinux team 2007-2010\n"+_("Under GPL licence version 3."))
-    self.aboutBox.AddDeveloper(_("Developer and Website: ")+"Tinou (Pâris Quentin)")	 
-    self.aboutBox.AddDeveloper(_("Scriptors: ")+"MulX (Petit Aymeric), GNU_Raziel")
+    self.aboutBox.AddDeveloper(_("Developer and Website: ")+"Tinou (Pâris Quentin), MulX (Petit Aymeric)")	 
+    self.aboutBox.AddDeveloper(_("Scriptors: ")+"GNU_Raziel")
     self.aboutBox.AddDeveloper(_("Packager: ")+"MulX (Petit Aymeric)")
     self.aboutBox.AddDeveloper(_("Script Creator: ")+"Zoloom (Cassarin-Grand Arthur)")
-    self.aboutBox.AddDeveloper(_("The following people contributed to this program: ")+"kiplantt, NSLW, Salvatos")
+    self.aboutBox.AddDeveloper(_("The following people contributed to this program: ")+"kiplantt, NSLW, Salvatos, Minchul")
     self.aboutBox.AddTranslator(_("Translation made on Launchpad:"))
     self.aboutBox.AddTranslator("https://translations.launchpad.net/playonlinux/")
     self.aboutBox.AddArtist("Icons are provided by Tango Desktop Project")

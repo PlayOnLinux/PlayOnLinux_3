@@ -42,6 +42,7 @@
 	-> playonlinux-pkg
 	-> Plugins: Capture
 - Removing some unused files plus cleaning some files. 
+- Update copyright header. 
 
 -> 3.8.1
 - UPDATE: Capture to 2.1.1.

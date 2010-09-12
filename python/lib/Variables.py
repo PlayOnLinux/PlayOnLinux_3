@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Copyright (C) 2007-2010 PlayOnLinux Team
 import os
 playonlinux_env = os.popen("printf \"$PLAYONLINUX\"", "r").read()
 playonlinux_rep = os.popen("printf \"$HOME/.PlayOnLinux/\"", "r").read()

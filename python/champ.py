@@ -1,6 +1,7 @@
 #!/usr/bin/python 
 # -*- coding:Utf-8 -*- 
 # L'encodage Utf-8 sera a joindre dans tous les fichiers, sinon bug d'accents...
+# Copyright (C) 2007-2010 PlayOnLinux Team
 
 import wxversion, os, getopt, sys, urllib, signal
 wxversion.select("2.8")
