@@ -147,8 +147,8 @@ to the file name or packaging format." >> $REPERTOIRE/tmp/licence
 		cat $REPERTOIRE/tmp/licence
 
 		POL_SetupWindow_licence "$(eval_gettext 'Please read and accept the following:')" "$(eval_gettext 'Microsoft fonts')" "$REPERTOIRE/tmp/licence"
-		WebVersion=$(wget -q $SITE/version2.php -O-)
-		if [ "$WebVersion" = "" ]
+		WebVersion=$(wget -q $SITE/check.txt -O-)
+		if [ "$WebVersion" == "" ]
 		then
 			POL_SetupWindow_message "$(eval_gettext 'The PlayOnLinux website is unavailable.')$(eval_gettext "\nPlease make sure you are connected to Internet.")" "$(eval_gettext 'Microsoft fonts')"
 			POL_SetupWindow_Close
@@ -357,8 +357,8 @@ start_pol ()
 	fonts_install
 	install_plugins
 
-
 	check_new_pol
+	retChkNew=$?
 	if [ ! "$NEW_VERSION" = "" ]
 	then
 		menu_principal "$NEW_VERSION"
@@ -382,25 +382,30 @@ fixme ()
 }
 check_new_pol () 
 {
+	#retourne:
+	# 0 = pas de nouvelle version
+	# 1 = nouvelle version dispo
+	# 2 = pas internet ?
+	# 3 = version de dev utilise
+	local retVal=0
 	if [ ! "$ALREADY_CHECK_ONLINE" ]
 	then
-		if [ ! "$OFFLINE" = "1" ]
+		WebVersion=$(wget -q "$SITE/version2.php?v=$VERSION" -T 1 -O-)
+		if [ "$WebVersion" = "" ]
 		then
-			WebVersion=$(wget -q "$SITE/version2.php?v=$VERSION" -T 1 -O-)
-			if [ "$WebVersion" = "" ]
-			then
-				return 2
-			fi
-			if [ $(convertVersionToInt $WebVersion) -gt $(convertVersionToInt $VERSION) ]
-			then
-				#VERSION=$(eval_gettext "An updated version of PlayOnLinux is available. Please visit the website.")
-				#message "$VERSION ($WebVersion)" "" 0 0 0 "update.png"
-				export NEW_VERSION="$WebVersion"
-				return 1
-			fi
-			export ALREADY_CHECK_ONLINE=true
+			retVal=2
+		elif [ $(convertVersionToInt $WebVersion) -gt $(convertVersionToInt $VERSION) ]
+		then
+			export NEW_VERSION="$WebVersion"
+			retVal=1
+		elif [ $(convertVersionToInt $WebVersion) -lt $(convertVersionToInt $VERSION) ]
+		then
+			#using a dev release!
+			retVal=3
 		fi
+		export ALREADY_CHECK_ONLINE=true
 	fi
+	return $retVal
 }
 sudo ()
 {
