@@ -27,4 +27,5 @@ then
 	source "$PLAYONLINUX/lib/interface_v3"
 	source "$PLAYONLINUX/lib/wine"
 	source "$PLAYONLINUX/lib/plugins"
+	source "$PLAYONLINUX/lib/pol_cmd"
 fi

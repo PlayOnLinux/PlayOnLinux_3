@@ -1,0 +1,226 @@
+#!/bin/bash
+
+# Copyright (C) 2007-2010 PlayOnLinux Team
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+#don't source this file w/o a pol-cmd enviroment
+if [ -z $POL_CMD ] || [ x"$POL_CMD" == xfalse ]
+then
+	return
+fi
+
+POL_CMD_presentation ()
+{
+	#a simple map on interface_v3 should be better ?!
+	POL_CMD_free_presentation "$1" "$2"
+}
+
+POL_CMD_free_presentation ()
+{
+	window_title "$1"
+	main_text "$2"
+	next_cancel
+}
+
+POL_CMD_message ()
+{
+	window_title "$2"
+	main_text "$1"
+	next_cancel
+}
+
+POL_CMD_licence ()
+{
+	window_title "$2"
+	main_text "$1"
+	more "$3" #FIXME have to test this one!
+	agree_cancel
+}
+
+POL_CMD_message_image ()
+{
+	#ascii image printing no yet supported
+	POL_CMD_message "$1" "$2" 
+}
+
+POL_CMD_wait_next_signal ()
+{
+	window_title "$2"
+	main_text "$1"
+	#FIXME
+}
+
+POL_CMD_pulsebar ()
+{
+	window_title "$2"
+	main_text "$1"
+}
+
+POL_CMD_pulse ()
+{
+	#FIXME what to do ?!
+	echo "$LINEO function no yet inplanted!"
+}
+
+POL_CMD_set_text ()
+{
+	#FIXME what to do ?!
+	echo "$LINEO function no yet inplanted!"
+}
+
+POL_CMD_wait ()
+{
+	window_title "$2"
+	main_text "$1"
+	#$3 ?! FIXME!
+}
+
+POL_CMD_download ()
+{
+	window_title "$2"
+	main_text "$1"
+	wget -o$REPERTOIRE/tmp/wget.log "$3"
+	#FIXME more work to do!
+}
+
+POL_CMD_detect_exit ()
+{
+	echo "Not yet implanted"
+	#FIXME nothing ?
+}
+
+POL_CMD_textbox ()
+{
+	window_title "$2"
+	main_text "$1"
+	printf "$3"
+}
+
+POL_CMD_browse ()
+{
+	echo "Not yet implanted"
+	#not yet!
+	#window_title "$2"
+	#main_text "$1"
+	#$3 def. file
+}
+
+POL_CMD_question ()
+{
+	window_title "$2"
+	main_text "$1"
+	yes_no
+}
+
+POL_CMD_menu ()
+{
+	window_title "$2"
+	main_text "$1"
+	#generate question $3 $4
+	#$5 for default
+	#FIXME
+}
+
+POL_CMD_checkbox_list ()
+{
+	window_title "$2"
+	main_text "$1"
+	#loop question for $3~$4
+	#multiple choice
+}
+
+POL_CMD_menu_num ()
+{
+	echo "Not yet implanted"
+	#similar to _menu
+	#return a number 
+}
+
+POL_CMD_menu_list ()
+{
+	POL_CMD_menu "$1" "$2" "$3" "$4" "$5"
+}
+
+POL_CMD_games ()
+{
+	echo "Not yet implanted"
+	#use a menu_num
+	#list installed apps
+}
+
+POL_CMD_make_shortcut ()
+{
+	echo "Not yet implanted"
+	#TODO
+}
+
+POL_CMD_auto_shortcut ()
+{
+	echo "Not yet implanted"
+	#TODO
+}
+
+POL_CMD_close ()
+{
+	echo "Not yet implanted"
+	#end of GUI
+}
+
+POL_CMD_init ()
+{	
+	echo "Not yet implanted"
+	#false init "GUI"
+}
+
+#generic function
+window_title ()
+{
+	#FIXME
+	printf "$@"
+}
+
+main_text ()
+{
+	#FIXME
+	printf "$@"
+}
+
+agree_cancel ()
+{
+	echo "Not yet implanted"
+	#ask question
+	#read answer
+}
+
+next_close ()
+{
+	echo "Not yet implanted"
+	#read_answer
+}
+
+yes_no ()
+{
+	echo "Not yet implanted"
+	#read answer
+}
+
+#colors management
+color_blue ()
+{
+	echo "Not yet implanted"
+	#Is it blue ?
+	#printf "\033[47;34m\033[1m"
+}

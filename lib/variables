@@ -26,6 +26,11 @@ export VERSION="3.8.2-dev"
 export LAST_VERSION=$(cat "$REPERTOIRE/configurations/last_version" 2> /dev/null)
 export PYTHON="python"
 
+#Added for POL_CMD without gui
+if [ -z $POL_CMD ] ; then
+	export POL_CMD=false
+fi
+
 if [ "$VRAIPATH" = "" ]
 then
 	export VRAIPATH="$PATH"
