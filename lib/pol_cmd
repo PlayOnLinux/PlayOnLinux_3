@@ -46,6 +46,7 @@ POL_CMD_licence ()
 {
 	window_title "$2"
 	main_text "$1"
+	wait_key_continue
 	more "$3" #FIXME have to test this one!
 	agree_cancel
 }
@@ -60,7 +61,6 @@ POL_CMD_wait_next_signal ()
 {
 	window_title "$2"
 	main_text "$1"
-	#FIXME
 }
 
 POL_CMD_pulsebar ()
@@ -71,42 +71,43 @@ POL_CMD_pulsebar ()
 
 POL_CMD_pulse ()
 {
-	#FIXME what to do ?!
-	echo "$LINEO function no yet inplanted!"
+	color_red
+	polprint "$(eval_gettext "Progression is now: ")$1 %"
+	color_black
 }
 
 POL_CMD_set_text ()
 {
-	#FIXME what to do ?!
-	echo "$LINEO function no yet inplanted!"
+	color_red
+	polprint "$(eval_gettext "Progression message: ")$1."
+	color_black
 }
 
 POL_CMD_wait ()
 {
 	window_title "$2"
 	main_text "$1"
-	#$3 ?! FIXME!
+	$3 # FIXME
 }
 
 POL_CMD_download ()
 {
 	window_title "$2"
 	main_text "$1"
-	wget -o$REPERTOIRE/tmp/wget.log "$3"
+	wget "$3"
 	#FIXME more work to do!
 }
 
 POL_CMD_detect_exit ()
 {
-	echo "Not yet implanted"
-	#FIXME nothing ?
+	sleep 0.2 
 }
 
 POL_CMD_textbox ()
 {
 	window_title "$2"
 	main_text "$1"
-	printf "$3"
+	polprint "$3"
 }
 
 POL_CMD_browse ()
@@ -127,11 +128,82 @@ POL_CMD_question ()
 
 POL_CMD_menu ()
 {
+	#If you find the following code crazy... You're right
+	#But in fact it's just an advanced bash script!
+	#I recommand you a good skill in bash! :-)
 	window_title "$2"
 	main_text "$1"
-	#generate question $3 $4
-	#$5 for default
-	#FIXME
+	#declare local variable plus do init
+	local -a item
+	local cpt=0 nbItem=${3//[^$4]/} ans=-1 tmp fail=0
+	#finish counting nbItem
+	nbItem=${#nbItem}
+	OLDIFS="$IFS"
+	IFS="$4"
+	item=( $3 )
+	#restore IFS
+	IFS=$OLDIFS
+	#just be pretty
+	if [ $nbItem -lt 9 ] 
+	then 
+		for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+		do
+			polprint "$(eval_gettext "Press: ")$RED$cpt$BLACK$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+		done
+		until [ $ans != -1 ]
+		do
+			read -n 1 -s  ans
+			#force ans to be integer
+			for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+				[ x"$tmp" == x"$ans" ] || ((fail++))
+			done
+			[ $fail -ge $((nbItem+1)) ] && ans=-1
+			#return ans if ans < nbItem or return -1
+			ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+			ans=$(( $ans <= 0 ? -1 : $ans))
+		done
+	elif [ $nbItem -eq 9 ]
+	then
+		for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+		do
+			polprint "$(eval_gettext "Type: ")$(printf "$RED%02d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+		done
+		until [ $ans != -1 ]
+		do
+			polprint "\n"
+			read -N 2 -p "$(eval_gettext "Waiting: ")" ans
+			#force ans to be integer
+			for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+				[ x"`printf "%02d" $tmp`" == x"$ans" ] || ((fail++))
+			done
+			[ $fail -ge $((nbItem+1)) ] && ans=-1
+			#return ans if ans < nbItem or return -1
+			ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+			ans=$(( $ans <= 0 ? -1 : $ans))
+		done
+	else
+		for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+		do
+			polprint "$(eval_gettext "Type: ")$(printf "$RED%0${#nbItem}d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+		done
+		until [ $ans != -1 ]
+		do
+			polprint "\n"
+			read -N ${#nbItem} -p "$(eval_gettext "Waiting: ")" ans
+			#force ans to be integer
+			for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+				[ x"`printf "%0${#nbItem}d" $tmp`" == x"$ans" ] || ((fail++))
+			done
+			[ $fail -ge $((nbItem+1)) ] && ans=-1
+			#return ans if ans < nbItem or return -1
+			ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+			ans=$(( $ans <= 0 ? -1 : $ans))
+		done
+	fi
+	polprint "\n"
+	#well we know the answer, it's generaly 42!
+	export INTERNAL_POL_CMD_MENU_ANSWER=$((ans-1))
+	export APP_ANSWER=${item[$((ans-1))]}
 }
 
 POL_CMD_checkbox_list ()
@@ -139,14 +211,16 @@ POL_CMD_checkbox_list ()
 	window_title "$2"
 	main_text "$1"
 	#loop question for $3~$4
-	#multiple choice
+	#multiple choice 
+	export APP_ANSWER
 }
 
 POL_CMD_menu_num ()
 {
-	echo "Not yet implanted"
 	#similar to _menu
 	#return a number 
+	POL_CMD_menu $@
+	export APP_ANSWER=$INTERNAL_POL_CMD_MENU_ANSWER
 }
 
 POL_CMD_menu_list ()
@@ -175,52 +249,108 @@ POL_CMD_auto_shortcut ()
 
 POL_CMD_close ()
 {
-	echo "Not yet implanted"
+	#clearing screen ...
+	clear
 	#end of GUI
 }
 
 POL_CMD_init ()
 {	
-	echo "Not yet implanted"
+	#clearing screen ...
+	clear
 	#false init "GUI"
 }
 
 #generic function
 window_title ()
 {
-	#FIXME
-	printf "$@"
+	clear #clearing screen
+	color_blue
+	polprint "$@\n"
+	color_black
 }
 
 main_text ()
 {
-	#FIXME
-	printf "$@"
+	color_black
+	polprint "$@\n"
 }
 
 agree_cancel ()
 {
-	echo "Not yet implanted"
-	#ask question
-	#read answer
+	color_red
+	local ans=0
+	until [ $ans == 1 ] || [ $ans == 2 ]
+	do
+		polprint "\n"
+		read -N 1 -p "$(eval_gettext "Type: '1' if you agree or '2' for no. Your answer: ")" ans 
+	done
+	color_black
+	polprint "\n"
+	#user didn't agree with -> exit
+	[ $ans == 2 ] && exit
 }
 
 next_close ()
 {
-	echo "Not yet implanted"
-	#read_answer
+	color_red
+	local ans=0
+	until [ $ans == 1 ] || [ $ans == 2 ]
+	do
+		polprint "\n"
+		read -N 1 -p "$(eval_gettext "Type: '1' for continue or '2' for cancel. Your answer: ")" ans 
+	done
+	color_black
+	polprint "\n"
+	#exit on cancel
+	[ $ans == 2 ] && exit
+	#do nothing for continue
+}
+wait_key_continue ()
+{
+	color_red
+	polprint "\n"
+	read -N 1 -p "$(eval_gettext "Press a key to continue.")" ans
+	color_black
+	polprint "\n"
 }
 
 yes_no ()
 {
-	echo "Not yet implanted"
-	#read answer
+	color_red
+	local ans=0
+	until [ $ans == 1 ] || [ $ans == 2 ]
+	do
+		polprint "\n"
+		read -N 1 -p "$(eval_gettext "Type: '1' for yes or '2' for no. Your answer: ")" ans 
+	done
+	color_black
+	polprint "\n"
+	export APP_ANSWER="TRUE" #default is true
+	#if answer is no set it false.
+	[ $ans == 2 ] && export APP_ANSWER="FALSE"
 }
 
 #colors management
+#each function change terminal color
+readonly BLUE="\033[47;34m" BLACK="\033[40;37m" RED="\033[40;31m"
 color_blue ()
 {
-	echo "Not yet implanted"
-	#Is it blue ?
-	#printf "\033[47;34m\033[1m"
+	polprint "\033[47;34m"
+}
+
+color_black ()
+{
+	polprint "\033[40;37m"
+}
+
+color_red ()
+{
+	polprint "\033[40;31m"
+}
+
+#printing mechanism
+polprint ()
+{
+	printf "$@" 1>&2
 }
