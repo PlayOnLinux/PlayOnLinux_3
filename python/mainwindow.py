@@ -42,8 +42,29 @@ class MainWindow(wx.Frame):
 		#self.panel_update.SetBackgroundColour((255,255,225))
 
 		self.fontText = wx.Font(10, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_BOLD,False, "", wx.FONTENCODING_DEFAULT)
-		self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-refresh", wx.ART_MENU), pos=(15,0))
-		self.texte_update = wx.StaticText(self.panel_update, -1, _("An updated version of PlayOnLinux is available.")+" ("+sys.argv[1]+")",pos=(35,0))
+		#argv[1] = 1 nvversion -- argv[2] = version
+		#argv[1] = 2 no net
+		#argv[1] = 3 version de dev
+		#argv[1] = 4 unofficial website used
+		if(int(sys.argv[1]) == 1):
+			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-refresh", wx.ART_MENU), pos=(15,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("An updated version of PlayOnLinux is available.")+" ("+sys.argv[2]+")",pos=(35,0))
+		elif(int(sys.argv[1]) == 2):
+			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-warning", wx.ART_MENU), pos=(15,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("You seem not connected to the Internet."),pos=(35,0))
+			self.texte_update.SetForegroundColour("red")
+		elif(int(sys.argv[1]) == 3):
+			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-warning", wx.ART_MENU), pos=(15,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("Your are using a development version, be careful."),pos=(35,0))
+			self.texte_update.SetForegroundColour("orange")
+		elif(int(sys.argv[1]) == 4):
+			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-warning", wx.ART_MENU), pos=(15,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("It seem you are using plugin Offline PlayOnLinux."),pos=(35,0))
+			self.texte_update.SetForegroundColour("green")
+		else:
+			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-error", wx.ART_MENU), pos=(15,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("Started with unknown message. Report a bug ASAP!"),pos=(35,0))
+			
 		self.texte_update.SetFont(self.fontText)
 		self.list_game = wx.TreeCtrl(self.panel_games, 105, style=wx.TR_HIDE_ROOT|wx.TR_FULL_ROW_HIGHLIGHT)
 

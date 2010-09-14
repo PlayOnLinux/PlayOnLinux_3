@@ -6,6 +6,7 @@
 - UPDATE: Using convertVersionToInt to see if new version of POL is available, so the developement version does not say that a newer is available.
 - UPDATE: Change all echo to $POL_SW_id by a cat / EOF. In other word write write all text message in one pass instead of line by line.
 - UPDATE: Capture to 2.1.3.
+- UPDATE/ADD: mainwindow show a message when: using a development version, no network, plugin offline pol used.
 - ADD: Missing string in tranlation. String used by plugins.
 - ADD: Set_WineWindowTitle. See POL bug: #23.
 - ADD: New function for convert the string version to integer.

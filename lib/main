@@ -359,9 +359,16 @@ start_pol ()
 
 	check_new_pol
 	retChkNew=$?
-	if [ ! "$NEW_VERSION" = "" ]
+	#retourne:
+	# 0 = pas de nouvelle version
+	# 1 = nouvelle version dispo
+	# 2 = pas internet ?
+	# 3 = version de dev utilise
+	# 4 = pas le site officiel, utilisation du plugin offline ?
+	#if [ ! "$NEW_VERSION" = "" ]
+	if [ "$retChkNew" != "0" ]
 	then
-		menu_principal "$NEW_VERSION"
+		menu_principal $retChkNew "$NEW_VERSION"
 	else
 		menu_principal
 	fi
@@ -387,6 +394,7 @@ check_new_pol ()
 	# 1 = nouvelle version dispo
 	# 2 = pas internet ?
 	# 3 = version de dev utilise
+	# 4 = pas le site officiel, utilisation du plugin offline ?
 	local retVal=0
 	if [ ! "$ALREADY_CHECK_ONLINE" ]
 	then
@@ -402,6 +410,11 @@ check_new_pol ()
 		then
 			#using a dev release!
 			retVal=3
+		fi
+		if [ "$SITE" != "http://repository.playonlinux.com/" ]
+		then
+			#not using POL website
+			retVal=4
 		fi
 		export ALREADY_CHECK_ONLINE=true
 	fi
