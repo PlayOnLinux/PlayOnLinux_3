@@ -369,6 +369,7 @@ POL_CMD_games ()
 
 POL_CMD_make_shortcut ()
 {
+
 	echo "Not yet implanted"
 	#TODO
 }
@@ -388,9 +389,19 @@ POL_CMD_close ()
 
 POL_CMD_init ()
 {	
+	#false init "GUI"
 	#clearing screen ...
 	clear
-	#false init "GUI"
+	#I make all like if I'm running with a real GUI for avoid hazardous error
+	mkdir -p "$REPERTOIRE/configurations/guis/"
+	if [ ! -e "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" ] || [ "$1" = "--force" ]
+	then
+		touch "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	elif [ ! "$1" == "--force" ]
+	then 
+		 echo "E. Window $POL_SetupWindow_ID already opened !"
+	fi
+
 }
 
 #generic function
