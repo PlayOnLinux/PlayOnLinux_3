@@ -107,7 +107,12 @@ POL_CMD_textbox ()
 {
 	window_title "$2"
 	main_text "$1"
-	polprint "$3"
+	local ans
+	color_red
+	polprint "$(eval_gettext "Please answer following question, and validate by 'RETURN' key.")"
+	color_black
+	read -p "$3" ans
+	export APP_ANSWER="$ans"
 }
 
 POL_CMD_browse ()
@@ -128,7 +133,7 @@ POL_CMD_question ()
 
 POL_CMD_menu ()
 {
-	#If you find the following code crazy... You're right
+	#If you find the following code ugly... You're right
 	#But in fact it's just an advanced bash script!
 	#I recommand you a good skill in bash! :-)
 	window_title "$2"
@@ -208,11 +213,90 @@ POL_CMD_menu ()
 
 POL_CMD_checkbox_list ()
 {
+	#first implementation work similar to menu...
+	#it's not very good... but it's the begining.
+	#If you find the following code ugly... You're right
+	#But in fact it's just an advanced bash script!
+	#I recommand you a good skill in bash! :-)
 	window_title "$2"
 	main_text "$1"
-	#loop question for $3~$4
-	#multiple choice 
-	export APP_ANSWER
+	#declare local variable plus do init
+	local -a item
+	local cpt=0 nbItem=${3//[^$4]/} ans=-1 tmp fail=0
+	#finish counting nbItem
+	nbItem=$((${#nbItem}+1))
+	OLDIFS="$IFS"
+	IFS="$4"
+	item=( $3 )
+	item[$nbItem]="$(eval_gettext "For validate all your choice")"
+	#restore IFS
+	IFS=$OLDIFS
+	#just be pretty
+	until [ $((ans-1)) -eq $nbItem ]
+	do
+		ans=-1
+		if [ $nbItem -lt 9 ] 
+		then 
+			for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+			do
+				
+				polprint "$(eval_gettext "Press: ")$RED$cpt$BLACK$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+			done
+			until [ $ans != -1 ]
+			do
+				read -n 1 -s  ans
+				#force ans to be integer
+				for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+					[ x"$tmp" == x"$ans" ] || ((fail++))
+				done
+				[ $fail -ge $((nbItem+1)) ] && ans=-1
+				#return ans if ans < nbItem or return -1
+				ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+				ans=$(( $ans <= 0 ? -1 : $ans))
+			done
+		elif [ $nbItem -eq 9 ]
+		then
+			for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+			do
+				polprint "$(eval_gettext "Type: ")$(printf "$RED%02d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+			done
+			until [ $ans != -1 ]
+			do
+				polprint "\n"
+				read -N 2 -p "$(eval_gettext "Waiting: ")" ans
+				#force ans to be integer
+				for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+					[ x"`printf "%02d" $tmp`" == x"$ans" ] || ((fail++))
+				done
+				[ $fail -ge $((nbItem+1)) ] && ans=-1
+				#return ans if ans < nbItem or return -1
+				ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+				ans=$(( $ans <= 0 ? -1 : $ans))
+			done
+		else
+			for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+			do
+				polprint "$(eval_gettext "Type: ")$(printf "$RED%0${#nbItem}d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+			done
+			until [ $ans != -1 ]
+			do
+				polprint "\n"
+				read -N ${#nbItem} -p "$(eval_gettext "Waiting: ")" ans
+				#force ans to be integer
+				for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+					[ x"`printf "%0${#nbItem}d" $tmp`" == x"$ans" ] || ((fail++))
+				done
+				[ $fail -ge $((nbItem+1)) ] && ans=-1
+				#return ans if ans < nbItem or return -1
+				ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+				ans=$(( $ans <= 0 ? -1 : $ans))
+			done
+		fi
+		polprint "\n"
+		[ $((ans-1)) -ne $nbItem ] && { [ -z $selected ] && selected=$((ans-1)) || selected=$selected$4$((ans-1)) ;}
+	done
+	#well we know the answer, it's generaly 42!
+	export APP_ANSWER=$selected
 }
 
 POL_CMD_menu_num ()
@@ -310,7 +394,7 @@ wait_key_continue ()
 {
 	color_red
 	polprint "\n"
-	read -N 1 -p "$(eval_gettext "Press a key to continue.")" ans
+	read -N 1 -s -p "$(eval_gettext "Press a key to continue.")" ans
 	color_black
 	polprint "\n"
 }
