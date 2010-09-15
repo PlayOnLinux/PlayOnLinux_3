@@ -7,13 +7,137 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-15 23:31:28+02:00\n"
+"POT-Creation-Date: 2010-09-15 23:50:05+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: Capture plugin:21
+msgid "Add the PlayOnLinux logo to your video?"
+msgstr ""
+
+#: Capture plugin:6
+msgid "Begin the capture of an application"
+msgstr ""
+
+#: Capture plugin:13
+msgid "Capture in progress..."
+msgstr ""
+
+#: Capture plugin:4
+msgid "Capture menu (OpenGL)"
+msgstr ""
+
+#: Capture plugin:5
+msgid "Capture menu (not OpenGL)"
+msgstr ""
+
+#: Capture plugin:10
+msgid "Capture will begin..."
+msgstr ""
+
+#: Capture plugin:14
+msgid "Choose an action to perform"
+msgstr ""
+
+#: Capture plugin:24
+msgid "Choose the video format for conversion"
+msgstr ""
+
+#: Capture plugin:29
+msgid "Conversion done"
+msgstr ""
+
+#: Capture plugin:8
+msgid "Convert a captured file to video"
+msgstr ""
+
+#: Capture plugin:27
+msgid ""
+"Define your encoding options \\n (leave defaults if you do not know what to "
+"do)"
+msgstr ""
+
+#: Capture plugin:25
+msgid ""
+"Define your encoding options for pass 1 \\n (leave defaults if you do not "
+"know what to do)"
+msgstr ""
+
+#: Capture plugin:26
+msgid ""
+"Define your encoding options for pass 2 \\n (leave defaults if you do not "
+"know what to do)"
+msgstr ""
+
+#: Capture plugin:7
+msgid "Play a captured file"
+msgstr ""
+
+#: Capture plugin:15
+msgid "Please choose a PID capture file to play"
+msgstr ""
+
+#: Capture plugin:17
+msgid "Please choose a capture file to convert"
+msgstr ""
+
+#: Capture plugin:16
+msgid "Please choose an OGV capture file to play"
+msgstr ""
+
+#: Capture plugin:20
+msgid "Please wait while the PlayOnLinux logo is created..."
+msgstr ""
+
+#: Capture plugin:28
+msgid "Please wait while your video is being encoded..."
+msgstr ""
+
+#: Capture plugin:11
+msgid "Press <SHIFT>+F8 to start or stop capture"
+msgstr ""
+
+#: Capture plugin:12
+msgid "Press <SHIFT>+F8 to stop capture"
+msgstr ""
+
+#: Capture plugin:9
+#, sh-format
+msgid ""
+"Press Next then click on the window\\nyou want to capture.\\nCapture will "
+"start automatically after 5 seconds.\\nOnly video will be captured."
+msgstr ""
+
+#: Capture plugin:3
+msgid "This plugin wil allow you to capture you applications under PlayOnLinux"
+msgstr ""
+
+#: Capture plugin:23
+msgid ""
+"Ubuntu users must add the MEDIBUNTU repository\\nfor this conversion format "
+"to work properly."
+msgstr ""
+
+#: Capture plugin:22
+msgid ""
+"Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
+msgstr ""
+
+#: Capture plugin:2
+msgid "Which application do you want to apply the modification to?"
+msgstr ""
+
+#: Capture plugin:19
+msgid "You must choose a capture to convert"
+msgstr ""
+
+#: Capture plugin:18
+msgid "You must choose a capture to read"
+msgstr ""
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
 #: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
@@ -1241,7 +1365,7 @@ msgid "An updated version of PlayOnLinux is available."
 msgstr ""
 
 #: python/mainwindow.py:54
-msgid "You seem not connected to the Internet."
+msgid "You do not seem to be connected to the Internet."
 msgstr ""
 
 #: python/mainwindow.py:58
@@ -1249,7 +1373,7 @@ msgid "Your are using a development version, be careful."
 msgstr ""
 
 #: python/mainwindow.py:62
-msgid "It seem you are using plugin Offline PlayOnLinux."
+msgid "You seem to be using the Offline PlayOnLinux plugin."
 msgstr ""
 
 #: python/mainwindow.py:66
@@ -1381,7 +1505,7 @@ msgid "Translation made on Launchpad:"
 msgstr ""
 
 #: python/mainwindow.py:455
-msgid "Icons are provided by Tango Desktop Project"
+msgid "Icons are provided by the Tango Desktop Project"
 msgstr ""
 
 #: python/message_one.py:75
@@ -1538,128 +1662,4 @@ msgstr ""
 
 #: python/wine_versions.py:321
 msgid "Are you sure you want to delete Wine: "
-msgstr ""
-
-#: Capture plugin:2
-msgid "Which application do you want to apply the modification to?"
-msgstr ""
-
-#: Capture plugin:3
-msgid "This plugin wil allow you to capture you applications under PlayOnLinux"
-msgstr ""
-
-#: Capture plugin:4
-msgid "Capture menu (OpenGL)"
-msgstr ""
-
-#: Capture plugin:5
-msgid "Capture menu (not OpenGL)"
-msgstr ""
-
-#: Capture plugin:6
-msgid "Begin the capture of an application"
-msgstr ""
-
-#: Capture plugin:7
-msgid "Play a captured file"
-msgstr ""
-
-#: Capture plugin:8
-msgid "Convert a captured file to video"
-msgstr ""
-
-#: Capture plugin:9
-#, sh-format
-msgid ""
-"Press Next then click on the window\\nyou want to capture.\\nCapture will "
-"start automatically after 5 seconds.\\nOnly video will be captured."
-msgstr ""
-
-#: Capture plugin:10
-msgid "Capture will begin..."
-msgstr ""
-
-#: Capture plugin:11
-msgid "Press <SHIFT>+F8 to start or stop capture"
-msgstr ""
-
-#: Capture plugin:12
-msgid "Press <SHIFT>+F8 to stop capture"
-msgstr ""
-
-#: Capture plugin:13
-msgid "Capture in progress..."
-msgstr ""
-
-#: Capture plugin:14
-msgid "Choose an action to perform"
-msgstr ""
-
-#: Capture plugin:15
-msgid "Please choose a PID capture file to play"
-msgstr ""
-
-#: Capture plugin:16
-msgid "Please choose an OGV capture file to play"
-msgstr ""
-
-#: Capture plugin:17
-msgid "Please choose a capture file to convert"
-msgstr ""
-
-#: Capture plugin:18
-msgid "You must choose a capture to read"
-msgstr ""
-
-#: Capture plugin:19
-msgid "You must choose a capture to convert"
-msgstr ""
-
-#: Capture plugin:20
-msgid "Please wait while the PlayOnLinux logo is created..."
-msgstr ""
-
-#: Capture plugin:21
-msgid "Add the PlayOnLinux logo to your video?"
-msgstr ""
-
-#: Capture plugin:22
-msgid ""
-"Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
-msgstr ""
-
-#: Capture plugin:23
-msgid ""
-"Ubuntu users must add the MEDIBUNTU repository\\nfor this conversion format "
-"to work properly."
-msgstr ""
-
-#: Capture plugin:24
-msgid "Choose the video format for conversion"
-msgstr ""
-
-#: Capture plugin:25
-msgid ""
-"Define your encoding options for pass 1 \\n (leave defaults if you do not "
-"know what to do)"
-msgstr ""
-
-#: Capture plugin:26
-msgid ""
-"Define your encoding options for pass 2 \\n (leave defaults if you do not "
-"know what to do)"
-msgstr ""
-
-#: Capture plugin:27
-msgid ""
-"Define your encoding options \\n (leave defaults if you do not know what to "
-"do)"
-msgstr ""
-
-#: Capture plugin:28
-msgid "Please wait while your video is being encoded..."
-msgstr ""
-
-#: Capture plugin:29
-msgid "Conversion done"
 msgstr ""

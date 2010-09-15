@@ -51,7 +51,7 @@ class MainWindow(wx.Frame):
 			self.texte_update = wx.StaticText(self.panel_update, -1, _("An updated version of PlayOnLinux is available.")+" ("+sys.argv[2]+")",pos=(35,0))
 		elif(int(sys.argv[1]) == 2):
 			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-warning", wx.ART_MENU), pos=(15,0))
-			self.texte_update = wx.StaticText(self.panel_update, -1, _("You seem not connected to the Internet."),pos=(35,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("You do not seem to be connected to the Internet."),pos=(35,0))
 			self.texte_update.SetForegroundColour("red")
 		elif(int(sys.argv[1]) == 3):
 			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-warning", wx.ART_MENU), pos=(15,0))
@@ -59,7 +59,7 @@ class MainWindow(wx.Frame):
 			self.texte_update.SetForegroundColour("orange")
 		elif(int(sys.argv[1]) == 4):
 			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-warning", wx.ART_MENU), pos=(15,0))
-			self.texte_update = wx.StaticText(self.panel_update, -1, _("It seem you are using plugin Offline PlayOnLinux."),pos=(35,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("You seem to be using the Offline PlayOnLinux plugin."),pos=(35,0))
 			self.texte_update.SetForegroundColour("green")
 		else:
 			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-error", wx.ART_MENU), pos=(15,0))
@@ -452,7 +452,7 @@ class MainWindow(wx.Frame):
     self.aboutBox.AddDeveloper(_("The following people contributed to this program: ")+"kiplantt, NSLW, Salvatos, Minchul")
     self.aboutBox.AddTranslator(_("Translation made on Launchpad:"))
     self.aboutBox.AddTranslator("https://translations.launchpad.net/playonlinux/")
-    self.aboutBox.AddArtist(_("Icons are provided by Tango Desktop Project"))
+    self.aboutBox.AddArtist(_("Icons are provided by the Tango Desktop Project"))
     self.aboutBox.SetWebSite("http://www.playonlinux.com")
     self.aboutBox.SetLicence(open(Variables.playonlinux_env+"/LICENCE",'r').read())
     self.about = wx.AboutBox(self.aboutBox)
