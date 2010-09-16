@@ -87,7 +87,7 @@ POL_CMD_wait ()
 {
 	window_title "$2"
 	main_text "$1"
-	$3 # FIXME
+	$3
 }
 
 POL_CMD_download ()
@@ -362,7 +362,21 @@ POL_CMD_menu_list ()
 
 POL_CMD_games ()
 {
-	echo "Not yet implanted"
+	listGame=$(find $REPERTOIRE/configurations/installed/ -type f -printf "%f~")
+	#pas d'apps installer
+	if [ ${#listGame} -le 1 ] ; then
+		window_title "$2"
+		main_text "$1"
+		color_red 
+		polprint "$(eval_gettext "Oops, no application installed")"
+		color_black
+		next_close
+		export APP_ANSWER=
+		return
+	fi
+	#suppression du ~ de fin rajouter par le find
+	listGame=${listGame:0:$((${#listGame}-1))}
+	POL_CMD_menu "$1" "$2" "$listGame" "~"
 	#use a menu_num
 	#list installed apps
 }
