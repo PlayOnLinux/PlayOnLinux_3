@@ -47,7 +47,7 @@ POL_CMD_licence ()
 	window_title "$2"
 	main_text "$1"
 	wait_key_continue
-	more "$3" #FIXME have to test this one!
+	more "$3" 
 	agree_cancel
 }
 
@@ -95,7 +95,7 @@ POL_CMD_download ()
 	window_title "$2"
 	main_text "$1"
 	wget "$3"
-	#FIXME more work to do!
+	#minimalist implementation
 }
 
 POL_CMD_detect_exit ()
@@ -117,11 +117,21 @@ POL_CMD_textbox ()
 
 POL_CMD_browse ()
 {
-	echo "Not yet implanted"
-	#not yet!
-	#window_title "$2"
-	#main_text "$1"
-	#$3 def. file
+	local ans=
+	window_title "$2"
+	color_red
+	polprint "$(eval_gettext "Please answer following question, and validate by 'RETURN' key.")\n"
+	color_black
+	until [ -f "$ans" ]
+	do
+		[ ! -z "$3" ] && polprint "$(eval_gettext "Press directly return for choose default file: ")$3\n" && read -e -p "$1 ($3):"  ans
+		[ -z "$3" ] && read -e -p "$1:" ans
+		if [ ! -z $3 ] && [ -z $ans ]
+		then
+			ans=$3
+		fi
+	done
+	export APP_ANSWER=$ans
 }
 
 POL_CMD_question ()
@@ -385,6 +395,7 @@ POL_CMD_make_shortcut ()
 {
 
 	POL_CMD_checklist_box "$(eval_gettext "Do you want a shortcut for: ")$1" "$(eval_gettext "PlayOnLinux Wizard")" "$(eval_gettext "On your desktop")~$(eval_gettext "In your menu")" "~"
+	## Here I just back to default shortcut system...
 	#APP_ANSWER=0   -> On your desktop
 	#APP_ANSWER=1   -> In your menu
 	#APP_ANSWER=0~1 -> Twice
@@ -431,6 +442,7 @@ POL_CMD_close ()
 	#clearing screen ...
 	clear
 	#end of GUI
+	rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 }
 
 POL_CMD_init ()
@@ -541,5 +553,5 @@ color_red ()
 #printing mechanism
 polprint ()
 {
-	printf "$@" 1>&2
+	printf "$@"
 }
