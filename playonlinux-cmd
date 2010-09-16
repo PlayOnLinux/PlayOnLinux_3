@@ -31,6 +31,9 @@ die() ## PHP function copy
 PLAYONLINUX=`dirname "$0"`
 cd "$PLAYONLINUX"
 export PLAYONLINUX=`pwd`
+#used for switch from gui to a text system.
+#allow installing software w/o X server.
+export POL_CMD=true
 source "$PLAYONLINUX/lib/sources"
 if [ "$1" = "--version" ]
 then

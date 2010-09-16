@@ -1,0 +1,557 @@
+#!/bin/bash
+
+# Copyright (C) 2007-2010 PlayOnLinux Team
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License along
+# with this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+#don't source this file w/o a pol-cmd enviroment
+if [ -z $POL_CMD ] || [ x"$POL_CMD" == xfalse ]
+then
+	return
+fi
+
+POL_CMD_presentation ()
+{
+	#a simple map on interface_v3 should be better ?!
+	POL_CMD_free_presentation "$1" "$2"
+}
+
+POL_CMD_free_presentation ()
+{
+	window_title "$1"
+	main_text "$2"
+	next_close
+}
+
+POL_CMD_message ()
+{
+	window_title "$2"
+	main_text "$1"
+	next_close
+}
+
+POL_CMD_licence ()
+{
+	window_title "$2"
+	main_text "$1"
+	wait_key_continue
+	more "$3" 
+	agree_cancel
+}
+
+POL_CMD_message_image ()
+{
+	#ascii image printing no yet supported
+	POL_CMD_message "$1" "$2" 
+}
+
+POL_CMD_wait_next_signal ()
+{
+	window_title "$2"
+	main_text "$1"
+}
+
+POL_CMD_pulsebar ()
+{
+	window_title "$2"
+	main_text "$1"
+}
+
+POL_CMD_pulse ()
+{
+	color_red
+	polprint "$(eval_gettext "Progression is now: ")$1 %"
+	color_black
+}
+
+POL_CMD_set_text ()
+{
+	color_red
+	polprint "$(eval_gettext "Progression message: ")$1."
+	color_black
+}
+
+POL_CMD_wait ()
+{
+	window_title "$2"
+	main_text "$1"
+	$3
+}
+
+POL_CMD_download ()
+{
+	window_title "$2"
+	main_text "$1"
+	wget "$3"
+	#minimalist implementation
+}
+
+POL_CMD_detect_exit ()
+{
+	sleep 0.2 
+}
+
+POL_CMD_textbox ()
+{
+	window_title "$2"
+	main_text "$1"
+	local ans
+	color_red
+	polprint "$(eval_gettext "Please answer following question, and validate by 'RETURN' key.")"
+	color_black
+	read -p "$3" ans
+	export APP_ANSWER="$ans"
+}
+
+POL_CMD_browse ()
+{
+	local ans=
+	window_title "$2"
+	color_red
+	polprint "$(eval_gettext "Please answer following question, and validate by 'RETURN' key.")\n"
+	color_black
+	until [ -f "$ans" ]
+	do
+		[ ! -z "$3" ] && polprint "$(eval_gettext "Press directly return for choose default file: ")$3\n" && read -e -p "$1 ($3):"  ans
+		[ -z "$3" ] && read -e -p "$1:" ans
+		if [ ! -z $3 ] && [ -z $ans ]
+		then
+			ans=$3
+		fi
+	done
+	export APP_ANSWER=$ans
+}
+
+POL_CMD_question ()
+{
+	window_title "$2"
+	main_text "$1"
+	yes_no
+}
+
+POL_CMD_menu ()
+{
+	#If you find the following code ugly... You're right
+	#But in fact it's just an advanced bash script!
+	#I recommand you a good skill in bash! :-)
+	window_title "$2"
+	main_text "$1"
+	#declare local variable plus do init
+	local -a item
+	local cpt=0 nbItem=${3//[^$4]/} ans=-1 tmp fail=0
+	#finish counting nbItem
+	nbItem=${#nbItem}
+	OLDIFS="$IFS"
+	IFS="$4"
+	item=( $3 )
+	#restore IFS
+	IFS=$OLDIFS
+	#just be pretty
+	if [ $nbItem -lt 9 ] 
+	then 
+		for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+		do
+			polprint "$(eval_gettext "Press: ")$RED$cpt$BLACK$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+		done
+		until [ $ans != -1 ]
+		do
+			read -n 1 -s  ans
+			#force ans to be integer
+			for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+				[ x"$tmp" == x"$ans" ] || ((fail++))
+			done
+			[ $fail -ge $((nbItem+1)) ] && ans=-1
+			#return ans if ans < nbItem or return -1
+			ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+			ans=$(( $ans <= 0 ? -1 : $ans))
+		done
+	elif [ $nbItem -eq 9 ]
+	then
+		for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+		do
+			polprint "$(eval_gettext "Type: ")$(printf "$RED%02d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+		done
+		until [ $ans != -1 ]
+		do
+			polprint "\n"
+			read -N 2 -p "$(eval_gettext "Waiting: ")" ans
+			#force ans to be integer
+			for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+				[ x"`printf "%02d" $tmp`" == x"$ans" ] || ((fail++))
+				[ x"`printf "%02d" $tmp`" == x"$ans" ] && ans=$tmp && break
+			done
+			[ $fail -ge $((nbItem+1)) ] && ans=-1
+			#return ans if ans < nbItem or return -1
+			ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+			ans=$(( $ans <= 0 ? -1 : $ans))
+		done
+	else
+		for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
+		do
+			polprint "$(eval_gettext "Type: ")$(printf "$RED%0${#nbItem}d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+		done
+		until [ $ans != -1 ]
+		do
+			polprint "\n"
+			read -N ${#nbItem} -p "$(eval_gettext "Waiting: ")" ans
+			#force ans to be integer
+			for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+				[ x"`printf "%0${#nbItem}d" $tmp`" == x"$ans" ] || ((fail++))
+				[ x"`printf "%0${#nbItem}d" $tmp`" == x"$ans" ] && ans=$tmp && break #optimize loop
+			done
+			[ $fail -ge $((nbItem+1)) ] && ans=-1
+			#return ans if ans < nbItem or return -1
+			ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+			ans=$(( $ans <= 0 ? -1 : $ans))
+		done
+	fi
+	polprint "\n"
+	#well we know the answer, it's generaly 42!
+	export INTERNAL_POL_CMD_MENU_ANSWER=$((ans-1))
+	export APP_ANSWER=${item[$((ans-1))]}
+}
+
+POL_CMD_checkbox_list ()
+{
+	#first implementation work similar to menu...
+	#it's not very good... but it's the begining.
+	#If you find the following code ugly... You're right
+	#But in fact it's just an advanced bash script!
+	#I recommand you a good skill in bash! :-)
+	window_title "$2"
+	main_text "$1"
+	#declare local variable plus do init
+	local -a item selected
+	local nbItem=${3//[^$4]/}  ans=-1
+	local -i  tmp=0 fail=0 cpt2=0 cpt=0
+	function sortBbule ()
+	{
+	#do a sort bbule
+	for ((i=0 ; i<cpt2 ; i++)) ; do
+		for ((j=0 ; j<(cpt2-1) ; j++)) ; do
+			if [ ${selected[$i]} -lt ${selected[$j]} ] ; then
+				tmp=${selected[$j]}
+				selected[$j]=${selected[$i]}
+				selected[$i]=$tmp
+			fi
+		done
+	done
+	}
+	function shiftFrom ()
+	{
+		for ((j=$1 ; j<(cpt2-1) ; j++)) ; do
+			selected[$j]=${selected[$((j+1))]}
+		done
+	}
+	#finish counting nbItem
+	nbItem=$((${#nbItem}+1))
+	OLDIFS="$IFS"
+	IFS="$4"
+	item=( $3 )
+	#restore IFS
+	IFS=$OLDIFS
+	item[$nbItem]="$(eval_gettext "For validate all your choice")"
+	#just be pretty
+	until [ $((ans-1)) -eq $nbItem ]
+	do
+		ans=-1
+		if [ $nbItem -lt 9 ] 
+		then 
+			for (( cpt=1, tmp=0 ; cpt<=(nbItem +1) ; cpt++))
+			do
+				[ $cpt2 -gt $tmp ] && [ ${selected[$tmp]} -eq $((cpt-1)) ] && tmp=$((tmp+1)) && \
+					polprint "$(eval_gettext "Press: ")[$RED$cpt$BLACK]$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n" ||
+				polprint "$(eval_gettext "Press: ")$RED$cpt$BLACK$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+			done
+			until [ $ans != -1 ]
+			do
+				read -n 1 -s  ans
+				#force ans to be integer
+				for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+					[ x"$tmp" == x"$ans" ] || ((fail++))
+				done
+				[ $fail -ge $((nbItem+1)) ] && ans=-1
+				#return ans if ans < nbItem or return -1
+				ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+				ans=$(( $ans <= 0 ? -1 : $ans))
+			done
+		elif [ $nbItem -eq 9 ]
+		then
+			for (( cpt=1 , tmp=0 ; cpt<=(nbItem +1) ; cpt++))
+			do
+				[ $cpt2 -gt $tmp ] && [ ${selected[$tmp]} -eq $((cpt-1)) ] && tmp=$((tmp+1)) && \
+					polprint "$(eval_gettext "Type: ")[$(printf "$RED%02d$BLACK" $cpt)]$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n" ||
+				polprint "$(eval_gettext "Type: ")$(printf "$RED%02d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+			done
+			until [ $ans != -1 ]
+			do
+				polprint "\n"
+				read -N 2 -p "$(eval_gettext "Waiting: ")" ans
+				#force ans to be integer
+				for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+					[ x"`printf "%02d" $tmp`" == x"$ans" ] || ((fail++))
+					[ x"`printf "%02d" $tmp`" == x"$ans" ] && ans=$tmp && break
+				done
+				[ $fail -ge $((nbItem+1)) ] && ans=-1
+				#return ans if ans < nbItem or return -1
+				ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+				ans=$(( $ans <= 0 ? -1 : $ans))
+			done
+		else
+			for (( cpt=1, tmp=0 ; cpt<=(nbItem +1) ; cpt++))
+			do
+				[ $cpt2 -gt $tmp ] && [ ${selected[$tmp]} -eq $((cpt-1)) ] && tmp=$((tmp+1)) && \
+					polprint "$(eval_gettext "Type: ")[$(printf "$RED%0${#nbItem}d$BLACK" $cpt)]$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n" ||
+				polprint "$(eval_gettext "Type: ")$(printf "$RED%0${#nbItem}d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
+			done
+			until [ $ans != -1 ]
+			do
+				polprint "\n"
+				read -N ${#nbItem} -p "$(eval_gettext "Waiting: ")" ans
+				#force ans to be integer
+				for ((fail=0, tmp=1 ; tmp<=(nbItem+1) ; tmp++)) ; do
+					[ x"`printf "%0${#nbItem}d" $tmp`" == x"$ans" ] || ((fail++))
+					[ x"`printf "%0${#nbItem}d" $tmp`" == x"$ans" ] && ans=$tmp && break #optimize loop
+				done
+				[ $fail -ge $((nbItem+1)) ] && ans=-1
+				#return ans if ans < nbItem or return -1
+				ans=$(( $ans > ($nbItem+1) ? -1 : $ans))
+				ans=$(( $ans <= 0 ? -1 : $ans))
+			done
+		fi
+		polprint "\n"
+		#[ $((ans-1)) -ne $nbItem ] && { [ -z $selected ] && selected=$((ans-1)) || selected=$selected$4$((ans-1)) ;}
+		[ $((ans-1)) -ne $nbItem ] && selected[$((cpt2++))]=$((ans-1))
+		sortBbule
+		#duplicate entry = user deselect
+		tmp=${selected[0]}
+		for ((i=1 ; i < cpt2 ; i++)) ; do
+			if [ $tmp -eq ${selected[$i]} ] ; then
+				shiftFrom $((i-1)) 
+				cpt2=$((cpt2-1))
+				#twice for remove
+				shiftFrom $((i-1)) 
+				cpt2=$((cpt2-1))
+			fi
+			tmp=${selected[$i]}
+		done
+	done
+	printf "\n"
+	#well now build the ANSWER
+	APP_ANSWER=
+	for ((i=0 ; i < cpt2 ; i++)) ; do
+		[ -z $APP_ANSWER ] && APP_ANSWER=${selected[$i]} || APP_ANSWER=$APP_ANSWER$4${selected[$i]}
+	done
+	export APP_ANSWER
+}
+
+POL_CMD_menu_num ()
+{
+	#similar to _menu
+	#return a number 
+	POL_CMD_menu $@
+	export APP_ANSWER=$INTERNAL_POL_CMD_MENU_ANSWER
+}
+
+POL_CMD_menu_list ()
+{
+	POL_CMD_menu "$1" "$2" "$3" "$4" "$5"
+}
+
+POL_CMD_games ()
+{
+	listGame=$(find $REPERTOIRE/configurations/installed/ -type f -printf "%f~")
+	#pas d'apps installer
+	if [ ${#listGame} -le 1 ] ; then
+		window_title "$2"
+		main_text "$1"
+		color_red 
+		polprint "$(eval_gettext "Oops, no application installed")"
+		color_black
+		next_close
+		export APP_ANSWER=
+		return
+	fi
+	#suppression du ~ de fin rajouter par le find
+	listGame=${listGame:0:$((${#listGame}-1))}
+	POL_CMD_menu "$1" "$2" "$listGame" "~"
+	#use a menu_num
+	#list installed apps
+}
+
+POL_CMD_make_shortcut ()
+{
+
+	POL_CMD_checkbox_list "$(eval_gettext "Do you want a shortcut for: ")$1" "$(eval_gettext "PlayOnLinux Wizard")" "$(eval_gettext "On your desktop")~$(eval_gettext "In your menu")" "~"
+	## Here I just back to default shortcut system...
+	#APP_ANSWER=0   -> On your desktop
+	#APP_ANSWER=1   -> In your menu
+	#APP_ANSWER=0~1 -> Twice
+	#APP_ANSWER=    -> Nothing
+	if [ "$APP_ANSWER" == "0" ] ; then
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=False
+MSG_MENU=True
+EOF
+	elif [ "$APP_ANSWER" == "1" ] ; then
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=True
+MSG_MENU=False
+EOF
+	elif [ "$APP_ANSWER" == "0~1" ] ; then
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=True
+MSG_MENU=True
+EOF
+	else
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=False
+MSG_MENU=False
+EOF
+	fi
+}
+
+POL_CMD_auto_shortcut ()
+{
+	#exactly same as make_shortcut
+	POL_CMD_make_shortcut $@
+}
+
+POL_CMD_close ()
+{
+	#clearing screen ...
+	clear
+	#end of GUI
+	rm "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+}
+
+POL_CMD_init ()
+{	
+	#false init "GUI"
+	#clearing screen ...
+	clear
+	#I make all like if I'm running with a real GUI for avoid hazardous error
+	mkdir -p "$REPERTOIRE/configurations/guis/"
+	if [ ! -e "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" ] || [ "$1" = "--force" ]
+	then
+		touch "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
+	elif [ ! "$1" == "--force" ]
+	then 
+		 echo "E. Window $POL_SetupWindow_ID already opened !"
+	fi
+
+}
+
+#generic function
+window_title ()
+{
+	clear #clearing screen
+	color_blue
+	polprint "$@\n"
+	color_black
+}
+
+main_text ()
+{
+	color_black
+	polprint "$@\n"
+}
+
+agree_cancel ()
+{
+	color_red
+	local ans=0
+	until [ $ans == 1 ] || [ $ans == 2 ]
+	do
+		polprint "\n"
+		read -N 1 -p "$(eval_gettext "Type: '1' if you agree or '2' for no. Your answer: ")" ans 
+	done
+	color_black
+	polprint "\n"
+	#user didn't agree with -> exit
+	[ $ans == 2 ] && exit
+}
+
+next_close ()
+{
+	color_red
+	local ans=0
+	until [ $ans == 1 ] || [ $ans == 2 ]
+	do
+		polprint "\n"
+		read -N 1 -p "$(eval_gettext "Type: '1' for continue or '2' for cancel. Your answer: ")" ans 
+	done
+	color_black
+	polprint "\n"
+	#exit on cancel
+	[ $ans == 2 ] && exit
+	#do nothing for continue
+}
+wait_key_continue ()
+{
+	color_red
+	polprint "\n"
+	read -N 1 -s -p "$(eval_gettext "Press a key to continue.")" ans
+	color_black
+	polprint "\n"
+}
+
+yes_no ()
+{
+	color_red
+	local ans=0
+	until [ $ans == 1 ] || [ $ans == 2 ]
+	do
+		polprint "\n"
+		read -N 1 -p "$(eval_gettext "Type: '1' for yes or '2' for no. Your answer: ")" ans 
+	done
+	color_black
+	polprint "\n"
+	export APP_ANSWER="TRUE" #default is true
+	#if answer is no set it false.
+	[ $ans == 2 ] && export APP_ANSWER="FALSE"
+}
+
+#colors management
+#each function change terminal color
+readonly BLUE="\033[47;34m" BLACK="\033[40;37m" RED="\033[40;31m"
+color_blue ()
+{
+	polprint "\033[47;34m"
+}
+
+color_black ()
+{
+	polprint "\033[40;37m"
+}
+
+color_red ()
+{
+	polprint "\033[40;31m"
+}
+
+#printing mechanism
+polprint ()
+{
+	printf "$@"
+}
