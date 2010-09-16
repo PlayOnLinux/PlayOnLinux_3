@@ -13,6 +13,7 @@
 - ADD: playonlinux-cmd support search.
 - ADD: playonlinux-cmd can list installed software.
 - ADD: playonlinux-cmd can remove an already installed application.
+- ADD: playonlinux-cmd now support all function POL_SW_* (guiv3) in shell mode.
 - Full rebuild of translation template using xgettext. Python and Shell.
 - Better use of the gettext function and string corrections for:
 	-> python/wine_versions.py
