@@ -384,14 +384,46 @@ POL_CMD_games ()
 POL_CMD_make_shortcut ()
 {
 
-	echo "Not yet implanted"
-	#TODO
+	POL_CMD_checklist_box "$(eval_gettext "Do you want a shortcut for: ")$1" "$(eval_gettext "PlayOnLinux Wizard")" "$(eval_gettext "On your desktop")~$(eval_gettext "In your menu")" "~"
+	#APP_ANSWER=0   -> On your desktop
+	#APP_ANSWER=1   -> In your menu
+	#APP_ANSWER=0~1 -> Twice
+	#APP_ANSWER=    -> Nothing
+	if [ "$APP_ANSWER" == "0" ] ; then
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=False
+MSG_MENU=True
+EOF
+	elif [ "$APP_ANSWER" == "1" ] ; then
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=True
+MSG_MENU=False
+EOF
+	elif [ "$APP_ANSWER" == "0~1" ] ; then
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=True
+MSG_MENU=True
+EOF
+	else
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+MsgOut
+MSG_RECEIVED=Next
+MSG_MENU=False
+MSG_MENU=False
+EOF
+	fi
 }
 
 POL_CMD_auto_shortcut ()
 {
-	echo "Not yet implanted"
-	#TODO
+	#exactly same as make_shortcut
+	POL_CMD_make_shortcut $@
 }
 
 POL_CMD_close ()
