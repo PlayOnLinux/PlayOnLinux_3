@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-15 23:50:05+02:00\n"
+"POT-Creation-Date: 2010-09-17 16:56:19+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -696,7 +696,7 @@ msgstr ""
 msgid "Cannot find the shortcut"
 msgstr ""
 
-#: bash/uninstall:55 lib/interface:137 lib/interface_v3:106
+#: bash/uninstall:55 lib/interface:137 lib/interface_v3:104
 #, sh-format
 msgid "Error"
 msgstr ""
@@ -741,7 +741,7 @@ msgstr ""
 msgid "Program: "
 msgstr ""
 
-#: lib/check_depend:38 lib/interface_v3:104
+#: lib/check_depend:38 lib/interface_v3:102
 #, sh-format
 msgid ""
 "One or more program(s) are missing. Please install them and run the script "
@@ -860,73 +860,73 @@ msgid ""
 "\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:300
+#: lib/interface_v3:291
 #, sh-format
 msgid "Wine version server temporary unavailable.\\nPlease try again later."
 msgstr ""
 
-#: lib/interface_v3:303
+#: lib/interface_v3:294
 #, sh-format
 msgid "Following server is no longer available:\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:306
+#: lib/interface_v3:297
 #, sh-format
 msgid "Following file is no longer available on server:\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:309
+#: lib/interface_v3:300
 #, sh-format
 msgid "Download failure"
 msgstr ""
 
-#: lib/interface_v3:593 lib/interface_v3:602 lib/interface_v3:613
+#: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
 msgid "Please wait while the Wine prefix is being created..."
 msgstr ""
 
-#: lib/interface_v3:593 lib/interface_v3:602 lib/interface_v3:613
+#: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
 msgid "Wine prefix configuration"
 msgstr ""
 
-#: lib/interface_v3:851
+#: lib/interface_v3:831
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr ""
 
-#: lib/interface_v3:873 lib/wine:235 lib/wine:243
+#: lib/interface_v3:853 lib/wine:235 lib/wine:243
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr ""
 
-#: lib/interface_v3:874 lib/wine:225 lib/wine:235 lib/wine:241
+#: lib/interface_v3:854 lib/wine:225 lib/wine:235 lib/wine:241
 #: python/install.py:276 python/options.py:114
 #, sh-format
 msgid "Other"
 msgstr ""
 
-#: lib/interface_v3:897 lib/wine:293
+#: lib/interface_v3:877 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr ""
 
-#: lib/interface_v3:918
+#: lib/interface_v3:898
 #, sh-format
 msgid "Unable to find version: "
 msgstr ""
 
-#: lib/interface_v3:924 lib/interface_v3:925
+#: lib/interface_v3:904 lib/interface_v3:905
 #, sh-format
 msgid "Downloading Wine: "
 msgstr ""
 
-#: lib/interface_v3:935
+#: lib/interface_v3:915
 #, sh-format
 msgid "The download seems to have failed."
 msgstr ""
 
-#: lib/interface_v3:937
+#: lib/interface_v3:917
 #, sh-format
 msgid "Extracting Wine..."
 msgstr ""
@@ -1090,6 +1090,102 @@ msgstr ""
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr ""
 
+#: lib/pol_cmd:75
+#, sh-format
+msgid "Completion: "
+msgstr ""
+
+#: lib/pol_cmd:82
+#, sh-format
+msgid "Processing: "
+msgstr ""
+
+#: lib/pol_cmd:112 lib/pol_cmd:123
+#, sh-format
+msgid "Please answer following question, and validate with the 'ENTER' key."
+msgstr ""
+
+#: lib/pol_cmd:127
+#, sh-format
+msgid "Press directly enter for choose default file: "
+msgstr ""
+
+#: lib/pol_cmd:166 lib/pol_cmd:184 lib/pol_cmd:203 lib/pol_cmd:275
+#: lib/pol_cmd:276 lib/pol_cmd:295 lib/pol_cmd:296 lib/pol_cmd:316
+#: lib/pol_cmd:317
+#, sh-format
+msgid " for entry: "
+msgstr ""
+
+#: lib/pol_cmd:166 lib/pol_cmd:275 lib/pol_cmd:276
+#, sh-format
+msgid "Press: "
+msgstr ""
+
+#: lib/pol_cmd:184 lib/pol_cmd:203 lib/pol_cmd:295 lib/pol_cmd:296
+#: lib/pol_cmd:316 lib/pol_cmd:317
+#, sh-format
+msgid "Type: "
+msgstr ""
+
+#: lib/pol_cmd:189 lib/pol_cmd:208 lib/pol_cmd:301 lib/pol_cmd:322
+#, sh-format
+msgid "Waiting: "
+msgstr ""
+
+#: lib/pol_cmd:265
+#, sh-format
+msgid "to confirm your choices."
+msgstr ""
+
+#: lib/pol_cmd:381
+#, sh-format
+msgid "Oops, no application installed!"
+msgstr ""
+
+#: lib/pol_cmd:397 python/guiv3.py:565
+#, sh-format
+msgid "In your menu"
+msgstr ""
+
+#: lib/pol_cmd:397 python/guiv3.py:564
+#, sh-format
+msgid "On your desktop"
+msgstr ""
+
+#: lib/pol_cmd:397 python/guiv3.py:353 python/guiv3.py:367 python/guiv3.py:383
+#: python/guiv3.py:413 python/guiv3.py:441 python/guiv3.py:460
+#: python/guiv3.py:478 python/guiv3.py:496 python/guiv3.py:517
+#: python/guiv3.py:529 python/guiv3.py:547 python/guiv3.py:560
+#, sh-format
+msgid "PlayOnLinux Wizard"
+msgstr ""
+
+#: lib/pol_cmd:397 python/guiv3.py:563
+#, sh-format
+msgid "Would you like a shortcut for: "
+msgstr ""
+
+#: lib/pol_cmd:487
+#, sh-format
+msgid "Type: '1' if you agree or '2' if you do not. Your answer: "
+msgstr ""
+
+#: lib/pol_cmd:502
+#, sh-format
+msgid "Type: '1' for continue or '2' to cancel. Your answer: "
+msgstr ""
+
+#: lib/pol_cmd:514
+#, sh-format
+msgid "Press a key to continue."
+msgstr ""
+
+#: lib/pol_cmd:526
+#, sh-format
+msgid "Type: '1' for Yes or '2' for No. Your answer: "
+msgstr ""
+
 #: lib/wine:58
 #, sh-format
 msgid "Creating Wine prefix"
@@ -1097,7 +1193,7 @@ msgstr ""
 
 #: lib/wine:58
 #, sh-format
-msgid "Finished"
+msgid "Done"
 msgstr ""
 
 #: lib/wine:189
@@ -1110,68 +1206,68 @@ msgstr ""
 msgid "You must choose which Wine version you want to download."
 msgstr ""
 
-#: playonlinux-cmd:49
+#: playonlinux-cmd:52
 #, sh-format
 msgid ""
 "This program is intended to be used by automatic scripts to manage "
 "PlayOnLinux."
 msgstr ""
 
-#: playonlinux-cmd:51
+#: playonlinux-cmd:54
 #, sh-format
 msgid "\tprint current version and exit."
 msgstr ""
 
-#: playonlinux-cmd:52
+#: playonlinux-cmd:55
 #, sh-format
 msgid "\tupdate the PlayOnLinux script repository."
 msgstr ""
 
-#: playonlinux-cmd:53
+#: playonlinux-cmd:56
 #, sh-format
 msgid "\trun an existing application."
 msgstr ""
 
-#: playonlinux-cmd:54
+#: playonlinux-cmd:57
 #, sh-format
 msgid "\tstart installing the specified script."
 msgstr ""
 
-#: playonlinux-cmd:55
+#: playonlinux-cmd:58
 #, sh-format
-msgid "\tperform a search into script repository."
+msgid "\tperform search into the script repository."
 msgstr ""
 
-#: playonlinux-cmd:56
+#: playonlinux-cmd:59
 #, sh-format
 msgid "\tlist software installed with PlayOnLinux."
 msgstr ""
 
-#: playonlinux-cmd:57
+#: playonlinux-cmd:60
 #, sh-format
 msgid "\tremove an existing application."
 msgstr ""
 
-#: playonlinux-cmd:117
+#: playonlinux-cmd:120
 #, sh-format
 msgid "Please make sure you are connected to the Internet."
 msgstr ""
 
-#: playonlinux-cmd:127
+#: playonlinux-cmd:130
 #, sh-format
 msgid ""
-"The search need an updated repository.\\nIf the results seem outdated, "
-"please run an update: "
+"The search needs an updated repository.\\nIf the results seem outdated, "
+"please run an update."
 msgstr ""
 
-#: playonlinux-cmd:128
+#: playonlinux-cmd:131
 #, sh-format
-msgid "Search result: "
+msgid "Search result(s): "
 msgstr ""
 
-#: playonlinux-cmd:134
+#: playonlinux-cmd:137
 #, sh-format
-msgid "List of software currently installed:"
+msgid "Currently installed applications:"
 msgstr ""
 
 #: playonlinux-pkg:36
@@ -1273,31 +1369,12 @@ msgstr ""
 msgid "MiB downloaded"
 msgstr ""
 
-#: python/guiv3.py:353 python/guiv3.py:367 python/guiv3.py:383
-#: python/guiv3.py:413 python/guiv3.py:441 python/guiv3.py:460
-#: python/guiv3.py:478 python/guiv3.py:496 python/guiv3.py:517
-#: python/guiv3.py:529 python/guiv3.py:547 python/guiv3.py:560
-msgid "PlayOnLinux Wizard"
-msgstr ""
-
 #: python/guiv3.py:536
 msgid "I Agree"
 msgstr ""
 
 #: python/guiv3.py:559
 msgid "Create a shortcut: "
-msgstr ""
-
-#: python/guiv3.py:563
-msgid "Do you want a shortcut for: "
-msgstr ""
-
-#: python/guiv3.py:564
-msgid "On your desktop"
-msgstr ""
-
-#: python/guiv3.py:565
-msgid "In your menu"
 msgstr ""
 
 #: python/install.py:83

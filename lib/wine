@@ -55,7 +55,7 @@ creer_prefixe ()
 	then	
 		N2="$2"
 	fi
-	attendre "$(eval_gettext 'Creating Wine prefix')" "wine wineprefixcreate" "" "$N1" "$N2" "1" "" 0 "$(eval_gettext "Finished")"
+	attendre "$(eval_gettext 'Creating Wine prefix')" "wine wineprefixcreate" "" "$N1" "$N2" "1" "" 0 "$(eval_gettext "Done")"
 	set_user_dir
 	set_programfile_dir
 	fonts_to_prefixe

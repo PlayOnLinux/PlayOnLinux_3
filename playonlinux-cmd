@@ -55,7 +55,7 @@ function usage
 	echo -e "\t[--update]			$(eval_gettext '	update the PlayOnLinux script repository.')"
 	echo -e "\t[--run 'Software name']	$(eval_gettext '	run an existing application.')"
 	echo -e "\t[--start-install 'Script Name']$(eval_gettext '	start installing the specified script.')"
-	echo -e "\t[--search 'Script Name']	$(eval_gettext '	perform a search into script repository.')"
+	echo -e "\t[--search 'Script Name']	$(eval_gettext '	perform search into the script repository.')"
 	echo -e "\t[--list]			$(eval_gettext '	list software installed with PlayOnLinux.')"
 	echo -e "\t[--remove 'Script Name']	$(eval_gettext '	remove an existing application.')"
 	exit 1
@@ -127,14 +127,14 @@ case $1 in
 	if [ -z "$2" ] ; then usage ; fi
 	#build personnal repository 
 	construire_repertoire_personnel
-	echo -e "$(eval_gettext "The search need an updated repository.\nIf the results seem outdated, please run an update: ")$0 --update"
-	echo "$(eval_gettext "Search result: ")"
+	echo -e "$(eval_gettext "The search needs an updated repository.\nIf the results seem outdated, please run an update.")"
+	echo "$(eval_gettext "Search result(s): ")"
 	grep -i -- "$2" $REPERTOIRE/configurations/listes/search
 	;;
 -ls|--list)
 	#build personnal repository 
 	construire_repertoire_personnel
-	echo "$(eval_gettext "List of software currently installed:")"
+	echo "$(eval_gettext "Currently installed applications:")"
 	ls -1 $REPERTOIRE/configurations/installed/
 	;;
 -rm|--remove)

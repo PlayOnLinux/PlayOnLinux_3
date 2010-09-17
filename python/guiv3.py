@@ -560,7 +560,7 @@ class Ok_frame(wx.Frame): #fenêtre principale
 								self.titre_header = wx.StaticText(self.header, -1, _("PlayOnLinux Wizard"),pos=(5,5), size=(340,356))
 								self.texte.SetFont(self.fontText)
 								self.titre_header.SetFont(self.fontTitre)
-								self.titre = wx.StaticText(self.header, -1, _("Do you want a shortcut for: ")+self.fichier[2].replace("\n","")+" ?",pos=(20,30), size=(340,356))
+								self.titre = wx.StaticText(self.header, -1, _("Would you like a shortcut for: ")+self.fichier[2].replace("\n","")+" ?",pos=(20,30), size=(340,356))
 								self.desktop = wx.CheckBox(self.panel, -1, _("On your desktop"),pos=(25,105))
 								self.menu = wx.CheckBox(self.panel, -1, _("In your menu"),pos=(25,125))
 
