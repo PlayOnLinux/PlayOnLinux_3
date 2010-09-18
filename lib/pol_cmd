@@ -481,7 +481,7 @@ agree_cancel ()
 {
 	color_red
 	local ans=0
-	until [ $ans == 1 ] || [ $ans == 2 ]
+	until [ x"$ans" == x"1" ] || [ x"$ans" == x"2" ]
 	do
 		polprint "\n"
 		read -N 1 -p "$(eval_gettext "Type: '1' if you agree or '2' if you do not. Your answer: ")" ans 
@@ -489,14 +489,14 @@ agree_cancel ()
 	color_black
 	polprint "\n"
 	#user didn't agree with -> exit
-	[ $ans == 2 ] && exit
+	[ x"$ans" == x"2" ] && exit
 }
 
 next_close ()
 {
 	color_red
 	local ans=0
-	until [ $ans == 1 ] || [ $ans == 2 ]
+	until [ x"$ans" == x"1" ] || [ x"$ans" == x"2" ]
 	do
 		polprint "\n"
 		read -N 1 -p "$(eval_gettext "Type: '1' for continue or '2' to cancel. Your answer: ")" ans 
@@ -504,7 +504,7 @@ next_close ()
 	color_black
 	polprint "\n"
 	#exit on cancel
-	[ $ans == 2 ] && exit
+	[ x"$ans" == x"2" ] && exit
 	#do nothing for continue
 }
 wait_key_continue ()
@@ -520,7 +520,7 @@ yes_no ()
 {
 	color_red
 	local ans=0
-	until [ $ans == 1 ] || [ $ans == 2 ]
+	until [ x"$ans" == "1" ] || [ x"$ans" == x"2" ]
 	do
 		polprint "\n"
 		read -N 1 -p "$(eval_gettext "Type: '1' for Yes or '2' for No. Your answer: ")" ans 
@@ -529,7 +529,7 @@ yes_no ()
 	polprint "\n"
 	export APP_ANSWER="TRUE" #default is true
 	#if answer is no set it false.
-	[ $ans == 2 ] && export APP_ANSWER="FALSE"
+	[ x"$ans" == x"2" ] && export APP_ANSWER="FALSE"
 }
 
 #colors management
