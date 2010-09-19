@@ -121,3 +121,61 @@ msgstr ""
 #: Capture plugin:29
 msgid "Conversion done"
 msgstr ""
+
+#: Advanced Wine Configuration Plugin:4
+msgid "Choose an option to modify"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:5
+msgid "All"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:6
+msgid "You must choose a game to modify"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:7
+msgid ""
+"Welcome in Advanced Wine Configuration, an optimization’s system for Wine "
+"created by GNU_Raziel. If you does not know what to choose, LEAVE DEFAULTS"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:8
+msgid "Choose a game"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:9
+msgid "You did not select a game"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:10
+msgid "Choose DirectDraw Renderer Mode?"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:11
+msgid "Activate GLSL Support?"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:12
+msgid "How much memory does your graphics board have?"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:13
+msgid "Choose Offscreen Rendering Mode?"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:14
+msgid "Choose Render Target Lock Mode?"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:15
+msgid "Activate Multisampling support?"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:16
+msgid "Activate the mouse warp override?"
+msgstr ""
+
+#: Advanced Wine Configuration Plugin:17
+msgid "Optimisation done"
+msgstr ""
