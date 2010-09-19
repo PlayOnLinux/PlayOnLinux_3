@@ -7,13 +7,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-19 21:04:36+02:00\n"
+"POT-Creation-Date: 2010-09-19 21:49:07+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: Advanced Configuration Plugin:11 Wine
+msgid "Activate GLSL Support?"
+msgstr ""
+
+#: Advanced Configuration Plugin:15 Wine
+msgid "Activate Multisampling support?"
+msgstr ""
+
+#: Advanced Configuration Plugin:16 Wine
+msgid "Activate the mouse warp override?"
+msgstr ""
+
+#: Advanced Configuration Plugin:5 Wine
+msgid "All"
+msgstr ""
+
+#: Advanced Configuration Plugin:10 Wine
+msgid "Choose DirectDraw Renderer Mode?"
+msgstr ""
+
+#: Advanced Configuration Plugin:13 Wine
+msgid "Choose Offscreen Rendering Mode?"
+msgstr ""
+
+#: Advanced Configuration Plugin:14 Wine
+msgid "Choose Render Target Lock Mode?"
+msgstr ""
+
+#: Advanced Configuration Plugin:8 Wine
+msgid "Choose a game"
+msgstr ""
+
+#: Advanced Configuration Plugin:4 Wine
+msgid "Choose an option to modify"
+msgstr ""
+
+#: Advanced Configuration Plugin:12 Wine
+msgid "How much memory does your graphics board have?"
+msgstr ""
+
+#: Advanced Configuration Plugin:17 Wine
+msgid "Optimisation done"
+msgstr ""
+
+#: Advanced Configuration Plugin:7 Wine
+msgid ""
+"Welcome in Advanced Wine Configuration, an optimization’s system for Wine "
+"created by GNU_Raziel. If you does not know what to choose, LEAVE DEFAULTS"
+msgstr ""
+
+#: Advanced Configuration Plugin:9 Wine
+msgid "You did not select a game"
+msgstr ""
+
+#: Advanced Configuration Plugin:6 Wine
+msgid "You must choose a game to modify"
+msgstr ""
 
 #: Capture plugin:21
 msgid "Add the PlayOnLinux logo to your video?"
@@ -1110,50 +1168,52 @@ msgstr ""
 msgid "Press Enter to choose default file: "
 msgstr ""
 
-#: lib/pol_cmd:166 lib/pol_cmd:184 lib/pol_cmd:203 lib/pol_cmd:275
-#: lib/pol_cmd:276 lib/pol_cmd:295 lib/pol_cmd:296 lib/pol_cmd:316
-#: lib/pol_cmd:317
+#: lib/pol_cmd:166 lib/pol_cmd:186 lib/pol_cmd:205 lib/pol_cmd:277
+#: lib/pol_cmd:278 lib/pol_cmd:297 lib/pol_cmd:298 lib/pol_cmd:318
+#: lib/pol_cmd:319
 #, sh-format
 msgid " for entry: "
 msgstr ""
 
-#: lib/pol_cmd:166 lib/pol_cmd:275 lib/pol_cmd:276
+#: lib/pol_cmd:166 lib/pol_cmd:277 lib/pol_cmd:278
 #, sh-format
 msgid "Press: "
 msgstr ""
 
-#: lib/pol_cmd:184 lib/pol_cmd:203 lib/pol_cmd:295 lib/pol_cmd:296
-#: lib/pol_cmd:316 lib/pol_cmd:317
+#. "" TRANSLATOR: "Type: " as in "type a number"
+#. (not a single key). e.g: 'Type: 12 for entry: ....'
+#: lib/pol_cmd:186 lib/pol_cmd:205 lib/pol_cmd:297 lib/pol_cmd:298
+#: lib/pol_cmd:318 lib/pol_cmd:319
 #, sh-format
 msgid "Type: "
 msgstr ""
 
-#: lib/pol_cmd:189 lib/pol_cmd:208 lib/pol_cmd:301 lib/pol_cmd:322
+#: lib/pol_cmd:191 lib/pol_cmd:210 lib/pol_cmd:303 lib/pol_cmd:324
 #, sh-format
 msgid "Waiting: "
 msgstr ""
 
-#: lib/pol_cmd:265
+#: lib/pol_cmd:267
 #, sh-format
 msgid "to confirm your choices."
 msgstr ""
 
-#: lib/pol_cmd:381
+#: lib/pol_cmd:383
 #, sh-format
 msgid "Oops, no application installed!"
 msgstr ""
 
-#: lib/pol_cmd:397 python/guiv3.py:565
+#: lib/pol_cmd:399 python/guiv3.py:565
 #, sh-format
 msgid "In your menu"
 msgstr ""
 
-#: lib/pol_cmd:397 python/guiv3.py:564
+#: lib/pol_cmd:399 python/guiv3.py:564
 #, sh-format
 msgid "On your desktop"
 msgstr ""
 
-#: lib/pol_cmd:397 python/guiv3.py:353 python/guiv3.py:367 python/guiv3.py:383
+#: lib/pol_cmd:399 python/guiv3.py:353 python/guiv3.py:367 python/guiv3.py:383
 #: python/guiv3.py:413 python/guiv3.py:441 python/guiv3.py:460
 #: python/guiv3.py:478 python/guiv3.py:496 python/guiv3.py:517
 #: python/guiv3.py:529 python/guiv3.py:547 python/guiv3.py:560
@@ -1161,27 +1221,27 @@ msgstr ""
 msgid "PlayOnLinux Wizard"
 msgstr ""
 
-#: lib/pol_cmd:397 python/guiv3.py:563
+#: lib/pol_cmd:399 python/guiv3.py:563
 #, sh-format
 msgid "Would you like a shortcut for: "
 msgstr ""
 
-#: lib/pol_cmd:487
+#: lib/pol_cmd:489
 #, sh-format
 msgid "Type: '1' if you agree or '2' if you do not. Your answer: "
 msgstr ""
 
-#: lib/pol_cmd:502
+#: lib/pol_cmd:504
 #, sh-format
 msgid "Type: '1' for continue or '2' to cancel. Your answer: "
 msgstr ""
 
-#: lib/pol_cmd:514
+#: lib/pol_cmd:516
 #, sh-format
 msgid "Press a key to continue."
 msgstr ""
 
-#: lib/pol_cmd:526
+#: lib/pol_cmd:528
 #, sh-format
 msgid "Type: '1' for Yes or '2' for No. Your answer: "
 msgstr ""
