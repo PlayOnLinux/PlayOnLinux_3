@@ -181,6 +181,8 @@ POL_CMD_menu ()
 	then
 		for (( cpt=1 ; cpt<=(nbItem +1) ; cpt++))
 		do
+			# "" TRANSLATOR: "Type: " as in "type a number" 
+			# (not a single key). e.g: 'Type: 12 for entry: ....'
 			polprint "$(eval_gettext "Type: ")$(printf "$RED%02d$BLACK" $cpt)$(eval_gettext " for entry: ")${item[$(( cpt - 1))]}\n"
 		done
 		until [ $ans != -1 ]
