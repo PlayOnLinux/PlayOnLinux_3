@@ -124,7 +124,7 @@ POL_CMD_browse ()
 	color_black
 	until [ -f "$ans" ]
 	do
-		[ ! -z "$3" ] && polprint "$(eval_gettext "Press directly enter for choose default file: ")$3\n" && read -e -p "$1 ($3):"  ans
+		[ ! -z "$3" ] && polprint "$(eval_gettext "Press Enter to choose default file: ")$3\n" && read -e -p "$1 ($3):"  ans
 		[ -z "$3" ] && read -e -p "$1:" ans
 		if [ ! -z $3 ] && [ -z $ans ]
 		then
