@@ -35,3 +35,6 @@ import;WineImport_0.3.pol;Wine Import;enable;0.3;1
 
 #Wine Look
 look;WineLook_0.3.pol;Wine Look;enable;0.3;1
+
+#Detour
+detour;Detour.pol;Detour;enable;0.1;1

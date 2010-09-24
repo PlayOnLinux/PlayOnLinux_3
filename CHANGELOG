@@ -1,3 +1,6 @@
+-> 3.8.3-dev
+- ADD: Plugin Detour
+
 -> 3.8.2
 - FIX: PlayOnLinux bug: #17. An error message was displayed during manual installation
 - FIX: know bug in pol-cmd, pol-cmd was unable to create .PlayOnLinux repository
