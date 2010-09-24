@@ -63,7 +63,7 @@ class MainWindow(wx.Frame):
 			self.texte_update.SetForegroundColour("green")
 		else:
 			self.image_logo = wx.StaticBitmap(self.panel_update, -1, wx.ArtProvider.GetBitmap("gtk-dialog-error", wx.ART_MENU), pos=(15,0))
-			self.texte_update = wx.StaticText(self.panel_update, -1, _("Started with unknown message. Report a bug ASAP!"),pos=(35,0))
+			self.texte_update = wx.StaticText(self.panel_update, -1, _("Internal error when starting GUI. Please file a bug report ASAP!"),pos=(35,0))
 			
 		self.texte_update.SetFont(self.fontText)
 		self.list_game = wx.TreeCtrl(self.panel_games, 105, style=wx.TR_HIDE_ROOT|wx.TR_FULL_ROW_HIGHLIGHT)
