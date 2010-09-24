@@ -7,15 +7,215 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-15 23:31+0200\n"
-"PO-Revision-Date: 2010-09-15 23:33+0000\n"
-"Last-Translator: Aymeric PETIT <os2mule@gmail.com>\n"
+"POT-Creation-Date: 2010-09-19 21:49+0200\n"
+"PO-Revision-Date: 2010-09-22 04:54+0000\n"
+"Last-Translator: Bruno Veilleux <Unknown>\n"
 "Language-Team: fr_FR.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-15 20:44+0000\n"
+"X-Launchpad-Export-Date: 2010-09-24 10:00+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
+
+#: Advanced Configuration Plugin:11 Wine
+msgid "Activate GLSL Support?"
+msgstr "Activer le support GLSL ?"
+
+#: Advanced Configuration Plugin:15 Wine
+msgid "Activate Multisampling support?"
+msgstr "Activer le support du Multisampling ?"
+
+#: Advanced Configuration Plugin:16 Wine
+msgid "Activate the mouse warp override?"
+msgstr ""
+
+#: Advanced Configuration Plugin:5 Wine
+msgid "All"
+msgstr "Tous"
+
+#: Advanced Configuration Plugin:10 Wine
+msgid "Choose DirectDraw Renderer Mode?"
+msgstr ""
+
+#: Advanced Configuration Plugin:13 Wine
+msgid "Choose Offscreen Rendering Mode?"
+msgstr ""
+
+#: Advanced Configuration Plugin:14 Wine
+msgid "Choose Render Target Lock Mode?"
+msgstr "Quel mode utiliser pour gerer le Rendu de Cible vérouillée ?"
+
+#: Advanced Configuration Plugin:8 Wine
+msgid "Choose a game"
+msgstr "Choisissez un jeu"
+
+#: Advanced Configuration Plugin:4 Wine
+msgid "Choose an option to modify"
+msgstr "Choisissez une option à modifier"
+
+#: Advanced Configuration Plugin:12 Wine
+msgid "How much memory does your graphics board have?"
+msgstr ""
+
+#: Advanced Configuration Plugin:17 Wine
+msgid "Optimisation done"
+msgstr "Optimisation terminée"
+
+#: Advanced Configuration Plugin:7 Wine
+msgid ""
+"Welcome in Advanced Wine Configuration, an optimization’s system for Wine "
+"created by GNU_Raziel. If you does not know what to choose, LEAVE DEFAULTS"
+msgstr ""
+"Bienvenue dans Advanced Wine Configuration, un système d'optimisation de "
+"Wine créé par GNU_Raziel. Si vous ne SAVEZ PAS quoi mettre en valeur, "
+"laissez la valeur par DÉFAUT"
+
+#: Advanced Configuration Plugin:9 Wine
+msgid "You did not select a game"
+msgstr "Vous n'avez pas choisi de jeu."
+
+#: Advanced Configuration Plugin:6 Wine
+msgid "You must choose a game to modify"
+msgstr "Vous devez choisir un jeu à modifier"
+
+#: Capture plugin:21
+msgid "Add the PlayOnLinux logo to your video?"
+msgstr "Ajouter le logo PlayOnLinux à votre video ?"
+
+#: Capture plugin:6
+msgid "Begin the capture of an application"
+msgstr "Demarrer la capture d’une application"
+
+#: Capture plugin:13
+msgid "Capture in progress..."
+msgstr "Capture en cours..."
+
+#: Capture plugin:4
+msgid "Capture menu (OpenGL)"
+msgstr "Menu Capture (OpenGL)"
+
+#: Capture plugin:5
+msgid "Capture menu (not OpenGL)"
+msgstr "Menu Capture (Non OpenGL)"
+
+#: Capture plugin:10
+msgid "Capture will begin..."
+msgstr "La capture va maintenant démarrée..."
+
+#: Capture plugin:14
+msgid "Choose an action to perform"
+msgstr "Choisissez une action"
+
+#: Capture plugin:24
+msgid "Choose the video format for conversion"
+msgstr "Choisissez un format video pour la conversion"
+
+#: Capture plugin:29
+msgid "Conversion done"
+msgstr "Conversion terminée"
+
+#: Capture plugin:8
+msgid "Convert a captured file to video"
+msgstr "Convertir un fichier Capture en Video"
+
+#: Capture plugin:27
+msgid ""
+"Define your encoding options \\n (leave defaults if you do not know what to "
+"do)"
+msgstr ""
+"Définissez vos options d’encodage \\n (laisser les options par défaut si "
+"vous ne savais pas quoi faire)"
+
+#: Capture plugin:25
+msgid ""
+"Define your encoding options for pass 1 \\n (leave defaults if you do not "
+"know what to do)"
+msgstr ""
+"Définissez vos options d’encodage de la passe 1 \\n (laisser les options par "
+"défaut si vous ne savais pas quoi faire)"
+
+#: Capture plugin:26
+msgid ""
+"Define your encoding options for pass 2 \\n (leave defaults if you do not "
+"know what to do)"
+msgstr ""
+"Définissez vos options d’encodage de la passe 2 \\n (laisser les options par "
+"défaut si vous ne savais pas quoi faire)"
+
+#: Capture plugin:7
+msgid "Play a captured file"
+msgstr "Visionner un fichier Capture"
+
+#: Capture plugin:15
+msgid "Please choose a PID capture file to play"
+msgstr "Selectionnez le fichier capture PID a lire"
+
+#: Capture plugin:17
+msgid "Please choose a capture file to convert"
+msgstr "Selectionnez le fichier capture a convertir"
+
+#: Capture plugin:16
+msgid "Please choose an OGV capture file to play"
+msgstr "Selectionnez le fichier capture OGV a lire"
+
+#: Capture plugin:20
+msgid "Please wait while the PlayOnLinux logo is created..."
+msgstr "Patientez pendant la creation du logo PlayOnLinux..."
+
+#: Capture plugin:28
+msgid "Please wait while your video is being encoded..."
+msgstr "Patientez pendant l’encodage de votre video..."
+
+#: Capture plugin:11
+msgid "Press <SHIFT>+F8 to start or stop capture"
+msgstr "Appuyez sur <SHIFT>+F8 pour démarrer ou arrêter la capture"
+
+#: Capture plugin:12
+msgid "Press <SHIFT>+F8 to stop capture"
+msgstr "Appuyez sur <SHIFT>+F8 pour arrêter la capture"
+
+#: Capture plugin:9
+#, sh-format
+msgid ""
+"Press Next then click on the window\\nyou want to capture.\\nCapture will "
+"start automatically after 5 seconds.\\nOnly video will be captured."
+msgstr ""
+"Appuyez sur Suivant puis cliquer sur la fenêtre que\\nvous souhaitez "
+"capturer.\\nLa capture démarrera automatiquement après 5 secondes.\\nSeul la "
+"video sera capturée."
+
+#: Capture plugin:3
+msgid ""
+"This plugin wil allow you to capture you applications under PlayOnLinux"
+msgstr ""
+"Ce plugin vous permettra de prendre des vidéos de vos applications sous "
+"PlayOnLinux"
+
+#: Capture plugin:23
+msgid ""
+"Ubuntu users must add the MEDIBUNTU repository\\nfor this conversion format "
+"to work properly."
+msgstr ""
+"Les utilisateur d’Ubuntu doivent ajouter le dépôt MEDIBUNTU\\nafin que ce "
+"format de conversion fonctionne corectement"
+
+#: Capture plugin:22
+msgid ""
+"Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
+msgstr ""
+"Attention, pour l’encodage video\\nla résolution DOIT ête un multiple de 16"
+
+#: Capture plugin:2
+msgid "Which application do you want to apply the modification to?"
+msgstr "À quelle application souhaitez-vous appliquer la modification ?"
+
+#: Capture plugin:19
+msgid "You must choose a capture to convert"
+msgstr "Vous devez sélectionner une capture a convertir"
+
+#: Capture plugin:18
+msgid "You must choose a capture to read"
+msgstr "Vous devez sélectionner une capture a lire"
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
 #: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
@@ -600,7 +800,7 @@ msgstr " a été installé avec succès."
 msgid "Cannot find the shortcut"
 msgstr "Impossible de trouver le raccourci."
 
-#: bash/uninstall:55 lib/interface:137 lib/interface_v3:106
+#: bash/uninstall:55 lib/interface:137 lib/interface_v3:104
 #, sh-format
 msgid "Error"
 msgstr "Erreur"
@@ -645,7 +845,7 @@ msgstr ", paquet : "
 msgid "Program: "
 msgstr "Programme : "
 
-#: lib/check_depend:38 lib/interface_v3:104
+#: lib/check_depend:38 lib/interface_v3:102
 #, sh-format
 msgid ""
 "One or more program(s) are missing. Please install them and run the script "
@@ -776,76 +976,76 @@ msgstr ""
 "\\n\\nPlayOnLinux n'est pas responsable de la façon dont vous utilisez ces "
 "scripts.\\n\\n"
 
-#: lib/interface_v3:300
+#: lib/interface_v3:291
 #, sh-format
 msgid "Wine version server temporary unavailable.\\nPlease try again later."
 msgstr ""
 "Serveur de version de Wine temporairement indisponible.\\nVeuillez réessayer "
 "plus tard."
 
-#: lib/interface_v3:303
+#: lib/interface_v3:294
 #, sh-format
 msgid "Following server is no longer available:\\n\\n"
 msgstr "Le serveur suivant n'est plus disponible :\\n\\n"
 
-#: lib/interface_v3:306
+#: lib/interface_v3:297
 #, sh-format
 msgid "Following file is no longer available on server:\\n\\n"
 msgstr "Le fichier suivant n'est plus disponible sur le serveur :\\n\\n"
 
-#: lib/interface_v3:309
+#: lib/interface_v3:300
 #, sh-format
 msgid "Download failure"
 msgstr "Échec du téléchargement"
 
-#: lib/interface_v3:593 lib/interface_v3:602 lib/interface_v3:613
+#: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
 msgid "Please wait while the Wine prefix is being created..."
 msgstr "Veuillez patienter pendant la création du préfixe de Wine..."
 
-#: lib/interface_v3:593 lib/interface_v3:602 lib/interface_v3:613
+#: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
 msgid "Wine prefix configuration"
 msgstr "Configuration du préfixe de Wine"
 
-#: lib/interface_v3:851
+#: lib/interface_v3:831
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr ""
 "Veuillez patienter pendant que PlayOnLinux simule le redémarrage de Windows."
 
-#: lib/interface_v3:873 lib/wine:235 lib/wine:243
+#: lib/interface_v3:853 lib/wine:235 lib/wine:243
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr "Quel est le point de montage de votre lecteur CD-ROM ?"
 
-#: lib/interface_v3:874 lib/wine:225 lib/wine:235 lib/wine:241
+#: lib/interface_v3:854 lib/wine:225 lib/wine:235 lib/wine:241
 #: python/install.py:276 python/options.py:114
 #, sh-format
 msgid "Other"
 msgstr "Autre"
 
-#: lib/interface_v3:897 lib/wine:293
+#: lib/interface_v3:877 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr "Erreur : impossible de trouver le CD-ROM !"
 
-#: lib/interface_v3:918
+#: lib/interface_v3:898
 #, sh-format
 msgid "Unable to find version: "
 msgstr "Impossible de trouver la version : "
 
-#: lib/interface_v3:924 lib/interface_v3:925
+#: lib/interface_v3:904 lib/interface_v3:905
 #, sh-format
 msgid "Downloading Wine: "
 msgstr "Téléchargement de Wine : "
 
-#: lib/interface_v3:935
+#: lib/interface_v3:915
 #, sh-format
 msgid "The download seems to have failed."
 msgstr "Le téléchargement semble avoir échoué."
 
-#: lib/interface_v3:937
+#: lib/interface_v3:917
 #, sh-format
 msgid "Extracting Wine..."
 msgstr "Extraction de Wine..."
@@ -1022,6 +1222,108 @@ msgstr "Vous exécutez PlayOnLinux en tant qu'utilisateur root.\\n\\n"
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr "Cette fonction est désactivée dans l'environnement PlayOnLinux."
 
+#: lib/pol_cmd:75
+#, sh-format
+msgid "Completion: "
+msgstr "Progression : "
+
+#: lib/pol_cmd:82
+#, sh-format
+msgid "Processing: "
+msgstr "En cours : "
+
+#: lib/pol_cmd:112 lib/pol_cmd:123
+#, sh-format
+msgid "Please answer following question, and validate with the 'ENTER' key."
+msgstr ""
+"Veuillez répondre à la question suivante, puis valider avec la touche « "
+"Entrée »."
+
+#: lib/pol_cmd:127
+#, sh-format
+msgid "Press Enter to choose default file: "
+msgstr ""
+
+#: lib/pol_cmd:166 lib/pol_cmd:186 lib/pol_cmd:205 lib/pol_cmd:277
+#: lib/pol_cmd:278 lib/pol_cmd:297 lib/pol_cmd:298 lib/pol_cmd:318
+#: lib/pol_cmd:319
+#, sh-format
+msgid " for entry: "
+msgstr ""
+
+#: lib/pol_cmd:166 lib/pol_cmd:277 lib/pol_cmd:278
+#, sh-format
+msgid "Press: "
+msgstr "Appuyez sur : "
+
+#. "" TRANSLATOR: "Type: " as in "type a number"
+#. (not a single key). e.g: 'Type: 12 for entry: ....'
+#: lib/pol_cmd:186 lib/pol_cmd:205 lib/pol_cmd:297 lib/pol_cmd:298
+#: lib/pol_cmd:318 lib/pol_cmd:319
+#, sh-format
+msgid "Type: "
+msgstr ""
+
+#: lib/pol_cmd:191 lib/pol_cmd:210 lib/pol_cmd:303 lib/pol_cmd:324
+#, sh-format
+msgid "Waiting: "
+msgstr "En attente : "
+
+#: lib/pol_cmd:267
+#, sh-format
+msgid "to confirm your choices."
+msgstr "pour confirmer vos sélections."
+
+#: lib/pol_cmd:383
+#, sh-format
+msgid "Oops, no application installed!"
+msgstr "Oups ! Aucune application installée !"
+
+#: lib/pol_cmd:399 python/guiv3.py:565
+#, sh-format
+msgid "In your menu"
+msgstr "Dans votre menu"
+
+#: lib/pol_cmd:399 python/guiv3.py:564
+#, sh-format
+msgid "On your desktop"
+msgstr "Sur votre bureau"
+
+#: lib/pol_cmd:399 python/guiv3.py:353 python/guiv3.py:367 python/guiv3.py:383
+#: python/guiv3.py:413 python/guiv3.py:441 python/guiv3.py:460
+#: python/guiv3.py:478 python/guiv3.py:496 python/guiv3.py:517
+#: python/guiv3.py:529 python/guiv3.py:547 python/guiv3.py:560
+#, sh-format
+msgid "PlayOnLinux Wizard"
+msgstr "Assistant PlayOnLinux"
+
+#: lib/pol_cmd:399 python/guiv3.py:563
+#, sh-format
+msgid "Would you like a shortcut for: "
+msgstr "Désirez-vous un raccourci pour : "
+
+#: lib/pol_cmd:489
+#, sh-format
+msgid "Type: '1' if you agree or '2' if you do not. Your answer: "
+msgstr ""
+"Appuyez sur 1 si vous acceptez ou sur 2 dans le cas contraire. Votre réponse "
+": "
+
+#: lib/pol_cmd:504
+#, sh-format
+msgid "Type: '1' for continue or '2' to cancel. Your answer: "
+msgstr "Appuyez sur 1 pour continuer ou sur 2 pour annuler. Votre réponse : "
+
+#: lib/pol_cmd:516
+#, sh-format
+msgid "Press a key to continue."
+msgstr "Appuyez sur une touche pour continuer."
+
+#: lib/pol_cmd:528
+#, sh-format
+msgid "Type: '1' for Yes or '2' for No. Your answer: "
+msgstr "Appuyez sur 1 pour Oui ou 2 pour Non. Votre réponse : "
+
 #: lib/wine:58
 #, sh-format
 msgid "Creating Wine prefix"
@@ -1029,7 +1331,7 @@ msgstr "Création du préfixe de Wine"
 
 #: lib/wine:58
 #, sh-format
-msgid "Finished"
+msgid "Done"
 msgstr "Terminé"
 
 #: lib/wine:189
@@ -1043,7 +1345,7 @@ msgid "You must choose which Wine version you want to download."
 msgstr ""
 "Vous devez choisir la version de Wine que vous souhaitez télécharger."
 
-#: playonlinux-cmd:49
+#: playonlinux-cmd:52
 #, sh-format
 msgid ""
 "This program is intended to be used by automatic scripts to manage "
@@ -1052,64 +1354,64 @@ msgstr ""
 "Ce programme est conçu pour être utilisé par des scripts automatiques pour "
 "gérer PlayOnLinux."
 
-#: playonlinux-cmd:51
+#: playonlinux-cmd:54
 #, sh-format
 msgid "\tprint current version and exit."
 msgstr "\tafficher la version actuelle et quitter."
 
-#: playonlinux-cmd:52
+#: playonlinux-cmd:55
 #, sh-format
 msgid "\tupdate the PlayOnLinux script repository."
 msgstr "\tmettre à jour le dépôt de scripts PlayOnLinux."
 
-#: playonlinux-cmd:53
+#: playonlinux-cmd:56
 #, sh-format
 msgid "\trun an existing application."
 msgstr "\texécuter une application installée."
 
-#: playonlinux-cmd:54
+#: playonlinux-cmd:57
 #, sh-format
 msgid "\tstart installing the specified script."
 msgstr "\tdébuter l'installation du script spécifié."
 
-#: playonlinux-cmd:55
+#: playonlinux-cmd:58
 #, sh-format
-msgid "\tperform a search into script repository."
+msgid "\tperform search into the script repository."
 msgstr "\tfaire une recherche dans le dépôt de scripts."
 
-#: playonlinux-cmd:56
+#: playonlinux-cmd:59
 #, sh-format
 msgid "\tlist software installed with PlayOnLinux."
 msgstr "\tafficher les programmes installés avec PlayOnLinux."
 
-#: playonlinux-cmd:57
+#: playonlinux-cmd:60
 #, sh-format
 msgid "\tremove an existing application."
-msgstr ""
+msgstr "\tsupprimer une application existante."
 
-#: playonlinux-cmd:117
+#: playonlinux-cmd:120
 #, sh-format
 msgid "Please make sure you are connected to the Internet."
 msgstr "Veuillez vous assurer que vous êtes connecté à Internet."
 
-#: playonlinux-cmd:127
+#: playonlinux-cmd:130
 #, sh-format
 msgid ""
-"The search need an updated repository.\\nIf the results seem outdated, "
-"please run an update: "
+"The search needs an updated repository.\\nIf the results seem outdated, "
+"please run an update."
 msgstr ""
-"Cette recherche nécessite un dépôt à jour.\\nSi les résultats semblent "
-"dépassés, veuillez effectuer une mise à jour : "
+"La recherche nécessite un dépôt à jour.\\nSi les résultats vous semblent "
+"obsolètes, veuillez effectuer une mise à jour."
 
-#: playonlinux-cmd:128
+#: playonlinux-cmd:131
 #, sh-format
-msgid "Search result: "
-msgstr "Résultat de la recherche : "
+msgid "Search result(s): "
+msgstr "Résultat(s) de la recherche : "
 
-#: playonlinux-cmd:134
+#: playonlinux-cmd:137
 #, sh-format
-msgid "List of software currently installed:"
-msgstr "Liste des programmes présentement installés :"
+msgid "Currently installed applications:"
+msgstr "Applications installées :"
 
 #: playonlinux-pkg:36
 #, sh-format
@@ -1210,13 +1512,6 @@ msgstr "Annuler"
 msgid "MiB downloaded"
 msgstr "Mio téléchargé(s)"
 
-#: python/guiv3.py:353 python/guiv3.py:367 python/guiv3.py:383
-#: python/guiv3.py:413 python/guiv3.py:441 python/guiv3.py:460
-#: python/guiv3.py:478 python/guiv3.py:496 python/guiv3.py:517
-#: python/guiv3.py:529 python/guiv3.py:547 python/guiv3.py:560
-msgid "PlayOnLinux Wizard"
-msgstr "Assistant PlayOnLinux"
-
 #: python/guiv3.py:536
 msgid "I Agree"
 msgstr "J'accepte"
@@ -1224,18 +1519,6 @@ msgstr "J'accepte"
 #: python/guiv3.py:559
 msgid "Create a shortcut: "
 msgstr "Créer un raccourci : "
-
-#: python/guiv3.py:563
-msgid "Do you want a shortcut for: "
-msgstr "Désirez-vous un raccourci pour : "
-
-#: python/guiv3.py:564
-msgid "On your desktop"
-msgstr "Sur votre bureau"
-
-#: python/guiv3.py:565
-msgid "In your menu"
-msgstr "Dans votre menu"
 
 #: python/install.py:83
 msgid "No description"
@@ -1302,16 +1585,16 @@ msgid "An updated version of PlayOnLinux is available."
 msgstr "Une nouvelle version de PlayOnLinux est disponible."
 
 #: python/mainwindow.py:54
-msgid "You seem not connected to the Internet."
-msgstr ""
+msgid "You do not seem to be connected to the Internet."
+msgstr "Vous ne semblez pas être connecté à Internet."
 
 #: python/mainwindow.py:58
 msgid "Your are using a development version, be careful."
-msgstr ""
+msgstr "Vous utilisez une version en développement, soyez prudent."
 
 #: python/mainwindow.py:62
-msgid "It seem you are using plugin Offline PlayOnLinux."
-msgstr ""
+msgid "You seem to be using the Offline PlayOnLinux plugin."
+msgstr "Vous semblez utiliser l'extension Offline PlayOnLinux."
 
 #: python/mainwindow.py:66
 msgid "Started with unknown message. Report a bug ASAP!"
@@ -1442,8 +1725,8 @@ msgid "Translation made on Launchpad:"
 msgstr "Traduction réalisée sur Launchpad :"
 
 #: python/mainwindow.py:455
-msgid "Icons are provided by Tango Desktop Project"
-msgstr ""
+msgid "Icons are provided by the Tango Desktop Project"
+msgstr "Les icônes sont fournies par le projet Tango Desktop"
 
 #: python/message_one.py:75
 msgid "Do not alert me anymore"
@@ -1601,143 +1884,6 @@ msgstr "Version : "
 msgid "Are you sure you want to delete Wine: "
 msgstr "Êtes-vous sûr de vouloir supprimer Wine : "
 
-#: Capture plugin:2
-msgid "Which game do you want to apply the modification to?"
-msgstr "A quel jeu voulez-vous appliquer la modification ?"
-
-#: Capture plugin:3
-msgid "This plugin wil allow you to capture you applications under PlayOnLinux"
-msgstr "Ce plugin vous permettra de prendre des vidéos de vos applications sous PlayOnLinux"
-
-#: Capture plugin:4
-msgid "Capture menu (OpenGL)"
-msgstr "Menu Capture (OpenGL)"
-
-#: Capture plugin:5
-msgid "Capture menu (not OpenGL)"
-msgstr "Menu Capture (Non OpenGL)"
-
-#: Capture plugin:6
-msgid "Begin the capture of an application"
-msgstr "Demarrer la capture d’une application"
-
-#: Capture plugin:7
-msgid "Play a captured file"
-msgstr "Visionner un fichier Capture"
-
-#: Capture plugin:8
-msgid "Convert a captured file to video"
-msgstr "Convertir un fichier Capture en Video"
-
-#: Capture plugin:9
-msgid ""
-"Press Next then click on the window\\nyou want to capture.\\nCapture will "
-"start automatically after 5 seconds.\\nOnly video will be captured."
-msgstr ""
-"Appuyez sur Suivant puis cliquer sur la fenêtre que\\nvous souhaitez "
-"capturer.\\nLa capture démarrera automatiquement après 5 secondes.\\nSeul la "
-"video sera capturée."
-
-#: Capture plugin:10
-msgid "Capture will begin..."
-msgstr "La capture va maintenant démarrée..."
-
-#: Capture plugin:11
-msgid "Press <SHIFT>+F8 to start or stop capture"
-msgstr "Appuyez sur <SHIFT>+F8 pour démarrer ou arrêter la capture"
-
-#: Capture plugin:12
-msgid "Press <SHIFT>+F8 to stop capture"
-msgstr "Appuyez sur <SHIFT>+F8 pour arrêter la capture"
-
-#: Capture plugin:13
-#, sh-format
-msgid "Capture in progress..."
-msgstr "Capture en cours..."
-
-#: Capture plugin:14
-msgid "Choose an action to perform"
-msgstr "Choisissez une action"
-
-#: Capture plugin:15
-msgid "Please choose a PID capture file to play"
-msgstr "Selectionnez le fichier capture PID a lire"
-
-#: Capture plugin:16
-msgid "Please choose an OGV capture file to play"
-msgstr "Selectionnez le fichier capture OGV a lire"
-
-#: Capture plugin:17
-msgid "Please choose a capture file to convert"
-msgstr "Selectionnez le fichier capture a convertir"
-
-#: Capture plugin:18
-msgid "You must choose a capture to read"
-msgstr "Vous devez sélectionner une capture a lire"
-
-#: Capture plugin:19
-msgid "You must choose a capture to convert"
-msgstr "Vous devez sélectionner une capture a convertir"
-
-#: Capture plugin:20
-msgid "Please wait while the PlayOnLinux logo is created..."
-msgstr "Patientez pendant la creation du logo PlayOnLinux..."
-
-#: Capture plugin:21
-msgid "Add the PlayOnLinux logo to your video?"
-msgstr "Ajouter le logo PlayOnLinux à votre video ?"
-
-#: Capture plugin:22
-msgid ""
-"Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
-msgstr ""
-"Attention, pour l’encodage video\\nla résolution DOIT ête un multiple de 16"
-
-#: Capture plugin:23
-msgid ""
-"Ubuntu users must add the MEDIBUNTU repository\\nfor this conversion format "
-"to work properly."
-msgstr ""
-"Les utilisateur d’Ubuntu doivent ajouter le dépôt MEDIBUNTU\\nafin que ce "
-"format de conversion fonctionne corectement"
-
-#: Capture plugin:24
-msgid "Choose the video format for conversion"
-msgstr "Choisissez un format video pour la conversion"
-
-#: Capture plugin:25
-#, sh-format
-msgid ""
-"Define your encoding options for pass 1 \\n (leave defaults if you do not "
-"know what to do)"
-msgstr ""
-"Définissez vos options d’encodage de la passe 1 \\n (laisser les options par "
-"défaut si vous ne savais pas quoi faire)"
-
-#: Capture plugin:26
-msgid ""
-"Define your encoding options for pass 2 \\n (leave defaults if you do not "
-"know what to do)"
-msgstr ""
-"Définissez vos options d’encodage de la passe 2 \\n (laisser les options par "
-"défaut si vous ne savais pas quoi faire)"
-
-#: Capture plugin:27
-msgid ""
-"Define your encoding options \\n (leave defaults if you do not know what to "
-"do)"
-msgstr ""
-"Définissez vos options d’encodage \\n (laisser les options par défaut si "
-"vous ne savais pas quoi faire)"
-
-#: Capture plugin:28
-msgid "Please wait while your video is being encoded..."
-msgstr "Patientez pendant l’encodage de votre video..."
-
-#: Capture plugin:29
-msgid "Conversion done"
-msgstr "Conversion terminée"
-
 #~ msgid "Missing program :"
 #~ msgstr "Le programme est manquant :"
 
@@ -1842,9 +1988,6 @@ msgstr "Conversion terminée"
 #~ msgid "Created by GNU_Raziel"
 #~ msgstr "Cet utilitaire a été créé par GNU_Raziel"
 
-#~ msgid "Choose a game"
-#~ msgstr "Choisissez un jeu"
-
 #~ msgid "Activate VertexShader Mode? (Default : N)"
 #~ msgstr "Activer le mode VertexShader ? (Défaut : N)"
 
@@ -1906,6 +2049,10 @@ msgstr "Conversion terminée"
 #, sh-format
 #~ msgid "Downloading"
 #~ msgstr "Téléchargement"
+
+#, sh-format
+#~ msgid "Finished"
+#~ msgstr "Terminé"
 
 #~ msgid "Finish"
 #~ msgstr "Terminer"
@@ -2324,9 +2471,6 @@ msgstr "Conversion terminée"
 #~ msgstr ""
 #~ "Si vous ne SAVEZ PAS quelle valeur choisir, laissez la valeur par DÉFAUT !"
 
-#~ msgid "You did not select a game"
-#~ msgstr "Vous n'avez pas choisi de jeu."
-
 #~ msgid ""
 #~ "Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)"
 #~ msgstr ""
@@ -2711,3 +2855,29 @@ msgstr "Conversion terminée"
 
 #~ msgid "Welcome in PlayOnLinux Installation Wizard"
 #~ msgstr "Bienvenue dans l'assistant d'installation de PlayOnLinux."
+
+#, sh-format
+#~ msgid "\tperform a search into script repository."
+#~ msgstr "\tfaire une recherche dans le dépôt de scripts."
+
+#, sh-format
+#~ msgid "Search result: "
+#~ msgstr "Résultat de la recherche : "
+
+#, sh-format
+#~ msgid "List of software currently installed:"
+#~ msgstr "Liste des programmes présentement installés :"
+
+#, sh-format
+#~ msgid ""
+#~ "The search need an updated repository.\\nIf the results seem outdated, "
+#~ "please run an update: "
+#~ msgstr ""
+#~ "Cette recherche nécessite un dépôt à jour.\\nSi les résultats semblent "
+#~ "dépassés, veuillez effectuer une mise à jour : "
+
+#~ msgid "Do you want a shortcut for: "
+#~ msgstr "Désirez-vous un raccourci pour : "
+
+#~ msgid "Which game do you want to apply the modification to?"
+#~ msgstr "A quel jeu voulez-vous appliquer la modification ?"
