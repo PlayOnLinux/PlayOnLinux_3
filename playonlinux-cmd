@@ -117,7 +117,7 @@ case $1 in
 	#voila voila ...
 	name=${2//" "/"%20"}
 	rm -f $REPERTOIRE/install 2>/dev/null
-	wget -q $SITE/V3_data/repository/get_file.php?id=$name -O $REPERTOIRE/install || die "$(eval_gettext 'Please make sure you are connected to the Internet.')"
+	wget -q "$SITE/V3_data/repository/get_file.php?version=$VERSION&id=$name" -O $REPERTOIRE/install || die "$(eval_gettext 'Please make sure you are connected to the Internet.')"
 	if [ -e "$REPERTOIRE/install" ]
 	then
 		bash $REPERTOIRE/install
