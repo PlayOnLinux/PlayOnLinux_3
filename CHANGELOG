@@ -1,5 +1,5 @@
 -> 3.8.4-dev
-- 
+- Fix a bug in auto_shortcut, arguments was inverted
 
 -> 3.8.3
 - ADD: Plugin Detour

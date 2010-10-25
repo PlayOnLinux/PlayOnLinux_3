@@ -650,12 +650,12 @@ POL_SetupWindow_auto_shortcut()
 {
 	# 1 = Wineprefix
 	# 2 = Binaire
-	# 3 = Icone
-	# 4 = Nom du raccourics
+	# 3 = Nom du raccourics
+	# 4 = Icone
 	# 5 = Eventuel argument
 
 	Binaire="$2"
-	ShortName="$4"
+	ShortName="$3"
 	SpecialArg="$5"
 
 	
@@ -669,7 +669,7 @@ POL_SetupWindow_auto_shortcut()
 	mkdir -p "$REPERTOIRE/icones/32"
 	mkdir -p "$REPERTOIRE/icones/full_size"
 	
-	ICON_WEB_NAME="$3"
+	ICON_WEB_NAME="$4"
 	ICON_OK=0
 
 	## On chope le dossier du binaire
@@ -710,13 +710,6 @@ POL_SetupWindow_auto_shortcut()
 		# On ne crée pas d'icone "full_size", parce que les résolutions des icones windows ne sont pas suffisantes tout le temps.
 		# Pour verifier la taille des icones, il faudrait utiliser "identify", mais ce programme n'est pas toujours fournis.
 	fi
-
-	#Le nom de l'icone doit avoir le même nom que le lanceur
-	#test icones full_size
-	[ -f "$REPERTOIRE/icones/full_size/$ShortName" ] || [ -f "$REPERTOIRE/icones/full_size/$NOMICONE_" ] &&  mv "$REPERTOIRE/icones/full_size/$NOMICONE_" "$REPERTOIRE/icones/full_size/$ShortName"
-	#idem test icones en 32x32
-	[ -f "$REPERTOIRE/icones/32/$ShortName" ] || [ -f "$REPERTOIRE/icones/32/$NOMICONE_" ] && mv "$REPERTOIRE/icones/32/$NOMICONE_" "$REPERTOIRE/icones/32/$ShortName"
-	NOMICONE_="$ShortName"
 
 
 	## On génère le binaire 
