@@ -1,4 +1,4 @@
--> 3.8.4-dev
+-> 3.8.4
 - Fix a bug in auto_shortcut, arguments was inverted.
 - Send version of POL when fetching a script.
 
