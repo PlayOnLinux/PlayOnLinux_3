@@ -1,5 +1,6 @@
 -> 3.8.5-dev
--  Fix bug #58. PlayOnLinux unable to start when an update is available.
+- Change how the current version POL is send to the server.
+- Fix bug #58. PlayOnLinux unable to start when an update is available.
 
 -> 3.8.4
 - Fix a bug in auto_shortcut, arguments was inverted.
