@@ -112,7 +112,7 @@ menu_principal()
 	then
 		$PYTHON "$PLAYONLINUX/python/mainwindow.py"
 	else
-		$PYTHON "$PLAYONLINUX/python/mainwindow.py" "$1"
+		$PYTHON "$PLAYONLINUX/python/mainwindow.py" "$1" "$2"
 	fi
 }
 fonts_install()
