@@ -1,3 +1,6 @@
+-> 3.8.6
+- 
+
 -> 3.8.5
 - Change how the current version POL is send to the server.
 - Fix bug #58. PlayOnLinux unable to start when an update is available.
