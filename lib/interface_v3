@@ -927,7 +927,7 @@ POL_GetSetupImages () # ( optional : --erase )
 	# 
 	# Path of images are returned in $POL_SetupWindow_LeftImage and $POL_SetupWindow_TopImage
 
-	if [ "$1" == "--erase" ]
+	if [ "$1" == "--force" ]
 	then
 		left="$3"
 		top="$2"
