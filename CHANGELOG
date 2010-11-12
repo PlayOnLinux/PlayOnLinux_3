@@ -1,4 +1,5 @@
 -> 3.8.6-dev
+- REBUILD: Template language.
 - FIX: Update translation of script responsibility
 - UPDATE: Detour to 0.5.
 - UPDATE: AdvancedWineConfiguration to 3.6.1

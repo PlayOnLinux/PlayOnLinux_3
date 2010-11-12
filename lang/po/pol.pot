@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-09-24 23:13:53+02:00\n"
+"POT-Creation-Date: 2010-11-12 22:15:54+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -841,7 +841,7 @@ msgstr ""
 #: lib/interface:69 lib/interface:122 lib/interface:173 lib/interface:223
 #: lib/interface:379 lib/interface:452 lib/interface:511 lib/interface:684
 #: python/champ.py:49 python/file.py:67 python/message_one.py:76
-#: python/telecharger.py:104
+#: python/new_guiv3.py:91 python/telecharger.py:104
 #, sh-format
 msgid "Next"
 msgstr ""
@@ -867,6 +867,7 @@ msgid "Please make a choice"
 msgstr ""
 
 #: lib/interface:600 python/file.py:69 python/guiv3.py:371
+#: python/new_guiv3.py:94
 #, sh-format
 msgid "Browse"
 msgstr ""
@@ -928,7 +929,8 @@ msgstr ""
 #: lib/interface_v3:45
 #, sh-format
 msgid ""
-"\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
+"\\n\\nPlayOnLinux is not responsible for the anything that might happen as a "
+"result of using these scripts.\\n\\n"
 msgstr ""
 
 #: lib/interface_v3:291
@@ -961,43 +963,43 @@ msgstr ""
 msgid "Wine prefix configuration"
 msgstr ""
 
-#: lib/interface_v3:831
+#: lib/interface_v3:824
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr ""
 
-#: lib/interface_v3:853 lib/wine:235 lib/wine:243
+#: lib/interface_v3:846 lib/wine:235 lib/wine:243
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr ""
 
-#: lib/interface_v3:854 lib/wine:225 lib/wine:235 lib/wine:241
+#: lib/interface_v3:847 lib/wine:225 lib/wine:235 lib/wine:241
 #: python/install.py:276 python/options.py:114
 #, sh-format
 msgid "Other"
 msgstr ""
 
-#: lib/interface_v3:877 lib/wine:293
+#: lib/interface_v3:870 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr ""
 
-#: lib/interface_v3:898
+#: lib/interface_v3:891
 #, sh-format
 msgid "Unable to find version: "
 msgstr ""
 
-#: lib/interface_v3:904 lib/interface_v3:905
+#: lib/interface_v3:897 lib/interface_v3:898
 #, sh-format
 msgid "Downloading Wine: "
 msgstr ""
 
-#: lib/interface_v3:915
+#: lib/interface_v3:908
 #, sh-format
 msgid "The download seems to have failed."
 msgstr ""
 
-#: lib/interface_v3:917
+#: lib/interface_v3:910
 #, sh-format
 msgid "Extracting Wine..."
 msgstr ""
@@ -1216,12 +1218,12 @@ msgstr ""
 msgid "Oops, no application installed!"
 msgstr ""
 
-#: lib/pol_cmd:399 python/guiv3.py:565
+#: lib/pol_cmd:399 python/guiv3.py:565 python/new_guiv3.py:114
 #, sh-format
 msgid "In your menu"
 msgstr ""
 
-#: lib/pol_cmd:399 python/guiv3.py:564
+#: lib/pol_cmd:399 python/guiv3.py:564 python/new_guiv3.py:113
 #, sh-format
 msgid "On your desktop"
 msgstr ""
@@ -1428,21 +1430,22 @@ msgstr ""
 
 #: python/attendre.py:47 python/champ.py:28 python/file.py:46
 #: python/guiv3.py:269 python/menu.py:45 python/message.py:50
-#: python/question.py:45 python/telecharger.py:53 python/telecharger.py:123
+#: python/new_guiv3.py:277 python/question.py:45 python/telecharger.py:53
+#: python/telecharger.py:123
 msgid "of"
 msgstr ""
 
 #: python/attendre.py:82 python/champ.py:53 python/file.py:71
 #: python/menu.py:78 python/message.py:74 python/message_one.py:79
-#: python/telecharger.py:79
+#: python/new_guiv3.py:90 python/telecharger.py:79
 msgid "Cancel"
 msgstr ""
 
-#: python/guiv3.py:269
+#: python/guiv3.py:269 python/new_guiv3.py:277
 msgid "MiB downloaded"
 msgstr ""
 
-#: python/guiv3.py:536
+#: python/guiv3.py:536 python/new_guiv3.py:98
 msgid "I Agree"
 msgstr ""
 
@@ -1662,6 +1665,26 @@ msgstr ""
 msgid "Do not alert me anymore"
 msgstr ""
 
+#: python/new_guiv3.py:79
+msgid "PlayOnMac Wizard"
+msgstr ""
+
+#: python/new_guiv3.py:92 python/question.py:67
+msgid "No"
+msgstr ""
+
+#: python/new_guiv3.py:93 python/question.py:66
+msgid "Yes"
+msgstr ""
+
+#: python/new_guiv3.py:568
+msgid "Create a shortcut :"
+msgstr ""
+
+#: python/new_guiv3.py:576
+msgid "Do you want a shortcut for "
+msgstr ""
+
 #: python/options.py:92
 msgid "Default programs"
 msgstr ""
@@ -1768,14 +1791,6 @@ msgstr ""
 
 #: python/options.py:473
 msgid "PlayOnLinux Settings"
-msgstr ""
-
-#: python/question.py:66
-msgid "Yes"
-msgstr ""
-
-#: python/question.py:67
-msgid "No"
 msgstr ""
 
 #: python/telecharger.py:71
