@@ -1,4 +1,5 @@
--> 3.8.6
+-> 3.8.6-dev
+- FIX: Update translation of script responsibility
 - UPDATE: Detout to 0.5.
 
 -> 3.8.5
