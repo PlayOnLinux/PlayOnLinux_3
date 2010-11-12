@@ -1,6 +1,7 @@
 -> 3.8.6-dev
 - FIX: Update translation of script responsibility
-- UPDATE: Detout to 0.5.
+- UPDATE: Detour to 0.5.
+- UPDATE: AdvancedWineConfiguration to 3.6.1
 
 -> 3.8.5
 - Change how the current version POL is send to the server.

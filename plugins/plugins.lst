@@ -19,7 +19,7 @@
 ##
 
 #Advanced Wine Configuration
-awc;AdvancedWineConfiguration.pol;Advanced Wine Configuration;enable;3.6;6
+awc;AdvancedWineConfiguration.pol;Advanced Wine Configuration;enable;3.6.1;7
 
 #Offline PlayOnLinux
 offlineplayonlinux;OfflinePlayOnLinux_0.3.pol;Offline PlayOnLinux;disable;0.3;1
