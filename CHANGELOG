@@ -1,4 +1,4 @@
--> 3.8.6-dev
+-> 3.8.6
 - SYNC: Translation from launchpad
 - FIX: A bug in bash/polconfigurator
 - REBUILD: Template language.
