@@ -7,19 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: Tinou\n"
-"POT-Creation-Date: 2010-09-19 21:49+0200\n"
-"PO-Revision-Date: 2010-09-19 16:31+0000\n"
+"POT-Creation-Date: 2010-09-24 23:13+0200\n"
+"PO-Revision-Date: 2010-10-16 09:26+0000\n"
 "Last-Translator: Monkey <monkey.libre@gmail.com>\n"
 "Language-Team: es_ES.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-24 10:00+0000\n"
+"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: Advanced Configuration Plugin:11 Wine
 msgid "Activate GLSL Support?"
-msgstr ""
+msgstr "¿Activar soporte GLSL?"
 
 #: Advanced Configuration Plugin:15 Wine
 msgid "Activate Multisampling support?"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: Advanced Configuration Plugin:10 Wine
 msgid "Choose DirectDraw Renderer Mode?"
-msgstr ""
+msgstr "¿Seleccionar modo de renderizador DirectDraw?"
 
 #: Advanced Configuration Plugin:13 Wine
 msgid "Choose Offscreen Rendering Mode?"
@@ -51,21 +51,24 @@ msgstr "Elija un juego"
 
 #: Advanced Configuration Plugin:4 Wine
 msgid "Choose an option to modify"
-msgstr ""
+msgstr "Elija una opción para modificar"
 
 #: Advanced Configuration Plugin:12 Wine
 msgid "How much memory does your graphics board have?"
-msgstr ""
+msgstr "¿Cuánta memoria tiene su tarjeta de vídeo?"
 
 #: Advanced Configuration Plugin:17 Wine
 msgid "Optimisation done"
-msgstr ""
+msgstr "Optimización completada"
 
 #: Advanced Configuration Plugin:7 Wine
 msgid ""
 "Welcome in Advanced Wine Configuration, an optimization’s system for Wine "
 "created by GNU_Raziel. If you does not know what to choose, LEAVE DEFAULTS"
 msgstr ""
+"Bienvenido a la configuración avanzada de Wine, un sistema de optimización "
+"para Wine creado por GNU_Raziel. Si no sabe qué elegir, DEJE LAS OPCIONES "
+"POR DEFECTO."
 
 #: Advanced Configuration Plugin:9 Wine
 msgid "You did not select a game"
@@ -73,11 +76,11 @@ msgstr "No ha elegido un juego"
 
 #: Advanced Configuration Plugin:6 Wine
 msgid "You must choose a game to modify"
-msgstr ""
+msgstr "Debe seleccionar un juego a modificar"
 
 #: Capture plugin:21
 msgid "Add the PlayOnLinux logo to your video?"
-msgstr ""
+msgstr "¿Agregar el logotipo de PlayOnLinux a su vídeo?"
 
 #: Capture plugin:6
 msgid "Begin the capture of an application"
@@ -97,7 +100,7 @@ msgstr ""
 
 #: Capture plugin:10
 msgid "Capture will begin..."
-msgstr ""
+msgstr "Comenzará la captura..."
 
 #: Capture plugin:14
 msgid "Choose an action to perform"
@@ -105,33 +108,39 @@ msgstr "Elija una acción a realizar"
 
 #: Capture plugin:24
 msgid "Choose the video format for conversion"
-msgstr ""
+msgstr "Elija el formato de vídeo para convertir"
 
 #: Capture plugin:29
 msgid "Conversion done"
-msgstr ""
+msgstr "Conversión completa"
 
 #: Capture plugin:8
 msgid "Convert a captured file to video"
-msgstr ""
+msgstr "Convertir un archivo de captura a vídeo"
 
 #: Capture plugin:27
 msgid ""
 "Define your encoding options \\n (leave defaults if you do not know what to "
 "do)"
 msgstr ""
+"Defina las opciones de codificación \\n (deje las opciones predeterminadas "
+"si no sabe qué hacer)"
 
 #: Capture plugin:25
 msgid ""
 "Define your encoding options for pass 1 \\n (leave defaults if you do not "
 "know what to do)"
 msgstr ""
+"Defina las opciones de codificación para el paso 1 \\n (deje los valores "
+"predeterminados si no sabe qué hacer)"
 
 #: Capture plugin:26
 msgid ""
 "Define your encoding options for pass 2 \\n (leave defaults if you do not "
 "know what to do)"
 msgstr ""
+"Defina las opciones de codificación para el paso 2 \\n (deje los valores "
+"predeterminados si no sabe qué hacer)"
 
 #: Capture plugin:7
 msgid "Play a captured file"
@@ -143,27 +152,27 @@ msgstr ""
 
 #: Capture plugin:17
 msgid "Please choose a capture file to convert"
-msgstr ""
+msgstr "Seleccione un archivo de captura para convertir"
 
 #: Capture plugin:16
 msgid "Please choose an OGV capture file to play"
-msgstr ""
+msgstr "Seleccione un archivo de captura OGV para reproducir"
 
 #: Capture plugin:20
 msgid "Please wait while the PlayOnLinux logo is created..."
-msgstr ""
+msgstr "Espere mientras se crea el logotipo de PlayOnLinux..."
 
 #: Capture plugin:28
 msgid "Please wait while your video is being encoded..."
-msgstr ""
+msgstr "Espere mientras su vídeo se codifica"
 
 #: Capture plugin:11
 msgid "Press <SHIFT>+F8 to start or stop capture"
-msgstr ""
+msgstr "Presione <SHIFT>+F8 para iniciar o detener la captura"
 
 #: Capture plugin:12
 msgid "Press <SHIFT>+F8 to stop capture"
-msgstr ""
+msgstr "Presione <SHIFT>+F8 para detener la captura"
 
 #: Capture plugin:9
 #, sh-format
@@ -188,7 +197,7 @@ msgid ""
 "Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
 msgstr ""
 
-#: Capture plugin:2
+#: Capture Detour plugin:2 plugin:4
 msgid "Which application do you want to apply the modification to?"
 msgstr ""
 
@@ -198,6 +207,19 @@ msgstr ""
 
 #: Capture plugin:18
 msgid "You must choose a capture to read"
+msgstr ""
+
+#: Detour plugin:5
+msgid "Choose an application"
+msgstr ""
+
+#: Detour plugin:6
+msgid "Operation done"
+msgstr ""
+
+#: Detour plugin:3
+msgid ""
+"Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
 msgstr ""
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
@@ -1087,7 +1109,7 @@ msgstr ""
 #, sh-format
 msgid ""
 "This is no longer the case, but they are still available from third parties."
-msgstr ""
+msgstr "Este no es el caso, pero siguen estando disponible desde terceros."
 
 #: lib/main:137
 #, sh-format
@@ -1305,7 +1327,7 @@ msgstr ""
 #: lib/wine:189
 #, sh-format
 msgid "Setting Program Files var"
-msgstr ""
+msgstr "Ajustando variables de los archivos del programa"
 
 #: lib/wine:424 lib/wine:452
 #, sh-format
@@ -1318,6 +1340,8 @@ msgid ""
 "This program is intended to be used by automatic scripts to manage "
 "PlayOnLinux."
 msgstr ""
+"Este programa es intencionadamente usado por guiones automáticos para "
+"gestionar PlayOnLinux."
 
 #: playonlinux-cmd:54
 #, sh-format
@@ -1560,7 +1584,7 @@ msgid "You seem to be using the Offline PlayOnLinux plugin."
 msgstr ""
 
 #: python/mainwindow.py:66
-msgid "Started with unknown message. Report a bug ASAP!"
+msgid "Internal error when starting GUI. Please file a bug report ASAP!"
 msgstr ""
 
 #: python/mainwindow.py:89 python/mainwindow.py:190

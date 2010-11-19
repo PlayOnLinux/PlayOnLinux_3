@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: Tinou\n"
-"POT-Creation-Date: 2010-09-19 21:49+0200\n"
-"PO-Revision-Date: 2010-09-20 08:24+0000\n"
+"POT-Creation-Date: 2010-09-24 23:13+0200\n"
+"PO-Revision-Date: 2010-11-15 22:53+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: he_HE.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-24 10:00+0000\n"
+"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: Advanced Configuration Plugin:11 Wine
@@ -200,7 +200,7 @@ msgid ""
 msgstr ""
 "אזהרה: כדי לקבל הצפנה נכונה של הווידאו,\\nעל הרזולוציה להיות בכפולות של 16"
 
-#: Capture plugin:2
+#: Capture Detour plugin:2 plugin:4
 msgid "Which application do you want to apply the modification to?"
 msgstr "על איזה יישום ברצונך להחיל את השינויים?"
 
@@ -211,6 +211,19 @@ msgstr "עליך לבחור בלכידה להמרה"
 #: Capture plugin:18
 msgid "You must choose a capture to read"
 msgstr "עליך לבחור בלכידה לקריאה"
+
+#: Detour plugin:5
+msgid "Choose an application"
+msgstr "בחירת יישום"
+
+#: Detour plugin:6
+msgid "Operation done"
+msgstr "התהליך הושלם"
+
+#: Detour plugin:3
+msgid ""
+"Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
+msgstr ""
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
 #: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
@@ -1558,8 +1571,9 @@ msgid "You seem to be using the Offline PlayOnLinux plugin."
 msgstr "נראה כי נעשה שימוש בתוסף הלא מקוון של PlayOnLinux."
 
 #: python/mainwindow.py:66
-msgid "Started with unknown message. Report a bug ASAP!"
-msgstr "הופעלה עם הודעה בלתי מוכרת. נא לדווח על באג במהירות האפשרית!"
+msgid "Internal error when starting GUI. Please file a bug report ASAP!"
+msgstr ""
+"אירעה שגיאה בעת אתחול המנשק הגראפי. נא לשלח דיווח על כך בהקדם האפשרי!"
 
 #: python/mainwindow.py:89 python/mainwindow.py:190
 msgid "Run"
@@ -2631,3 +2645,6 @@ msgstr "האם ברצונך למחוק את Wine: "
 
 #~ msgid "No more alert me"
 #~ msgstr "No more alert me"
+
+#~ msgid "Started with unknown message. Report a bug ASAP!"
+#~ msgstr "הופעלה עם הודעה בלתי מוכרת. נא לדווח על באג במהירות האפשרית!"

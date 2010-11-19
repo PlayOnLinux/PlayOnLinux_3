@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-19 21:49+0200\n"
-"PO-Revision-Date: 2010-09-10 19:40+0000\n"
-"Last-Translator: lordzed <Unknown>\n"
+"POT-Creation-Date: 2010-09-24 23:13+0200\n"
+"PO-Revision-Date: 2010-09-24 17:15+0000\n"
+"Last-Translator: Aymeric <os2mule@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-24 10:00+0000\n"
+"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: Advanced Configuration Plugin:11 Wine
@@ -188,7 +188,7 @@ msgid ""
 "Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
 msgstr ""
 
-#: Capture plugin:2
+#: Capture Detour plugin:2 plugin:4
 msgid "Which application do you want to apply the modification to?"
 msgstr ""
 
@@ -198,6 +198,19 @@ msgstr ""
 
 #: Capture plugin:18
 msgid "You must choose a capture to read"
+msgstr ""
+
+#: Detour plugin:5
+msgid "Choose an application"
+msgstr ""
+
+#: Detour plugin:6
+msgid "Operation done"
+msgstr ""
+
+#: Detour plugin:3
+msgid ""
+"Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
 msgstr ""
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
@@ -1529,7 +1542,7 @@ msgid "You seem to be using the Offline PlayOnLinux plugin."
 msgstr ""
 
 #: python/mainwindow.py:66
-msgid "Started with unknown message. Report a bug ASAP!"
+msgid "Internal error when starting GUI. Please file a bug report ASAP!"
 msgstr ""
 
 #: python/mainwindow.py:89 python/mainwindow.py:190

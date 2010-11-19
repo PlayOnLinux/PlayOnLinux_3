@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: Tinou\n"
-"POT-Creation-Date: 2010-09-19 21:49+0200\n"
-"PO-Revision-Date: 2010-09-23 11:47+0000\n"
-"Last-Translator: cmdrhenner <cmdrhenner@gmail.com>\n"
+"POT-Creation-Date: 2010-09-24 23:13+0200\n"
+"PO-Revision-Date: 2010-10-19 03:59+0000\n"
+"Last-Translator: Jens Maucher <Unknown>\n"
 "Language-Team: de_DE.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-24 10:00+0000\n"
+"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: Advanced Configuration Plugin:11 Wine
@@ -28,7 +28,7 @@ msgstr "Multisampling Unterstützung aktivieren"
 
 #: Advanced Configuration Plugin:16 Wine
 msgid "Activate the mouse warp override?"
-msgstr ""
+msgstr "Mouse-Warp-Override aktivieren"
 
 #: Advanced Configuration Plugin:5 Wine
 msgid "All"
@@ -56,11 +56,11 @@ msgstr "eine Option zum ändern wählen"
 
 #: Advanced Configuration Plugin:12 Wine
 msgid "How much memory does your graphics board have?"
-msgstr "Wieviel Speicher besitzt ihre Grafikkarte?"
+msgstr "Wieviel Speicher besitzt Ihre Grafikkarte?"
 
 #: Advanced Configuration Plugin:17 Wine
 msgid "Optimisation done"
-msgstr "Optimisierung beendet"
+msgstr "Optimierung beendet"
 
 #: Advanced Configuration Plugin:7 Wine
 msgid ""
@@ -68,8 +68,8 @@ msgid ""
 "created by GNU_Raziel. If you does not know what to choose, LEAVE DEFAULTS"
 msgstr ""
 "Willkommen in der fortgeschrittenen Konfiguration von Wine, ein von "
-"GNU_Raziel erstelltes Optimierungssystem für Wine. Wenn du nicht weisst was "
-"du wählen sollst, BELASSE DIE STANDARDEINSTELLUNGEN."
+"GNU_Raziel erstelltes Optimierungssystem für Wine. Wenn Sie nicht wissen, "
+"was Sie wählen sollen, BEHALTEN SIE DIE STANDARDEINSTELLUNGEN BEI."
 
 #: Advanced Configuration Plugin:9 Wine
 msgid "You did not select a game"
@@ -77,7 +77,7 @@ msgstr "Sie haben kein Spiel ausgewählt"
 
 #: Advanced Configuration Plugin:6 Wine
 msgid "You must choose a game to modify"
-msgstr "Du musst ein Spiel zum Ändern wählen"
+msgstr "Sie müssen ein Spiel zum Ändern auswählen"
 
 #: Capture plugin:21
 msgid "Add the PlayOnLinux logo to your video?"
@@ -124,18 +124,24 @@ msgid ""
 "Define your encoding options \\n (leave defaults if you do not know what to "
 "do)"
 msgstr ""
+"Wählen Sie Ihre Kodierungs-Optionen \\n (Verändern Sie nichts, wenn Sie "
+"nicht wissen, was Sie wählen sollen)"
 
 #: Capture plugin:25
 msgid ""
 "Define your encoding options for pass 1 \\n (leave defaults if you do not "
 "know what to do)"
 msgstr ""
+"Wählen Sie Ihre Kodierungs-Optionen für Pass 1 \\n (Verändern Sie nichts, "
+"wenn Sie nicht wissen, was Sie wählen sollen)"
 
 #: Capture plugin:26
 msgid ""
 "Define your encoding options for pass 2 \\n (leave defaults if you do not "
 "know what to do)"
 msgstr ""
+"Wählen Sie Ihre Kodierungs-Optionen für Pass 2 \\n (Verändern Sie nichts, "
+"wenn Sie nicht wissen, was Sie wählen sollen)"
 
 #: Capture plugin:7
 msgid "Play a captured file"
@@ -196,10 +202,12 @@ msgstr ""
 msgid ""
 "Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
 msgstr ""
+"Warnung: Für eine korrekte Video-Kodierung MUSS die Auflösung ein Vielfaches "
+"von 16 sein"
 
-#: Capture plugin:2
+#: Capture Detour plugin:2 plugin:4
 msgid "Which application do you want to apply the modification to?"
-msgstr ""
+msgstr "Auf welche Anwendung möchten Sie die Modifikation anwenden?"
 
 #: Capture plugin:19
 msgid "You must choose a capture to convert"
@@ -208,6 +216,21 @@ msgstr ""
 #: Capture plugin:18
 msgid "You must choose a capture to read"
 msgstr ""
+
+#: Detour plugin:5
+msgid "Choose an application"
+msgstr "Wählen Sie eine Anwendung"
+
+#: Detour plugin:6
+msgid "Operation done"
+msgstr "Vorgang erledigt"
+
+#: Detour plugin:3
+msgid ""
+"Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
+msgstr ""
+"Wilkommen bei Detour, einer Erweiterung, die es Ihnen ermöglicht, "
+"Verknüpfungen nach einer Installation anzulegen."
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
 #: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
@@ -327,7 +350,7 @@ msgstr "Welche Wine-Version möchten Sie verwenden?"
 #: bash/LiveInstall:176
 #, sh-format
 msgid "Please select the install file to run."
-msgstr ""
+msgstr "Bitte wählen Sie eine Installationsdatei"
 
 #: bash/LiveInstall:180
 #, sh-format
@@ -416,6 +439,8 @@ msgid ""
 "Welcome to PlayOnLinux's autorun wizard.\\nIt will help you install an "
 "application from a CD-ROM.\\n\\n"
 msgstr ""
+"Wilkommen beim PlayOnLinux Autostart-Assistent.\\nEr wird Ihnen helfen eine "
+"Anwendung von einer CD-ROM zu installieren.\\n\\n"
 
 #: bash/autorun:179
 #, sh-format
@@ -425,12 +450,12 @@ msgstr "Suche nach verwendbaren CD-ROMs"
 #: bash/autorun:209
 #, sh-format
 msgid "No autorun support found!"
-msgstr ""
+msgstr "Keine Autostart-Unterstützung gefunden"
 
 #: bash/autorun:217 bash/daemon/autorun:212
 #, sh-format
 msgid "autoruns have been found"
-msgstr ""
+msgstr "Autostarts wurden gefunden"
 
 #: bash/check_maj:29
 #, sh-format
@@ -440,7 +465,7 @@ msgstr "Sie sind im Offline-Modus."
 #: bash/check_maj_:40
 #, sh-format
 msgid "The PlayOnLinux repository needs to be updated."
-msgstr ""
+msgstr "Das PlayOnLinux-Repository muss aktualisiert werden"
 
 #: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
 #, sh-format
@@ -624,7 +649,7 @@ msgstr "Einen Windows-Neustart simulieren"
 #: bash/polconfigurator:114
 #, sh-format
 msgid "Use Advanced Wine Configuration plugin"
-msgstr ""
+msgstr "Erweitertes Wine Konfigurations-Plugin verwenden"
 
 #: bash/polconfigurator:115
 #, sh-format
@@ -639,7 +664,7 @@ msgstr "Symbol ändern"
 #: bash/polconfigurator:137
 #, sh-format
 msgid "Please choose an action to perform"
-msgstr ""
+msgstr "Bitte wählen Sie eine Aktion, die ausgeführt werden soll"
 
 #: bash/polconfigurator:192
 #, sh-format
@@ -812,7 +837,7 @@ msgstr "Möchten Sie eine Verknüpfung auf der Arbeitsfläche erstellen?"
 #: lib/applications:165
 #, sh-format
 msgid "Would you like a shortcut in your menu?"
-msgstr ""
+msgstr "Möchten Sie eine Verknüpfung in Ihrem Menü?"
 
 #: lib/applications:243
 #, sh-format
@@ -827,7 +852,7 @@ msgstr " fehlt. Bitte installieren Sie es, bevor Sie PlayOnLinux starten."
 #: lib/check_depend:30
 #, sh-format
 msgid ", package: "
-msgstr ""
+msgstr ", Paket: "
 
 #: lib/check_depend:30
 #, sh-format
@@ -962,31 +987,35 @@ msgstr "Willkommen beim PlayOnLinux-Installationsassistent."
 msgid ""
 "\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
 msgstr ""
+"\\n\\nPlayOnLinux ist nicht dafür verantwortlich, wie Sie diese Skripte "
+"verwenden.\\n\\n"
 
 #: lib/interface_v3:291
 #, sh-format
 msgid "Wine version server temporary unavailable.\\nPlease try again later."
 msgstr ""
+"Wine-Versions-Server zeitweise nicht erreichbar.\\nBitte versuchen Sie es "
+"später noch einmal."
 
 #: lib/interface_v3:294
 #, sh-format
 msgid "Following server is no longer available:\\n\\n"
-msgstr ""
+msgstr "Folgender Server ist nicht mehr verfügbar:\\n\\n"
 
 #: lib/interface_v3:297
 #, sh-format
 msgid "Following file is no longer available on server:\\n\\n"
-msgstr ""
+msgstr "Folgende Datei ist nicht mehr auf dem Server verfügbar:\\n\\n"
 
 #: lib/interface_v3:300
 #, sh-format
 msgid "Download failure"
-msgstr ""
+msgstr "Download-Fehler"
 
 #: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
 msgid "Please wait while the Wine prefix is being created..."
-msgstr ""
+msgstr "Bitte warten Sie, während das Wine-Präfix erstellt wird …"
 
 #: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
@@ -1013,17 +1042,17 @@ msgstr "Andere"
 #: lib/interface_v3:877 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
-msgstr ""
+msgstr "Fehler: Keine CD-ROM gefunden!"
 
 #: lib/interface_v3:898
 #, sh-format
 msgid "Unable to find version: "
-msgstr ""
+msgstr "Version nicht gefunden: "
 
 #: lib/interface_v3:904 lib/interface_v3:905
 #, sh-format
 msgid "Downloading Wine: "
-msgstr ""
+msgstr "Wine wird heruntergeladen: "
 
 #: lib/interface_v3:915
 #, sh-format
@@ -1033,7 +1062,7 @@ msgstr "Das Herunterladen ist fehlgeschlagen."
 #: lib/interface_v3:917
 #, sh-format
 msgid "Extracting Wine..."
-msgstr ""
+msgstr "Wine wird ausgepackt …"
 
 #: lib/main:60
 #, sh-format
@@ -1043,12 +1072,13 @@ msgstr "Erste Verwendung von PlayOnLinux"
 #: lib/main:60
 #, sh-format
 msgid "Welcome to PlayOnLinux's First Use Wizard."
-msgstr ""
+msgstr "Wilkommen beim PlayOnLinux-Assistent."
 
 #: lib/main:60 lib/main:71 lib/main:132
 #, sh-format
 msgid "\\nPlease make sure you are connected to the Internet."
 msgstr ""
+"\\nBitte stellen Sie sicher, dass Sie mit dem Internet verbunden sind."
 
 #: lib/main:71 lib/main:91
 #, sh-format
@@ -1058,7 +1088,7 @@ msgstr "PlayOnLinux-Anwendungslisten-Aktualisierung"
 #: lib/main:71 lib/main:153
 #, sh-format
 msgid "The PlayOnLinux website is unavailable."
-msgstr ""
+msgstr "Die PlayOnLinux-Webseite ist nicht erreichbar."
 
 #: lib/main:91
 #, sh-format
@@ -1075,11 +1105,13 @@ msgstr "Microsoft-Schriftarten"
 #, sh-format
 msgid "Microsoft fonts aren't installed; I'll install them for you."
 msgstr ""
+"Die Microsoft-Schriftarten sind noch nicht installiert. Dies wird "
+"automatisch für Sie durchgeführt."
 
 #: lib/main:133
 #, sh-format
 msgid " Licence translated in your language "
-msgstr ""
+msgstr " In Ihre Sprache übersetzte Lizenz: "
 
 #: lib/main:134
 #, sh-format
@@ -1087,12 +1119,16 @@ msgid ""
 "These fonts were provided by Microsoft\\n\"in the interest of cross-platform "
 "compatibility\"."
 msgstr ""
+"Diese Schriftarten wurden von Microsoft\\n\"im Interesse der "
+"plattformübergreifenden Kompatibilität\" zur Verfügung gestellt."
 
 #: lib/main:135
 #, sh-format
 msgid ""
 "This is no longer the case, but they are still available from third parties."
 msgstr ""
+"Dies ist nicht länger der Fall, aber sie sind noch immer für Dritte "
+"verfügbar."
 
 #: lib/main:137
 #, sh-format
@@ -1101,21 +1137,25 @@ msgid ""
 "you may not redistribute them in modified form,\\nincluding changes to the "
 "file name or packaging format."
 msgstr ""
+"Sie können diese Schriftarten herunterladen und für den eigenen Gebrauch "
+"nutzen,\\ sie aber nicht in einer modifizierten Form wieder veröffentlichen. "
+"Dies schließt Änderungen am Dateinamen oder dem Format mit ein."
 
 #: lib/main:138
 #, sh-format
 msgid " Original licence "
-msgstr ""
+msgstr " Original-Lizenz: "
 
 #: lib/main:149
 #, sh-format
 msgid "Please read and accept the following:"
-msgstr ""
+msgstr "Bitte lesen Sie das Folgende und stimmen Sie diesem zu:"
 
 #: lib/main:153
 #, sh-format
 msgid "\\nPlease make sure you are connected to Internet."
 msgstr ""
+"\\nBitte vergewissern Sie sich, dass Sie mit dem Internet verbunden sind."
 
 #: lib/main:164
 #, sh-format
@@ -1135,42 +1175,44 @@ msgstr "Schriftarten werden installiert"
 #: lib/main:188 lib/main:189 lib/main:196 lib/main:197
 #, sh-format
 msgid "Installing: "
-msgstr ""
+msgstr "Installiere: "
 
 #: lib/main:207
 #, sh-format
 msgid "Microsoft fonts have been installed successfully."
-msgstr ""
+msgstr "Microsoft-Schriftarten wurden erfolgreich installiert."
 
 #: lib/main:241
 #, sh-format
 msgid "Checking plugin: "
-msgstr ""
+msgstr "Überprüfe Erweiterung: "
 
 #: lib/main:266
 #, sh-format
 msgid "New: "
-msgstr ""
+msgstr "Neu: "
 
 #: lib/main:266
 #, sh-format
 msgid "Updating plugin. Previous: "
-msgstr ""
+msgstr "Aktualisiere Erweiterung. Vorheriges: "
 
 #: lib/main:285
 #, sh-format
 msgid "Installing plugin: "
-msgstr ""
+msgstr "Installiere Erweiterung: "
 
 #: lib/main:323
 #, sh-format
 msgid "Are you sure you want to start PlayOnLinux?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie PlayOnLinux starten möchten?"
 
 #: lib/main:323
 #, sh-format
 msgid "PlayOnLinux is not reponsible for any damage to your system.\\n\\n"
 msgstr ""
+"PlayOnLinux ist nicht verantwortlich für jedweden Schaden an Ihrem System.\\"
+"n\\n"
 
 #: lib/main:323
 #, sh-format
@@ -1178,6 +1220,9 @@ msgid ""
 "Please note that it is very dangerous to run Wine programs as root: you are "
 "vulnerable to viruses and other bad stuff.\\n\\n"
 msgstr ""
+"Bitte bedenken Sie, dass es sehr gefährlich ist, Wine-Programme als Root "
+"auszuführen: Sie machen sich angreifbar gegenüber Viren und anderen "
+"Gefahren.\\n\\n"
 
 #: lib/main:323
 #, sh-format
@@ -1187,12 +1232,12 @@ msgstr ""
 #: lib/main:323
 #, sh-format
 msgid "You are running PlayOnLinux as root.\\n\\n"
-msgstr ""
+msgstr "Sie führen PlayOnLinux als Root aus.\\n\\n"
 
 #: lib/main:425 lib/main:429 lib/main:433 lib/main:437 lib/main:441
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
-msgstr ""
+msgstr "Diese Funktion ist in der PlayOnLinux-Umgebung deaktiviert."
 
 #: lib/pol_cmd:75
 #, sh-format
@@ -1208,11 +1253,12 @@ msgstr ""
 #, sh-format
 msgid "Please answer following question, and validate with the 'ENTER' key."
 msgstr ""
+"Bitte beantworten Sie folgende Frage und bestätigen Sie mit der Enter-Taste."
 
 #: lib/pol_cmd:127
 #, sh-format
 msgid "Press Enter to choose default file: "
-msgstr ""
+msgstr "Drücken Sie Enter um die Standard-Datei auszuwählen: "
 
 #: lib/pol_cmd:166 lib/pol_cmd:186 lib/pol_cmd:205 lib/pol_cmd:277
 #: lib/pol_cmd:278 lib/pol_cmd:297 lib/pol_cmd:298 lib/pol_cmd:318
@@ -1237,7 +1283,7 @@ msgstr ""
 #: lib/pol_cmd:191 lib/pol_cmd:210 lib/pol_cmd:303 lib/pol_cmd:324
 #, sh-format
 msgid "Waiting: "
-msgstr ""
+msgstr "Warte: "
 
 #: lib/pol_cmd:267
 #, sh-format
@@ -1247,7 +1293,7 @@ msgstr ""
 #: lib/pol_cmd:383
 #, sh-format
 msgid "Oops, no application installed!"
-msgstr ""
+msgstr "Ups, keine Anwendung installiert!"
 
 #: lib/pol_cmd:399 python/guiv3.py:565
 #, sh-format
@@ -1270,7 +1316,7 @@ msgstr "PlayOnLinux-Assistent"
 #: lib/pol_cmd:399 python/guiv3.py:563
 #, sh-format
 msgid "Would you like a shortcut for: "
-msgstr ""
+msgstr "Möchten Sie eine Verknüpfung für: "
 
 #: lib/pol_cmd:489
 #, sh-format
@@ -1285,7 +1331,7 @@ msgstr ""
 #: lib/pol_cmd:516
 #, sh-format
 msgid "Press a key to continue."
-msgstr ""
+msgstr "Drücken Sie eine Taste zum Fortfahren"
 
 #: lib/pol_cmd:528
 #, sh-format
@@ -1310,7 +1356,7 @@ msgstr ""
 #: lib/wine:424 lib/wine:452
 #, sh-format
 msgid "You must choose which Wine version you want to download."
-msgstr ""
+msgstr "Sie müssen eine Wine-Version zum Herunterladen wählen."
 
 #: playonlinux-cmd:52
 #, sh-format
@@ -1332,32 +1378,32 @@ msgstr ""
 #: playonlinux-cmd:56
 #, sh-format
 msgid "\trun an existing application."
-msgstr ""
+msgstr "\teine vorhandene Anwendung ausführen."
 
 #: playonlinux-cmd:57
 #, sh-format
 msgid "\tstart installing the specified script."
-msgstr ""
+msgstr "\tbeginnen das ausgewählte Skript zu installieren."
 
 #: playonlinux-cmd:58
 #, sh-format
 msgid "\tperform search into the script repository."
-msgstr ""
+msgstr "\teine Suche im Skript-Repository durchführen."
 
 #: playonlinux-cmd:59
 #, sh-format
 msgid "\tlist software installed with PlayOnLinux."
-msgstr ""
+msgstr "\tdie mit PlayOnLinux installierte Software anzeigen."
 
 #: playonlinux-cmd:60
 #, sh-format
 msgid "\tremove an existing application."
-msgstr ""
+msgstr "\teine existierende Anwendung entfernen."
 
 #: playonlinux-cmd:120
 #, sh-format
 msgid "Please make sure you are connected to the Internet."
-msgstr ""
+msgstr "Bitte stellen Sie sicher, dass Sie mit dem Internet verbunden sind."
 
 #: playonlinux-cmd:130
 #, sh-format
@@ -1365,11 +1411,13 @@ msgid ""
 "The search needs an updated repository.\\nIf the results seem outdated, "
 "please run an update."
 msgstr ""
+"Die Suche benötigt eine aktualisierte Software-Paketquelle.\\nWenn die "
+"Ergebnisse veraltet sind, führen Sie bitte ein Update durch."
 
 #: playonlinux-cmd:131
 #, sh-format
 msgid "Search result(s): "
-msgstr ""
+msgstr "Suchergebnisse: "
 
 #: playonlinux-cmd:137
 #, sh-format
@@ -1560,7 +1608,7 @@ msgid "You seem to be using the Offline PlayOnLinux plugin."
 msgstr ""
 
 #: python/mainwindow.py:66
-msgid "Started with unknown message. Report a bug ASAP!"
+msgid "Internal error when starting GUI. Please file a bug report ASAP!"
 msgstr ""
 
 #: python/mainwindow.py:89 python/mainwindow.py:190
@@ -1798,6 +1846,7 @@ msgstr "Deaktivieren"
 #: python/options.py:469
 msgid "You must restart PlayOnLinux for the changes to take effect."
 msgstr ""
+"Sie müssen PlayOnLinux neu starten, bevor die Änderungen wirksam werden."
 
 #: python/options.py:473
 msgid "PlayOnLinux Settings"
@@ -1813,23 +1862,23 @@ msgstr "Nein"
 
 #: python/telecharger.py:71
 msgid "Click Download to start."
-msgstr ""
+msgstr "Klicken, um Download zu starten."
 
 #: python/telecharger.py:76
 msgid "Please wait while the software is being downloaded..."
-msgstr ""
+msgstr "Bitte warten Sie, während die Software heruntergeladen wird …"
 
 #: python/telecharger.py:107
 msgid "Download complete"
-msgstr ""
+msgstr "Herunterladen abgeschlossen"
 
 #: python/wine_versions.py:130
 msgid "Installed Wine versions: "
-msgstr ""
+msgstr "Installierte Wine-Versionen: "
 
 #: python/wine_versions.py:131
 msgid "Available Wine versions: "
-msgstr ""
+msgstr "Verfügbare Wine-Versionen: "
 
 #: python/wine_versions.py:139
 msgid "Wine versions"
@@ -1841,11 +1890,11 @@ msgstr "Meine Anwendungen"
 
 #: python/wine_versions.py:167
 msgid "Version: "
-msgstr ""
+msgstr "Version: "
 
 #: python/wine_versions.py:321
 msgid "Are you sure you want to delete Wine: "
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie Wine löschen wollen: "
 
 #~ msgid "Network is available."
 #~ msgstr "Die Internetverbindung funktioniert."

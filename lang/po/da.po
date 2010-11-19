@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-19 21:49+0200\n"
-"PO-Revision-Date: 2010-09-22 22:50+0000\n"
+"POT-Creation-Date: 2010-09-24 23:13+0200\n"
+"PO-Revision-Date: 2010-09-30 19:12+0000\n"
 "Last-Translator: Christiansen <Unknown>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-24 10:00+0000\n"
+"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: Advanced Configuration Plugin:11 Wine
@@ -23,11 +23,11 @@ msgstr "Aktiver GLSL understøttelse?"
 
 #: Advanced Configuration Plugin:15 Wine
 msgid "Activate Multisampling support?"
-msgstr ""
+msgstr "Aktiver Multisampling-understøttelse?"
 
 #: Advanced Configuration Plugin:16 Wine
 msgid "Activate the mouse warp override?"
-msgstr ""
+msgstr "Aktiver tilsidesættelse af museombrydning?"
 
 #: Advanced Configuration Plugin:5 Wine
 msgid "All"
@@ -35,15 +35,15 @@ msgstr "Alle"
 
 #: Advanced Configuration Plugin:10 Wine
 msgid "Choose DirectDraw Renderer Mode?"
-msgstr ""
+msgstr "Vælg DirectDraw gengivelsestilstand?"
 
 #: Advanced Configuration Plugin:13 Wine
 msgid "Choose Offscreen Rendering Mode?"
-msgstr ""
+msgstr "Vælg Offscreen gengivelsestilstand?"
 
 #: Advanced Configuration Plugin:14 Wine
 msgid "Choose Render Target Lock Mode?"
-msgstr ""
+msgstr "Vælg Target Lock gengivelsestilstand?"
 
 #: Advanced Configuration Plugin:8 Wine
 msgid "Choose a game"
@@ -51,7 +51,7 @@ msgstr "Vælg et spil"
 
 #: Advanced Configuration Plugin:4 Wine
 msgid "Choose an option to modify"
-msgstr ""
+msgstr "Vælg den insdstilling der skal ændres"
 
 #: Advanced Configuration Plugin:12 Wine
 msgid "How much memory does your graphics board have?"
@@ -203,7 +203,7 @@ msgstr ""
 "Advarsel: For korrekt videokodning,\\n SKAL opløsningen være et multiplum af "
 "16"
 
-#: Capture plugin:2
+#: Capture Detour plugin:2 plugin:4
 msgid "Which application do you want to apply the modification to?"
 msgstr "Hvilket program ønsker du at anvende ændringen på?"
 
@@ -214,6 +214,21 @@ msgstr "Du skal vælge den optagelse der skal konverteres"
 #: Capture plugin:18
 msgid "You must choose a capture to read"
 msgstr "Du skal vælge den optagelse der skal læses"
+
+#: Detour plugin:5
+msgid "Choose an application"
+msgstr "Vælg et program"
+
+#: Detour plugin:6
+msgid "Operation done"
+msgstr "Handlingen gennemført"
+
+#: Detour plugin:3
+msgid ""
+"Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
+msgstr ""
+"Velkommen i Detour, et modul der gør dig i stand til at oprette efter-"
+"installation genveje."
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
 #: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
@@ -317,7 +332,7 @@ msgstr "Brug WineTricks"
 #: python/mainwindow.py:245 python/mainwindow.py:275
 #, sh-format
 msgid "Configure Wine"
-msgstr "Indstil wine"
+msgstr "Konfigurer Wine"
 
 #: bash/LiveInstall:137
 #, sh-format
@@ -332,22 +347,22 @@ msgstr "Hvilken version af Wine ønsker du at bruger?"
 #: bash/LiveInstall:176
 #, sh-format
 msgid "Please select the install file to run."
-msgstr ""
+msgstr "Vælg venligst den installationsfil der skal køres"
 
 #: bash/LiveInstall:180
 #, sh-format
 msgid "You must choose a file!"
-msgstr ""
+msgstr "Du skal vælge en fil!"
 
 #: bash/LiveInstall:185
 #, sh-format
 msgid "PlayOnLinux is installing your application..."
-msgstr ""
+msgstr "PlayOnLinux installere dit program..."
 
 #: bash/LiveInstall:195 bash/autorun:166 bash/daemon/autorun:166
 #, sh-format
 msgid "Please do not press Next until the installation has been completed."
-msgstr ""
+msgstr "Tryk venligst ikke Næste inden installationen er fuldført."
 
 #: bash/autorun:29 bash/autorun:35 bash/autorun:43 bash/autorun:77
 #: bash/autorun:125 bash/autorun:127 bash/autorun:138 bash/autorun:144
@@ -371,13 +386,13 @@ msgstr "Ingen setup afsnit fundet i autorun.inf"
 #: bash/daemon/autorun:127
 #, sh-format
 msgid "A CD-ROM has been found in your drive.\\n\\nName: "
-msgstr ""
+msgstr "Der blev fundet en CD-ROM i dit drev.\\n\\nNavn: "
 
 #: bash/autorun:125 bash/autorun:127 bash/daemon/autorun:125
 #: bash/daemon/autorun:127
 #, sh-format
 msgid "Installer: "
-msgstr ""
+msgstr "Installationsprogram: "
 
 #: bash/autorun:133 bash/daemon/autorun:133
 #, sh-format
@@ -413,7 +428,7 @@ msgstr "PlayOnLinux installere dit program"
 #: bash/autorun:177 bash/uninstall:38
 #, sh-format
 msgid "Click Next to continue."
-msgstr ""
+msgstr "Klik Næste for at fortsætte."
 
 #: bash/autorun:177
 #, sh-format
@@ -421,46 +436,49 @@ msgid ""
 "Welcome to PlayOnLinux's autorun wizard.\\nIt will help you install an "
 "application from a CD-ROM.\\n\\n"
 msgstr ""
+"Velkommen til PlayOnLinuxs autokør guide.\\nDen vil hjælpe dig med at "
+"installere et program fra en CD-ROM.\\n\\n"
 
 #: bash/autorun:179
 #, sh-format
 msgid "Looking for runnable CD-ROMs"
-msgstr ""
+msgstr "Kikker efter en kørbar CD-ROM"
 
 #: bash/autorun:209
 #, sh-format
 msgid "No autorun support found!"
-msgstr ""
+msgstr "Understøttelse af autokør ikke fundet!"
 
 #: bash/autorun:217 bash/daemon/autorun:212
 #, sh-format
 msgid "autoruns have been found"
-msgstr ""
+msgstr "Fandt autokør"
 
 #: bash/check_maj:29
 #, sh-format
 msgid "You are in offline mode."
-msgstr ""
+msgstr "Du er i offline tilstand"
 
 #: bash/check_maj_:40
 #, sh-format
 msgid "The PlayOnLinux repository needs to be updated."
-msgstr ""
+msgstr "Updatering af PlayOnLinux-arkivet er nødvendig."
 
 #: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
 #, sh-format
 msgid "Run a local script"
-msgstr ""
+msgstr "Kør et lokal skript"
 
 #: bash/expert/Executer:30
 #, sh-format
 msgid "This wizard will help you run an unofficial PlayOnLinux Script."
 msgstr ""
+"Denne guide vil hjælpe dig med at køre et uofficiel PlayOnLinux skript."
 
 #: bash/expert/Executer:32
 #, sh-format
 msgid "Choose a valid PlayOnLinux script to run."
-msgstr ""
+msgstr "Vælg et gyldig PlayOnLinux skript der skal køres."
 
 #: bash/expert/Executer:41
 #, sh-format
@@ -485,6 +503,10 @@ msgid ""
 "applications running before you continue.\\n\\nAre you sure you want to kill "
 "the wineserver?"
 msgstr ""
+"Advarsel! Denne handling kan måske gøre Wine programmer ustabil, uanset om "
+"de blev startet af PlayOnLinux eller ej. Sørg venligst for at ingen Wine "
+"programmer kører før du fortsætter.\\n\\nEr du sikker på du vil slå wine-"
+"servere ihjel?"
 
 #: bash/expert/kill_wineserver:30
 #, sh-format
@@ -504,28 +526,28 @@ msgstr "Installationsguide"
 #: bash/install:36
 #, sh-format
 msgid "Please choose a type of application to install."
-msgstr ""
+msgstr "Vælg venligst typen af program der skal installeres."
 
 #: bash/install_wver:29
 #, sh-format
 msgid "This wizard will help you install Wine: "
-msgstr ""
+msgstr "Denne guide vil hjælpe dig med at installere Wine: "
 
 #: bash/install_wver:29
 #, sh-format
 msgid "on the PlayOnLinux environment."
-msgstr ""
+msgstr "i PlayOnLinux miljøet."
 
 #: bash/install_wver:31
 #, sh-format
 msgid "Wine has been installed successfully."
-msgstr ""
+msgstr "Det lykkedes at installere Wine."
 
 #: bash/killall:30
 #, sh-format
 msgid ""
 "Are you sure you want to shut down all active PlayOnLinux applications?"
-msgstr ""
+msgstr "Er du sikker på at du vil lukke alle aktive PlayOnLinux programmer?"
 
 #: bash/killall:33 lib/interface:476 lib/interface:543
 #, sh-format
@@ -546,7 +568,7 @@ msgstr "Slå processerne in præfikset ihjel..."
 #: bash/polconfigurator:82 bash/polconfigurator:137 bash/polconfigurator:192
 #, sh-format
 msgid "PlayOnLinux Application Configurator"
-msgstr ""
+msgstr "PlayOnLinux program-konfigurator"
 
 #: bash/polconfigurator:31
 #, sh-format
@@ -556,7 +578,7 @@ msgstr "Starter wine konfiguration"
 #: bash/polconfigurator:54
 #, sh-format
 msgid "Starting regedit"
-msgstr ""
+msgstr "Starter regedit"
 
 #: bash/polconfigurator:61 lib/wine:31
 #, sh-format
@@ -571,32 +593,32 @@ msgstr "Starter Avanceret Wine Konfiguration"
 #: bash/polconfigurator:75
 #, sh-format
 msgid "Starting WineTricks plug-in"
-msgstr ""
+msgstr "Starter WineTricks udvidelsesmodul"
 
 #: bash/polconfigurator:82
 #, sh-format
 msgid "Starting specific Wine configurator"
-msgstr ""
+msgstr "Starter specifik Wine-konfigurator"
 
 #: bash/polconfigurator:93
 #, sh-format
 msgid "Icon selection"
-msgstr ""
+msgstr "Ikon valg"
 
 #: bash/polconfigurator:93
 #, sh-format
 msgid "Please select an icon file"
-msgstr ""
+msgstr "Vælg venligst en ikon-fil"
 
 #: bash/polconfigurator:100
 #, sh-format
 msgid "Bad file extension"
-msgstr ""
+msgstr "Forkert fil-endelse"
 
 #: bash/polconfigurator:100
 #, sh-format
 msgid "is not an icon extension"
-msgstr ""
+msgstr "er ikke en ikon endelse"
 
 #: bash/polconfigurator:110 python/mainwindow.py:249 python/mainwindow.py:284
 #, sh-format
@@ -626,17 +648,17 @@ msgstr "Brug udvidelsesmodulet Avanceret Wine Konfiguration"
 #: bash/polconfigurator:115
 #, sh-format
 msgid "Use PlayOnLinux's configurator for"
-msgstr "Brug PlayOnLinuxs konfigurator for"
+msgstr "Brug PlayOnLinux' konfigurator til"
 
 #: bash/polconfigurator:117
 #, sh-format
 msgid "Change the icon"
-msgstr ""
+msgstr "Ændre ikonet"
 
 #: bash/polconfigurator:137
 #, sh-format
 msgid "Please choose an action to perform"
-msgstr ""
+msgstr "Vælg venligst handlingen der skal udføres"
 
 #: bash/polconfigurator:192
 #, sh-format
@@ -644,6 +666,8 @@ msgid ""
 "Welcome to PlayOnLinux's Application Configurator.\\nThis wizard will help "
 "you configure: "
 msgstr ""
+"Velkommen til PlauOnLinux' Program Konfigurator.\\nDenne guide vil hjælpe "
+"dig med at konfigurere: "
 
 #: bash/polconfigurator:192
 #, sh-format
@@ -662,37 +686,37 @@ msgstr "\\n\\nFølgende wine-præfiks vil blive opdateret: "
 #: bash/system_info:62 bash/system_info:88
 #, sh-format
 msgid "Your system: "
-msgstr ""
+msgstr "Dit system: "
 
 #: bash/system_info:63
 #, sh-format
 msgid "System architecture: "
-msgstr ""
+msgstr "Systemarkitektur: "
 
 #: bash/system_info:64 bash/system_info:93
 #, sh-format
 msgid "Your graphics card: "
-msgstr ""
+msgstr "Dit grafikkort: "
 
 #: bash/system_info:65
 #, sh-format
 msgid "Graphics card driver: "
-msgstr ""
+msgstr "Grafikkort driver: "
 
 #: bash/system_info:67
 #, sh-format
 msgid "OpenGL: "
-msgstr ""
+msgstr "OpenGL: "
 
 #: bash/system_info:68
 #, sh-format
 msgid "Compiz in background: "
-msgstr ""
+msgstr "Compiz i baggrund: "
 
 #: bash/system_info:76
 #, sh-format
 msgid "Executable file: "
-msgstr ""
+msgstr "Kørbar fil: "
 
 #: bash/system_info:76
 #, sh-format
@@ -702,12 +726,12 @@ msgstr "MiB"
 #: bash/system_info:77
 #, sh-format
 msgid "Content of app launcher: \\n"
-msgstr ""
+msgstr "Indhold af programstarter:\\n"
 
 #: bash/system_info:83
 #, sh-format
 msgid "Content of terminal output: \\n"
-msgstr ""
+msgstr "Indhold af terminaludskrift"
 
 #: bash/system_info:86
 #, sh-format
@@ -717,47 +741,47 @@ msgstr "System information:"
 #: bash/system_info:89
 #, sh-format
 msgid "Your kernel: "
-msgstr ""
+msgstr "Din kerne: "
 
 #: bash/system_info:90
 #, sh-format
 msgid "System language: "
-msgstr ""
+msgstr "Systemsprog: "
 
 #: bash/system_info:91
 #, sh-format
 msgid "Your username: "
-msgstr ""
+msgstr "Dit brugernavn: "
 
 #: bash/system_info:92
 #, sh-format
 msgid "Your computer's name: "
-msgstr ""
+msgstr "Din computers navn: "
 
 #: bash/system_info:94
 #, sh-format
 msgid "Your distribution: "
-msgstr ""
+msgstr "Din distribution: "
 
 #: bash/system_info:95
 #, sh-format
 msgid "Your distribution version: "
-msgstr ""
+msgstr "Din distributionversion: "
 
 #: bash/system_info:96
 #, sh-format
 msgid "Current Wine version: "
-msgstr ""
+msgstr "Aktuel Wine version: "
 
 #: bash/system_info:97
 #, sh-format
 msgid "Wine version used by PlayOnLinux: "
-msgstr ""
+msgstr "Wine version  anvendt af PlayOnLinux "
 
 #: bash/system_info:98
 #, sh-format
 msgid "Free space on your hard drives:"
-msgstr ""
+msgstr "Ledig plads på dine harddiske:"
 
 #: bash/uninstall:38 bash/uninstall:49 bash/uninstall:53 lib/applications:245
 #, sh-format
@@ -767,7 +791,7 @@ msgstr "PlayOnLinux afinstalleringsprogram"
 #: bash/uninstall:38
 #, sh-format
 msgid "This wizard will help you uninstall: "
-msgstr ""
+msgstr "Denne guide vil hjælpe dig med at afinstallere: "
 
 #: bash/uninstall:49 lib/applications:245
 #, sh-format
@@ -777,7 +801,7 @@ msgstr "Afinstallere..."
 #: bash/uninstall:53
 #, sh-format
 msgid " has been uninstalled successfully."
-msgstr ""
+msgstr " er problemfrit blevet afstalleret."
 
 #: bash/uninstall:55
 #, sh-format
@@ -792,7 +816,7 @@ msgstr "Fejl"
 #: lib/applications:38
 #, sh-format
 msgid "The program you want to run isn't installed: "
-msgstr ""
+msgstr "Det program du ønsker at køre er ikke installeret: "
 
 #: lib/applications:158
 #, sh-format
@@ -802,12 +826,12 @@ msgstr "Genvejsoprettelse"
 #: lib/applications:159
 #, sh-format
 msgid "Would you like a shortcut on your desktop?"
-msgstr ""
+msgstr "Ønsker du en genvej på dit skrivebord?"
 
 #: lib/applications:165
 #, sh-format
 msgid "Would you like a shortcut in your menu?"
-msgstr ""
+msgstr "Ønsker du en genvej i din menu?"
 
 #: lib/applications:243
 #, sh-format
@@ -817,12 +841,12 @@ msgstr "Ønsker du at slette præfikset: "
 #: lib/check_depend:23
 #, sh-format
 msgid " is missing. Please install it before running PlayOnLinux."
-msgstr ""
+msgstr " mangler. Installer den venligst før PlayOnLinux køres."
 
 #: lib/check_depend:30
 #, sh-format
 msgid ", package: "
-msgstr ""
+msgstr ", pakke: "
 
 #: lib/check_depend:30
 #, sh-format
@@ -844,6 +868,8 @@ msgid ""
 "You don't seem to have 3D acceleration!\\nWe advise you install and enable "
 "it."
 msgstr ""
+"Du ser ikke ud til at have 3D acceleration!\\nVi råder dig til at installere "
+"og aktivere det."
 
 #: lib/check_depend:65
 #, sh-format
@@ -851,6 +877,8 @@ msgid ""
 "Warning: glxinfo is missing! PlayOnLinux can't detect if 3D acceleration is "
 "supported."
 msgstr ""
+"Advarsel: glxinfo mangler! PlayOnLinux kan ikke undersøge om 3D acceleration "
+"er understøttet."
 
 #: lib/interface:32 lib/interface:91 lib/interface:648
 #, sh-format
@@ -898,16 +926,20 @@ msgid ""
 "this protection!\\nPlayOnLinux cannot be held responsible for your use of "
 "these patches.\\n\\nThank you."
 msgstr ""
+"Bemærk venligst:\\nCD eller DVD beskyttelse af dette spil virker ikke "
+"ordentlig med Wine.\\nDu vil ikke være i stand til at spille dette spil uden "
+"at deaktivere denne beskyttelse!\\nPlayOnLinux kan ikke gøres ansvarlig for "
+"dit brug af disse rettelser.\\n\\nTak."
 
 #: lib/interface:716
 #, sh-format
 msgid ", and press \"OK\" when you are ready"
-msgstr ""
+msgstr ", og tryk \"OK\" når du er klar"
 
 #: lib/interface:716
 #, sh-format
 msgid "Please mount the CD-ROM: "
-msgstr ""
+msgstr "Indsæt venligst CD-ROM'en: "
 
 #: lib/interface_v3:45
 #, sh-format
@@ -917,58 +949,61 @@ msgstr " på din computer."
 #: lib/interface_v3:45
 #, sh-format
 msgid " will be installed in: "
-msgstr ""
+msgstr " vil blive installeret i: "
 
 #: lib/interface_v3:45
 #, sh-format
 msgid "Click Next to start"
-msgstr ""
+msgstr "Klik Næste for at starte"
 
 #: lib/interface_v3:45
 #, sh-format
 msgid "This installation program is provided by: "
-msgstr ""
+msgstr "Dette installationsprogram er leveret af: "
 
 #: lib/interface_v3:45
 #, sh-format
 msgid "This program was created by: "
-msgstr ""
+msgstr "Dette program blev udviklet af: "
 
 #: lib/interface_v3:45
 #, sh-format
 msgid "This wizard will help you install "
-msgstr ""
+msgstr "Denne guide vil hjælpe dig med at installere "
 
 #: lib/interface_v3:45
 #, sh-format
 msgid "Welcome to PlayOnLinux's Installation Wizard."
-msgstr ""
+msgstr "Velkommen til PlayOnLinuxs installationsguide."
 
 #: lib/interface_v3:45
 #, sh-format
 msgid ""
 "\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
 msgstr ""
+"\\n\\nPlayOnLinux er ikke ansvarlig for den måde du anvender disse skripts.\\"
+"n\\n"
 
 #: lib/interface_v3:291
 #, sh-format
 msgid "Wine version server temporary unavailable.\\nPlease try again later."
 msgstr ""
+"Wine version server midlertidig utilgændelig.\\nPrøv venligst igen senere."
 
 #: lib/interface_v3:294
 #, sh-format
 msgid "Following server is no longer available:\\n\\n"
-msgstr ""
+msgstr "Følgende server er ikke længere tilgængelig:\\n\\n"
 
 #: lib/interface_v3:297
 #, sh-format
 msgid "Following file is no longer available on server:\\n\\n"
-msgstr ""
+msgstr "Følgende filer er ikke længere tilgængelig på serveren:\\n\\n"
 
 #: lib/interface_v3:300
 #, sh-format
 msgid "Download failure"
-msgstr ""
+msgstr "Filhentningsfejl"
 
 #: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
@@ -999,27 +1034,27 @@ msgstr "Andet"
 #: lib/interface_v3:877 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
-msgstr ""
+msgstr "Fejl: Kunne ikke finde CD-ROM'en!"
 
 #: lib/interface_v3:898
 #, sh-format
 msgid "Unable to find version: "
-msgstr ""
+msgstr "Kunne ikke finde version: "
 
 #: lib/interface_v3:904 lib/interface_v3:905
 #, sh-format
 msgid "Downloading Wine: "
-msgstr ""
+msgstr "Henter Wine: "
 
 #: lib/interface_v3:915
 #, sh-format
 msgid "The download seems to have failed."
-msgstr "Nedhentninge ser ud til at være mislykket."
+msgstr "Nedhentningen ser ud til at være mislykket."
 
 #: lib/interface_v3:917
 #, sh-format
 msgid "Extracting Wine..."
-msgstr ""
+msgstr "Udpakker Wine..."
 
 #: lib/main:60
 #, sh-format
@@ -1029,12 +1064,12 @@ msgstr "Første gang PlayOnLinux bruges"
 #: lib/main:60
 #, sh-format
 msgid "Welcome to PlayOnLinux's First Use Wizard."
-msgstr ""
+msgstr "Velkommen til PlayOnLinux' først brug guide"
 
 #: lib/main:60 lib/main:71 lib/main:132
 #, sh-format
 msgid "\\nPlease make sure you are connected to the Internet."
-msgstr ""
+msgstr "\\nSørg venligst for at du har forbindelse til internettet."
 
 #: lib/main:71 lib/main:91
 #, sh-format
@@ -1044,7 +1079,7 @@ msgstr "PlayOnLinux programliste opdatering"
 #: lib/main:71 lib/main:153
 #, sh-format
 msgid "The PlayOnLinux website is unavailable."
-msgstr ""
+msgstr "PlayOnLinux websiden er ikke tilgængelig."
 
 #: lib/main:91
 #, sh-format
@@ -1061,11 +1096,12 @@ msgstr "Microsoft skrifttyper"
 #, sh-format
 msgid "Microsoft fonts aren't installed; I'll install them for you."
 msgstr ""
+"Microsoft skrifttyper er ikke installeret; Jeg vil installere dem for dig."
 
 #: lib/main:133
 #, sh-format
 msgid " Licence translated in your language "
-msgstr ""
+msgstr " Licens oversat til dit sprog "
 
 #: lib/main:134
 #, sh-format
@@ -1073,12 +1109,16 @@ msgid ""
 "These fonts were provided by Microsoft\\n\"in the interest of cross-platform "
 "compatibility\"."
 msgstr ""
+"Disse skrifter blev leveret af Microsoft\\n\"af hensyn til tvær-platform "
+"kompatibilitet\"."
 
 #: lib/main:135
 #, sh-format
 msgid ""
 "This is no longer the case, but they are still available from third parties."
 msgstr ""
+"Dette er ikke længere tilfældet, men de er fortsat tilgængelige fra "
+"tredjepart."
 
 #: lib/main:137
 #, sh-format
@@ -1087,21 +1127,24 @@ msgid ""
 "you may not redistribute them in modified form,\\nincluding changes to the "
 "file name or packaging format."
 msgstr ""
+"Du er velkommen til at hente disse skrifttyper og bruge dem til eget brug,\\"
+"nmen du må ikke redistribuere dem i modificeret form,\\n hvilket omfatter "
+"ændringer i filnavnet eller pakkeformat."
 
 #: lib/main:138
 #, sh-format
 msgid " Original licence "
-msgstr ""
+msgstr " Original licens "
 
 #: lib/main:149
 #, sh-format
 msgid "Please read and accept the following:"
-msgstr ""
+msgstr "Læs og accepter venligst følgende:"
 
 #: lib/main:153
 #, sh-format
 msgid "\\nPlease make sure you are connected to Internet."
-msgstr ""
+msgstr "\\nSørg venligst for at du har forbindelse til internettet."
 
 #: lib/main:164
 #, sh-format
@@ -1111,7 +1154,7 @@ msgstr "Henter skrifttyper"
 #: lib/main:169 lib/main:170 lib/main:176 lib/main:177
 #, sh-format
 msgid "Downloading: "
-msgstr ""
+msgstr "Henter: "
 
 #: lib/main:183
 #, sh-format
@@ -1121,42 +1164,43 @@ msgstr "Installere skrifttyper"
 #: lib/main:188 lib/main:189 lib/main:196 lib/main:197
 #, sh-format
 msgid "Installing: "
-msgstr ""
+msgstr "Installerer: "
 
 #: lib/main:207
 #, sh-format
 msgid "Microsoft fonts have been installed successfully."
-msgstr ""
+msgstr "Det lykkedes at installere Microsoft skrifttyper."
 
 #: lib/main:241
 #, sh-format
 msgid "Checking plugin: "
-msgstr ""
+msgstr "Kontrollere udvidelsesmoduler: "
 
 #: lib/main:266
 #, sh-format
 msgid "New: "
-msgstr ""
+msgstr "Ny: "
 
 #: lib/main:266
 #, sh-format
 msgid "Updating plugin. Previous: "
-msgstr ""
+msgstr "Opdaterer udvidelsesmoduler. Tidligere: "
 
 #: lib/main:285
 #, sh-format
 msgid "Installing plugin: "
-msgstr ""
+msgstr "Installere udvidelsesmoduler: "
 
 #: lib/main:323
 #, sh-format
 msgid "Are you sure you want to start PlayOnLinux?"
-msgstr ""
+msgstr "Er du sikker på at du vil starte PlayOnLinux?"
 
 #: lib/main:323
 #, sh-format
 msgid "PlayOnLinux is not reponsible for any damage to your system.\\n\\n"
 msgstr ""
+"PlayOnLinux er ikke ansvarlig for eventuelle skader på dit system.\\n\\n"
 
 #: lib/main:323
 #, sh-format
@@ -1164,6 +1208,8 @@ msgid ""
 "Please note that it is very dangerous to run Wine programs as root: you are "
 "vulnerable to viruses and other bad stuff.\\n\\n"
 msgstr ""
+"Bemærk venligst, at det er meget farligt at køre Wine programmer som root: "
+"du bliver sårbare over for virus og andre dårlige ting.\\n\\n"
 
 #: lib/main:323
 #, sh-format
@@ -1173,44 +1219,44 @@ msgstr "Advarsel!"
 #: lib/main:323
 #, sh-format
 msgid "You are running PlayOnLinux as root.\\n\\n"
-msgstr ""
+msgstr "Du køre PlayOnLinux som root.\\n\\n"
 
 #: lib/main:425 lib/main:429 lib/main:433 lib/main:437 lib/main:441
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
-msgstr ""
+msgstr "Denne funktion er deaktiveret i PlayOnLinux-miljøet."
 
 #: lib/pol_cmd:75
 #, sh-format
 msgid "Completion: "
-msgstr ""
+msgstr "Afslutter: "
 
 #: lib/pol_cmd:82
 #, sh-format
 msgid "Processing: "
-msgstr ""
+msgstr "Bahandler: "
 
 #: lib/pol_cmd:112 lib/pol_cmd:123
 #, sh-format
 msgid "Please answer following question, and validate with the 'ENTER' key."
-msgstr ""
+msgstr "Svar venligst på følgende spørgsmål og godkend med 'ENTER' tasten"
 
 #: lib/pol_cmd:127
 #, sh-format
 msgid "Press Enter to choose default file: "
-msgstr ""
+msgstr "Tast Enter for at vælge standardfil: "
 
 #: lib/pol_cmd:166 lib/pol_cmd:186 lib/pol_cmd:205 lib/pol_cmd:277
 #: lib/pol_cmd:278 lib/pol_cmd:297 lib/pol_cmd:298 lib/pol_cmd:318
 #: lib/pol_cmd:319
 #, sh-format
 msgid " for entry: "
-msgstr ""
+msgstr " for post: "
 
 #: lib/pol_cmd:166 lib/pol_cmd:277 lib/pol_cmd:278
 #, sh-format
 msgid "Press: "
-msgstr ""
+msgstr "Tryk: "
 
 #. "" TRANSLATOR: "Type: " as in "type a number"
 #. (not a single key). e.g: 'Type: 12 for entry: ....'
@@ -1223,17 +1269,17 @@ msgstr "Type: "
 #: lib/pol_cmd:191 lib/pol_cmd:210 lib/pol_cmd:303 lib/pol_cmd:324
 #, sh-format
 msgid "Waiting: "
-msgstr ""
+msgstr "Venter: "
 
 #: lib/pol_cmd:267
 #, sh-format
 msgid "to confirm your choices."
-msgstr ""
+msgstr "for at bekræfte dit valg."
 
 #: lib/pol_cmd:383
 #, sh-format
 msgid "Oops, no application installed!"
-msgstr ""
+msgstr "Hovsa, intet program installeret!"
 
 #: lib/pol_cmd:399 python/guiv3.py:565
 #, sh-format
@@ -1256,27 +1302,27 @@ msgstr "PlayOnLinux guide"
 #: lib/pol_cmd:399 python/guiv3.py:563
 #, sh-format
 msgid "Would you like a shortcut for: "
-msgstr ""
+msgstr "Ønsker du en genvej til: "
 
 #: lib/pol_cmd:489
 #, sh-format
 msgid "Type: '1' if you agree or '2' if you do not. Your answer: "
-msgstr ""
+msgstr "Tast: '1' hvis du er enig eller '2' hvis du ikke er. Dit svar: "
 
 #: lib/pol_cmd:504
 #, sh-format
 msgid "Type: '1' for continue or '2' to cancel. Your answer: "
-msgstr ""
+msgstr "Tast: '1' hvis du er enig eller '2' hvis du ikke er. Dit svar: "
 
 #: lib/pol_cmd:516
 #, sh-format
 msgid "Press a key to continue."
-msgstr ""
+msgstr "Tryk på en taste for at fortsætte."
 
 #: lib/pol_cmd:528
 #, sh-format
 msgid "Type: '1' for Yes or '2' for No. Your answer: "
-msgstr ""
+msgstr "Tast: '1' for ja eller '2' for nej. Dit svar: "
 
 #: lib/wine:58
 #, sh-format
@@ -1291,12 +1337,12 @@ msgstr "Udført"
 #: lib/wine:189
 #, sh-format
 msgid "Setting Program Files var"
-msgstr ""
+msgstr "Sætter variablen Programmer"
 
 #: lib/wine:424 lib/wine:452
 #, sh-format
 msgid "You must choose which Wine version you want to download."
-msgstr ""
+msgstr "Du skal vælge den Wine version du ønsker at hente."
 
 #: playonlinux-cmd:52
 #, sh-format
@@ -1304,46 +1350,48 @@ msgid ""
 "This program is intended to be used by automatic scripts to manage "
 "PlayOnLinux."
 msgstr ""
+"Dette program er beregnet til at blive brugt af automatiske skripts til at "
+"håndter PlayOnLinux."
 
 #: playonlinux-cmd:54
 #, sh-format
 msgid "\tprint current version and exit."
-msgstr ""
+msgstr "\tvis aktuel version og afslut."
 
 #: playonlinux-cmd:55
 #, sh-format
 msgid "\tupdate the PlayOnLinux script repository."
-msgstr ""
+msgstr "\topdater PlayOnLinux skript-arkivet."
 
 #: playonlinux-cmd:56
 #, sh-format
 msgid "\trun an existing application."
-msgstr ""
+msgstr "\tkør et eksisterende program"
 
 #: playonlinux-cmd:57
 #, sh-format
 msgid "\tstart installing the specified script."
-msgstr ""
+msgstr "\tstart installation af det angivne skript."
 
 #: playonlinux-cmd:58
 #, sh-format
 msgid "\tperform search into the script repository."
-msgstr ""
+msgstr "\tudfør søgning i skript-arkivet."
 
 #: playonlinux-cmd:59
 #, sh-format
 msgid "\tlist software installed with PlayOnLinux."
-msgstr ""
+msgstr "\toplist software installeret med PlayOnLinux."
 
 #: playonlinux-cmd:60
 #, sh-format
 msgid "\tremove an existing application."
-msgstr ""
+msgstr "\tfjern et eksisterende program."
 
 #: playonlinux-cmd:120
 #, sh-format
 msgid "Please make sure you are connected to the Internet."
-msgstr ""
+msgstr "Sørg venligst for at du har forbindelse til internettet."
 
 #: playonlinux-cmd:130
 #, sh-format
@@ -1351,21 +1399,23 @@ msgid ""
 "The search needs an updated repository.\\nIf the results seem outdated, "
 "please run an update."
 msgstr ""
+"Søgningen kræver et opdateret arkiv.\\nHvis resultaterne virker forældede, "
+"skal du køre en opdatering."
 
 #: playonlinux-cmd:131
 #, sh-format
 msgid "Search result(s): "
-msgstr ""
+msgstr "Søgeresultat(er): "
 
 #: playonlinux-cmd:137
 #, sh-format
 msgid "Currently installed applications:"
-msgstr ""
+msgstr "Allerede installerede programmer:"
 
 #: playonlinux-pkg:36
 #, sh-format
 msgid "PlayOnLinux package manager: "
-msgstr ""
+msgstr "PlayOnLinux pakkehåndtering: "
 
 #: playonlinux-pkg:50
 #, sh-format
@@ -1375,7 +1425,7 @@ msgstr "Brug: "
 #: playonlinux-pkg:51
 #, sh-format
 msgid "\tChoose a file"
-msgstr ""
+msgstr "\tVælg en fil"
 
 #: playonlinux-pkg:51 playonlinux-pkg:52 playonlinux-pkg:53 playonlinux-pkg:54
 #, sh-format
@@ -1385,17 +1435,17 @@ msgstr " eller "
 #: playonlinux-pkg:52
 #, sh-format
 msgid "\tExtract the package"
-msgstr ""
+msgstr "\tUdpak pakken"
 
 #: playonlinux-pkg:53
 #, sh-format
 msgid "\tInstall the package"
-msgstr ""
+msgstr "\tInstaller pakken"
 
 #: playonlinux-pkg:54
 #, sh-format
 msgid "\tShow this message"
-msgstr ""
+msgstr "\tVis denne besked"
 
 #: playonlinux-pkg:58
 #, sh-format
@@ -1410,24 +1460,24 @@ msgstr "PlayOnLinux pakkehåndetering"
 #: playonlinux-pkg:74
 #, sh-format
 msgid "Unable to find the file: "
-msgstr ""
+msgstr "Kunne ikke finde filen: "
 
 #: playonlinux-pkg:80 playonlinux-pkg:97 playonlinux-pkg:103
 #: playonlinux-pkg:114 playonlinux-pkg:119
 #, sh-format
 msgid " isn't a valid PlayOnLinux package!"
-msgstr ""
+msgstr " er ikke en gyldig PlayOnLinux pakke!"
 
 #: playonlinux-pkg:80 playonlinux-pkg:97 playonlinux-pkg:103
 #: playonlinux-pkg:114 playonlinux-pkg:119
 #, sh-format
 msgid "This file: "
-msgstr ""
+msgstr "Denne fil: "
 
 #: playonlinux-pkg:110
 #, sh-format
 msgid "Extracting: "
-msgstr ""
+msgstr "Udpakker: "
 
 #: playonlinux-pkg:122
 #, sh-format
@@ -1459,7 +1509,7 @@ msgstr "Annuller"
 
 #: python/guiv3.py:269
 msgid "MiB downloaded"
-msgstr ""
+msgstr "MiB hentet"
 
 #: python/guiv3.py:536
 msgid "I Agree"
@@ -1467,7 +1517,7 @@ msgstr "Jeg accepterer"
 
 #: python/guiv3.py:559
 msgid "Create a shortcut: "
-msgstr ""
+msgstr "Opret en genvej: "
 
 #: python/install.py:83
 msgid "No description"
@@ -1519,7 +1569,7 @@ msgstr "Bedst bedømte"
 
 #: python/install.py:302
 msgid "Most downloaded"
-msgstr "Flest hentet"
+msgstr "Mest hentet"
 
 #: python/install.py:303
 msgid "Patches"
@@ -1535,19 +1585,21 @@ msgstr "Der findes en opdateret version af PlayOnLinux."
 
 #: python/mainwindow.py:54
 msgid "You do not seem to be connected to the Internet."
-msgstr ""
+msgstr "Det ser ikke ud til at du har forbindelse til Internettet."
 
 #: python/mainwindow.py:58
 msgid "Your are using a development version, be careful."
-msgstr ""
+msgstr "Du benytter en udviklingsversion, vær forsigtig."
 
 #: python/mainwindow.py:62
 msgid "You seem to be using the Offline PlayOnLinux plugin."
-msgstr ""
+msgstr "Det ser ud til at du bruger Offline PlayOnLinux udvidelsesmodulet."
 
 #: python/mainwindow.py:66
-msgid "Started with unknown message. Report a bug ASAP!"
+msgid "Internal error when starting GUI. Please file a bug report ASAP!"
 msgstr ""
+"Intern fejl ved opstart af GUI. Indberet venligst en fejlrapport snarest "
+"mulig!"
 
 #: python/mainwindow.py:89 python/mainwindow.py:190
 msgid "Run"
@@ -1571,7 +1623,7 @@ msgstr "Afslut"
 
 #: python/mainwindow.py:99
 msgid "Manage Wine versions"
-msgstr ""
+msgstr "Håndter Wine versioner"
 
 #: python/mainwindow.py:111
 msgid "PlayOnLinux debugger"
@@ -1623,7 +1675,7 @@ msgstr "Hjælp"
 
 #: python/mainwindow.py:194
 msgid "Configure this application"
-msgstr "Konfigurer denne applikation"
+msgstr "Konfigurer dette program"
 
 #: python/mainwindow.py:195
 msgid "Close all"
@@ -1631,7 +1683,7 @@ msgstr "Luk alle"
 
 #: python/mainwindow.py:253
 msgid "Open the application's directory"
-msgstr ""
+msgstr "Åbn programbiblioteket"
 
 #: python/mainwindow.py:257
 msgid "Set the icon"
@@ -1643,43 +1695,43 @@ msgstr "Lukke dette program"
 
 #: python/mainwindow.py:278
 msgid "KillApp"
-msgstr ""
+msgstr "KillApp"
 
 #: python/mainwindow.py:446
 msgid "Run your Windows programs on Linux!"
-msgstr ""
+msgstr "Kør dit Windowsprogram på Linux!"
 
 #: python/mainwindow.py:447
 msgid "Under GPL licence version 3."
-msgstr ""
+msgstr "Under GPL licens version 3"
 
 #: python/mainwindow.py:448
 msgid "Developer and Website: "
-msgstr ""
+msgstr "Udvikler og webside: "
 
 #: python/mainwindow.py:449
 msgid "Scriptors: "
-msgstr ""
+msgstr "Skrip-forfattere: "
 
 #: python/mainwindow.py:450
 msgid "Packager: "
-msgstr ""
+msgstr "Pakkeansvarlig: "
 
 #: python/mainwindow.py:452
 msgid "The following people contributed to this program: "
-msgstr ""
+msgstr "Følgende personer har bidraget til dette program: "
 
 #: python/mainwindow.py:453
 msgid "Translation made on Launchpad:"
-msgstr ""
+msgstr "Oversættelse foretaget på Launchpad:"
 
 #: python/mainwindow.py:455
 msgid "Icons are provided by the Tango Desktop Project"
-msgstr ""
+msgstr "Ikoner er leveret af Tango Desktop Projektet"
 
 #: python/message_one.py:75
 msgid "Do not alert me anymore"
-msgstr ""
+msgstr "Advar mig ikke mere"
 
 #: python/options.py:92
 msgid "Default programs"
@@ -1735,7 +1787,7 @@ msgstr "Wine"
 
 #: python/options.py:218
 msgid "Default Wine version for PlayOnLinux programs: "
-msgstr ""
+msgstr "Standard Wine version for PlayOnLinux programmer: "
 
 #: python/options.py:231
 msgid "Desktop"
@@ -1747,7 +1799,7 @@ msgstr "PlayOnLinux menu"
 
 #: python/options.py:233
 msgid "Add the PlayOnLinux menu to your panel"
-msgstr ""
+msgstr "Tilføj PlayOnLinux menuen til dit panel"
 
 #: python/options.py:236
 msgid "Desktop directory"
@@ -1771,11 +1823,11 @@ msgstr "Vælg et udvidelsesmodul"
 
 #: python/options.py:345
 msgid "Are you sure you want to install: "
-msgstr ""
+msgstr "Er du sikker pa at du ønsker at installere: "
 
 #: python/options.py:353
 msgid "Are you sure you want to delete: "
-msgstr ""
+msgstr "Er du sikker på at du ønsker at afinstallere: "
 
 #: python/options.py:374
 msgid "Disable"
@@ -1783,7 +1835,7 @@ msgstr "Deaktiver"
 
 #: python/options.py:469
 msgid "You must restart PlayOnLinux for the changes to take effect."
-msgstr ""
+msgstr "Du skal genstarte PlayOnLinux for at ændringerne kan træde i kraft."
 
 #: python/options.py:473
 msgid "PlayOnLinux Settings"
@@ -1799,27 +1851,27 @@ msgstr "Nej"
 
 #: python/telecharger.py:71
 msgid "Click Download to start."
-msgstr ""
+msgstr "Tryk på Hent for at starte."
 
 #: python/telecharger.py:76
 msgid "Please wait while the software is being downloaded..."
-msgstr ""
+msgstr "Vent venligst mens softwaren hentes..."
 
 #: python/telecharger.py:107
 msgid "Download complete"
-msgstr "Filhentning færdig"
+msgstr "Filhentning gennemført"
 
 #: python/wine_versions.py:130
 msgid "Installed Wine versions: "
-msgstr ""
+msgstr "Installerede Wine versioner : "
 
 #: python/wine_versions.py:131
 msgid "Available Wine versions: "
-msgstr ""
+msgstr "Tilgængelige Wine versioner: "
 
 #: python/wine_versions.py:139
 msgid "Wine versions"
-msgstr "Wine version"
+msgstr "Wine versioner"
 
 #: python/wine_versions.py:163 python/wine_versions.py:171
 msgid "My Applications"
@@ -1831,7 +1883,7 @@ msgstr "Version: "
 
 #: python/wine_versions.py:321
 msgid "Are you sure you want to delete Wine: "
-msgstr ""
+msgstr "Er du sikker på at du ønsker at slette Wine: "
 
 #~ msgid ""
 #~ "You don't seem to have 3D acceleration !\n"

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-19 21:49+0200\n"
-"PO-Revision-Date: 2010-09-14 19:33+0000\n"
+"POT-Creation-Date: 2010-09-24 23:13+0200\n"
+"PO-Revision-Date: 2010-09-24 22:03+0000\n"
 "Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-24 10:00+0000\n"
+"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: Advanced Configuration Plugin:11 Wine
@@ -31,31 +31,31 @@ msgstr ""
 
 #: Advanced Configuration Plugin:5 Wine
 msgid "All"
-msgstr ""
+msgstr "Too"
 
 #: Advanced Configuration Plugin:10 Wine
 msgid "Choose DirectDraw Renderer Mode?"
-msgstr ""
+msgstr "¿Escoyer el mou de renderizador DirectDraw?"
 
 #: Advanced Configuration Plugin:13 Wine
 msgid "Choose Offscreen Rendering Mode?"
-msgstr ""
+msgstr "¿Escoyer el mou de renderizador Offscreen?"
 
 #: Advanced Configuration Plugin:14 Wine
 msgid "Choose Render Target Lock Mode?"
-msgstr ""
+msgstr "¿Escoyer el mou de bloquéu del oxetu a renderizar?"
 
 #: Advanced Configuration Plugin:8 Wine
 msgid "Choose a game"
-msgstr ""
+msgstr "Escoyer un xuegu"
 
 #: Advanced Configuration Plugin:4 Wine
 msgid "Choose an option to modify"
-msgstr ""
+msgstr "Escoyer una opción a camudar"
 
 #: Advanced Configuration Plugin:12 Wine
 msgid "How much memory does your graphics board have?"
-msgstr ""
+msgstr "¿Cuánta memoria tien la tarxeta gráfica?"
 
 #: Advanced Configuration Plugin:17 Wine
 msgid "Optimisation done"
@@ -66,84 +66,92 @@ msgid ""
 "Welcome in Advanced Wine Configuration, an optimization’s system for Wine "
 "created by GNU_Raziel. If you does not know what to choose, LEAVE DEFAULTS"
 msgstr ""
+"Bienveníu a la configuración avanzada de Wine, un sistema d'optimización pa "
+"Wine creáu por GNU_Raziel. Si nun sabes qué escoyer, DEXA LO PREDETERMINAO"
 
 #: Advanced Configuration Plugin:9 Wine
 msgid "You did not select a game"
-msgstr ""
+msgstr "Nun seleicionasti un xuegu"
 
 #: Advanced Configuration Plugin:6 Wine
 msgid "You must choose a game to modify"
-msgstr ""
+msgstr "Tienes d'escoyer un xuegu a camudar"
 
 #: Capture plugin:21
 msgid "Add the PlayOnLinux logo to your video?"
-msgstr ""
+msgstr "¿Amestar el logo de PlayOnLinux al to videu?"
 
 #: Capture plugin:6
 msgid "Begin the capture of an application"
-msgstr ""
+msgstr "Entamar la captura d'una aplicación"
 
 #: Capture plugin:13
 msgid "Capture in progress..."
-msgstr ""
+msgstr "Captura en progresu..."
 
 #: Capture plugin:4
 msgid "Capture menu (OpenGL)"
-msgstr ""
+msgstr "Menú de captura (OpenGL)"
 
 #: Capture plugin:5
 msgid "Capture menu (not OpenGL)"
-msgstr ""
+msgstr "Menú de captura (non OpenGL)"
 
 #: Capture plugin:10
 msgid "Capture will begin..."
-msgstr ""
+msgstr "Entamará la captura..."
 
 #: Capture plugin:14
 msgid "Choose an action to perform"
-msgstr ""
+msgstr "Escoyer una aición a facer"
 
 #: Capture plugin:24
 msgid "Choose the video format for conversion"
-msgstr ""
+msgstr "Escoyer el formatu de videu pa la conversión"
 
 #: Capture plugin:29
 msgid "Conversion done"
-msgstr ""
+msgstr "Conversión fecha"
 
 #: Capture plugin:8
 msgid "Convert a captured file to video"
-msgstr ""
+msgstr "Convertir a viedu un ficheru capturáu"
 
 #: Capture plugin:27
 msgid ""
 "Define your encoding options \\n (leave defaults if you do not know what to "
 "do)"
 msgstr ""
+"Define les opciones de codificación \\n (dexa los valores predeterminaos si "
+"nun sabes qué facer)"
 
 #: Capture plugin:25
 msgid ""
 "Define your encoding options for pass 1 \\n (leave defaults if you do not "
 "know what to do)"
 msgstr ""
+"Define les opciones de codificación pal pasu 1 \\n (dexa los valores "
+"predeterminaos si nun sabes qué facer)"
 
 #: Capture plugin:26
 msgid ""
 "Define your encoding options for pass 2 \\n (leave defaults if you do not "
 "know what to do)"
 msgstr ""
+"Define les opciones de codificación pal pasu 2 \\n (dexa los valores "
+"predeterminaos si nun sabes qué facer)"
 
 #: Capture plugin:7
 msgid "Play a captured file"
-msgstr ""
+msgstr "Ver un ficheru capturáu"
 
 #: Capture plugin:15
 msgid "Please choose a PID capture file to play"
-msgstr ""
+msgstr "Escueye un ficheru de captura PID pa ver"
 
 #: Capture plugin:17
 msgid "Please choose a capture file to convert"
-msgstr ""
+msgstr "Escueye un ficheru de captura pa convertir"
 
 #: Capture plugin:16
 msgid "Please choose an OGV capture file to play"
@@ -188,7 +196,7 @@ msgid ""
 "Warning: For correct video encoding,\\nresolution MUST be a multiple of 16"
 msgstr ""
 
-#: Capture plugin:2
+#: Capture Detour plugin:2 plugin:4
 msgid "Which application do you want to apply the modification to?"
 msgstr ""
 
@@ -198,6 +206,19 @@ msgstr ""
 
 #: Capture plugin:18
 msgid "You must choose a capture to read"
+msgstr ""
+
+#: Detour plugin:5
+msgid "Choose an application"
+msgstr ""
+
+#: Detour plugin:6
+msgid "Operation done"
+msgstr ""
+
+#: Detour plugin:3
+msgid ""
+"Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
 msgstr ""
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
@@ -1535,7 +1556,7 @@ msgid "You seem to be using the Offline PlayOnLinux plugin."
 msgstr ""
 
 #: python/mainwindow.py:66
-msgid "Started with unknown message. Report a bug ASAP!"
+msgid "Internal error when starting GUI. Please file a bug report ASAP!"
 msgstr ""
 
 #: python/mainwindow.py:89 python/mainwindow.py:190
