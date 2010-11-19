@@ -79,7 +79,7 @@ pol_scfg()
 {
 	POL_SetupWindow_wait_next_signal "$(eval_gettext "Killing processes in the prefix...")" "$(eval_gettext "PlayOnLinux Application Configurator")"
 	wineserver -k
-	POL_SetupWindow_wait_next_signal"$(eval_gettext 'Starting specific Wine configurator')" "$(eval_gettext "PlayOnLinux Application Configurator")"
+	POL_SetupWindow_wait_next_signal "$(eval_gettext 'Starting specific Wine configurator')" "$(eval_gettext "PlayOnLinux Application Configurator")"
 	bash "$REPERTOIRE/configurations/configurators/$APP"
 }
 pol_changeicon()

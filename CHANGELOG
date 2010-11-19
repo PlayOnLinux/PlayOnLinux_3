@@ -1,4 +1,5 @@
 -> 3.8.6-dev
+- FIX: A bug in bash/polconfigurator
 - REBUILD: Template language.
 - FIX: Update translation of script responsibility
 - UPDATE: Detour to 0.5.
