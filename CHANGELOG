@@ -1,3 +1,6 @@
+-> 3.8.7-dev
+- 
+
 -> 3.8.6
 - SYNC: Translation from launchpad
 - FIX: A bug in bash/polconfigurator
