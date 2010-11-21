@@ -269,3 +269,8 @@ cdrom_md5 ()
 	fi
 
 }
+POL_SetupWindow_get_local_icon()
+{
+	convert "$HOME/.local/share/icons/$2" -geometry 32X32 "$REPERTOIRE/icones/32/$1"
+	convert "$HOME/.local/share/icons/$2" "$REPERTOIRE/icones/full_size/$1"
+}
