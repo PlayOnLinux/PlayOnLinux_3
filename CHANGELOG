@@ -1,5 +1,6 @@
 -> 3.8.7-dev
 - UPDATE: Offline PlayOnLinux to 0.4
+- FIX: bug #54. Change icon doesn't work properly
 
 -> 3.8.6
 - SYNC: Translation from launchpad

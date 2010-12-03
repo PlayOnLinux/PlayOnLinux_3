@@ -90,7 +90,8 @@ pol_changeicon()
 	    (convert "$FIRSTARGUMENT" -geometry 32X32 "$REPERTOIRE/icones/32/$APP" && (touch "$REPERTOIRE/icones/32/tmp" && sleep 1 && rm "$REPERTOIRE/icones/32/tmp")&)&
 	    exit
 	else
-	    POL_SetupWindow_browse "$(eval_gettext "Please select an icon file")" "$(eval_gettext "Icon selection")" "$HOME/.local/share/icons/"
+	    cd "$HOME/.local/share/icons/"
+	    POL_SetupWindow_browse "$(eval_gettext "Please select an icon file")" "$(eval_gettext "Icon selection")" 
 	    iconame=$(basename "$APP_ANSWER")
 	    extensionwithoutcase=${iconame##*.}
 	    extension=`echo "$extensionwithoutcase" | tr '[:upper:]' '[:lower:]'`
@@ -160,7 +161,7 @@ redirect_to_pol_configure_function()
 	elif [ "$1" = "$LNG_POLCFG $APP" ] 
 	then
 		pol_scfg
-	elif [ "$1" = "IconChange" ] 
+	elif [ "$1" = "IconChange" ] || [ "$1" = "$LNG_CHANGEICON" ]
 	then
 		pol_changeicon
 	elif [ "$1" = "$LNG_WINETRICKS" ] 
