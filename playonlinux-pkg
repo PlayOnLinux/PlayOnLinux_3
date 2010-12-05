@@ -56,7 +56,7 @@ fi
 if [ "$1" = "-b" -o "$1" = "--browse" ]
 then
 	FILE=`select_file "$(eval_gettext 'Choose a package to install')" '' 0 0 1 "$(eval_gettext 'PlayOnLinux package manager')"`
-	if [ ! $FILE = "" ]
+	if [ ! "$FILE" = "" ]
 	then
 		bash "$PLAYONLINUX/playonlinux-pkg" -i "$FILE" -g
 	fi
