@@ -307,6 +307,7 @@ construire_repertoire_personnel ()
 	mkdir "$REPERTOIRE/configurations/icones/" -p
 	mkdir "$REPERTOIRE/configurations/messages_shown/" -p
 	mkdir "$REPERTOIRE/tmp" -p
+	mkdir "$REPERTOIRE/logs" -p
 	mkdir "$REPERTOIRE/ressources" -p
 	mkdir "$REPERTOIRE/icones/full_size" -p
 	mkdir "$REPERTOIRE/WineVersions" -p

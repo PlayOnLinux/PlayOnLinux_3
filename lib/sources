@@ -28,4 +28,5 @@ then
 	source "$PLAYONLINUX/lib/wine"
 	source "$PLAYONLINUX/lib/plugins"
 	source "$PLAYONLINUX/lib/pol_cmd"
+	source "$PLAYONLINUX/lib/pol_debug"
 fi
