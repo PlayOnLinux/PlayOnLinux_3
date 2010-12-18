@@ -697,13 +697,17 @@ POL_SetupWindow_auto_shortcut()
 		echo "No internet icon..."
 		
 		mkdir -p "$REPERTOIRE/tmp/win32Icon"
-		wrestool -x "$REPERTOIRE/wineprefix/$1/drive_c/$binary_dir/$Binaire" -o "$REPERTOIRE/tmp/win32Icon" -t14
-		
 		cd "$REPERTOIRE/tmp/win32Icon"
-		win32IconName=$(ls -S *.ico | head -n 1)
-		if [ -f "$win32IconName" ]; then # L'ico est créé
-			convert ICO:"$win32IconName" -resize 32 PNG:"$REPERTOIRE/icones/32/$NOMICONE_" # On fabrique l'icone 32*32
-		fi # Si non : icone play on linux.
+		wrestool -x -t14 "$REPERTOIRE/wineprefix/$1/drive_c/$binary_dir/$Binaire" &> icons-brut
+
+		icotool -x "icons-brut" -o "$REPERTOIRE/tmp/win32Icon/"
+
+		find . -name "*32x32x32.png" > icons-list
+		find . -name "*32x32x16.png" >> icons-list
+		find . -name "*32x32x8.png" >> icons-list
+		find . -name "*32x32x4.png" >> icons-list
+		ICON_FILE=$(cat "icons-list" | head -n 1)
+		[ "$ICON_FILE" != "" ] && [ -s "$ICON_FILE" ] && cp "$ICON_FILE" "$REPERTOIRE/icones/32/$NOMICONE_"
 
 		rm -r "$REPERTOIRE/tmp/win32Icon"
 		
