@@ -44,14 +44,14 @@ POL_Debug_Header()
 	cat << EOF >> "$LOGFILE"
 PlayOnLinux debbuging tool (v$VERSION)
 -----------------------------------------------
-Debugging : $TITLE
-Date : $(Get_CurrentDate)
+Debugging: $TITLE
+Date: $(Get_CurrentDate)
 
 > uname -a
   $(uname -a)
 > lsb_release -a
   $(lsbrelease -a 2> /dev/null)
-> wine --version (Be careful, this version might not be the version used in the script ! Read the content of this file for more information)
+> wine --version (Be careful, this version might not be the version used in the script! Read the content of this file for more information)
   $(wine --version)
 > glxinfo \| grep rendering
   $(glxinfo | grep rendering 2> /dev/null)
@@ -63,11 +63,11 @@ EOF
 }
 POL_Debug_Message()
 {
-	echo "$(Get_CurrentDate) - Message : $1"
+	echo "$(Get_CurrentDate) - Message: $1"
 }
 POL_Debug_Error()
 {
-	echo "$(Get_CurrentDate) - Error : $1"
+	echo "$(Get_CurrentDate) - Error: $1"
 }
 POL_Debug_Free()
 {
