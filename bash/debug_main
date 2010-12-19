@@ -25,7 +25,7 @@ fi
 source "$PLAYONLINUX/lib/sources"
 
 # $1 = Nom de l'application
-export TITLE="$1"
+#export TITLE="$1"
 
 POL_DEBUG_TITLE="$(eval_gettext "Report a bug")"
 
@@ -51,11 +51,11 @@ else
     POL_DEBUG_TYPE_BUG="Other"
 fi
 
-POL_Debug_Init
+#POL_Debug_Init
 
-POL_Debug_Header
+#POL_Debug_Header
 
-POL_Debug_App "$POL_DEBUG_TYPE_BUG" "$POL_DEBUG_COMMENT_BUG"
+#POL_Debug_App "$POL_DEBUG_TYPE_BUG" "$POL_DEBUG_COMMENT_BUG"
 
 POL_SetupWindow_message "$(eval_gettext "Bug report generated.")" "$POL_DEBUG_TITLE"
 
