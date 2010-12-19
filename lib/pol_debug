@@ -30,10 +30,16 @@ POL_Debug_Init()
 	then
 		echo "E. TITLE variable not set."
 	else
-		mkdir -p $POL_LOGS/$TITLE_$(date +%s)/$TITLE_$(date +%s)
-		DEBUGGING="$POL_LOGS/$TITLE_$(date +%s)/"
-		LOGFILE="$DEBUGGING/$TITLE_$(date +%s).log"
+		LOGTITLE="${TITLE}_$(date +%s)"
+		mkdir -p $POL_LOGS/$LOGTITLE
+		DEBUGGING="$POL_LOGS/$LOGTITLE/"
+		LOGFILE="$DEBUGGING/$LOGTITLE.log"
 	fi
+}
+POL_Debug_Package()
+{
+	cd "$POL_LOGS"
+	tar czvf "$LOGTITLE.tar.bz2" $LOGTITLE
 }
 POL_Debug_Header()
 {
@@ -63,17 +69,32 @@ EOF
 }
 POL_Debug_Message()
 {
-	echo "$(Get_CurrentDate) - Message: $1"
+	echo "$(Get_CurrentDate) - Message: $1" >> "$LOGFILE"
 }
 POL_Debug_Error()
 {
-	echo "$(Get_CurrentDate) - Error: $1"
+	echo "$(Get_CurrentDate) - Error: $1" >> "$LOGFILE"
 }
 POL_Debug_Free()
 {
-	echo "$(Get_CurrentDate) - $1"
+	echo "$(Get_CurrentDate) - $1" >> "$LOGFILE"
 }
-
+POL_Debug_lspci()
+{
+	lspci > "$DEBUGGING/lspci.log"
+}
+POL_Debug_cpuinfo()
+{
+	cat /proc/cpuinfo > "$DEBUGGING/cpuinfo.log"
+}
+POL_Debug_glxinfo()
+{
+	glxinfo > "$DEBUGGING/glxinfo.log"
+}
+POL_Debug_MarkShortcut()
+{
+	echo "#DebugMark-$LOGTITLE"
+}
 POL_Debug_App()
 {
     cat << EOF >> "$LOGFILE"

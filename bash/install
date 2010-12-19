@@ -87,6 +87,7 @@ then
 		wget "$SITE/V3_data/repository/get_file.php?version=playonlinux-$VERSION&id=$menu" -O $REPERTOIRE/install -q
 		if [ -e "$REPERTOIRE/install" ]
 		then
+			export TITLE="$menu"
 			bash $REPERTOIRE/install
 		fi
 	fi
