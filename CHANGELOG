@@ -4,12 +4,9 @@
 - FIX: bug #61. Launcher didn't work on Ubuntu 10.04+.
 - FIX: bug #81
 - ADD: POL_Debug
-- FIX: bug #88
 - FIX: bug #85
 - FIX: bug #81.
-- ADD: POL_Debug.
 - ADD: GUI for help bug report creation.
-- FIX: bug #88.
 
 -> 3.8.6
 - SYNC: Translation from launchpad
