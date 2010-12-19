@@ -26,7 +26,7 @@ Get_CurrentDate()
 }
 POL_Debug_Init()
 {
-	if [ "$TTILE" = "" ]
+	if [ "$TITLE" = "" ]
 	then
 		echo "E. TITLE variable not set."
 	else
