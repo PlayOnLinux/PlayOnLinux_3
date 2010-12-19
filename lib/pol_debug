@@ -73,3 +73,15 @@ POL_Debug_Free()
 {
 	echo "$(Get_CurrentDate) - $1"
 }
+
+POL_Debug_App()
+{
+    cat << EOF >> "$LOGFILE"
+Debugging application: $TITLE
+Date: $(Get_CurrentDate)
+
+Type bug: $1
+
+Comment: $2
+EOF
+}
