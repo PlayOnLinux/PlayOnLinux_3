@@ -2,17 +2,14 @@
 - UPDATE: Offline PlayOnLinux to 0.4
 - FIX: bug #54. Change icon doesn't work properly
 - FIX: bug #61. Launcher didn't work on Ubuntu 10.04+.
-<<<<<<< HEAD
 - FIX: bug #81
 - ADD: POL_Debug
 - FIX: bug #88
 - FIX: bug #85
-=======
 - FIX: bug #81.
 - ADD: POL_Debug.
 - ADD: GUI for help bug report creation.
 - FIX: bug #88.
->>>>>>> fc552a8fbce544c1f3c2cd1c16d8499a730ee1e0
 
 -> 3.8.6
 - SYNC: Translation from launchpad
