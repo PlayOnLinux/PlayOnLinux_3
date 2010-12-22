@@ -1,4 +1,5 @@
 -> 3.8.7-dev
+- UPDATE: Translation, sync with launchpad.
 - UPDATE: Offline PlayOnLinux to 0.4
 - FIX: bug #54. Change icon doesn't work properly.
 - FIX: bug #61. Launcher didn't work on Ubuntu 10.04+.

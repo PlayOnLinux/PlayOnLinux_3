@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-24 23:13+0200\n"
-"PO-Revision-Date: 2010-11-02 18:19+0000\n"
+"POT-Creation-Date: 2010-12-19 14:46+0100\n"
+"PO-Revision-Date: 2010-11-20 01:35+0000\n"
 "Last-Translator: Svetoslav Stefanov <svetlisashkov@yahoo.com>\n"
 "Language-Team: Svetoslav Stefanov <lfu.project@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2010-12-22 21:01+0000\n"
+"X-Generator: Launchpad (build 12138)\n"
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -328,12 +328,12 @@ msgstr ""
 msgid "Assign a Wine version to a program"
 msgstr "Определяне на версия на Wine за приложение"
 
-#: bash/LiveInstall:129 bash/polconfigurator:118
+#: bash/LiveInstall:129 bash/polconfigurator:119
 #, sh-format
 msgid "Use WineTricks"
 msgstr "Използване на WineTricks"
 
-#: bash/LiveInstall:130 bash/LiveInstall:164 bash/polconfigurator:109
+#: bash/LiveInstall:130 bash/LiveInstall:164 bash/polconfigurator:110
 #: python/mainwindow.py:245 python/mainwindow.py:275
 #, sh-format
 msgid "Configure Wine"
@@ -469,6 +469,59 @@ msgstr "Вие сте в в режим извън мрежа"
 msgid "The PlayOnLinux repository needs to be updated."
 msgstr "Хранилището на PlayOnLinux трябва да бъде обновено."
 
+#: bash/debug_main:30
+#, sh-format
+msgid "Report a bug"
+msgstr ""
+
+#: bash/debug_main:34
+#, sh-format
+msgid ""
+"This wizard can report a bug in an application officially supported by "
+"PlayOnLinux."
+msgstr ""
+
+#: bash/debug_main:36 bash/debug_main:48
+#, sh-format
+msgid "Error message"
+msgstr ""
+
+#: bash/debug_main:36 bash/debug_main:44
+#, sh-format
+msgid "Graphic problem"
+msgstr ""
+
+#: bash/debug_main:36 lib/interface_v3:851 lib/wine:225 lib/wine:235
+#: lib/wine:241 python/install.py:276 python/options.py:114
+#, sh-format
+msgid "Other"
+msgstr "Друго"
+
+#: bash/debug_main:36 bash/debug_main:42
+#, sh-format
+msgid "The application does not start"
+msgstr ""
+
+#: bash/debug_main:36 bash/debug_main:46
+#, sh-format
+msgid "Unable to use a feature"
+msgstr ""
+
+#: bash/debug_main:36
+#, sh-format
+msgid "What type of problem occurs?"
+msgstr ""
+
+#: bash/debug_main:39
+#, sh-format
+msgid "Problem description:"
+msgstr ""
+
+#: bash/debug_main:60
+#, sh-format
+msgid "Bug report generated."
+msgstr ""
+
 #: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
 #, sh-format
 msgid "Run a local script"
@@ -572,7 +625,7 @@ msgstr "Убиване на процесите в представката..."
 #: bash/polconfigurator:52 bash/polconfigurator:54 bash/polconfigurator:59
 #: bash/polconfigurator:61 bash/polconfigurator:66 bash/polconfigurator:68
 #: bash/polconfigurator:73 bash/polconfigurator:75 bash/polconfigurator:80
-#: bash/polconfigurator:82 bash/polconfigurator:137 bash/polconfigurator:192
+#: bash/polconfigurator:82 bash/polconfigurator:138 bash/polconfigurator:193
 #, sh-format
 msgid "PlayOnLinux Application Configurator"
 msgstr "Конфигуратор на приложения на PlayOnLinux"
@@ -607,67 +660,67 @@ msgstr "Стартиране на приставката WineTricks"
 msgid "Starting specific Wine configurator"
 msgstr "Стартиране на определен конфигуратор на Wine"
 
-#: bash/polconfigurator:93
+#: bash/polconfigurator:94
 #, sh-format
 msgid "Icon selection"
 msgstr "Избор на икона"
 
-#: bash/polconfigurator:93
+#: bash/polconfigurator:94
 #, sh-format
 msgid "Please select an icon file"
 msgstr "Моля изберете икона"
 
-#: bash/polconfigurator:100
+#: bash/polconfigurator:101
 #, sh-format
 msgid "Bad file extension"
 msgstr "Лошо разширение на файл"
 
-#: bash/polconfigurator:100
+#: bash/polconfigurator:101
 #, sh-format
 msgid "is not an icon extension"
 msgstr "не е разширение на икона"
 
-#: bash/polconfigurator:110 python/mainwindow.py:249 python/mainwindow.py:284
+#: bash/polconfigurator:111 python/mainwindow.py:249 python/mainwindow.py:284
 #, sh-format
 msgid "Registry Editor"
 msgstr "Редактор на регистъра"
 
-#: bash/polconfigurator:111
+#: bash/polconfigurator:112
 #, sh-format
 msgid "Kill all prefix processes"
 msgstr "Убиване на всички процеси на представката"
 
-#: bash/polconfigurator:112
+#: bash/polconfigurator:113
 #, sh-format
 msgid "Update wineprefix"
 msgstr "Обновяване на представката на Wine"
 
-#: bash/polconfigurator:113
+#: bash/polconfigurator:114
 #, sh-format
 msgid "Simulate Windows reboot"
 msgstr "Симулиране на рестартиране на Windows"
 
-#: bash/polconfigurator:114
+#: bash/polconfigurator:115
 #, sh-format
 msgid "Use Advanced Wine Configuration plugin"
 msgstr "Използване на приставката Разширени настройки на Wine"
 
-#: bash/polconfigurator:115
+#: bash/polconfigurator:116
 #, sh-format
 msgid "Use PlayOnLinux's configurator for"
 msgstr "Използване на конфигуратора на PlayOnLinux за"
 
-#: bash/polconfigurator:117
+#: bash/polconfigurator:118
 #, sh-format
 msgid "Change the icon"
 msgstr "Промяна на иконата"
 
-#: bash/polconfigurator:137
+#: bash/polconfigurator:138
 #, sh-format
 msgid "Please choose an action to perform"
 msgstr "Моля изберете действие за изпълнение"
 
-#: bash/polconfigurator:192
+#: bash/polconfigurator:193
 #, sh-format
 msgid ""
 "Welcome to PlayOnLinux's Application Configurator.\\nThis wizard will help "
@@ -676,7 +729,7 @@ msgstr ""
 "Добре дошли в Конфигуратора на приложения на PlayOnLinux.\\nТози помощник ще "
 "ви помогне да конфигурирате: "
 
-#: bash/polconfigurator:192
+#: bash/polconfigurator:193
 #, sh-format
 msgid ""
 "\\n\\nBe careful! PlayOnLinux will need to kill all the programs running in "
@@ -685,7 +738,7 @@ msgstr ""
 "\\n\\nБъдете внимателни! PlayOnLinux ще трябва да убие всички програми, "
 "изпълнявани в тази представка!"
 
-#: bash/polconfigurator:192
+#: bash/polconfigurator:193
 #, sh-format
 msgid "\\n\\nThe following Wine prefix will be updated: "
 msgstr "\\n\\nСледната представка на Wine ще бъде обновена: "
@@ -790,7 +843,7 @@ msgstr "Версия на Wine, използвана от PlayOnLinux: "
 msgid "Free space on your hard drives:"
 msgstr "Свободно място на вашите твърди дискове:"
 
-#: bash/uninstall:38 bash/uninstall:49 bash/uninstall:53 lib/applications:245
+#: bash/uninstall:38 bash/uninstall:49 bash/uninstall:53 lib/applications:246
 #, sh-format
 msgid "PlayOnLinux Uninstaller"
 msgstr "Деинсталатор на PlayOnLinux"
@@ -800,7 +853,7 @@ msgstr "Деинсталатор на PlayOnLinux"
 msgid "This wizard will help you uninstall: "
 msgstr "Този помощник ще ви помогне да деинсталирате: "
 
-#: bash/uninstall:49 lib/applications:245
+#: bash/uninstall:49 lib/applications:246
 #, sh-format
 msgid "Uninstalling..."
 msgstr "Деинсталиране..."
@@ -825,22 +878,22 @@ msgstr "Грешка"
 msgid "The program you want to run isn't installed: "
 msgstr "Програмата, която желаете да изпълните, не е инсталирана: "
 
-#: lib/applications:158
+#: lib/applications:159
 #, sh-format
 msgid "Shortcut creation"
 msgstr "Създаване на препратка"
 
-#: lib/applications:159
+#: lib/applications:160
 #, sh-format
 msgid "Would you like a shortcut on your desktop?"
 msgstr "Ще желаете ли препратка на работния си плот?"
 
-#: lib/applications:165
+#: lib/applications:166
 #, sh-format
 msgid "Would you like a shortcut in your menu?"
 msgstr "Ще желаете ли препратка в менюто си?"
 
-#: lib/applications:243
+#: lib/applications:244
 #, sh-format
 msgid "Do you want to delete the prefix: "
 msgstr "Желаете ли да изтриете представката: "
@@ -895,7 +948,7 @@ msgstr "Съобщение"
 #: lib/interface:69 lib/interface:122 lib/interface:173 lib/interface:223
 #: lib/interface:379 lib/interface:452 lib/interface:511 lib/interface:684
 #: python/champ.py:49 python/file.py:67 python/message_one.py:76
-#: python/telecharger.py:104
+#: python/new_guiv3.py:91 python/telecharger.py:104
 #, sh-format
 msgid "Next"
 msgstr "Напред"
@@ -921,6 +974,7 @@ msgid "Please make a choice"
 msgstr "Моля направете избор"
 
 #: lib/interface:600 python/file.py:69 python/guiv3.py:371
+#: python/new_guiv3.py:94
 #, sh-format
 msgid "Browse"
 msgstr "Разглеждане"
@@ -986,10 +1040,9 @@ msgstr "Добре дошли в Помощника за инсталиране 
 #: lib/interface_v3:45
 #, sh-format
 msgid ""
-"\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
+"\\n\\nPlayOnLinux is not responsible for the anything that might happen as a "
+"result of using these scripts.\\n\\n"
 msgstr ""
-"\\n\\nPlayOnLinux не носи отговорност за начина, по който използвате тези "
-"скриптове.\\n\\n"
 
 #: lib/interface_v3:291
 #, sh-format
@@ -1023,43 +1076,37 @@ msgstr "Моля изчакайте докато се създава предс�
 msgid "Wine prefix configuration"
 msgstr "Настройка на представката на Wine"
 
-#: lib/interface_v3:831
+#: lib/interface_v3:828
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr "Моля изчакайте докато PlayOnLinux симулира рестартиране на Windows"
 
-#: lib/interface_v3:853 lib/wine:235 lib/wine:243
+#: lib/interface_v3:850 lib/wine:235 lib/wine:243
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr "Къде е монтиран CD-ROM носителят?"
 
-#: lib/interface_v3:854 lib/wine:225 lib/wine:235 lib/wine:241
-#: python/install.py:276 python/options.py:114
-#, sh-format
-msgid "Other"
-msgstr "Друго"
-
-#: lib/interface_v3:877 lib/wine:293
+#: lib/interface_v3:874 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr "Грешка: CD-ROM носителят не може да бъде открит!"
 
-#: lib/interface_v3:898
+#: lib/interface_v3:895
 #, sh-format
 msgid "Unable to find version: "
 msgstr "Версията не може да бъде открита: "
 
-#: lib/interface_v3:904 lib/interface_v3:905
+#: lib/interface_v3:901 lib/interface_v3:902
 #, sh-format
 msgid "Downloading Wine: "
 msgstr "Изтегляне на Wine: "
 
-#: lib/interface_v3:915
+#: lib/interface_v3:912
 #, sh-format
 msgid "The download seems to have failed."
 msgstr "Изглежда, че изтеглянето се провали."
 
-#: lib/interface_v3:917
+#: lib/interface_v3:914
 #, sh-format
 msgid "Extracting Wine..."
 msgstr "Извличане на Wine..."
@@ -1197,18 +1244,18 @@ msgstr ""
 msgid "Installing plugin: "
 msgstr "Инсталиране на приставка: "
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "Are you sure you want to start PlayOnLinux?"
 msgstr "Сигурни ли сте, че желаете да стартирате PlayOnLinux?"
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "PlayOnLinux is not reponsible for any damage to your system.\\n\\n"
 msgstr ""
 "PlayOnLinux не носи отговорност за никакви щети на системата ви.\\n\\n"
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid ""
 "Please note that it is very dangerous to run Wine programs as root: you are "
@@ -1217,17 +1264,17 @@ msgstr ""
 "Моля забележете, че е много опасно да изпълнявате Wine програми като "
 "администратор: така сте уязвими за вируси и други лоши неща.\\n\\n"
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "Warning!"
 msgstr "Внимание!"
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "You are running PlayOnLinux as root.\\n\\n"
 msgstr "Вие изпълнявате PlayOnLinux като администратор.\\n\\n"
 
-#: lib/main:425 lib/main:429 lib/main:433 lib/main:437 lib/main:441
+#: lib/main:426 lib/main:430 lib/main:434 lib/main:438 lib/main:442
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr "Тази функция е изключена в средата на PlayOnlinux."
@@ -1287,12 +1334,12 @@ msgstr "за да потвърдите изборите си."
 msgid "Oops, no application installed!"
 msgstr "Опа, няма инсталирано приложение!"
 
-#: lib/pol_cmd:399 python/guiv3.py:565
+#: lib/pol_cmd:399 python/guiv3.py:565 python/new_guiv3.py:114
 #, sh-format
 msgid "In your menu"
 msgstr "Във вашето меню"
 
-#: lib/pol_cmd:399 python/guiv3.py:564
+#: lib/pol_cmd:399 python/guiv3.py:564 python/new_guiv3.py:113
 #, sh-format
 msgid "On your desktop"
 msgstr "На вашия плот"
@@ -1503,21 +1550,22 @@ msgstr "Стъпка"
 
 #: python/attendre.py:47 python/champ.py:28 python/file.py:46
 #: python/guiv3.py:269 python/menu.py:45 python/message.py:50
-#: python/question.py:45 python/telecharger.py:53 python/telecharger.py:123
+#: python/new_guiv3.py:277 python/question.py:45 python/telecharger.py:53
+#: python/telecharger.py:123
 msgid "of"
 msgstr "от"
 
 #: python/attendre.py:82 python/champ.py:53 python/file.py:71
 #: python/menu.py:78 python/message.py:74 python/message_one.py:79
-#: python/telecharger.py:79
+#: python/new_guiv3.py:90 python/telecharger.py:79
 msgid "Cancel"
 msgstr "Отказ"
 
-#: python/guiv3.py:269
+#: python/guiv3.py:269 python/new_guiv3.py:277
 msgid "MiB downloaded"
 msgstr "MiB изтеглени"
 
-#: python/guiv3.py:536
+#: python/guiv3.py:536 python/new_guiv3.py:98
 msgid "I Agree"
 msgstr "Съгласен съм"
 
@@ -1739,6 +1787,26 @@ msgstr "Иконите са предоставени от проекта Tango"
 msgid "Do not alert me anymore"
 msgstr "Да не се показва отново"
 
+#: python/new_guiv3.py:79
+msgid "PlayOnMac Wizard"
+msgstr ""
+
+#: python/new_guiv3.py:92 python/question.py:67
+msgid "No"
+msgstr "Не"
+
+#: python/new_guiv3.py:93 python/question.py:66
+msgid "Yes"
+msgstr "Да"
+
+#: python/new_guiv3.py:568
+msgid "Create a shortcut :"
+msgstr ""
+
+#: python/new_guiv3.py:576
+msgid "Do you want a shortcut for "
+msgstr ""
+
 #: python/options.py:92
 msgid "Default programs"
 msgstr "Стандартни програми програми"
@@ -1847,14 +1915,6 @@ msgstr "Трябва да рестартирате PlayOnLinux, за да вля
 msgid "PlayOnLinux Settings"
 msgstr "Настройки на PlayOnLinux"
 
-#: python/question.py:66
-msgid "Yes"
-msgstr "Да"
-
-#: python/question.py:67
-msgid "No"
-msgstr "Не"
-
 #: python/telecharger.py:71
 msgid "Click Download to start."
 msgstr "Натиснете Изтегляне за начало"
@@ -1890,3 +1950,10 @@ msgstr "Версия: "
 #: python/wine_versions.py:321
 msgid "Are you sure you want to delete Wine: "
 msgstr "Сигурни ли сте, че желаете да изтриете Wine: "
+
+#, sh-format
+#~ msgid ""
+#~ "\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
+#~ msgstr ""
+#~ "\\n\\nPlayOnLinux не носи отговорност за начина, по който използвате тези "
+#~ "скриптове.\\n\\n"

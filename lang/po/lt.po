@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-24 23:13+0200\n"
-"PO-Revision-Date: 2010-11-05 10:24+0000\n"
+"POT-Creation-Date: 2010-12-19 14:46+0100\n"
+"PO-Revision-Date: 2010-11-20 00:09+0000\n"
 "Last-Translator: Sigitas Kalinas <skalinas@gmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-11-19 21:20+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Launchpad-Export-Date: 2010-12-22 21:01+0000\n"
+"X-Generator: Launchpad (build 12138)\n"
 
 #: Advanced Configuration Plugin:11 Wine
 msgid "Activate GLSL Support?"
@@ -308,12 +308,12 @@ msgstr ""
 msgid "Assign a Wine version to a program"
 msgstr "Priskirti Wine versiją programai"
 
-#: bash/LiveInstall:129 bash/polconfigurator:118
+#: bash/LiveInstall:129 bash/polconfigurator:119
 #, sh-format
 msgid "Use WineTricks"
 msgstr "Naudoti WineTricks"
 
-#: bash/LiveInstall:130 bash/LiveInstall:164 bash/polconfigurator:109
+#: bash/LiveInstall:130 bash/LiveInstall:164 bash/polconfigurator:110
 #: python/mainwindow.py:245 python/mainwindow.py:275
 #, sh-format
 msgid "Configure Wine"
@@ -449,6 +449,59 @@ msgstr "Esate režime „neprisijungęs“."
 msgid "The PlayOnLinux repository needs to be updated."
 msgstr "The PlayOnLinux saugyklą reikia atnaujinti."
 
+#: bash/debug_main:30
+#, sh-format
+msgid "Report a bug"
+msgstr ""
+
+#: bash/debug_main:34
+#, sh-format
+msgid ""
+"This wizard can report a bug in an application officially supported by "
+"PlayOnLinux."
+msgstr ""
+
+#: bash/debug_main:36 bash/debug_main:48
+#, sh-format
+msgid "Error message"
+msgstr ""
+
+#: bash/debug_main:36 bash/debug_main:44
+#, sh-format
+msgid "Graphic problem"
+msgstr ""
+
+#: bash/debug_main:36 lib/interface_v3:851 lib/wine:225 lib/wine:235
+#: lib/wine:241 python/install.py:276 python/options.py:114
+#, sh-format
+msgid "Other"
+msgstr "Kita"
+
+#: bash/debug_main:36 bash/debug_main:42
+#, sh-format
+msgid "The application does not start"
+msgstr ""
+
+#: bash/debug_main:36 bash/debug_main:46
+#, sh-format
+msgid "Unable to use a feature"
+msgstr ""
+
+#: bash/debug_main:36
+#, sh-format
+msgid "What type of problem occurs?"
+msgstr ""
+
+#: bash/debug_main:39
+#, sh-format
+msgid "Problem description:"
+msgstr ""
+
+#: bash/debug_main:60
+#, sh-format
+msgid "Bug report generated."
+msgstr ""
+
 #: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
 #, sh-format
 msgid "Run a local script"
@@ -549,7 +602,7 @@ msgstr "Užbaigti procesus prefikse"
 #: bash/polconfigurator:52 bash/polconfigurator:54 bash/polconfigurator:59
 #: bash/polconfigurator:61 bash/polconfigurator:66 bash/polconfigurator:68
 #: bash/polconfigurator:73 bash/polconfigurator:75 bash/polconfigurator:80
-#: bash/polconfigurator:82 bash/polconfigurator:137 bash/polconfigurator:192
+#: bash/polconfigurator:82 bash/polconfigurator:138 bash/polconfigurator:193
 #, sh-format
 msgid "PlayOnLinux Application Configurator"
 msgstr ""
@@ -584,74 +637,74 @@ msgstr "Paleidžiamas WineTricks įskiepis"
 msgid "Starting specific Wine configurator"
 msgstr "Paleidžiamas specifinis Wine konfigūratorius"
 
-#: bash/polconfigurator:93
+#: bash/polconfigurator:94
 #, sh-format
 msgid "Icon selection"
 msgstr "Piktogramos pasirinkimas"
 
-#: bash/polconfigurator:93
+#: bash/polconfigurator:94
 #, sh-format
 msgid "Please select an icon file"
 msgstr "Prašome pasirinkti piktogramos failą"
 
-#: bash/polconfigurator:100
+#: bash/polconfigurator:101
 #, sh-format
 msgid "Bad file extension"
 msgstr "Blogas failo plėtinys"
 
-#: bash/polconfigurator:100
+#: bash/polconfigurator:101
 #, sh-format
 msgid "is not an icon extension"
 msgstr "nėrai piktogramos plėtinys"
 
-#: bash/polconfigurator:110 python/mainwindow.py:249 python/mainwindow.py:284
+#: bash/polconfigurator:111 python/mainwindow.py:249 python/mainwindow.py:284
 #, sh-format
 msgid "Registry Editor"
 msgstr "Registro redaktorius"
 
-#: bash/polconfigurator:111
+#: bash/polconfigurator:112
 #, sh-format
 msgid "Kill all prefix processes"
 msgstr "Baigti visus prefikso procesus"
 
-#: bash/polconfigurator:112
+#: bash/polconfigurator:113
 #, sh-format
 msgid "Update wineprefix"
 msgstr "Atnaujinti wineprefiksą"
 
-#: bash/polconfigurator:113
+#: bash/polconfigurator:114
 #, sh-format
 msgid "Simulate Windows reboot"
 msgstr "Imituoti Windows perkrovą"
 
-#: bash/polconfigurator:114
+#: bash/polconfigurator:115
 #, sh-format
 msgid "Use Advanced Wine Configuration plugin"
 msgstr "Naudokite Išplėstinės Wine Konfigūracijos įskiepį"
 
-#: bash/polconfigurator:115
+#: bash/polconfigurator:116
 #, sh-format
 msgid "Use PlayOnLinux's configurator for"
 msgstr ""
 
-#: bash/polconfigurator:117
+#: bash/polconfigurator:118
 #, sh-format
 msgid "Change the icon"
 msgstr "Pakeisti piktogramą"
 
-#: bash/polconfigurator:137
+#: bash/polconfigurator:138
 #, sh-format
 msgid "Please choose an action to perform"
 msgstr "Prašome pasirinkti veiksmą, kurį norite atlikti"
 
-#: bash/polconfigurator:192
+#: bash/polconfigurator:193
 #, sh-format
 msgid ""
 "Welcome to PlayOnLinux's Application Configurator.\\nThis wizard will help "
 "you configure: "
 msgstr ""
 
-#: bash/polconfigurator:192
+#: bash/polconfigurator:193
 #, sh-format
 msgid ""
 "\\n\\nBe careful! PlayOnLinux will need to kill all the programs running in "
@@ -660,7 +713,7 @@ msgstr ""
 "\\n\\nBūkite atsargūs! PlayOnLinux reikės uždaryti visas programas, "
 "veikiančias šiame prefikse!"
 
-#: bash/polconfigurator:192
+#: bash/polconfigurator:193
 #, sh-format
 msgid "\\n\\nThe following Wine prefix will be updated: "
 msgstr ""
@@ -765,7 +818,7 @@ msgstr "Wine versija, kurią naudoja PlayOnLinux: "
 msgid "Free space on your hard drives:"
 msgstr "Laisva vieta jūsų kietuosiuose diskuose:"
 
-#: bash/uninstall:38 bash/uninstall:49 bash/uninstall:53 lib/applications:245
+#: bash/uninstall:38 bash/uninstall:49 bash/uninstall:53 lib/applications:246
 #, sh-format
 msgid "PlayOnLinux Uninstaller"
 msgstr "PlayOnLinux trynimo įrankis"
@@ -775,7 +828,7 @@ msgstr "PlayOnLinux trynimo įrankis"
 msgid "This wizard will help you uninstall: "
 msgstr "Šis vedlys jums padės pašalinti: "
 
-#: bash/uninstall:49 lib/applications:245
+#: bash/uninstall:49 lib/applications:246
 #, sh-format
 msgid "Uninstalling..."
 msgstr "Trinama..."
@@ -800,22 +853,22 @@ msgstr "Klaida"
 msgid "The program you want to run isn't installed: "
 msgstr "Programa, kurią norite paleisti yra neįdiegta: "
 
-#: lib/applications:158
+#: lib/applications:159
 #, sh-format
 msgid "Shortcut creation"
 msgstr "Nuorodos kūrimas"
 
-#: lib/applications:159
+#: lib/applications:160
 #, sh-format
 msgid "Would you like a shortcut on your desktop?"
 msgstr "Ar norėtumėt nuorodos ant darbastalio?"
 
-#: lib/applications:165
+#: lib/applications:166
 #, sh-format
 msgid "Would you like a shortcut in your menu?"
 msgstr "Ar norėtumėt nuorodos menių juostoje?"
 
-#: lib/applications:243
+#: lib/applications:244
 #, sh-format
 msgid "Do you want to delete the prefix: "
 msgstr "Ar norite pašalinti prefiksą: "
@@ -866,7 +919,7 @@ msgstr "Pranešimas"
 #: lib/interface:69 lib/interface:122 lib/interface:173 lib/interface:223
 #: lib/interface:379 lib/interface:452 lib/interface:511 lib/interface:684
 #: python/champ.py:49 python/file.py:67 python/message_one.py:76
-#: python/telecharger.py:104
+#: python/new_guiv3.py:91 python/telecharger.py:104
 #, sh-format
 msgid "Next"
 msgstr "Sekantis"
@@ -892,6 +945,7 @@ msgid "Please make a choice"
 msgstr "Prašome pasirinkti"
 
 #: lib/interface:600 python/file.py:69 python/guiv3.py:371
+#: python/new_guiv3.py:94
 #, sh-format
 msgid "Browse"
 msgstr "Naršyti"
@@ -953,9 +1007,9 @@ msgstr "Jus sveikina PlayOnLinux diegimo vedlys."
 #: lib/interface_v3:45
 #, sh-format
 msgid ""
-"\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
+"\\n\\nPlayOnLinux is not responsible for the anything that might happen as a "
+"result of using these scripts.\\n\\n"
 msgstr ""
-"\\n\\nPlayOnLinux neatsako už tai, kaip Jūs naudojatės šiais skriptais.\\n\\n"
 
 #: lib/interface_v3:291
 #, sh-format
@@ -987,43 +1041,37 @@ msgstr "Palaukite, kol kuriamas Wine prefiksas..."
 msgid "Wine prefix configuration"
 msgstr "Wine prefikso nustatymas"
 
-#: lib/interface_v3:831
+#: lib/interface_v3:828
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr "Prašome palaukti, kol PlayOnLinux imituoja Windows perkrovimą"
 
-#: lib/interface_v3:853 lib/wine:235 lib/wine:243
+#: lib/interface_v3:850 lib/wine:235 lib/wine:243
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr "Kur prijungtas jūsų CD-ROM?"
 
-#: lib/interface_v3:854 lib/wine:225 lib/wine:235 lib/wine:241
-#: python/install.py:276 python/options.py:114
-#, sh-format
-msgid "Other"
-msgstr "Kita"
-
-#: lib/interface_v3:877 lib/wine:293
+#: lib/interface_v3:874 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr "Klaida: Nepavyko rasti CD-ROM įrenginio!"
 
-#: lib/interface_v3:898
+#: lib/interface_v3:895
 #, sh-format
 msgid "Unable to find version: "
 msgstr "Nepavyko rasti versijos: "
 
-#: lib/interface_v3:904 lib/interface_v3:905
+#: lib/interface_v3:901 lib/interface_v3:902
 #, sh-format
 msgid "Downloading Wine: "
 msgstr "Atsiunčiama Wine: "
 
-#: lib/interface_v3:915
+#: lib/interface_v3:912
 #, sh-format
 msgid "The download seems to have failed."
 msgstr "Siuntimas nepavyko"
 
-#: lib/interface_v3:917
+#: lib/interface_v3:914
 #, sh-format
 msgid "Extracting Wine..."
 msgstr "Išskleidžiama Wine..."
@@ -1155,34 +1203,34 @@ msgstr "Atnaujinamas įskiepis. Ankstesnis: "
 msgid "Installing plugin: "
 msgstr "Diegiamas įskiepis: "
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "Are you sure you want to start PlayOnLinux?"
 msgstr "Ar tikrai norite paleisti PlayOnLinux?"
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "PlayOnLinux is not reponsible for any damage to your system.\\n\\n"
 msgstr "PlayOnLinux neatsako už betkokį jūsų sistemos sugadinimą.\\n\\n"
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid ""
 "Please note that it is very dangerous to run Wine programs as root: you are "
 "vulnerable to viruses and other bad stuff.\\n\\n"
 msgstr ""
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "Warning!"
 msgstr "Įspėjimas!"
 
-#: lib/main:323
+#: lib/main:324
 #, sh-format
 msgid "You are running PlayOnLinux as root.\\n\\n"
 msgstr "PlayOnLinux paleidote kaip administratorius.\\n\\n"
 
-#: lib/main:425 lib/main:429 lib/main:433 lib/main:437 lib/main:441
+#: lib/main:426 lib/main:430 lib/main:434 lib/main:438 lib/main:442
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr "Ši funkcija yra išjungta PlayOnlinux aplinkoje."
@@ -1244,12 +1292,12 @@ msgstr "patvirtinti jūsų pasirinkimą."
 msgid "Oops, no application installed!"
 msgstr "Oi, programa neįdiegta!"
 
-#: lib/pol_cmd:399 python/guiv3.py:565
+#: lib/pol_cmd:399 python/guiv3.py:565 python/new_guiv3.py:114
 #, sh-format
 msgid "In your menu"
 msgstr "Jūsų meniu"
 
-#: lib/pol_cmd:399 python/guiv3.py:564
+#: lib/pol_cmd:399 python/guiv3.py:564 python/new_guiv3.py:113
 #, sh-format
 msgid "On your desktop"
 msgstr "Jūsų darbalaukyje"
@@ -1460,21 +1508,22 @@ msgstr "Žengti"
 
 #: python/attendre.py:47 python/champ.py:28 python/file.py:46
 #: python/guiv3.py:269 python/menu.py:45 python/message.py:50
-#: python/question.py:45 python/telecharger.py:53 python/telecharger.py:123
+#: python/new_guiv3.py:277 python/question.py:45 python/telecharger.py:53
+#: python/telecharger.py:123
 msgid "of"
 msgstr "iš"
 
 #: python/attendre.py:82 python/champ.py:53 python/file.py:71
 #: python/menu.py:78 python/message.py:74 python/message_one.py:79
-#: python/telecharger.py:79
+#: python/new_guiv3.py:90 python/telecharger.py:79
 msgid "Cancel"
 msgstr "Atšaukti"
 
-#: python/guiv3.py:269
+#: python/guiv3.py:269 python/new_guiv3.py:277
 msgid "MiB downloaded"
 msgstr "MiB atsiųsta"
 
-#: python/guiv3.py:536
+#: python/guiv3.py:536 python/new_guiv3.py:98
 msgid "I Agree"
 msgstr "Sutinku"
 
@@ -1694,6 +1743,26 @@ msgstr "Ikonas suteikė Tango Desktop Project"
 msgid "Do not alert me anymore"
 msgstr ""
 
+#: python/new_guiv3.py:79
+msgid "PlayOnMac Wizard"
+msgstr ""
+
+#: python/new_guiv3.py:92 python/question.py:67
+msgid "No"
+msgstr "Ne"
+
+#: python/new_guiv3.py:93 python/question.py:66
+msgid "Yes"
+msgstr "Taip"
+
+#: python/new_guiv3.py:568
+msgid "Create a shortcut :"
+msgstr "Sukurti nuorodą :"
+
+#: python/new_guiv3.py:576
+msgid "Do you want a shortcut for "
+msgstr "Ar norėtumėte nuorodos "
+
 #: python/options.py:92
 msgid "Default programs"
 msgstr "Numatytosios programos"
@@ -1802,14 +1871,6 @@ msgstr ""
 #: python/options.py:473
 msgid "PlayOnLinux Settings"
 msgstr "PlayOnLinux nustatymai"
-
-#: python/question.py:66
-msgid "Yes"
-msgstr "Taip"
-
-#: python/question.py:67
-msgid "No"
-msgstr "Ne"
 
 #: python/telecharger.py:71
 msgid "Click Download to start."
@@ -2522,12 +2583,6 @@ msgstr "Ar esate įsitikinęs, kad norite pašalinti Wine: "
 #~ msgid "Do you really want to uninstall $delete_var ?"
 #~ msgstr "Ar tikrai norite ištrinti $delete_var ?"
 
-#~ msgid "Do you want a shortcut for "
-#~ msgstr "Ar norėtumėte nuorodos "
-
-#~ msgid "Create a shortcut :"
-#~ msgstr "Sukurti nuorodą :"
-
 #~ msgid "Click on next to start"
 #~ msgstr "Norėdami pradėti, spauskite „Toliau“"
 
@@ -2540,12 +2595,18 @@ msgstr "Ar esate įsitikinęs, kad norite pašalinti Wine: "
 #~ msgid " will be installed in "
 #~ msgstr " bus įdiegta į "
 
+#~ msgid "PlayOnLinux is not responsible of your way to use these scripts"
+#~ msgstr "PlayOnLinux neatsako už tai, kaip naudosite šiuos skriptus"
+
 #~ msgid "This assistant will help you to uninstall $delete_var."
 #~ msgstr "Šis padejėjas padės ištrinti $delete_var."
 
 #, sh-format
 #~ msgid "has been uninstalled successfully"
 #~ msgstr "buvo sėkmingai ištrinta"
+
+#~ msgid "Do you want to delete the prefix : $prefix"
+#~ msgstr "Ar norite ištrinti prefiksą : $prefix"
 
 #~ msgid "Click on next to continue"
 #~ msgstr "Norėdami tęsti, spauskite „Toliau“"
@@ -2555,6 +2616,9 @@ msgstr "Ar esate įsitikinęs, kad norite pašalinti Wine: "
 
 #~ msgid "PlayOnLinux update"
 #~ msgstr "PlayOnLinux atnaujinimas"
+
+#~ msgid "Please wait while the wine prefix is created..."
+#~ msgstr "Prašome palaukti, kol bus sukurtas wine prefiksas..."
 
 #~ msgid "Connect"
 #~ msgstr "Prisijungti"
@@ -2570,6 +2634,10 @@ msgstr "Ar esate įsitikinęs, kad norite pašalinti Wine: "
 
 #~ msgid "This wizard will help you to install a directx patch in playonlinux"
 #~ msgstr "Šis vedlys padės įdiegti directx pataisymą playonlinux"
+
+#~ msgid ""
+#~ "This wizard will help you to execute a non-official PlayOnLinux Script"
+#~ msgstr "Šis vedlys padės paleisti neoficialų PlayOnLinux skriptą"
 
 #~ msgid "This name shouldn't contain spaces."
 #~ msgstr "Pavadinimas privalo neturėti tarpų."
@@ -2637,5 +2705,28 @@ msgstr "Ar esate įsitikinęs, kad norite pašalinti Wine: "
 #~ msgid "What do you want to do before installation ?"
 #~ msgstr "Ką norėtumėte padaryti prieš diegimą ?"
 
+#~ msgid "No more alert me"
+#~ msgstr "Daugiau nebeperspėti manęs"
+
 #~ msgid "Please choose an action"
 #~ msgstr "Prašome pasirinkti veiksmą"
+
+#~ msgid "Do you want to create a shortcut to the application in PlayOnLinux ?"
+#~ msgstr "Ar norite sukurti programos nuorodą?"
+
+#~ msgid "Version :"
+#~ msgstr "Versija :"
+
+#, sh-format
+#~ msgid "Search result: "
+#~ msgstr "Paieškos rezultatai: "
+
+#, sh-format
+#~ msgid "List of software currently installed:"
+#~ msgstr "Šiuo metu įdiegtos programinės įrangos sąrašas:"
+
+#, sh-format
+#~ msgid ""
+#~ "\\n\\nPlayOnLinux is not responsible for the way you use these scripts.\\n\\n"
+#~ msgstr ""
+#~ "\\n\\nPlayOnLinux neatsako už tai, kaip Jūs naudojatės šiais skriptais.\\n\\n"
