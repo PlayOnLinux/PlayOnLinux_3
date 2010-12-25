@@ -550,3 +550,58 @@ EOF
 	wine regedit "$REG"
 	rm -f "$REG"
 }
+
+POL_Winetricks()
+{
+    # Chaines gettext utilisées :
+    # "Choose an application"
+    # "You did not select a game"
+    # "Please wait..."
+    # "You must choose a component to be installed"   NEW
+    # "Error during the execution of winetricks"   NEW
+    # "Please choose components to be installed"   NEW
+
+    # Empêcher winetricks d'utiliser la commande sudo et variantes
+    export -f sudo
+    export -f gksudo
+    export -f kdesudo
+    
+    WT_OLD_PWD="$(pwd)"
+    cd "$REPERTOIRE/tmp"
+    
+    [ -e "$REPERTOIRE/tmp/winetricks" ] && rm "$REPERTOIRE/tmp/winetricks"
+
+    POL_SetupWindow_download "$(eval_gettext "Please wait...")" "Winetricks" "http://www.kegel.com/wine/winetricks"
+
+    # Récupération de la liste des fonctions winetricks possibles
+    WT_LISTE_FUNCTIONS="$(bash winetricks --help)"
+    WT_LISTE_FUNCTIONS=${WT_LISTE_FUNCTIONS##*Packages\:}
+    WT_LISTE_FUNCTIONS="$(echo "$WT_LISTE_FUNCTIONS" | sed 's/ \([^[:space:]]*\).*/\1/g' | sed '/Pseudopackages:/d' | sed '/^$/d' | tr "[:space:]" " ")"
+    WT_LISTE_FUNCTIONS=${WT_LISTE_FUNCTIONS% *}
+
+    # Pas de préfixe sélectionné
+    if [ "$WINEPREFIX" = "" ]; then
+        POL_SetupWindow_games "$(eval_gettext "Choose an application")" "Winetricks" "$WT_LISTE_FUNCTIONS" " "
+        [ "$APP_ANSWER" = "" ] && POL_SetupError "$(eval_gettext "You did not select a game")"
+        WINEPREFIX=$(detect_wineprefix "$APP_ANSWER")
+    fi
+
+    # Pas d'arguments
+    if [ "$1" = "" ]; then
+        POL_SetupWindow_checkbox_list "$(eval_gettext "Please choose components to be installed")" "Winetricks" "$WT_LISTE_FUNCTIONS" " "
+        [ "$APP_ANSWER" = "" ] && POL_SetupError "$(eval_gettext "You must choose a component to be installed")"
+        WT_ARGS_RUN="$APP_ANSWER"
+    else
+        WT_ARGS_RUN="$@"
+    fi
+
+    POL_SetupWindow_wait_next_signal "$(eval_gettext "Please wait...")" "Winetricks"
+    bash winetricks $WT_ARGS_RUN
+    WT_RETVAL="$?"
+    POL_SetupWindow_detect_exit
+    [ "$WT_RETVAL" -ne 0 ] && POL_SetupError "$(eval_gettext "Error during the execution of winetricks")"
+
+    rm "$REPERTOIRE/tmp/winetricks"
+    
+    cd "$WT_OLD_PWD"
+}

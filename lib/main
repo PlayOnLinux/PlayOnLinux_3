@@ -421,26 +421,69 @@ check_new_pol ()
 	fi
 	return $retVal
 }
+
 sudo ()
 {
 	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
 }
 gksudo ()
 {
 	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
 }
 gksu ()
 {
 	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
 }
 su ()
 {
 	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
 }
 kdesu ()
 {
 	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
 }
+kdesudo ()
+{
+    echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
+}
+
+/usr/bin/sudo ()
+{
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
+}
+/usr/bin/gksudo ()
+{
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
+}
+/usr/bin/gksu ()
+{
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
+}
+/usr/bin/su ()
+{
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
+}
+/usr/bin/kdesu ()
+{
+	echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
+}
+/usr/bin/kdesudo ()
+{
+    echo "$(eval_gettext "This function is disabled in the PlayOnlinux environment.")"
+	return 1
+}
+
 RefreshLibs()
 {
 	source "$PLAYONLINUX/lib/sources"
