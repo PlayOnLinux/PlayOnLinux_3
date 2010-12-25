@@ -571,7 +571,7 @@ POL_Winetricks()
     
     [ -e "$REPERTOIRE/tmp/winetricks" ] && rm "$REPERTOIRE/tmp/winetricks"
 
-    POL_SetupWindow_download "$(eval_gettext "Please wait...")" "Winetricks" "http://www.kegel.com/wine/winetricks"
+    POL_SetupWindow_download "$(eval_gettext "Please wait...")" "$TITLE" "http://www.kegel.com/wine/winetricks"
 
     # Récupération de la liste des fonctions winetricks possibles
     WT_LISTE_FUNCTIONS="$(bash winetricks --help)"
@@ -581,21 +581,21 @@ POL_Winetricks()
 
     # Pas de préfixe sélectionné
     if [ "$WINEPREFIX" = "" ]; then
-        POL_SetupWindow_games "$(eval_gettext "Choose an application")" "Winetricks"
+        POL_SetupWindow_games "$(eval_gettext "Choose an application")" "$TITLE"
         [ "$APP_ANSWER" = "" ] && POL_SetupError "$(eval_gettext "You did not select a game")"
         WINEPREFIX=$(detect_wineprefix "$APP_ANSWER")
     fi
 
     # Pas d'arguments
     if [ "$1" = "" ]; then
-        POL_SetupWindow_checkbox_list "$(eval_gettext "Please choose components to be installed")" "Winetricks" "$WT_LISTE_FUNCTIONS" " "
+        POL_SetupWindow_checkbox_list "$(eval_gettext "Please choose components to be installed")" "$TITLE" "$WT_LISTE_FUNCTIONS" " "
         [ "$APP_ANSWER" = "" ] && POL_SetupError "$(eval_gettext "You must choose a component to be installed")"
         WT_ARGS_RUN="$APP_ANSWER"
     else
         WT_ARGS_RUN="$@"
     fi
 
-    POL_SetupWindow_wait_next_signal "$(eval_gettext "Please wait...")" "Winetricks"
+    POL_SetupWindow_wait_next_signal "$(eval_gettext "Please wait...")" "$TITLE"
     bash winetricks $WT_ARGS_RUN
     WT_RETVAL="$?"
     POL_SetupWindow_detect_exit
