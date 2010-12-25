@@ -1,5 +1,6 @@
 -> 3.8.8-dev
 - ADD: POL_Winetricks
+- UPDATE: Template for translation, no sync with launchpad.
 
 -> 3.8.7
 - UPDATE: Translation, sync with launchpad.
