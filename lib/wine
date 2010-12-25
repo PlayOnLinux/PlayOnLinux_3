@@ -581,7 +581,7 @@ POL_Winetricks()
 
     # Pas de préfixe sélectionné
     if [ "$WINEPREFIX" = "" ]; then
-        POL_SetupWindow_games "$(eval_gettext "Choose an application")" "Winetricks" "$WT_LISTE_FUNCTIONS" " "
+        POL_SetupWindow_games "$(eval_gettext "Choose an application")" "Winetricks"
         [ "$APP_ANSWER" = "" ] && POL_SetupError "$(eval_gettext "You did not select a game")"
         WINEPREFIX=$(detect_wineprefix "$APP_ANSWER")
     fi
