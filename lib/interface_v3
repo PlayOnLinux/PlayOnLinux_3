@@ -50,11 +50,13 @@ POL_SetupWindow_free_presentation ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_free_presentation "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 MsgIn
 free_presentation
 $1
 $2
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -75,11 +77,13 @@ POL_SetupWindow_message ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_message "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 MsgIn
 message
 $1
 $2
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -114,12 +118,14 @@ POL_SetupWindow_licence ()
 		if [ "$POL_CMD" == "true" ] ; then
 			POL_CMD_licence "$@"
 		else
+			TIMESTAMP="$(date +%s)"
 			cat << EOF > "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID"
 MsgIn
 licence
 $1
 $2
 $3
+$TIMESTAMP
 EOF
 			MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 			while [ ! "$MESSAGE" = "MsgOut" ]
@@ -141,12 +147,14 @@ POL_SetupWindow_message_image ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_message_image "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 message_image
 $1
 $2
 $3
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -167,11 +175,13 @@ POL_SetupWindow_wait_next_signal ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_wait_next_signal "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 attendre_signal
 $1
 $2
+$TIMESTAMP
 EOF
 		MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
 		if [ "$MESSAGE_BIS" = "MSG_RECEIVED=Cancel" ]
@@ -185,11 +195,13 @@ POL_SetupWindow_pulsebar ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_pulsebar "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 pulsebar
 $1
 $2
+$TIMESTAMP
 EOF
 		sleep 0.2 #sleeping 0.2 GUI have to read dialog file. see bug #30
 		MESSAGE_BIS=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MSG_RECEIVED=')
@@ -230,12 +242,14 @@ POL_SetupWindow_wait ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_wait "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 attendre
 $1
 $2
 $3
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -256,6 +270,7 @@ POL_SetupWindow_download ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_download "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 download
@@ -263,6 +278,7 @@ $1
 $2
 $3
 $(pwd)/
+$TIMESTAMP
 EOF
 		sleep 0.2 #may be fix launchpad bug #392513.
 
@@ -321,12 +337,14 @@ POL_SetupWindow_textbox ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_textbox "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 champ
 $1
 $2
 $3
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -351,13 +369,15 @@ POL_SetupWindow_browse ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_browse "$@"
 	else
-	cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
+		TIMESTAMP="$(date +%s)"
+		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 browse
 $1
 $2
 $3
 $PWD
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -382,11 +402,13 @@ POL_SetupWindow_question ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_question "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 question
 $1
 $2
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -411,6 +433,7 @@ POL_SetupWindow_menu ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_menu "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 menu
@@ -418,6 +441,7 @@ $1
 $2
 $3
 $4
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -442,6 +466,7 @@ POL_SetupWindow_checkbox_list ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_checkbox_list "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 checkbox_list
@@ -449,6 +474,7 @@ $1
 $2
 $3
 $4
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -473,6 +499,7 @@ POL_SetupWindow_menu_num ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_menu_num "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 menu_num
@@ -480,6 +507,7 @@ $1
 $2
 $3
 $4
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -504,6 +532,7 @@ POL_SetupWindow_menu_list ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_menu_list "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 menu_list
@@ -512,6 +541,7 @@ $2
 $3
 $4
 $5
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
@@ -536,6 +566,7 @@ POL_SetupWindow_games ()
 	if [ "$POL_CMD" == "true" ] ; then
 		POL_CMD_games "$@"
 	else
+		TIMESTAMP="$(date +%s)"
 		cat << EOF > $REPERTOIRE/configurations/guis/$POL_SetupWindow_ID
 MsgIn
 get_games
@@ -543,6 +574,7 @@ $1
 $2
 $3
 $4
+$TIMESTAMP
 EOF
 		MESSAGE=$(cat "$REPERTOIRE/configurations/guis/$POL_SetupWindow_ID" | grep '^MsgOut$') 
 		while [ ! "$MESSAGE" = "MsgOut" ]
