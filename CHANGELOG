@@ -1,4 +1,5 @@
 -> 3.8.9-dev
+- FIX: bug #93.
 
 -> 3.8.8
 - ADD: POL_Winetricks
