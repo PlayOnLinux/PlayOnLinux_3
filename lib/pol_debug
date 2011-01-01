@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Copyright (C) 2007-2010 PlayOnLinux Team
-# Copyright (C) 2007 Pâris Quentin
-# Copyright (C) 2009 Łukasz Wojniłowicz
+# Copyright (C) 2010 Pâris Quentin
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -31,7 +30,7 @@ POL_Debug_Init()
 		echo "E. TITLE variable not set."
 	else
 		LOGTITLE="${TITLE}_$(date +%s)"
-		mkdir -p $POL_LOGS/$LOGTITLE
+		mkdir -p "$POL_LOGS/$LOGTITLE"
 		DEBUGGING="$POL_LOGS/$LOGTITLE/"
 		LOGFILE="$DEBUGGING/$LOGTITLE.log"
 	fi
@@ -39,7 +38,7 @@ POL_Debug_Init()
 POL_Debug_Package()
 {
 	cd "$POL_LOGS"
-	tar czvf "$LOGTITLE.tar.bz2" $LOGTITLE
+	tar czvf "$LOGTITLE.tar.bz2" "$LOGTITLE"
 }
 POL_Debug_Header()
 {
