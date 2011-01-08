@@ -275,3 +275,20 @@ POL_SetupWindow_get_local_icon()
 	convert "$HOME/.local/share/icons/$2" -geometry 32X32 "$REPERTOIRE/icones/32/$1"
 	convert "$HOME/.local/share/icons/$2" "$REPERTOIRE/icones/full_size/$1"
 }
+POL_GPG_install_key()
+{
+	gpg --import "$PLAYONLINUX/etc/playonlinux.gpg" > /dev/null 2> /dev/null
+}
+POL_GPG_auth_script()
+{
+POL_GPG_install_key
+FILENAME="$1"
+GPG=`awk '/^-----BEGIN PGP SIGNATURE-----/ {print NR ; exit 0; }' $FILENAME`
+
+tail -n +${GPG} "$FILENAME" > "/tmp/script.asc" 2> /dev/null
+head -n $(( GPG - 1 )) "$FILENAME" > "/tmp/script" 2> /dev/null
+
+gpg --verify "/tmp/script.asc" > /dev/null 2> /dev/null
+
+[ "$?" = "0" ] && echo "TRUE" || echo "FALSE"
+}

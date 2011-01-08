@@ -1,5 +1,6 @@
 -> 3.8.9-dev
 - FIX: bug #93.
+- Script authentification support
 
 -> 3.8.8
 - ADD: POL_Winetricks
