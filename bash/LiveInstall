@@ -25,6 +25,7 @@ fi
 source "$PLAYONLINUX/lib/sources"
 cfg_check
 
+TITLE="$(eval_gettext 'Manual installation')"
 
 create_shortcut()
 {
@@ -126,13 +127,9 @@ fi
 select_prefixe "$REPERTOIRE/wineprefix/$GAMENAME"
 
 LNG_WC_ASSWV=$(eval_gettext "Assign a Wine version to a program")
-LNG_WC_USEWT=$(eval_gettext "Use WineTricks")
 LNG_WC_CONFWINE=$(eval_gettext "Configure Wine")
-ITEMS="$LNG_WC_ASSWV~$LNG_WC_CONFWINE"
-if [ "-e" "$REPERTOIRE/plugins/WineTricks/scripts/menu" ]
-	then
-		ITEMS+="~$LNG_WC_USEWT"
-	fi
+LNG_WC_USEWT=$(eval_gettext "Use WineTricks")
+ITEMS="$LNG_WC_ASSWV~$LNG_WC_CONFWINE~$LNG_WC_USEWT"
 
 POL_SetupWindow_checkbox_list "$(eval_gettext "What would you like to do before installation?")" "$(eval_gettext 'Manual installation')" "$ITEMS" "~"
 WHATTORUNBEFORE="$APP_ANSWER"
@@ -169,7 +166,7 @@ fi
 #Running WineTricks
 if [ "$(echo $WHATTORUNBEFORE | grep -o "$LNG_WC_USEWT")" == "$LNG_WC_USEWT" ]
 then
-	bash "$REPERTOIRE/plugins/WineTricks/scripts/menu" "LiveInstall"
+	POL_Winetricks
 fi
 
 cd $HOME
