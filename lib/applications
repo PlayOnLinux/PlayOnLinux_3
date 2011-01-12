@@ -277,6 +277,9 @@ POL_SetupWindow_get_local_icon()
 }
 POL_GPG_install_key()
 {
+	#create the gnupg directory
+	mkdir -p "$GNUPGHOME"
+	#import the public key
 	gpg --import "$PLAYONLINUX/etc/playonlinux.gpg" > /dev/null 2> /dev/null
 }
 POL_GPG_auth_script()
