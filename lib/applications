@@ -289,7 +289,7 @@ FILENAME="$1"
 GPG=`awk '/^-----BEGIN PGP SIGNATURE-----/ {print NR ; exit 0; }' $FILENAME`
 
 tail -n +${GPG} "$FILENAME" > "/tmp/script.asc" 2> /dev/null
-head -n $(( GPG - 1 )) "$FILENAME" > "/tmp/script" 2> /dev/null
+head -n $(( GPG - 1 )) "$FILENAME"  | grep -v "cat << -----END PGP SIGNATURE----- > /dev/null" > "/tmp/script" 2> /dev/null
 
 gpg --verify "/tmp/script.asc" > /dev/null 2> /dev/null
 
