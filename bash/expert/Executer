@@ -24,6 +24,8 @@ fi
 source "$PLAYONLINUX/lib/sources"
 cfg_check
 
+export TITLE="$(eval_gettext "Run a local script")"
+
 cd $HOME
 POL_SetupWindow_Init "$PLAYONLINUX/etc/setups/exec/top.png" "$PLAYONLINUX/etc/setups/exec/left.jpg"
 
@@ -43,5 +45,5 @@ then
 	exit
 fi
 POL_SetupWindow_Close
-bash "$SCRIPT"
+POL_Bash "$SCRIPT"
 exit 

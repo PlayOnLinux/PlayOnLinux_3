@@ -495,7 +495,7 @@ POL_Call()
 		OLD_PC_DIR="$PWD"
 		cd "$REPERTOIRE/tmp/"
 		wget -q "$SITE/V3_data/repository/get_file.php?version=playonlinux-$VERSION&id=$1" -O- > "$1"
-		source "$@"
+		POL_Source "$@"
 		cd "$OLD_PC_DIR"
 	fi
 }
@@ -528,3 +528,37 @@ function convertVersionToInt ()
 	#echo $versionInt 1>&2
 }
 
+POL_Bash ()
+{
+	OLD_DIR="$PWD"
+	if [ "$(POL_GPG_auth_script "$1")" = "TRUE" ]
+	then
+		cd "$OLD_DIR"
+		echo "POL GPG : Good signature - $TITLE"
+		bash "$@"
+	else
+		cd "$OLD_DIR"
+		POL_SetupWindow_Init
+		POL_SetupWindow_message "Warning !!\n\nThe signature of the script you are trying to run is NOT valid\n\nPlayOnLinux has not approved this script and will not be responsible from it.\nPlease ensure you know what you are doing !" "$TITLE"
+		POL_SetupWindow_licence "Here the source code of the script. Check it carrefully" "$TITLE" "$1"
+		POL_SetupWindow_Close
+		bash "$@"
+	fi
+
+}
+POL_Source ()
+{
+	OLD_DIR="$PWD"
+	if [ "$(POL_GPG_auth_script "$1")" = "TRUE" ]
+	then
+		cd "$OLD_DIR"
+		echo "POL GPG : Good signature"
+		source "$@"
+	else
+		cd "$OLD_DIR"
+		POL_SetupWindow_message "Warning !!\n\nThe signature of the script you are trying to run is NOT valid\n\nPlayOnLinux has not approved this script and will not be responsible from it.\nPlease ensure you know what you are doing !" "$TITLE"
+		POL_SetupWindow_licence "Here the source code of the script. Check it carrefully" "POL External library" "$PWD/$1"
+		source "$@"
+	fi
+
+}

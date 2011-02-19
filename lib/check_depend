@@ -48,6 +48,8 @@ programmes_check ()
 	check_one xterm "xterm"
 	check_one convert "imagemagick"
 	check_one cabextract "cabextract" 
+	check_one cabextract "cabextract" 
+	check_one gpg "gnupg"
 	#check_one lzma "lzma"
 	manque
 }

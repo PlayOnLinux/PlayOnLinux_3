@@ -1,4 +1,4 @@
--> 3.8.9-dev
+-> 3.8.9
 - FIX: bug #93.
 - Script authentification support
 - Winetricks support in Manual Installation
