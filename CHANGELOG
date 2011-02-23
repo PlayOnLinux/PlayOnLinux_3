@@ -1,5 +1,6 @@
 -> 3.8.11-dev
 - Rebuild translation template.
+- Sync translation.
 
 -> 3.8.10
 - Fix broken packages
