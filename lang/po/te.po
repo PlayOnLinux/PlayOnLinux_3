@@ -1,16 +1,16 @@
-# translation of hu1.po to hungarian
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Telugu translation for playonlinux
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the playonlinux package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
-# Lisovszki Sándor <lisovszki@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: hu1\n"
-"Report-Msgid-Bugs-To: Tinou\n"
+"Project-Id-Version: playonlinux\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-12-26 00:06+0100\n"
-"PO-Revision-Date: 2011-02-20 12:22+0000\n"
-"Last-Translator: Papp Bence <papp.bence89@gmail.com>\n"
-"Language-Team: hungarian <mypclinuxos.com>\n"
+"PO-Revision-Date: 2011-02-04 17:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Telugu <te@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: Advanced Configuration Plugin:11 Wine
 msgid "Activate GLSL Support?"
-msgstr "Aktiváljam a GLSL Támogatást?"
+msgstr ""
 
 #: Advanced Configuration Plugin:15 Wine
 msgid "Activate Multisampling support?"
-msgstr "Aktiváljam a Multisampling támogatást?"
+msgstr ""
 
 #: Advanced Configuration Plugin:16 Wine
 msgid "Activate the mouse warp override?"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: Advanced Configuration Plugin:5 Wine
 msgid "All"
-msgstr "Összes"
+msgstr ""
 
 #: Advanced Configuration Plugin:10 Wine
 msgid "Choose DirectDraw Renderer Mode?"
@@ -47,41 +47,38 @@ msgstr ""
 
 #: Advanced Configuration Plugin:8 Wine
 msgid "Choose a game"
-msgstr "Válassz egy játékot"
+msgstr ""
 
 #: Advanced Configuration Plugin:4 Wine
 msgid "Choose an option to modify"
-msgstr "Válassz egy módosítandó opciót"
+msgstr ""
 
 #: Advanced Configuration Plugin:12 Wine
 msgid "How much memory does your graphics board have?"
-msgstr "Mennyi memóriával rendelkezik a videó kártyád?"
+msgstr ""
 
 #: Advanced Configuration Plugin:17 Wine
 msgid "Optimisation done"
-msgstr "Optimalizálás kész"
+msgstr ""
 
 #: Advanced Configuration Plugin:7 Wine
 msgid ""
 "Welcome in Advanced Wine Configuration, an optimization’s system for Wine "
 "created by GNU_Raziel. If you does not know what to choose, LEAVE DEFAULTS"
 msgstr ""
-"Üdvözöllek a Wine Konfigurálási Varázslóban,ami egy optimalizáló rendszer "
-"Wine-hoz (készítette: GNU_Raziel). Ha nem tudod, hogy mit kell választani, "
-"HAGYD ALAPÉRTELMEZETTEN"
 
 #: Advanced Configuration Plugin:9 Wine lib/wine:585
 #, sh-format
 msgid "You did not select a game"
-msgstr "Nem választottál játékot"
+msgstr ""
 
 #: Advanced Configuration Plugin:6 Wine
 msgid "You must choose a game to modify"
-msgstr "Ki kell választanod egy játékot a módosításhoz"
+msgstr ""
 
 #: Capture plugin:21
 msgid "Add the PlayOnLinux logo to your video?"
-msgstr "Hozzáadjam a PlayOnLinux logóját a videódhoz?"
+msgstr ""
 
 #: Capture plugin:6
 msgid "Begin the capture of an application"
@@ -89,19 +86,19 @@ msgstr ""
 
 #: Capture plugin:13
 msgid "Capture in progress..."
-msgstr "Felvétel folyamatban..."
+msgstr ""
 
 #: Capture plugin:4
 msgid "Capture menu (OpenGL)"
-msgstr "Menü felvétele (OpenGL)"
+msgstr ""
 
 #: Capture plugin:5
 msgid "Capture menu (not OpenGL)"
-msgstr "Menü felvétele (nem OpenGL)"
+msgstr ""
 
 #: Capture plugin:10
 msgid "Capture will begin..."
-msgstr "Felvétel el fog indulni..."
+msgstr ""
 
 #: Capture plugin:14
 msgid "Choose an action to perform"
@@ -113,7 +110,7 @@ msgstr ""
 
 #: Capture plugin:29
 msgid "Conversion done"
-msgstr "Konvertálás kész"
+msgstr ""
 
 #: Capture plugin:8
 msgid "Convert a captured file to video"
@@ -139,7 +136,7 @@ msgstr ""
 
 #: Capture plugin:7
 msgid "Play a captured file"
-msgstr "Felvett fájl lejátszása"
+msgstr ""
 
 #: Capture plugin:15
 msgid "Please choose a PID capture file to play"
@@ -226,7 +223,7 @@ msgstr ""
 #: bash/LiveInstall:185 bash/LiveInstall:195 bash/install:33
 #, sh-format
 msgid "Manual installation"
-msgstr "Kézi telepítés"
+msgstr ""
 
 #: bash/LiveInstall:31 bash/autorun:29 bash/daemon/autorun:28
 #, sh-format
@@ -273,7 +270,7 @@ msgstr ""
 #: bash/LiveInstall:92
 #, sh-format
 msgid "Install a program in a new prefix"
-msgstr "Program telepítése új előtagba (prefix)"
+msgstr ""
 
 #: bash/LiveInstall:93
 #, sh-format
@@ -283,7 +280,7 @@ msgstr ""
 #: bash/LiveInstall:94
 #, sh-format
 msgid "Delete a prefix"
-msgstr "Előtag (prefix) törlése"
+msgstr ""
 
 #: bash/LiveInstall:95
 #, sh-format
@@ -353,13 +350,13 @@ msgstr ""
 #: bash/daemon/autorun:166 bash/daemon/autorun:212 python/mainwindow.py:115
 #, sh-format
 msgid "Autorun"
-msgstr "Automatikus futtatás"
+msgstr ""
 
 #: bash/autorun:77 bash/autorun:138 bash/daemon/autorun:77
 #: bash/daemon/autorun:138
 #, sh-format
 msgid "No setup location found in autorun.inf"
-msgstr "Nem találtam telepítő útvonalat az autorun.inf-ben"
+msgstr ""
 
 #: bash/autorun:125 bash/autorun:127 bash/daemon/autorun:125
 #: bash/daemon/autorun:127
@@ -376,7 +373,7 @@ msgstr ""
 #: bash/autorun:133 bash/daemon/autorun:133
 #, sh-format
 msgid "In the following prefix"
-msgstr "A következő prefix-be"
+msgstr ""
 
 #: bash/autorun:134 bash/daemon/autorun:134
 #, sh-format
@@ -386,23 +383,23 @@ msgstr ""
 #: bash/autorun:136 bash/daemon/autorun:136
 #, sh-format
 msgid "In an existing prefix (add-on)"
-msgstr "Egy már létező prefix-be(bővítmény)"
+msgstr ""
 
 #: bash/autorun:137 bash/daemon/autorun:137
 #, sh-format
 msgid "In a new prefix"
-msgstr "Új prefix-be"
+msgstr ""
 
 #: bash/autorun:144 bash/autorun:151 bash/daemon/autorun:144
 #: bash/daemon/autorun:151
 #, sh-format
 msgid "Choose the prefix"
-msgstr "Válaszd ki a prefix-et"
+msgstr ""
 
 #: bash/autorun:163 bash/daemon/autorun:163
 #, sh-format
 msgid "PlayOnLinux is installing your application"
-msgstr "A PlayOnLinux feltelepíti az alkalmazásod"
+msgstr ""
 
 #: bash/autorun:177 bash/uninstall:38
 #, sh-format
@@ -467,7 +464,7 @@ msgstr ""
 #: lib/wine:241 python/install.py:276 python/options.py:114
 #, sh-format
 msgid "Other"
-msgstr "Egyéb"
+msgstr ""
 
 #: bash/debug_main:36 bash/debug_main:42
 #, sh-format
@@ -517,12 +514,12 @@ msgstr ""
 #: bash/expert/Executer:41
 #, sh-format
 msgid "File not found!"
-msgstr "Fájl nem található!"
+msgstr ""
 
 #: bash/expert/kill_wineserver:28 bash/expert/kill_wineserver:30
 #, sh-format
 msgid "Kill wineserver process"
-msgstr "Wineserver folyamat megölése"
+msgstr ""
 
 #: bash/expert/kill_wineserver:28
 #, sh-format
@@ -536,17 +533,17 @@ msgstr ""
 #: bash/expert/kill_wineserver:30
 #, sh-format
 msgid "Wineserver killed"
-msgstr "Wineszerver kilőve"
+msgstr ""
 
 #: bash/install:34
 #, sh-format
 msgid "Install a .pol package"
-msgstr ".pol csomag telepítése"
+msgstr ""
 
 #: bash/install:35
 #, sh-format
 msgid "Installation wizard"
-msgstr "Telepítő varázsló"
+msgstr ""
 
 #: bash/install:36
 #, sh-format
@@ -578,7 +575,7 @@ msgstr ""
 #: lib/wine:598
 #, sh-format
 msgid "Please wait..."
-msgstr "Kis türelmet..."
+msgstr ""
 
 #: bash/polconfigurator:29 bash/polconfigurator:40 bash/polconfigurator:52
 #: bash/polconfigurator:59 bash/polconfigurator:66 bash/polconfigurator:73
@@ -609,7 +606,7 @@ msgstr ""
 #: bash/polconfigurator:61 lib/wine:31
 #, sh-format
 msgid "Simulating Windows reboot"
-msgstr "Windows újraindítás szimulálása"
+msgstr ""
 
 #: bash/polconfigurator:68
 #, sh-format
@@ -649,7 +646,7 @@ msgstr ""
 #: bash/polconfigurator:111 python/mainwindow.py:249 python/mainwindow.py:284
 #, sh-format
 msgid "Registry Editor"
-msgstr "Registry Szerkesztő"
+msgstr ""
 
 #: bash/polconfigurator:112
 #, sh-format
@@ -758,7 +755,7 @@ msgstr ""
 #: bash/system_info:86
 #, sh-format
 msgid "System information:"
-msgstr "Rendszer információ:"
+msgstr ""
 
 #: bash/system_info:89
 #, sh-format
@@ -808,7 +805,7 @@ msgstr ""
 #: bash/uninstall:38 bash/uninstall:49 bash/uninstall:53 lib/applications:246
 #, sh-format
 msgid "PlayOnLinux Uninstaller"
-msgstr "Program eltávolító"
+msgstr ""
 
 #: bash/uninstall:38
 #, sh-format
@@ -818,7 +815,7 @@ msgstr ""
 #: bash/uninstall:49 lib/applications:246
 #, sh-format
 msgid "Uninstalling..."
-msgstr "Eltávolítás..."
+msgstr ""
 
 #: bash/uninstall:53
 #, sh-format
@@ -828,12 +825,12 @@ msgstr ""
 #: bash/uninstall:55
 #, sh-format
 msgid "Cannot find the shortcut"
-msgstr "Nem találom a parancsikont"
+msgstr ""
 
 #: bash/uninstall:55 lib/interface:137 lib/interface_v3:104
 #, sh-format
 msgid "Error"
-msgstr "Hiba"
+msgstr ""
 
 #: lib/applications:38
 #, sh-format
@@ -843,7 +840,7 @@ msgstr ""
 #: lib/applications:159
 #, sh-format
 msgid "Shortcut creation"
-msgstr "Parancsikon készítés"
+msgstr ""
 
 #: lib/applications:160
 #, sh-format
@@ -881,8 +878,6 @@ msgid ""
 "One or more program(s) are missing. Please install them and run the script "
 "again."
 msgstr ""
-"Egy vagy több program hiányzik. Kérlek telepítsd fel őket, majd futtasd újra "
-"a parancsot."
 
 #: lib/check_depend:61
 #, sh-format
@@ -909,17 +904,17 @@ msgstr ""
 #: python/new_guiv3.py:91 python/telecharger.py:104
 #, sh-format
 msgid "Next"
-msgstr "Következő"
+msgstr ""
 
 #: lib/interface:188
 #, sh-format
 msgid "Warning"
-msgstr "Figyelmeztetés"
+msgstr ""
 
 #: lib/interface:240
 #, sh-format
 msgid "Question"
-msgstr "Kérdés"
+msgstr ""
 
 #: lib/interface:286
 #, sh-format
@@ -929,13 +924,13 @@ msgstr ""
 #: lib/interface:337 lib/interface:410
 #, sh-format
 msgid "Please make a choice"
-msgstr "Kérlek válassz"
+msgstr ""
 
 #: lib/interface:600 python/file.py:69 python/guiv3.py:371
 #: python/new_guiv3.py:94
 #, sh-format
 msgid "Browse"
-msgstr "Tallózás"
+msgstr ""
 
 #: lib/interface:697
 #, sh-format
@@ -959,7 +954,7 @@ msgstr ""
 #: lib/interface_v3:45
 #, sh-format
 msgid " on your computer."
-msgstr " a számítógépedre."
+msgstr ""
 
 #: lib/interface_v3:45
 #, sh-format
@@ -1026,17 +1021,17 @@ msgstr ""
 #: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
 #, sh-format
 msgid "Wine prefix configuration"
-msgstr "Wine prefix beállítás"
+msgstr ""
 
 #: lib/interface_v3:828
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
-msgstr "Kérlek várj, amíg a program a Windows újraindítását szimulálja"
+msgstr ""
 
 #: lib/interface_v3:850 lib/wine:235 lib/wine:243
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
-msgstr "Hova lett felcsatolva a CD-ROM? (Alapértelmezett : /media/cdrom/)"
+msgstr ""
 
 #: lib/interface_v3:876 lib/wine:293
 #, sh-format
@@ -1056,7 +1051,7 @@ msgstr ""
 #: lib/interface_v3:914
 #, sh-format
 msgid "The download seems to have failed."
-msgstr "A letöltés hibásnak tűnik."
+msgstr ""
 
 #: lib/interface_v3:916
 #, sh-format
@@ -1066,7 +1061,7 @@ msgstr ""
 #: lib/main:60
 #, sh-format
 msgid "First use of PlayOnLinux"
-msgstr "Most használod először a PlayOnLinuxot"
+msgstr ""
 
 #: lib/main:60
 #, sh-format
@@ -1081,7 +1076,7 @@ msgstr ""
 #: lib/main:71 lib/main:91
 #, sh-format
 msgid "PlayOnLinux application list update"
-msgstr "PlayOnLinux alkalmazás lista frissítése"
+msgstr ""
 
 #: lib/main:71 lib/main:153
 #, sh-format
@@ -1091,13 +1086,13 @@ msgstr ""
 #: lib/main:91
 #, sh-format
 msgid "Downloading updates..."
-msgstr "Frissítések letöltése..."
+msgstr ""
 
 #: lib/main:132 lib/main:149 lib/main:153 lib/main:164 lib/main:183
 #: lib/main:207
 #, sh-format
 msgid "Microsoft fonts"
-msgstr "Microsoft betűtípusok"
+msgstr ""
 
 #: lib/main:132
 #, sh-format
@@ -1148,7 +1143,7 @@ msgstr ""
 #: lib/main:164
 #, sh-format
 msgid "Downloading fonts"
-msgstr "Betűkészletek letöltése"
+msgstr ""
 
 #: lib/main:169 lib/main:170 lib/main:176 lib/main:177
 #, sh-format
@@ -1158,7 +1153,7 @@ msgstr ""
 #: lib/main:183
 #, sh-format
 msgid "Installing fonts"
-msgstr "Betűkészletek telepítése"
+msgstr ""
 
 #: lib/main:188 lib/main:189 lib/main:196 lib/main:197
 #, sh-format
@@ -1282,12 +1277,12 @@ msgstr ""
 #: lib/pol_cmd:399 python/guiv3.py:565 python/new_guiv3.py:114
 #, sh-format
 msgid "In your menu"
-msgstr "A menüdben"
+msgstr ""
 
 #: lib/pol_cmd:399 python/guiv3.py:564 python/new_guiv3.py:113
 #, sh-format
 msgid "On your desktop"
-msgstr "A munkaasztalodon"
+msgstr ""
 
 #: lib/pol_cmd:399 python/guiv3.py:353 python/guiv3.py:367 python/guiv3.py:383
 #: python/guiv3.py:413 python/guiv3.py:441 python/guiv3.py:460
@@ -1295,7 +1290,7 @@ msgstr "A munkaasztalodon"
 #: python/guiv3.py:529 python/guiv3.py:547 python/guiv3.py:560
 #, sh-format
 msgid "PlayOnLinux Wizard"
-msgstr "PlayOnLinux varázsló"
+msgstr ""
 
 #: lib/pol_cmd:399 python/guiv3.py:563
 #, sh-format
@@ -1325,7 +1320,7 @@ msgstr ""
 #: lib/wine:58
 #, sh-format
 msgid "Creating Wine prefix"
-msgstr "Wine prefix létrehozása"
+msgstr ""
 
 #: lib/wine:58
 #, sh-format
@@ -1459,12 +1454,12 @@ msgstr ""
 #: playonlinux-pkg:58
 #, sh-format
 msgid "Choose a package to install"
-msgstr "Telepítendő csomag kiválasztása"
+msgstr ""
 
 #: playonlinux-pkg:58
 #, sh-format
 msgid "PlayOnLinux package manager"
-msgstr "PlayOnLinux csomagkezelő"
+msgstr ""
 
 #: playonlinux-pkg:74
 #, sh-format
@@ -1502,20 +1497,20 @@ msgstr ""
 #: python/menu.py:45 python/message.py:50 python/question.py:45
 #: python/telecharger.py:53
 msgid "Step"
-msgstr "Lépés"
+msgstr ""
 
 #: python/attendre.py:47 python/champ.py:28 python/file.py:46
 #: python/guiv3.py:269 python/menu.py:45 python/message.py:50
 #: python/new_guiv3.py:277 python/question.py:45 python/telecharger.py:53
 #: python/telecharger.py:123
 msgid "of"
-msgstr "/"
+msgstr ""
 
 #: python/attendre.py:82 python/champ.py:53 python/file.py:71
 #: python/menu.py:78 python/message.py:74 python/message_one.py:79
 #: python/new_guiv3.py:90 python/telecharger.py:79
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr ""
 
 #: python/guiv3.py:269 python/new_guiv3.py:277
 msgid "MiB downloaded"
@@ -1523,7 +1518,7 @@ msgstr ""
 
 #: python/guiv3.py:536 python/new_guiv3.py:98
 msgid "I Agree"
-msgstr "Elfogadom"
+msgstr ""
 
 #: python/guiv3.py:559
 msgid "Create a shortcut: "
@@ -1539,39 +1534,39 @@ msgstr ""
 
 #: python/install.py:137
 msgid "Install a .pol package or an unsupported application"
-msgstr ".pol csomag, vagy egy nem támogatott alkalmazás telepítése"
+msgstr ""
 
 #: python/install.py:276
 msgid "Accessories"
-msgstr "Kellékek"
+msgstr ""
 
 #: python/install.py:276
 msgid "Development"
-msgstr "Fejlesztés"
+msgstr ""
 
 #: python/install.py:276
 msgid "Education"
-msgstr "Oktatás"
+msgstr ""
 
 #: python/install.py:276
 msgid "Games"
-msgstr "Játékok"
+msgstr ""
 
 #: python/install.py:276
 msgid "Graphics"
-msgstr "Grafika"
+msgstr ""
 
 #: python/install.py:276 python/mainwindow.py:125 python/options.py:424
 msgid "Internet"
-msgstr "Internet"
+msgstr ""
 
 #: python/install.py:276
 msgid "Multimedia"
-msgstr "Multimédia"
+msgstr ""
 
 #: python/install.py:276
 msgid "Office"
-msgstr "Iroda"
+msgstr ""
 
 #: python/install.py:301
 msgid "Highest rated"
@@ -1611,15 +1606,15 @@ msgstr ""
 
 #: python/mainwindow.py:89 python/mainwindow.py:190
 msgid "Run"
-msgstr "Futtatás"
+msgstr ""
 
 #: python/mainwindow.py:90 python/mainwindow.py:191
 msgid "Install"
-msgstr "Telepítés"
+msgstr ""
 
 #: python/mainwindow.py:91 python/mainwindow.py:192 python/mainwindow.py:261
 msgid "Remove"
-msgstr "Eltávolítás"
+msgstr ""
 
 #: python/mainwindow.py:92
 msgid "Refresh the repository"
@@ -1627,7 +1622,7 @@ msgstr ""
 
 #: python/mainwindow.py:94
 msgid "Exit"
-msgstr "Kilépés"
+msgstr ""
 
 #: python/mainwindow.py:99
 msgid "Manage Wine versions"
@@ -1635,23 +1630,23 @@ msgstr ""
 
 #: python/mainwindow.py:111
 msgid "PlayOnLinux debugger"
-msgstr "PlayOnLinux konzol"
+msgstr ""
 
 #: python/mainwindow.py:121 python/options.py:423
 msgid "General"
-msgstr "Általános"
+msgstr ""
 
 #: python/mainwindow.py:129 python/options.py:425
 msgid "Environment"
-msgstr "Környezet"
+msgstr ""
 
 #: python/mainwindow.py:133 python/options.py:426
 msgid "System"
-msgstr "Rendszer"
+msgstr ""
 
 #: python/mainwindow.py:137 python/mainwindow.py:185 python/options.py:427
 msgid "Plugins"
-msgstr "Bővítőmodulok"
+msgstr ""
 
 #: python/mainwindow.py:169
 msgid "Plugin manager"
@@ -1659,7 +1654,7 @@ msgstr ""
 
 #: python/mainwindow.py:179
 msgid "About"
-msgstr "Névjegy"
+msgstr ""
 
 #: python/mainwindow.py:180
 msgid "Donate"
@@ -1667,19 +1662,19 @@ msgstr ""
 
 #: python/mainwindow.py:182
 msgid "File"
-msgstr "Fájl"
+msgstr ""
 
 #: python/mainwindow.py:183
 msgid "Tools"
-msgstr "Eszközök"
+msgstr ""
 
 #: python/mainwindow.py:184
 msgid "Settings"
-msgstr "Beállítások"
+msgstr ""
 
 #: python/mainwindow.py:186
 msgid "Help"
-msgstr "Súgó"
+msgstr ""
 
 #: python/mainwindow.py:194
 msgid "Configure this application"
@@ -1747,55 +1742,55 @@ msgstr ""
 
 #: python/new_guiv3.py:92 python/question.py:67
 msgid "No"
-msgstr "Nem"
+msgstr ""
 
 #: python/new_guiv3.py:93 python/question.py:66
 msgid "Yes"
-msgstr "Igen"
+msgstr ""
 
 #: python/new_guiv3.py:568
 msgid "Create a shortcut :"
-msgstr "Parancsikon készítése:"
+msgstr ""
 
 #: python/new_guiv3.py:576
 msgid "Do you want a shortcut for "
-msgstr "Szeretnél parancsikont készíteni "
+msgstr ""
 
 #: python/options.py:92
 msgid "Default programs"
-msgstr "Alapértelmezett programok"
+msgstr ""
 
 #: python/options.py:95
 msgid "Default browser"
-msgstr "Alapértelmezett böngésző"
+msgstr ""
 
 #: python/options.py:102 python/options.py:111
 msgid "Test"
-msgstr "Teszt"
+msgstr ""
 
 #: python/options.py:104
 msgid "Default terminal"
-msgstr "Alapértelmezett terminál"
+msgstr ""
 
 #: python/options.py:117
 msgid "Temp directory"
-msgstr "Átmeneti fájlok könyvtára"
+msgstr ""
 
 #: python/options.py:118
 msgid "Automatically empty temp directory"
-msgstr "Automatikusan űrítsd az átmeneti könyvtárat"
+msgstr ""
 
 #: python/options.py:148
 msgid "Proxy configuration"
-msgstr "Proxy beállítás"
+msgstr ""
 
 #: python/options.py:169
 msgid "Set a proxy"
-msgstr "Proxy beállítása"
+msgstr ""
 
 #: python/options.py:172
 msgid "Proxy address"
-msgstr "Proxy címzések"
+msgstr ""
 
 #: python/options.py:175
 msgid "Proxy port"
@@ -1819,11 +1814,11 @@ msgstr ""
 
 #: python/options.py:231
 msgid "Desktop"
-msgstr "Munkaasztal"
+msgstr ""
 
 #: python/options.py:232
 msgid "PlayOnLinux menu"
-msgstr "PlayOnLinux menü"
+msgstr ""
 
 #: python/options.py:233
 msgid "Add the PlayOnLinux menu to your panel"
@@ -1831,23 +1826,23 @@ msgstr ""
 
 #: python/options.py:236
 msgid "Desktop directory"
-msgstr "Munkaasztal könyvtár"
+msgstr ""
 
 #: python/options.py:298
 msgid "Installed plugins"
-msgstr "Telepített bővítmények"
+msgstr ""
 
 #: python/options.py:318
 msgid "Configure"
-msgstr "Beállítás"
+msgstr ""
 
 #: python/options.py:319 python/options.py:377
 msgid "Enable"
-msgstr "Engedélyezés"
+msgstr ""
 
 #: python/options.py:320
 msgid "Choose a plugin"
-msgstr "Válassz egy bővítményt"
+msgstr ""
 
 #: python/options.py:345
 msgid "Are you sure you want to install: "
@@ -1859,7 +1854,7 @@ msgstr ""
 
 #: python/options.py:374
 msgid "Disable"
-msgstr "Tiltás"
+msgstr ""
 
 #: python/options.py:469
 msgid "You must restart PlayOnLinux for the changes to take effect."
@@ -1867,7 +1862,7 @@ msgstr ""
 
 #: python/options.py:473
 msgid "PlayOnLinux Settings"
-msgstr "PlayOnLinux beállítások"
+msgstr ""
 
 #: python/telecharger.py:71
 msgid "Click Download to start."
@@ -1895,7 +1890,7 @@ msgstr ""
 
 #: python/wine_versions.py:163 python/wine_versions.py:171
 msgid "My Applications"
-msgstr "Alkalmazásaim"
+msgstr ""
 
 #: python/wine_versions.py:167
 msgid "Version: "
@@ -1904,914 +1899,3 @@ msgstr ""
 #: python/wine_versions.py:321
 msgid "Are you sure you want to delete Wine: "
 msgstr ""
-
-#, sh-format
-#~ msgid "Error : Unable to find the CD-ROM !"
-#~ msgstr "Hiba : Nem találom a CD-ROM-ot !"
-
-#~ msgid "Please mount the CD-ROM"
-#~ msgstr "Kérlek csatold fel a CD-ROM-ot"
-
-#~ msgid "Missing program :"
-#~ msgstr "Hiányzó program :"
-
-#~ msgid ""
-#~ "You don't seem to have 3D acceleration !\n"
-#~ "We advise you install and enable it."
-#~ msgstr ""
-#~ "Valószínűleg nincs 3D-s gyorsításod !\n"
-#~ "Javasoljuk telepítsd és engedélyezd."
-
-#~ msgid "The game you want to run isn't installed."
-#~ msgstr "A játék, amelyet futtatni szeretnél, még nincs feltelepítve."
-
-#~ msgid ""
-#~ "No game.\n"
-#~ "Try updating PlayOnLinux."
-#~ msgstr ""
-#~ "Nincs játék.\n"
-#~ "Próbáld meg frissíteni a PlayOnLinux-ot."
-
-#~ msgid ""
-#~ "No patch\n"
-#~ "Try updating PlayOnLinux."
-#~ msgstr ""
-#~ "Nincs javítás.\n"
-#~ "Próbáld meg frissíteni a PlayOnLinux-ot."
-
-#~ msgid ""
-#~ "No expansions.\n"
-#~ "Try to update PlayOnLinux."
-#~ msgstr ""
-#~ "Nincsenek bővítmények.\n"
-#~ "Próbáld meg frissíteni a PlayOnLinux-ot."
-
-#~ msgid "You haven't installed any games."
-#~ msgstr "Még nem telepítettél egy játékot sem."
-
-#~ msgid ""
-#~ "Installation failed\n"
-#~ "The game might already be installed."
-#~ msgstr ""
-#~ "Telepítés nem sikerült.\n"
-#~ "A játék talán már fel van telepítve."
-
-#~ msgid ""
-#~ "Installation faild\n"
-#~ "Unable to find the game's script.\n"
-#~ "Try to update $TITRE"
-#~ msgstr ""
-#~ "Telepítés nem sikerült.\n"
-#~ "Nem találom a játék szkripteket.\n"
-#~ "Próbáld meg frissíteni a $TITRE t"
-
-#~ msgid "Please wait while the icon is downloaded."
-#~ msgstr "Kérlek légy türelemmel míg az ikon letöltődik."
-
-#~ msgid "Do you want a shortcut on your desktop ?"
-#~ msgstr "Szeretnél indítóikont a munkaasztalodra?"
-
-#~ msgid "Do you want a shortcut in your menu ?"
-#~ msgstr "Szeretnél egy indítóikont a menübe?"
-
-#, sh-format
-#~ msgid "The website of PlayOnLinux is unavailable."
-#~ msgstr "A PlayOnLinux weboldala nem elérhető."
-
-#, sh-format
-#~ msgid "Please assure you are connected to internet."
-#~ msgstr "Kérlek ellenőrizd az internetkapcsolatod."
-
-#~ msgid "Checking network.."
-#~ msgstr "Hálózat ellenőrzés.."
-
-#~ msgid "You are not connected on the internet."
-#~ msgstr "Nincs internetkapcsolatod."
-
-#~ msgid "Network is available."
-#~ msgstr "A hálózat elérhető."
-
-#~ msgid "Network is available, but some packets have failed"
-#~ msgstr "A hálózat elérhető, viszont néhány csomag hibás."
-
-#~ msgid "Please wait while the updates are downloaded..."
-#~ msgstr "Kérlek légy türelemmel a frissítések letöltése alatt..."
-
-#~ msgid ""
-#~ "An updated version of PlayOnLinux is available. Please visit the website."
-#~ msgstr ""
-#~ "A PlayOnLinux újabb verziója elérhető. Kérlek látogasd meg a weboldalt."
-
-#~ msgid "The updates have been successfully installed."
-#~ msgstr "A frissítések sikeresen telepítve lettek."
-
-#~ msgid "Update"
-#~ msgstr "Frissítés"
-
-#~ msgid "You must choose a program"
-#~ msgstr "Választanod kell egy programot"
-
-#~ msgid "What do you want to install ?"
-#~ msgstr "Mit szeretnél telepíteni?"
-
-#~ msgid "What do you want to uninstall ?"
-#~ msgstr "Mit szeretnél eltávolítani?"
-
-#~ msgid "Which game do you want to play? ?"
-#~ msgstr "Melyik játékkal szeretnél játszani?"
-
-#~ msgid "Uninstall"
-#~ msgstr "Eltávolítás"
-
-#~ msgid "Do you want to check for updates on the PlayOnLinux website ?"
-#~ msgstr ""
-#~ "Szeretéd meglátogatni a PlayOnLinux weboldalát, hogy vannak-e új frissítések?"
-
-#~ msgid ""
-#~ "Welcome to PlayOnLinux.\n"
-#~ "You need to set some options\n"
-#~ "Make sure you are connected to the internet."
-#~ msgstr ""
-#~ "Üdvözöl a PlayOnLinux.\n"
-#~ "Néhány beállítást el kell végezned.\n"
-#~ "Győződj meg arról, hogy az internetkapcsolatod működik-e."
-
-#, sh-format
-#~ msgid ""
-#~ "Microsoft fonts aren't installed; I'll install them for you. Please assure "
-#~ "you are connected to the internet."
-#~ msgstr ""
-#~ "A Microsoft betűtípusok még nincsenek feltelepítve. Fel fogom telepíteni "
-#~ "neked. Kérlek ellenőrizd, hogy csatlakozva vagy-e az internethez."
-
-#~ msgid "Please wait while the fonts are downloaded..."
-#~ msgstr "Kérlek légy türelemmel a betűtípusok letöltése alatt..."
-
-#~ msgid "Please wait: creating PlayOnLinux's directions"
-#~ msgstr "Kérlek várj: elkészítem a PlayOnLinux könyvtárait"
-
-#~ msgid ""
-#~ "The current language is : $LANG. This language exists in PlayOnLinux. Would "
-#~ "you like to use it? ?"
-#~ msgstr ""
-#~ "A jelenlegi nyelv: $LANG. Ez a nyelv elérhető a PlayOnLinux-ban. Szeretnéd "
-#~ "használni?"
-
-#~ msgid "Choose your preferred language."
-#~ msgstr "Válaszd ki a használni kívánt nyelvet."
-
-#~ msgid ""
-#~ "Your system's language does not exist in PlayOnLinux.\n"
-#~ "Please choose another one"
-#~ msgstr ""
-#~ "A rendszer által használt nyelv nem elérhető a PlayOnLinux-ban.\n"
-#~ "Kérlek válassz másikat."
-
-#~ msgid "Choose the language you want"
-#~ msgstr "Válaszd ki a használni kívánt nyelvet."
-
-#~ msgid "Choose the theme you want"
-#~ msgstr "Válaszd ki a használni kívánt témát."
-
-#~ msgid "Theme"
-#~ msgstr "Téma"
-
-#~ msgid "You did not select any games!"
-#~ msgstr "Nem választottál egy játékot sem!"
-
-#~ msgid "Update the wineprefix"
-#~ msgstr "Wineprefix frissítése"
-
-#~ msgid "Please wait while the wine prefix is updated"
-#~ msgstr "Kérlek várj, amíg a Wineprefix frissítése folyik."
-
-#~ msgid "Configure wine"
-#~ msgstr "Wine beállítása"
-
-#~ msgid "Run a non-official script"
-#~ msgstr "Egy non-official(nem-gyári) szkript futtatása"
-
-#~ msgid "This file is not a valid PlayOnLinux script"
-#~ msgstr "Ez nem egy érvényes PlayOnLinux szkript"
-
-#~ msgid "Install DirectX"
-#~ msgstr "DirectX telepítése"
-
-#~ msgid "Manage wine versions"
-#~ msgstr "Wine verzió kezelése"
-
-#~ msgid ""
-#~ "This add-on allows you to have more than one wine version simultaneously."
-#~ msgstr ""
-#~ "Ez a bővítmény lehetővé teszi, hogy több Wine verziót használhass szimultán."
-
-#~ msgid "Downloading wine"
-#~ msgstr "Wine letöltése"
-
-#~ msgid ""
-#~ "The version of wine has been successfully downloaded.\n"
-#~ "I'm' now going to install it."
-#~ msgstr ""
-#~ "A wine verzió sikeresen le lett töltve.\n"
-#~ "Most fel fogom telepíteni.."
-
-#~ msgid "Please wait : installing wine version ..."
-#~ msgstr "Kérlek várj: Wine verzió telepítése ..."
-
-#~ msgid "Installation succeeded."
-#~ msgstr "Telepítés sikerült."
-
-#~ msgid "To which game do you want to apply this modification?"
-#~ msgstr "Melyik programot szeretnéd szerkeszteni?"
-
-#~ msgid "Which wine version do you want to use ?"
-#~ msgstr "Melyik Wine verziót szeretnéd használni?"
-
-#~ msgid "You must choose which version you want to download."
-#~ msgstr "Ki kell választanod, hogy melyik verziót szeretnéd letölteni."
-
-#~ msgid "This version has already been installed"
-#~ msgstr "Ez a verzió már fel van telepítve."
-
-#~ msgid "The session has been reset."
-#~ msgstr "A folyamat megszakítva."
-
-#~ msgid "To which game do you want to apply the modification ?"
-#~ msgstr "Melyik játékra szeretnéd alkalmazni a változtatásokat?"
-
-#~ msgid "No wine version installed"
-#~ msgstr "Nincs feltelepítve Wine verzió."
-
-#~ msgid "Choose which version you want to uninstall."
-#~ msgstr "Válaszd ki melyik verziót szeretnéd eltávolítani."
-
-#~ msgid "Which wine version should I download?"
-#~ msgstr "Melyik Wine verziót tölthetem le?"
-
-#~ msgid "Assign a wineversion for a program"
-#~ msgstr "Wine verzió hozzárendelése egy programhoz"
-
-#~ msgid "Install a wineversion"
-#~ msgstr "Wine verzió telepítése"
-
-#~ msgid "Unassign a wineversion"
-#~ msgstr "Alapértelmezett Wine verzió használata"
-
-#~ msgid "Uninstall a wineversion"
-#~ msgstr "Wine verzió eltávolítása"
-
-#~ msgid "Exemple "
-#~ msgstr "Példa "
-
-#~ msgid "Reset"
-#~ msgstr "Visszaállítás"
-
-#~ msgid "Test results"
-#~ msgstr "Teszt eredmények"
-
-#~ msgid "Glxgears did not produce any results."
-#~ msgstr "A Glxgears nem produkált eredményt."
-
-#~ msgid "Your system :"
-#~ msgstr "A rendszered:"
-
-#~ msgid "Your kernel :"
-#~ msgstr "Kerneled:"
-
-#~ msgid "System language :"
-#~ msgstr "Rendszer nyelve:"
-
-#~ msgid "Your user login :"
-#~ msgstr "Felhasználói neved:"
-
-#~ msgid "Your computer's name :"
-#~ msgstr "Számítógépnév:"
-
-#~ msgid "Your video card :"
-#~ msgstr "Videókártya:"
-
-#~ msgid "Your distribution :"
-#~ msgstr "Operációs rendszer:"
-
-#~ msgid "Your distribution version :"
-#~ msgstr "Rendszer verziója:"
-
-#~ msgid "Space remaining on your hard disks :"
-#~ msgstr "Fennmaradó hely a merevlemezeden:"
-
-#~ msgid "Wine version installed :"
-#~ msgstr "Telepített Wine verzió:"
-
-#~ msgid "Wine version used by PlayOnLinux :"
-#~ msgstr "A PlayOnLinux által használt Wine verzió:"
-
-#~ msgid "Informations"
-#~ msgstr "Információk"
-
-#~ msgid "Information about a game"
-#~ msgstr "Információk a játékról"
-
-#~ msgid "Tests"
-#~ msgstr "Tesztek"
-
-#~ msgid "Language"
-#~ msgstr "Nyelv"
-
-#~ msgid "Repository"
-#~ msgstr "Tároló"
-
-#~ msgid "Panels"
-#~ msgstr "Panelek"
-
-#~ msgid "You must restart PlayOnLinux for the changes to take effect"
-#~ msgstr "A módosítások életbelépéséhez újra kell indítanod a PlaOnLinux-ot."
-
-#~ msgid "You have"
-#~ msgstr "A sebesség:"
-
-#~ msgid "Refresh"
-#~ msgstr "Frissítés"
-
-#~ msgid "Welcome on WineBooster, an optimization's script for Wine"
-#~ msgstr "Üdvözlünk a WineBooster-ben, amely egy Wine szkript optimalizáló."
-
-#~ msgid "Created by GNU_Raziel"
-#~ msgstr "Készítette GNU_Raziel"
-
-#~ msgid "If you does not know what to choose, LEAVE DEFAULTS !!!"
-#~ msgstr "Ha nem tudod mit kell kiválasztani, HAGYD ALAPÉRTELMEZETTEN !!!"
-
-#~ msgid ""
-#~ "Which version of Windows would you like to use? (Values : vista, win2003, "
-#~ "winxp, win2k, winnt, winme, win98, win95, win31 - Default : winxp )"
-#~ msgstr ""
-#~ "Melyik Windows verziót szeretnéd használni? (Lehetőségek: vista, win2003, "
-#~ "winxp, win2k, winnt, winme, win98, win95, win31 - Alapértelmezett: winxp )"
-
-#~ msgid ""
-#~ "Choose DirectDraw Renderer Mode? (Values : opengl, gdi - Default : gdi)"
-#~ msgstr ""
-#~ "DirectDraw megjelenítő mód választás? (Lehetőségek: opengl, gdi - "
-#~ "Alapértelmezett: gdi)"
-
-#~ msgid "Activate VertexShader Mode? (Default : N)"
-#~ msgstr "VertexShader mód aktiválása? (Alapértelmezett: N = nem)"
-
-#~ msgid "Activate PixelShader Mode? (Default : N)"
-#~ msgstr "PixelShader mód aktiválása? (Alapértelmezett: N = nem)"
-
-#~ msgid "Activate GLSL Support? (Default : N)"
-#~ msgstr "GLSL támogatás aktiválása? (Alapértelmezett: N = nem)"
-
-#~ msgid "How much memory does your graphics board have? (Default : 64)"
-#~ msgstr "Mekkora memóriával rendelkezik a videókártyád? (Alapértelmezett: 64)"
-
-#~ msgid ""
-#~ "Choose Offscreen Rendering Mode? (Values : backbuffer, pbuffer, fbo - "
-#~ "Default : backbuffer)"
-#~ msgstr ""
-#~ "Képernyőn kívűli megjelenítés mód választás? (Lehetőségek: backbuffer, "
-#~ "pbuffer, fbo - Alapértelmezet: backbuffer)"
-
-#~ msgid ""
-#~ "Choose Render Target Lock Mode? (Values : auto, readdraw, readtex, texdraw, "
-#~ "textex, disabled - Default : auto)"
-#~ msgstr ""
-#~ "Target Lock mód választás? (Értékek: auto, readdraw, readtex, texdraw, "
-#~ "textex, disabled-tiltva - Alapértelmezett: auto)"
-
-#~ msgid ""
-#~ "Select resolution for Wine's Windows (DOES NOT CHANGE IN-GAME RESOLUTION "
-#~ "!!)? (Example : 1024x768 - Default : 0 = FullScreen)"
-#~ msgstr ""
-#~ "Wine ablakok felbontásának kiválasztása (EZ NEM VÁLTOZTATJA MEG A JÁTÉK "
-#~ "FELBONTÁSÁT !!)? (Például: 1024x768 - Alapértelmezet: 0 = Teljes képernyő)"
-
-#~ msgid "Authorize your WM to manage Windows? ( Default : Y )"
-#~ msgstr ""
-#~ "Engedélyezed az ablakkezelődnek, hogy kezelje a Windowst? ( Alapértelmezett: "
-#~ "Y = igen)"
-
-#~ msgid ""
-#~ "Authorize DirectX to prevent the Wine mouse from going offscreen? ( Default "
-#~ ": N )"
-#~ msgstr ""
-#~ "Engedélyezed a DirectX-nek, hogy megelőzze a wine egeret a képernyőn kívűl? "
-#~ "(Alapértelmezett: N = nem)"
-
-#~ msgid "Choose a Sound Driver? (Values : oss, alsa - Default : alsa)"
-#~ msgstr ""
-#~ "Hang meghajtó választása? (Lehetőségek: oss, alsa - Alapértelmezett: alsa)"
-
-#~ msgid "Emulate DirectSound Driver? (Default : N)"
-#~ msgstr "DirectSound meghajtó emulálása? (Alapértelmezett: N = nem)"
-
-#~ msgid ""
-#~ "This script will allow you to install any game on PlayOnLinux and use it "
-#~ "with all the tools (WineBooster, WineMaster, WineConfig, etc) as if it had "
-#~ "been installed with an official script. Warning: We are unable to guarantee "
-#~ "that your game will work perfectly."
-#~ msgstr ""
-#~ "Ez a szkript lehetővé teszi, hogy bármilyen játékot feltelepíthess a "
-#~ "PayOnLinux-ra az összes eszköz használatával (WineBooster, WineMaster, "
-#~ "WineConfig, stb) ha egy gyári telepítő szkript segítségével lett "
-#~ "feltelepítve. Figyelmeztetés: Nem tudjuk garantálni, hogy a játék "
-#~ "megfelelően fog működni."
-
-#~ msgid "Action"
-#~ msgstr "Művelet"
-
-#~ msgid "New"
-#~ msgstr "Új"
-
-#~ msgid "Edit"
-#~ msgstr "Szerkesztés"
-
-#~ msgid ""
-#~ "Please type a code name for the wine prefix of your game. This name "
-#~ "shouldn't contain spaces."
-#~ msgstr ""
-#~ "Kérlek add meg a játékod wine prefix kódját. A név nem tartalmazhat "
-#~ "szóközöket."
-
-#~ msgid "This codename already exists in PlayOnLinux."
-#~ msgstr "Ez a kódnév már létezik PlayOnLinux-ban."
-
-#~ msgid "Please choose the file to execute"
-#~ msgstr "Válaszd ki a futtatandó fájlt."
-
-#~ msgid "You have to choose a file !"
-#~ msgstr "Választanod kell egy fájlt!"
-
-#~ msgid "Do you want to create a shortcut to the application in PlayOnLinux ?"
-#~ msgstr "Szeretnél készíteni parancsikont a játékhoz a PlayOnLinux menüjében?"
-
-#~ msgid "If you patched a game, you should probably select no."
-#~ msgstr "Ha patchelted a játékot, akkor a nemet kell választanod."
-
-#~ msgid "Choose the file to exec the game."
-#~ msgstr "Válassz egy fájlt a játék futtatásához."
-
-#~ msgid "Please type a name for your shortcut."
-#~ msgstr "Add meg a nevét a parancsikonnak."
-
-#~ msgid "Please wait while the installation of the game is prepared"
-#~ msgstr "Kérlek várj a játék telepítésének a felkészülésére."
-
-#~ msgid "Please wait while the game is downloaded..."
-#~ msgstr "Kérlek várj, amíg a játék letöltődik..."
-
-#~ msgid "Please wait while the library are downloaded..."
-#~ msgstr "Kérlek várj, amíg a könyvtárak letöltésre kerülnek..."
-
-#~ msgid "Download finished"
-#~ msgstr "A letöltés befejeződött"
-
-#~ msgid ""
-#~ "Welcome to PolScriptCreator.\n"
-#~ "This tools may help you to build basic scripts. The scripts will be saved on "
-#~ "your Desktop. Thanks to Christhaal."
-#~ msgstr ""
-#~ "Üdvözlünk a PolScriptCreator-ban.\n"
-#~ "Ez az eszköz segít elkészíteni egy alap telepítő szriptet. A szkriptek a "
-#~ "munkaasztalodon lesznek elmentve. Köszönjük Christhaal."
-
-#~ msgid ""
-#~ "Welcome on WineGIT, a GIT compilation and installation script for WineVersion"
-#~ msgstr ""
-#~ "Üdvözlünk a WineGIT-ben, egy GIT szerkesztő és telepítő szkript a "
-#~ "WineVersion-hoz."
-
-#~ msgid "Keep the actual git ? (Values : Y ou N - Default : N)"
-#~ msgstr ""
-#~ "Megtartod az aktuális git-et? (Lehetőségek: Y = igen vagy N = nem - "
-#~ "Alapértelmezett: N = nem)"
-
-#~ msgid "Please use ANOTHER name for the last git"
-#~ msgstr "Kérlek használj EGY MÁSIK nevet az előző git-hez"
-
-#~ msgid "Please give a new name for installed git (example : git-06242007)"
-#~ msgstr ""
-#~ "Kérlek adj meg egy új nevet a telepített git-nek (Például: git-06242007)"
-
-#~ msgid "You did not specify a name !!"
-#~ msgstr "Nem adtál meg nevet!!"
-
-#~ msgid "This name already exist !!"
-#~ msgstr "A név már létezik!!"
-
-#~ msgid "git download, please wait..."
-#~ msgstr "git letöltése, kérlek várj..."
-
-#~ msgid "git's compilation and installation, please wait..."
-#~ msgstr "git-ek szerkesztése és telepítése, kérlek várj..."
-
-#~ msgid "Installation successfull"
-#~ msgstr "Telepítés sikerült"
-
-#~ msgid "Please wait while the installer is downloaded..."
-#~ msgstr "Kélek várj, amíg a telepítő letöltődik..."
-
-#~ msgid ""
-#~ "Do you want to add a \"PlayOnLinux\" menu item to your GNOME or KDE menu ? "
-#~ "?\n"
-#~ "It will contain all the application shorcuts you create."
-#~ msgstr ""
-#~ "Szeretnél hozzáadni egy \"PlayOnLinux\" menü elemet a GNOME vagy KDE "
-#~ "menühöz? ?\n"
-#~ "Ez tartalmazni fogja az összes alkalmazás parancsikonját."
-
-#~ msgid "Do you want to disable the \"PlayOnLinux\" menu ?"
-#~ msgstr "Szeretnéd letiltani a \"PlayOnLinux\" menüt?"
-
-#~ msgid "Please choose a valid PlayOnLinux file to run"
-#~ msgstr "Kérlek válassz egy érvényes, futtaható PlayOnLinux fájlt"
-
-#~ msgid "Please choose an application to install"
-#~ msgstr "Kérlek válaszd ki milyen programot szeretnél telepíteni"
-
-#~ msgid "Please choose a type of application to install"
-#~ msgstr "Kérlek válaszd ki az alkalmazás típusát"
-
-#~ msgid "Please choose a name for the shortcut"
-#~ msgstr "Kérlek válassz nevet a parancsikonnak"
-
-#~ msgid "The list of programs has been successfully updated"
-#~ msgstr "A programok listája sikeresen frissítésre került"
-
-#~ msgid "The prefix has been successfully updated"
-#~ msgstr "Az előtag sikeresen frissítve lett"
-
-#~ msgid "Updating"
-#~ msgstr "Frissítés"
-
-#, sh-format
-#~ msgid "Downloading"
-#~ msgstr "Letöltés"
-
-#, sh-format
-#~ msgid "Finished"
-#~ msgstr "Kész"
-
-#~ msgid "Finish"
-#~ msgstr "Befejezés"
-
-#~ msgid "Click on download to start."
-#~ msgstr "Kattints a letöltésre az indításhoz."
-
-#~ msgid "Download"
-#~ msgstr "Letöltés"
-
-#~ msgid "downloaded"
-#~ msgstr "letöltve"
-
-#~ msgid ""
-#~ "Warning ! Before killing the wineserver, please assure that there are no "
-#~ "wine applications running.\n"
-#~ "\n"
-#~ "Are you sure you want to kill the wineserver ?"
-#~ msgstr ""
-#~ "Figyelmeztetés! Mielőtt lelőnéd a wineservert, kérlek ellenőrizd, hogy nem "
-#~ "fut egy Wine alkalmazás sem.\n"
-#~ "\n"
-#~ "Biztosan le akarod lőni a wineservert?"
-
-#~ msgid "Please choose a theme"
-#~ msgstr "Kérlek válassz egy témát"
-
-#~ msgid "Your theme have been successfully applied"
-#~ msgstr "A témád sikeresen alkalmazva lett"
-
-#~ msgid "Install a package"
-#~ msgstr "Csomag telepítése"
-
-#~ msgid "Advanced wine configuration"
-#~ msgstr "Szakértői Wine beállítás"
-
-#~ msgid "Wine GIT"
-#~ msgstr "Wine GIT"
-
-#~ msgid "Wine theme"
-#~ msgstr "Wine téma"
-
-#~ msgid "Run your Windows programs on Linux !"
-#~ msgstr "Futtasd a Windowsos programjaidat Linuxon!"
-
-#~ msgid "The logo are made by Crystal Project"
-#~ msgstr "A logót a Crystal Project készítette"
-
-#~ msgid "Windows designed by asimov"
-#~ msgstr "Ablak dekoráció: asimov"
-
-#~ msgid ""
-#~ "(C) PlayOnLinux team 2008\n"
-#~ "Under GPL licence version 3"
-#~ msgstr ""
-#~ "(C) PlayOnLinux team 2008\n"
-#~ "Under GPL licence version 3"
-
-#~ msgid "Application"
-#~ msgstr "Alkalmazás"
-
-#~ msgid "Dosbox application"
-#~ msgstr "Dosboxos alkalmazás"
-
-#~ msgid "What do you want to do ?"
-#~ msgstr "Mit szeretnél tenni?"
-
-#~ msgid "Edit an application already installed"
-#~ msgstr "Egy feltelepített alkalmazás szerkesztése"
-
-#~ msgid "What is the prefix of your program ?"
-#~ msgstr "Mi a programod előtagja (prefix)?"
-
-#~ msgid "Would you like to make a new shortcut in PlayOnLinux"
-#~ msgstr "Szeretnél létrehozni új parancsikont a PlayOnLinuxban?"
-
-#~ msgid "Are you sure you want to delete that prefixe ?"
-#~ msgstr "Biztosan törölni szeretnéd?"
-
-#~ msgid "The prefix has been deleted"
-#~ msgstr "Törölve"
-
-#~ msgid "Choose an action to do"
-#~ msgstr "Művelet (folyamat) kiválasztása"
-
-#~ msgid "Install a wine version"
-#~ msgstr "Wine verzió telepítése"
-
-#~ msgid "Install Wine GIT"
-#~ msgstr "Wine GIT telepítése"
-
-#~ msgid "Assign a wine version to a programm"
-#~ msgstr "Wine verzió hozzárendelése egy programhoz"
-
-#~ msgid "Put back the default wine version to a program"
-#~ msgstr "Alapértelmezett Wine verzió használata"
-
-#~ msgid "Remove a wine version"
-#~ msgstr "Wine verzió eltávolítása"
-
-#~ msgid "Session"
-#~ msgstr "Munkafolyamat"
-
-#~ msgid "Which program do you want to edit ?"
-#~ msgstr "Melyik programot szeretnéd szerkeszteni?"
-
-#~ msgid "I'm going to test your 3D hardware. It will take about 2 minutes"
-#~ msgstr "Most tesztelni fogom a 3D eszközödet. Ez két percig is eltarthat"
-
-#~ msgid "Choose a repository to enable / disable"
-#~ msgstr "Válassz egy engedélyezni / tiltani kívánt tárolót"
-
-#~ msgid "Text"
-#~ msgstr "Szöveg"
-
-#, sh-format
-#~ msgid "The file is not a valid PlayOnLinux package"
-#~ msgstr "Ez nem egy érvényes PlayOnLinux csomag"
-
-#, sh-format
-#~ msgid "Unable to find the file"
-#~ msgstr "Nem találom a fájlt"
-
-#~ msgid "Unable to find the game you are trying to uninstall"
-#~ msgstr "Nem találom az eltávolítani kívánt játékot"
-
-#~ msgid "A CD-ROM has been found on your drive"
-#~ msgstr "Egy CD-ROM-ot találtam a meghajtódban"
-
-#~ msgid "Name "
-#~ msgstr "Név "
-
-#~ msgid "Setup "
-#~ msgstr "Telepítés "
-
-#~ msgid "recomended"
-#~ msgstr "ajánlott"
-
-#~ msgid "Where do you want to install this CD-ROM?"
-#~ msgstr "Hova szeretnéd telepíteni ezt a CD-ROM-ot?"
-
-#~ msgid "No autorun support found"
-#~ msgstr "Nem találtam automatikus futtatási támogatást"
-
-#~ msgid "autorun has been found"
-#~ msgstr "automatikus futtatás megtalálva"
-
-#~ msgid "Search :"
-#~ msgstr "Keresendő elem:"
-
-#~ msgid "Close"
-#~ msgstr "Bezárás"
-
-#~ msgid "Defaults programs"
-#~ msgstr "Alapértelmezett programok"
-
-#~ msgid "Browser"
-#~ msgstr "Böngésző"
-
-#~ msgid "Terminal"
-#~ msgstr "Terminál"
-
-#~ msgid "Offline Mode"
-#~ msgstr "Kapcsolat nélküli mód"
-
-#~ msgid "Enable Offline mode"
-#~ msgstr "Kapcsolat nélküli mód engedélyezése"
-
-#~ msgid "Port"
-#~ msgstr "Port"
-
-#~ msgid "Login"
-#~ msgstr "Bejelentkezés"
-
-#~ msgid "Password"
-#~ msgstr "Jelszó"
-
-#~ msgid "Default Wine Version to run wine programs with PlayOnLinux"
-#~ msgstr ""
-#~ "Alapértelmezett Wine verzió, amellyel a PlayOnLinux futtani fogja a "
-#~ "programokat"
-
-#~ msgid "Add PlayOnLinux menu in your panel"
-#~ msgstr "PlayOnLinux menü hozzáadása a panelhez"
-
-#~ msgid "Default Nickname"
-#~ msgstr "Becenév"
-
-#~ msgid "Automatically connect to IRC at PlayOnLinux startup"
-#~ msgstr "Automatikusan csatlakozz az IRC-hez a PlayOnLinux indításakor"
-
-#~ msgid "Warm users when I run a game"
-#~ msgstr "Láthassák a felhasználók, milyen játékkal játszom"
-
-#~ msgid "Play a sound when I receive a private message"
-#~ msgstr "Hangjelzés privát üzenet érkezésekor"
-
-#~ msgid "Messenger"
-#~ msgstr "Üzenetküldő rendszer"
-
-#~ msgid "Apply"
-#~ msgstr "Alkalmaz"
-
-#, sh-format
-#~ msgid "You are in offline mode"
-#~ msgstr "Most kapcsolat nélküli módban vagy"
-
-#~ msgid "Add"
-#~ msgstr "Hozzáadás"
-
-#~ msgid "Are yo sure you want to install the plugin"
-#~ msgstr "Biztosan fel szeretnéd telepíteni a bővítményt?"
-
-#~ msgid "Are yo sure you want to delete the plugin"
-#~ msgstr "Biztosan törölni szeretnéd ezt a bővítményt?"
-
-#~ msgid "Plugins manager"
-#~ msgstr "Bővítmény kezelő"
-
-#~ msgid "No more alert me"
-#~ msgstr "Ne emlékeztess többé"
-
-#~ msgid "Do you really want to uninstall $delete_var ?"
-#~ msgstr "Biztosan el szeretnéd távolítani? $delete_var ?"
-
-#~ msgid "Welcome in PlayOnLinux Installation Wizard"
-#~ msgstr "Üdvözöllek a PlayOnLinux telepítő varázslójában"
-
-#~ msgid "This assistant will help you to install "
-#~ msgstr "A segédlet által lehetőséged lesz telepíteni "
-
-#~ msgid "This program is made by "
-#~ msgstr "A programot készítette: "
-
-#~ msgid "This installation program is provided by "
-#~ msgstr "Ezt a telepítő programot számunkra biztosította: "
-
-#~ msgid " will be installed in "
-#~ msgstr " fel lesz telepítve ide: "
-
-#~ msgid "PlayOnLinux is not responsible of your way to use these scripts"
-#~ msgstr ""
-#~ "PlayOnLinux nem vállal felelősséget azért, ahogyan használod ezeket a "
-#~ "szkripteket"
-
-#~ msgid "Click on next to start"
-#~ msgstr "Az indításhoz nyomj következőt"
-
-#~ msgid "has been installed successfully"
-#~ msgstr "sikerese fel lett telepítve"
-
-#~ msgid "Click on next to continue"
-#~ msgstr "Továbblépéshez nyomj következőt"
-
-#~ msgid "This assistant will help you to uninstall $delete_var."
-#~ msgstr "Segítség a $delete_var eltávolításához."
-
-#, sh-format
-#~ msgid "has been uninstalled successfully"
-#~ msgstr "sikeresen el lett távolítva"
-
-#~ msgid "Do you want to delete the prefix : $prefix"
-#~ msgstr "Szeretnéd ezt törölni ? : $prefix"
-
-#~ msgid "Please wait while the wine prefix is created..."
-#~ msgstr "Kérlek várj, amíg a wine prefix elkészül..."
-
-#~ msgid "PlayOnLinux update"
-#~ msgstr "PlayOnLinux frissítés"
-
-#~ msgid "Connect"
-#~ msgstr "Kapcsolódás"
-
-#~ msgid "Disconnect"
-#~ msgstr "A kapcsolat bontása"
-
-#~ msgid "Send"
-#~ msgstr "Küldés"
-
-#~ msgid "Welcome in PlayOnLinux autorun assistant."
-#~ msgstr "Üdvözöllek a PlayOnLinux automatikus futtatási segédletében."
-
-#~ msgid "It will help you to help an application from a CD-ROM."
-#~ msgstr "Ez segít neked, hogy CD-ROM-ról feltelepíts egy alkalmazást."
-
-#~ msgid "Looking for runnable CD-ROM"
-#~ msgstr "Futtatható CD-ROM keresése"
-
-#~ msgid "PlayOnLinux is installing your application ..."
-#~ msgstr "A PlayOnLinux feltelepíti az alkalmazásaidat..."
-
-#~ msgid "Please press Next only when installation is fully complete."
-#~ msgstr ""
-#~ "Csak akkor nyomd meg a következő gombot, ha atelepítés már befejeződött."
-
-#~ msgid "Please type a name for the wine prefix of your application."
-#~ msgstr "Kérlek add meg az alkalmazásod wine prefixének a nevét."
-
-#~ msgid "This name shouldn't contain spaces."
-#~ msgstr "Ez a név nem tartalmazhat szóközöket."
-
-#~ msgid "Welcome in PlayOnLinux manual Installation"
-#~ msgstr "Üdvözöllek a PlayOnLinux kézi telepítőjében"
-
-#~ msgid "This wizard will help you to install a directx patch in playonlinux"
-#~ msgstr "Ez a varázsló végigvezet a directx javítás telepítési folyamatán"
-
-#~ msgid "The patch will be applied in :"
-#~ msgstr "A javítás alkalmazva lett itt:"
-
-#~ msgid ""
-#~ "This wizard will help you to execute a non-official PlayOnLinux Script"
-#~ msgstr ""
-#~ "Ez a varázsló segítséget nyújt a nem hivatalos PlayOnLinux szkriptek "
-#~ "futtatásához"
-
-#~ msgid "Choose a valid PlayOnLinux script to run"
-#~ msgstr "Válaszd ki a futtatni kívánt PlayOnLinux szkriptet"
-
-#~ msgid "Installed Wine Versions :"
-#~ msgstr "Telepített Wine verziók:"
-
-#~ msgid "Available Wine Versions :"
-#~ msgstr "Elérhető Wine verziók:"
-
-#~ msgid "Wine Versions"
-#~ msgstr "Wine verziók"
-
-#~ msgid "Extracting wine ..."
-#~ msgstr "Wine kibontása ..."
-
-#~ msgid "Wine has been installed successfully"
-#~ msgstr "A Wine sikeresen fel lett telepítve"
-
-#~ msgid ""
-#~ "This wizard will help you to install wine $version in PlayOnLinux environment"
-#~ msgstr "Ez a varázsló végigvezet a Wine $version telepítési folyamatán"
-
-#, sh-format
-#~ msgid ""
-#~ "Welcome in PlayOnLinux first use assistant. Please ensure you are connected "
-#~ "to the Internet."
-#~ msgstr ""
-#~ "Üdvözöllek a PlayOnLinux első indítás varázslóban. Kérlek ellenőrizd, hogy "
-#~ "rendelkezel-e aktív internethozzáféréssel."
-
-#, sh-format
-#~ msgid "Please read and accept this"
-#~ msgstr "Kérlek olvasd el, és hagyd jóvá a következőket"
-
-#~ msgid "Installing Microsoft Fonts. Please wait..."
-#~ msgstr "Microsoft betűtípusok telepítése. Kérlek várj..."
-
-#, sh-format
-#~ msgid "Microsoft Fonts has been installed successfully"
-#~ msgstr "A Microsoft betűtípusok sikresen fel lettek telepítve"
-
-#~ msgid "No description."
-#~ msgstr "Nincs leírás."
-
-#, sh-format
-#~ msgid "Installing"
-#~ msgstr "Telepítés"

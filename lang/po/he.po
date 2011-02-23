@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: Tinou\n"
-"POT-Creation-Date: 2010-12-19 14:46+0100\n"
-"PO-Revision-Date: 2010-11-30 13:02+0000\n"
-"Last-Translator: Ddorda <Ddorda@ubuntu.com>\n"
+"POT-Creation-Date: 2010-12-26 00:06+0100\n"
+"PO-Revision-Date: 2011-01-06 17:20+0000\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: he_HE.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-12-22 21:01+0000\n"
-"X-Generator: Launchpad (build 12138)\n"
+"X-Launchpad-Export-Date: 2011-02-23 06:28+0000\n"
+"X-Generator: Launchpad (build 12406)\n"
 
 #: Advanced Configuration Plugin:11 Wine
 msgid "Activate GLSL Support?"
@@ -27,7 +27,7 @@ msgstr "האם להפעיל תמיכה בריבוי דגימות?"
 
 #: Advanced Configuration Plugin:16 Wine
 msgid "Activate the mouse warp override?"
-msgstr ""
+msgstr "האם להפעיל דריסת הקפצת סמן העכבר?"
 
 #: Advanced Configuration Plugin:5 Wine
 msgid "All"
@@ -39,11 +39,11 @@ msgstr "האם לבחור במצב עיבוד של DirectDraw?"
 
 #: Advanced Configuration Plugin:13 Wine
 msgid "Choose Offscreen Rendering Mode?"
-msgstr ""
+msgstr "האם לבחור מצב עיבוד חוץ צגי?"
 
 #: Advanced Configuration Plugin:14 Wine
 msgid "Choose Render Target Lock Mode?"
-msgstr ""
+msgstr "האם לבחור במצב נעילת יעד עיבוד?"
 
 #: Advanced Configuration Plugin:8 Wine
 msgid "Choose a game"
@@ -69,9 +69,10 @@ msgstr ""
 "ברוך בואך לתצורה המתקדמת של Wine, השיפור למערכת ה־Wine נוצר על ידי "
 "GNU_Raziel. אם אין לך מושג במה לבחור, מוטב להשאיר בבררת המחדל"
 
-#: Advanced Configuration Plugin:9 Wine
+#: Advanced Configuration Plugin:9 Wine lib/wine:585
+#, sh-format
 msgid "You did not select a game"
-msgstr "לא בחרת שום משחק"
+msgstr "לא נבחר אף משחק"
 
 #: Advanced Configuration Plugin:6 Wine
 msgid "You must choose a game to modify"
@@ -212,7 +213,8 @@ msgstr "עליך לבחור בלכידה להמרה"
 msgid "You must choose a capture to read"
 msgstr "עליך לבחור בלכידה לקריאה"
 
-#: Detour plugin:5
+#: Detour lib/wine:584 plugin:5
+#, sh-format
 msgid "Choose an application"
 msgstr "בחירת יישום"
 
@@ -224,6 +226,7 @@ msgstr "התהליך הושלם"
 msgid ""
 "Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
 msgstr ""
+"ברוך בואך ל־Detour (מעקף), תוסף המאפשר לך ליצור קיצורי דרך לאחר ההתקנה."
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
 #: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
@@ -278,8 +281,8 @@ msgid ""
 "been installed with an official script.\\n\\nWarning: We are unable to "
 "guarantee that your application will work perfectly."
 msgstr ""
-"ברוכים הבאים לאשף ההתקנה הידנית של PlayOnLinux.\\n\\nסקריפט זה יאפשר לך "
-"להתקין כל תכנית על גבי PlayOnLinux ולהשתמש בכול הכלים (WineConfig,‏ "
+"ברוך בואך לאשף ההתקנה הידנית של PlayOnLinux.\\n\\nסקריפט זה יאפשר לך להתקין "
+"כל תכנית על גבי PlayOnLinux ולהשתמש בכל הכלים (WineConfig,‏ "
 "AdvancedWineConfiguration,‏ Capture וכו׳) כאילו הם הותקנו באמצעות הסקריפט "
 "הרשמי.\\n\\nאזהרה: איננו יכולים להבטיח שהיישום שלך יעבוד בצורה מושלמת."
 
@@ -460,24 +463,24 @@ msgstr "יש צורך בעדכון המאגר של PlayOnLinux."
 #: bash/debug_main:30
 #, sh-format
 msgid "Report a bug"
-msgstr ""
+msgstr "דיווח על תקלה"
 
 #: bash/debug_main:34
 #, sh-format
 msgid ""
 "This wizard can report a bug in an application officially supported by "
 "PlayOnLinux."
-msgstr ""
+msgstr "אשף זה יכול לדווח על תקלה ביישום הנתמך רשמית על ידי PlayOnLinux."
 
 #: bash/debug_main:36 bash/debug_main:48
 #, sh-format
 msgid "Error message"
-msgstr ""
+msgstr "הודעת שגיאה"
 
 #: bash/debug_main:36 bash/debug_main:44
 #, sh-format
 msgid "Graphic problem"
-msgstr ""
+msgstr "תקלה גרפית"
 
 #: bash/debug_main:36 lib/interface_v3:851 lib/wine:225 lib/wine:235
 #: lib/wine:241 python/install.py:276 python/options.py:114
@@ -488,27 +491,27 @@ msgstr "אחר"
 #: bash/debug_main:36 bash/debug_main:42
 #, sh-format
 msgid "The application does not start"
-msgstr ""
+msgstr "היישום אינו פועל"
 
 #: bash/debug_main:36 bash/debug_main:46
 #, sh-format
 msgid "Unable to use a feature"
-msgstr ""
+msgstr "לא ניתן להשתמש בתכונה"
 
 #: bash/debug_main:36
 #, sh-format
 msgid "What type of problem occurs?"
-msgstr ""
+msgstr "מהו סוג התקלה שהתרחשה?"
 
 #: bash/debug_main:39
 #, sh-format
 msgid "Problem description:"
-msgstr ""
+msgstr "תיאור התקלה (באנגלית):"
 
 #: bash/debug_main:60
 #, sh-format
 msgid "Bug report generated."
-msgstr ""
+msgstr "הדיווח על התקלה נוצר."
 
 #: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
 #, sh-format
@@ -593,7 +596,8 @@ msgid ""
 "Are you sure you want to shut down all active PlayOnLinux applications?"
 msgstr "באם ברצונך לכבות את כל היישומים הפעילים של PlayOnLinux?"
 
-#: bash/killall:33 lib/interface:476 lib/interface:543
+#: bash/killall:33 lib/interface:476 lib/interface:543 lib/wine:574
+#: lib/wine:598
 #, sh-format
 msgid "Please wait..."
 msgstr "נא להמתין..."
@@ -975,7 +979,7 @@ msgstr "וללחוץ על \"אישור\" עם סיום ההכנות"
 #: lib/interface:716
 #, sh-format
 msgid "Please mount the CD-ROM: "
-msgstr "לא לעגון את התקליטור: "
+msgstr "נא לעגון את התקליטור: "
 
 #: lib/interface_v3:45
 #, sh-format
@@ -1018,6 +1022,8 @@ msgid ""
 "\\n\\nPlayOnLinux is not responsible for the anything that might happen as a "
 "result of using these scripts.\\n\\n"
 msgstr ""
+"\\n\\nPlayOnLinux מסירה מעליה את האחריות לכל בעיה שעלולה להיגרם עקב השימוש "
+"בסקריפטים האלו.\\n\\n"
 
 #: lib/interface_v3:291
 #, sh-format
@@ -1059,27 +1065,27 @@ msgstr "נא להמתין בזמן ש־PlayOnLinux מדמה הפעלה מחדש 
 msgid "Where is your CD-ROM mounted?"
 msgstr "היכן מעוגן התקליטור שלך?"
 
-#: lib/interface_v3:874 lib/wine:293
+#: lib/interface_v3:876 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr "שגיאה: לא ניתן למצוא את התקליטור!"
 
-#: lib/interface_v3:895
+#: lib/interface_v3:897
 #, sh-format
 msgid "Unable to find version: "
 msgstr "לא ניתן למצוא את הגרסה: "
 
-#: lib/interface_v3:901 lib/interface_v3:902
+#: lib/interface_v3:903 lib/interface_v3:904
 #, sh-format
 msgid "Downloading Wine: "
 msgstr "Wine בהורדה: "
 
-#: lib/interface_v3:912
+#: lib/interface_v3:914
 #, sh-format
 msgid "The download seems to have failed."
 msgstr "נראה כי ההורדה נכשלה."
 
-#: lib/interface_v3:914
+#: lib/interface_v3:916
 #, sh-format
 msgid "Extracting Wine..."
 msgstr "Wine מחולצת..."
@@ -1244,7 +1250,9 @@ msgstr "אזהרה!"
 msgid "You are running PlayOnLinux as root.\\n\\n"
 msgstr "PlayOnLinux מופעלת כמשתמש על (root).\\n\\n"
 
-#: lib/main:426 lib/main:430 lib/main:434 lib/main:438 lib/main:442
+#: lib/main:427 lib/main:432 lib/main:437 lib/main:442 lib/main:447
+#: lib/main:452 lib/main:458 lib/main:463 lib/main:468 lib/main:473
+#: lib/main:478 lib/main:483
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr "תכונה זו מנוטרלת בסביבת PlayOnLinux."
@@ -1366,6 +1374,21 @@ msgstr "משתנה ה־Program Files מוגדר"
 #, sh-format
 msgid "You must choose which Wine version you want to download."
 msgstr "עליך לבחור איזו גרסה של Wine ברצונך להוריד."
+
+#: lib/wine:591
+#, sh-format
+msgid "Please choose components to be installed"
+msgstr "נא לבחור רכיב להתקנה"
+
+#: lib/wine:592
+#, sh-format
+msgid "You must choose a component to be installed"
+msgstr "עליך לבחור רכיב להתקנה"
+
+#: lib/wine:602
+#, sh-format
+msgid "Error during the execution of winetricks"
+msgstr "אירעה שגיאה בעת הפעלת winetricks"
 
 #: playonlinux-cmd:52
 #, sh-format
@@ -1622,7 +1645,7 @@ msgstr "נראה כי נעשה שימוש בתוסף הלא מקוון של Play
 #: python/mainwindow.py:66
 msgid "Internal error when starting GUI. Please file a bug report ASAP!"
 msgstr ""
-"אירעה שגיאה בעת אתחול המנשק הגראפי. נא לשלח דיווח על כך בהקדם האפשרי!"
+"אירעה שגיאה בעת אתחול המנשק הגרפי. נא לשלוח דיווח על כך בהקדם האפשרי!"
 
 #: python/mainwindow.py:89 python/mainwindow.py:190
 msgid "Run"
@@ -1774,7 +1797,7 @@ msgstr "יצירת קיצור דרך :"
 
 #: python/new_guiv3.py:576
 msgid "Do you want a shortcut for "
-msgstr "האם ברצוך ליצור קיצור דרך עבור "
+msgstr "האם ברצונך ליצור קיצור דרך עבור "
 
 #: python/options.py:92
 msgid "Default programs"
@@ -1874,7 +1897,7 @@ msgstr "האם באמת ברצונך למחוק את: "
 
 #: python/options.py:374
 msgid "Disable"
-msgstr "ניטרול"
+msgstr "נטרול"
 
 #: python/options.py:469
 msgid "You must restart PlayOnLinux for the changes to take effect."

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pol\n"
 "Report-Msgid-Bugs-To: Tinou\n"
-"POT-Creation-Date: 2010-12-19 14:46+0100\n"
-"PO-Revision-Date: 2010-12-18 02:15+0000\n"
-"Last-Translator: Fitoschido <Unknown>\n"
+"POT-Creation-Date: 2010-12-26 00:06+0100\n"
+"PO-Revision-Date: 2011-01-13 09:03+0000\n"
+"Last-Translator: Fitoschido <fitoschido@gmail.com>\n"
 "Language-Team: es_ES.UTF-8 <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-12-22 21:01+0000\n"
-"X-Generator: Launchpad (build 12138)\n"
+"X-Launchpad-Export-Date: 2011-02-23 06:28+0000\n"
+"X-Generator: Launchpad (build 12406)\n"
 
 #: Advanced Configuration Plugin:11 Wine
 msgid "Activate GLSL Support?"
@@ -39,7 +39,7 @@ msgstr "¿Seleccionar modo de renderizador DirectDraw?"
 
 #: Advanced Configuration Plugin:13 Wine
 msgid "Choose Offscreen Rendering Mode?"
-msgstr ""
+msgstr "¿Elegir modo de renderizado fuera de pantalla?"
 
 #: Advanced Configuration Plugin:14 Wine
 msgid "Choose Render Target Lock Mode?"
@@ -70,7 +70,8 @@ msgstr ""
 "para Wine creado por GNU_Raziel. Si no sabe qué elegir, DEJE LAS OPCIONES "
 "POR DEFECTO."
 
-#: Advanced Configuration Plugin:9 Wine
+#: Advanced Configuration Plugin:9 Wine lib/wine:585
+#, sh-format
 msgid "You did not select a game"
 msgstr "No ha elegido un juego"
 
@@ -92,11 +93,11 @@ msgstr "Captura en progreso"
 
 #: Capture plugin:4
 msgid "Capture menu (OpenGL)"
-msgstr ""
+msgstr "Menú de captura (OpenGL)"
 
 #: Capture plugin:5
 msgid "Capture menu (not OpenGL)"
-msgstr ""
+msgstr "Menú de captura (sin OpenGL)"
 
 #: Capture plugin:10
 msgid "Capture will begin..."
@@ -144,11 +145,11 @@ msgstr ""
 
 #: Capture plugin:7
 msgid "Play a captured file"
-msgstr ""
+msgstr "Reproducir un archivo de captura"
 
 #: Capture plugin:15
 msgid "Please choose a PID capture file to play"
-msgstr ""
+msgstr "Elija un PID de archivo de captura para reproducir"
 
 #: Capture plugin:17
 msgid "Please choose a capture file to convert"
@@ -203,19 +204,20 @@ msgstr ""
 
 #: Capture Detour plugin:2 plugin:4
 msgid "Which application do you want to apply the modification to?"
-msgstr ""
+msgstr "¿A qué aplicación quiere aplicar la modificación?"
 
 #: Capture plugin:19
 msgid "You must choose a capture to convert"
-msgstr ""
+msgstr "Debe elegir una captura a convertir"
 
 #: Capture plugin:18
 msgid "You must choose a capture to read"
-msgstr ""
+msgstr "Debe elegir una captura a leer"
 
-#: Detour plugin:5
+#: Detour lib/wine:584 plugin:5
+#, sh-format
 msgid "Choose an application"
-msgstr ""
+msgstr "Elija una aplicación"
 
 #: Detour plugin:6
 msgid "Operation done"
@@ -225,6 +227,8 @@ msgstr "Operación realizada"
 msgid ""
 "Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
 msgstr ""
+"Bienvenido a Detour, un complemento que le permite crear atajos de post "
+"instalación."
 
 #: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
 #: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
@@ -464,7 +468,7 @@ msgstr "El repositorio de PlayOnLinux necesita ser actualizado."
 #: bash/debug_main:30
 #, sh-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Informar de un error"
 
 #: bash/debug_main:34
 #, sh-format
@@ -472,16 +476,18 @@ msgid ""
 "This wizard can report a bug in an application officially supported by "
 "PlayOnLinux."
 msgstr ""
+"Este asistente puede enviar informes de errores de una aplicación "
+"oficialmente soportada por PlayOnLinux."
 
 #: bash/debug_main:36 bash/debug_main:48
 #, sh-format
 msgid "Error message"
-msgstr ""
+msgstr "Mensaje de error"
 
 #: bash/debug_main:36 bash/debug_main:44
 #, sh-format
 msgid "Graphic problem"
-msgstr ""
+msgstr "Problema gráfico"
 
 #: bash/debug_main:36 lib/interface_v3:851 lib/wine:225 lib/wine:235
 #: lib/wine:241 python/install.py:276 python/options.py:114
@@ -492,7 +498,7 @@ msgstr "Otro"
 #: bash/debug_main:36 bash/debug_main:42
 #, sh-format
 msgid "The application does not start"
-msgstr ""
+msgstr "La aplicación no se inicia"
 
 #: bash/debug_main:36 bash/debug_main:46
 #, sh-format
@@ -502,17 +508,17 @@ msgstr ""
 #: bash/debug_main:36
 #, sh-format
 msgid "What type of problem occurs?"
-msgstr ""
+msgstr "¿Qué tipo de problema ocurre?"
 
 #: bash/debug_main:39
 #, sh-format
 msgid "Problem description:"
-msgstr ""
+msgstr "Descripción del problema:"
 
 #: bash/debug_main:60
 #, sh-format
 msgid "Bug report generated."
-msgstr ""
+msgstr "Informe del fallo generado."
 
 #: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
 #, sh-format
@@ -600,10 +606,11 @@ msgid ""
 msgstr ""
 "¿Seguro que quiere apagar todas las aplicaciones de PlayOnLinux activas?"
 
-#: bash/killall:33 lib/interface:476 lib/interface:543
+#: bash/killall:33 lib/interface:476 lib/interface:543 lib/wine:574
+#: lib/wine:598
 #, sh-format
 msgid "Please wait..."
-msgstr "Por favor espere..."
+msgstr "Espere un momento..."
 
 #: bash/polconfigurator:29 bash/polconfigurator:40 bash/polconfigurator:52
 #: bash/polconfigurator:59 bash/polconfigurator:66 bash/polconfigurator:73
@@ -1033,6 +1040,8 @@ msgid ""
 "\\n\\nPlayOnLinux is not responsible for the anything that might happen as a "
 "result of using these scripts.\\n\\n"
 msgstr ""
+"\\n\\nPlayOnLinux no se responsabiliza por nada que pudiera ocurrir como "
+"resultado de usar estos scripts.\\n\\n"
 
 #: lib/interface_v3:291
 #, sh-format
@@ -1077,27 +1086,27 @@ msgstr ""
 msgid "Where is your CD-ROM mounted?"
 msgstr "¿Dónde está montado su CD-ROM?"
 
-#: lib/interface_v3:874 lib/wine:293
+#: lib/interface_v3:876 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr "Error: ¡no se encontró el CD-ROM!"
 
-#: lib/interface_v3:895
+#: lib/interface_v3:897
 #, sh-format
 msgid "Unable to find version: "
 msgstr "No se pudo encontrar la versión: "
 
-#: lib/interface_v3:901 lib/interface_v3:902
+#: lib/interface_v3:903 lib/interface_v3:904
 #, sh-format
 msgid "Downloading Wine: "
 msgstr "Descargando Wine: "
 
-#: lib/interface_v3:912
+#: lib/interface_v3:914
 #, sh-format
 msgid "The download seems to have failed."
 msgstr "La descarga ha fallado."
 
-#: lib/interface_v3:914
+#: lib/interface_v3:916
 #, sh-format
 msgid "Extracting Wine..."
 msgstr "Extrayendo Wine..."
@@ -1264,7 +1273,9 @@ msgstr "¡Aviso!"
 msgid "You are running PlayOnLinux as root.\\n\\n"
 msgstr "Está ejecutando PlayOnLinux como administrador.\\n\\n"
 
-#: lib/main:426 lib/main:430 lib/main:434 lib/main:438 lib/main:442
+#: lib/main:427 lib/main:432 lib/main:437 lib/main:442 lib/main:447
+#: lib/main:452 lib/main:458 lib/main:463 lib/main:468 lib/main:473
+#: lib/main:478 lib/main:483
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr "Esta función está desactivada en el entorno de PlayOnLinux."
@@ -1282,12 +1293,12 @@ msgstr ""
 #: lib/pol_cmd:112 lib/pol_cmd:123
 #, sh-format
 msgid "Please answer following question, and validate with the 'ENTER' key."
-msgstr ""
+msgstr "Responda a la siguiente pregunta y valide con la tecla Intro:"
 
 #: lib/pol_cmd:127
 #, sh-format
 msgid "Press Enter to choose default file: "
-msgstr ""
+msgstr "Pulse Intro para elegir archivo por defecto: "
 
 #: lib/pol_cmd:166 lib/pol_cmd:186 lib/pol_cmd:205 lib/pol_cmd:277
 #: lib/pol_cmd:278 lib/pol_cmd:297 lib/pol_cmd:298 lib/pol_cmd:318
@@ -1299,7 +1310,7 @@ msgstr ""
 #: lib/pol_cmd:166 lib/pol_cmd:277 lib/pol_cmd:278
 #, sh-format
 msgid "Press: "
-msgstr ""
+msgstr "Presione: "
 
 #. "" TRANSLATOR: "Type: " as in "type a number"
 #. (not a single key). e.g: 'Type: 12 for entry: ....'
@@ -1307,17 +1318,17 @@ msgstr ""
 #: lib/pol_cmd:318 lib/pol_cmd:319
 #, sh-format
 msgid "Type: "
-msgstr ""
+msgstr "Escriba: "
 
 #: lib/pol_cmd:191 lib/pol_cmd:210 lib/pol_cmd:303 lib/pol_cmd:324
 #, sh-format
 msgid "Waiting: "
-msgstr ""
+msgstr "Esperando: "
 
 #: lib/pol_cmd:267
 #, sh-format
 msgid "to confirm your choices."
-msgstr ""
+msgstr "para confirmar sus selecciones."
 
 #: lib/pol_cmd:383
 #, sh-format
@@ -1345,27 +1356,27 @@ msgstr "Asistente PlayOnLinux"
 #: lib/pol_cmd:399 python/guiv3.py:563
 #, sh-format
 msgid "Would you like a shortcut for: "
-msgstr ""
+msgstr "Desea un acceso directo para: "
 
 #: lib/pol_cmd:489
 #, sh-format
 msgid "Type: '1' if you agree or '2' if you do not. Your answer: "
-msgstr ""
+msgstr "Escriba: '1' si está de acuerdo o '2' si no lo está. Su respuesta: "
 
 #: lib/pol_cmd:504
 #, sh-format
 msgid "Type: '1' for continue or '2' to cancel. Your answer: "
-msgstr ""
+msgstr "Escriba '1' para continuar o '2' para cancelar. Su respuesta: "
 
 #: lib/pol_cmd:516
 #, sh-format
 msgid "Press a key to continue."
-msgstr ""
+msgstr "Pulse una tecla para continuar."
 
 #: lib/pol_cmd:528
 #, sh-format
 msgid "Type: '1' for Yes or '2' for No. Your answer: "
-msgstr ""
+msgstr "Escriba: '1' para Sí o '2' para No. Su respuesta: "
 
 #: lib/wine:58
 #, sh-format
@@ -1375,7 +1386,7 @@ msgstr "Creando prefijo Wine"
 #: lib/wine:58
 #, sh-format
 msgid "Done"
-msgstr ""
+msgstr "Hecho"
 
 #: lib/wine:189
 #, sh-format
@@ -1386,6 +1397,21 @@ msgstr "Ajustando variables de los archivos del programa"
 #, sh-format
 msgid "You must choose which Wine version you want to download."
 msgstr "Debe escoger qué versión de Wine quiere descargarse."
+
+#: lib/wine:591
+#, sh-format
+msgid "Please choose components to be installed"
+msgstr "Elija los componentes a instalar"
+
+#: lib/wine:592
+#, sh-format
+msgid "You must choose a component to be installed"
+msgstr "Debe elegir un componente a instalar"
+
+#: lib/wine:602
+#, sh-format
+msgid "Error during the execution of winetricks"
+msgstr "Error durante la ejecución de winetricks"
 
 #: playonlinux-cmd:52
 #, sh-format
@@ -1446,12 +1472,12 @@ msgstr ""
 #: playonlinux-cmd:131
 #, sh-format
 msgid "Search result(s): "
-msgstr ""
+msgstr "Resultado(s) de búsqueda: "
 
 #: playonlinux-cmd:137
 #, sh-format
 msgid "Currently installed applications:"
-msgstr ""
+msgstr "Aplicaciones instaladas:"
 
 #: playonlinux-pkg:36
 #, sh-format
@@ -1627,11 +1653,11 @@ msgstr "Está disponible una actualización de PlayOnLinux."
 
 #: python/mainwindow.py:54
 msgid "You do not seem to be connected to the Internet."
-msgstr ""
+msgstr "Parece que no está conectado a Internet."
 
 #: python/mainwindow.py:58
 msgid "Your are using a development version, be careful."
-msgstr ""
+msgstr "Está utilizando la versión de desarrollo, tenga cuidado."
 
 #: python/mainwindow.py:62
 msgid "You seem to be using the Offline PlayOnLinux plugin."
@@ -1640,6 +1666,8 @@ msgstr ""
 #: python/mainwindow.py:66
 msgid "Internal error when starting GUI. Please file a bug report ASAP!"
 msgstr ""
+"Error interno cuando se iniciaba el entorno gráfico. ¡Envíe informe de "
+"errores cuanto antes!"
 
 #: python/mainwindow.py:89 python/mainwindow.py:190
 msgid "Run"
@@ -1775,7 +1803,7 @@ msgstr "No me avise más"
 
 #: python/new_guiv3.py:79
 msgid "PlayOnMac Wizard"
-msgstr ""
+msgstr "Asistente PlayOnMac"
 
 #: python/new_guiv3.py:92 python/question.py:67
 msgid "No"
@@ -1891,7 +1919,7 @@ msgstr "Está seguro de querer eliminar: "
 
 #: python/options.py:374
 msgid "Disable"
-msgstr "Deshabilitar"
+msgstr "Desactivar"
 
 #: python/options.py:469
 msgid "You must restart PlayOnLinux for the changes to take effect."

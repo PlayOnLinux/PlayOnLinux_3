@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-12-19 14:46+0100\n"
-"PO-Revision-Date: 2010-11-26 18:37+0000\n"
+"POT-Creation-Date: 2010-12-26 00:06+0100\n"
+"PO-Revision-Date: 2011-01-02 10:25+0000\n"
 "Last-Translator: Konki <pavel.konkol@seznam.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-12-22 21:01+0000\n"
-"X-Generator: Launchpad (build 12138)\n"
+"X-Launchpad-Export-Date: 2011-02-23 06:28+0000\n"
+"X-Generator: Launchpad (build 12406)\n"
 
 #: Advanced Configuration Plugin:11 Wine
 msgid "Activate GLSL Support?"
@@ -70,7 +70,8 @@ msgstr ""
 "Wine vytvořené GNU_Razielem. Pokud nebudete vědět co si vybrat, PONECHTE "
 "VÝCHOZÍ HODNOTY."
 
-#: Advanced Configuration Plugin:9 Wine
+#: Advanced Configuration Plugin:9 Wine lib/wine:585
+#, sh-format
 msgid "You did not select a game"
 msgstr "Nevybrali jste hru"
 
@@ -214,7 +215,8 @@ msgstr "Musíte zvolit záznam pro převod"
 msgid "You must choose a capture to read"
 msgstr "Musíte zvolit záznam pro čtení"
 
-#: Detour plugin:5
+#: Detour lib/wine:584 plugin:5
+#, sh-format
 msgid "Choose an application"
 msgstr "Vyberte aplikaci"
 
@@ -467,7 +469,7 @@ msgstr "Zdroj PlayOnLinux je nutné aktualizovat."
 #: bash/debug_main:30
 #, sh-format
 msgid "Report a bug"
-msgstr ""
+msgstr "Nahlásit chybu"
 
 #: bash/debug_main:34
 #, sh-format
@@ -475,16 +477,18 @@ msgid ""
 "This wizard can report a bug in an application officially supported by "
 "PlayOnLinux."
 msgstr ""
+"Tento průvodce může nahlásit chybu v aplikacích oficiálně podporovaných v "
+"PlayOnLinux."
 
 #: bash/debug_main:36 bash/debug_main:48
 #, sh-format
 msgid "Error message"
-msgstr ""
+msgstr "Chybové hlášení"
 
 #: bash/debug_main:36 bash/debug_main:44
 #, sh-format
 msgid "Graphic problem"
-msgstr ""
+msgstr "Grafický problém"
 
 #: bash/debug_main:36 lib/interface_v3:851 lib/wine:225 lib/wine:235
 #: lib/wine:241 python/install.py:276 python/options.py:114
@@ -495,27 +499,27 @@ msgstr "Jiné"
 #: bash/debug_main:36 bash/debug_main:42
 #, sh-format
 msgid "The application does not start"
-msgstr ""
+msgstr "Aplikace se nespustí"
 
 #: bash/debug_main:36 bash/debug_main:46
 #, sh-format
 msgid "Unable to use a feature"
-msgstr ""
+msgstr "Nelze použít funkci"
 
 #: bash/debug_main:36
 #, sh-format
 msgid "What type of problem occurs?"
-msgstr ""
+msgstr "Jaký typ problému se vyskytl?"
 
 #: bash/debug_main:39
 #, sh-format
 msgid "Problem description:"
-msgstr ""
+msgstr "Popis problému:"
 
 #: bash/debug_main:60
 #, sh-format
 msgid "Bug report generated."
-msgstr ""
+msgstr "Bylo vygeberováno hlášení o chybách."
 
 #: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
 #, sh-format
@@ -601,7 +605,8 @@ msgid ""
 msgstr ""
 "Jste si jistí, že chcete ukončit všechny aktivní aplikace PlayOnLInux?"
 
-#: bash/killall:33 lib/interface:476 lib/interface:543
+#: bash/killall:33 lib/interface:476 lib/interface:543 lib/wine:574
+#: lib/wine:598
 #, sh-format
 msgid "Please wait..."
 msgstr "Čekejte prosím..."
@@ -1078,27 +1083,27 @@ msgstr "Prosím počkejte, dokud PlayOnLinux nenasimuluje restart Windows"
 msgid "Where is your CD-ROM mounted?"
 msgstr "Kde je připojena vaše CD-ROM?"
 
-#: lib/interface_v3:874 lib/wine:293
+#: lib/interface_v3:876 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr "Chyba: Nelze najít CD mechaniku!"
 
-#: lib/interface_v3:895
+#: lib/interface_v3:897
 #, sh-format
 msgid "Unable to find version: "
 msgstr "Nemohu najít verzi: "
 
-#: lib/interface_v3:901 lib/interface_v3:902
+#: lib/interface_v3:903 lib/interface_v3:904
 #, sh-format
 msgid "Downloading Wine: "
 msgstr "Stahuje se Wine: "
 
-#: lib/interface_v3:912
+#: lib/interface_v3:914
 #, sh-format
 msgid "The download seems to have failed."
 msgstr "Zdá se, že stahování selhalo."
 
-#: lib/interface_v3:914
+#: lib/interface_v3:916
 #, sh-format
 msgid "Extracting Wine..."
 msgstr "Rozbaluje se Wine..."
@@ -1267,7 +1272,9 @@ msgstr "Varování!"
 msgid "You are running PlayOnLinux as root.\\n\\n"
 msgstr "PlayOnLinux běží pod rootem.\\n\\n"
 
-#: lib/main:426 lib/main:430 lib/main:434 lib/main:438 lib/main:442
+#: lib/main:427 lib/main:432 lib/main:437 lib/main:442 lib/main:447
+#: lib/main:452 lib/main:458 lib/main:463 lib/main:468 lib/main:473
+#: lib/main:478 lib/main:483
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr "Tato funkce je vypnutá v prostředí PlayOnLinuxu."
@@ -1393,6 +1400,21 @@ msgstr "Nastavuji var soubory programu"
 #, sh-format
 msgid "You must choose which Wine version you want to download."
 msgstr "Musíte zvolit, kterou verzi Wine chcete stáhnout."
+
+#: lib/wine:591
+#, sh-format
+msgid "Please choose components to be installed"
+msgstr "Zvolte komponenty pro instalaci"
+
+#: lib/wine:592
+#, sh-format
+msgid "You must choose a component to be installed"
+msgstr "Musíte zvolit komponenty pro instalaci"
+
+#: lib/wine:602
+#, sh-format
+msgid "Error during the execution of winetricks"
+msgstr "Chyba během provádění winetricks"
 
 #: playonlinux-cmd:52
 #, sh-format

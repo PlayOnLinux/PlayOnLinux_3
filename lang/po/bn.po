@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playonlinux\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-12-19 14:46+0100\n"
+"POT-Creation-Date: 2010-12-26 00:06+0100\n"
 "PO-Revision-Date: 2010-12-06 09:00+0000\n"
 "Last-Translator: Aniruddha Adhikary <Unknown>\n"
 "Language-Team: Bengali <bn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-12-22 21:01+0000\n"
-"X-Generator: Launchpad (build 12138)\n"
+"X-Launchpad-Export-Date: 2011-02-23 06:28+0000\n"
+"X-Generator: Launchpad (build 12406)\n"
 
 #: Advanced Configuration Plugin:11 Wine
 msgid "Activate GLSL Support?"
@@ -70,7 +70,8 @@ msgstr ""
 "তৈরীকৃত একটি অপটিমাইজেশনের সিস্টেম। আপনি যদি জানেন না কি করতে হবে, ডিফল্ট "
 "রেখে দিন।"
 
-#: Advanced Configuration Plugin:9 Wine
+#: Advanced Configuration Plugin:9 Wine lib/wine:585
+#, sh-format
 msgid "You did not select a game"
 msgstr "আপনি কোন গেম নির্বাচন করেননি"
 
@@ -209,7 +210,8 @@ msgstr "কনভার্ট করার জন্য আপনাকে অ�
 msgid "You must choose a capture to read"
 msgstr "রিড করার জন্য আপনাকে অবশ্যই একটি ক্যাপচার বাছাই করতে হবে"
 
-#: Detour plugin:5
+#: Detour lib/wine:584 plugin:5
+#, sh-format
 msgid "Choose an application"
 msgstr "একটি অ্যাপলিকেশন বাছাই করুন"
 
@@ -581,7 +583,8 @@ msgid ""
 msgstr ""
 "আপনি নিশ্চিত আপনি সকল কার্যকর প্লেঅনলিনাক্স এ্যাপ্লিকেশন বন্ধ করতে চান?"
 
-#: bash/killall:33 lib/interface:476 lib/interface:543
+#: bash/killall:33 lib/interface:476 lib/interface:543 lib/wine:574
+#: lib/wine:598
 #, sh-format
 msgid "Please wait..."
 msgstr "অনুগ্রহপূর্বক অপেক্ষা করুন..."
@@ -1042,27 +1045,27 @@ msgstr ""
 msgid "Where is your CD-ROM mounted?"
 msgstr ""
 
-#: lib/interface_v3:874 lib/wine:293
+#: lib/interface_v3:876 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr ""
 
-#: lib/interface_v3:895
+#: lib/interface_v3:897
 #, sh-format
 msgid "Unable to find version: "
 msgstr ""
 
-#: lib/interface_v3:901 lib/interface_v3:902
+#: lib/interface_v3:903 lib/interface_v3:904
 #, sh-format
 msgid "Downloading Wine: "
 msgstr ""
 
-#: lib/interface_v3:912
+#: lib/interface_v3:914
 #, sh-format
 msgid "The download seems to have failed."
 msgstr ""
 
-#: lib/interface_v3:914
+#: lib/interface_v3:916
 #, sh-format
 msgid "Extracting Wine..."
 msgstr ""
@@ -1221,7 +1224,9 @@ msgstr ""
 msgid "You are running PlayOnLinux as root.\\n\\n"
 msgstr ""
 
-#: lib/main:426 lib/main:430 lib/main:434 lib/main:438 lib/main:442
+#: lib/main:427 lib/main:432 lib/main:437 lib/main:442 lib/main:447
+#: lib/main:452 lib/main:458 lib/main:463 lib/main:468 lib/main:473
+#: lib/main:478 lib/main:483
 #, sh-format
 msgid "This function is disabled in the PlayOnlinux environment."
 msgstr ""
@@ -1342,6 +1347,21 @@ msgstr ""
 #: lib/wine:424 lib/wine:452
 #, sh-format
 msgid "You must choose which Wine version you want to download."
+msgstr ""
+
+#: lib/wine:591
+#, sh-format
+msgid "Please choose components to be installed"
+msgstr ""
+
+#: lib/wine:592
+#, sh-format
+msgid "You must choose a component to be installed"
+msgstr ""
+
+#: lib/wine:602
+#, sh-format
+msgid "Error during the execution of winetricks"
 msgstr ""
 
 #: playonlinux-cmd:52
