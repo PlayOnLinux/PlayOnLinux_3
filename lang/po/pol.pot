@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2010-12-26 00:06:07+01:00\n"
+"POT-Creation-Date: 2011-02-23 07:24:26+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -212,49 +212,50 @@ msgid ""
 "Welcome in Detour, a plugin witch enable you to create post-install shorcuts."
 msgstr ""
 
-#: bash/LiveInstall:31 bash/LiveInstall:37 bash/LiveInstall:45
-#: bash/LiveInstall:77 bash/LiveInstall:79 bash/LiveInstall:83
-#: bash/LiveInstall:90 bash/LiveInstall:95 bash/LiveInstall:104
-#: bash/LiveInstall:112 bash/LiveInstall:137 bash/LiveInstall:150
-#: bash/LiveInstall:164 bash/LiveInstall:176 bash/LiveInstall:180
-#: bash/LiveInstall:185 bash/LiveInstall:195 bash/install:33
+#: bash/LiveInstall:28 bash/LiveInstall:32 bash/LiveInstall:38
+#: bash/LiveInstall:46 bash/LiveInstall:78 bash/LiveInstall:80
+#: bash/LiveInstall:84 bash/LiveInstall:91 bash/LiveInstall:96
+#: bash/LiveInstall:105 bash/LiveInstall:113 bash/LiveInstall:134
+#: bash/LiveInstall:147 bash/LiveInstall:161 bash/LiveInstall:173
+#: bash/LiveInstall:177 bash/LiveInstall:182 bash/LiveInstall:192
+#: bash/install:33
 #, sh-format
 msgid "Manual installation"
 msgstr ""
 
-#: bash/LiveInstall:31 bash/autorun:29 bash/daemon/autorun:28
+#: bash/LiveInstall:32 bash/autorun:29 bash/daemon/autorun:28
 #, sh-format
 msgid ""
 "Would you like to create a shortcut to the application in PlayOnLinux?\\nIf "
 "you patched a game, you should probably select no."
 msgstr ""
 
-#: bash/LiveInstall:37 bash/daemon/autorun:34
+#: bash/LiveInstall:38 bash/daemon/autorun:34
 #, sh-format
 msgid "Select the program's executable file."
 msgstr ""
 
-#: bash/LiveInstall:45 bash/autorun:43 bash/daemon/autorun:42
+#: bash/LiveInstall:46 bash/autorun:43 bash/daemon/autorun:42
 #, sh-format
 msgid "Please choose a name for the shortcut."
 msgstr ""
 
-#: bash/LiveInstall:77 bash/LiveInstall:112
+#: bash/LiveInstall:78 bash/LiveInstall:113
 #, sh-format
 msgid "What is your program's prefix?"
 msgstr ""
 
-#: bash/LiveInstall:79
+#: bash/LiveInstall:80
 #, sh-format
 msgid "Are you sure you want to delete this prefix?"
 msgstr ""
 
-#: bash/LiveInstall:83
+#: bash/LiveInstall:84
 #, sh-format
 msgid "The prefix has been deleted."
 msgstr ""
 
-#: bash/LiveInstall:90
+#: bash/LiveInstall:91
 #, sh-format
 msgid ""
 "Welcome to PlayOnLinux's manual installation wizard.\\n\\nThis script will "
@@ -264,75 +265,75 @@ msgid ""
 "guarantee that your application will work perfectly."
 msgstr ""
 
-#: bash/LiveInstall:92
+#: bash/LiveInstall:93
 #, sh-format
 msgid "Install a program in a new prefix"
 msgstr ""
 
-#: bash/LiveInstall:93
+#: bash/LiveInstall:94
 #, sh-format
 msgid "Edit an existing application"
 msgstr ""
 
-#: bash/LiveInstall:94
+#: bash/LiveInstall:95
 #, sh-format
 msgid "Delete a prefix"
 msgstr ""
 
-#: bash/LiveInstall:95
+#: bash/LiveInstall:96
 #, sh-format
 msgid "What would you like to do?"
 msgstr ""
 
-#: bash/LiveInstall:104
+#: bash/LiveInstall:105
 #, sh-format
 msgid ""
 "Please type a name for your application's Wine prefix.\\nThis name shouldn't "
 "contain spaces."
 msgstr ""
 
-#: bash/LiveInstall:128
+#: bash/LiveInstall:129
 #, sh-format
 msgid "Assign a Wine version to a program"
 msgstr ""
 
-#: bash/LiveInstall:129 bash/polconfigurator:119
-#, sh-format
-msgid "Use WineTricks"
-msgstr ""
-
-#: bash/LiveInstall:130 bash/LiveInstall:164 bash/polconfigurator:110
+#: bash/LiveInstall:130 bash/LiveInstall:161 bash/polconfigurator:110
 #: python/mainwindow.py:245 python/mainwindow.py:275
 #, sh-format
 msgid "Configure Wine"
 msgstr ""
 
-#: bash/LiveInstall:137
+#: bash/LiveInstall:131 bash/polconfigurator:119
+#, sh-format
+msgid "Use WineTricks"
+msgstr ""
+
+#: bash/LiveInstall:134
 #, sh-format
 msgid "What would you like to do before installation?"
 msgstr ""
 
-#: bash/LiveInstall:150
+#: bash/LiveInstall:147
 #, sh-format
 msgid "Which version of Wine would you like to use?"
 msgstr ""
 
-#: bash/LiveInstall:176
+#: bash/LiveInstall:173
 #, sh-format
 msgid "Please select the install file to run."
 msgstr ""
 
-#: bash/LiveInstall:180
+#: bash/LiveInstall:177
 #, sh-format
 msgid "You must choose a file!"
 msgstr ""
 
-#: bash/LiveInstall:185
+#: bash/LiveInstall:182
 #, sh-format
 msgid "PlayOnLinux is installing your application..."
 msgstr ""
 
-#: bash/LiveInstall:195 bash/autorun:166 bash/daemon/autorun:166
+#: bash/LiveInstall:192 bash/autorun:166 bash/daemon/autorun:166
 #, sh-format
 msgid "Please do not press Next until the installation has been completed."
 msgstr ""
@@ -457,7 +458,7 @@ msgstr ""
 msgid "Graphic problem"
 msgstr ""
 
-#: bash/debug_main:36 lib/interface_v3:851 lib/wine:225 lib/wine:235
+#: bash/debug_main:36 lib/interface_v3:883 lib/wine:225 lib/wine:235
 #: lib/wine:241 python/install.py:276 python/options.py:114
 #, sh-format
 msgid "Other"
@@ -488,27 +489,28 @@ msgstr ""
 msgid "Bug report generated."
 msgstr ""
 
-#: bash/expert/Executer:30 bash/expert/Executer:32 python/mainwindow.py:107
+#: bash/expert/Executer:27 bash/expert/Executer:32 bash/expert/Executer:34
+#: python/mainwindow.py:107
 #, sh-format
 msgid "Run a local script"
 msgstr ""
 
-#: bash/expert/Executer:30
+#: bash/expert/Executer:32
 #, sh-format
 msgid "This wizard will help you run an unofficial PlayOnLinux Script."
 msgstr ""
 
-#: bash/expert/Executer:32
+#: bash/expert/Executer:34
 #, sh-format
 msgid "Choose a valid PlayOnLinux script to run."
 msgstr ""
 
-#: bash/expert/Executer:41
+#: bash/expert/Executer:43
 #, sh-format
 msgid "Error!"
 msgstr ""
 
-#: bash/expert/Executer:41
+#: bash/expert/Executer:43
 #, sh-format
 msgid "File not found!"
 msgstr ""
@@ -823,7 +825,7 @@ msgstr ""
 msgid "Cannot find the shortcut"
 msgstr ""
 
-#: bash/uninstall:55 lib/interface:137 lib/interface_v3:104
+#: bash/uninstall:55 lib/interface:137 lib/interface_v3:108
 #, sh-format
 msgid "Error"
 msgstr ""
@@ -868,21 +870,21 @@ msgstr ""
 msgid "Program: "
 msgstr ""
 
-#: lib/check_depend:38 lib/interface_v3:102
+#: lib/check_depend:38 lib/interface_v3:106
 #, sh-format
 msgid ""
 "One or more program(s) are missing. Please install them and run the script "
 "again."
 msgstr ""
 
-#: lib/check_depend:61
+#: lib/check_depend:63
 #, sh-format
 msgid ""
 "You don't seem to have 3D acceleration!\\nWe advise you install and enable "
 "it."
 msgstr ""
 
-#: lib/check_depend:65
+#: lib/check_depend:67
 #, sh-format
 msgid ""
 "Warning: glxinfo is missing! PlayOnLinux can't detect if 3D acceleration is "
@@ -989,67 +991,67 @@ msgid ""
 "result of using these scripts.\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:291
+#: lib/interface_v3:307
 #, sh-format
 msgid "Wine version server temporary unavailable.\\nPlease try again later."
 msgstr ""
 
-#: lib/interface_v3:294
+#: lib/interface_v3:310
 #, sh-format
 msgid "Following server is no longer available:\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:297
+#: lib/interface_v3:313
 #, sh-format
 msgid "Following file is no longer available on server:\\n\\n"
 msgstr ""
 
-#: lib/interface_v3:300
+#: lib/interface_v3:316
 #, sh-format
 msgid "Download failure"
 msgstr ""
 
-#: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
+#: lib/interface_v3:599 lib/interface_v3:608 lib/interface_v3:619
 #, sh-format
 msgid "Please wait while the Wine prefix is being created..."
 msgstr ""
 
-#: lib/interface_v3:567 lib/interface_v3:576 lib/interface_v3:587
+#: lib/interface_v3:599 lib/interface_v3:608 lib/interface_v3:619
 #, sh-format
 msgid "Wine prefix configuration"
 msgstr ""
 
-#: lib/interface_v3:828
+#: lib/interface_v3:860
 #, sh-format
 msgid "Please wait while PlayOnLinux is simulating a Windows reboot"
 msgstr ""
 
-#: lib/interface_v3:850 lib/wine:235 lib/wine:243
+#: lib/interface_v3:882 lib/wine:235 lib/wine:243
 #, sh-format
 msgid "Where is your CD-ROM mounted?"
 msgstr ""
 
-#: lib/interface_v3:876 lib/wine:293
+#: lib/interface_v3:908 lib/wine:293
 #, sh-format
 msgid "Error: Unable to find the CD-ROM!"
 msgstr ""
 
-#: lib/interface_v3:897
+#: lib/interface_v3:929
 #, sh-format
 msgid "Unable to find version: "
 msgstr ""
 
-#: lib/interface_v3:903 lib/interface_v3:904
+#: lib/interface_v3:935 lib/interface_v3:936
 #, sh-format
 msgid "Downloading Wine: "
 msgstr ""
 
-#: lib/interface_v3:914
+#: lib/interface_v3:946
 #, sh-format
 msgid "The download seems to have failed."
 msgstr ""
 
-#: lib/interface_v3:916
+#: lib/interface_v3:948
 #, sh-format
 msgid "Extracting Wine..."
 msgstr ""
