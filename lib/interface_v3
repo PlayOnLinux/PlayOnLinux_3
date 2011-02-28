@@ -935,8 +935,8 @@ POL_SetupWindow_install_wine ()
 		POL_SetupWindow_download "$(eval_gettext "Downloading Wine: ")$VERSIONENTRER" "Wine" "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB"
 		POL_SetupWindow_wait_next_signal "$(eval_gettext "Downloading Wine: ")$VERSIONENTRER" "Wine"
 		sleep 1
-		sha1=$(wget "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB.sha1" -O-)
-		sha1_file=$(sha1sum "./$ADRESSEDUDEB")
+		sha1=$(wget "http://mulx.playonlinux.com/wine/linux-i386/$ADRESSEDUDEB.sha1" -O- | awk '{print $1}')
+		sha1_file=$(sha1sum "./$ADRESSEDUDEB" | awk '{print $1}')
 		echo "Server sha1 : $sha1"
 		echo "Client sha1 : $sha1_file"
 
@@ -944,14 +944,15 @@ POL_SetupWindow_install_wine ()
 		if [ ! "$sha1" = "$sha1_file" ]
 		then
 			POL_SetupWindow_message "$(eval_gettext 'The download seems to have failed.')" "Wine $1"
+			touch "$REPERTOIRE/WineVersions/failed"
 		else
 			POL_SetupWindow_wait_next_signal "$(eval_gettext 'Extracting Wine...')" "Wine $1"
 			"$PLAYONLINUX/playonlinux-pkg" -i "$ADRESSEDUDEB"
 			POL_SetupWindow_detect_exit
+			touch "$REPERTOIRE/WineVersions/installed"
 		fi
 		rm "$ADRESSEDUDEB"
 	fi
-	touch "$REPERTOIRE/WineVersions/installed"
 }
 
 POL_GetSetupImages () # ( optional : --erase ) 

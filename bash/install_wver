@@ -27,6 +27,11 @@ source "$PLAYONLINUX/lib/sources"
 POL_SetupWindow_Init
 version=$1
 POL_SetupWindow_free_presentation "Wine $1" "$(eval_gettext "This wizard will help you install Wine: ")$version $(eval_gettext "on the PlayOnLinux environment.")"
+rm -f "$REPERTOIRE/WineVersions/failed" "$REPERTOIRE/WineVersions/installed"
 POL_SetupWindow_install_wine "$1"
-POL_SetupWindow_message "$(eval_gettext 'Wine has been installed successfully.')" "Wine $1"
+if [ -e "$REPERTOIRE/WineVersions/installed" ] ; then
+	POL_SetupWindow_message "$(eval_gettext 'Wine has been installed successfully.')" "Wine $1"
+else
+	POL_SetupWindow_message "$(eval_gettext 'Failed to install Wine.')" "Wine $1"
+fi
 POL_SetupWindow_Close

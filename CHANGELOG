@@ -1,6 +1,7 @@
 -> 3.8.11-dev
 - Rebuild translation template.
 - Sync translation.
+- Fix error message in WineVersion.
 
 -> 3.8.10
 - Fix broken packages
