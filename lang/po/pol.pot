@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PlayOnLinux\n"
 "Report-Msgid-Bugs-To: MulX <os2mule@gmail.com>\n"
-"POT-Creation-Date: 2011-02-23 07:24:26+01:00\n"
+"POT-Creation-Date: 2011-02-28 23:02:37+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -559,9 +559,14 @@ msgstr ""
 msgid "on the PlayOnLinux environment."
 msgstr ""
 
-#: bash/install_wver:31
+#: bash/install_wver:33
 #, sh-format
 msgid "Wine has been installed successfully."
+msgstr ""
+
+#: bash/install_wver:35
+#, sh-format
+msgid "Failed to install Wine."
 msgstr ""
 
 #: bash/killall:30
@@ -1051,7 +1056,7 @@ msgstr ""
 msgid "The download seems to have failed."
 msgstr ""
 
-#: lib/interface_v3:948
+#: lib/interface_v3:949
 #, sh-format
 msgid "Extracting Wine..."
 msgstr ""
