@@ -1,7 +1,8 @@
--> 3.8.11-dev
+-> 3.8.11
 - Rebuild translation template.
 - Sync translation.
 - Fix error message in WineVersion.
+- Added url handler support
 
 -> 3.8.10
 - Fix broken packages
