@@ -1,3 +1,6 @@
+-> 3.8.12-dev
+- Fixed bug #59 : No menu in Ubuntu
+
 -> 3.8.11
 - Rebuild translation template.
 - Sync translation.
