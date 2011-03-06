@@ -562,7 +562,7 @@ class POL_SetupFrame(wx.Frame): #fenêtre principale
 								self.YesButton.Show()
 								self.NoButton.Show()
 
-						 !
+						 
 							if(self.fichier[1] == "make_shortcut\n"):
 								self.DrawHeader()
 								self.texte.SetLabel(_("Create a shortcut :"))
