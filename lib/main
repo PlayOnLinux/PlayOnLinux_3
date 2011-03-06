@@ -399,7 +399,7 @@ check_new_pol ()
 	local retVal=0
 	if [ ! "$ALREADY_CHECK_ONLINE" ]
 	then
-		WebVersion=$(wget -q "$SITE/version2.php?v=$VERSION" -T 1 -O-)
+		WebVersion=$(wget -q "$SITE/version2.php?v=$VERSION" -T 2 -O-)
 		if [ "$WebVersion" = "" ]
 		then
 			retVal=2
