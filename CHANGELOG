@@ -1,3 +1,6 @@
+-> 3.8.13-dev
+- Fix POL_SetupWindow_check_cdrom
+
 -> 3.8.12
 - Fixed bug #59 : No menu in Ubuntu
 - Timeout changed to 2 seconds for update checking

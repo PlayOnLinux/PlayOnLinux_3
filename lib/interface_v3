@@ -899,16 +899,11 @@ POL_SetupWindow_cdrom ()
 }
 POL_SetupWindow_check_cdrom ()
 {
-	#if [ ! "$CDROM" = "" ]
-	# Si quelqu'un peut tester ça ce serait cool
-	if [ ! "$(find "$CDROM" -iname "$CDROM/$1")" = "" ]
-	then
-		while [ ! -e "$CDROM/$1" ]
-		do
-			POL_SetupWindow_message "$(eval_gettext "Error: Unable to find the CD-ROM!")" "CD-ROM"
-			POL_SetupWindow_cdrom
-		done
-	fi
+	while [ "$(find "$CDROM" -iwholename "$CDROM/$1")" = "" ]
+	do
+		POL_SetupWindow_message "$(eval_gettext "Error: Unable to find the CD-ROM!")" "CD-ROM"
+		POL_SetupWindow_cdrom
+	done
 }
 POL_SetupWindow_install_wine ()
 {
